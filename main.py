@@ -695,6 +695,8 @@ class LogicEvalApp:
             # 初次生成对话 - 根据模式选择不同的消息构建方式
             if mode == "single_text":
                 messages = build_single_text_message_for_all_datasets(dataset_type, *self._get_question_context(problem))
+                # 保存初始上下文用于后续修复
+                accumulated_context = messages[0]['content']
                 extra_type_is_semantic = None
                 extra_info = ''
                 llm_output = ''
@@ -719,12 +721,15 @@ class LogicEvalApp:
                                    self.log(f"  [{pid}] 第{a}次尝试重新生成...", 'warning'))
                     # 生成后续对话 - 根据模式选择不同的消息构建方式
                     if mode == "single_text":
-                        # Single Text Mode：将完整的Direct Mode消息列表转换为单个user消息
-                        # 这样包含所有历史信息（instruction + problem + 所有对话）
-                        messages = convert_messages_to_single_text_format(
-                            messages,
+                        # Single Text Mode：使用 build_next_single_text_message_for_all_datasets
+                        # 传递错误信息和上一轮输出，实现真正的多轮修复
+                        messages = build_next_single_text_message_for_all_datasets(
                             dataset_type,
-                            *self._get_question_context(problem)
+                            *self._get_question_context(problem),
+                            extra_type_is_semantic,
+                            extra_info,
+                            llm_output,
+                            accumulated_context
                         )
                     else:  # direct mode
                         next_message = build_next_messages_for_all_datasets(dataset_type, *self._get_question_context(problem),
