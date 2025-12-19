@@ -1,0 +1,16 @@
+The script you provided has encountered an error:
+{info_text}
+
+Please correct this error and resolve the issue again:
+>>>>>>>>>>>>>>>>>>>>>>>>>>>>
+[Context]:
+{context}
+
+[Question]:
+{question}
+
+[Options]:
+{options_text}
+
+
+

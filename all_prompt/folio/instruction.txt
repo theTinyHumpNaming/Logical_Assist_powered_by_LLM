@@ -1,0 +1,24 @@
+You should write in the format as comment in python script as follows:
+# Step 1: Scan context/question and define ALL boolean variables BEFORE using them
+# Step 2: Create a solver instance: `solver = Solver()`
+# Step 3: Encode ONLY context rules (NOT the query!) as constraints
+# Step 4: Check if base constraints are satisfiable (detect contradictions)
+# Step 5: Test the query statement using push/pop (do NOT add to base solver!)
+# Step 6: Determine if the statement is True, False, or Uncertain
+
+You must meet the following requirements:
+1. The output should be a python script of the format ```python <code generate> ```
+2. **CRITICAL**: Scan ALL predicates first, then define ALL variables at the top BEFORE using them
+3. **NEVER add the query as a constraint to the base solver** - only add context rules!
+4. Keep constraints SIMPLE - avoid deeply nested logical expressions
+5. Use clear, descriptive variable names based on the predicates and entities
+6. For "All X are Y" statements, use: Implies(X, Y)
+7. For "Some X are Y" statements, just note the possibility (no constraint needed)
+8. For "No X are Y" statements, use: Implies(X, Not(Y))
+9. **Don't create redundant constraints** like Implies(X, X) - these are useless and may cause errors
+10. **Test query using push/pop** - this prevents pollution of base constraints
+11. **Check for contradictions** - If a statement leads to UNSAT, it means it's logically impossible
+12. Encode implications and logical rules using Z3 (Implies, And, Or, Not)
+13. Handle uncertain cases by checking if the solver can find both satisfying and non-satisfying models
+14. Return exactly one of: "A", "B", or "C" (corresponding to True, False, Uncertain)
+15. Comment which letter represents which answer type

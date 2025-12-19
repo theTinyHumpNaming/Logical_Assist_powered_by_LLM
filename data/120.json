@@ -1,0 +1,205 @@
+{
+  "summary": {
+    "total": 10,
+    "correct": 3,
+    "wrong": 3,
+    "error": 4,
+    "accuracy": 30.0
+  },
+  "correct_problems": [
+    "FOLIO_dev_125",
+    "FOLIO_dev_144",
+    "FOLIO_dev_13"
+  ],
+  "wrong_problems": [
+    "FOLIO_dev_43",
+    "FOLIO_dev_0",
+    "FOLIO_dev_59",
+    "FOLIO_dev_17",
+    "FOLIO_dev_83",
+    "FOLIO_dev_107",
+    "FOLIO_dev_111"
+  ],
+  "details": [
+    {
+      "id": "FOLIO_dev_125",
+      "predicted": "C",
+      "correct": "C",
+      "is_correct": true,
+      "pseudocode": "ENTITIES: rock\n\nCONSTRAINTS:\n- IS(x, mammal) -> IS(x, animal)\n- IS(x, monkey) -> IS(x, mammal)\n- IS(x, animal) -> IS(x, monkey) | IS(x, bird)\n- IS(x, bird) -> IS(x, fly)\n- IS(x, animal) -> IS(x, breathe)\n- IS(x, fly) -> IS(x, wings)\n- (NOT IS(rock, fly) & NOT IS(rock, bird)) -> (NOT IS(rock, flies) & NOT IS(rock, breathe))\n\nFACTS:\n- (none explicit)\n\nCHECK:\n- IF PROVABLE(IS(rock, monkey)) PRINT A\n- IF DISPROVABLE(IS(rock, monkey)) PRINT B\n- IF UNKNOWN(IS(rock, monkey)) PRINT C",
+      "mode": "pseudocode",
+      "error": null,
+      "attempts": 1,
+      "check_enabled": false,
+      "context": "All mammals are animals. All monkeys are mammals. An animal is either a monkey or a bird. All birds fly. All animals breathe. If something can fly, then it has wings. If Rock is neither a fly nor a bird, then Rock neither flies nor breathes.",
+      "question": "Based on the above information, is the following statement true, false, or uncertain? Rock is a monkey.",
+      "options": [
+        "A) True",
+        "B) False",
+        "C) Uncertain"
+      ]
+    },
+    {
+      "id": "FOLIO_dev_144",
+      "predicted": "C",
+      "correct": "C",
+      "is_correct": true,
+      "pseudocode": "ENTITIES: heck_cattle, aurochs, animals\n\nPROPERTIES: extinct, resemble\n\nCONSTRAINTS:\n- IS(heck_cattle, animals)\n- IS(aurochs, animals)\n- IS(x, resemble) -> IS(x, extinct)\n\nFACTS:\n- (none explicit)\n\nCHECK:\n- IF PROVABLE(IS(aurochs, extinct)) PRINT A\n- IF DISPROVABLE(IS(aurochs, extinct)) PRINT B\n- IF UNKNOWN(IS(aurochs, extinct)) PRINT C",
+      "mode": "pseudocode",
+      "error": null,
+      "attempts": 1,
+      "check_enabled": false,
+      "context": "Breeding back is a form of artificial selection by the deliberate selective breeding of domestic animals. Heck cattle were bred-back in the 1920s to resemble the aurochs. [BG] Heck cattle are animals. [BG] Aurochs are animals. Some animals to be bred-back resemble animals that are extinct.",
+      "question": "Based on the above information, is the following statement true, false, or uncertain? Aurochs are extinct.",
+      "options": [
+        "A) True",
+        "B) False",
+        "C) Uncertain"
+      ]
+    },
+    {
+      "id": "FOLIO_dev_43",
+      "predicted": "A",
+      "correct": "C",
+      "is_correct": false,
+      "pseudocode": "ENTITIES: player, female_tennis_player, male_tennis_player, Coco_Gauff, Iga_Swiatek, Rafael_Nadal\n\nPROPERTIES: ranked_highly_WTA, active_player, lost_to_Iga, lost_to_Rafael, at_Roland_Garros\n\nCONSTRAINTS:\n- IS(x, ranked_highly_WTA) -> IS(x, active_player)\n- IS(x, lost_to_Iga) -> IS(x, ranked_highly_WTA)\n- IS(x, female_tennis_player) -> IS(x, lost_to_Iga)\n- IS(x, female_tennis_player) | IS(x, male_tennis_player)\n- IS(x, male_tennis_player) -> IS(x, lost_to_Rafael)\n- (IS(Coco_Gauff, ranked_highly_WTA) | IS(Coco_Gauff, lost_to_Rafael)) -> NOT IS(Coco_Gauff, male_tennis_player)\n\nFACTS:\n- IS(female_tennis_player, at_Roland_Garros) -> IS(female_tennis_player, lost_to_Iga)\n- IS(male_tennis_player, at_Roland_Garros) -> IS(male_tennis_player, lost_to_Rafael)\n\nCHECK:\n- IF PROVABLE(IS(Coco_Gauff, lost_to_Rafael)) PRINT A\n- IF DISPROVABLE(IS(Coco_Gauff, lost_to_Rafael)) PRINT B\n- IF UNKNOWN(IS(Coco_Gauff, lost_to_Rafael)) PRINT C",
+      "mode": "pseudocode",
+      "error": "b'ast is not an expression'",
+      "attempts": 1,
+      "check_enabled": false,
+      "context": "If a player is ranked highly by the Women's Tennis Association, then they are among the most active players in major tennis. Everyone who lost to Iga Świątek is ranked highly by the Women's Tennis Association. All female tennis players at Roland Garros 2022 lost to Iga Świątek. Either female tennis players at Roland Garros 2022 or male tennis players at Roland Garros 2022. All male tennis players at Roland Garros 2022 lost to Rafael Nadal. If Coco Gauff is a player who is ranked highly by the Women's Tennis Association or a player who lost to Rafael Nadal, then Coco Gauff is not a male tennis player at Roland Garros 2022.",
+      "question": "Based on the above information, is the following statement true, false, or uncertain? Coco Gauff has lost to Rafael Nadal.",
+      "options": [
+        "A) True",
+        "B) False",
+        "C) Uncertain"
+      ]
+    },
+    {
+      "id": "FOLIO_dev_0",
+      "predicted": "A",
+      "correct": "C",
+      "is_correct": false,
+      "pseudocode": "ENTITIES: bonnie\n\nPROPERTIES: perform_talent_shows, attend_school_events, engaged_school_events, inactive_community, disinterested_community, chaperone_dances, student, young_child, teenager, wish_academic_career, educational_opportunities\n\nCONSTRAINTS:\n- IS(x, perform_talent_shows) -> IS(x, attend_school_events) & IS(x, engaged_school_events)\n- IS(x, perform_talent_shows) | IS(x, inactive_community) | IS(x, disinterested_community)\n- IS(x, chaperone_dances) -> NOT IS(x, student)\n- IS(x, inactive_community) -> IS(x, chaperone_dances)\n- IS(x, young_child) & IS(x, wish_academic_career) -> IS(x, student)\n- IS(x, teenager) & IS(x, wish_academic_career) -> IS(x, student)\n- (IS(bonnie, attend_school_events) & IS(bonnie, engaged_school_events) & IS(bonnie, student)) | (!IS(bonnie, attend_school_events) & !IS(bonnie, engaged_school_events) & !IS(bonnie, student))\n\nFACTS:\n- (none explicit)\n\nCHECK:\n- IF PROVABLE(IS(bonnie, perform_talent_shows)) PRINT A\n- IF DISPROVABLE(IS(bonnie, perform_talent_shows)) PRINT B\n- IF UNKNOWN(IS(bonnie, perform_talent_shows)) PRINT C",
+      "mode": "pseudocode",
+      "error": "b'unreachable'",
+      "attempts": 1,
+      "check_enabled": false,
+      "context": "If people perform in school talent shows often, then they attend and are very engaged with school events. People either perform in school talent shows often or are inactive and disinterested members of their community. If people chaperone high school dances, then they are not students who attend the school. All people who are inactive and disinterested members of their community chaperone high school dances. All young children and teenagers who wish to further their academic careers and educational opportunities are students who attend the school. Bonnie either both attends and is very engaged with school events and is a student who attends the school, or she neither attends and is very engaged with school events nor is a student who attends the school.",
+      "question": "Based on the above information, is the following statement true, false, or uncertain? Bonnie performs in school talent shows often.",
+      "options": [
+        "A) True",
+        "B) False",
+        "C) Uncertain"
+      ]
+    },
+    {
+      "id": "FOLIO_dev_59",
+      "predicted": "A",
+      "correct": "C",
+      "is_correct": false,
+      "pseudocode": "ENTITIES: billings, montana, butte, helena, missoula, white_sulphur_springs, pierre, bismarck\n\nCONSTRAINTS:\n- IS(billings, city) -> IS(billings, montana)\n- IS(montana, includes, butte) & IS(montana, includes, helena) & IS(montana, includes, missoula)\n- IS(white_sulphur_springs, city) & IS(butte, city) & IS(white_sulphur_springs, same_state, butte)\n- NOT IS(pierre, city) -> NOT IS(pierre, montana)\n- IS(x, city) & IS(x, butte) -> NOT IS(x, pierre)\n\nFACTS:\n- (none explicit)\n\nCHECK:\n- IF PROVABLE(IS(pierre, same_state, bismarck)) PRINT A\n- IF DISPROVABLE(IS(pierre, same_state, bismarck)) PRINT B\n- IF UNKNOWN(IS(pierre, same_state, bismarck)) PRINT C",
+      "mode": "pseudocode",
+      "error": "b'invalid dec_ref command'",
+      "attempts": 1,
+      "check_enabled": false,
+      "context": "Billings is a city in Montana. Montana includes the cities of Butte, Helena, and Missoula. White Sulphur Springs and Butte are cities in the same state. The city of Pierre is not in Montana. Any city in Butte is not in Pierre.",
+      "question": "Based on the above information, is the following statement true, false, or uncertain? Pierre and Bismarck are in the same state.",
+      "options": [
+        "A) True",
+        "B) False",
+        "C) Uncertain"
+      ]
+    },
+    {
+      "id": "FOLIO_dev_17",
+      "predicted": "B",
+      "correct": "C",
+      "is_correct": false,
+      "pseudocode": "ENTITIES: rock, rabbit, turtle, squirrel, animal\nPROPERTIES: cute, skittish, still\n\nCONSTRAINTS:\n- IS(x, rabbit) -> IS(x, cute)\n- IS(x, turtle)\n- IS(x, animal) -> IS(x, rabbit) | IS(x, squirrel)\n- IS(x, skittish) -> NOT IS(x, still)\n- IS(x, squirrel) -> IS(x, skittish)\n- IS(rock, still)\n\nFACTS:\n- (none explicit)\n\nCHECK:\n- IF PROVABLE(NOT IS(rock, turtle)) PRINT A\n- IF DISPROVABLE(NOT IS(rock, turtle)) PRINT B\n- IF UNKNOWN(NOT IS(rock, turtle)) PRINT C",
+      "mode": "pseudocode",
+      "error": null,
+      "attempts": 1,
+      "check_enabled": false,
+      "context": "All rabbits are cute. Some turtles exist. An animal is either a rabbit or a squirrel. If something is skittish, then it is not still. All squirrels are skittish. Rock is still.",
+      "question": "Based on the above information, is the following statement true, false, or uncertain? Rock is not a turtle.",
+      "options": [
+        "A) True",
+        "B) False",
+        "C) Uncertain"
+      ]
+    },
+    {
+      "id": "FOLIO_dev_13",
+      "predicted": "C",
+      "correct": "C",
+      "is_correct": true,
+      "pseudocode": "ENTITIES: zelda, FIFA_22\nPROPERTIES: made_by_Japanese, sells_more_than_1M, in_Top_10\n\nCONSTRAINTS:\n- IS(x, in_Top_10) -> IS(x, made_by_Japanese)\n- IS(x, sells_more_than_1M) -> IS(x, in_Top_10)\n- IS(zelda, sells_more_than_1M)\n- NOT IS(x, made_by_Japanese) -> NOT IS(x, in_Top_10)\n\nFACTS:\n- IS(zelda, sells_more_than_1M)\n\nCHECK:\n- IF PROVABLE(IS(FIFA_22, made_by_Japanese)) PRINT A\n- IF DISPROVABLE(IS(FIFA_22, made_by_Japanese)) PRINT B\n- IF UNKNOWN(IS(FIFA_22, made_by_Japanese)) PRINT C",
+      "mode": "pseudocode",
+      "error": null,
+      "attempts": 1,
+      "check_enabled": false,
+      "context": "A Japanese game company created the game the Legend of Zelda. All games in the Top 10 list are made by Japanese game companies. [BG] If a game sells more than one million copies, then it will be selected into the Top 10 list. The Legend of Zelda sold more than one million copies.",
+      "question": "Based on the above information, is the following statement true, false, or uncertain? FIFA 22 is made by a Japanese video game company.",
+      "options": [
+        "A) True",
+        "B) False",
+        "C) Uncertain"
+      ]
+    },
+    {
+      "id": "FOLIO_dev_83",
+      "predicted": "C",
+      "correct": "B",
+      "is_correct": false,
+      "pseudocode": "ENTITIES: bakery, spicy, cupcake, hotpot, product, Baked_by_Melissa, dried_Thai_chilies\n\nPROPERTIES: \n\nCONSTRAINTS:\n- NOT IS(x, spicy) -> IS(x, bakery)\n- IS(x, cupcake) -> IS(x, bakery)\n- IS(x, hotpot) -> IS(x, spicy)\n- IS(x, product, Baked_by_Melissa) -> IS(x, cupcake)\n- (IS(dried_Thai_chilies, spicy) | IS(dried_Thai_chilies, bakery)) -> (IS(dried_Thai_chilies, hotpot) | IS(dried_Thai_chilies, spicy))\n\nFACTS:\n\nCHECK:\n- IF PROVABLE(IS(dried_Thai_chilies, cupcake) & IS(dried_Thai_chilies, product, Baked_by_Melissa)) PRINT A\n- IF DISPROVABLE(IS(dried_Thai_chilies, cupcake) & IS(dried_Thai_chilies, product, Baked_by_Melissa)) PRINT B\n- IF UNKNOWN(IS(dried_Thai_chilies, cupcake) & IS(dried_Thai_chilies, product, Baked_by_Melissa)) PRINT C",
+      "mode": "pseudocode",
+      "error": null,
+      "attempts": 1,
+      "check_enabled": false,
+      "context": "No bakery is spicy. All cupcakes are bakeries. All hotpots are spicy. All products of Baked by Melissa are cupcakes. If dried Thai chilies are spicy or a bakery, then dried Thai chilies are a hotpot or are spicy.",
+      "question": "Based on the above information, is the following statement true, false, or uncertain? Dried Thai chilies are cupcakes and a product of Baked by Melissa.",
+      "options": [
+        "A) True",
+        "B) False",
+        "C) Uncertain"
+      ]
+    },
+    {
+      "id": "FOLIO_dev_107",
+      "predicted": "C",
+      "correct": "B",
+      "is_correct": false,
+      "pseudocode": "ENTITIES: tom, GRE_applicant\nPROPERTIES: take_GRE_test, prove_hardship, economic_hardship, live_single_parent, out_of_work\n\nCONSTRAINTS:\n- IS(x, take_GRE_test) -> IS(x, prove_hardship)\n- IS(x, prove_hardship) -> IS(x, economic_hardship)\n- IS(tom, live_single_parent)\n- IS(tom, out_of_work)\n\nFACTS:\n- (none explicit)\n\nCHECK:\n- IF PROVABLE(NOT IS(GRE_applicant, prove_hardship)) PRINT A\n- IF DISPROVABLE(NOT IS(GRE_applicant, prove_hardship)) PRINT B\n- IF UNKNOWN(NOT IS(GRE_applicant, prove_hardship)) PRINT C",
+      "mode": "pseudocode",
+      "error": null,
+      "attempts": 1,
+      "check_enabled": false,
+      "context": "It costs US $205 to take the GRE test. ETS provides financial aid to those GRE applicants who prove economic hardship. Economic hardship refers to difficulty caused by having too little money or too few resources. Tom lives in a single-parent family. His dad has been out of work for more than a year.",
+      "question": "Based on the above information, is the following statement true, false, or uncertain? There is no financial aid available for the GRE test.",
+      "options": [
+        "A) True",
+        "B) False",
+        "C) Uncertain"
+      ]
+    },
+    {
+      "id": "FOLIO_dev_111",
+      "predicted": "A",
+      "correct": "C",
+      "is_correct": false,
+      "pseudocode": "ENTITIES: fir_trees, evergreens, objects_worship\n\nPROPERTIES: \n\nCONSTRAINTS:\n- IS(x, fir_trees) -> IS(x, evergreens)\n- IS(x, objects_worship) -> IS(x, fir_trees)\n\nFACTS:\n\nCHECK:\n- IF PROVABLE(...) PRINT A\n- IF DISPROVABLE(...) PRINT B\n- IF UNKNOWN(...) PRINT C",
+      "mode": "pseudocode",
+      "error": "True, False or Z3 Boolean expression expected. Received Ellipsis of type <class 'ellipsis'>",
+      "attempts": 1,
+      "check_enabled": false,
+      "context": "All fir trees are evergreens. Some objects of worship are fir trees.",
+      "question": "Based on the above information, is the following statement true, false, or uncertain? Some evergreens are not objects of worship.",
+      "options": [
+        "A) True",
+        "B) False",
+        "C) Uncertain"
+      ]
+    }
+  ]
+}

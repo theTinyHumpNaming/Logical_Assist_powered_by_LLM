@@ -1,0 +1,312 @@
+=== 评测日志开始于 2025-12-19 11:13:19 ===
+[11:13:23] 代码修复功能已关闭
+[11:13:27] 正在加载数据集: D:/学习资料/课程/程序设计大作业/EnhancingLLM/EnhancingLLM/data/LogicalDeduction_test.json
+[11:13:27] 共 50 道题目，使用 4 个 workers 并行处理
+[11:13:27] [Worker] 开始处理: logical_deduction_32 (mode=direct, semantic_check=False, refinement_code=False)
+[11:13:27] [Worker] 开始处理: logical_deduction_166 (mode=direct, semantic_check=False, refinement_code=False)
+[11:13:27] [Worker] 开始处理: logical_deduction_26 (mode=direct, semantic_check=False, refinement_code=False)
+[11:13:27] [Worker] 开始处理: logical_deduction_27 (mode=direct, semantic_check=False, refinement_code=False)
+[11:13:32]   [logical_deduction_32] 代码自动修复: 检测到未定义的谓词: Ints
+[11:13:32]   [logical_deduction_32] ✗ 错误! 预测=A, 答案=B
+[11:13:32] [Worker] 开始处理: logical_deduction_179 (mode=direct, semantic_check=False, refinement_code=False)
+[11:13:32]   [logical_deduction_27] 代码自动修复: 检测到未定义的谓词: Ints
+[11:13:32]   [logical_deduction_27] ✓ 正确! 预测=C, 答案=C
+[11:13:32] [Worker] 开始处理: logical_deduction_223 (mode=direct, semantic_check=False, refinement_code=False)
+[11:13:33]   [logical_deduction_26] 代码自动修复: 检测到未定义的谓词: Ints
+[11:13:33]   [logical_deduction_26] ✓ 正确! 预测=C, 答案=C
+[11:13:33] [Worker] 开始处理: logical_deduction_254 (mode=direct, semantic_check=False, refinement_code=False)
+[11:13:34]   [logical_deduction_166] 代码自动修复: 检测到未定义的谓词: Ints
+[11:13:34]   [logical_deduction_166] ✓ 正确! 预测=C, 答案=C
+[11:13:34] [Worker] 开始处理: logical_deduction_131 (mode=direct, semantic_check=False, refinement_code=False)
+[11:13:36]   [logical_deduction_254] 代码自动修复: 检测到未定义的谓词: Ints
+[11:13:36]   [logical_deduction_254] ✓ 正确! 预测=C, 答案=C
+[11:13:36] [Worker] 开始处理: logical_deduction_78 (mode=direct, semantic_check=False, refinement_code=False)
+[11:13:37]   [logical_deduction_179] 代码自动修复: 检测到未定义的谓词: Ints
+[11:13:37]   [logical_deduction_179] ✓ 正确! 预测=F, 答案=F
+[11:13:37] [Worker] 开始处理: logical_deduction_150 (mode=direct, semantic_check=False, refinement_code=False)
+[11:13:38]   [logical_deduction_223] 代码自动修复: 检测到未定义的谓词: Ints
+[11:13:38]   [logical_deduction_223] ✓ 正确! 预测=C, 答案=C
+[11:13:38] [Worker] 开始处理: logical_deduction_6 (mode=direct, semantic_check=False, refinement_code=False)
+[11:13:39]   [logical_deduction_131] 代码自动修复: 检测到未定义的谓词: Ints
+[11:13:39]   [logical_deduction_131] ✓ 正确! 预测=C, 答案=C
+[11:13:39] [Worker] 开始处理: logical_deduction_60 (mode=direct, semantic_check=False, refinement_code=False)
+[11:13:41]   [logical_deduction_78] 代码自动修复: 检测到未定义的谓词: Ints
+[11:13:41]   [logical_deduction_78] ✓ 正确! 预测=A, 答案=A
+[11:13:41] [Worker] 开始处理: logical_deduction_22 (mode=direct, semantic_check=False, refinement_code=False)
+[11:13:43]   [logical_deduction_6] 代码自动修复: 检测到未定义的谓词: Ints
+[11:13:43]   [logical_deduction_6] ✓ 正确! 预测=E, 答案=E
+[11:13:43] [Worker] 开始处理: logical_deduction_126 (mode=direct, semantic_check=False, refinement_code=False)
+[11:13:43]   [logical_deduction_150] 代码自动修复: 检测到未定义的谓词: Ints
+[11:13:43]   [logical_deduction_150] ✓ 正确! 预测=E, 答案=E
+[11:13:43] [Worker] 开始处理: logical_deduction_248 (mode=direct, semantic_check=False, refinement_code=False)
+[11:13:43]   [logical_deduction_60] 代码自动修复: 检测到未定义的谓词: Ints
+[11:13:43]   [logical_deduction_60] ✓ 正确! 预测=D, 答案=D
+[11:13:43] [Worker] 开始处理: logical_deduction_116 (mode=direct, semantic_check=False, refinement_code=False)
+[11:13:46]   [logical_deduction_22] 代码自动修复: 检测到未定义的谓词: Ints
+[11:13:46]   [logical_deduction_22] ✓ 正确! 预测=A, 答案=A
+[11:13:46] [Worker] 开始处理: logical_deduction_230 (mode=direct, semantic_check=False, refinement_code=False)
+[11:13:47]   [logical_deduction_248] 代码自动修复: 检测到未定义的谓词: Ints
+[11:13:47]   [logical_deduction_248] ✓ 正确! 预测=A, 答案=A
+[11:13:47] [Worker] 开始处理: logical_deduction_66 (mode=direct, semantic_check=False, refinement_code=False)
+[11:13:49]   [logical_deduction_126] 代码自动修复: 检测到未定义的谓词: Ints
+[11:13:49]   [logical_deduction_126] ✓ 正确! 预测=E, 答案=E
+[11:13:49] [Worker] 开始处理: logical_deduction_217 (mode=direct, semantic_check=False, refinement_code=False)
+[11:13:50]   [logical_deduction_116] 代码自动修复: 检测到未定义的谓词: Ints
+[11:13:50]   [logical_deduction_116] ✓ 正确! 预测=F, 答案=F
+[11:13:50] [Worker] 开始处理: logical_deduction_100 (mode=direct, semantic_check=False, refinement_code=False)
+[11:13:51]   [logical_deduction_230] 代码自动修复: 检测到未定义的谓词: Ints
+[11:13:51]   [logical_deduction_230] ✓ 正确! 预测=C, 答案=C
+[11:13:51] [Worker] 开始处理: logical_deduction_9 (mode=direct, semantic_check=False, refinement_code=False)
+[11:13:51]   [logical_deduction_66] 代码自动修复: 检测到未定义的谓词: Dan, Rob, Ints
+[11:13:51]   [logical_deduction_66] ✓ 正确! 预测=A, 答案=A
+[11:13:51] [Worker] 开始处理: logical_deduction_222 (mode=direct, semantic_check=False, refinement_code=False)
+[11:13:55]   [logical_deduction_9] 代码自动修复: 检测到未定义的谓词: Ints
+[11:13:55]   [logical_deduction_9] ✓ 正确! 预测=A, 答案=A
+[11:13:55] [Worker] 开始处理: logical_deduction_143 (mode=direct, semantic_check=False, refinement_code=False)
+[11:13:56]   [logical_deduction_217] 代码自动修复: 检测到未定义的谓词: Ints
+[11:13:56]   [logical_deduction_217] ✓ 正确! 预测=B, 答案=B
+[11:13:56] [Worker] 开始处理: logical_deduction_36 (mode=direct, semantic_check=False, refinement_code=False)
+[11:13:57]   [logical_deduction_100] 代码自动修复: 检测到未定义的谓词: Ints
+[11:13:57]   [logical_deduction_100] ✓ 正确! 预测=D, 答案=D
+[11:13:57] [Worker] 开始处理: logical_deduction_37 (mode=direct, semantic_check=False, refinement_code=False)
+[11:13:58]   [logical_deduction_222] 代码自动修复: 检测到未定义的谓词: Ints
+[11:13:58]   [logical_deduction_222] ✓ 正确! 预测=B, 答案=B
+[11:13:58] [Worker] 开始处理: logical_deduction_292 (mode=direct, semantic_check=False, refinement_code=False)
+[11:14:00]   [logical_deduction_143] 代码自动修复: 检测到未定义的谓词: Ints
+[11:14:00]   [logical_deduction_143] ✓ 正确! 预测=C, 答案=C
+[11:14:01] [Worker] 开始处理: logical_deduction_220 (mode=direct, semantic_check=False, refinement_code=False)
+[11:14:01]   [logical_deduction_36] 代码自动修复: 检测到未定义的谓词: Ints
+[11:14:01]   [logical_deduction_36] ✓ 正确! 预测=C, 答案=C
+[11:14:01] [Worker] 开始处理: logical_deduction_207 (mode=direct, semantic_check=False, refinement_code=False)
+[11:14:03]   [logical_deduction_37] 代码自动修复: 检测到未定义的谓词: Ints
+[11:14:03]   [logical_deduction_37] ✗ 错误! 预测=E, 答案=C
+[11:14:03] [Worker] 开始处理: logical_deduction_286 (mode=direct, semantic_check=False, refinement_code=False)
+[11:14:04]   [logical_deduction_292] 代码自动修复: 检测到未定义的谓词: Ints
+[11:14:04]   [logical_deduction_292] ✓ 正确! 预测=A, 答案=A
+[11:14:04] [Worker] 开始处理: logical_deduction_1 (mode=direct, semantic_check=False, refinement_code=False)
+[11:14:06]   [logical_deduction_220] 代码自动修复: 检测到未定义的谓词: Ints
+[11:14:06]   [logical_deduction_220] ✗ 错误! 预测=ERROR: UNSATISFIABLE, 答案=C
+[11:14:06] [Worker] 开始处理: logical_deduction_186 (mode=direct, semantic_check=False, refinement_code=False)
+[11:14:07]   [logical_deduction_207] 代码自动修复: 检测到未定义的谓词: Ints
+[11:14:07]   [logical_deduction_207] ✓ 正确! 预测=G, 答案=G
+[11:14:07] [Worker] 开始处理: logical_deduction_206 (mode=direct, semantic_check=False, refinement_code=False)
+[11:14:09]   [logical_deduction_1] 代码自动修复: 检测到未定义的谓词: Ints
+[11:14:09]   [logical_deduction_1] ✓ 正确! 预测=A, 答案=A
+[11:14:09] [Worker] 开始处理: logical_deduction_21 (mode=direct, semantic_check=False, refinement_code=False)
+[11:14:10]   [logical_deduction_286] 代码自动修复: 检测到未定义的谓词: Ints
+[11:14:10]   [logical_deduction_286] ✓ 正确! 预测=A, 答案=A
+[11:14:10] [Worker] 开始处理: logical_deduction_40 (mode=direct, semantic_check=False, refinement_code=False)
+[11:14:13]   [logical_deduction_186] 代码自动修复: 检测到未定义的谓词: Ints
+[11:14:13]   [logical_deduction_186] ✓ 正确! 预测=B, 答案=B
+[11:14:13] [Worker] 开始处理: logical_deduction_34 (mode=direct, semantic_check=False, refinement_code=False)
+[11:14:13]   [logical_deduction_206] 代码自动修复: 检测到未定义的谓词: Ints
+[11:14:13]   [logical_deduction_206] ✓ 正确! 预测=E, 答案=E
+[11:14:13] [Worker] 开始处理: logical_deduction_280 (mode=direct, semantic_check=False, refinement_code=False)
+[11:14:14]   [logical_deduction_21] 代码自动修复: 检测到未定义的谓词: Ints
+[11:14:14]   [logical_deduction_21] ✓ 正确! 预测=B, 答案=B
+[11:14:14] [Worker] 开始处理: logical_deduction_67 (mode=direct, semantic_check=False, refinement_code=False)
+[11:14:16]   [logical_deduction_40] 代码自动修复: 检测到未定义的谓词: Ints
+[11:14:16]   [logical_deduction_40] ✓ 正确! 预测=D, 答案=D
+[11:14:16] [Worker] 开始处理: logical_deduction_208 (mode=direct, semantic_check=False, refinement_code=False)
+[11:14:17]   [logical_deduction_280] 代码自动修复: 检测到未定义的谓词: Ints
+[11:14:17]   [logical_deduction_280] ✓ 正确! 预测=C, 答案=C
+[11:14:17] [Worker] 开始处理: logical_deduction_121 (mode=direct, semantic_check=False, refinement_code=False)
+[11:14:20]   [logical_deduction_67] 代码自动修复: 检测到未定义的谓词: Ints
+[11:14:20]   [logical_deduction_67] ✓ 正确! 预测=E, 答案=E
+[11:14:20] [Worker] 开始处理: logical_deduction_285 (mode=direct, semantic_check=False, refinement_code=False)
+[11:14:21]   [logical_deduction_208] 代码自动修复: 检测到未定义的谓词: Ints
+[11:14:21]   [logical_deduction_208] ✗ 错误! 预测=C, 答案=A
+[11:14:21] [Worker] 开始处理: logical_deduction_231 (mode=direct, semantic_check=False, refinement_code=False)
+[11:14:23]   [logical_deduction_285] 代码自动修复: 检测到未定义的谓词: Ints
+[11:14:23]   [logical_deduction_285] ✓ 正确! 预测=B, 答案=B
+[11:14:23] [Worker] 开始处理: logical_deduction_237 (mode=direct, semantic_check=False, refinement_code=False)
+[11:14:24]   [logical_deduction_121] 代码自动修复: 检测到未定义的谓词: Ints
+[11:14:24]   [logical_deduction_121] ✓ 正确! 预测=F, 答案=F
+[11:14:24] [Worker] 开始处理: logical_deduction_279 (mode=direct, semantic_check=False, refinement_code=False)
+[11:14:26]   [logical_deduction_231] 代码自动修复: 检测到未定义的谓词: Ints
+[11:14:26]   [logical_deduction_231] ✓ 正确! 预测=E, 答案=E
+[11:14:26] [Worker] 开始处理: logical_deduction_74 (mode=direct, semantic_check=False, refinement_code=False)
+[11:14:28]   [logical_deduction_279] 代码自动修复: 检测到未定义的谓词: Ints
+[11:14:28]   [logical_deduction_279] ✓ 正确! 预测=C, 答案=C
+[11:14:28] [Worker] 开始处理: logical_deduction_18 (mode=direct, semantic_check=False, refinement_code=False)
+[11:14:30]   [logical_deduction_237] 代码自动修复: 检测到未定义的谓词: Ints
+[11:14:30]   [logical_deduction_237] ✗ 错误! 预测=ERROR: UNSATISFIABLE, 答案=B
+[11:14:30] [Worker] 开始处理: logical_deduction_212 (mode=direct, semantic_check=False, refinement_code=False)
+[11:14:31]   [logical_deduction_74] 代码自动修复: 检测到未定义的谓词: Ints
+[11:14:31]   [logical_deduction_74] ✓ 正确! 预测=C, 答案=C
+[11:14:31] [Worker] 开始处理: logical_deduction_169 (mode=direct, semantic_check=False, refinement_code=False)
+[11:14:33]   [logical_deduction_34] 代码自动修复: 检测到未定义的谓词: Ints
+[11:14:33]   [logical_deduction_34] ✓ 正确! 预测=B, 答案=B
+[11:14:33] [Worker] 开始处理: logical_deduction_187 (mode=direct, semantic_check=False, refinement_code=False)
+[11:14:33]   [logical_deduction_18] 代码自动修复: 检测到未定义的谓词: Ints
+[11:14:33]   [logical_deduction_18] ✓ 正确! 预测=A, 答案=A
+[11:14:33] [Worker] 开始处理: logical_deduction_79 (mode=direct, semantic_check=False, refinement_code=False)
+[11:14:36]   [logical_deduction_212] 代码自动修复: 检测到未定义的谓词: Ints
+[11:14:36]   [logical_deduction_212] ✗ 错误! 预测=D, 答案=G
+[11:14:36] [Worker] 开始处理: logical_deduction_105 (mode=direct, semantic_check=False, refinement_code=False)
+[11:14:38]   [logical_deduction_187] 代码自动修复: 检测到未定义的谓词: Ints
+[11:14:38]   [logical_deduction_187] ✗ 错误! 预测=G, 答案=A
+[11:14:38]   [logical_deduction_79] 代码自动修复: 检测到未定义的谓词: Ints
+[11:14:38]   [logical_deduction_79] ✓ 正确! 预测=B, 答案=B
+[11:14:40]   [logical_deduction_169] 代码自动修复: 检测到未定义的谓词: Ints
+[11:14:40]   [logical_deduction_169] ✓ 正确! 预测=B, 答案=B
+[11:14:41]   [logical_deduction_105] 代码自动修复: 检测到未定义的谓词: Ints
+[11:14:41]   [logical_deduction_105] ✓ 正确! 预测=C, 答案=C
+[11:14:41] ==================================================
+[11:14:41] 评测完成!
+[11:14:41] 已完成: 50, 正确: 43, 错误: 7, 异常: 0
+[11:14:41] 准确率: 86.00%
+[11:14:41] ==================================================
+[11:17:08] 正在加载数据集: D:/学习资料/课程/程序设计大作业/EnhancingLLM/EnhancingLLM/data/FOLIO_test.json
+[11:17:08] 共 50 道题目，使用 4 个 workers 并行处理
+[11:17:08] [Worker] 开始处理: FOLIO_dev_0 (mode=direct, semantic_check=False, refinement_code=False)
+[11:17:08] [Worker] 开始处理: FOLIO_dev_43 (mode=direct, semantic_check=False, refinement_code=False)
+[11:17:08] [Worker] 开始处理: FOLIO_dev_59 (mode=direct, semantic_check=False, refinement_code=False)
+[11:17:08] [Worker] 开始处理: FOLIO_dev_125 (mode=direct, semantic_check=False, refinement_code=False)
+[11:17:14]   [FOLIO_dev_43] code执行错误: b'index out of bounds'
+[11:17:14]   [FOLIO_dev_43] ⚠ 异常: 代码执行错误（代码修复功能已关闭）: b'index out of bounds'
+[11:17:14] [Worker] 开始处理: FOLIO_dev_144 (mode=direct, semantic_check=False, refinement_code=False)
+[11:17:14]   [FOLIO_dev_0] code执行错误: Z3 internal error (known bug): b'unreachable'
+[11:17:14]   [FOLIO_dev_0] ⚠ 异常: 代码执行错误（代码修复功能已关闭）: Z3 internal error (known bug): b'unreachable'
+[11:17:14] [Worker] 开始处理: FOLIO_dev_17 (mode=direct, semantic_check=False, refinement_code=False)
+[11:17:15]   [FOLIO_dev_59] code执行错误: Z3 internal error (known bug): b'unreachable'
+[11:17:15]   [FOLIO_dev_59] ⚠ 异常: 代码执行错误（代码修复功能已关闭）: Z3 internal error (known bug): b'unreachable'
+[11:17:15] [Worker] 开始处理: FOLIO_dev_83 (mode=direct, semantic_check=False, refinement_code=False)
+[11:17:15]   [FOLIO_dev_125] 代码自动修复: 检测到缺少 1 个右括号; 第34行: 添加 1 个右括号
+[11:17:15]   [FOLIO_dev_125] code执行错误: Z3 internal error (known bug): b'unreachable'
+[11:17:15]   [FOLIO_dev_125] ⚠ 异常: 代码执行错误（代码修复功能已关闭）: Z3 internal error (known bug): b'unreachable'
+[11:17:15] [Worker] 开始处理: FOLIO_dev_13 (mode=direct, semantic_check=False, refinement_code=False)
+[11:17:19]   [FOLIO_dev_17] code执行错误: name 'rock_is_cute' is not defined
+[11:17:19]   [FOLIO_dev_17] ⚠ 异常: 代码执行错误（代码修复功能已关闭）: name 'rock_is_cute' is not defined
+[11:17:19] [Worker] 开始处理: FOLIO_dev_111 (mode=direct, semantic_check=False, refinement_code=False)
+[11:17:19]   [FOLIO_dev_144] code执行错误: b'index out of bounds'
+[11:17:19]   [FOLIO_dev_144] ⚠ 异常: 代码执行错误（代码修复功能已关闭）: b'index out of bounds'
+[11:17:19] [Worker] 开始处理: FOLIO_dev_107 (mode=direct, semantic_check=False, refinement_code=False)
+[11:17:21]   [FOLIO_dev_13] ✗ 错误! 预测=A, 答案=C
+[11:17:21] [Worker] 开始处理: FOLIO_dev_130 (mode=direct, semantic_check=False, refinement_code=False)
+[11:17:22]   [FOLIO_dev_83] code执行错误: name 'dried_thai_chilies_are_cupcakes' is not defined
+[11:17:22]   [FOLIO_dev_83] ⚠ 异常: 代码执行错误（代码修复功能已关闭）: name 'dried_thai_chilies_are_cupcakes' is not defined
+[11:17:22] [Worker] 开始处理: FOLIO_dev_89 (mode=direct, semantic_check=False, refinement_code=False)
+[11:17:24]   [FOLIO_dev_111] code执行错误: b'index out of bounds'
+[11:17:24]   [FOLIO_dev_111] ⚠ 异常: 代码执行错误（代码修复功能已关闭）: b'index out of bounds'
+[11:17:24] [Worker] 开始处理: FOLIO_dev_126 (mode=direct, semantic_check=False, refinement_code=False)
+[11:17:24]   [FOLIO_dev_107] code执行错误: b'index out of bounds'
+[11:17:24]   [FOLIO_dev_107] ⚠ 异常: 代码执行错误（代码修复功能已关闭）: b'index out of bounds'
+[11:17:24] [Worker] 开始处理: FOLIO_dev_134 (mode=direct, semantic_check=False, refinement_code=False)
+[11:17:27]   [FOLIO_dev_130] code执行错误: b'index out of bounds'
+[11:17:27]   [FOLIO_dev_130] ⚠ 异常: 代码执行错误（代码修复功能已关闭）: b'index out of bounds'
+[11:17:27] [Worker] 开始处理: FOLIO_dev_51 (mode=direct, semantic_check=False, refinement_code=False)
+[11:17:27]   [FOLIO_dev_89] code执行错误: b'index out of bounds'
+[11:17:27]   [FOLIO_dev_89] ⚠ 异常: 代码执行错误（代码修复功能已关闭）: b'index out of bounds'
+[11:17:27] [Worker] 开始处理: FOLIO_dev_60 (mode=direct, semantic_check=False, refinement_code=False)
+[11:17:29]   [FOLIO_dev_134] ✗ 错误! 预测=A, 答案=C
+[11:17:29] [Worker] 开始处理: FOLIO_dev_25 (mode=direct, semantic_check=False, refinement_code=False)
+[11:17:29]   [FOLIO_dev_126] 代码自动修复: 检测到缺少 1 个右括号; 第34行: 添加 1 个右括号
+[11:17:30]   [FOLIO_dev_126] code执行错误: b'index out of bounds'
+[11:17:30]   [FOLIO_dev_126] ⚠ 异常: 代码执行错误（代码修复功能已关闭）: b'index out of bounds'
+[11:17:30] [Worker] 开始处理: FOLIO_dev_101 (mode=direct, semantic_check=False, refinement_code=False)
+[11:17:31]   [FOLIO_dev_51] code执行错误: b'index out of bounds'
+[11:17:31]   [FOLIO_dev_51] ⚠ 异常: 代码执行错误（代码修复功能已关闭）: b'index out of bounds'
+[11:17:31] [Worker] 开始处理: FOLIO_dev_49 (mode=direct, semantic_check=False, refinement_code=False)
+[11:17:32]   [FOLIO_dev_60] code执行错误: name 'montana_includes_billings' is not defined
+[11:17:32]   [FOLIO_dev_60] ⚠ 异常: 代码执行错误（代码修复功能已关闭）: name 'montana_includes_billings' is not defined
+[11:17:32] [Worker] 开始处理: FOLIO_dev_48 (mode=direct, semantic_check=False, refinement_code=False)
+[11:17:34]   [FOLIO_dev_101] 代码自动修复: 检测到缺少 1 个右括号; 第39行: 添加 1 个右括号
+[11:17:34]   [FOLIO_dev_101] code执行错误: b'index out of bounds'
+[11:17:34]   [FOLIO_dev_101] ⚠ 异常: 代码执行错误（代码修复功能已关闭）: b'index out of bounds'
+[11:17:34] [Worker] 开始处理: FOLIO_dev_66 (mode=direct, semantic_check=False, refinement_code=False)
+[11:17:36]   [FOLIO_dev_48] code执行错误: b'index out of bounds'
+[11:17:36]   [FOLIO_dev_48] ⚠ 异常: 代码执行错误（代码修复功能已关闭）: b'index out of bounds'
+[11:17:36] [Worker] 开始处理: FOLIO_dev_169 (mode=direct, semantic_check=False, refinement_code=False)
+[11:17:36]   [FOLIO_dev_49] code执行错误: b'index out of bounds'
+[11:17:36]   [FOLIO_dev_49] ⚠ 异常: 代码执行错误（代码修复功能已关闭）: b'index out of bounds'
+[11:17:36] [Worker] 开始处理: FOLIO_dev_172 (mode=direct, semantic_check=False, refinement_code=False)
+[11:17:40]   [FOLIO_dev_169] ✓ 正确! 预测=B, 答案=B
+[11:17:40] [Worker] 开始处理: FOLIO_dev_44 (mode=direct, semantic_check=False, refinement_code=False)
+[11:17:41]   [FOLIO_dev_66] ✓ 正确! 预测=A, 答案=A
+[11:17:41] [Worker] 开始处理: FOLIO_dev_8 (mode=direct, semantic_check=False, refinement_code=False)
+[11:17:43]   [FOLIO_dev_172] ✗ 错误! 预测=A, 答案=B
+[11:17:43] [Worker] 开始处理: FOLIO_dev_22 (mode=direct, semantic_check=False, refinement_code=False)
+[11:17:46]   [FOLIO_dev_44] code执行错误: b'index out of bounds'
+[11:17:46]   [FOLIO_dev_44] ⚠ 异常: 代码执行错误（代码修复功能已关闭）: b'index out of bounds'
+[11:17:46] [Worker] 开始处理: FOLIO_dev_200 (mode=direct, semantic_check=False, refinement_code=False)
+[11:17:47]   [FOLIO_dev_8] code执行错误: b'index out of bounds'
+[11:17:47]   [FOLIO_dev_8] ⚠ 异常: 代码执行错误（代码修复功能已关闭）: b'index out of bounds'
+[11:17:47] [Worker] 开始处理: FOLIO_dev_85 (mode=direct, semantic_check=False, refinement_code=False)
+[11:17:47]   [FOLIO_dev_22] code执行错误: b'index out of bounds'
+[11:17:47]   [FOLIO_dev_22] ⚠ 异常: 代码执行错误（代码修复功能已关闭）: b'index out of bounds'
+[11:17:47] [Worker] 开始处理: FOLIO_dev_178 (mode=direct, semantic_check=False, refinement_code=False)
+[11:17:49]   [FOLIO_dev_25] code执行错误: b'index out of bounds'
+[11:17:49]   [FOLIO_dev_25] ⚠ 异常: 代码执行错误（代码修复功能已关闭）: b'index out of bounds'
+[11:17:49] [Worker] 开始处理: FOLIO_dev_73 (mode=direct, semantic_check=False, refinement_code=False)
+[11:17:51]   [FOLIO_dev_200] code执行错误: b'index out of bounds'
+[11:17:51]   [FOLIO_dev_200] ⚠ 异常: 代码执行错误（代码修复功能已关闭）: b'index out of bounds'
+[11:17:51] [Worker] 开始处理: FOLIO_dev_26 (mode=direct, semantic_check=False, refinement_code=False)
+[11:17:52]   [FOLIO_dev_178] ✓ 正确! 预测=A, 答案=A
+[11:17:52] [Worker] 开始处理: FOLIO_dev_196 (mode=direct, semantic_check=False, refinement_code=False)
+[11:17:52]   [FOLIO_dev_85] code执行错误: b'index out of bounds'
+[11:17:52]   [FOLIO_dev_85] ⚠ 异常: 代码执行错误（代码修复功能已关闭）: b'index out of bounds'
+[11:17:52] [Worker] 开始处理: FOLIO_dev_33 (mode=direct, semantic_check=False, refinement_code=False)
+[11:17:56]   [FOLIO_dev_26] code执行错误: b'index out of bounds'
+[11:17:56]   [FOLIO_dev_26] ⚠ 异常: 代码执行错误（代码修复功能已关闭）: b'index out of bounds'
+[11:17:56] [Worker] 开始处理: FOLIO_dev_152 (mode=direct, semantic_check=False, refinement_code=False)
+[11:17:57]   [FOLIO_dev_73] 代码自动修复: 检测到缺少 2 个右括号; 第35行: 添加 1 个右括号; 第41行: 添加 1 个右括号
+[11:17:57]   [FOLIO_dev_73] code执行错误: b'index out of bounds'
+[11:17:57]   [FOLIO_dev_73] ⚠ 异常: 代码执行错误（代码修复功能已关闭）: b'index out of bounds'
+[11:17:57] [Worker] 开始处理: FOLIO_dev_76 (mode=direct, semantic_check=False, refinement_code=False)
+[11:17:57]   [FOLIO_dev_33] code执行错误: b'index out of bounds'
+[11:17:57]   [FOLIO_dev_33] ⚠ 异常: 代码执行错误（代码修复功能已关闭）: b'index out of bounds'
+[11:17:57] [Worker] 开始处理: FOLIO_dev_23 (mode=direct, semantic_check=False, refinement_code=False)
+[11:17:58]   [FOLIO_dev_196] code执行错误: b'index out of bounds'
+[11:17:58]   [FOLIO_dev_196] ⚠ 异常: 代码执行错误（代码修复功能已关闭）: b'index out of bounds'
+[11:17:58] [Worker] 开始处理: FOLIO_dev_11 (mode=direct, semantic_check=False, refinement_code=False)
+[11:18:02]   [FOLIO_dev_152] code执行错误: b'index out of bounds'
+[11:18:02]   [FOLIO_dev_152] ⚠ 异常: 代码执行错误（代码修复功能已关闭）: b'index out of bounds'
+[11:18:02] [Worker] 开始处理: FOLIO_dev_170 (mode=direct, semantic_check=False, refinement_code=False)
+[11:18:02]   [FOLIO_dev_76] code执行错误: b'index out of bounds'
+[11:18:02]   [FOLIO_dev_76] ⚠ 异常: 代码执行错误（代码修复功能已关闭）: b'index out of bounds'
+[11:18:02] [Worker] 开始处理: FOLIO_dev_150 (mode=direct, semantic_check=False, refinement_code=False)
+[11:18:03]   [FOLIO_dev_11] code执行错误: b'index out of bounds'
+[11:18:03]   [FOLIO_dev_11] ⚠ 异常: 代码执行错误（代码修复功能已关闭）: b'index out of bounds'
+[11:18:03] [Worker] 开始处理: FOLIO_dev_77 (mode=direct, semantic_check=False, refinement_code=False)
+[11:18:03]   [FOLIO_dev_23] ✗ 错误! 预测=A, 答案=C
+[11:18:03] [Worker] 开始处理: FOLIO_dev_31 (mode=direct, semantic_check=False, refinement_code=False)
+[11:18:07]   [FOLIO_dev_150] code执行错误: b'index out of bounds'
+[11:18:07]   [FOLIO_dev_150] ⚠ 异常: 代码执行错误（代码修复功能已关闭）: b'index out of bounds'
+[11:18:07] [Worker] 开始处理: FOLIO_dev_21 (mode=direct, semantic_check=False, refinement_code=False)
+[11:18:08]   [FOLIO_dev_170] code执行错误: b'index out of bounds'
+[11:18:08]   [FOLIO_dev_170] ⚠ 异常: 代码执行错误（代码修复功能已关闭）: b'index out of bounds'
+[11:18:08] [Worker] 开始处理: FOLIO_dev_14 (mode=direct, semantic_check=False, refinement_code=False)
+[11:18:09]   [FOLIO_dev_77] code执行错误: b'index out of bounds'
+[11:18:09]   [FOLIO_dev_77] ⚠ 异常: 代码执行错误（代码修复功能已关闭）: b'index out of bounds'
+[11:18:09] [Worker] 开始处理: FOLIO_dev_129 (mode=direct, semantic_check=False, refinement_code=False)
+[11:18:10]   [FOLIO_dev_31] code执行错误: b'index out of bounds'
+[11:18:10]   [FOLIO_dev_31] ⚠ 异常: 代码执行错误（代码修复功能已关闭）: b'index out of bounds'
+[11:18:10] [Worker] 开始处理: FOLIO_dev_40 (mode=direct, semantic_check=False, refinement_code=False)
+[11:18:16]   [FOLIO_dev_129] ✓ 正确! 预测=A, 答案=A
+[11:18:16] [Worker] 开始处理: FOLIO_dev_4 (mode=direct, semantic_check=False, refinement_code=False)
+[11:18:17]   [FOLIO_dev_40] code执行错误: name 'max_dreamy' is not defined
+[11:18:17]   [FOLIO_dev_40] ⚠ 异常: 代码执行错误（代码修复功能已关闭）: name 'max_dreamy' is not defined
+[11:18:17] [Worker] 开始处理: FOLIO_dev_132 (mode=direct, semantic_check=False, refinement_code=False)
+[11:18:18]   [FOLIO_dev_14] code执行错误: b'index out of bounds'
+[11:18:18]   [FOLIO_dev_14] ⚠ 异常: 代码执行错误（代码修复功能已关闭）: b'index out of bounds'
+[11:18:18] [Worker] 开始处理: FOLIO_dev_176 (mode=direct, semantic_check=False, refinement_code=False)
+[11:18:21]   [FOLIO_dev_132] ✓ 正确! 预测=A, 答案=A
+[11:18:21] [Worker] 开始处理: FOLIO_dev_53 (mode=direct, semantic_check=False, refinement_code=False)
+[11:18:23]   [FOLIO_dev_4] 代码自动修复: 检测到缺少 1 个右括号; 第30行: 添加 1 个右括号
+[11:18:23]   [FOLIO_dev_4] code执行错误: b'index out of bounds'
+[11:18:23]   [FOLIO_dev_4] ⚠ 异常: 代码执行错误（代码修复功能已关闭）: b'index out of bounds'
+[11:18:23] [Worker] 开始处理: FOLIO_dev_171 (mode=direct, semantic_check=False, refinement_code=False)
+[11:18:23]   [FOLIO_dev_176] code执行错误: b'index out of bounds'
+[11:18:23]   [FOLIO_dev_176] ⚠ 异常: 代码执行错误（代码修复功能已关闭）: b'index out of bounds'
+[11:18:27]   [FOLIO_dev_53] code执行错误: b'index out of bounds'
+[11:18:27]   [FOLIO_dev_53] ⚠ 异常: 代码执行错误（代码修复功能已关闭）: b'index out of bounds'
+[11:18:28]   [FOLIO_dev_171] code执行错误: b'index out of bounds'
+[11:18:28]   [FOLIO_dev_171] ⚠ 异常: 代码执行错误（代码修复功能已关闭）: b'index out of bounds'
+[11:19:03]   [FOLIO_dev_21] ✓ 正确! 预测=A, 答案=A
+[11:19:03] ==================================================
+[11:19:03] 评测完成!
+[11:19:03] 已完成: 50, 正确: 6, 错误: 4, 异常: 40
+[11:19:03] 准确率: 12.00%
+[11:19:03] ==================================================
+[11:19:19] 结果已导出到: D:/学习资料/课程/程序设计大作业/EnhancingLLM/EnhancingLLM/data/test10.json

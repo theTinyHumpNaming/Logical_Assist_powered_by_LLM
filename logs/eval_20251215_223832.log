@@ -1,0 +1,113 @@
+=== 评测日志开始于 2025-12-15 22:38:32 ===
+[22:38:34] 语义检查功能已启用
+[22:38:35] 语义检查功能已关闭
+[22:39:28] 正在加载数据集: D:/Project/BProject/EnhancingLLM/data/ProntoQA_test.json
+[22:39:28] 共 50 道题目，使用 4 个 workers 并行处理
+[22:39:28] [Worker] 开始处理: ProntoQA_118 (mode=direct, semantic_check=False)
+[22:39:28] [Worker] 开始处理: ProntoQA_285 (mode=direct, semantic_check=False)
+[22:39:28] [Worker] 开始处理: ProntoQA_281 (mode=direct, semantic_check=False)
+[22:39:28] [Worker] 开始处理: ProntoQA_152 (mode=direct, semantic_check=False)
+[22:39:38]   [ProntoQA_118] ✓ 正确! 预测=B, 答案=B
+[22:39:38] [Worker] 开始处理: ProntoQA_293 (mode=direct, semantic_check=False)
+[22:39:40]   [ProntoQA_281] ✓ 正确! 预测=A, 答案=A
+[22:39:40] [Worker] 开始处理: ProntoQA_30 (mode=direct, semantic_check=False)
+[22:39:40]   [ProntoQA_285] ✓ 正确! 预测=A, 答案=A
+[22:39:40] [Worker] 开始处理: ProntoQA_189 (mode=direct, semantic_check=False)
+[22:39:41]   [ProntoQA_152] ✓ 正确! 预测=A, 答案=A
+[22:39:41] [Worker] 开始处理: ProntoQA_187 (mode=direct, semantic_check=False)
+[22:39:45]   [ProntoQA_189] ✓ 正确! 预测=B, 答案=B
+[22:39:45] [Worker] 开始处理: ProntoQA_267 (mode=direct, semantic_check=False)
+[22:39:45]   [ProntoQA_293] ✓ 正确! 预测=A, 答案=A
+[22:39:45] [Worker] 开始处理: ProntoQA_169 (mode=direct, semantic_check=False)
+[22:39:48]   [ProntoQA_30] ✓ 正确! 预测=A, 答案=A
+[22:39:48] [Worker] 开始处理: ProntoQA_487 (mode=direct, semantic_check=False)
+[22:39:48]   [ProntoQA_187] ✓ 正确! 预测=A, 答案=A
+[22:39:48] [Worker] 开始处理: ProntoQA_231 (mode=direct, semantic_check=False)
+[22:39:52]   [ProntoQA_267] ✓ 正确! 预测=B, 答案=B
+[22:39:52] [Worker] 开始处理: ProntoQA_449 (mode=direct, semantic_check=False)
+[22:39:54]   [ProntoQA_169] ✓ 正确! 预测=B, 答案=B
+[22:39:54] [Worker] 开始处理: ProntoQA_434 (mode=direct, semantic_check=False)
+[22:39:55]   [ProntoQA_487] ✓ 正确! 预测=A, 答案=A
+[22:39:55] [Worker] 开始处理: ProntoQA_495 (mode=direct, semantic_check=False)
+[22:39:58]   [ProntoQA_231] ✓ 正确! 预测=B, 答案=B
+[22:39:58] [Worker] 开始处理: ProntoQA_165 (mode=direct, semantic_check=False)
+[22:39:59]   [ProntoQA_449] ✓ 正确! 预测=B, 答案=B
+[22:39:59] [Worker] 开始处理: ProntoQA_194 (mode=direct, semantic_check=False)
+[22:40:01]   [ProntoQA_434] ✓ 正确! 预测=A, 答案=A
+[22:40:01] [Worker] 开始处理: ProntoQA_436 (mode=direct, semantic_check=False)
+[22:40:04]   [ProntoQA_165] ✓ 正确! 预测=A, 答案=A
+[22:40:04] [Worker] 开始处理: ProntoQA_217 (mode=direct, semantic_check=False)
+[22:40:05]   [ProntoQA_194] ✓ 正确! 预测=B, 答案=B
+[22:40:05] [Worker] 开始处理: ProntoQA_342 (mode=direct, semantic_check=False)
+[22:40:10]   [ProntoQA_436] ✓ 正确! 预测=A, 答案=A
+[22:40:10] [Worker] 开始处理: ProntoQA_111 (mode=direct, semantic_check=False)
+[22:40:14]   [ProntoQA_342] ✓ 正确! 预测=B, 答案=B
+[22:40:14] [Worker] 开始处理: ProntoQA_121 (mode=direct, semantic_check=False)
+[22:40:15]   [ProntoQA_217] ✓ 正确! 预测=A, 答案=A
+[22:40:15] [Worker] 开始处理: ProntoQA_437 (mode=direct, semantic_check=False)
+[22:40:17]   [ProntoQA_111] ✓ 正确! 预测=B, 答案=B
+[22:40:17] [Worker] 开始处理: ProntoQA_430 (mode=direct, semantic_check=False)
+[22:40:21]   [ProntoQA_437] ✓ 正确! 预测=B, 答案=B
+[22:40:21] [Worker] 开始处理: ProntoQA_372 (mode=direct, semantic_check=False)
+[22:40:21]   [ProntoQA_121] ✓ 正确! 预测=A, 答案=A
+[22:40:21] [Worker] 开始处理: ProntoQA_360 (mode=direct, semantic_check=False)
+[22:40:29]   [ProntoQA_430] ✓ 正确! 预测=A, 答案=A
+[22:40:29] [Worker] 开始处理: ProntoQA_477 (mode=direct, semantic_check=False)
+[22:40:29]   [ProntoQA_360] ✓ 正确! 预测=B, 答案=B
+[22:40:29] [Worker] 开始处理: ProntoQA_237 (mode=direct, semantic_check=False)
+[22:40:31]   [ProntoQA_372] ✓ 正确! 预测=B, 答案=B
+[22:40:31] [Worker] 开始处理: ProntoQA_329 (mode=direct, semantic_check=False)
+[22:40:41]   [ProntoQA_237] ✓ 正确! 预测=B, 答案=B
+[22:40:41] [Worker] 开始处理: ProntoQA_160 (mode=direct, semantic_check=False)
+[22:40:43]   [ProntoQA_329] ✓ 正确! 预测=B, 答案=B
+[22:40:43] [Worker] 开始处理: ProntoQA_465 (mode=direct, semantic_check=False)
+[22:40:51]   [ProntoQA_160] ✓ 正确! 预测=B, 答案=B
+[22:40:51] [Worker] 开始处理: ProntoQA_47 (mode=direct, semantic_check=False)
+[22:40:56]   [ProntoQA_465] ✓ 正确! 预测=B, 答案=B
+[22:40:56] [Worker] 开始处理: ProntoQA_403 (mode=direct, semantic_check=False)
+[22:40:59]   [ProntoQA_47] ✓ 正确! 预测=B, 答案=B
+[22:40:59] [Worker] 开始处理: ProntoQA_345 (mode=direct, semantic_check=False)
+[22:41:05]   [ProntoQA_403] ✓ 正确! 预测=B, 答案=B
+[22:41:05] [Worker] 开始处理: ProntoQA_444 (mode=direct, semantic_check=False)
+[22:41:10]   [ProntoQA_345] ✓ 正确! 预测=B, 答案=B
+[22:41:10] [Worker] 开始处理: ProntoQA_68 (mode=direct, semantic_check=False)
+[22:41:13]   [ProntoQA_444] code执行错误: '(' was never closed (<string>, line 84)
+[22:41:13]   [ProntoQA_444] 第2次尝试重新生成...
+[22:41:18]   [ProntoQA_68] ✓ 正确! 预测=A, 答案=A
+[22:41:18] [Worker] 开始处理: ProntoQA_183 (mode=direct, semantic_check=False)
+[22:41:24]   [ProntoQA_444] ✓ 正确! 预测=A, 答案=A
+[22:41:24] [Worker] 开始处理: ProntoQA_257 (mode=direct, semantic_check=False)
+[22:41:24]   [ProntoQA_183] ✓ 正确! 预测=B, 答案=B
+[22:41:24] [Worker] 开始处理: ProntoQA_58 (mode=direct, semantic_check=False)
+[22:41:31]   [ProntoQA_257] ✓ 正确! 预测=A, 答案=A
+[22:41:31] [Worker] 开始处理: ProntoQA_60 (mode=direct, semantic_check=False)
+[22:41:34]   [ProntoQA_58] ✓ 正确! 预测=B, 答案=B
+[22:41:34] [Worker] 开始处理: ProntoQA_150 (mode=direct, semantic_check=False)
+[22:41:38]   [ProntoQA_495] ✓ 正确! 预测=A, 答案=A
+[22:41:38] [Worker] 开始处理: ProntoQA_273 (mode=direct, semantic_check=False)
+[22:41:40]   [ProntoQA_60] ✗ 错误! 预测=A, 答案=B
+[22:41:41] [Worker] 开始处理: ProntoQA_425 (mode=direct, semantic_check=False)
+[22:41:45]   [ProntoQA_150] ✓ 正确! 预测=A, 答案=A
+[22:41:45] [Worker] 开始处理: ProntoQA_271 (mode=direct, semantic_check=False)
+[22:41:49]   [ProntoQA_273] ✓ 正确! 预测=A, 答案=A
+[22:41:49] [Worker] 开始处理: ProntoQA_263 (mode=direct, semantic_check=False)
+[22:41:52]   [ProntoQA_425] ✓ 正确! 预测=B, 答案=B
+[22:41:52] [Worker] 开始处理: ProntoQA_6 (mode=direct, semantic_check=False)
+[22:41:52]   [ProntoQA_271] ✓ 正确! 预测=A, 答案=A
+[22:41:52] [Worker] 开始处理: ProntoQA_197 (mode=direct, semantic_check=False)
+[22:41:57]   [ProntoQA_263] ✗ 错误! 预测=A, 答案=B
+[22:41:57] [Worker] 开始处理: ProntoQA_439 (mode=direct, semantic_check=False)
+[22:41:59]   [ProntoQA_6] ✓ 正确! 预测=A, 答案=A
+[22:41:59] [Worker] 开始处理: ProntoQA_405 (mode=direct, semantic_check=False)
+[22:42:00]   [ProntoQA_197] ✓ 正确! 预测=B, 答案=B
+[22:42:00] [Worker] 开始处理: ProntoQA_289 (mode=direct, semantic_check=False)
+[22:42:06]   [ProntoQA_405] ✓ 正确! 预测=A, 答案=A
+[22:42:07]   [ProntoQA_289] ✓ 正确! 预测=B, 答案=B
+[22:42:07]   [ProntoQA_439] ✓ 正确! 预测=A, 答案=A
+[22:42:13]   [ProntoQA_477] ✓ 正确! 预测=A, 答案=A
+[22:42:13] ==================================================
+[22:42:13] 评测完成!
+[22:42:13] 总计: 50, 正确: 48, 错误: 2, 异常: 0
+[22:42:13] 准确率: 96.00%
+[22:42:13] ==================================================
+=== 评测日志结束于 2025-12-15 22:42:32 ===

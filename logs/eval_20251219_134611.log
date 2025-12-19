@@ -1,0 +1,67 @@
+=== 评测日志开始于 2025-12-19 13:46:11 ===
+[13:46:14] 代码修复功能已关闭
+[13:46:19] 正在加载数据集: D:/学习资料/课程/程序设计大作业/EnhancingLLM/EnhancingLLM/data/FOLIO_test.json
+[13:46:19] 共 50 道题目，使用 4 个 workers 并行处理
+[13:46:19] [Worker] 开始处理: FOLIO_dev_43 (mode=direct, semantic_check=False, refinement_code=False)
+[13:46:19] [Worker] 开始处理: FOLIO_dev_125 (mode=direct, semantic_check=False, refinement_code=False)
+[13:46:19] [Worker] 开始处理: FOLIO_dev_59 (mode=direct, semantic_check=False, refinement_code=False)
+[13:46:19] [Worker] 开始处理: FOLIO_dev_0 (mode=direct, semantic_check=False, refinement_code=False)
+[13:46:25]   [FOLIO_dev_125] code执行错误: '(' was never closed (<string>, line 36)
+[13:46:25]   [FOLIO_dev_125] ⚠ 异常: 代码执行错误（代码修复功能已关闭）: '(' was never closed (<string>, line 36)
+[13:46:25] [Worker] 开始处理: FOLIO_dev_144 (mode=direct, semantic_check=False, refinement_code=False)
+[13:46:27]   [FOLIO_dev_0] ✓ 正确! 预测=C, 答案=C
+[13:46:27] [Worker] 开始处理: FOLIO_dev_17 (mode=direct, semantic_check=False, refinement_code=False)
+[13:46:28]   [FOLIO_dev_43] code执行错误: Z3 internal error (known bug): invalid syntax. Perhaps you forgot a comma? (<string>, line 30)
+[13:46:28]   [FOLIO_dev_43] ⚠ 异常: 代码执行错误（代码修复功能已关闭）: Z3 internal error (known bug): invalid syntax. Perhaps you forgot a comma? (<string>, line 30)
+[13:46:28] [Worker] 开始处理: FOLIO_dev_83 (mode=direct, semantic_check=False, refinement_code=False)
+[13:46:29]   [FOLIO_dev_144] ✓ 正确! 预测=C, 答案=C
+[13:46:29] [Worker] 开始处理: FOLIO_dev_13 (mode=direct, semantic_check=False, refinement_code=False)
+[13:46:34]   [FOLIO_dev_83] ✓ 正确! 预测=B, 答案=B
+[13:46:34] [Worker] 开始处理: FOLIO_dev_111 (mode=direct, semantic_check=False, refinement_code=False)
+[13:46:34]   [FOLIO_dev_17] ✓ 正确! 预测=C, 答案=C
+[13:46:34] [Worker] 开始处理: FOLIO_dev_107 (mode=direct, semantic_check=False, refinement_code=False)
+[13:46:36]   [FOLIO_dev_13] ✓ 正确! 预测=C, 答案=C
+[13:46:36] [Worker] 开始处理: FOLIO_dev_130 (mode=direct, semantic_check=False, refinement_code=False)
+[13:46:39]   [FOLIO_dev_107] ✗ 错误! 预测=C, 答案=B
+[13:46:39] [Worker] 开始处理: FOLIO_dev_89 (mode=direct, semantic_check=False, refinement_code=False)
+[13:46:40]   [FOLIO_dev_111] ✓ 正确! 预测=C, 答案=C
+[13:46:40] [Worker] 开始处理: FOLIO_dev_126 (mode=direct, semantic_check=False, refinement_code=False)
+[13:46:42]   [FOLIO_dev_130] ✓ 正确! 预测=C, 答案=C
+[13:46:42] [Worker] 开始处理: FOLIO_dev_134 (mode=direct, semantic_check=False, refinement_code=False)
+[13:46:43]   [FOLIO_dev_89] ✗ 错误! 预测=C, 答案=A
+[13:46:43] [Worker] 开始处理: FOLIO_dev_51 (mode=direct, semantic_check=False, refinement_code=False)
+[13:46:46]   [FOLIO_dev_126] code执行错误: '(' was never closed (<string>, line 36)
+[13:46:46]   [FOLIO_dev_126] ⚠ 异常: 代码执行错误（代码修复功能已关闭）: '(' was never closed (<string>, line 36)
+[13:46:46] [Worker] 开始处理: FOLIO_dev_60 (mode=direct, semantic_check=False, refinement_code=False)
+[13:46:47]   [FOLIO_dev_134] ✓ 正确! 预测=C, 答案=C
+[13:46:47] [Worker] 开始处理: FOLIO_dev_25 (mode=direct, semantic_check=False, refinement_code=False)
+[13:46:48]   [FOLIO_dev_51] ✓ 正确! 预测=A, 答案=A
+[13:46:48] [Worker] 开始处理: FOLIO_dev_101 (mode=direct, semantic_check=False, refinement_code=False)
+[13:46:51]   [FOLIO_dev_60] ✗ 错误! 预测=C, 答案=A
+[13:46:51] [Worker] 开始处理: FOLIO_dev_49 (mode=direct, semantic_check=False, refinement_code=False)
+[13:46:52]   [FOLIO_dev_25] ✓ 正确! 预测=C, 答案=C
+[13:46:52] [Worker] 开始处理: FOLIO_dev_48 (mode=direct, semantic_check=False, refinement_code=False)
+[13:46:53]   [FOLIO_dev_101] ✗ 错误! 预测=None, 答案=B
+[13:46:53] [Worker] 开始处理: FOLIO_dev_66 (mode=direct, semantic_check=False, refinement_code=False)
+[13:46:57]   [FOLIO_dev_48] ✗ 错误! 预测=B, 答案=C
+[13:46:57] [Worker] 开始处理: FOLIO_dev_169 (mode=direct, semantic_check=False, refinement_code=False)
+[13:46:57]   [FOLIO_dev_49] ✓ 正确! 预测=C, 答案=C
+[13:46:57] [Worker] 开始处理: FOLIO_dev_172 (mode=direct, semantic_check=False, refinement_code=False)
+[13:46:59] [Worker] 开始处理: FOLIO_dev_44 (mode=direct, semantic_check=False, refinement_code=False)
+[13:46:59]   [FOLIO_dev_66] ✓ 正确! 预测=A, 答案=A
+[13:47:03]   [FOLIO_dev_172] ✗ 错误! 预测=A, 答案=B
+[13:47:03] [Worker] 开始处理: FOLIO_dev_8 (mode=direct, semantic_check=False, refinement_code=False)
+[13:47:05] [Worker] 开始处理: FOLIO_dev_22 (mode=direct, semantic_check=False, refinement_code=False)
+[13:47:05]   [FOLIO_dev_169] ✗ 错误! 预测=C, 答案=B
+[13:47:07]   [FOLIO_dev_44] code执行错误: '(' was never closed (<string>, line 30)
+[13:47:07]   [FOLIO_dev_44] ⚠ 异常: 代码执行错误（代码修复功能已关闭）: '(' was never closed (<string>, line 30)
+[13:47:07] [Worker] 开始处理: FOLIO_dev_200 (mode=direct, semantic_check=False, refinement_code=False)
+[13:47:09]   [FOLIO_dev_8] ✓ 正确! 预测=C, 答案=C
+[13:47:09] [Worker] 开始处理: FOLIO_dev_85 (mode=direct, semantic_check=False, refinement_code=False)
+[13:47:11] 正在停止评测，终止所有任务...
+[13:47:12] 正在终止所有任务...
+[13:47:12] ==================================================
+[13:47:12] 评测已停止!
+[13:47:12] 已完成: 24, 正确: 13, 错误: 7, 异常: 4
+[13:47:12] 准确率: 54.17%
+[13:47:12] ==================================================

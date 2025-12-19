@@ -1,0 +1,75 @@
+Task Description: You are given a problem description and a question. The task is to write a python script which includes:
+1) Define all variables for all entities in the problem. You should write a comment indicating which sentence the entity is in.
+2) Create a solver instance.
+3) Parse the problem into relationships based on the defined entities, you should only use 'Implies' and 'Not' in this part. You should write a comment indicating which sentence the relationship is in.
+4) Create statements to be checked.
+5) Check if the solver can find a model that satisfies the conditions, if true, return A, if false, return B.
+
+Following is an example to follow:
+Problem:
+Every zumpus is aggressive. Zumpuses are Wumpuses. Wumpuses are not small. Wumpuses are aggressive. Polly is zumpus.
+Question:
+Is the following statement true or false? Polly is not small.
+Options:
+A) True
+B) False
+
+```python
+from z3 import *
+
+# Define boolean variables for all entities
+# Every zumpus is aggressive
+zumpus = Bool("zumpus")
+aggressive = Bool("aggressive")
+
+# Zumpuses are Wumpuses
+# zumpus has been defined before
+wumpus = Bool("wumpus")
+
+# Wumpuses are not small.
+# Wumpuses has been defined before
+small = Bool("small")
+
+# Wumpuses are aggressive.
+# Wumpuses has been defined before
+# Aggressive has been defined before
+
+# Polly is zumpus.
+polly = Bool("polly")
+# Zumpuses has been defined before
+
+# Create a solver instance
+solver = Solver()
+
+# Parse the problem into relationships
+# Every zumpus is aggressive
+solver.add(Implies(zumpus, aggressive))
+# Zumpuses are Wumpuses
+solver.add(Implies(zumpus, wumpus))
+# Wumpuses are not small
+solver.add(Implies(wumpus, Not(small)))
+# Wumpuses are aggressive
+solver.add(Implies(wumpus, aggressive))
+# Polly is zumpus
+solver.add(Implies(polly, zumpus))
+
+# Create facts in the problem
+solver.add(polly)
+
+# Create statements to be checked
+# Polly is not small.
+solver.add(polly, Not(small))
+
+# Check if the solver can find a model that satisfies the conditions
+if solver.check() == sat:
+    print("A") # The statement is true
+else:
+    print("B") # The statement is false
+```
+>>>>>>>>>>>>>>>>>>>>>>>>>>>>
+[Problem]:
+{problem_text}
+[Question]:
+{question_text}
+[Options]:
+{options_text}

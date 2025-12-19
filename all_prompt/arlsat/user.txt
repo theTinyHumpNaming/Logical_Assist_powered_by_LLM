@@ -1,0 +1,69 @@
+Task Description: You are given an analytical reasoning problem with constraints.
+1) Define all variables needed to represent the entities and their properties
+2) Create a Z3 solver instance
+3) Add all constraints mentioned in the problem
+4) Evaluate the given options to find which one satisfies all constraints
+5) Return the letter of the correct option (A, B, C, D, or E)
+
+Following is an example to follow:
+Context:
+Three people (Alice, Bob, Carol) have three tasks (1, 2, 3) assigned to them.
+Alice must do task 1. Bob cannot do task 1. Carol can do any task.
+Question:
+Which of the following is a valid assignment?
+Options:
+A) Alice: 1, Bob: 2, Carol: 3
+B) Alice: 2, Bob: 1, Carol: 3
+C) Alice: 3, Bob: 1, Carol: 2
+
+```python
+from z3 import *
+
+# Define boolean variables for assignments
+alice_1 = Bool("alice_1")
+alice_2 = Bool("alice_2")
+alice_3 = Bool("alice_3")
+bob_1 = Bool("bob_1")
+bob_2 = Bool("bob_2")
+bob_3 = Bool("bob_3")
+carol_1 = Bool("carol_1")
+carol_2 = Bool("carol_2")
+carol_3 = Bool("carol_3")
+
+# Create solver
+solver = Solver()
+
+# Add constraints: each person does exactly one task
+solver.add(Or(alice_1, alice_2, alice_3))
+solver.add(Or(bob_1, bob_2, bob_3))
+solver.add(Or(carol_1, carol_2, carol_3))
+
+# Each task is done by exactly one person
+solver.add(Or(alice_1, bob_1, carol_1))
+solver.add(Or(alice_2, bob_2, carol_2))
+solver.add(Or(alice_3, bob_3, carol_3))
+
+# Alice must do task 1
+solver.add(alice_1)
+# Bob cannot do task 1
+solver.add(Not(bob_1))
+
+# Check each option
+# Option A: Alice: 1, Bob: 2, Carol: 3
+solver.push()
+solver.add(alice_1, bob_2, carol_3)
+if solver.check() == sat:
+    print("A")
+else:
+    solver.pop()
+    # Check Option B and C similarly...
+    print("A")
+solver.pop()
+```
+>>>>>>>>>>>>>>>>>>>>>>>>>>>>
+[Context]:
+{context}
+[Question]:
+{question}
+[Options]:
+{options_text}

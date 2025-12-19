@@ -1,0 +1,178 @@
+=== 评测日志开始于 2025-12-09 12:02:13 ===
+[12:02:41] 正在加载数据集: D:/学习资料/课程/程序设计大作业/Beta/data/LogicalDeduction_test.json
+[12:02:41] 共 50 道题目，使用 4 个 workers 并行处理
+[12:02:41] [Worker] 开始处理: logical_deduction_27 (mode=pseudocode, check=False)
+[12:02:41] [Worker] 开始处理: logical_deduction_32 (mode=pseudocode, check=False)
+[12:02:41] [Worker] 开始处理: logical_deduction_166 (mode=pseudocode, check=False)
+[12:02:41] [Worker] 开始处理: logical_deduction_26 (mode=pseudocode, check=False)
+[12:02:45]   [logical_deduction_32] ✓ 正确! 预测=B, 答案=B
+[12:02:45] [Worker] 开始处理: logical_deduction_179 (mode=pseudocode, check=True)
+[12:02:45]   [logical_deduction_26] ✓ 正确! 预测=C, 答案=C
+[12:02:45] [Worker] 开始处理: logical_deduction_223 (mode=pseudocode, check=True)
+[12:02:46] 正在停止评测...
+[12:02:46] [Worker] 开始处理: logical_deduction_254 (mode=pseudocode, check=True)
+[12:02:51]   [logical_deduction_254] ✓ 伪代码检查通过
+[12:02:52]   [logical_deduction_179] ✓ 伪代码检查通过
+[12:02:54]   [logical_deduction_223] ✓ 伪代码检查通过
+[12:02:54] ==================================================
+[12:02:54] 评测完成!
+[12:02:54] 总计: 2, 正确: 2, 错误: 0, 异常: 0
+[12:02:54] 准确率: 100.00%
+[12:02:54] ==================================================
+[12:02:56] 正在加载数据集: D:/学习资料/课程/程序设计大作业/Beta/data/LogicalDeduction_test.json
+[12:02:56] 共 50 道题目，使用 4 个 workers 并行处理
+[12:02:56] [Worker] 开始处理: logical_deduction_32 (mode=pseudocode, check=True)
+[12:02:56] [Worker] 开始处理: logical_deduction_166 (mode=pseudocode, check=True)
+[12:02:56] [Worker] 开始处理: logical_deduction_26 (mode=pseudocode, check=True)
+[12:02:56] [Worker] 开始处理: logical_deduction_27 (mode=pseudocode, check=True)
+[12:03:03]   [logical_deduction_26] ✓ 伪代码检查通过
+[12:03:03]   [logical_deduction_26] ✓ 正确! 预测=C, 答案=C
+[12:03:03] [Worker] 开始处理: logical_deduction_179 (mode=pseudocode, check=True)
+[12:03:03]   [logical_deduction_32] ✓ 伪代码检查通过
+[12:03:03]   [logical_deduction_32] ✗ 错误! 预测=None, 答案=B
+[12:03:03] [Worker] 开始处理: logical_deduction_223 (mode=pseudocode, check=True)
+[12:03:04]   [logical_deduction_166] ✓ 伪代码检查通过
+[12:03:04]   [logical_deduction_166] ✓ 正确! 预测=C, 答案=C
+[12:03:04] [Worker] 开始处理: logical_deduction_254 (mode=pseudocode, check=True)
+[12:03:04]   [logical_deduction_27] ✓ 伪代码检查通过
+[12:03:04]   [logical_deduction_27] ✓ 正确! 预测=C, 答案=C
+[12:03:04] [Worker] 开始处理: logical_deduction_131 (mode=pseudocode, check=True)
+[12:03:12]   [logical_deduction_254] ✓ 伪代码检查通过
+[12:03:12]   [logical_deduction_254] ✓ 正确! 预测=C, 答案=C
+[12:03:12] [Worker] 开始处理: logical_deduction_78 (mode=pseudocode, check=True)
+[12:03:13]   [logical_deduction_131] ✓ 伪代码检查通过
+[12:03:13]   [logical_deduction_131] ✓ 正确! 预测=C, 答案=C
+[12:03:13] [Worker] 开始处理: logical_deduction_150 (mode=pseudocode, check=True)
+[12:03:13]   [logical_deduction_223] ✓ 伪代码检查通过
+[12:03:13]   [logical_deduction_223] ✓ 正确! 预测=C, 答案=C
+[12:03:13] [Worker] 开始处理: logical_deduction_6 (mode=pseudocode, check=True)
+[12:03:13]   [logical_deduction_179] ✓ 伪代码检查通过
+[12:03:13]   [logical_deduction_179] ✓ 正确! 预测=F, 答案=F
+[12:03:13] [Worker] 开始处理: logical_deduction_60 (mode=pseudocode, check=True)
+[12:03:19]   [logical_deduction_78] ✓ 伪代码检查通过
+[12:03:19]   [logical_deduction_78] ✓ 正确! 预测=A, 答案=A
+[12:03:19] [Worker] 开始处理: logical_deduction_22 (mode=pseudocode, check=True)
+[12:03:21]   [logical_deduction_60] ✓ 伪代码检查通过
+[12:03:21]   [logical_deduction_60] ✗ 错误! 预测=A, 答案=D
+[12:03:21] [Worker] 开始处理: logical_deduction_126 (mode=pseudocode, check=True)
+[12:03:22]   [logical_deduction_6] ✓ 伪代码检查通过
+[12:03:22]   [logical_deduction_6] ✓ 正确! 预测=E, 答案=E
+[12:03:22] [Worker] 开始处理: logical_deduction_248 (mode=pseudocode, check=True)
+[12:03:22]   [logical_deduction_150] ✓ 伪代码检查通过
+[12:03:22]   [logical_deduction_150] ✓ 正确! 预测=E, 答案=E
+[12:03:22] [Worker] 开始处理: logical_deduction_116 (mode=pseudocode, check=True)
+[12:03:28]   [logical_deduction_22] ✓ 伪代码检查通过
+[12:03:28]   [logical_deduction_22] ✓ 正确! 预测=A, 答案=A
+[12:03:28] [Worker] 开始处理: logical_deduction_230 (mode=pseudocode, check=True)
+[12:03:30]   [logical_deduction_248] ✓ 伪代码检查通过
+[12:03:30]   [logical_deduction_248] ✓ 正确! 预测=A, 答案=A
+[12:03:30] [Worker] 开始处理: logical_deduction_66 (mode=pseudocode, check=True)
+[12:03:31]   [logical_deduction_126] ✓ 伪代码检查通过
+[12:03:31]   [logical_deduction_126] ✓ 正确! 预测=E, 答案=E
+[12:03:31] [Worker] 开始处理: logical_deduction_217 (mode=pseudocode, check=True)
+[12:03:33]   [logical_deduction_116] ✓ 伪代码检查通过
+[12:03:33]   [logical_deduction_116] ✗ 错误! 预测=None, 答案=F
+[12:03:33] [Worker] 开始处理: logical_deduction_100 (mode=pseudocode, check=True)
+[12:03:37]   [logical_deduction_230] ✓ 伪代码检查通过
+[12:03:37]   [logical_deduction_230] ✓ 正确! 预测=C, 答案=C
+[12:03:37] [Worker] 开始处理: logical_deduction_9 (mode=pseudocode, check=True)
+[12:03:37]   [logical_deduction_66] ✓ 伪代码检查通过
+[12:03:37]   [logical_deduction_66] ✓ 正确! 预测=A, 答案=A
+[12:03:37] [Worker] 开始处理: logical_deduction_222 (mode=pseudocode, check=True)
+[12:03:42]   [logical_deduction_217] ✓ 伪代码检查通过
+[12:03:42]   [logical_deduction_217] ✗ 错误! 预测=A, 答案=B
+[12:03:42] [Worker] 开始处理: logical_deduction_143 (mode=pseudocode, check=True)
+[12:03:44]   [logical_deduction_100] ✓ 伪代码检查通过
+[12:03:44]   [logical_deduction_100] ✗ 错误! 预测=E, 答案=D
+[12:03:44] [Worker] 开始处理: logical_deduction_36 (mode=pseudocode, check=True)
+[12:03:46]   [logical_deduction_222] ✓ 伪代码检查通过
+[12:03:46]   [logical_deduction_222] ✗ 错误! 预测=A, 答案=B
+[12:03:46] [Worker] 开始处理: logical_deduction_37 (mode=pseudocode, check=True)
+[12:03:47]   [logical_deduction_9] ✓ 伪代码检查通过
+[12:03:47]   [logical_deduction_9] ✓ 正确! 预测=A, 答案=A
+[12:03:47] [Worker] 开始处理: logical_deduction_292 (mode=pseudocode, check=True)
+[12:03:49]   [logical_deduction_143] ✓ 伪代码检查通过
+[12:03:49]   [logical_deduction_143] ✓ 正确! 预测=C, 答案=C
+[12:03:49] [Worker] 开始处理: logical_deduction_220 (mode=pseudocode, check=True)
+[12:03:50]   [logical_deduction_36] ✓ 伪代码检查通过
+[12:03:50]   [logical_deduction_36] ✓ 正确! 预测=C, 答案=C
+[12:03:50] [Worker] 开始处理: logical_deduction_207 (mode=pseudocode, check=True)
+[12:03:55]   [logical_deduction_37] ✓ 伪代码检查通过
+[12:03:55]   [logical_deduction_37] ✓ 正确! 预测=C, 答案=C
+[12:03:55] [Worker] 开始处理: logical_deduction_286 (mode=pseudocode, check=True)
+[12:03:55]   [logical_deduction_292] ✓ 伪代码检查通过
+[12:03:55]   [logical_deduction_292] ✗ 错误! 预测=C, 答案=A
+[12:03:55] [Worker] 开始处理: logical_deduction_1 (mode=pseudocode, check=True)
+[12:03:57]   [logical_deduction_220] ✓ 伪代码检查通过
+[12:03:57]   [logical_deduction_220] ✓ 正确! 预测=C, 答案=C
+[12:03:57] [Worker] 开始处理: logical_deduction_186 (mode=pseudocode, check=True)
+[12:03:58]   [logical_deduction_207] ✓ 伪代码检查通过
+[12:03:58]   [logical_deduction_207] ✓ 正确! 预测=G, 答案=G
+[12:03:58] [Worker] 开始处理: logical_deduction_206 (mode=pseudocode, check=True)
+[12:04:01]   [logical_deduction_286] ✓ 伪代码检查通过
+[12:04:01]   [logical_deduction_286] ✓ 正确! 预测=A, 答案=A
+[12:04:01] [Worker] 开始处理: logical_deduction_21 (mode=pseudocode, check=True)
+[12:04:02]   [logical_deduction_1] ✓ 伪代码检查通过
+[12:04:02]   [logical_deduction_1] ✓ 正确! 预测=A, 答案=A
+[12:04:02] [Worker] 开始处理: logical_deduction_40 (mode=pseudocode, check=True)
+[12:04:05]   [logical_deduction_186] ✓ 伪代码检查通过
+[12:04:05]   [logical_deduction_186] ✓ 正确! 预测=B, 答案=B
+[12:04:05] [Worker] 开始处理: logical_deduction_34 (mode=pseudocode, check=True)
+[12:04:07]   [logical_deduction_206] ✓ 伪代码检查通过
+[12:04:07]   [logical_deduction_206] ✓ 正确! 预测=E, 答案=E
+[12:04:07] [Worker] 开始处理: logical_deduction_280 (mode=pseudocode, check=True)
+[12:04:09]   [logical_deduction_21] ✓ 伪代码检查通过
+[12:04:09]   [logical_deduction_21] ✓ 正确! 预测=B, 答案=B
+[12:04:09] [Worker] 开始处理: logical_deduction_67 (mode=pseudocode, check=True)
+[12:04:09]   [logical_deduction_40] ✓ 伪代码检查通过
+[12:04:09]   [logical_deduction_40] ✓ 正确! 预测=D, 答案=D
+[12:04:09] [Worker] 开始处理: logical_deduction_208 (mode=pseudocode, check=True)
+[12:04:12]   [logical_deduction_34] ✓ 伪代码检查通过
+[12:04:12]   [logical_deduction_34] ✓ 正确! 预测=B, 答案=B
+[12:04:12] [Worker] 开始处理: logical_deduction_121 (mode=pseudocode, check=True)
+[12:04:14]   [logical_deduction_280] ✓ 伪代码检查通过
+[12:04:14]   [logical_deduction_280] ✓ 正确! 预测=C, 答案=C
+[12:04:14] [Worker] 开始处理: logical_deduction_285 (mode=pseudocode, check=True)
+[12:04:17]   [logical_deduction_67] ✓ 伪代码检查通过
+[12:04:17]   [logical_deduction_67] ✓ 正确! 预测=E, 答案=E
+[12:04:17] [Worker] 开始处理: logical_deduction_231 (mode=pseudocode, check=True)
+[12:04:20]   [logical_deduction_121] ✓ 伪代码检查通过
+[12:04:20]   [logical_deduction_121] ✓ 正确! 预测=F, 答案=F
+[12:04:20] [Worker] 开始处理: logical_deduction_237 (mode=pseudocode, check=True)
+[12:04:20]   [logical_deduction_208] ✓ 伪代码检查通过
+[12:04:20]   [logical_deduction_208] ✗ 错误! 预测=C, 答案=A
+[12:04:20] [Worker] 开始处理: logical_deduction_279 (mode=pseudocode, check=True)
+[12:04:23]   [logical_deduction_285] ✓ 伪代码检查通过
+[12:04:23]   [logical_deduction_285] ✓ 正确! 预测=B, 答案=B
+[12:04:23] [Worker] 开始处理: logical_deduction_74 (mode=pseudocode, check=True)
+[12:04:25]   [logical_deduction_231] ✓ 伪代码检查通过
+[12:04:25]   [logical_deduction_231] ✗ 错误! 预测=C, 答案=E
+[12:04:25] [Worker] 开始处理: logical_deduction_18 (mode=pseudocode, check=True)
+[12:04:27]   [logical_deduction_279] ✓ 伪代码检查通过
+[12:04:27]   [logical_deduction_279] ✓ 正确! 预测=C, 答案=C
+[12:04:27] [Worker] 开始处理: logical_deduction_212 (mode=pseudocode, check=True)
+[12:04:29]   [logical_deduction_237] ✓ 伪代码检查通过
+[12:04:29]   [logical_deduction_237] ✗ 错误! 预测=F, 答案=B
+[12:04:29] [Worker] 开始处理: logical_deduction_169 (mode=pseudocode, check=True)
+[12:04:30]   [logical_deduction_74] ✓ 伪代码检查通过
+[12:04:30]   [logical_deduction_74] ✗ 错误! 预测=None, 答案=C
+[12:04:30] [Worker] 开始处理: logical_deduction_187 (mode=pseudocode, check=True)
+[12:04:33]   [logical_deduction_18] ✓ 伪代码检查通过
+[12:04:33]   [logical_deduction_18] ✓ 正确! 预测=A, 答案=A
+[12:04:33] [Worker] 开始处理: logical_deduction_79 (mode=pseudocode, check=True)
+[12:04:35]   [logical_deduction_212] ✓ 伪代码检查通过
+[12:04:35]   [logical_deduction_212] ✓ 正确! 预测=G, 答案=G
+[12:04:35] [Worker] 开始处理: logical_deduction_105 (mode=pseudocode, check=True)
+[12:04:37]   [logical_deduction_169] ✓ 伪代码检查通过
+[12:04:37]   [logical_deduction_169] ✓ 正确! 预测=B, 答案=B
+[12:04:39]   [logical_deduction_187] ✓ 伪代码检查通过
+[12:04:39]   [logical_deduction_187] ✗ 错误! 预测=None, 答案=A
+[12:04:42]   [logical_deduction_79] ✓ 伪代码检查通过
+[12:04:42]   [logical_deduction_79] ✓ 正确! 预测=B, 答案=B
+[12:04:43]   [logical_deduction_105] ✓ 伪代码检查通过
+[12:04:43]   [logical_deduction_105] ✓ 正确! 预测=C, 答案=C
+[12:04:43] ==================================================
+[12:04:43] 评测完成!
+[12:04:43] 总计: 50, 正确: 38, 错误: 12, 异常: 0
+[12:04:43] 准确率: 76.00%
+[12:04:43] ==================================================

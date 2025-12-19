@@ -1,0 +1,999 @@
+{
+  "summary": {
+    "total": 50,
+    "correct": 30,
+    "wrong": 9,
+    "error": 11,
+    "accuracy": 60.0
+  },
+  "correct_problems": [
+    "logical_deduction_26",
+    "logical_deduction_166",
+    "logical_deduction_179",
+    "logical_deduction_223",
+    "logical_deduction_131",
+    "logical_deduction_6",
+    "logical_deduction_60",
+    "logical_deduction_22",
+    "logical_deduction_248",
+    "logical_deduction_230",
+    "logical_deduction_217",
+    "logical_deduction_9",
+    "logical_deduction_143",
+    "logical_deduction_292",
+    "logical_deduction_220",
+    "logical_deduction_207",
+    "logical_deduction_186",
+    "logical_deduction_21",
+    "logical_deduction_206",
+    "logical_deduction_40",
+    "logical_deduction_34",
+    "logical_deduction_67",
+    "logical_deduction_208",
+    "logical_deduction_121",
+    "logical_deduction_237",
+    "logical_deduction_74",
+    "logical_deduction_18",
+    "logical_deduction_212",
+    "logical_deduction_79",
+    "logical_deduction_105"
+  ],
+  "wrong_problems": [
+    "logical_deduction_32",
+    "logical_deduction_27",
+    "logical_deduction_254",
+    "logical_deduction_78",
+    "logical_deduction_150",
+    "logical_deduction_126",
+    "logical_deduction_116",
+    "logical_deduction_66",
+    "logical_deduction_100",
+    "logical_deduction_222",
+    "logical_deduction_36",
+    "logical_deduction_37",
+    "logical_deduction_286",
+    "logical_deduction_1",
+    "logical_deduction_280",
+    "logical_deduction_285",
+    "logical_deduction_231",
+    "logical_deduction_279",
+    "logical_deduction_169",
+    "logical_deduction_187"
+  ],
+  "details": [
+    {
+      "id": "logical_deduction_32",
+      "predicted": null,
+      "correct": "B",
+      "is_correct": false,
+      "pseudocode": "[SETUP]\nSetSize(5)\nObjects(Rob, Eve, Eli, Amy, Dan)\n\n[BACKGROUND]\nPos(Dan, 2, \"down\")     (Dan finished second)\nMore(Amy, Eve, \"down\")  (Amy finished below Eve)\nMore(Dan, Eve, \"up\")    (Dan finished above Eve)\nMore(Amy, Eli, \"up\")    (Amy finished above Eli)\n\n[OPTIONS]\n(A): Pos(Rob, 3, \"down\")\n(B): Pos(Eve, 3, \"down\")\n(C): Pos(Eli, 3, \"down\")\n(D): Pos(Amy, 3, \"down\")\n(E): Pos(Dan, 3, \"down\")",
+      "mode": "formal_logic",
+      "error": "'_io.TextIOWrapper' object has no attribute 'getvalue'",
+      "context": "The following paragraphs each describe a set of five objects arranged in a fixed order. The statements are logically consistent within each paragraph.\n\nIn a golf tournament, there were five golfers: Rob, Eve, Eli, Amy, and Dan. Dan finished second. Amy finished below Eve. Dan finished above Eve. Amy finished above Eli.",
+      "question": "Which of the following is true?",
+      "options": [
+        "A) Rob finished third.",
+        "B) Eve finished third.",
+        "C) Eli finished third.",
+        "D) Amy finished third.",
+        "E) Dan finished third."
+      ]
+    },
+    {
+      "id": "logical_deduction_27",
+      "predicted": "UNSAT",
+      "correct": "C",
+      "is_correct": false,
+      "pseudocode": "[SETUP]\nSetSize(5)\nObjects(Owl, Robin, BlueJay, Hawk, Hummingbird)\n\n[BACKGROUND]\nPos(Owl, 4, \"right\")\nPos(Robin, 2, \"left\")\nMore(Robin, BlueJay, \"right\")\nMore(Hummingbird, Hawk, \"right\")\n\n[OPTIONS]\n(A): Pos(Owl, 5, \"left\")\n(B): Pos(Robin, 1, \"left\")\n(C): Pos(BlueJay, 1, \"left\")\n(D): Pos(Hawk, 1, \"left\")\n(E): Pos(Hummingbird, 1, \"left\")",
+      "mode": "formal_logic",
+      "error": null,
+      "context": "The following paragraphs each describe a set of five objects arranged in a fixed order. The statements are logically consistent within each paragraph.\n\nOn a branch, there are five birds: an owl, a robin, a blue jay, a hawk, and a hummingbird. The owl is the second from the right. The robin is the second from the left. The robin is to the right of the blue jay. The hummingbird is to the right of the hawk.",
+      "question": "Which of the following is true?",
+      "options": [
+        "A) The owl is the leftmost.",
+        "B) The robin is the leftmost.",
+        "C) The blue jay is the leftmost.",
+        "D) The hawk is the leftmost.",
+        "E) The hummingbird is the leftmost."
+      ]
+    },
+    {
+      "id": "logical_deduction_26",
+      "predicted": "C",
+      "correct": "C",
+      "is_correct": true,
+      "pseudocode": "[SETUP]\nSetSize(5)\nObjects(Amy, Dan, Mya, Eli, Mel)\n\n[BACKGROUND]\nMore(Amy, Mel, \"up\")\nPos(Mya, 1, \"up\")\nMore(Amy, Eli, \"down\")\nPos(Dan, 1, \"down\")\n\n[OPTIONS]\n(A): Pos(Amy, 1, \"up\")\n(B): Pos(Dan, 1, \"up\")\n(C): Pos(Mya, 1, \"up\")\n(D): Pos(Eli, 1, \"up\")\n(E): Pos(Mel, 1, \"up\")",
+      "mode": "formal_logic",
+      "error": null,
+      "context": "The following paragraphs each describe a set of five objects arranged in a fixed order. The statements are logically consistent within each paragraph.\n\nIn a golf tournament, there were five golfers: Amy, Dan, Mya, Eli, and Mel. Amy finished above Mel. Mya finished first. Amy finished below Eli. Dan finished last.",
+      "question": "Which of the following is true?",
+      "options": [
+        "A) Amy finished first.",
+        "B) Dan finished first.",
+        "C) Mya finished first.",
+        "D) Eli finished first.",
+        "E) Mel finished first."
+      ]
+    },
+    {
+      "id": "logical_deduction_166",
+      "predicted": "C",
+      "correct": "C",
+      "is_correct": true,
+      "pseudocode": "[SETUP]\nSetSize(7)\nObjects(Falcon, Owl, Quail, Raven, Hummingbird, BlueJay, Crow)\n\n[BACKGROUND]\nMore(Quail, Owl, \"left\")\nPos(Owl, 2, \"left\")\nMore(Crow, Falcon, \"right\")\nMore(BlueJay, Hummingbird, \"right\")\nMore(Hummingbird, Raven, \"right\")\nMore(BlueJay, Falcon, \"left\")\n\n[OPTIONS]\n(A): Pos(Falcon, 1, \"left\")\n(B): Pos(Owl, 1, \"left\")\n(C): Pos(Quail, 1, \"left\")\n(D): Pos(Raven, 1, \"left\")\n(E): Pos(Hummingbird, 1, \"left\")\n(F): Pos(BlueJay, 1, \"left\")\n(G): Pos(Crow, 1, \"left\")",
+      "mode": "formal_logic",
+      "error": null,
+      "context": "The following paragraphs each describe a set of seven objects arranged in a fixed order. The statements are logically consistent within each paragraph.\n\nOn a branch, there are seven birds: a falcon, an owl, a quail, a raven, a hummingbird, a blue jay, and a crow. The quail is to the left of the owl. The owl is the second from the left. The crow is to the right of the falcon. The blue jay is to the right of the hummingbird. The hummingbird is to the right of the raven. The blue jay is to the left of the falcon.",
+      "question": "Which of the following is true?",
+      "options": [
+        "A) The falcon is the leftmost.",
+        "B) The owl is the leftmost.",
+        "C) The quail is the leftmost.",
+        "D) The raven is the leftmost.",
+        "E) The hummingbird is the leftmost.",
+        "F) The blue jay is the leftmost.",
+        "G) The crow is the leftmost."
+      ]
+    },
+    {
+      "id": "logical_deduction_254",
+      "predicted": "A",
+      "correct": "C",
+      "is_correct": false,
+      "pseudocode": "[SETUP]\nSetSize(3)\nObjects(Ana, Dan, Mel)\n\n[BACKGROUND]\nPos(Dan, 2, \"down\")   (Dan finished second)\nPos(Mel, 1, \"down\")   (Mel finished first)\n\n[OPTIONS]\n(A): Pos(Ana, 3, \"down\")\n(B): Pos(Dan, 3, \"down\")\n(C): Pos(Mel, 3, \"down\")",
+      "mode": "formal_logic",
+      "error": null,
+      "context": "The following paragraphs each describe a set of three objects arranged in a fixed order. The statements are logically consistent within each paragraph.\n\nIn a golf tournament, there were three golfers: Ana, Dan, and Mel. Dan finished second. Mel finished first.",
+      "question": "Which of the following is true?",
+      "options": [
+        "A) Ana finished first.",
+        "B) Dan finished first.",
+        "C) Mel finished first."
+      ]
+    },
+    {
+      "id": "logical_deduction_179",
+      "predicted": "F",
+      "correct": "F",
+      "is_correct": true,
+      "pseudocode": "[SETUP]\nSetSize(7)\nObjects(Hawk, Raven, Hummingbird, Falcon, Owl, Quail, Cardinal)\n\n[BACKGROUND]\nMore(Quail, Hummingbird, \"left\")\nMore(Raven, Hummingbird, \"right\")\nPos(Cardinal, 2, \"left\")\nMore(Owl, Cardinal, \"left\")\nPos(Raven, 3, \"right\")\nPos(Falcon, 1, \"right\")\n\n[OPTIONS]\n(A): Pos(Hawk, 3, \"left\")\n(B): Pos(Raven, 3, \"left\")\n(C): Pos(Hummingbird, 3, \"left\")\n(D): Pos(Falcon, 3, \"left\")\n(E): Pos(Owl, 3, \"left\")\n(F): Pos(Quail, 3, \"left\")\n(G): Pos(Cardinal, 3, \"left\")",
+      "mode": "formal_logic",
+      "error": null,
+      "context": "The following paragraphs each describe a set of seven objects arranged in a fixed order. The statements are logically consistent within each paragraph.\n\nOn a branch, there are seven birds: a hawk, a raven, a hummingbird, a falcon, an owl, a quail, and a cardinal. The quail is to the left of the hummingbird. The raven is to the right of the hummingbird. The cardinal is the second from the left. The owl is to the left of the cardinal. The raven is the third from the right. The falcon is the rightmost.",
+      "question": "Which of the following is true?",
+      "options": [
+        "A) The hawk is the third from the left.",
+        "B) The raven is the third from the left.",
+        "C) The hummingbird is the third from the left.",
+        "D) The falcon is the third from the left.",
+        "E) The owl is the third from the left.",
+        "F) The quail is the third from the left.",
+        "G) The cardinal is the third from the left."
+      ]
+    },
+    {
+      "id": "logical_deduction_223",
+      "predicted": "C",
+      "correct": "C",
+      "is_correct": true,
+      "pseudocode": "[SETUP]\nSetSize(7)\nObjects(Hummingbird, Cardinal, BlueJay, Owl, Raven, Quail, Robin)\n\n[BACKGROUND]\nMore(Hummingbird, Quail, \"left\")\nMore(Robin, Cardinal, \"left\")\nPos(BlueJay, 1, \"left\")\nPos(Cardinal, 4, \"left\")\nPos(Raven, 3, \"right\")\nPos(Owl, 3, \"left\")\n\n[OPTIONS]\n(A): Pos(Hummingbird, 1, \"left\")\n(B): Pos(Cardinal, 1, \"left\")\n(C): Pos(BlueJay, 1, \"left\")\n(D): Pos(Owl, 1, \"left\")\n(E): Pos(Raven, 1, \"left\")\n(F): Pos(Quail, 1, \"left\")\n(G): Pos(Robin, 1, \"left\")",
+      "mode": "formal_logic",
+      "error": null,
+      "context": "The following paragraphs each describe a set of seven objects arranged in a fixed order. The statements are logically consistent within each paragraph.\n\nOn a branch, there are seven birds: a hummingbird, a cardinal, a blue jay, an owl, a raven, a quail, and a robin. The hummingbird is to the left of the quail. The robin is to the left of the cardinal. The blue jay is the leftmost. The cardinal is the fourth from the left. The raven is the third from the right. The owl is the third from the left.",
+      "question": "Which of the following is true?",
+      "options": [
+        "A) The hummingbird is the leftmost.",
+        "B) The cardinal is the leftmost.",
+        "C) The blue jay is the leftmost.",
+        "D) The owl is the leftmost.",
+        "E) The raven is the leftmost.",
+        "F) The quail is the leftmost.",
+        "G) The robin is the leftmost."
+      ]
+    },
+    {
+      "id": "logical_deduction_131",
+      "predicted": "C",
+      "correct": "C",
+      "is_correct": true,
+      "pseudocode": "[SETUP]\nSetSize(7)\nObjects(Joe, Mel, Mya, Eve, Rob, Ada, Dan)\n\n[BACKGROUND]\nPos(Rob, 1, \"down\")         // Rob finished first\nPos(Eve, 1, \"up\")           // Eve finished last\nMore(Dan, Ada, \"down\")      // Dan finished above Ada\nMore(Mel, Mya, \"down\")      // Mel finished above Mya\nPos(Joe, 2, \"up\")           // Joe finished second-to-last\nPos(Mya, 3, \"up\")           // Mya finished third\n\n[OPTIONS]\n(A): Pos(Joe, 3, \"up\")\n(B): Pos(Mel, 3, \"up\")\n(C): Pos(Mya, 3, \"up\")\n(D): Pos(Eve, 3, \"up\")\n(E): Pos(Rob, 3, \"up\")\n(F): Pos(Ada, 3, \"up\")\n(G): Pos(Dan, 3, \"up\")",
+      "mode": "formal_logic",
+      "error": null,
+      "context": "The following paragraphs each describe a set of seven objects arranged in a fixed order. The statements are logically consistent within each paragraph.\n\nIn a golf tournament, there were seven golfers: Joe, Mel, Mya, Eve, Rob, Ada, and Dan. Rob finished first. Eve finished last. Dan finished above Ada. Mel finished above Mya. Joe finished second-to-last. Mya finished third.",
+      "question": "Which of the following is true?",
+      "options": [
+        "A) Joe finished third.",
+        "B) Mel finished third.",
+        "C) Mya finished third.",
+        "D) Eve finished third.",
+        "E) Rob finished third.",
+        "F) Ada finished third.",
+        "G) Dan finished third."
+      ]
+    },
+    {
+      "id": "logical_deduction_78",
+      "predicted": "D",
+      "correct": "A",
+      "is_correct": false,
+      "pseudocode": "[SETUP]\nSetSize(5)\nObjects(BlueJay, Raven, Crow, Falcon, Quail)\n\n[BACKGROUND]\nMore(Crow, Quail, \"left\")\nPos(Falcon, 1, \"left\")\nMore(BlueJay, Quail, \"right\")\nPos(Raven, 2, \"left\")\n\n[OPTIONS]\n(A): Pos(BlueJay, 5, \"right\")\n(B): Pos(Raven, 5, \"right\")\n(C): Pos(Crow, 5, \"right\")\n(D): Pos(Falcon, 5, \"right\")\n(E): Pos(Quail, 5, \"right\")",
+      "mode": "formal_logic",
+      "error": null,
+      "context": "The following paragraphs each describe a set of five objects arranged in a fixed order. The statements are logically consistent within each paragraph.\n\nOn a branch, there are five birds: a blue jay, a raven, a crow, a falcon, and a quail. The crow is to the left of the quail. The falcon is the leftmost. The blue jay is to the right of the quail. The raven is the second from the left.",
+      "question": "Which of the following is true?",
+      "options": [
+        "A) The blue jay is the rightmost.",
+        "B) The raven is the rightmost.",
+        "C) The crow is the rightmost.",
+        "D) The falcon is the rightmost.",
+        "E) The quail is the rightmost."
+      ]
+    },
+    {
+      "id": "logical_deduction_150",
+      "predicted": "B",
+      "correct": "E",
+      "is_correct": false,
+      "pseudocode": "[SETUP]\nSetSize(7)\nObjects(Joe, Dan, Ada, Amy, Rob, Mya, Mel)\n\n[BACKGROUND]\nMore(Ada, Amy, \"down\")\nMore(Joe, Dan, \"down\")\nMore(Dan, Ada, \"down\")\nPos(Mel, 3, \"down\")\nPos(Amy, 3, \"up\")\nMore(Rob, Mya, \"down\")\n\n[OPTIONS]\n(A): Pos(Joe, 2, \"down\")\n(B): Pos(Dan, 2, \"down\")\n(C): Pos(Ada, 2, \"down\")\n(D): Pos(Amy, 2, \"up\")\n(E): Pos(Rob, 2, \"down\")\n(F): Pos(Mya, 2, \"down\")\n(G): Pos(Mel, 2, \"down\")",
+      "mode": "formal_logic",
+      "error": null,
+      "context": "The following paragraphs each describe a set of seven objects arranged in a fixed order. The statements are logically consistent within each paragraph.\n\nIn a golf tournament, there were seven golfers: Joe, Dan, Ada, Amy, Rob, Mya, and Mel. Ada finished below Amy. Joe finished below Dan. Dan finished below Ada. Mel finished third-to-last. Amy finished third. Rob finished below Mya.",
+      "question": "Which of the following is true?",
+      "options": [
+        "A) Joe finished second.",
+        "B) Dan finished second.",
+        "C) Ada finished second.",
+        "D) Amy finished second.",
+        "E) Rob finished second.",
+        "F) Mya finished second.",
+        "G) Mel finished second."
+      ]
+    },
+    {
+      "id": "logical_deduction_6",
+      "predicted": "E",
+      "correct": "E",
+      "is_correct": true,
+      "pseudocode": "[SETUP]\nSetSize(5)\nObjects(Crow, Robin, Quail, BlueJay, Falcon)\n\n[BACKGROUND]\nMore(Robin, Quail, \"left\")\nPos(Falcon, 3, \"left\")\nMore(Crow, Falcon, \"left\")\nPos(BlueJay, 1, \"left\")\n\n[OPTIONS]\n(A): Pos(Crow, 3, \"left\")\n(B): Pos(Robin, 3, \"left\")\n(C): Pos(Quail, 3, \"left\")\n(D): Pos(BlueJay, 3, \"left\")\n(E): Pos(Falcon, 3, \"left\")",
+      "mode": "formal_logic",
+      "error": null,
+      "context": "The following paragraphs each describe a set of five objects arranged in a fixed order. The statements are logically consistent within each paragraph.\n\nOn a branch, there are five birds: a crow, a robin, a quail, a blue jay, and a falcon. The robin is to the left of the quail. The falcon is the third from the left. The crow is to the left of the falcon. The blue jay is the leftmost.",
+      "question": "Which of the following is true?",
+      "options": [
+        "A) The crow is the third from the left.",
+        "B) The robin is the third from the left.",
+        "C) The quail is the third from the left.",
+        "D) The blue jay is the third from the left.",
+        "E) The falcon is the third from the left."
+      ]
+    },
+    {
+      "id": "logical_deduction_60",
+      "predicted": "D",
+      "correct": "D",
+      "is_correct": true,
+      "pseudocode": "[SETUP]\nSetSize(5)\nObjects(Bus, Truck, Motorcycle, Sedan, Hatchback)\n\n[BACKGROUND]\nPos(Sedan, 2, \"before\")\nMore(Hatchback, Motorcycle, \"after\")\nMore(Motorcycle, Sedan, \"after\")\nMore(Hatchback, Truck, \"before\")\n\n[OPTIONS]\n(A): Pos(Bus, 2, \"before\")\n(B): Pos(Truck, 2, \"before\")\n(C): Pos(Motorcycle, 2, \"before\")\n(D): Pos(Sedan, 2, \"before\")\n(E): Pos(Hatchback, 2, \"before\")",
+      "mode": "formal_logic",
+      "error": null,
+      "context": "The following paragraphs each describe a set of five objects arranged in a fixed order. The statements are logically consistent within each paragraph.\n\nIn an antique car show, there are five vehicles: a bus, a truck, a motorcyle, a sedan, and a hatchback. The sedan is the second-oldest. The hatchback is newer than the motorcyle. The motorcyle is newer than the sedan. The hatchback is older than the truck.",
+      "question": "Which of the following is true?",
+      "options": [
+        "A) The bus is the second-oldest.",
+        "B) The truck is the second-oldest.",
+        "C) The motorcyle is the second-oldest.",
+        "D) The sedan is the second-oldest.",
+        "E) The hatchback is the second-oldest."
+      ]
+    },
+    {
+      "id": "logical_deduction_22",
+      "predicted": "A",
+      "correct": "A",
+      "is_correct": true,
+      "pseudocode": "[SETUP]\nSetSize(5)\nObjects(Green, Blue, Brown, Gray, Red)\n\n[BACKGROUND]\nMore(Green, Brown, \"left\")\nMore(Gray, Blue, \"left\")\nMore(Green, Blue, \"right\")\nPos(Red, 1, \"left\")\n\n[OPTIONS]\n(A): Pos(Green, 2, \"right\")\n(B): Pos(Blue, 2, \"right\")\n(C): Pos(Brown, 2, \"right\")\n(D): Pos(Gray, 2, \"right\")\n(E): Pos(Red, 2, \"right\")",
+      "mode": "formal_logic",
+      "error": null,
+      "context": "The following paragraphs each describe a set of five objects arranged in a fixed order. The statements are logically consistent within each paragraph.\n\nOn a shelf, there are five books: a green book, a blue book, a brown book, a gray book, and a red book. The green book is to the left of the brown book. The gray book is to the left of the blue book. The green book is to the right of the blue book. The red book is the leftmost.",
+      "question": "Which of the following is true?",
+      "options": [
+        "A) The green book is the second from the right.",
+        "B) The blue book is the second from the right.",
+        "C) The brown book is the second from the right.",
+        "D) The gray book is the second from the right.",
+        "E) The red book is the second from the right."
+      ]
+    },
+    {
+      "id": "logical_deduction_126",
+      "predicted": null,
+      "correct": "E",
+      "is_correct": false,
+      "pseudocode": "[SETUP]\nSetSize(7)\nObjects(Bus, Motorcycle, Hatchback, StationWagon, Minivan, Truck, Limousine)\n\n[BACKGROUND]\nPos(StationWagon, 4, \"new\")\nMore(Motorcycle, Truck, \"new\")\nMore(StationWagon, Hatchback, \"old\")\nMore(Minivan, Hatchback, \"new\")\nMore(Bus, Minivan, \"new\")\nMore(Truck, Limousine, \"new\")\n\n[OPTIONS]\n(A): Pos(Bus, 2, \"new\")\n(B): Pos(Motorcycle, 2, \"new\")\n(C): Pos(Hatchback, 2, \"new\")\n(D): Pos(StationWagon, 2, \"new\")\n(E): Pos(Minivan, 2, \"new\")\n(F): Pos(Truck, 2, \"new\")\n(G): Pos(Limousine, 2, \"new\")",
+      "mode": "formal_logic",
+      "error": "'(' was never closed (<string>, line 26)",
+      "context": "The following paragraphs each describe a set of seven objects arranged in a fixed order. The statements are logically consistent within each paragraph.\n\nIn an antique car show, there are seven vehicles: a bus, a motorcyle, a hatchback, a station wagon, a minivan, a truck, and a limousine. The station wagon is the fourth-newest. The motorcyle is newer than the truck. The station wagon is older than the hatchback. The minivan is newer than the hatchback. The bus is newer than the minivan. The truck is newer than the limousine.",
+      "question": "Which of the following is true?",
+      "options": [
+        "A) The bus is the second-newest.",
+        "B) The motorcyle is the second-newest.",
+        "C) The hatchback is the second-newest.",
+        "D) The station wagon is the second-newest.",
+        "E) The minivan is the second-newest.",
+        "F) The truck is the second-newest.",
+        "G) The limousine is the second-newest."
+      ]
+    },
+    {
+      "id": "logical_deduction_248",
+      "predicted": "A",
+      "correct": "A",
+      "is_correct": true,
+      "pseudocode": "[SETUP]\nSetSize(3)\nObjects(RedBook, GrayBook, WhiteBook)\n\n[BACKGROUND]\nMore(WhiteBook, GrayBook, \"left\")\nPos(RedBook, 2, \"left\")\n\n[OPTIONS]\n(A): Pos(RedBook, 2, \"left\")\n(B): Pos(GrayBook, 2, \"left\")\n(C): Pos(WhiteBook, 2, \"left\")",
+      "mode": "formal_logic",
+      "error": null,
+      "context": "The following paragraphs each describe a set of three objects arranged in a fixed order. The statements are logically consistent within each paragraph.\n\nOn a shelf, there are three books: a red book, a gray book, and a white book. The white book is to the left of the gray book. The red book is the second from the left.",
+      "question": "Which of the following is true?",
+      "options": [
+        "A) The red book is the second from the left.",
+        "B) The gray book is the second from the left.",
+        "C) The white book is the second from the left."
+      ]
+    },
+    {
+      "id": "logical_deduction_230",
+      "predicted": "C",
+      "correct": "C",
+      "is_correct": true,
+      "pseudocode": "[SETUP]\nSetSize(7)\nObjects(Purple, Green, White, Gray, Red, Black, Brown)\n\n[BACKGROUND]\nMore(Gray, Purple, \"left\")\nMore(White, Brown, \"right\")\nPos(Black, 3, \"right\")\nMore(Purple, White, \"left\")\nPos(White, 2, \"right\")\nPos(Gray, 3, \"left\")\nMore(Brown, Green, \"right\")\n\n[OPTIONS]\n(A): Pos(Purple, 2, \"right\")\n(B): Pos(Green, 2, \"right\")\n(C): Pos(White, 2, \"right\")\n(D): Pos(Gray, 2, \"right\")\n(E): Pos(Red, 2, \"right\")\n(F): Pos(Black, 2, \"right\")\n(G): Pos(Brown, 2, \"right\")",
+      "mode": "formal_logic",
+      "error": null,
+      "context": "The following paragraphs each describe a set of seven objects arranged in a fixed order. The statements are logically consistent within each paragraph.\n\nOn a shelf, there are seven books: a purple book, a green book, a white book, a gray book, a red book, a black book, and a brown book. The gray book is to the left of the purple book. The white book is to the right of the brown book. The black book is the third from the right. The purple book is to the left of the white book. The white book is the second from the right. The gray book is the third from the left. The brown book is to the right of the green book.",
+      "question": "Which of the following is true?",
+      "options": [
+        "A) The purple book is the second from the right.",
+        "B) The green book is the second from the right.",
+        "C) The white book is the second from the right.",
+        "D) The gray book is the second from the right.",
+        "E) The red book is the second from the right.",
+        "F) The black book is the second from the right.",
+        "G) The brown book is the second from the right."
+      ]
+    },
+    {
+      "id": "logical_deduction_116",
+      "predicted": null,
+      "correct": "F",
+      "is_correct": false,
+      "pseudocode": "[SETUP]\nSetSize(7)\nObjects(Truck, Motorcycle, Sedan, Minivan, StationWagon, Hatchback, Tractor)\n\n[BACKGROUND]\nMore(Hatchback, Truck, \"after\")\nPos(Sedan, 3, \"newer\")\nPos(StationWagon, 1, \"newer\")\nMore(Motorcycle, Truck, \"before\")\nMore(Minivan, Sedan, \"newer\")\nPos(Tractor, 3, \"older\")\n\n[OPTIONS]\n(A): Pos(Truck, 4, \"newer\")\n(B): Pos(Motorcycle, 4, \"newer\")\n(C): Pos(Sedan, 4, \"newer\")\n(D): Pos(Minivan, 4, \"newer\")\n(E): Pos(StationWagon, 4, \"newer\")\n(F): Pos(Hatchback, 4, \"newer\")\n(G): Pos(Tractor, 4, \"newer\")",
+      "mode": "formal_logic",
+      "error": "'(' was never closed (<string>, line 25)",
+      "context": "The following paragraphs each describe a set of seven objects arranged in a fixed order. The statements are logically consistent within each paragraph.\n\nIn an antique car show, there are seven vehicles: a truck, a motorcyle, a sedan, a minivan, a station wagon, a hatchback, and a tractor. The hatchback is newer than the truck. The sedan is the third-newest. The station wagon is the newest. The motorcyle is older than the truck. The minivan is newer than the sedan. The tractor is the third-oldest.",
+      "question": "Which of the following is true?",
+      "options": [
+        "A) The truck is the fourth-newest.",
+        "B) The motorcyle is the fourth-newest.",
+        "C) The sedan is the fourth-newest.",
+        "D) The minivan is the fourth-newest.",
+        "E) The station wagon is the fourth-newest.",
+        "F) The hatchback is the fourth-newest.",
+        "G) The tractor is the fourth-newest."
+      ]
+    },
+    {
+      "id": "logical_deduction_66",
+      "predicted": "C",
+      "correct": "A",
+      "is_correct": false,
+      "pseudocode": "[SETUP]\nSetSize(5)\nObjects(Joe, Eve, Mya, Rob, Dan)\n\n[BACKGROUND]\nMore(Joe, Dan, \"down\")\nPos(Mya, 1, \"up\")\nMore(Dan, Rob, \"down\")\nMore(Eve, Rob, \"up\")\n\n[OPTIONS]\n(A): Pos(Joe, 5, \"down\")\n(B): Pos(Eve, 5, \"down\")\n(C): Pos(Mya, 5, \"down\")\n(D): Pos(Rob, 5, \"down\")\n(E): Pos(Dan, 5, \"down\")",
+      "mode": "formal_logic",
+      "error": null,
+      "context": "The following paragraphs each describe a set of five objects arranged in a fixed order. The statements are logically consistent within each paragraph.\n\nIn a golf tournament, there were five golfers: Joe, Eve, Mya, Rob, and Dan. Joe finished below Dan. Mya finished first. Dan finished below Rob. Eve finished above Rob.",
+      "question": "Which of the following is true?",
+      "options": [
+        "A) Joe finished last.",
+        "B) Eve finished last.",
+        "C) Mya finished last.",
+        "D) Rob finished last.",
+        "E) Dan finished last."
+      ]
+    },
+    {
+      "id": "logical_deduction_217",
+      "predicted": "B",
+      "correct": "B",
+      "is_correct": true,
+      "pseudocode": "[SETUP]\nSetSize(7)\nObjects(Loquats, Peaches, Watermelons, Plums, Kiwis, Mangoes, Pears)\n\n[BACKGROUND]\nMore(Pears, Kiwis, \"expensive\")\nMore(Peaches, Watermelons, \"expensive\")\nPos(Mangoes, 3, \"cheap\")\nPos(Watermelons, 3, \"expensive\")\nPos(Plums, 2, \"expensive\")\nPos(Loquats, 2, \"cheap\")\n\n[OPTIONS]\n(A): Pos(Loquats, 1, \"expensive\")\n(B): Pos(Peaches, 1, \"expensive\")\n(C): Pos(Watermelons, 1, \"expensive\")\n(D): Pos(Plums, 1, \"expensive\")\n(E): Pos(Kiwis, 1, \"expensive\")\n(F): Pos(Mangoes, 1, \"expensive\")\n(G): Pos(Pears, 1, \"expensive\")",
+      "mode": "formal_logic",
+      "error": null,
+      "context": "The following paragraphs each describe a set of seven objects arranged in a fixed order. The statements are logically consistent within each paragraph.\n\nA fruit stand sells seven fruits: loquats, peaches, watermelons, plums, kiwis, mangoes, and pears. The pears are more expensive than the kiwis. The watermelons are less expensive than the peaches. The mangoes are the third-cheapest. The watermelons are the third-most expensive. The plums are the second-most expensive. The loquats are the second-cheapest.",
+      "question": "Which of the following is true?",
+      "options": [
+        "A) The loquats are the most expensive.",
+        "B) The peaches are the most expensive.",
+        "C) The watermelons are the most expensive.",
+        "D) The plums are the most expensive.",
+        "E) The kiwis are the most expensive.",
+        "F) The mangoes are the most expensive.",
+        "G) The pears are the most expensive."
+      ]
+    },
+    {
+      "id": "logical_deduction_9",
+      "predicted": "A",
+      "correct": "A",
+      "is_correct": true,
+      "pseudocode": "[SETUP]\nSetSize(5)\nObjects(Brown, Orange, Red, Purple, Black)\n\n[BACKGROUND]\nMore(Purple, Black, \"left\")\nMore(Red, Brown, \"right\")\nPos(Orange, 2, \"left\")\nPos(Black, 3, \"left\")\n\n[OPTIONS]\n(A): Pos(Brown, 2, \"right\")\n(B): Pos(Orange, 2, \"right\")\n(C): Pos(Red, 2, \"right\")\n(D): Pos(Purple, 2, \"right\")\n(E): Pos(Black, 2, \"right\")",
+      "mode": "formal_logic",
+      "error": null,
+      "context": "The following paragraphs each describe a set of five objects arranged in a fixed order. The statements are logically consistent within each paragraph.\n\nOn a shelf, there are five books: a brown book, an orange book, a red book, a purple book, and a black book. The purple book is to the left of the black book. The red book is to the right of the brown book. The orange book is the second from the left. The black book is the third from the left.",
+      "question": "Which of the following is true?",
+      "options": [
+        "A) The brown book is the second from the right.",
+        "B) The orange book is the second from the right.",
+        "C) The red book is the second from the right.",
+        "D) The purple book is the second from the right.",
+        "E) The black book is the second from the right."
+      ]
+    },
+    {
+      "id": "logical_deduction_100",
+      "predicted": null,
+      "correct": "D",
+      "is_correct": false,
+      "pseudocode": "[SETUP]\nSetSize(7)\nObjects(Truck, Hatchback, Minivan, Bus, Tractor, StationWagon, Convertible)\n\n[BACKGROUND]\nPos(StationWagon, 4, \"new\")\nPos(Minivan, 3, \"new\")\nPos(Tractor, 6, \"old\")\nMore(Convertible, StationWagon, \"before\")\nMore(Truck, Bus, \"after\")\nMore(Hatchback, Convertible, \"before\")\n\n[OPTIONS]\n(A): Pos(Truck, 2, \"new\")\n(B): Pos(Hatchback, 2, \"new\")\n(C): Pos(Minivan, 2, \"new\")\n(D): Pos(Bus, 2, \"new\")\n(E): Pos(Tractor, 2, \"new\")\n(F): Pos(StationWagon, 2, \"new\")\n(G): Pos(Convertible, 2, \"new\")",
+      "mode": "formal_logic",
+      "error": "name 'Pos' is not defined",
+      "context": "The following paragraphs each describe a set of seven objects arranged in a fixed order. The statements are logically consistent within each paragraph.\n\nIn an antique car show, there are seven vehicles: a truck, a hatchback, a minivan, a bus, a tractor, a station wagon, and a convertible. The station wagon is the fourth-newest. The minivan is the third-newest. The tractor is the second-oldest. The convertible is older than the station wagon. The truck is newer than the bus. The hatchback is older than the convertible.",
+      "question": "Which of the following is true?",
+      "options": [
+        "A) The truck is the second-newest.",
+        "B) The hatchback is the second-newest.",
+        "C) The minivan is the second-newest.",
+        "D) The bus is the second-newest.",
+        "E) The tractor is the second-newest.",
+        "F) The station wagon is the second-newest.",
+        "G) The convertible is the second-newest."
+      ]
+    },
+    {
+      "id": "logical_deduction_222",
+      "predicted": null,
+      "correct": "B",
+      "is_correct": false,
+      "pseudocode": "[SETUP]\nSetSize(7)\nObjects(Truck, Hatchback, Minivan, Bus, Tractor, StationWagon, Convertible)\n\n[BACKGROUND]\nPos(StationWagon, 4, \"new\")\nPos(Minivan, 3, \"new\")\nPos(Tractor, 6, \"old\")\nMore(Convertible, StationWagon, \"before\")\nMore(Truck, Bus, \"after\")\nMore(Hatchback, Convertible, \"before\")\n\n[OPTIONS]\n(A): Pos(Truck, 7, \"old\")\n(B): Pos(Hatchback, 7, \"old\")\n(C): Pos(Minivan, 7, \"old\")\n(D): Pos(Bus, 7, \"old\")\n(E): Pos(Tractor, 7, \"old\")\n(F): Pos(StationWagon, 7, \"old\")\n(G): Pos(Convertible, 7, \"old\")",
+      "mode": "formal_logic",
+      "error": "name 'Pos' is not defined",
+      "context": "The following paragraphs each describe a set of seven objects arranged in a fixed order. The statements are logically consistent within each paragraph.\n\nIn an antique car show, there are seven vehicles: a truck, a hatchback, a minivan, a bus, a tractor, a station wagon, and a convertible. The station wagon is the fourth-newest. The minivan is the third-newest. The tractor is the second-oldest. The convertible is older than the station wagon. The truck is newer than the bus. The hatchback is older than the convertible.",
+      "question": "Which of the following is true?",
+      "options": [
+        "A) The truck is the oldest.",
+        "B) The hatchback is the oldest.",
+        "C) The minivan is the oldest.",
+        "D) The bus is the oldest.",
+        "E) The tractor is the oldest.",
+        "F) The station wagon is the oldest.",
+        "G) The convertible is the oldest."
+      ]
+    },
+    {
+      "id": "logical_deduction_143",
+      "predicted": "C",
+      "correct": "C",
+      "is_correct": true,
+      "pseudocode": "[SETUP]\nSetSize(7)\nObjects(Quail, Raven, Hummingbird, Robin, Falcon, Owl, BlueJay)\n\n[BACKGROUND]\nMore(BlueJay, Falcon, \"left\")\nPos(BlueJay, 2, \"right\")\nMore(Raven, Robin, \"left\")\nPos(Owl, 3, \"right\")\nMore(Hummingbird, Quail, \"left\")\nPos(Raven, 3, \"left\")\n\n[OPTIONS]\n(A): Pos(Quail, 1, \"left\")\n(B): Pos(Raven, 1, \"left\")\n(C): Pos(Hummingbird, 1, \"left\")\n(D): Pos(Robin, 1, \"left\")\n(E): Pos(Falcon, 1, \"left\")\n(F): Pos(Owl, 1, \"left\")\n(G): Pos(BlueJay, 1, \"left\")",
+      "mode": "formal_logic",
+      "error": null,
+      "context": "The following paragraphs each describe a set of seven objects arranged in a fixed order. The statements are logically consistent within each paragraph.\n\nOn a branch, there are seven birds: a quail, a raven, a hummingbird, a robin, a falcon, an owl, and a blue jay. The blue jay is to the left of the falcon. The blue jay is the second from the right. The raven is to the left of the robin. The owl is the third from the right. The hummingbird is to the left of the quail. The raven is the third from the left.",
+      "question": "Which of the following is true?",
+      "options": [
+        "A) The quail is the leftmost.",
+        "B) The raven is the leftmost.",
+        "C) The hummingbird is the leftmost.",
+        "D) The robin is the leftmost.",
+        "E) The falcon is the leftmost.",
+        "F) The owl is the leftmost.",
+        "G) The blue jay is the leftmost."
+      ]
+    },
+    {
+      "id": "logical_deduction_36",
+      "predicted": "E",
+      "correct": "C",
+      "is_correct": false,
+      "pseudocode": "[SETUP]\nSetSize(5)\nObjects(Dan, Amy, Eve, Ana, Mya)\n\n[BACKGROUND]\nMore(Dan, Eve, \"up\")\nMore(Dan, Mya, \"down\")\nPos(Amy, 3, \"up\")\nPos(Ana, 4, \"down\")\n\n[OPTIONS]\n(A): Pos(Dan, 5, \"down\")\n(B): Pos(Amy, 5, \"down\")\n(C): Pos(Eve, 5, \"down\")\n(D): Pos(Ana, 5, \"down\")\n(E): Pos(Mya, 5, \"down\")",
+      "mode": "formal_logic",
+      "error": null,
+      "context": "The following paragraphs each describe a set of five objects arranged in a fixed order. The statements are logically consistent within each paragraph.\n\nIn a golf tournament, there were five golfers: Dan, Amy, Eve, Ana, and Mya. Dan finished above Eve. Dan finished below Mya. Amy finished third. Ana finished second-to-last.",
+      "question": "Which of the following is true?",
+      "options": [
+        "A) Dan finished last.",
+        "B) Amy finished last.",
+        "C) Eve finished last.",
+        "D) Ana finished last.",
+        "E) Mya finished last."
+      ]
+    },
+    {
+      "id": "logical_deduction_37",
+      "predicted": "A",
+      "correct": "C",
+      "is_correct": false,
+      "pseudocode": "[SETUP]\nSetSize(5)\nObjects(Joe, Ana, Amy, Mya, Eve)\n\n[BACKGROUND]\nPos(Joe, 1, \"after\")       (Last = 1st from the end/after)\nPos(Ana, 2, \"after\")       (Second = 2nd from the end/after)\nPos(Mya, 4, \"after\")       (Second-to-last = 4th from the end/after)\nMore(Eve, Amy, \"down\")     (Below = lower rank)\n\n[OPTIONS]\n(A): Pos(Joe, 1, \"after\")\n(B): Pos(Ana, 1, \"after\")\n(C): Pos(Amy, 1, \"after\")\n(D): Pos(Mya, 1, \"after\")\n(E): Pos(Eve, 1, \"after\")",
+      "mode": "formal_logic",
+      "error": null,
+      "context": "The following paragraphs each describe a set of five objects arranged in a fixed order. The statements are logically consistent within each paragraph.\n\nIn a golf tournament, there were five golfers: Joe, Ana, Amy, Mya, and Eve. Joe finished last. Ana finished second. Mya finished second-to-last. Eve finished below Amy.",
+      "question": "Which of the following is true?",
+      "options": [
+        "A) Joe finished first.",
+        "B) Ana finished first.",
+        "C) Amy finished first.",
+        "D) Mya finished first.",
+        "E) Eve finished first."
+      ]
+    },
+    {
+      "id": "logical_deduction_292",
+      "predicted": "A",
+      "correct": "A",
+      "is_correct": true,
+      "pseudocode": "[SETUP]\nSetSize(3)\nObjects(Apples, Pears, Loquats)\n\n[BACKGROUND]\nMore(Pears, Loquats, \"expensive\")\nMore(Pears, Apples, \"cheap\")\n\n[OPTIONS]\n(A): Pos(Apples, 1, \"expensive\")\n(B): Pos(Pears, 1, \"expensive\")\n(C): Pos(Loquats, 1, \"expensive\")",
+      "mode": "formal_logic",
+      "error": null,
+      "context": "The following paragraphs each describe a set of three objects arranged in a fixed order. The statements are logically consistent within each paragraph.\n\nA fruit stand sells three fruits: apples, pears, and loquats. The pears are more expensive than the loquats. The pears are less expensive than the apples.",
+      "question": "Which of the following is true?",
+      "options": [
+        "A) The apples are the most expensive.",
+        "B) The pears are the most expensive.",
+        "C) The loquats are the most expensive."
+      ]
+    },
+    {
+      "id": "logical_deduction_220",
+      "predicted": "C",
+      "correct": "C",
+      "is_correct": true,
+      "pseudocode": "[SETUP]\nSetSize(7)\nObjects(Red, White, Purple, Black, Gray, Orange, Blue)\n\n[BACKGROUND]\nMore(Red, White, \"right\")\nMore(Gray, Orange, \"left\")\nMore(Gray, Blue, \"right\")\nPos(Red, 2, \"right\")\nPos(Black, 4, \"left\")\nMore(Orange, White, \"left\")\n\n[OPTIONS]\n(A): Pos(Red, 1, \"right\")\n(B): Pos(White, 1, \"right\")\n(C): Pos(Purple, 1, \"right\")\n(D): Pos(Black, 1, \"right\")\n(E): Pos(Gray, 1, \"right\")\n(F): Pos(Orange, 1, \"right\")\n(G): Pos(Blue, 1, \"right\")",
+      "mode": "formal_logic",
+      "error": null,
+      "context": "The following paragraphs each describe a set of seven objects arranged in a fixed order. The statements are logically consistent within each paragraph.\n\nOn a shelf, there are seven books: a red book, a white book, a purple book, a black book, a gray book, an orange book, and a blue book. The red book is to the right of the white book. The gray book is to the left of the orange book. The gray book is to the right of the blue book. The red book is the second from the right. The black book is the fourth from the left. The orange book is to the left of the white book.",
+      "question": "Which of the following is true?",
+      "options": [
+        "A) The red book is the rightmost.",
+        "B) The white book is the rightmost.",
+        "C) The purple book is the rightmost.",
+        "D) The black book is the rightmost.",
+        "E) The gray book is the rightmost.",
+        "F) The orange book is the rightmost.",
+        "G) The blue book is the rightmost."
+      ]
+    },
+    {
+      "id": "logical_deduction_286",
+      "predicted": null,
+      "correct": "A",
+      "is_correct": false,
+      "pseudocode": "[SETUP]\nSetSize(5)\nObjects(BlueJay, Cardinal, Quail...)\n\n[BACKGROUND]\nMore(Cardinal, Quail, \"right\")\nMore(Quail, BlueJay, \"right\")\n\n[OPTIONS]\n(A): Pos(BlueJay, 1, \"left\")",
+      "mode": "formal_logic",
+      "error": "cannot assign to ellipsis here. Maybe you meant '==' instead of '='? (<string>, line 9)",
+      "context": "The following paragraphs each describe a set of three objects arranged in a fixed order. The statements are logically consistent within each paragraph.\n\nOn a branch, there are three birds: a blue jay, a cardinal, and a quail. The cardinal is to the right of the quail. The quail is to the right of the blue jay.",
+      "question": "Which of the following is true?",
+      "options": [
+        "A) The blue jay is the leftmost.",
+        "B) The cardinal is the leftmost.",
+        "C) The quail is the leftmost."
+      ]
+    },
+    {
+      "id": "logical_deduction_207",
+      "predicted": "G",
+      "correct": "G",
+      "is_correct": true,
+      "pseudocode": "[SETUP]\nSetSize(7)\nObjects(Eli, Eve, Mel, Joe, Mya, Rob, Ada)\n\n[BACKGROUND]\nMore(Ada, Mya, \"up\")\nMore(Eli, Joe, \"down\")\nMore(Eli, Eve, \"up\")\nPos(Ada, 2, \"down\")\nPos(Mel, 3, \"down\")\nPos(Rob, 4, \"down\")\n\n[OPTIONS]\n(A): Pos(Eli, 2, \"down\")\n(B): Pos(Eve, 2, \"down\")\n(C): Pos(Mel, 2, \"down\")\n(D): Pos(Joe, 2, \"down\")\n(E): Pos(Mya, 2, \"down\")\n(F): Pos(Rob, 2, \"down\")\n(G): Pos(Ada, 2, \"down\")",
+      "mode": "formal_logic",
+      "error": null,
+      "context": "The following paragraphs each describe a set of seven objects arranged in a fixed order. The statements are logically consistent within each paragraph.\n\nIn a golf tournament, there were seven golfers: Eli, Eve, Mel, Joe, Mya, Rob, and Ada. Ada finished above Mya. Eli finished below Joe. Eli finished above Eve. Ada finished second-to-last. Mel finished third. Rob finished fourth.",
+      "question": "Which of the following is true?",
+      "options": [
+        "A) Eli finished second-to-last.",
+        "B) Eve finished second-to-last.",
+        "C) Mel finished second-to-last.",
+        "D) Joe finished second-to-last.",
+        "E) Mya finished second-to-last.",
+        "F) Rob finished second-to-last.",
+        "G) Ada finished second-to-last."
+      ]
+    },
+    {
+      "id": "logical_deduction_1",
+      "predicted": null,
+      "correct": "A",
+      "is_correct": false,
+      "pseudocode": "[SETUP]\nSetSize(5)\nObjects(Convertible, Sedan, Tractor, Minivan, Limousine)\n\n[BACKGROUND]\nMore(Tractor, Minivan, \"after\")\nMore(Tractor, Limousine, \"before\")\nMore(Convertible, Sedan, \"before\")\nPos(Convertible, 2, \"newer\")\n\n[OPTIONS]\n(A): Pos(Convertible, 2, \"newer\")\n(B): Pos(Sedan, 2, \"newer\")\n(C): Pos(Tractor, 2, \"newer\")\n(D): Pos(Minivan, 2, \"newer\")\n(E): Pos(Limousine, 2, \"newer\")",
+      "mode": "formal_logic",
+      "error": "name 'Pos' is not defined",
+      "context": "The following paragraphs each describe a set of five objects arranged in a fixed order. The statements are logically consistent within each paragraph.\n\nIn an antique car show, there are five vehicles: a convertible, a sedan, a tractor, a minivan, and a limousine. The tractor is newer than the minivan. The tractor is older than the limousine. The convertible is older than the sedan. The convertible is the second-newest.",
+      "question": "Which of the following is true?",
+      "options": [
+        "A) The convertible is the second-newest.",
+        "B) The sedan is the second-newest.",
+        "C) The tractor is the second-newest.",
+        "D) The minivan is the second-newest.",
+        "E) The limousine is the second-newest."
+      ]
+    },
+    {
+      "id": "logical_deduction_186",
+      "predicted": "B",
+      "correct": "B",
+      "is_correct": true,
+      "pseudocode": "[SETUP]\nSetSize(7)\nObjects(Kiwis, Plums, Mangoes, Watermelons, Pears, Peaches, Oranges)\n\n[BACKGROUND]\nPos(Pears, 3, \"cheap\")\nPos(Kiwis, 2, \"expensive\")\nMore(Pears, Plums, \"expensive\")\nMore(Oranges, Kiwis, \"cheap\")\nPos(Mangoes, 3, \"expensive\")\nPos(Peaches, 2, \"cheap\")\n\n[OPTIONS]\n(A): Pos(Kiwis, 1, \"cheap\")\n(B): Pos(Plums, 1, \"cheap\")\n(C): Pos(Mangoes, 1, \"cheap\")\n(D): Pos(Watermelons, 1, \"cheap\")\n(E): Pos(Pears, 1, \"cheap\")\n(F): Pos(Peaches, 1, \"cheap\")\n(G): Pos(Oranges, 1, \"cheap\")",
+      "mode": "formal_logic",
+      "error": null,
+      "context": "The following paragraphs each describe a set of seven objects arranged in a fixed order. The statements are logically consistent within each paragraph.\n\nA fruit stand sells seven fruits: kiwis, plums, mangoes, watermelons, pears, peaches, and oranges. The pears are the third-cheapest. The kiwis are the second-most expensive. The pears are more expensive than the plums. The oranges are less expensive than the kiwis. The mangoes are the third-most expensive. The peaches are the second-cheapest.",
+      "question": "Which of the following is true?",
+      "options": [
+        "A) The kiwis are the cheapest.",
+        "B) The plums are the cheapest.",
+        "C) The mangoes are the cheapest.",
+        "D) The watermelons are the cheapest.",
+        "E) The pears are the cheapest.",
+        "F) The peaches are the cheapest.",
+        "G) The oranges are the cheapest."
+      ]
+    },
+    {
+      "id": "logical_deduction_21",
+      "predicted": "B",
+      "correct": "B",
+      "is_correct": true,
+      "pseudocode": "[SETUP]\nSetSize(5)\nObjects(Truck, Motorcycle, Limousine, StationWagon, Sedan)\n\n[BACKGROUND]\nMore(Limousine, Truck, \"before\")\nMore(Sedan, Motorcycle, \"after\")\nPos(StationWagon, 1, \"before\")\nMore(Limousine, Sedan, \"after\")\n\n[OPTIONS]\n(A): Pos(Truck, 2, \"before\")\n(B): Pos(Motorcycle, 2, \"before\")\n(C): Pos(Limousine, 2, \"before\")\n(D): Pos(StationWagon, 2, \"before\")\n(E): Pos(Sedan, 2, \"before\")",
+      "mode": "formal_logic",
+      "error": null,
+      "context": "The following paragraphs each describe a set of five objects arranged in a fixed order. The statements are logically consistent within each paragraph.\n\nIn an antique car show, there are five vehicles: a truck, a motorcyle, a limousine, a station wagon, and a sedan. The limousine is older than the truck. The sedan is newer than the motorcyle. The station wagon is the oldest. The limousine is newer than the sedan.",
+      "question": "Which of the following is true?",
+      "options": [
+        "A) The truck is the second-oldest.",
+        "B) The motorcyle is the second-oldest.",
+        "C) The limousine is the second-oldest.",
+        "D) The station wagon is the second-oldest.",
+        "E) The sedan is the second-oldest."
+      ]
+    },
+    {
+      "id": "logical_deduction_206",
+      "predicted": "E",
+      "correct": "E",
+      "is_correct": true,
+      "pseudocode": "[SETUP]\nSetSize(7)\nObjects(Loquats, Peaches, Watermelons, Plums, Kiwis, Mangoes, Pears)\n\n[BACKGROUND]\nMore(Pears, Kiwis, \"expensive\")\nMore(Peaches, Watermelons, \"expensive\")\nPos(Mangoes, 3, \"cheap\")\nPos(Watermelons, 3, \"expensive\")\nPos(Plums, 2, \"expensive\")\nPos(Loquats, 2, \"cheap\")\n\n[OPTIONS]\n(A): Pos(Loquats, 1, \"cheap\")\n(B): Pos(Peaches, 1, \"cheap\")\n(C): Pos(Watermelons, 1, \"cheap\")\n(D): Pos(Plums, 1, \"cheap\")\n(E): Pos(Kiwis, 1, \"cheap\")\n(F): Pos(Mangoes, 1, \"cheap\")\n(G): Pos(Pears, 1, \"cheap\")",
+      "mode": "formal_logic",
+      "error": null,
+      "context": "The following paragraphs each describe a set of seven objects arranged in a fixed order. The statements are logically consistent within each paragraph.\n\nA fruit stand sells seven fruits: loquats, peaches, watermelons, plums, kiwis, mangoes, and pears. The pears are more expensive than the kiwis. The watermelons are less expensive than the peaches. The mangoes are the third-cheapest. The watermelons are the third-most expensive. The plums are the second-most expensive. The loquats are the second-cheapest.",
+      "question": "Which of the following is true?",
+      "options": [
+        "A) The loquats are the cheapest.",
+        "B) The peaches are the cheapest.",
+        "C) The watermelons are the cheapest.",
+        "D) The plums are the cheapest.",
+        "E) The kiwis are the cheapest.",
+        "F) The mangoes are the cheapest.",
+        "G) The pears are the cheapest."
+      ]
+    },
+    {
+      "id": "logical_deduction_40",
+      "predicted": "D",
+      "correct": "D",
+      "is_correct": true,
+      "pseudocode": "[SETUP]\nSetSize(5)\nObjects(Cantaloupes, Kiwis, Oranges, Mangoes, Peaches)\n\n[BACKGROUND]\nMore(Kiwis, Mangoes, \"cheap\")\nMore(Peaches, Oranges, \"cheap\")\nPos(Oranges, 2, \"expensive\")\nPos(Mangoes, 2, \"cheap\")\n\n[OPTIONS]\n(A): Pos(Cantaloupes, 2, \"cheap\")\n(B): Pos(Kiwis, 2, \"cheap\")\n(C): Pos(Oranges, 2, \"cheap\")\n(D): Pos(Mangoes, 2, \"cheap\")\n(E): Pos(Peaches, 2, \"cheap\")",
+      "mode": "formal_logic",
+      "error": null,
+      "context": "The following paragraphs each describe a set of five objects arranged in a fixed order. The statements are logically consistent within each paragraph.\n\nA fruit stand sells five fruits: cantaloupes, kiwis, oranges, mangoes, and peaches. The kiwis are less expensive than the mangoes. The peaches are less expensive than the oranges. The oranges are the second-most expensive. The mangoes are the second-cheapest.",
+      "question": "Which of the following is true?",
+      "options": [
+        "A) The cantaloupes are the second-cheapest.",
+        "B) The kiwis are the second-cheapest.",
+        "C) The oranges are the second-cheapest.",
+        "D) The mangoes are the second-cheapest.",
+        "E) The peaches are the second-cheapest."
+      ]
+    },
+    {
+      "id": "logical_deduction_34",
+      "predicted": "B",
+      "correct": "B",
+      "is_correct": true,
+      "pseudocode": "[SETUP]\nSetSize(5)\nObjects(BlueJay, Robin, Cardinal, Hawk, Falcon)\n\n[BACKGROUND]\nPos(BlueJay, 1, \"right\")\nMore(Robin, Falcon, \"right\")\nMore(Cardinal, Hawk, \"left\")\nMore(Falcon, Hawk, \"right\")\n\n[OPTIONS]\n(A): Pos(BlueJay, 2, \"right\")\n(B): Pos(Robin, 2, \"right\")\n(C): Pos(Cardinal, 2, \"right\")\n(D): Pos(Hawk, 2, \"right\")\n(E): Pos(Falcon, 2, \"right\")",
+      "mode": "formal_logic",
+      "error": null,
+      "context": "The following paragraphs each describe a set of five objects arranged in a fixed order. The statements are logically consistent within each paragraph.\n\nOn a branch, there are five birds: a blue jay, a robin, a cardinal, a hawk, and a falcon. The blue jay is the rightmost. The robin is to the right of the falcon. The cardinal is to the left of the hawk. The falcon is to the right of the hawk.",
+      "question": "Which of the following is true?",
+      "options": [
+        "A) The blue jay is the second from the right.",
+        "B) The robin is the second from the right.",
+        "C) The cardinal is the second from the right.",
+        "D) The hawk is the second from the right.",
+        "E) The falcon is the second from the right."
+      ]
+    },
+    {
+      "id": "logical_deduction_280",
+      "predicted": null,
+      "correct": "C",
+      "is_correct": false,
+      "pseudocode": "[SETUP]\nSetSize(5)\nObjects(Sedan, Minivan, Motorcycle...)\n\n[BACKGROUND]\nPos(Motorcycle, 2, \"after\")\nMore(Minivan, Motorcycle, \"after\")\n\n[OPTIONS]\n(A): Pos(Sedan, 2, \"after\")\n(B): Pos(Minivan, 2, \"after\")\n(C): Pos(Motorcycle, 2, \"after\")",
+      "mode": "formal_logic",
+      "error": "cannot assign to ellipsis here. Maybe you meant '==' instead of '='? (<string>, line 9)",
+      "context": "The following paragraphs each describe a set of three objects arranged in a fixed order. The statements are logically consistent within each paragraph.\n\nIn an antique car show, there are three vehicles: a sedan, a minivan, and a motorcyle. The motorcyle is the second-newest. The minivan is newer than the motorcyle.",
+      "question": "Which of the following is true?",
+      "options": [
+        "A) The sedan is the second-newest.",
+        "B) The minivan is the second-newest.",
+        "C) The motorcyle is the second-newest."
+      ]
+    },
+    {
+      "id": "logical_deduction_67",
+      "predicted": "E",
+      "correct": "E",
+      "is_correct": true,
+      "pseudocode": "[SETUP]\nSetSize(5)\nObjects(Cardinal, Hawk, Hummingbird, Raven, Owl)\n\n[BACKGROUND]\nMore(Raven, Hummingbird, \"left\")\nMore(Hawk, Owl, \"left\")\nMore(Cardinal, Hawk, \"left\")\nPos(Raven, 2, \"right\")\n\n[OPTIONS]\n(A): Pos(Cardinal, 3, \"left\")\n(B): Pos(Hawk, 3, \"left\")\n(C): Pos(Hummingbird, 3, \"left\")\n(D): Pos(Raven, 3, \"left\")\n(E): Pos(Owl, 3, \"left\")",
+      "mode": "formal_logic",
+      "error": null,
+      "context": "The following paragraphs each describe a set of five objects arranged in a fixed order. The statements are logically consistent within each paragraph.\n\nOn a branch, there are five birds: a cardinal, a hawk, a hummingbird, a raven, and an owl. The raven is to the left of the hummingbird. The hawk is to the left of the owl. The cardinal is to the left of the hawk. The raven is the second from the right.",
+      "question": "Which of the following is true?",
+      "options": [
+        "A) The cardinal is the third from the left.",
+        "B) The hawk is the third from the left.",
+        "C) The hummingbird is the third from the left.",
+        "D) The raven is the third from the left.",
+        "E) The owl is the third from the left."
+      ]
+    },
+    {
+      "id": "logical_deduction_208",
+      "predicted": "A",
+      "correct": "A",
+      "is_correct": true,
+      "pseudocode": "[SETUP]\nSetSize(7)\nObjects(Watermelons, Mangoes, Kiwis, Pears, Cantaloupes, Oranges, Peaches)\n\n[BACKGROUND]\nMore(Oranges, Peaches, \"expensive\")\nPos(Cantaloupes, 4, \"expensive\")\nMore(Pears, Cantaloupes, \"cheap\")\nPos(Peaches, 2, \"expensive\")\nPos(Mangoes, 1, \"cheap\")\nPos(Kiwis, 3, \"cheap\")\n\n[OPTIONS]\n(A): Pos(Watermelons, 3, \"expensive\")\n(B): Pos(Mangoes, 3, \"expensive\")\n(C): Pos(Kiwis, 3, \"expensive\")\n(D): Pos(Pears, 3, \"expensive\")\n(E): Pos(Cantaloupes, 3, \"expensive\")\n(F): Pos(Oranges, 3, \"expensive\")\n(G): Pos(Peaches, 3, \"expensive\")",
+      "mode": "formal_logic",
+      "error": null,
+      "context": "The following paragraphs each describe a set of seven objects arranged in a fixed order. The statements are logically consistent within each paragraph.\n\nA fruit stand sells seven fruits: watermelons, mangoes, kiwis, pears, cantaloupes, oranges, and peaches. The oranges are more expensive than the peaches. The cantaloupes are the fourth-most expensive. The pears are less expensive than the cantaloupes. The peaches are the second-most expensive. The mangoes are the cheapest. The kiwis are the third-cheapest.",
+      "question": "Which of the following is true?",
+      "options": [
+        "A) The watermelons are the third-most expensive.",
+        "B) The mangoes are the third-most expensive.",
+        "C) The kiwis are the third-most expensive.",
+        "D) The pears are the third-most expensive.",
+        "E) The cantaloupes are the third-most expensive.",
+        "F) The oranges are the third-most expensive.",
+        "G) The peaches are the third-most expensive."
+      ]
+    },
+    {
+      "id": "logical_deduction_285",
+      "predicted": null,
+      "correct": "B",
+      "is_correct": false,
+      "pseudocode": "[SETUP]\nSetSize(5)\nObjects(Falcon, Owl, Raven...)\n\n[BACKGROUND]\nMore(Raven, Owl, \"left\")\nPos(Falcon, 1, \"left\")\n\n[OPTIONS]\n(A): Pos(Falcon, 1, \"right\")\n(B): Pos(Owl, 1, \"right\")\n(C): Pos(Raven, 1, \"right\")",
+      "mode": "formal_logic",
+      "error": "cannot assign to ellipsis here. Maybe you meant '==' instead of '='? (<string>, line 9)",
+      "context": "The following paragraphs each describe a set of three objects arranged in a fixed order. The statements are logically consistent within each paragraph.\n\nOn a branch, there are three birds: a falcon, an owl, and a raven. The raven is to the left of the owl. The falcon is the leftmost.",
+      "question": "Which of the following is true?",
+      "options": [
+        "A) The falcon is the rightmost.",
+        "B) The owl is the rightmost.",
+        "C) The raven is the rightmost."
+      ]
+    },
+    {
+      "id": "logical_deduction_121",
+      "predicted": "F",
+      "correct": "F",
+      "is_correct": true,
+      "pseudocode": "[SETUP]\nSetSize(7)\nObjects(Loquats, Peaches, Watermelons, Plums, Kiwis, Mangoes, Pears)\n\n[BACKGROUND]\nMore(Pears, Kiwis, \"expensive\")\nMore(Peaches, Watermelons, \"expensive\")\nPos(Mangoes, 3, \"cheap\")\nPos(Watermelons, 3, \"expensive\")\nPos(Plums, 2, \"expensive\")\nPos(Loquats, 2, \"cheap\")\n\n[OPTIONS]\n(A): Pos(Loquats, 3, \"cheap\")\n(B): Pos(Peaches, 3, \"cheap\")\n(C): Pos(Watermelons, 3, \"cheap\")\n(D): Pos(Plums, 3, \"cheap\")\n(E): Pos(Kiwis, 3, \"cheap\")\n(F): Pos(Mangoes, 3, \"cheap\")\n(G): Pos(Pears, 3, \"cheap\")",
+      "mode": "formal_logic",
+      "error": null,
+      "context": "The following paragraphs each describe a set of seven objects arranged in a fixed order. The statements are logically consistent within each paragraph.\n\nA fruit stand sells seven fruits: loquats, peaches, watermelons, plums, kiwis, mangoes, and pears. The pears are more expensive than the kiwis. The watermelons are less expensive than the peaches. The mangoes are the third-cheapest. The watermelons are the third-most expensive. The plums are the second-most expensive. The loquats are the second-cheapest.",
+      "question": "Which of the following is true?",
+      "options": [
+        "A) The loquats are the third-cheapest.",
+        "B) The peaches are the third-cheapest.",
+        "C) The watermelons are the third-cheapest.",
+        "D) The plums are the third-cheapest.",
+        "E) The kiwis are the third-cheapest.",
+        "F) The mangoes are the third-cheapest.",
+        "G) The pears are the third-cheapest."
+      ]
+    },
+    {
+      "id": "logical_deduction_231",
+      "predicted": null,
+      "correct": "E",
+      "is_correct": false,
+      "pseudocode": "[SETUP]\nSetSize(7)\nObjects(StationWagon, Sedan, Bus, Motorcycle, Hatchback, Tractor, Minivan)\n\n[BACKGROUND]\nPos(Sedan, 3, \"Time\")\nMore(Tractor, Motorcycle, \"Time\")\nMore(Bus, Motorcycle, \"Time\")\nMore(Bus, Hatchback, \"Time\")\nPos(Minivan, 1, \"Time\")\nPos(StationWagon, 7, \"Time\")\n\n[OPTIONS]\n(A): Pos(StationWagon, 2, \"Time\")\n(B): Pos(Sedan, 2, \"Time\")\n(C): Pos(Bus, 2, \"Time\")\n(D): Pos(Motorcycle, 2, \"Time\")\n(E): Pos(Hatchback, 2, \"Time\")\n(F): Pos(Tractor, 2, \"Time\")\n(G): Pos(Minivan, 2, \"Time\")",
+      "mode": "formal_logic",
+      "error": "'(' was never closed (<string>, line 24)",
+      "context": "The following paragraphs each describe a set of seven objects arranged in a fixed order. The statements are logically consistent within each paragraph.\n\nIn an antique car show, there are seven vehicles: a station wagon, a sedan, a bus, a motorcyle, a hatchback, a tractor, and a minivan. The sedan is the third-oldest. The tractor is newer than the motorcyle. The bus is older than the motorcyle. The bus is newer than the hatchback. The minivan is the newest. The station wagon is the oldest.",
+      "question": "Which of the following is true?",
+      "options": [
+        "A) The station wagon is the second-oldest.",
+        "B) The sedan is the second-oldest.",
+        "C) The bus is the second-oldest.",
+        "D) The motorcyle is the second-oldest.",
+        "E) The hatchback is the second-oldest.",
+        "F) The tractor is the second-oldest.",
+        "G) The minivan is the second-oldest."
+      ]
+    },
+    {
+      "id": "logical_deduction_237",
+      "predicted": "B",
+      "correct": "B",
+      "is_correct": true,
+      "pseudocode": "[SETUP]\nSetSize(7)\nObjects(Red, White, Purple, Black, Gray, Orange, Blue)\n\n[BACKGROUND]\nMore(Red, White, \"right\")\nMore(Gray, Orange, \"left\")\nMore(Gray, Blue, \"right\")\nPos(Red, 2, \"right\")\nPos(Black, 4, \"left\")\nMore(Orange, White, \"left\")\n\n[OPTIONS]\n(A): Pos(Red, 3, \"right\")\n(B): Pos(White, 3, \"right\")\n(C): Pos(Purple, 3, \"right\")\n(D): Pos(Black, 3, \"right\")\n(E): Pos(Gray, 3, \"right\")\n(F): Pos(Orange, 3, \"right\")\n(G): Pos(Blue, 3, \"right\")",
+      "mode": "formal_logic",
+      "error": null,
+      "context": "The following paragraphs each describe a set of seven objects arranged in a fixed order. The statements are logically consistent within each paragraph.\n\nOn a shelf, there are seven books: a red book, a white book, a purple book, a black book, a gray book, an orange book, and a blue book. The red book is to the right of the white book. The gray book is to the left of the orange book. The gray book is to the right of the blue book. The red book is the second from the right. The black book is the fourth from the left. The orange book is to the left of the white book.",
+      "question": "Which of the following is true?",
+      "options": [
+        "A) The red book is the third from the right.",
+        "B) The white book is the third from the right.",
+        "C) The purple book is the third from the right.",
+        "D) The black book is the third from the right.",
+        "E) The gray book is the third from the right.",
+        "F) The orange book is the third from the right.",
+        "G) The blue book is the third from the right."
+      ]
+    },
+    {
+      "id": "logical_deduction_74",
+      "predicted": "C",
+      "correct": "C",
+      "is_correct": true,
+      "pseudocode": "[SETUP]\nSetSize(5)\nObjects(Ana, Rob, Amy, Dan, Joe)\n\n[BACKGROUND]\nMore(Rob, Dan, \"down\")\nMore(Joe, Ana, \"down\")\nMore(Joe, Amy, \"up\")\nMore(Dan, Amy, \"down\")\n\n[OPTIONS]\n(A): Pos(Ana, 3, \"down\")\n(B): Pos(Rob, 3, \"down\")\n(C): Pos(Amy, 3, \"down\")\n(D): Pos(Dan, 3, \"down\")\n(E): Pos(Joe, 3, \"down\")",
+      "mode": "formal_logic",
+      "error": null,
+      "context": "The following paragraphs each describe a set of five objects arranged in a fixed order. The statements are logically consistent within each paragraph.\n\nIn a golf tournament, there were five golfers: Ana, Rob, Amy, Dan, and Joe. Rob finished below Dan. Joe finished below Ana. Joe finished above Amy. Dan finished below Amy.",
+      "question": "Which of the following is true?",
+      "options": [
+        "A) Ana finished third.",
+        "B) Rob finished third.",
+        "C) Amy finished third.",
+        "D) Dan finished third.",
+        "E) Joe finished third."
+      ]
+    },
+    {
+      "id": "logical_deduction_18",
+      "predicted": "A",
+      "correct": "A",
+      "is_correct": true,
+      "pseudocode": "[SETUP]\nSetSize(5)\nObjects(Hawk, Raven, Robin, Hummingbird, Crow)\n\n[BACKGROUND]\nPos(Robin, 1, \"left\")\nPos(Raven, 2, \"left\")\nPos(Hawk, 2, \"right\")\nPos(Crow, 3, \"left\")\n\n[OPTIONS]\n(A): Pos(Hawk, 2, \"right\")\n(B): Pos(Raven, 2, \"right\")\n(C): Pos(Robin, 2, \"right\")\n(D): Pos(Hummingbird, 2, \"right\")\n(E): Pos(Crow, 2, \"right\")",
+      "mode": "formal_logic",
+      "error": null,
+      "context": "The following paragraphs each describe a set of five objects arranged in a fixed order. The statements are logically consistent within each paragraph.\n\nOn a branch, there are five birds: a hawk, a raven, a robin, a hummingbird, and a crow. The robin is the leftmost. The raven is the second from the left. The hawk is the second from the right. The crow is the third from the left.",
+      "question": "Which of the following is true?",
+      "options": [
+        "A) The hawk is the second from the right.",
+        "B) The raven is the second from the right.",
+        "C) The robin is the second from the right.",
+        "D) The hummingbird is the second from the right.",
+        "E) The crow is the second from the right."
+      ]
+    },
+    {
+      "id": "logical_deduction_279",
+      "predicted": null,
+      "correct": "C",
+      "is_correct": false,
+      "pseudocode": "[SETUP]\nSetSize(5)\nObjects(BlueJay, Cardinal, Quail...)\n\n[BACKGROUND]\nMore(Cardinal, Quail, \"right\")\nMore(Quail, BlueJay, \"right\")\n\n[OPTIONS]\n(A): Pos(BlueJay, 2, \"left\")\n(B): Pos(Cardinal, 2, \"left\")\n(C): Pos(Quail, 2, \"left\")",
+      "mode": "formal_logic",
+      "error": "cannot assign to ellipsis here. Maybe you meant '==' instead of '='? (<string>, line 9)",
+      "context": "The following paragraphs each describe a set of three objects arranged in a fixed order. The statements are logically consistent within each paragraph.\n\nOn a branch, there are three birds: a blue jay, a cardinal, and a quail. The cardinal is to the right of the quail. The quail is to the right of the blue jay.",
+      "question": "Which of the following is true?",
+      "options": [
+        "A) The blue jay is the second from the left.",
+        "B) The cardinal is the second from the left.",
+        "C) The quail is the second from the left."
+      ]
+    },
+    {
+      "id": "logical_deduction_169",
+      "predicted": "UNSAT",
+      "correct": "B",
+      "is_correct": false,
+      "pseudocode": "[SETUP]\nSetSize(7)\nObjects(Joe, Dan, Ana, Mel, Ada, Eve, Amy)\n\n[BACKGROUND]\nMore(Eve, Amy, \"up\")\nPos(Dan, 2, \"up\")\nMore(Ada, Ana, \"down\")\nPos(Ana, 3, \"down\")\nPos(Mel, 1, \"down\")\nPos(Amy, 3, \"down\")\n\n[OPTIONS]\n(A): Pos(Joe, 2, \"up\")\n(B): Pos(Dan, 2, \"up\")\n(C): Pos(Ana, 2, \"up\")\n(D): Pos(Mel, 2, \"up\")\n(E): Pos(Ada, 2, \"up\")\n(F): Pos(Eve, 2, \"up\")\n(G): Pos(Amy, 2, \"up\")",
+      "mode": "formal_logic",
+      "error": null,
+      "context": "The following paragraphs each describe a set of seven objects arranged in a fixed order. The statements are logically consistent within each paragraph.\n\nIn a golf tournament, there were seven golfers: Joe, Dan, Ana, Mel, Ada, Eve, and Amy. Eve finished above Amy. Dan finished second. Ada finished below Ana. Ana finished third-to-last. Mel finished last. Amy finished third.",
+      "question": "Which of the following is true?",
+      "options": [
+        "A) Joe finished second.",
+        "B) Dan finished second.",
+        "C) Ana finished second.",
+        "D) Mel finished second.",
+        "E) Ada finished second.",
+        "F) Eve finished second.",
+        "G) Amy finished second."
+      ]
+    },
+    {
+      "id": "logical_deduction_212",
+      "predicted": "G",
+      "correct": "G",
+      "is_correct": true,
+      "pseudocode": "[SETUP]\nSetSize(7)\nObjects(Oranges, Plums, Loquats, Apples, Kiwis, Cantaloupes, Peaches)\n\n[BACKGROUND]\nMore(Loquats, Kiwis, \"cheap\")\nPos(Plums, 1, \"cheap\")\nPos(Loquats, 4, \"expensive\")\nMore(Peaches, Oranges, \"cheap\")\nMore(Peaches, Kiwis, \"expensive\")\nPos(Apples, 2, \"cheap\")\n\n[OPTIONS]\n(A): Pos(Oranges, 2, \"expensive\")\n(B): Pos(Plums, 2, \"expensive\")\n(C): Pos(Loquats, 2, \"expensive\")\n(D): Pos(Apples, 2, \"expensive\")\n(E): Pos(Kiwis, 2, \"expensive\")\n(F): Pos(Cantaloupes, 2, \"expensive\")\n(G): Pos(Peaches, 2, \"expensive\")",
+      "mode": "formal_logic",
+      "error": null,
+      "context": "The following paragraphs each describe a set of seven objects arranged in a fixed order. The statements are logically consistent within each paragraph.\n\nA fruit stand sells seven fruits: oranges, plums, loquats, apples, kiwis, cantaloupes, and peaches. The loquats are less expensive than the kiwis. The plums are the cheapest. The loquats are the fourth-most expensive. The peaches are less expensive than the oranges. The peaches are more expensive than the kiwis. The apples are the second-cheapest.",
+      "question": "Which of the following is true?",
+      "options": [
+        "A) The oranges are the second-most expensive.",
+        "B) The plums are the second-most expensive.",
+        "C) The loquats are the second-most expensive.",
+        "D) The apples are the second-most expensive.",
+        "E) The kiwis are the second-most expensive.",
+        "F) The cantaloupes are the second-most expensive.",
+        "G) The peaches are the second-most expensive."
+      ]
+    },
+    {
+      "id": "logical_deduction_79",
+      "predicted": "B",
+      "correct": "B",
+      "is_correct": true,
+      "pseudocode": "[SETUP]\nSetSize(5)\nObjects(Cardinal, Hawk, Hummingbird, Raven, Owl)\n\n[BACKGROUND]\nMore(Raven, Hummingbird, \"left\")\nMore(Hawk, Owl, \"left\")\nMore(Cardinal, Hawk, \"left\")\nPos(Raven, 2, \"right\")\n\n[OPTIONS]\n(A): Pos(Cardinal, 2, \"left\")\n(B): Pos(Hawk, 2, \"left\")\n(C): Pos(Hummingbird, 2, \"left\")\n(D): Pos(Raven, 2, \"left\")\n(E): Pos(Owl, 2, \"left\")",
+      "mode": "formal_logic",
+      "error": null,
+      "context": "The following paragraphs each describe a set of five objects arranged in a fixed order. The statements are logically consistent within each paragraph.\n\nOn a branch, there are five birds: a cardinal, a hawk, a hummingbird, a raven, and an owl. The raven is to the left of the hummingbird. The hawk is to the left of the owl. The cardinal is to the left of the hawk. The raven is the second from the right.",
+      "question": "Which of the following is true?",
+      "options": [
+        "A) The cardinal is the second from the left.",
+        "B) The hawk is the second from the left.",
+        "C) The hummingbird is the second from the left.",
+        "D) The raven is the second from the left.",
+        "E) The owl is the second from the left."
+      ]
+    },
+    {
+      "id": "logical_deduction_187",
+      "predicted": "UNSAT",
+      "correct": "A",
+      "is_correct": false,
+      "pseudocode": "[SETUP]\nSetSize(7)\nObjects(Eve, Ana, Amy, Dan, Eli, Rob, Mya)\n\n[BACKGROUND]\nMore(Mya, Eli, \"up\")\nMore(Eve, Rob, \"down\")\nPos(Amy, 2, \"up\")\nMore(Rob, Dan, \"down\")\nPos(Ana, 6, \"down\")\nPos(Dan, 4, \"up\")\n\n[OPTIONS]\n(A): Pos(Eve, 7, \"down\")\n(B): Pos(Ana, 7, \"down\")\n(C): Pos(Amy, 7, \"down\")\n(D): Pos(Dan, 7, \"down\")\n(E): Pos(Eli, 7, \"down\")\n(F): Pos(Rob, 7, \"down\")\n(G): Pos(Mya, 7, \"down\")",
+      "mode": "formal_logic",
+      "error": null,
+      "context": "The following paragraphs each describe a set of seven objects arranged in a fixed order. The statements are logically consistent within each paragraph.\n\nIn a golf tournament, there were seven golfers: Eve, Ana, Amy, Dan, Eli, Rob, and Mya. Mya finished above Eli. Eve finished below Rob. Amy finished second. Rob finished below Dan. Ana finished second-to-last. Dan finished fourth.",
+      "question": "Which of the following is true?",
+      "options": [
+        "A) Eve finished last.",
+        "B) Ana finished last.",
+        "C) Amy finished last.",
+        "D) Dan finished last.",
+        "E) Eli finished last.",
+        "F) Rob finished last.",
+        "G) Mya finished last."
+      ]
+    },
+    {
+      "id": "logical_deduction_105",
+      "predicted": "C",
+      "correct": "C",
+      "is_correct": true,
+      "pseudocode": "[SETUP]\nSetSize(7)\nObjects(StationWagon, Truck, Sedan, Limousine, Convertible, Bus, Hatchback)\n\n[BACKGROUND]\nPos(Limousine, 1, \"after\")       (Newest = 1st from the end/after)\nPos(Bus, 3, \"after\")             (3rd newest)\nMore(Bus, Convertible, \"before\") (Bus older than Convertible)\nPos(Sedan, 3, \"before\")          (3rd oldest)\nMore(StationWagon, Truck, \"before\") (Station Wagon older than Truck)\nPos(Hatchback, 1, \"before\")      (Oldest = 1st from the beginning/before)\n\n[OPTIONS]\n(A): Pos(StationWagon, 3, \"before\")\n(B): Pos(Truck, 3, \"before\")\n(C): Pos(Sedan, 3, \"before\")\n(D): Pos(Limousine, 3, \"before\")\n(E): Pos(Convertible, 3, \"before\")\n(F): Pos(Bus, 3, \"before\")\n(G): Pos(Hatchback, 3, \"before\")",
+      "mode": "formal_logic",
+      "error": null,
+      "context": "The following paragraphs each describe a set of seven objects arranged in a fixed order. The statements are logically consistent within each paragraph.\n\nIn an antique car show, there are seven vehicles: a station wagon, a truck, a sedan, a limousine, a convertible, a bus, and a hatchback. The limousine is the newest. The bus is the third-newest. The bus is older than the convertible. The sedan is the third-oldest. The station wagon is older than the truck. The hatchback is the oldest.",
+      "question": "Which of the following is true?",
+      "options": [
+        "A) The station wagon is the third-oldest.",
+        "B) The truck is the third-oldest.",
+        "C) The sedan is the third-oldest.",
+        "D) The limousine is the third-oldest.",
+        "E) The convertible is the third-oldest.",
+        "F) The bus is the third-oldest.",
+        "G) The hatchback is the third-oldest."
+      ]
+    }
+  ]
+}

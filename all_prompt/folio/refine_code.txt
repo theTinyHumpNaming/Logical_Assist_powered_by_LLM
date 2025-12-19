@@ -1,0 +1,104 @@
+The script you provided has encountered an error:
+{info_text}
+
+**Common error patterns and how to fix them:**
+
+**ERROR TYPE 1: Variable not defined**
+Pattern: "name 'X' is not defined"
+Fix: Define ALL variables at the top BEFORE using them
+- Scan the ENTIRE context and question first
+- List ALL predicates you'll need
+- Define ALL boolean variables before adding any constraints
+
+Example of WRONG code:
+```python
+solver.add(Implies(rock_is_rabbit, rock_is_cute))  # ❌ rock_is_cute not defined yet!
+```
+
+Example of CORRECT code:
+```python
+# Define ALL variables first
+rock_is_rabbit = Bool("rock_is_rabbit")
+rock_is_cute = Bool("rock_is_cute")  # ✅ Now defined!
+# Then add constraints
+solver.add(Implies(rock_is_rabbit, rock_is_cute))
+```
+
+**ERROR TYPE 2: Query added to base constraints**
+Pattern: Wrong answer (predicted A but correct is C, or predicted C but correct is A/B)
+Fix: NEVER add the query statement to the base solver before testing!
+- Only add context rules to base solver
+- Test query using push/pop
+
+Example of WRONG code:
+```python
+solver = Solver()
+solver.add(Implies(economic_hardship, provides_aid))
+solver.add(Not(provides_aid))  # ❌ Adding query negation before testing!
+# Now test...
+```
+
+Example of CORRECT code:
+```python
+solver = Solver()
+# Add ONLY context constraints
+solver.add(Implies(economic_hardship, provides_aid))
+
+# Test query using push/pop
+solver.push()
+solver.add(provides_aid)  # ✅ Test if aid can be true
+can_be_true = (solver.check() == sat)
+solver.pop()
+
+solver.push()
+solver.add(Not(provides_aid))  # ✅ Test if aid can be false
+can_be_false = (solver.check() == sat)
+solver.pop()
+```
+
+**ERROR TYPE 3: Z3 internal errors (index out of bounds / unreachable)**
+Pattern: "index out of bounds" / "unreachable" / Z3 crashes
+Fix: Simplify your constraints
+- Avoid deeply nested logical expressions
+- Break complex constraints into multiple simpler ones
+- Don't create redundant or circular constraints (e.g., Implies(X, X))
+- For "All X are Y", use simple: Implies(is_X, is_Y)
+- For "Some X exist", just note it (no constraint needed)
+
+Example of WRONG code:
+```python
+solver.add(Implies(rock_is_monkey, rock_is_monkey))  # ❌ Redundant, useless!
+```
+
+**ERROR TYPE 4: Missing contradiction detection**
+Pattern: Should detect logical impossibility but doesn't
+Fix: Check if assumptions lead to contradictions
+- If adding a statement makes solver UNSAT, that statement is impossible
+
+Example:
+```python
+# Test: Can X be true?
+solver.push()
+solver.add(X)
+can_be_true = (solver.check() == sat)
+solver.pop()
+
+if not can_be_true:
+    # X leads to contradiction, so "NOT X" must be True!
+    print("A")  # If question asks "NOT X"
+```
+
+Please carefully review your code for these patterns and fix the error:
+========================================
+Now solve:
+========================================
+
+[Context]:
+{context}
+
+[Question]:
+{question}
+
+[Options]:
+{options_text}
+

@@ -1,0 +1,63 @@
+=== 评测日志开始于 2025-12-18 23:22:17 ===
+[23:22:20] 语义检查功能已启用
+[23:22:28] 正在加载数据集: D:/学习资料/课程/程序设计大作业/EnhancingLLM/EnhancingLLM/data/ProofWriter_test.json
+[23:22:28] 共 50 道题目，使用 4 个 workers 并行处理
+[23:22:28] [Worker] 开始处理: ProofWriter_AttNoneg-OWA-D5-178_Q18 (mode=direct, semantic_check=True, refinement_code=True)
+[23:22:28] [Worker] 开始处理: ProofWriter_AttNoneg-OWA-D5-20_Q10 (mode=direct, semantic_check=True, refinement_code=True)
+[23:22:28] [Worker] 开始处理: ProofWriter_AttNeg-OWA-D5-1015_Q3 (mode=direct, semantic_check=True, refinement_code=True)
+[23:22:28] [Worker] 开始处理: ProofWriter_AttNeg-OWA-D5-489_Q2 (mode=direct, semantic_check=True, refinement_code=True)
+[23:22:36]   [ProofWriter_AttNeg-OWA-D5-489_Q2] semantic check module检查得到语义错误
+[23:22:36]   [ProofWriter_AttNeg-OWA-D5-489_Q2] 第2次尝试重新生成...
+[23:22:37]   [ProofWriter_AttNoneg-OWA-D5-20_Q10] semantic check module检查得到语义错误
+[23:22:37]   [ProofWriter_AttNoneg-OWA-D5-20_Q10] 第2次尝试重新生成...
+[23:22:39]   [ProofWriter_AttNoneg-OWA-D5-178_Q18] semantic check module检查得到语义错误
+[23:22:39]   [ProofWriter_AttNoneg-OWA-D5-178_Q18] 第2次尝试重新生成...
+[23:22:45]   [ProofWriter_AttNeg-OWA-D5-489_Q2] semantic check module检查得到语义错误
+[23:22:45]   [ProofWriter_AttNeg-OWA-D5-489_Q2] 第3次尝试重新生成...
+[23:22:46]   [ProofWriter_AttNoneg-OWA-D5-178_Q18] semantic check module检查得到语义错误
+[23:22:46]   [ProofWriter_AttNoneg-OWA-D5-178_Q18] 第3次尝试重新生成...
+[23:22:46] 正在停止评测，终止所有任务...
+[23:22:46] 正在终止所有任务...
+[23:22:46] ==================================================
+[23:22:46] 评测已停止!
+[23:22:46] 已完成: 0, 正确: 0, 错误: 0, 异常: 0
+[23:22:46] 准确率: 0.00%
+[23:22:46] ==================================================
+[23:22:47] 语义检查功能已关闭
+[23:22:48] 代码修复功能已关闭
+[23:22:49] 正在加载数据集: D:/学习资料/课程/程序设计大作业/EnhancingLLM/EnhancingLLM/data/ProofWriter_test.json
+[23:22:49] 共 50 道题目，使用 4 个 workers 并行处理
+[23:22:49] [Worker] 开始处理: ProofWriter_AttNeg-OWA-D5-1015_Q3 (mode=direct, semantic_check=False, refinement_code=False)
+[23:22:49] [Worker] 开始处理: ProofWriter_AttNeg-OWA-D5-489_Q2 (mode=direct, semantic_check=False, refinement_code=False)
+[23:22:49] [Worker] 开始处理: ProofWriter_AttNoneg-OWA-D5-178_Q18 (mode=direct, semantic_check=False, refinement_code=False)
+[23:22:49] [Worker] 开始处理: ProofWriter_AttNoneg-OWA-D5-20_Q10 (mode=direct, semantic_check=False, refinement_code=False)
+[23:22:52]   [ProofWriter_AttNeg-OWA-D5-489_Q2] semantic check module检查得到语义错误
+[23:22:52]   [ProofWriter_AttNeg-OWA-D5-489_Q2] 第4次尝试重新生成...
+[23:22:55]   [ProofWriter_AttNoneg-OWA-D5-20_Q10] code执行错误: Z3 internal error (known bug): invalid syntax. Perhaps you forgot a comma? (<string>, line 36)
+[23:22:55]   [ProofWriter_AttNoneg-OWA-D5-20_Q10] ⚠ 异常: 代码执行错误（代码修复功能已关闭）: Z3 internal error (known bug): invalid syntax. Perhaps you forgot a comma? (<string>, line 36)
+[23:22:55] [Worker] 开始处理: ProofWriter_AttNoneg-OWA-D5-613_Q12 (mode=direct, semantic_check=False, refinement_code=False)
+[23:22:55]   [ProofWriter_AttNoneg-OWA-D5-178_Q18] code执行错误: Z3 internal error (known bug): invalid syntax. Perhaps you forgot a comma? (<string>, line 30)
+[23:22:55]   [ProofWriter_AttNoneg-OWA-D5-178_Q18] ⚠ 异常: 代码执行错误（代码修复功能已关闭）: Z3 internal error (known bug): invalid syntax. Perhaps you forgot a comma? (<string>, line 30)
+[23:22:55] [Worker] 开始处理: ProofWriter_RelNeg-OWA-D5-249_Q9 (mode=direct, semantic_check=False, refinement_code=False)
+[23:22:56]   [ProofWriter_AttNoneg-OWA-D5-178_Q18] semantic check module检查得到语义错误
+[23:22:56]   [ProofWriter_AttNoneg-OWA-D5-178_Q18] 第4次尝试重新生成...
+[23:22:57]   [ProofWriter_AttNeg-OWA-D5-1015_Q3] code执行错误: Z3 internal error (known bug): invalid syntax. Perhaps you forgot a comma? (<string>, line 29)
+[23:22:57]   [ProofWriter_AttNeg-OWA-D5-1015_Q3] ⚠ 异常: 代码执行错误（代码修复功能已关闭）: Z3 internal error (known bug): invalid syntax. Perhaps you forgot a comma? (<string>, line 29)
+[23:22:57] [Worker] 开始处理: ProofWriter_AttNeg-OWA-D5-1170_Q10 (mode=direct, semantic_check=False, refinement_code=False)
+[23:23:00]   [ProofWriter_AttNoneg-OWA-D5-613_Q12] code执行错误: Z3 internal error (known bug): invalid syntax. Perhaps you forgot a comma? (<string>, line 33)
+[23:23:00]   [ProofWriter_AttNoneg-OWA-D5-613_Q12] ⚠ 异常: 代码执行错误（代码修复功能已关闭）: Z3 internal error (known bug): invalid syntax. Perhaps you forgot a comma? (<string>, line 33)
+[23:23:00] [Worker] 开始处理: ProofWriter_AttNoneg-OWA-D5-308_Q8 (mode=direct, semantic_check=False, refinement_code=False)
+[23:23:02]   [ProofWriter_AttNeg-OWA-D5-489_Q2] semantic check module检查得到语义错误
+[23:23:02]   [ProofWriter_AttNeg-OWA-D5-489_Q2] 第5次尝试重新生成...
+[23:23:02]   [ProofWriter_RelNeg-OWA-D5-249_Q9] code执行错误: Z3 internal error (known bug): invalid syntax. Perhaps you forgot a comma? (<string>, line 31)
+[23:23:02]   [ProofWriter_RelNeg-OWA-D5-249_Q9] ⚠ 异常: 代码执行错误（代码修复功能已关闭）: Z3 internal error (known bug): invalid syntax. Perhaps you forgot a comma? (<string>, line 31)
+[23:23:02] [Worker] 开始处理: ProofWriter_RelNoneg-OWA-D5-789_Q21 (mode=direct, semantic_check=False, refinement_code=False)
+[23:23:03]   [ProofWriter_AttNoneg-OWA-D5-178_Q18] semantic check module检查得到语义错误
+[23:23:03]   [ProofWriter_AttNoneg-OWA-D5-178_Q18] 第5次尝试重新生成...
+[23:23:04]   [ProofWriter_AttNeg-OWA-D5-1170_Q10] code执行错误: Z3 internal error (known bug): invalid syntax. Perhaps you forgot a comma? (<string>, line 28)
+[23:23:04]   [ProofWriter_AttNeg-OWA-D5-1170_Q10] ⚠ 异常: 代码执行错误（代码修复功能已关闭）: Z3 internal error (known bug): invalid syntax. Perhaps you forgot a comma? (<string>, line 28)
+[23:23:04] [Worker] 开始处理: ProofWriter_RelNoneg-OWA-D5-502_Q3 (mode=direct, semantic_check=False, refinement_code=False)
+[23:23:07]   [ProofWriter_AttNoneg-OWA-D5-308_Q8] code执行错误: Z3 internal error (known bug): invalid syntax. Perhaps you forgot a comma? (<string>, line 28)
+[23:23:07]   [ProofWriter_AttNoneg-OWA-D5-308_Q8] ⚠ 异常: 代码执行错误（代码修复功能已关闭）: Z3 internal error (known bug): invalid syntax. Perhaps you forgot a comma? (<string>, line 28)
+[23:23:07] [Worker] 开始处理: ProofWriter_AttNeg-OWA-D5-891_Q1 (mode=direct, semantic_check=False, refinement_code=False)
+=== 评测日志结束于 2025-12-18 23:23:09 ===

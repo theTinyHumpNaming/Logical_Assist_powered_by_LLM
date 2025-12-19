@@ -1,0 +1,322 @@
+## Code Template
+```python
+from z3 import *
+
+# Define variables for all entities (1..N in the chosen order)
+# ...
+solver = Solver()
+
+# Domain and distinctness
+# solver.add(v >= 1, v <= N) for each variable
+# solver.add(Distinct(all_vars))
+
+# Problem constraints from the text
+# ...
+
+if solver.check() == sat:
+    m = solver.model()
+    # Evaluate positions for every entity
+    # Options to check (print only the matching letter):
+    # Example: if <Entity> == <position>: print("A")
+else:
+    print("Error: Unsatisfiable")
+```
+
+## CRITICAL POSITION MAPPING RULES
+
+### Rule 1: "kth-oldest" / "kth-cheapest" / "kth from the left" → USE k DIRECTLY
+- "second-oldest" → 2 (NOT N-1, NOT N+1-2!)
+- "third-oldest" → 3 (NOT N+1-3!)
+- "third-cheapest" → 3
+- "second from the left" → 2
+
+### Rule 2: "kth-newest" / "kth-most expensive" / "kth from the right" → USE N+1-k
+- "second-newest" → N+1-2 (when N=7, this is 6)
+- "third-most expensive" → N+1-3 (when N=7, this is 5)
+- "second from the right" → N+1-2 (when N=5, this is 4)
+- WARNING: Do NOT use N-k! Always use N+1-k!
+
+### Rule 3: Comparison operators
+- "A finished below B" (golf) → A > B (A has worse/bigger rank number)
+- "A finished above B" (golf) → A < B (A has better/smaller rank number)
+- "A is older than B" → A < B (smaller number = older)
+- "A is newer than B" → A > B (bigger number = newer)
+- "A is more expensive than B" → A > B (bigger number = more expensive)
+- "A is less expensive than B" → A < B (smaller number = cheaper)
+
+## Example 1 (N=5, left/right positions)
+Problem: On a branch, there are five birds: a quail, an owl, a raven, a falcon, and a robin. The owl is the leftmost. The robin is to the left of the raven. The quail is the rightmost. The raven is the third from the left. The falcon is the second from the right.
+Question: Which is the second from the right?
+Options: A) quail B) owl C) raven D) falcon E) robin
+
+```python
+from z3 import *
+
+# N = 5, Mapping: 1 = leftmost, 5 = rightmost
+Quail, Owl, Raven, Falcon, Robin = Ints('Quail Owl Raven Falcon Robin')
+birds = [Quail, Owl, Raven, Falcon, Robin]
+
+solver = Solver()
+for b in birds:
+    solver.add(b >= 1, b <= 5)
+solver.add(Distinct(birds))
+
+# "The owl is the leftmost" → position 1
+solver.add(Owl == 1)
+
+# "The robin is to the left of the raven" → Robin < Raven
+solver.add(Robin < Raven)
+
+# "The quail is the rightmost" → position N = 5
+solver.add(Quail == 5)
+
+# "The raven is the third from the left" → position 3 (use k directly)
+solver.add(Raven == 3)
+
+# "The falcon is the second from the right" → N+1-2 = 5+1-2 = 4 (NOT N-2=3!)
+solver.add(Falcon == 4)
+
+if solver.check() == sat:
+    m = solver.model()
+    quail_pos = m.eval(Quail).as_long()
+    owl_pos = m.eval(Owl).as_long()
+    raven_pos = m.eval(Raven).as_long()
+    falcon_pos = m.eval(Falcon).as_long()
+    robin_pos = m.eval(Robin).as_long()
+    
+    # "second from the right" when N=5 → position N+1-2 = 4
+    if quail_pos == 4: print("A")
+    elif owl_pos == 4: print("B")
+    elif raven_pos == 4: print("C")
+    elif falcon_pos == 4: print("D")
+    elif robin_pos == 4: print("E")
+else:
+    print("Error: Unsatisfiable")
+```
+
+## Example 2 (N=7, cheap/expensive - IMPORTANT PATTERN)
+Problem: A fruit stand sells seven fruits: kiwis, plums, mangoes, watermelons, pears, peaches, and oranges. The pears are the third-cheapest. The kiwis are the second-most expensive. The mangoes are the third-most expensive. The peaches are the second-cheapest.
+Question: Which is the cheapest?
+Options: A) kiwis B) plums C) mangoes D) watermelons E) pears F) peaches G) oranges
+
+```python
+from z3 import *
+
+# N = 7, Mapping: 1 = cheapest, 7 = most expensive
+Kiwis, Plums, Mangoes, Watermelons, Pears, Peaches, Oranges = Ints('Kiwis Plums Mangoes Watermelons Pears Peaches Oranges')
+fruits = [Kiwis, Plums, Mangoes, Watermelons, Pears, Peaches, Oranges]
+
+solver = Solver()
+for f in fruits:
+    solver.add(f >= 1, f <= 7)
+solver.add(Distinct(fruits))
+
+# "third-cheapest" → position 3 (use k directly for kth-cheapest)
+solver.add(Pears == 3)
+
+# "second-most expensive" → N+1-2 = 7+1-2 = 6 (use N+1-k for kth-most expensive)
+solver.add(Kiwis == 6)
+
+# "third-most expensive" → N+1-3 = 7+1-3 = 5 (NOT position 3!)
+solver.add(Mangoes == 5)
+
+# "second-cheapest" → position 2 (use k directly for kth-cheapest)
+solver.add(Peaches == 2)
+
+if solver.check() == sat:
+    m = solver.model()
+    kiwis_pos = m.eval(Kiwis).as_long()
+    plums_pos = m.eval(Plums).as_long()
+    mangoes_pos = m.eval(Mangoes).as_long()
+    watermelons_pos = m.eval(Watermelons).as_long()
+    pears_pos = m.eval(Pears).as_long()
+    peaches_pos = m.eval(Peaches).as_long()
+    oranges_pos = m.eval(Oranges).as_long()
+    
+    # "cheapest" → position 1
+    if kiwis_pos == 1: print("A")
+    elif plums_pos == 1: print("B")
+    elif mangoes_pos == 1: print("C")
+    elif watermelons_pos == 1: print("D")
+    elif pears_pos == 1: print("E")
+    elif peaches_pos == 1: print("F")
+    elif oranges_pos == 1: print("G")
+else:
+    print("Error: Unsatisfiable")
+```
+
+## Example 3 (Golf tournament - CRITICAL: above/below comparison)
+Problem: In a golf tournament, there were five golfers: Dan, Amy, Eve, Ana, and Mya. Dan finished above Eve. Dan finished below Mya. Amy finished third. Ana finished second-to-last.
+Question: Who finished last?
+Options: A) Dan B) Amy C) Eve D) Ana E) Mya
+
+```python
+from z3 import *
+
+# N = 5, Mapping: 1 = first place (best), 5 = last place (worst)
+Dan, Amy, Eve, Ana, Mya = Ints('Dan Amy Eve Ana Mya')
+golfers = [Dan, Amy, Eve, Ana, Mya]
+
+solver = Solver()
+for g in golfers:
+    solver.add(g >= 1, g <= 5)
+solver.add(Distinct(golfers))
+
+# "Dan finished above Eve" → above = better rank = smaller number → Dan < Eve
+solver.add(Dan < Eve)
+
+# "Dan finished below Mya" → below = worse rank = bigger number → Dan > Mya
+solver.add(Dan > Mya)
+
+# "Amy finished third" → position 3
+solver.add(Amy == 3)
+
+# "Ana finished second-to-last" → position N-1 = 5-1 = 4 (second from last)
+solver.add(Ana == 4)
+
+if solver.check() == sat:
+    m = solver.model()
+    dan_pos = m.eval(Dan).as_long()
+    amy_pos = m.eval(Amy).as_long()
+    eve_pos = m.eval(Eve).as_long()
+    ana_pos = m.eval(Ana).as_long()
+    mya_pos = m.eval(Mya).as_long()
+    
+    # "last" → position N = 5
+    if dan_pos == 5: print("A")
+    elif amy_pos == 5: print("B")
+    elif eve_pos == 5: print("C")
+    elif ana_pos == 5: print("D")
+    elif mya_pos == 5: print("E")
+else:
+    print("Error: Unsatisfiable")
+```
+
+## Example 4 (N=7, old/new - CRITICAL: kth-oldest vs kth-newest)
+Problem: In an antique car show, there are seven vehicles: a truck, a hatchback, a minivan, a bus, a tractor, a station wagon, and a convertible. The station wagon is the fourth-newest. The minivan is the third-newest. The tractor is the second-oldest. The convertible is older than the station wagon. The truck is newer than the bus. The hatchback is older than the convertible.
+Question: Which is the oldest?
+Options: A) truck B) hatchback C) minivan D) bus E) tractor F) station wagon G) convertible
+
+```python
+from z3 import *
+
+# N = 7, Mapping: 1 = oldest, 7 = newest
+Truck, Hatchback, Minivan, Bus, Tractor, StationWagon, Convertible = Ints('Truck Hatchback Minivan Bus Tractor StationWagon Convertible')
+vehicles = [Truck, Hatchback, Minivan, Bus, Tractor, StationWagon, Convertible]
+
+solver = Solver()
+for v in vehicles:
+    solver.add(v >= 1, v <= 7)
+solver.add(Distinct(vehicles))
+
+# "fourth-newest" → N+1-4 = 7+1-4 = 4 (use N+1-k for kth-newest)
+solver.add(StationWagon == 4)
+
+# "third-newest" → N+1-3 = 7+1-3 = 5 (use N+1-k for kth-newest)
+solver.add(Minivan == 5)
+
+# "second-oldest" → position 2 (use k directly for kth-oldest, NOT N+1-2!)
+solver.add(Tractor == 2)
+
+# "older than" → smaller position (1 = oldest)
+solver.add(Convertible < StationWagon)
+
+# "newer than" → bigger position (7 = newest)
+solver.add(Truck > Bus)
+
+# "older than" → smaller position
+solver.add(Hatchback < Convertible)
+
+if solver.check() == sat:
+    m = solver.model()
+    truck_pos = m.eval(Truck).as_long()
+    hatchback_pos = m.eval(Hatchback).as_long()
+    minivan_pos = m.eval(Minivan).as_long()
+    bus_pos = m.eval(Bus).as_long()
+    tractor_pos = m.eval(Tractor).as_long()
+    stationwagon_pos = m.eval(StationWagon).as_long()
+    convertible_pos = m.eval(Convertible).as_long()
+    
+    # "oldest" → position 1
+    if truck_pos == 1: print("A")
+    elif hatchback_pos == 1: print("B")
+    elif minivan_pos == 1: print("C")
+    elif bus_pos == 1: print("D")
+    elif tractor_pos == 1: print("E")
+    elif stationwagon_pos == 1: print("F")
+    elif convertible_pos == 1: print("G")
+else:
+    print("Error: Unsatisfiable")
+```
+
+## Example 5 (Golf - VERIFY above/below directions)
+Problem: In a golf tournament, there were five golfers: Rob, Eve, Eli, Amy, and Dan. Dan finished second. Amy finished below Eve. Dan finished above Eve. Amy finished above Eli.
+Question: Who finished third?
+Options: A) Rob B) Eve C) Eli D) Amy E) Dan
+
+```python
+from z3 import *
+
+# N = 5, Mapping: 1 = first place (best), 5 = last place (worst)
+Rob, Eve, Eli, Amy, Dan = Ints('Rob Eve Eli Amy Dan')
+golfers = [Rob, Eve, Eli, Amy, Dan]
+
+solver = Solver()
+for g in golfers:
+    solver.add(g >= 1, g <= 5)
+solver.add(Distinct(golfers))
+
+# "Dan finished second" → position 2
+solver.add(Dan == 2)
+
+# "Amy finished below Eve" → below = worse rank = bigger number → Amy > Eve
+# CRITICAL: below means WORSE rank, so Amy has BIGGER position number
+solver.add(Amy > Eve)
+
+# "Dan finished above Eve" → above = better rank = smaller number → Dan < Eve
+solver.add(Dan < Eve)
+
+# "Amy finished above Eli" → above = better rank = smaller number → Amy < Eli
+solver.add(Amy < Eli)
+
+if solver.check() == sat:
+    m = solver.model()
+    rob_pos = m.eval(Rob).as_long()
+    eve_pos = m.eval(Eve).as_long()
+    eli_pos = m.eval(Eli).as_long()
+    amy_pos = m.eval(Amy).as_long()
+    dan_pos = m.eval(Dan).as_long()
+    
+    # "third" → position 3
+    if rob_pos == 3: print("A")
+    elif eve_pos == 3: print("B")
+    elif eli_pos == 3: print("C")
+    elif amy_pos == 3: print("D")
+    elif dan_pos == 3: print("E")
+else:
+    print("Error: Unsatisfiable")
+```
+
+## QUICK REFERENCE CHEAT SHEET
+
+| Expression | Formula | Example (N=7) |
+|------------|---------|---------------|
+| kth from left/first | k | 3rd from left → 3 |
+| kth from right/last | N+1-k | 3rd from right → 5 |
+| kth-oldest/cheapest | k | 2nd-oldest → 2 |
+| kth-newest/most expensive | N+1-k | 2nd-newest → 6 |
+| second-to-last | N-1 | → 6 |
+| A above B (golf) | A < B | better rank = smaller |
+| A below B (golf) | A > B | worse rank = bigger |
+| A older than B | A < B | older = smaller |
+| A newer than B | A > B | newer = bigger |
+| A more expensive than B | A > B | more expensive = bigger |
+| A less expensive than B | A < B | less expensive = smaller |
+
+>>>>>>>>>>>>>>>>>>>>>>>>>>>>
+[Problem]:
+{problem_text}
+[Question]:
+{question_text}
+[Options]:
+{options_text}

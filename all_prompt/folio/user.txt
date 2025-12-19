@@ -1,0 +1,155 @@
+Task Description: You are given a first-order logic reasoning problem with:
+1) A set of logical rules and facts (context)
+2) A query statement to evaluate
+3) Three possible answers: True, False, or Uncertain
+
+Your task:
+1) Define boolean variables for all relevant propositions/predicates
+2) Create a Z3 solver
+3) Add ONLY the rules from the context as constraints (NOT the query!)
+4) Check if the query statement must be True (always satisfies constraints)
+5) Check if the query statement must be False (never satisfies constraints)  
+6) If neither, the answer is Uncertain
+7) Return the corresponding letter: A for True, B for False, C for Uncertain
+
+**CRITICAL BEST PRACTICES:**
+- **Always define ALL variables BEFORE using them** - Scan the entire context/question first, list all predicates, then define all variables!
+- **NEVER add the query statement as a constraint before testing** - Only add context rules to the base solver
+- **Keep constraints SIMPLE** - Avoid complex nested expressions that may cause Z3 errors
+- **Use descriptive variable names** - Name variables after specific entities/predicates (e.g., "spot_is_dog", not "x1")
+- **Handle "All" statements** - Use Implies(condition, result) for universal statements
+- **Handle "Some" statements** - Just note the possibility; don't add restrictive constraints
+- **Avoid redundant constraints** - Don't repeat the same constraint in different forms (e.g., Implies(X, X) is useless)
+- **Check for contradictions** - If base constraints are UNSAT, there's a logical contradiction in the problem
+- **Test both directions carefully** - Use push/pop to test query without affecting base constraints
+
+**Example 1: Basic reasoning with uncertainty**
+Context:
+All dogs are animals. Spot is a dog. Some animals are fast.
+Question:
+Is the following statement True, False, or Uncertain? Spot is fast.
+Options:
+A) True
+B) False
+C) Uncertain
+
+```python
+from z3 import *
+
+# Step 1: Scan context and question, list ALL predicates needed
+# Predicates: spot_is_dog, spot_is_animal, spot_is_fast
+# Now define ALL boolean variables BEFORE using them
+spot_is_dog = Bool("spot_is_dog")
+spot_is_animal = Bool("spot_is_animal")
+spot_is_fast = Bool("spot_is_fast")
+
+# Step 2: Create solver
+solver = Solver()
+
+# Step 3: Encode ONLY context constraints (NOT the query!)
+# Rule 1: All dogs are animals
+solver.add(Implies(spot_is_dog, spot_is_animal))
+
+# Rule 2: Spot is a dog (fact)
+solver.add(spot_is_dog)
+
+# Rule 3: Some animals are fast (this means it's POSSIBLE, not required)
+# We don't add a constraint for "some" - it just means both fast and not-fast are possible
+
+# Step 4: Check for contradictions in base constraints
+if solver.check() == unsat:
+    print("Error: Base constraints are contradictory")
+    exit()
+
+# Step 5: Test the query "Spot is fast" - Do NOT add it to base solver!
+# Test 1: Can Spot be fast? (query is true)
+solver.push()
+solver.add(spot_is_fast)
+can_be_true = (solver.check() == sat)
+solver.pop()
+
+# Test 2: Can Spot NOT be fast? (query is false)
+solver.push()
+solver.add(Not(spot_is_fast))
+can_be_false = (solver.check() == sat)
+solver.pop()
+
+# Step 6: Determine answer based on both tests
+if can_be_true and can_be_false:
+    print("C")  # Uncertain - both are possible
+elif can_be_true and not can_be_false:
+    print("A")  # True - must be fast
+else:
+    print("B")  # False - cannot be fast
+```
+
+**Example 2: Detecting contradictions (IMPORTANT!)**
+Context:
+No digital media are analog. Every printed text is analog. All streaming services are digital. If an object is a hardcover book then it is printed text. If 1984 is a streaming service, then 1984 is a hardcover book.
+Question:
+Is the following statement True, False, or Uncertain? 1984 is not a streaming service.
+Options:
+A) True
+B) False
+C) Uncertain
+
+```python
+from z3 import *
+
+# Step 1: Define ALL variables for entity "1984" and its properties
+is_1984_digital = Bool("is_1984_digital")
+is_1984_analog = Bool("is_1984_analog")
+is_1984_streaming = Bool("is_1984_streaming")
+is_1984_hardcover = Bool("is_1984_hardcover")
+is_1984_printed = Bool("is_1984_printed")
+
+# Step 2: Create solver
+solver = Solver()
+
+# Step 3: Encode context rules (this will create a contradiction!)
+# Rule 1: No digital media are analog
+solver.add(Implies(is_1984_digital, Not(is_1984_analog)))
+
+# Rule 2: Every printed text is analog
+solver.add(Implies(is_1984_printed, is_1984_analog))
+
+# Rule 3: All streaming services are digital
+solver.add(Implies(is_1984_streaming, is_1984_digital))
+
+# Rule 4: If hardcover book then printed text
+solver.add(Implies(is_1984_hardcover, is_1984_printed))
+
+# Rule 5: If 1984 is streaming service, then it's hardcover book
+solver.add(Implies(is_1984_streaming, is_1984_hardcover))
+
+# Step 4: Test query "1984 is NOT a streaming service"
+# First test: Can 1984 be a streaming service?
+solver.push()
+solver.add(is_1984_streaming)
+can_be_streaming = (solver.check() == sat)
+solver.pop()
+
+# If 1984 CANNOT be a streaming service (contradiction), then "NOT streaming" is True
+if not can_be_streaming:
+    print("A")  # True - 1984 cannot be a streaming service due to contradiction
+else:
+    # Test: Can 1984 NOT be a streaming service?
+    solver.push()
+    solver.add(Not(is_1984_streaming))
+    can_be_not_streaming = (solver.check() == sat)
+    solver.pop()
+    
+    if can_be_streaming and can_be_not_streaming:
+        print("C")  # Uncertain
+    elif can_be_not_streaming and not can_be_streaming:
+        print("A")  # True
+    else:
+        print("B")  # False
+```
+>>>>>>>>>>>>>>>>>>>>>>>>>>>>
+[Context]:
+{context}
+[Question]:
+{question}
+[Options]:
+{options_text}

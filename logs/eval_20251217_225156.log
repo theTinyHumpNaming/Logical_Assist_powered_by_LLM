@@ -1,0 +1,295 @@
+=== 评测日志开始于 2025-12-17 22:51:56 ===
+[22:51:59] 语义检查功能已启用
+[22:52:00] 语义检查功能已关闭
+[22:52:10] 正在加载数据集: D:/学习资料/课程/程序设计大作业/EnhancingLLM/EnhancingLLM/data/LogicalDeduction_test.json
+[22:52:10] 共 50 道题目，使用 4 个 workers 并行处理
+[22:52:10] [Worker] 开始处理: logical_deduction_32 (mode=direct, semantic_check=False)
+[22:52:10] [Worker] 开始处理: logical_deduction_27 (mode=direct, semantic_check=False)
+[22:52:10] [Worker] 开始处理: logical_deduction_26 (mode=direct, semantic_check=False)
+[22:52:10] [Worker] 开始处理: logical_deduction_166 (mode=direct, semantic_check=False)
+[22:52:17]   [logical_deduction_26] code执行错误: Value cannot be converted into a Z3 Boolean value
+[22:52:17]   [logical_deduction_26] 第2次尝试重新生成...
+[22:52:17]   [logical_deduction_32] code执行错误: '_io.TextIOWrapper' object has no attribute 'getvalue'
+[22:52:17]   [logical_deduction_32] 第2次尝试重新生成...
+[22:52:17]   [logical_deduction_27] ✓ 正确! 预测=C, 答案=C
+[22:52:17] [Worker] 开始处理: logical_deduction_179 (mode=direct, semantic_check=False)
+[22:52:18]   [logical_deduction_166] ✓ 正确! 预测=C, 答案=C
+[22:52:18] [Worker] 开始处理: logical_deduction_223 (mode=direct, semantic_check=False)
+[22:52:22]   [logical_deduction_179] ✗ 错误! 预测=ERROR: UNSATISFIABLE, 答案=F
+[22:52:22] [Worker] 开始处理: logical_deduction_254 (mode=direct, semantic_check=False)
+[22:52:24]   [logical_deduction_32] ✗ 错误! 预测=C, 答案=B
+[22:52:24] [Worker] 开始处理: logical_deduction_131 (mode=direct, semantic_check=False)
+[22:52:24]   [logical_deduction_26] ✓ 正确! 预测=C, 答案=C
+[22:52:24] [Worker] 开始处理: logical_deduction_78 (mode=direct, semantic_check=False)
+[22:52:28]   [logical_deduction_254] ✓ 正确! 预测=C, 答案=C
+[22:52:28] [Worker] 开始处理: logical_deduction_150 (mode=direct, semantic_check=False)
+[22:52:29]   [logical_deduction_131] ✓ 正确! 预测=C, 答案=C
+[22:52:29] [Worker] 开始处理: logical_deduction_6 (mode=direct, semantic_check=False)
+[22:52:29]   [logical_deduction_78] ✓ 正确! 预测=A, 答案=A
+[22:52:29] [Worker] 开始处理: logical_deduction_60 (mode=direct, semantic_check=False)
+[22:52:34]   [logical_deduction_60] ✓ 正确! 预测=D, 答案=D
+[22:52:34] [Worker] 开始处理: logical_deduction_22 (mode=direct, semantic_check=False)
+[22:52:35]   [logical_deduction_150] ✓ 正确! 预测=E, 答案=E
+[22:52:35] [Worker] 开始处理: logical_deduction_126 (mode=direct, semantic_check=False)
+[22:52:37]   [logical_deduction_6] ✓ 正确! 预测=E, 答案=E
+[22:52:37] [Worker] 开始处理: logical_deduction_248 (mode=direct, semantic_check=False)
+[22:52:38]   [logical_deduction_22] ✓ 正确! 预测=A, 答案=A
+[22:52:38] [Worker] 开始处理: logical_deduction_116 (mode=direct, semantic_check=False)
+[22:52:40] [Worker] 开始处理: logical_deduction_230 (mode=direct, semantic_check=False)
+[22:52:40]   [logical_deduction_126] ✓ 正确! 预测=E, 答案=E
+[22:52:41]   [logical_deduction_248] ✓ 正确! 预测=A, 答案=A
+[22:52:41] [Worker] 开始处理: logical_deduction_66 (mode=direct, semantic_check=False)
+[22:52:44]   [logical_deduction_116] ✓ 正确! 预测=F, 答案=F
+[22:52:44] [Worker] 开始处理: logical_deduction_217 (mode=direct, semantic_check=False)
+[22:52:45]   [logical_deduction_66] ✓ 正确! 预测=A, 答案=A
+[22:52:45] [Worker] 开始处理: logical_deduction_100 (mode=direct, semantic_check=False)
+[22:52:45]   [logical_deduction_230] ✓ 正确! 预测=C, 答案=C
+[22:52:45] [Worker] 开始处理: logical_deduction_9 (mode=direct, semantic_check=False)
+[22:52:49]   [logical_deduction_9] ✓ 正确! 预测=A, 答案=A
+[22:52:49] [Worker] 开始处理: logical_deduction_222 (mode=direct, semantic_check=False)
+[22:52:49]   [logical_deduction_100] ✗ 错误! 预测=A, 答案=D
+[22:52:49] [Worker] 开始处理: logical_deduction_143 (mode=direct, semantic_check=False)
+[22:52:53]   [logical_deduction_217] ✓ 正确! 预测=B, 答案=B
+[22:52:53] [Worker] 开始处理: logical_deduction_36 (mode=direct, semantic_check=False)
+[22:52:54]   [logical_deduction_143] ✓ 正确! 预测=C, 答案=C
+[22:52:54] [Worker] 开始处理: logical_deduction_37 (mode=direct, semantic_check=False)
+[22:52:54]   [logical_deduction_222] ✗ 错误! 预测=D, 答案=B
+[22:52:54] [Worker] 开始处理: logical_deduction_292 (mode=direct, semantic_check=False)
+[22:52:58]   [logical_deduction_36] ✓ 正确! 预测=C, 答案=C
+[22:52:58] [Worker] 开始处理: logical_deduction_220 (mode=direct, semantic_check=False)
+[22:52:59]   [logical_deduction_292] ✗ 错误! 预测=C, 答案=A
+[22:52:59] [Worker] 开始处理: logical_deduction_207 (mode=direct, semantic_check=False)
+[22:53:00]   [logical_deduction_37] ✓ 正确! 预测=C, 答案=C
+[22:53:00] [Worker] 开始处理: logical_deduction_286 (mode=direct, semantic_check=False)
+[22:53:03]   [logical_deduction_207] ✓ 正确! 预测=G, 答案=G
+[22:53:03] [Worker] 开始处理: logical_deduction_1 (mode=direct, semantic_check=False)
+[22:53:04]   [logical_deduction_286] ✓ 正确! 预测=A, 答案=A
+[22:53:04] [Worker] 开始处理: logical_deduction_186 (mode=direct, semantic_check=False)
+[22:53:04]   [logical_deduction_220] ✗ 错误! 预测=ERROR: UNSATISFIABLE, 答案=C
+[22:53:04] [Worker] 开始处理: logical_deduction_206 (mode=direct, semantic_check=False)
+[22:53:09]   [logical_deduction_1] ✗ 错误! 预测=None, 答案=A
+[22:53:09] [Worker] 开始处理: logical_deduction_21 (mode=direct, semantic_check=False)
+[22:53:09]   [logical_deduction_206] ✓ 正确! 预测=E, 答案=E
+[22:53:09] [Worker] 开始处理: logical_deduction_40 (mode=direct, semantic_check=False)
+[22:53:13]   [logical_deduction_21] ✓ 正确! 预测=B, 答案=B
+[22:53:13] [Worker] 开始处理: logical_deduction_34 (mode=direct, semantic_check=False)
+[22:53:15]   [logical_deduction_40] ✓ 正确! 预测=D, 答案=D
+[22:53:15] [Worker] 开始处理: logical_deduction_280 (mode=direct, semantic_check=False)
+[22:53:18]   [logical_deduction_34] ✓ 正确! 预测=B, 答案=B
+[22:53:18] [Worker] 开始处理: logical_deduction_67 (mode=direct, semantic_check=False)
+[22:53:18]   [logical_deduction_280] ✓ 正确! 预测=C, 答案=C
+[22:53:18] [Worker] 开始处理: logical_deduction_208 (mode=direct, semantic_check=False)
+[22:53:22]   [logical_deduction_67] ✗ 错误! 预测=D, 答案=E
+[22:53:22] [Worker] 开始处理: logical_deduction_121 (mode=direct, semantic_check=False)
+[22:53:23]   [logical_deduction_208] ✓ 正确! 预测=A, 答案=A
+[22:53:23] [Worker] 开始处理: logical_deduction_285 (mode=direct, semantic_check=False)
+[22:53:27]   [logical_deduction_121] ✗ 错误! 预测=ERROR: UNSATISFIABLE, 答案=F
+[22:53:27] [Worker] 开始处理: logical_deduction_231 (mode=direct, semantic_check=False)
+[22:53:28]   [logical_deduction_285] ✓ 正确! 预测=B, 答案=B
+[22:53:28] [Worker] 开始处理: logical_deduction_237 (mode=direct, semantic_check=False)
+[22:53:32]   [logical_deduction_237] ✗ 错误! 预测=ERROR: UNSATISFIABLE, 答案=B
+[22:53:32] [Worker] 开始处理: logical_deduction_279 (mode=direct, semantic_check=False)
+[22:53:34]   [logical_deduction_231] ✗ 错误! 预测=F, 答案=E
+[22:53:34] [Worker] 开始处理: logical_deduction_74 (mode=direct, semantic_check=False)
+[22:53:36]   [logical_deduction_279] ✓ 正确! 预测=C, 答案=C
+[22:53:36] [Worker] 开始处理: logical_deduction_18 (mode=direct, semantic_check=False)
+[22:53:38] [Worker] 开始处理: logical_deduction_212 (mode=direct, semantic_check=False)
+[22:53:38]   [logical_deduction_74] ✗ 错误! 预测=ERROR: UNSATISFIABLE, 答案=C
+[22:53:41]   [logical_deduction_18] ✓ 正确! 预测=A, 答案=A
+[22:53:41] [Worker] 开始处理: logical_deduction_169 (mode=direct, semantic_check=False)
+[22:53:43]   [logical_deduction_212] ✓ 正确! 预测=G, 答案=G
+[22:53:43] [Worker] 开始处理: logical_deduction_187 (mode=direct, semantic_check=False)
+[22:53:48]   [logical_deduction_187] ✗ 错误! 预测=E, 答案=A
+[22:53:48] [Worker] 开始处理: logical_deduction_79 (mode=direct, semantic_check=False)
+[22:53:52]   [logical_deduction_79] ✓ 正确! 预测=B, 答案=B
+[22:53:52] [Worker] 开始处理: logical_deduction_105 (mode=direct, semantic_check=False)
+[22:53:55]   [logical_deduction_186] ✓ 正确! 预测=B, 答案=B
+[22:53:58]   [logical_deduction_105] ✗ 错误! 预测=ERROR: UNSATISFIABLE, 答案=C
+[22:54:00]   [logical_deduction_223] ✓ 正确! 预测=C, 答案=C
+[22:55:02] 语义检查功能已启用
+[22:55:05] 正在停止评测...
+[22:55:47] ==================================================
+[22:55:47] 评测完成!
+[22:55:47] 总计: 49, 正确: 35, 错误: 14, 异常: 0
+[22:55:47] 准确率: 71.43%
+[22:55:47] ==================================================
+[22:55:54] 正在加载数据集: D:/学习资料/课程/程序设计大作业/EnhancingLLM/EnhancingLLM/data/LogicalDeduction_test.json
+[22:55:54] 共 50 道题目，使用 4 个 workers 并行处理
+[22:55:54] [Worker] 开始处理: logical_deduction_32 (mode=direct, semantic_check=True)
+[22:55:54] [Worker] 开始处理: logical_deduction_26 (mode=direct, semantic_check=True)
+[22:55:54] [Worker] 开始处理: logical_deduction_27 (mode=direct, semantic_check=True)
+[22:55:54] [Worker] 开始处理: logical_deduction_166 (mode=direct, semantic_check=True)
+[22:56:01]   [logical_deduction_26] ✓ 正确! 预测=C, 答案=C
+[22:56:01] [Worker] 开始处理: logical_deduction_179 (mode=direct, semantic_check=True)
+[22:56:02]   [logical_deduction_166] ✓ 正确! 预测=C, 答案=C
+[22:56:02] [Worker] 开始处理: logical_deduction_223 (mode=direct, semantic_check=True)
+[22:56:02] [Worker] 开始处理: logical_deduction_254 (mode=direct, semantic_check=True)
+[22:56:02]   [logical_deduction_27] ✓ 正确! 预测=C, 答案=C
+[22:56:08]   [logical_deduction_254] semantic check module检查得到语义错误
+[22:56:08]   [logical_deduction_254] 第2次尝试重新生成...
+[22:56:09]   [logical_deduction_179] semantic check module检查得到语义错误
+[22:56:09]   [logical_deduction_179] 第2次尝试重新生成...
+[22:56:09]   [logical_deduction_223] semantic check module检查得到语义错误
+[22:56:09]   [logical_deduction_223] 第2次尝试重新生成...
+[22:56:15]   [logical_deduction_32] semantic check module检查得到语义错误
+[22:56:15]   [logical_deduction_32] 第2次尝试重新生成...
+[22:56:17]   [logical_deduction_223] semantic check module检查得到语义错误
+[22:56:17]   [logical_deduction_223] 第3次尝试重新生成...
+[22:56:18]   [logical_deduction_179] semantic check module检查得到语义错误
+[22:56:18]   [logical_deduction_179] 第3次尝试重新生成...
+[22:56:18] [Worker] 开始处理: logical_deduction_131 (mode=direct, semantic_check=True)
+[22:56:18]   [logical_deduction_254] ✓ 正确! 预测=C, 答案=C
+[22:56:21]   [logical_deduction_32] ✗ 错误! 预测=ERROR: UNSATISFIABLE, 答案=B
+[22:56:21] [Worker] 开始处理: logical_deduction_78 (mode=direct, semantic_check=True)
+[22:56:24]   [logical_deduction_223] ✓ 正确! 预测=C, 答案=C
+[22:56:24] [Worker] 开始处理: logical_deduction_150 (mode=direct, semantic_check=True)
+[22:56:25]   [logical_deduction_131] semantic check module检查得到语义错误
+[22:56:25]   [logical_deduction_131] 第2次尝试重新生成...
+[22:56:27]   [logical_deduction_179] ✓ 正确! 预测=F, 答案=F
+[22:56:27] [Worker] 开始处理: logical_deduction_6 (mode=direct, semantic_check=True)
+[22:56:28]   [logical_deduction_78] semantic check module检查得到语义错误
+[22:56:28]   [logical_deduction_78] 第2次尝试重新生成...
+[22:56:31]   [logical_deduction_150] ✓ 正确! 预测=E, 答案=E
+[22:56:31] [Worker] 开始处理: logical_deduction_60 (mode=direct, semantic_check=True)
+[22:56:33]   [logical_deduction_131] ✓ 正确! 预测=C, 答案=C
+[22:56:33] [Worker] 开始处理: logical_deduction_22 (mode=direct, semantic_check=True)
+[22:56:34]   [logical_deduction_6] semantic check module检查得到语义错误
+[22:56:34]   [logical_deduction_6] 第2次尝试重新生成...
+[22:56:35]   [logical_deduction_78] semantic check module检查得到语义错误
+[22:56:35]   [logical_deduction_78] 第3次尝试重新生成...
+[22:56:37]   [logical_deduction_60] ✓ 正确! 预测=D, 答案=D
+[22:56:37] [Worker] 开始处理: logical_deduction_126 (mode=direct, semantic_check=True)
+[22:56:40]   [logical_deduction_22] ✓ 正确! 预测=A, 答案=A
+[22:56:40] [Worker] 开始处理: logical_deduction_248 (mode=direct, semantic_check=True)
+[22:56:42]   [logical_deduction_6] ✓ 正确! 预测=E, 答案=E
+[22:56:42] [Worker] 开始处理: logical_deduction_116 (mode=direct, semantic_check=True)
+[22:56:43]   [logical_deduction_78] ✓ 正确! 预测=A, 答案=A
+[22:56:43] [Worker] 开始处理: logical_deduction_230 (mode=direct, semantic_check=True)
+[22:56:44]   [logical_deduction_126] semantic check module检查得到语义错误
+[22:56:44]   [logical_deduction_126] 第2次尝试重新生成...
+[22:56:49]   [logical_deduction_248] semantic check module检查得到语义错误
+[22:56:49]   [logical_deduction_248] 第2次尝试重新生成...
+[22:56:50] [Worker] 开始处理: logical_deduction_66 (mode=direct, semantic_check=True)
+[22:56:50]   [logical_deduction_116] ✓ 正确! 预测=F, 答案=F
+[22:56:52] [Worker] 开始处理: logical_deduction_217 (mode=direct, semantic_check=True)
+[22:56:52]   [logical_deduction_230] ✓ 正确! 预测=C, 答案=C
+[22:56:53]   [logical_deduction_126] ✓ 正确! 预测=E, 答案=E
+[22:56:53] [Worker] 开始处理: logical_deduction_100 (mode=direct, semantic_check=True)
+[22:56:55]   [logical_deduction_248] semantic check module检查得到语义错误
+[22:56:55]   [logical_deduction_248] 第3次尝试重新生成...
+[22:56:57]   [logical_deduction_66] ✓ 正确! 预测=A, 答案=A
+[22:56:57] [Worker] 开始处理: logical_deduction_9 (mode=direct, semantic_check=True)
+[22:56:59]   [logical_deduction_217] semantic check module检查得到语义错误
+[22:56:59]   [logical_deduction_217] 第2次尝试重新生成...
+[22:57:01]   [logical_deduction_100] ✗ 错误! 预测=ERROR: UNSATISFIABLE, 答案=D
+[22:57:01] [Worker] 开始处理: logical_deduction_222 (mode=direct, semantic_check=True)
+[22:57:02]   [logical_deduction_248] ✓ 正确! 预测=A, 答案=A
+[22:57:02] [Worker] 开始处理: logical_deduction_143 (mode=direct, semantic_check=True)
+[22:57:05]   [logical_deduction_9] ✓ 正确! 预测=A, 答案=A
+[22:57:05] [Worker] 开始处理: logical_deduction_36 (mode=direct, semantic_check=True)
+[22:57:06]   [logical_deduction_217] ✓ 正确! 预测=B, 答案=B
+[22:57:06] [Worker] 开始处理: logical_deduction_37 (mode=direct, semantic_check=True)
+[22:57:09]   [logical_deduction_143] ✓ 正确! 预测=C, 答案=C
+[22:57:09] [Worker] 开始处理: logical_deduction_292 (mode=direct, semantic_check=True)
+[22:57:09]   [logical_deduction_222] semantic check module检查得到语义错误
+[22:57:09]   [logical_deduction_222] 第2次尝试重新生成...
+[22:57:12]   [logical_deduction_36] ✓ 正确! 预测=C, 答案=C
+[22:57:12] [Worker] 开始处理: logical_deduction_220 (mode=direct, semantic_check=True)
+[22:57:13]   [logical_deduction_37] ✓ 正确! 预测=C, 答案=C
+[22:57:13] [Worker] 开始处理: logical_deduction_207 (mode=direct, semantic_check=True)
+[22:57:15]   [logical_deduction_292] ✓ 正确! 预测=A, 答案=A
+[22:57:15] [Worker] 开始处理: logical_deduction_286 (mode=direct, semantic_check=True)
+[22:57:16]   [logical_deduction_222] ✓ 正确! 预测=B, 答案=B
+[22:57:16] [Worker] 开始处理: logical_deduction_1 (mode=direct, semantic_check=True)
+[22:57:20]   [logical_deduction_207] semantic check module检查得到语义错误
+[22:57:20]   [logical_deduction_207] 第2次尝试重新生成...
+[22:57:23]   [logical_deduction_1] semantic check module检查得到语义错误
+[22:57:23]   [logical_deduction_1] 第2次尝试重新生成...
+[22:57:29]   [logical_deduction_1] semantic check module检查得到语义错误
+[22:57:29]   [logical_deduction_1] 第3次尝试重新生成...
+[22:57:33]   [logical_deduction_220] semantic check module检查得到语义错误
+[22:57:33]   [logical_deduction_220] 第2次尝试重新生成...
+[22:57:33]   [logical_deduction_207] ✓ 正确! 预测=G, 答案=G
+[22:57:33] [Worker] 开始处理: logical_deduction_186 (mode=direct, semantic_check=True)
+[22:57:33]   [logical_deduction_286] semantic check module检查得到语义错误
+[22:57:33]   [logical_deduction_286] 第2次尝试重新生成...
+[22:57:37]   [logical_deduction_1] ✗ 错误! 预测=None, 答案=A
+[22:57:37] [Worker] 开始处理: logical_deduction_206 (mode=direct, semantic_check=True)
+[22:57:39]   [logical_deduction_286] ✓ 正确! 预测=A, 答案=A
+[22:57:39] [Worker] 开始处理: logical_deduction_21 (mode=direct, semantic_check=True)
+[22:57:42]   [logical_deduction_220] semantic check module检查得到语义错误
+[22:57:42]   [logical_deduction_220] 第3次尝试重新生成...
+[22:57:42]   [logical_deduction_186] semantic check module检查得到语义错误
+[22:57:42]   [logical_deduction_186] 第2次尝试重新生成...
+[22:57:44]   [logical_deduction_206] ✗ 错误! 预测=G, 答案=E
+[22:57:44] [Worker] 开始处理: logical_deduction_40 (mode=direct, semantic_check=True)
+[22:57:47]   [logical_deduction_21] ✓ 正确! 预测=B, 答案=B
+[22:57:48] [Worker] 开始处理: logical_deduction_34 (mode=direct, semantic_check=True)
+[22:57:50]   [logical_deduction_220] semantic check module检查得到语义错误
+[22:57:50]   [logical_deduction_220] 第4次尝试重新生成...
+[22:57:52]   [logical_deduction_40] semantic check module检查得到语义错误
+[22:57:52]   [logical_deduction_40] 第2次尝试重新生成...
+[22:57:52]   [logical_deduction_186] semantic check module检查得到语义错误
+[22:57:52]   [logical_deduction_186] 第3次尝试重新生成...
+[22:57:59]   [logical_deduction_40] semantic check module检查得到语义错误
+[22:57:59]   [logical_deduction_40] 第3次尝试重新生成...
+[22:58:00]   [logical_deduction_220] ✗ 错误! 预测=ERROR: UNSATISFIABLE, 答案=C
+[22:58:00] [Worker] 开始处理: logical_deduction_280 (mode=direct, semantic_check=True)
+[22:58:02]   [logical_deduction_186] ✓ 正确! 预测=B, 答案=B
+[22:58:02] [Worker] 开始处理: logical_deduction_67 (mode=direct, semantic_check=True)
+[22:58:06]   [logical_deduction_40] semantic check module检查得到语义错误
+[22:58:06]   [logical_deduction_40] 第4次尝试重新生成...
+[22:58:06]   [logical_deduction_280] ✓ 正确! 预测=C, 答案=C
+[22:58:06] [Worker] 开始处理: logical_deduction_208 (mode=direct, semantic_check=True)
+[22:58:07]   [logical_deduction_34] semantic check module检查得到语义错误
+[22:58:07]   [logical_deduction_34] 第2次尝试重新生成...
+[22:58:12]   [logical_deduction_67] semantic check module检查得到语义错误
+[22:58:12]   [logical_deduction_67] 第2次尝试重新生成...
+[22:58:14]   [logical_deduction_34] semantic check module检查得到语义错误
+[22:58:14]   [logical_deduction_34] 第3次尝试重新生成...
+[22:58:17]   [logical_deduction_208] ✓ 正确! 预测=A, 答案=A
+[22:58:17] [Worker] 开始处理: logical_deduction_121 (mode=direct, semantic_check=True)
+[22:58:19]   [logical_deduction_67] ✗ 错误! 预测=D, 答案=E
+[22:58:19] [Worker] 开始处理: logical_deduction_285 (mode=direct, semantic_check=True)
+[22:58:21]   [logical_deduction_34] ✓ 正确! 预测=B, 答案=B
+[22:58:21] [Worker] 开始处理: logical_deduction_231 (mode=direct, semantic_check=True)
+[22:58:25]   [logical_deduction_285] ✓ 正确! 预测=B, 答案=B
+[22:58:25] [Worker] 开始处理: logical_deduction_237 (mode=direct, semantic_check=True)
+[22:58:25]   [logical_deduction_121] ✗ 错误! 预测=ERROR: UNSATISFIABLE, 答案=F
+[22:58:25] [Worker] 开始处理: logical_deduction_279 (mode=direct, semantic_check=True)
+[22:58:30]   [logical_deduction_231] semantic check module检查得到语义错误
+[22:58:30]   [logical_deduction_231] 第2次尝试重新生成...
+[22:58:32]   [logical_deduction_279] semantic check module检查得到语义错误
+[22:58:32]   [logical_deduction_279] 第2次尝试重新生成...
+[22:58:34]   [logical_deduction_237] ✗ 错误! 预测=ERROR: UNSATISFIABLE, 答案=B
+[22:58:34] [Worker] 开始处理: logical_deduction_74 (mode=direct, semantic_check=True)
+[22:58:37]   [logical_deduction_231] semantic check module检查得到语义错误
+[22:58:37]   [logical_deduction_231] 第3次尝试重新生成...
+[22:58:38]   [logical_deduction_279] semantic check module检查得到语义错误
+[22:58:38]   [logical_deduction_279] 第3次尝试重新生成...
+[22:58:40]   [logical_deduction_74] ✓ 正确! 预测=C, 答案=C
+[22:58:40] [Worker] 开始处理: logical_deduction_18 (mode=direct, semantic_check=True)
+[22:58:44]   [logical_deduction_279] ✗ 错误! 预测=B, 答案=C
+[22:58:44] [Worker] 开始处理: logical_deduction_212 (mode=direct, semantic_check=True)
+[22:58:47]   [logical_deduction_18] semantic check module检查得到语义错误
+[22:58:47]   [logical_deduction_18] 第2次尝试重新生成...
+[22:58:47]   [logical_deduction_231] ✗ 错误! 预测=C, 答案=E
+[22:58:47] [Worker] 开始处理: logical_deduction_169 (mode=direct, semantic_check=True)
+[22:58:54]   [logical_deduction_212] ✓ 正确! 预测=G, 答案=G
+[22:58:54] [Worker] 开始处理: logical_deduction_187 (mode=direct, semantic_check=True)
+[22:58:54]   [logical_deduction_18] ✓ 正确! 预测=A, 答案=A
+[22:58:54] [Worker] 开始处理: logical_deduction_79 (mode=direct, semantic_check=True)
+[22:58:56]   [logical_deduction_169] ✓ 正确! 预测=B, 答案=B
+[22:58:56] [Worker] 开始处理: logical_deduction_105 (mode=direct, semantic_check=True)
+[22:58:59]   [logical_deduction_40] ✓ 正确! 预测=D, 答案=D
+[22:59:02]   [logical_deduction_79] ✓ 正确! 预测=B, 答案=B
+[22:59:04]   [logical_deduction_105] ✗ 错误! 预测=ERROR: UNSATISFIABLE, 答案=C
+[22:59:05]   [logical_deduction_187] semantic check module检查得到语义错误
+[22:59:05]   [logical_deduction_187] 第2次尝试重新生成...
+[22:59:14]   [logical_deduction_187] ✓ 正确! 预测=A, 答案=A
+[22:59:14] ==================================================
+[22:59:14] 评测完成!
+[22:59:14] 总计: 50, 正确: 39, 错误: 11, 异常: 0
+[22:59:14] 准确率: 78.00%
+[22:59:14] ==================================================
+=== 评测日志结束于 2025-12-17 23:00:06 ===

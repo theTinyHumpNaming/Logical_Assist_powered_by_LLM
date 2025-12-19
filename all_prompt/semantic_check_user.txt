@@ -1,0 +1,13 @@
+You need to check if the following code is semantically correct from the original problem.
+>>>>>>>>>>>>>>>>>>>>>>>>>>>>
+[Problem]:
+{problem_text}
+[Question]:
+{question_text}
+[Options]:
+{options_text}
+
+[Code]:
+```python
+{code_text}
+```

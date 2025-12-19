@@ -1,0 +1,27 @@
+The script you provided does not match the semantics of the original problem. This is the detailed information for checking semantic inconsistencies:
+{info_text}
+
+COMMON SEMANTIC ERRORS TO FIX:
+1. Position calculation errors:
+   - "kth-oldest"/"kth-cheapest" → use k directly (e.g., "second-oldest" = 2)
+   - "kth-newest"/"kth-most expensive" → use N+1-k (e.g., "second-most expensive" when N=7 is 6)
+   - "kth from right" → use N+1-k (NOT N-k)
+2. Comparison operator direction:
+   - "below" in golf means WORSE rank = BIGGER number, so use >
+   - "above" in golf means BETTER rank = SMALLER number, so use <
+   - "older" means SMALLER position, "newer" means BIGGER position
+   - "more expensive" means BIGGER position, "less expensive" means SMALLER position
+3. Make sure you haven't swapped the direction of < and >
+
+Please resolve the issue again and ensure that the semantics remain unchanged:
+========================================
+Now solve:
+========================================
+
+Problem: {problem_text}
+
+Question: {question_text}
+
+Options:
+{options_text}
+

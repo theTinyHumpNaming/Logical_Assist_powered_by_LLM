@@ -1,0 +1,11 @@
+=== 评测日志开始于 2025-12-19 11:51:49 ===
+[11:51:59] 代码修复功能已关闭
+[11:52:04] 正在加载数据集: D:/学习资料/课程/程序设计大作业/EnhancingLLM/EnhancingLLM/data/FOLIO_test.json
+[11:52:04] 共 50 道题目，使用 4 个 workers 并行处理
+[11:52:04] [Worker] 开始处理: FOLIO_dev_0 (mode=direct, semantic_check=False, refinement_code=False)
+[11:52:04] [Worker] 开始处理: FOLIO_dev_59 (mode=direct, semantic_check=False, refinement_code=False)
+[11:52:04] [Worker] 开始处理: FOLIO_dev_125 (mode=direct, semantic_check=False, refinement_code=False)
+[11:52:04] [Worker] 开始处理: FOLIO_dev_43 (mode=direct, semantic_check=False, refinement_code=False)
+[11:52:09]   [FOLIO_dev_125] 代码自动修复: 检测到缺少 1 个右括号; 第33行: 添加 1 个右括号
+[11:52:09]   [FOLIO_dev_125] ✗ 错误! 预测=A, 答案=C
+[11:52:09] [Worker] 开始处理: FOLIO_dev_144 (mode=direct, semantic_check=False, refinement_code=False)

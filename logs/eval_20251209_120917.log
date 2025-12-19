@@ -1,0 +1,131 @@
+=== 评测日志开始于 2025-12-09 12:09:17 ===
+[12:09:28] 正在加载数据集: D:/学习资料/课程/程序设计大作业/Beta/data/LogicalDeduction_test.json
+[12:09:28] 共 50 道题目，使用 4 个 workers 并行处理
+[12:09:28] [Worker] 开始处理: logical_deduction_27 (mode=formal_logic, check=True)
+[12:09:28] [Worker] 开始处理: logical_deduction_26 (mode=formal_logic, check=True)
+[12:09:28] [Worker] 开始处理: logical_deduction_166 (mode=formal_logic, check=True)
+[12:09:28] [Worker] 开始处理: logical_deduction_32 (mode=formal_logic, check=True)
+[12:09:33]   [logical_deduction_26] ✓ 形式逻辑检查通过
+[12:09:33]   [logical_deduction_26] ✓ 正确! 预测=C, 答案=C
+[12:09:33] [Worker] 开始处理: logical_deduction_179 (mode=formal_logic, check=True)
+[12:09:34]   [logical_deduction_32] ✓ 形式逻辑检查通过
+[12:09:34]   [logical_deduction_32] ✗ 错误! 预测=UNSAT, 答案=B
+[12:09:34] [Worker] 开始处理: logical_deduction_223 (mode=formal_logic, check=True)
+[12:09:34]   [logical_deduction_27] ✓ 形式逻辑检查通过
+[12:09:34]   [logical_deduction_27] ✗ 错误! 预测=UNSAT, 答案=C
+[12:09:34] [Worker] 开始处理: logical_deduction_254 (mode=formal_logic, check=True)
+[12:09:35]   [logical_deduction_166] ✓ 形式逻辑检查通过
+[12:09:35]   [logical_deduction_166] ✓ 正确! 预测=C, 答案=C
+[12:09:35] [Worker] 开始处理: logical_deduction_131 (mode=formal_logic, check=True)
+[12:09:40]   [logical_deduction_254] ✓ 形式逻辑检查通过
+[12:09:40]   [logical_deduction_254] ✓ 正确! 预测=C, 答案=C
+[12:09:40] [Worker] 开始处理: logical_deduction_78 (mode=formal_logic, check=True)
+[12:09:41]   [logical_deduction_179] ✓ 形式逻辑检查通过
+[12:09:41]   [logical_deduction_179] ✓ 正确! 预测=F, 答案=F
+[12:09:41] [Worker] 开始处理: logical_deduction_150 (mode=formal_logic, check=True)
+[12:09:42]   [logical_deduction_131] ✓ 形式逻辑检查通过
+[12:09:42]   [logical_deduction_131] ✓ 正确! 预测=C, 答案=C
+[12:09:42] [Worker] 开始处理: logical_deduction_6 (mode=formal_logic, check=True)
+[12:09:42]   [logical_deduction_223] ✓ 形式逻辑检查通过
+[12:09:42]   [logical_deduction_223] ✓ 正确! 预测=C, 答案=C
+[12:09:42] [Worker] 开始处理: logical_deduction_60 (mode=formal_logic, check=True)
+[12:09:47]   [logical_deduction_78] ✓ 形式逻辑检查通过
+[12:09:47]   [logical_deduction_78] ✓ 正确! 预测=A, 答案=A
+[12:09:47] [Worker] 开始处理: logical_deduction_22 (mode=formal_logic, check=True)
+[12:09:47]   [logical_deduction_150] ✓ 形式逻辑检查通过
+[12:09:47]   [logical_deduction_150] ✗ 错误! 预测=B, 答案=E
+[12:09:47] [Worker] 开始处理: logical_deduction_126 (mode=formal_logic, check=True)
+[12:09:47]   [logical_deduction_6] ✓ 形式逻辑检查通过
+[12:09:47]   [logical_deduction_6] ✓ 正确! 预测=E, 答案=E
+[12:09:47] [Worker] 开始处理: logical_deduction_248 (mode=formal_logic, check=True)
+[12:09:50]   [logical_deduction_60] ✓ 形式逻辑检查通过
+[12:09:50]   [logical_deduction_60] ✗ 错误! 预测=UNSAT, 答案=D
+[12:09:50] [Worker] 开始处理: logical_deduction_116 (mode=formal_logic, check=True)
+[12:09:53]   [logical_deduction_248] ✓ 形式逻辑检查通过
+[12:09:53]   [logical_deduction_248] ✓ 正确! 预测=A, 答案=A
+[12:09:53] [Worker] 开始处理: logical_deduction_230 (mode=formal_logic, check=True)
+[12:09:54]   [logical_deduction_22] ✓ 形式逻辑检查通过
+[12:09:54]   [logical_deduction_22] ✓ 正确! 预测=A, 答案=A
+[12:09:54] [Worker] 开始处理: logical_deduction_66 (mode=formal_logic, check=True)
+[12:09:56]   [logical_deduction_126] ✓ 形式逻辑检查通过
+[12:09:56]   [logical_deduction_126] ✓ 正确! 预测=E, 答案=E
+[12:09:56] [Worker] 开始处理: logical_deduction_217 (mode=formal_logic, check=True)
+[12:09:57]   [logical_deduction_116] ✓ 形式逻辑检查通过
+[12:09:57]   [logical_deduction_116] ✗ 错误! 预测=UNSAT, 答案=F
+[12:09:57] [Worker] 开始处理: logical_deduction_100 (mode=formal_logic, check=True)
+[12:10:01]   [logical_deduction_230] ✓ 形式逻辑检查通过
+[12:10:01]   [logical_deduction_230] ✓ 正确! 预测=C, 答案=C
+[12:10:01] [Worker] 开始处理: logical_deduction_9 (mode=formal_logic, check=True)
+[12:10:01]   [logical_deduction_66] ✓ 形式逻辑检查通过
+[12:10:01]   [logical_deduction_66] ✗ 错误! 预测=C, 答案=A
+[12:10:01] [Worker] 开始处理: logical_deduction_222 (mode=formal_logic, check=True)
+[12:10:03]   [logical_deduction_217] ✓ 形式逻辑检查通过
+[12:10:03]   [logical_deduction_217] ✓ 正确! 预测=B, 答案=B
+[12:10:03] [Worker] 开始处理: logical_deduction_143 (mode=formal_logic, check=True)
+[12:10:06]   [logical_deduction_100] ✓ 形式逻辑检查通过
+[12:10:06]   [logical_deduction_100] ✗ 错误! 预测=UNSAT, 答案=D
+[12:10:06] [Worker] 开始处理: logical_deduction_36 (mode=formal_logic, check=True)
+[12:10:06] 正在停止评测...
+[12:10:07]   [logical_deduction_9] ✓ 形式逻辑检查通过
+[12:10:07] [Worker] 开始处理: logical_deduction_37 (mode=formal_logic, check=True)
+[12:10:09]   [logical_deduction_222] ✓ 形式逻辑检查通过
+[12:10:09]   [logical_deduction_143] ✓ 形式逻辑检查通过
+[12:10:12]   [logical_deduction_36] ✓ 形式逻辑检查通过
+[12:10:13]   [logical_deduction_37] ✓ 形式逻辑检查通过
+[12:10:13] ==================================================
+[12:10:13] 评测完成!
+[12:10:13] 总计: 20, 正确: 13, 错误: 7, 异常: 0
+[12:10:13] 准确率: 65.00%
+[12:10:13] ==================================================
+[12:10:14] 正在加载数据集: D:/学习资料/课程/程序设计大作业/Beta/data/FOLIO_test.json
+[12:10:14] 共 50 道题目，使用 4 个 workers 并行处理
+[12:10:14] [Worker] 开始处理: FOLIO_dev_0 (mode=formal_logic, check=True)
+[12:10:15] [Worker] 开始处理: FOLIO_dev_125 (mode=formal_logic, check=True)
+[12:10:15] [Worker] 开始处理: FOLIO_dev_59 (mode=formal_logic, check=True)
+[12:10:15] [Worker] 开始处理: FOLIO_dev_43 (mode=formal_logic, check=True)
+[12:10:21]   [FOLIO_dev_43] ✓ 形式逻辑检查通过
+[12:10:21]   [FOLIO_dev_43] 执行错误，尝试修复形式逻辑: name 'CocoGauff' is not defined...
+[12:10:21]   [FOLIO_dev_59] ✓ 形式逻辑检查通过
+[12:10:21]   [FOLIO_dev_59] ✗ 错误! 预测=A, 答案=C
+[12:10:21] [Worker] 开始处理: FOLIO_dev_144 (mode=formal_logic, check=True)
+[12:10:23]   [FOLIO_dev_43] ✗ 形式逻辑修复失败: 形式逻辑修复过程出错 (尝试 3/3): LLMClient.send_request() got an unexpected keyword argument 'api_base'...
+[12:10:23]   [FOLIO_dev_43] 执行错误: name 'CocoGauff' is not defined
+[12:10:23]   [FOLIO_dev_43] 第2次尝试重新生成...
+[12:10:23]   [FOLIO_dev_0] ✓ 形式逻辑检查通过
+[12:10:23]   [FOLIO_dev_0] ✗ 错误! 预测=A, 答案=C
+[12:10:23] [Worker] 开始处理: FOLIO_dev_17 (mode=formal_logic, check=True)
+[12:10:24]   [FOLIO_dev_125] ✓ 形式逻辑检查通过
+[12:10:24]   [FOLIO_dev_125] 执行错误，尝试修复形式逻辑: name 'Rock' is not defined...
+[12:10:26]   [FOLIO_dev_125] ✗ 形式逻辑修复失败: 形式逻辑修复过程出错 (尝试 3/3): LLMClient.send_request() got an unexpected keyword argument 'api_base'...
+[12:10:26]   [FOLIO_dev_125] 执行错误: name 'Rock' is not defined
+[12:10:26]   [FOLIO_dev_125] 第2次尝试重新生成...
+[12:10:29]   [FOLIO_dev_144] ✓ 形式逻辑检查通过
+[12:10:29]   [FOLIO_dev_144] 执行错误，尝试修复形式逻辑: Z3 expression expected...
+[12:10:30]   [FOLIO_dev_144] ✗ 形式逻辑修复失败: 形式逻辑修复过程出错 (尝试 3/3): LLMClient.send_request() got an unexpected keyword argument 'api_base'...
+[12:10:30]   [FOLIO_dev_144] 执行错误: Z3 expression expected
+[12:10:30]   [FOLIO_dev_144] 第2次尝试重新生成...
+[12:10:31]   [FOLIO_dev_43] ✓ 形式逻辑检查通过
+[12:10:31]   [FOLIO_dev_43] 执行错误，尝试修复形式逻辑: name 'CocoGauff' is not defined...
+[12:10:31]   [FOLIO_dev_17] ✓ 形式逻辑检查通过
+[12:10:31]   [FOLIO_dev_17] ✓ 正确! 预测=C, 答案=C
+[12:10:31] [Worker] 开始处理: FOLIO_dev_83 (mode=formal_logic, check=True)
+[12:10:33]   [FOLIO_dev_43] ✗ 形式逻辑修复失败: 形式逻辑修复过程出错 (尝试 3/3): LLMClient.send_request() got an unexpected keyword argument 'api_base'...
+[12:10:33]   [FOLIO_dev_43] 执行错误: name 'CocoGauff' is not defined
+[12:10:33]   [FOLIO_dev_43] 第3次尝试重新生成...
+[12:10:34]   [FOLIO_dev_125] ✓ 形式逻辑检查通过
+[12:10:34]   [FOLIO_dev_125] 执行错误，尝试修复形式逻辑: name 'Rock' is not defined...
+[12:10:36]   [FOLIO_dev_144] ✓ 形式逻辑检查通过
+[12:10:36]   [FOLIO_dev_144] ⚠ 异常: Unbalanced parentheses in generated code
+[12:10:36] [Worker] 开始处理: FOLIO_dev_13 (mode=formal_logic, check=True)
+[12:10:36]   [FOLIO_dev_125] ✗ 形式逻辑修复失败: 形式逻辑修复过程出错 (尝试 3/3): LLMClient.send_request() got an unexpected keyword argument 'api_base'...
+[12:10:36]   [FOLIO_dev_125] 执行错误: name 'Rock' is not defined
+[12:10:36]   [FOLIO_dev_125] 第3次尝试重新生成...
+[12:10:38]   [FOLIO_dev_83] ✓ 形式逻辑检查通过
+[12:10:38]   [FOLIO_dev_83] 执行错误，尝试修复形式逻辑: name 'DriedThaiChilies' is not defined...
+[12:10:38] 正在停止评测...
+[12:10:40]   [FOLIO_dev_83] ✗ 形式逻辑修复失败: 形式逻辑修复过程出错 (尝试 3/3): LLMClient.send_request() got an unexpected keyword argument 'api_base'...
+[12:10:40]   [FOLIO_dev_83] 执行错误: name 'DriedThaiChilies' is not defined
+[12:10:40]   [FOLIO_dev_83] 第2次尝试重新生成...
+[12:10:41]   [FOLIO_dev_43] ✓ 形式逻辑检查通过
+[12:10:41]   [FOLIO_dev_43] 执行错误，尝试修复形式逻辑: name 'CocoGauff' is not defined...
+=== 评测日志结束于 2025-12-09 12:10:42 ===

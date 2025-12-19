@@ -1,0 +1,129 @@
+=== 评测日志开始于 2025-12-19 12:00:42 ===
+[12:00:47] 代码修复功能已关闭
+[12:00:50] 正在加载数据集: D:/学习资料/课程/程序设计大作业/EnhancingLLM/EnhancingLLM/data/FOLIO_test.json
+[12:00:50] 共 50 道题目，使用 4 个 workers 并行处理
+[12:00:50] [Worker] 开始处理: FOLIO_dev_43 (mode=direct, semantic_check=False, refinement_code=False)
+[12:00:50] [Worker] 开始处理: FOLIO_dev_0 (mode=direct, semantic_check=False, refinement_code=False)
+[12:00:50] [Worker] 开始处理: FOLIO_dev_125 (mode=direct, semantic_check=False, refinement_code=False)
+[12:00:50] [Worker] 开始处理: FOLIO_dev_59 (mode=direct, semantic_check=False, refinement_code=False)
+[12:00:55]   [FOLIO_dev_59] ✓ 正确! 预测=C, 答案=C
+[12:00:55] [Worker] 开始处理: FOLIO_dev_144 (mode=direct, semantic_check=False, refinement_code=False)
+[12:00:56]   [FOLIO_dev_0] ✗ 错误! 预测=B, 答案=C
+[12:00:56] [Worker] 开始处理: FOLIO_dev_17 (mode=direct, semantic_check=False, refinement_code=False)
+[12:00:56]   [FOLIO_dev_125] 代码自动修复: 检测到缺少 1 个右括号; 第34行: 添加 1 个右括号; 自动添加未定义的Bool变量: a; 自动添加未定义的Bool变量: is; 自动添加未定义的Bool变量: monkey; 自动添加未定义的Bool变量: statement
+[12:00:56]   [FOLIO_dev_125] code执行错误: Z3 internal error (known bug): invalid syntax (<string>, line 11)
+[12:00:56]   [FOLIO_dev_125] ⚠ 异常: 代码执行错误（代码修复功能已关闭）: Z3 internal error (known bug): invalid syntax (<string>, line 11)
+[12:00:56] [Worker] 开始处理: FOLIO_dev_83 (mode=direct, semantic_check=False, refinement_code=False)
+[12:00:56]   [FOLIO_dev_43] ✓ 正确! 预测=C, 答案=C
+[12:00:56] [Worker] 开始处理: FOLIO_dev_13 (mode=direct, semantic_check=False, refinement_code=False)
+[12:00:59]   [FOLIO_dev_144] ✗ 错误! 预测=A, 答案=C
+[12:00:59] [Worker] 开始处理: FOLIO_dev_111 (mode=direct, semantic_check=False, refinement_code=False)
+[12:01:01]   [FOLIO_dev_17] 代码自动修复: 自动添加未定义的Bool变量: rock_is_cute
+[12:01:01]   [FOLIO_dev_17] ✗ 错误! 预测=A, 答案=C
+[12:01:01] [Worker] 开始处理: FOLIO_dev_107 (mode=direct, semantic_check=False, refinement_code=False)
+[12:01:01]   [FOLIO_dev_83] ✓ 正确! 预测=B, 答案=B
+[12:01:01] [Worker] 开始处理: FOLIO_dev_130 (mode=direct, semantic_check=False, refinement_code=False)
+[12:01:02]   [FOLIO_dev_13] ✓ 正确! 预测=C, 答案=C
+[12:01:02] [Worker] 开始处理: FOLIO_dev_89 (mode=direct, semantic_check=False, refinement_code=False)
+[12:01:04]   [FOLIO_dev_111] ✓ 正确! 预测=C, 答案=C
+[12:01:04] [Worker] 开始处理: FOLIO_dev_126 (mode=direct, semantic_check=False, refinement_code=False)
+[12:01:07]   [FOLIO_dev_89] 代码自动修复: 检测到未定义的谓词: Thoreau
+[12:01:07]   [FOLIO_dev_89] ✓ 正确! 预测=A, 答案=A
+[12:01:07] [Worker] 开始处理: FOLIO_dev_134 (mode=direct, semantic_check=False, refinement_code=False)
+[12:01:08]   [FOLIO_dev_130] ✗ 错误! 预测=A, 答案=C
+[12:01:08] [Worker] 开始处理: FOLIO_dev_51 (mode=direct, semantic_check=False, refinement_code=False)
+[12:01:08]   [FOLIO_dev_107] ✗ 错误! 预测=A, 答案=B
+[12:01:08] [Worker] 开始处理: FOLIO_dev_60 (mode=direct, semantic_check=False, refinement_code=False)
+[12:01:10]   [FOLIO_dev_126] 代码自动修复: 检测到缺少 1 个右括号; 第34行: 添加 1 个右括号; 自动添加未定义的Bool变量: rock_is_animal
+[12:01:10]   [FOLIO_dev_126] ✓ 正确! 预测=A, 答案=A
+[12:01:10] [Worker] 开始处理: FOLIO_dev_25 (mode=direct, semantic_check=False, refinement_code=False)
+[12:01:12]   [FOLIO_dev_134] ✓ 正确! 预测=C, 答案=C
+[12:01:12] [Worker] 开始处理: FOLIO_dev_101 (mode=direct, semantic_check=False, refinement_code=False)
+[12:01:14]   [FOLIO_dev_51] ✓ 正确! 预测=A, 答案=A
+[12:01:14] [Worker] 开始处理: FOLIO_dev_49 (mode=direct, semantic_check=False, refinement_code=False)
+[12:01:15]   [FOLIO_dev_25] ✗ 错误! 预测=B, 答案=C
+[12:01:15] [Worker] 开始处理: FOLIO_dev_48 (mode=direct, semantic_check=False, refinement_code=False)
+[12:01:18]   [FOLIO_dev_49] ✓ 正确! 预测=C, 答案=C
+[12:01:18] [Worker] 开始处理: FOLIO_dev_66 (mode=direct, semantic_check=False, refinement_code=False)
+[12:01:18]   [FOLIO_dev_60] 代码自动修复: 自动添加未定义的Bool变量: montana_includes_billings
+[12:01:18]   [FOLIO_dev_60] ✓ 正确! 预测=A, 答案=A
+[12:01:18] [Worker] 开始处理: FOLIO_dev_169 (mode=direct, semantic_check=False, refinement_code=False)
+[12:01:19]   [FOLIO_dev_48] ✗ 错误! 预测=B, 答案=C
+[12:01:19] [Worker] 开始处理: FOLIO_dev_172 (mode=direct, semantic_check=False, refinement_code=False)
+[12:01:19]   [FOLIO_dev_101] 代码自动修复: 检测到缺少 1 个右括号; 第43行: 添加 1 个右括号
+[12:01:19]   [FOLIO_dev_101] ✗ 错误! 预测=C, 答案=B
+[12:01:19] [Worker] 开始处理: FOLIO_dev_44 (mode=direct, semantic_check=False, refinement_code=False)
+[12:01:23]   [FOLIO_dev_66] ✗ 错误! 预测=B, 答案=A
+[12:01:23] [Worker] 开始处理: FOLIO_dev_8 (mode=direct, semantic_check=False, refinement_code=False)
+[12:01:24]   [FOLIO_dev_169] 代码自动修复: 自动添加未定义的Bool变量: or
+[12:01:24]   [FOLIO_dev_169] code执行错误: Z3 internal error (known bug): invalid syntax (<string>, line 8)
+[12:01:24]   [FOLIO_dev_169] ⚠ 异常: 代码执行错误（代码修复功能已关闭）: Z3 internal error (known bug): invalid syntax (<string>, line 8)
+[12:01:24] [Worker] 开始处理: FOLIO_dev_22 (mode=direct, semantic_check=False, refinement_code=False)
+[12:01:26]   [FOLIO_dev_172] ✗ 错误! 预测=A, 答案=B
+[12:01:26] [Worker] 开始处理: FOLIO_dev_200 (mode=direct, semantic_check=False, refinement_code=False)
+[12:01:28]   [FOLIO_dev_44] ✗ 错误! 预测=A, 答案=B
+[12:01:28] [Worker] 开始处理: FOLIO_dev_85 (mode=direct, semantic_check=False, refinement_code=False)
+[12:01:28]   [FOLIO_dev_8] ✗ 错误! 预测=B, 答案=C
+[12:01:28] [Worker] 开始处理: FOLIO_dev_178 (mode=direct, semantic_check=False, refinement_code=False)
+[12:01:31]   [FOLIO_dev_22] ✓ 正确! 预测=B, 答案=B
+[12:01:31] [Worker] 开始处理: FOLIO_dev_73 (mode=direct, semantic_check=False, refinement_code=False)
+[12:01:32]   [FOLIO_dev_200] ✗ 错误! 预测=A, 答案=B
+[12:01:32] [Worker] 开始处理: FOLIO_dev_26 (mode=direct, semantic_check=False, refinement_code=False)
+[12:01:33]   [FOLIO_dev_178] ✓ 正确! 预测=A, 答案=A
+[12:01:34] [Worker] 开始处理: FOLIO_dev_196 (mode=direct, semantic_check=False, refinement_code=False)
+[12:01:35]   [FOLIO_dev_85] ✓ 正确! 预测=A, 答案=A
+[12:01:35] [Worker] 开始处理: FOLIO_dev_33 (mode=direct, semantic_check=False, refinement_code=False)
+[12:01:37]   [FOLIO_dev_26] ✓ 正确! 预测=C, 答案=C
+[12:01:37] [Worker] 开始处理: FOLIO_dev_152 (mode=direct, semantic_check=False, refinement_code=False)
+[12:01:37]   [FOLIO_dev_73] code执行错误: '_io.TextIOWrapper' object has no attribute 'getvalue'
+[12:01:37]   [FOLIO_dev_73] ⚠ 异常: 代码执行错误（代码修复功能已关闭）: '_io.TextIOWrapper' object has no attribute 'getvalue'
+[12:01:37] [Worker] 开始处理: FOLIO_dev_76 (mode=direct, semantic_check=False, refinement_code=False)
+[12:01:39] [Worker] 开始处理: FOLIO_dev_23 (mode=direct, semantic_check=False, refinement_code=False)
+[12:01:39]   [FOLIO_dev_196] ✓ 正确! 预测=C, 答案=C
+[12:01:40]   [FOLIO_dev_33] 代码自动修复: 检测到未定义的谓词: Mine
+[12:01:40]   [FOLIO_dev_33] ✗ 错误! 预测=C, 答案=A
+[12:01:40] [Worker] 开始处理: FOLIO_dev_11 (mode=direct, semantic_check=False, refinement_code=False)
+[12:01:41]   [FOLIO_dev_152] ✓ 正确! 预测=C, 答案=C
+[12:01:41] [Worker] 开始处理: FOLIO_dev_170 (mode=direct, semantic_check=False, refinement_code=False)
+[12:01:43]   [FOLIO_dev_76] 代码自动修复: 自动添加未定义的Bool变量: campus; 自动添加未定义的Bool变量: in; 自动添加未定义的Bool变量: jobs; 自动添加未定义的Bool变量: on; 自动添加未定义的Bool变量: student; 自动添加未定义的Bool变量: works
+[12:01:43]   [FOLIO_dev_76] code执行错误: Z3 internal error (known bug): invalid syntax (<string>, line 12)
+[12:01:43]   [FOLIO_dev_76] ⚠ 异常: 代码执行错误（代码修复功能已关闭）: Z3 internal error (known bug): invalid syntax (<string>, line 12)
+[12:01:43] [Worker] 开始处理: FOLIO_dev_150 (mode=direct, semantic_check=False, refinement_code=False)
+[12:01:45]   [FOLIO_dev_23] ✗ 错误! 预测=A, 答案=C
+[12:01:45] [Worker] 开始处理: FOLIO_dev_77 (mode=direct, semantic_check=False, refinement_code=False)
+[12:01:46]   [FOLIO_dev_170] ✗ 错误! 预测=B, 答案=C
+[12:01:46] [Worker] 开始处理: FOLIO_dev_31 (mode=direct, semantic_check=False, refinement_code=False)
+[12:01:46]   [FOLIO_dev_11] ✗ 错误! 预测=A, 答案=C
+[12:01:46] [Worker] 开始处理: FOLIO_dev_21 (mode=direct, semantic_check=False, refinement_code=False)
+[12:01:48] [Worker] 开始处理: FOLIO_dev_14 (mode=direct, semantic_check=False, refinement_code=False)
+[12:01:48]   [FOLIO_dev_150] ✗ 错误! 预测=C, 答案=A
+[12:01:51]   [FOLIO_dev_77] ✓ 正确! 预测=A, 答案=A
+[12:01:51] [Worker] 开始处理: FOLIO_dev_129 (mode=direct, semantic_check=False, refinement_code=False)
+[12:01:52]   [FOLIO_dev_21] ✗ 错误! 预测=B, 答案=A
+[12:01:52] [Worker] 开始处理: FOLIO_dev_40 (mode=direct, semantic_check=False, refinement_code=False)
+[12:01:53]   [FOLIO_dev_14] ✗ 错误! 预测=A, 答案=B
+[12:01:53] [Worker] 开始处理: FOLIO_dev_4 (mode=direct, semantic_check=False, refinement_code=False)
+[12:01:53]   [FOLIO_dev_31] ✗ 错误! 预测=B, 答案=A
+[12:01:53] [Worker] 开始处理: FOLIO_dev_132 (mode=direct, semantic_check=False, refinement_code=False)
+[12:01:56]   [FOLIO_dev_129] ✓ 正确! 预测=A, 答案=A
+[12:01:56] [Worker] 开始处理: FOLIO_dev_176 (mode=direct, semantic_check=False, refinement_code=False)
+[12:01:57]   [FOLIO_dev_40] 代码自动修复: 自动添加未定义的Bool变量: a; 自动添加未定义的Bool变量: and; 自动添加未定义的Bool变量: are; 自动添加未定义的Bool变量: by; 自动添加未定义的Bool变量: design; 自动添加未定义的Bool变量: is; 自动添加未定义的Bool变量: mass; 自动添加未定义的Bool变量: of; 自动添加未定义的Bool变量: or; 自动添加未定义的Bool变量: product; 自动添加未定义的Bool变量: s; 自动添加未定义的Bool变量: style; 自动添加未定义的Bool变量: styles; 自动添加未定义的Bool变量: then
+[12:01:57]   [FOLIO_dev_40] code执行错误: Z3 internal error (known bug): invalid syntax (<string>, line 12)
+[12:01:57]   [FOLIO_dev_40] ⚠ 异常: 代码执行错误（代码修复功能已关闭）: Z3 internal error (known bug): invalid syntax (<string>, line 12)
+[12:01:57] [Worker] 开始处理: FOLIO_dev_53 (mode=direct, semantic_check=False, refinement_code=False)
+[12:01:58]   [FOLIO_dev_132] ✗ 错误! 预测=B, 答案=A
+[12:01:58] [Worker] 开始处理: FOLIO_dev_171 (mode=direct, semantic_check=False, refinement_code=False)
+[12:02:00]   [FOLIO_dev_4] 代码自动修复: 检测到缺少 1 个右括号; 第35行: 添加 1 个右括号
+[12:02:00]   [FOLIO_dev_4] ✗ 错误! 预测=A, 答案=C
+[12:02:01]   [FOLIO_dev_176] ✓ 正确! 预测=C, 答案=C
+[12:02:03]   [FOLIO_dev_171] 代码自动修复: 自动添加未定义的Bool变量: be; 自动添加未定义的Bool变量: if; 自动添加未定义的Bool变量: must; 自动添加未定义的Bool变量: query; 自动添加未定义的Bool变量: the
+[12:02:03]   [FOLIO_dev_171] code执行错误: Z3 internal error (known bug): invalid syntax (<string>, line 12)
+[12:02:03]   [FOLIO_dev_171] ⚠ 异常: 代码执行错误（代码修复功能已关闭）: Z3 internal error (known bug): invalid syntax (<string>, line 12)
+[12:02:05]   [FOLIO_dev_53] 代码自动修复: 自动添加未定义的Bool变量: french_is_related_to_spanish
+[12:02:05]   [FOLIO_dev_53] ✓ 正确! 预测=C, 答案=C
+[12:02:05] ==================================================
+[12:02:05] 评测完成!
+[12:02:05] 已完成: 50, 正确: 21, 错误: 23, 异常: 6
+[12:02:05] 准确率: 42.00%
+[12:02:05] ==================================================
+[12:02:52] 结果已导出到: D:/学习资料/课程/程序设计大作业/EnhancingLLM/EnhancingLLM/data/test12.json

@@ -1,0 +1,110 @@
+=== 评测日志开始于 2025-12-15 22:37:08 ===
+[22:37:11] 语义检查功能已启用
+[22:37:12] 语义检查功能已关闭
+[22:37:27] 正在加载数据集: D:/Project/BProject/EnhancingLLM/data/ProntoQA_test.json
+[22:37:27] 共 50 道题目，使用 4 个 workers 并行处理
+[22:37:27] [Worker] 开始处理: ProntoQA_118 (mode=direct, semantic_check=False)
+[22:37:27] [Worker] 开始处理: ProntoQA_285 (mode=direct, semantic_check=False)
+[22:37:27] [Worker] 开始处理: ProntoQA_281 (mode=direct, semantic_check=False)
+[22:37:27] [Worker] 开始处理: ProntoQA_152 (mode=direct, semantic_check=False)
+[22:37:27]   [ProntoQA_118] ⚠ 异常: [Errno 2] No such file or directory: 'D:\\Project\\BProject\\EnhancingLLM\\all_prompt\\prontQA\\instruction.txt'
+[22:37:27] [Worker] 开始处理: ProntoQA_293 (mode=direct, semantic_check=False)
+[22:37:27] [Worker] 开始处理: ProntoQA_189 (mode=direct, semantic_check=False)
+[22:37:27] [Worker] 开始处理: ProntoQA_187 (mode=direct, semantic_check=False)
+[22:37:27] [Worker] 开始处理: ProntoQA_30 (mode=direct, semantic_check=False)
+[22:37:27]   [ProntoQA_281] ⚠ 异常: [Errno 2] No such file or directory: 'D:\\Project\\BProject\\EnhancingLLM\\all_prompt\\prontQA\\instruction.txt'
+[22:37:27] [Worker] 开始处理: ProntoQA_487 (mode=direct, semantic_check=False)
+[22:37:27] [Worker] 开始处理: ProntoQA_169 (mode=direct, semantic_check=False)
+[22:37:27] [Worker] 开始处理: ProntoQA_231 (mode=direct, semantic_check=False)
+[22:37:27] [Worker] 开始处理: ProntoQA_267 (mode=direct, semantic_check=False)
+[22:37:27]   [ProntoQA_285] ⚠ 异常: [Errno 2] No such file or directory: 'D:\\Project\\BProject\\EnhancingLLM\\all_prompt\\prontQA\\instruction.txt'
+[22:37:27] [Worker] 开始处理: ProntoQA_495 (mode=direct, semantic_check=False)
+[22:37:27] [Worker] 开始处理: ProntoQA_434 (mode=direct, semantic_check=False)
+[22:37:27] [Worker] 开始处理: ProntoQA_449 (mode=direct, semantic_check=False)
+[22:37:27] [Worker] 开始处理: ProntoQA_165 (mode=direct, semantic_check=False)
+[22:37:27]   [ProntoQA_152] ⚠ 异常: [Errno 2] No such file or directory: 'D:\\Project\\BProject\\EnhancingLLM\\all_prompt\\prontQA\\instruction.txt'
+[22:37:27] [Worker] 开始处理: ProntoQA_217 (mode=direct, semantic_check=False)
+[22:37:28] [Worker] 开始处理: ProntoQA_194 (mode=direct, semantic_check=False)
+[22:37:28] [Worker] 开始处理: ProntoQA_436 (mode=direct, semantic_check=False)
+[22:37:28]   [ProntoQA_293] ⚠ 异常: [Errno 2] No such file or directory: 'D:\\Project\\BProject\\EnhancingLLM\\all_prompt\\prontQA\\instruction.txt'
+[22:37:28] [Worker] 开始处理: ProntoQA_342 (mode=direct, semantic_check=False)
+[22:37:28] [Worker] 开始处理: ProntoQA_111 (mode=direct, semantic_check=False)
+[22:37:28] [Worker] 开始处理: ProntoQA_437 (mode=direct, semantic_check=False)
+[22:37:28] [Worker] 开始处理: ProntoQA_121 (mode=direct, semantic_check=False)
+[22:37:28]   [ProntoQA_189] ⚠ 异常: [Errno 2] No such file or directory: 'D:\\Project\\BProject\\EnhancingLLM\\all_prompt\\prontQA\\instruction.txt'
+[22:37:28] [Worker] 开始处理: ProntoQA_372 (mode=direct, semantic_check=False)
+[22:37:28] [Worker] 开始处理: ProntoQA_430 (mode=direct, semantic_check=False)
+[22:37:28] [Worker] 开始处理: ProntoQA_360 (mode=direct, semantic_check=False)
+[22:37:28]   [ProntoQA_187] ⚠ 异常: [Errno 2] No such file or directory: 'D:\\Project\\BProject\\EnhancingLLM\\all_prompt\\prontQA\\instruction.txt'
+[22:37:28] [Worker] 开始处理: ProntoQA_477 (mode=direct, semantic_check=False)
+[22:37:28] [Worker] 开始处理: ProntoQA_329 (mode=direct, semantic_check=False)
+[22:37:28] [Worker] 开始处理: ProntoQA_237 (mode=direct, semantic_check=False)
+[22:37:28] [Worker] 开始处理: ProntoQA_160 (mode=direct, semantic_check=False)
+[22:37:28]   [ProntoQA_30] ⚠ 异常: [Errno 2] No such file or directory: 'D:\\Project\\BProject\\EnhancingLLM\\all_prompt\\prontQA\\instruction.txt'
+[22:37:28] [Worker] 开始处理: ProntoQA_465 (mode=direct, semantic_check=False)
+[22:37:28] [Worker] 开始处理: ProntoQA_403 (mode=direct, semantic_check=False)
+[22:37:28] [Worker] 开始处理: ProntoQA_47 (mode=direct, semantic_check=False)
+[22:37:28] [Worker] 开始处理: ProntoQA_345 (mode=direct, semantic_check=False)
+[22:37:28]   [ProntoQA_487] ⚠ 异常: [Errno 2] No such file or directory: 'D:\\Project\\BProject\\EnhancingLLM\\all_prompt\\prontQA\\instruction.txt'
+[22:37:28] [Worker] 开始处理: ProntoQA_183 (mode=direct, semantic_check=False)
+[22:37:28] [Worker] 开始处理: ProntoQA_68 (mode=direct, semantic_check=False)
+[22:37:28] [Worker] 开始处理: ProntoQA_444 (mode=direct, semantic_check=False)
+[22:37:28] [Worker] 开始处理: ProntoQA_257 (mode=direct, semantic_check=False)
+[22:37:28] [Worker] 开始处理: ProntoQA_58 (mode=direct, semantic_check=False)
+[22:37:28]   [ProntoQA_169] ⚠ 异常: [Errno 2] No such file or directory: 'D:\\Project\\BProject\\EnhancingLLM\\all_prompt\\prontQA\\instruction.txt'
+[22:37:28] [Worker] 开始处理: ProntoQA_60 (mode=direct, semantic_check=False)
+[22:37:28] [Worker] 开始处理: ProntoQA_150 (mode=direct, semantic_check=False)
+[22:37:28] [Worker] 开始处理: ProntoQA_273 (mode=direct, semantic_check=False)
+[22:37:28] [Worker] 开始处理: ProntoQA_425 (mode=direct, semantic_check=False)
+[22:37:28]   [ProntoQA_231] ⚠ 异常: [Errno 2] No such file or directory: 'D:\\Project\\BProject\\EnhancingLLM\\all_prompt\\prontQA\\instruction.txt'
+[22:37:28] [Worker] 开始处理: ProntoQA_271 (mode=direct, semantic_check=False)
+[22:37:28] [Worker] 开始处理: ProntoQA_6 (mode=direct, semantic_check=False)
+[22:37:28] [Worker] 开始处理: ProntoQA_263 (mode=direct, semantic_check=False)
+[22:37:28]   [ProntoQA_267] ⚠ 异常: [Errno 2] No such file or directory: 'D:\\Project\\BProject\\EnhancingLLM\\all_prompt\\prontQA\\instruction.txt'
+[22:37:28] [Worker] 开始处理: ProntoQA_197 (mode=direct, semantic_check=False)
+[22:37:28] [Worker] 开始处理: ProntoQA_289 (mode=direct, semantic_check=False)
+[22:37:28] [Worker] 开始处理: ProntoQA_405 (mode=direct, semantic_check=False)
+[22:37:28] [Worker] 开始处理: ProntoQA_439 (mode=direct, semantic_check=False)
+[22:37:28]   [ProntoQA_495] ⚠ 异常: [Errno 2] No such file or directory: 'D:\\Project\\BProject\\EnhancingLLM\\all_prompt\\prontQA\\instruction.txt'
+[22:37:28]   [ProntoQA_434] ⚠ 异常: [Errno 2] No such file or directory: 'D:\\Project\\BProject\\EnhancingLLM\\all_prompt\\prontQA\\instruction.txt'
+[22:37:28]   [ProntoQA_449] ⚠ 异常: [Errno 2] No such file or directory: 'D:\\Project\\BProject\\EnhancingLLM\\all_prompt\\prontQA\\instruction.txt'
+[22:37:28]   [ProntoQA_165] ⚠ 异常: [Errno 2] No such file or directory: 'D:\\Project\\BProject\\EnhancingLLM\\all_prompt\\prontQA\\instruction.txt'
+[22:37:28]   [ProntoQA_217] ⚠ 异常: [Errno 2] No such file or directory: 'D:\\Project\\BProject\\EnhancingLLM\\all_prompt\\prontQA\\instruction.txt'
+[22:37:28]   [ProntoQA_194] ⚠ 异常: [Errno 2] No such file or directory: 'D:\\Project\\BProject\\EnhancingLLM\\all_prompt\\prontQA\\instruction.txt'
+[22:37:28]   [ProntoQA_436] ⚠ 异常: [Errno 2] No such file or directory: 'D:\\Project\\BProject\\EnhancingLLM\\all_prompt\\prontQA\\instruction.txt'
+[22:37:28]   [ProntoQA_342] ⚠ 异常: [Errno 2] No such file or directory: 'D:\\Project\\BProject\\EnhancingLLM\\all_prompt\\prontQA\\instruction.txt'
+[22:37:28]   [ProntoQA_111] ⚠ 异常: [Errno 2] No such file or directory: 'D:\\Project\\BProject\\EnhancingLLM\\all_prompt\\prontQA\\instruction.txt'
+[22:37:28]   [ProntoQA_437] ⚠ 异常: [Errno 2] No such file or directory: 'D:\\Project\\BProject\\EnhancingLLM\\all_prompt\\prontQA\\instruction.txt'
+[22:37:28]   [ProntoQA_121] ⚠ 异常: [Errno 2] No such file or directory: 'D:\\Project\\BProject\\EnhancingLLM\\all_prompt\\prontQA\\instruction.txt'
+[22:37:28]   [ProntoQA_372] ⚠ 异常: [Errno 2] No such file or directory: 'D:\\Project\\BProject\\EnhancingLLM\\all_prompt\\prontQA\\instruction.txt'
+[22:37:28]   [ProntoQA_430] ⚠ 异常: [Errno 2] No such file or directory: 'D:\\Project\\BProject\\EnhancingLLM\\all_prompt\\prontQA\\instruction.txt'
+[22:37:28]   [ProntoQA_360] ⚠ 异常: [Errno 2] No such file or directory: 'D:\\Project\\BProject\\EnhancingLLM\\all_prompt\\prontQA\\instruction.txt'
+[22:37:28]   [ProntoQA_329] ⚠ 异常: [Errno 2] No such file or directory: 'D:\\Project\\BProject\\EnhancingLLM\\all_prompt\\prontQA\\instruction.txt'
+[22:37:28]   [ProntoQA_477] ⚠ 异常: [Errno 2] No such file or directory: 'D:\\Project\\BProject\\EnhancingLLM\\all_prompt\\prontQA\\instruction.txt'
+[22:37:28]   [ProntoQA_237] ⚠ 异常: [Errno 2] No such file or directory: 'D:\\Project\\BProject\\EnhancingLLM\\all_prompt\\prontQA\\instruction.txt'
+[22:37:28]   [ProntoQA_160] ⚠ 异常: [Errno 2] No such file or directory: 'D:\\Project\\BProject\\EnhancingLLM\\all_prompt\\prontQA\\instruction.txt'
+[22:37:28]   [ProntoQA_465] ⚠ 异常: [Errno 2] No such file or directory: 'D:\\Project\\BProject\\EnhancingLLM\\all_prompt\\prontQA\\instruction.txt'
+[22:37:28]   [ProntoQA_403] ⚠ 异常: [Errno 2] No such file or directory: 'D:\\Project\\BProject\\EnhancingLLM\\all_prompt\\prontQA\\instruction.txt'
+[22:37:28]   [ProntoQA_47] ⚠ 异常: [Errno 2] No such file or directory: 'D:\\Project\\BProject\\EnhancingLLM\\all_prompt\\prontQA\\instruction.txt'
+[22:37:28]   [ProntoQA_345] ⚠ 异常: [Errno 2] No such file or directory: 'D:\\Project\\BProject\\EnhancingLLM\\all_prompt\\prontQA\\instruction.txt'
+[22:37:28]   [ProntoQA_68] ⚠ 异常: [Errno 2] No such file or directory: 'D:\\Project\\BProject\\EnhancingLLM\\all_prompt\\prontQA\\instruction.txt'
+[22:37:28]   [ProntoQA_183] ⚠ 异常: [Errno 2] No such file or directory: 'D:\\Project\\BProject\\EnhancingLLM\\all_prompt\\prontQA\\instruction.txt'
+[22:37:28]   [ProntoQA_257] ⚠ 异常: [Errno 2] No such file or directory: 'D:\\Project\\BProject\\EnhancingLLM\\all_prompt\\prontQA\\instruction.txt'
+[22:37:28]   [ProntoQA_444] ⚠ 异常: [Errno 2] No such file or directory: 'D:\\Project\\BProject\\EnhancingLLM\\all_prompt\\prontQA\\instruction.txt'
+[22:37:28]   [ProntoQA_58] ⚠ 异常: [Errno 2] No such file or directory: 'D:\\Project\\BProject\\EnhancingLLM\\all_prompt\\prontQA\\instruction.txt'
+[22:37:28]   [ProntoQA_60] ⚠ 异常: [Errno 2] No such file or directory: 'D:\\Project\\BProject\\EnhancingLLM\\all_prompt\\prontQA\\instruction.txt'
+[22:37:28]   [ProntoQA_150] ⚠ 异常: [Errno 2] No such file or directory: 'D:\\Project\\BProject\\EnhancingLLM\\all_prompt\\prontQA\\instruction.txt'
+[22:37:28]   [ProntoQA_273] ⚠ 异常: [Errno 2] No such file or directory: 'D:\\Project\\BProject\\EnhancingLLM\\all_prompt\\prontQA\\instruction.txt'
+[22:37:28]   [ProntoQA_425] ⚠ 异常: [Errno 2] No such file or directory: 'D:\\Project\\BProject\\EnhancingLLM\\all_prompt\\prontQA\\instruction.txt'
+[22:37:28]   [ProntoQA_263] ⚠ 异常: [Errno 2] No such file or directory: 'D:\\Project\\BProject\\EnhancingLLM\\all_prompt\\prontQA\\instruction.txt'
+[22:37:28]   [ProntoQA_271] ⚠ 异常: [Errno 2] No such file or directory: 'D:\\Project\\BProject\\EnhancingLLM\\all_prompt\\prontQA\\instruction.txt'
+[22:37:28]   [ProntoQA_6] ⚠ 异常: [Errno 2] No such file or directory: 'D:\\Project\\BProject\\EnhancingLLM\\all_prompt\\prontQA\\instruction.txt'
+[22:37:28]   [ProntoQA_197] ⚠ 异常: [Errno 2] No such file or directory: 'D:\\Project\\BProject\\EnhancingLLM\\all_prompt\\prontQA\\instruction.txt'
+[22:37:28]   [ProntoQA_439] ⚠ 异常: [Errno 2] No such file or directory: 'D:\\Project\\BProject\\EnhancingLLM\\all_prompt\\prontQA\\instruction.txt'
+[22:37:28]   [ProntoQA_405] ⚠ 异常: [Errno 2] No such file or directory: 'D:\\Project\\BProject\\EnhancingLLM\\all_prompt\\prontQA\\instruction.txt'
+[22:37:28]   [ProntoQA_289] ⚠ 异常: [Errno 2] No such file or directory: 'D:\\Project\\BProject\\EnhancingLLM\\all_prompt\\prontQA\\instruction.txt'
+[22:37:28] ==================================================
+[22:37:28] 评测完成!
+[22:37:28] 总计: 50, 正确: 0, 错误: 0, 异常: 50
+[22:37:28] 准确率: 0.00%
+[22:37:28] ==================================================

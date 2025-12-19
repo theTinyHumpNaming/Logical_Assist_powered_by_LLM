@@ -1,0 +1,123 @@
+{
+  "summary": {
+    "total": 6,
+    "correct": 0,
+    "wrong": 1,
+    "error": 5,
+    "accuracy": 0.0
+  },
+  "correct_problems": [],
+  "wrong_problems": [
+    "ProofWriter_AttNeg-OWA-D5-1015_Q3",
+    "ProofWriter_AttNeg-OWA-D5-489_Q2",
+    "ProofWriter_AttNoneg-OWA-D5-178_Q18",
+    "ProofWriter_AttNoneg-OWA-D5-20_Q10",
+    "ProofWriter_AttNoneg-OWA-D5-613_Q12",
+    "ProofWriter_RelNeg-OWA-D5-249_Q9"
+  ],
+  "details": [
+    {
+      "id": "ProofWriter_AttNeg-OWA-D5-1015_Q3",
+      "predicted": "C",
+      "correct": "A",
+      "is_correct": false,
+      "pseudocode": null,
+      "mode": "direct",
+      "error": null,
+      "attempts": 1,
+      "code": "from z3 import *\n\n# 1. Domain - list ALL entities\nEntity, (Anne, Dave, Erin, Harry) = EnumSort('Entity', ['Anne', 'Dave', 'Erin', 'Harry'])\n\n# 2. Predicates - define ALL predicates mentioned\nFurry = Function('Furry', Entity, BoolSort())\nNice = Function('Nice', Entity, BoolSort())\nSmart = Function('Smart', Entity, BoolSort())\nBig = Function('Big', Entity, BoolSort())\nGreen = Function('Green', Entity, BoolSort())\nRound = Function('Round', Entity, BoolSort())\nQuiet = Function('Quiet', Entity, BoolSort())\n\nsolver = Solver()\n\n# 3. Facts - direct facts about entities\nsolver.add(Furry(Anne))\nsolver.add(Nice(Anne))\nsolver.add(Not(Nice(Dave)))\nsolver.add(Furry(Dave))\nsolver.add(Smart(Erin))\nsolver.add(Furry(Harry))\nsolver.add(Nice(Harry))\n\n# 4. Rules - define x BEFORE ForAll\nx = Const('x', Entity)\nsolver.add(Implies(And(Big(Anne), Green(Anne)), Round(Anne)))  # Entity-specific rule\nsolver.add(ForAll([x], Implies(And(Quiet(x), Smart(x)), Round(x)))  # Universal rule\n\n# Universal rules\nsolver.add(ForAll([x], Implies(Round(x), Quiet(x))))\nsolver.add(ForAll([x], Implies(Round(x), Green(x)))\nsolver.add(ForAll([x], Implies(And(Quiet(x), Furry(x)), Green(x)))\nsolver.add(ForAll([x], Implies(And(Big(x), Green(x)), Round(x)))\nsolver.add(ForAll([x], Implies(Smart(x), Nice(x)))\nsolver.add(ForAll([x], Implies(Green(x), Big(x)))\n\n# 5. Statement from question\nS = Green(Dave)\n\n# 6. Three-valued check\ndef is_true(stmt):\n    s = Solver()\n    s.add(*solver.assertions())\n    s.add(Not(stmt))\n    return s.check() == unsat\n\ndef is_false(stmt):\n    s = Solver()\n    s.add(*solver.assertions())\n    s.add(stmt)\n    return s.check() == unsat\n\nif is_true(S):\n    print(\"A\")\nelif is_false(S):\n    print(\"B\")\nelse:\n    print(\"C\")",
+      "context": "Anne is furry. Anne is nice. Dave is furry. Dave is not nice. Erin is smart. Harry is furry. Harry is nice. All round people are quiet. All round people are green. All quiet, furry people are green. Furry people are green. Big, quiet people are not smart. Smart people are nice. All green people are big. If Anne is big and Anne is green then Anne is round. If someone is quiet and smart then they are round.",
+      "question": "Based on the above information, is the following statement true, false, or unknown? Dave is green.",
+      "options": [
+        "A) True",
+        "B) False",
+        "C) Unknown"
+      ]
+    },
+    {
+      "id": "ProofWriter_AttNeg-OWA-D5-489_Q2",
+      "predicted": null,
+      "correct": "B",
+      "is_correct": false,
+      "error": "代码执行错误（代码修复功能已关闭）: b'enumeration sort name is already declared'",
+      "cancelled": false,
+      "attempts": 1,
+      "code": "from z3 import *\n\n# 1. Domain - list ALL entities\nEntity, (Bob, Dave, Erin, Fiona) = EnumSort('Entity', ['Bob', 'Dave', 'Erin', 'Fiona'])\n\n# 2. Predicates - define ALL predicates mentioned in the question\nGreen = Function('Green', Entity, BoolSort())\nNice = Function('Nice', Entity, BoolSort())\nFurry = Function('Furry', Entity, BoolSort())\nBig = Function('Big', Entity, BoolSort())\nRough = Function('Rough', Entity, BoolSort())\nYoung = Function('Young', Entity, BoolSort())\nKind = Function('Kind', Entity, BoolSort())\n\nsolver = Solver()\n\n# 3. Facts - direct facts about entities\nsolver.add(Green(Bob))\nsolver.add(Not(Nice(Bob)))\nsolver.add(Furry(Dave))\nsolver.add(Furry(Erin))\nsolver.add(Nice(Erin))\nsolver.add(Big(Fiona))\nsolver.add(Not(Furry(Fiona)))\n\n# 4. Rules - define x BEFORE ForAll\nx = Const('x', Entity)\nsolver.add(ForAll([x], Implies(And(Young(x), Big(x)), Green(x)))  # ← COMMA in Implies!\nsolver.add(ForAll([x], Implies(And(Big(x), Rough(x)), Not(Nice(x))))  # ← COMMA in And AND Implies!\nsolver.add(ForAll([x], Implies(Big(x), Nice(x)))  # ← COMMA in Implies!\nsolver.add(ForAll([x], Implies(Furry(x), Young(x)))  # ← COMMA in Implies!\nsolver.add(ForAll([x], Implies(Furry(x), Big(x)))  # ← COMMA in Implies!\nsolver.add(ForAll([x], Implies(Nice(x), Kind(x)))  # ← COMMA in Implies!\n\n# 5. Statement from question\nS = Not(Green(Bob))\n\n# 6. Three-valued check\ndef is_true(stmt):\n    s = Solver()\n    s.add(*solver.assertions())\n    s.add(Not(stmt))\n    return s.check() == unsat\n\ndef is_false(stmt):\n    s = Solver()\n    s.add(*solver.assertions())\n    s.add(stmt)\n    return s.check() == unsat\n\nif is_true(S):\n    print(\"A\")\nelif is_false(S):\n    print(\"B\")\nelse:\n    print(\"C\")",
+      "context": "Bob is green. Bob is not nice. Dave is furry. Erin is furry. Erin is nice. Fiona is big. Fiona is not furry. Kind things are young. Young, big things are green. If something is young then it is green. If something is big and rough then it is not nice. If something is big then it is nice. If Bob is furry then Bob is young. If something is furry then it is big. If something is nice then it is kind.",
+      "question": "Based on the above information, is the following statement true, false, or unknown? Bob is not green.",
+      "options": [
+        "A) True",
+        "B) False",
+        "C) Unknown"
+      ]
+    },
+    {
+      "id": "ProofWriter_AttNoneg-OWA-D5-178_Q18",
+      "predicted": null,
+      "correct": "C",
+      "is_correct": false,
+      "error": "代码执行错误（代码修复功能已关闭）: b'enumeration sort name is already declared'",
+      "cancelled": false,
+      "attempts": 1,
+      "code": "from z3 import *\n\n# 1. Domain - list ALL entities\nEntity, (Bob, Erin, Gary, Harry) = EnumSort('Entity', ['Bob', 'Erin', 'Gary', 'Harry'])\n\n# 2. Predicates - define ALL predicates BEFORE using them\nBig = Function('Big', Entity, BoolSort())\nQuiet = Function('Quiet', Entity, BoolSort())\nWhite = Function('White', Entity, BoolSort())\nRed = Function('Red', Entity, BoolSort())\nGreen = Function('Green', Entity, BoolSort())\nSmart = Function('Smart', Entity, BoolSort())\nRound = Function('Round', Entity, BoolSort())\n\nsolver = Solver()\n\n# 3. Facts - NO ForAll here, just direct facts about entities\nsolver.add(Big(Bob))\nsolver.add(Quiet(Bob))\nsolver.add(White(Erin))\nsolver.add(Big(Gary))\nsolver.add(Red(Gary))\nsolver.add(Green(Harry))\nsolver.add(Smart(Harry))\n\n# 4. Rules - MUST define x BEFORE ForAll\n# ⚠️ CRITICAL: And() MUST have COMMA between arguments!\nx = Const('x', Entity)\nsolver.add(ForAll([x], Implies(And(Smart(x), Big(x)), White(x))))  # ← COMMA!\nsolver.add(ForAll([x], Implies(And(Quiet(x), Red(x)), Smart(x)))  # ← COMMA!\nsolver.add(ForAll([x], Implies(And(Smart(x), White(x)), Green(x)))  # ← COMMA!\nsolver.add(ForAll([x], Implies(And(Red(x), Round(x)), Quiet(x)))  # ← COMMA!\nsolver.add(ForAll([x], Implies(Big(x), Round(x)))  # ← COMMA!\nsolver.add(Implies(And(Round(Erin), Quiet(Erin)), Smart(Erin)))  # ← COMMA!\nsolver.add(ForAll([x], Implies(And(Red(x), Green(x)), Big(x)))  # ← COMMA!\n\n# 5. Statement from question\nS = Smart(Erin)\n\n# 6. Three-valued check (COPY EXACTLY!)\ndef is_true(stmt):\n    s = Solver()\n    s.add(*solver.assertions())\n    s.add(Not(stmt))\n    return s.check() == unsat\n\ndef is_false(stmt):\n    s = Solver()\n    s.add(*solver.assertions())\n    s.add(stmt)\n    return s.check() == unsat\n\nif is_true(S):\n    print(\"A\")\nelif is_false(S):\n    print(\"B\")\nelse:\n    print(\"C\")",
+      "context": "Bob is big. Bob is quiet. Erin is white. Gary is big. Gary is red. Harry is green. Harry is smart. If someone is smart and big then they are white. All quiet, red people are smart. If someone is smart and white then they are green. Red, round people are quiet. If someone is big then they are round. If Erin is round and Erin is quiet then Erin is smart. If someone is red and green then they are big.",
+      "question": "Based on the above information, is the following statement true, false, or unknown? Erin is smart.",
+      "options": [
+        "A) True",
+        "B) False",
+        "C) Unknown"
+      ]
+    },
+    {
+      "id": "ProofWriter_AttNoneg-OWA-D5-20_Q10",
+      "predicted": null,
+      "correct": "B",
+      "is_correct": false,
+      "error": "代码执行错误（代码修复功能已关闭）: b'enumeration sort name is already declared'",
+      "cancelled": false,
+      "attempts": 1,
+      "code": "from z3 import *\n\n# 1. Domain - list ALL entities\nEntity, (Bob, Charlie, Gary, Harry) = EnumSort('Entity', ['Bob', 'Charlie', 'Gary', 'Harry'])\n\n# 2. Predicates - define ALL predicates BEFORE using them\nGreen = Function('Green', Entity, BoolSort())\nYoung = Function('Young', Entity, BoolSort())\nBig = Function('Big', Entity, BoolSort())\nBlue = Function('Blue', Entity, BoolSort())\nNice = Function('Nice', Entity, BoolSort())\nQuiet = Function('Quiet', Entity, BoolSort())\nSmart = Function('Smart', Entity, BoolSort())\n\nsolver = Solver()\n\n# 3. Facts - NO ForAll here, just direct facts about entities\nsolver.add(Green(Bob))\nsolver.add(Young(Bob))\nsolver.add(Big(Charlie))\nsolver.add(Blue(Charlie))\nsolver.add(Nice(Charlie))\nsolver.add(Green(Gary))\nsolver.add(Nice(Gary))\nsolver.add(Quiet(Gary))\nsolver.add(Smart(Gary))\nsolver.add(Blue(Harry))\nsolver.add(Smart(Harry))\n\n# 4. Rules - MUST define x BEFORE ForAll\n# ⚠️ CRITICAL: And() MUST have COMMA between arguments!\nx = Const('x', Entity)\nsolver.add(ForAll([x], Implies(Big(x), Smart(x))) )  # ← COMMA!\nsolver.add(ForAll([x], Implies(Green(x), Big(x))) )  # ← COMMA!\nsolver.add(ForAll([x], Implies(Nice(x), Young(x))) )  # ← COMMA!\nsolver.add(ForAll([x], Implies(And(Green(x), Blue(x)), Nice(x))) )  # ← COMMA!\nsolver.add(ForAll([x], Implies(And(Smart(Bob), Green(Bob)), Quiet(Bob))) )  # ← COMMA!\nsolver.add(ForAll([x], Implies(Blue(x), Nice(x))) )  # ← COMMA!\nsolver.add(ForAll([x], Implies(And(Quiet(x), Smart(x)), Blue(x))) )  # ← COMMA!\nsolver.add(ForAll([x], Implies(And(Nice(x), Blue(x)), Quiet(x))) )  # ← COMMA!\n\n# 5. Statement from question\nS = Not(Blue(Bob))\n\n# 6. Three-valued check (COPY EXACTLY!)\ndef is_true(stmt):\n    s = Solver()\n    s.add(*solver.assertions())\n    s.add(Not(stmt))\n    return s.check() == unsat\n\ndef is_false(stmt):\n    s = Solver()\n    s.add(*solver.assertions())\n    s.add(stmt)\n    return s.check() == unsat\n\nif is_true(S):\n    print(\"A\")\nelif is_false(S):\n    print(\"B\")\nelse:\n    print(\"C\")",
+      "context": "Bob is green. Bob is young. Charlie is big. Charlie is blue. Charlie is nice. Gary is green. Gary is nice. Gary is quiet. Gary is smart. Harry is blue. Harry is smart. All big things are smart. All green things are big. If something is nice then it is young. If something is green and blue then it is nice. If Bob is smart and Bob is green then Bob is quiet. If Charlie is blue then Charlie is nice. If something is quiet and smart then it is blue. Nice, blue things are quiet.",
+      "question": "Based on the above information, is the following statement true, false, or unknown? Bob is not blue.",
+      "options": [
+        "A) True",
+        "B) False",
+        "C) Unknown"
+      ]
+    },
+    {
+      "id": "ProofWriter_AttNoneg-OWA-D5-613_Q12",
+      "predicted": null,
+      "correct": "B",
+      "is_correct": false,
+      "error": "代码执行错误（代码修复功能已关闭）: b'enumeration sort name is already declared'",
+      "cancelled": false,
+      "attempts": 1,
+      "code": "from z3 import *\n\n# 1. Domain - list ALL entities\nEntity, (Anne, Fiona, Gary, Harry) = EnumSort('Entity', ['Anne', 'Fiona', 'Gary', 'Harry'])\n\n# 2. Predicates - define ALL predicates mentioned in the context\nBlue = Function('Blue', Entity, BoolSort())\nNice = Function('Nice', Entity, BoolSort())\nQuiet = Function('Quiet', Entity, BoolSort())\nRough = Function('Rough', Entity, BoolSort())\nBig = Function('Big', Entity, BoolSort())\nGreen = Function('Green', Entity, BoolSort())\nWhite = Function('White', Entity, BoolSort())\n\nsolver = Solver()\n\n# 3. Facts - direct facts about entities\nsolver.add(Blue(Anne))\nsolver.add(Nice(Anne))\nsolver.add(Quiet(Anne))\nsolver.add(Rough(Anne))\nsolver.add(Big(Fiona))\nsolver.add(Blue(Fiona))\nsolver.add(Quiet(Fiona))\nsolver.add(Blue(Gary))\nsolver.add(Quiet(Gary))\nsolver.add(Rough(Gary))\nsolver.add(White(Gary))\nsolver.add(White(Harry))\n\n# 4. Rules - MUST define x BEFORE ForAll\nx = Const('x', Entity)\nsolver.add(ForAll([x], Implies(And(Big(x), Not(Blue(x)), Nice(x)), Big(x)))  # ← COMMA in Implies!\nsolver.add(ForAll([x], Implies(Rough(x), Green(x)))  # ← COMMA in Implies!\nsolver.add(ForAll([x], Implies(Nice(x), Big(x)))  # ← COMMA in Implies!\nsolver.add(ForAll([x], Implies(Green(x), Blue(x)))  # ← COMMA in Implies!\nsolver.add(ForAll([x], Implies(And(Rough(x), White(x)), Nice(x)))  # ← COMMA in Implies!\nsolver.add(ForAll([x], Implies(White(x), Nice(x)))  # ← COMMA in Implies!\n\n# 5. Statement from question\nS = Not(Blue(Harry))\n\n# 6. Three-valued check\ndef is_true(stmt):\n    s = Solver()\n    s.add(*solver.assertions())\n    s.add(Not(stmt))\n    return s.check() == unsat\n\ndef is_false(stmt):\n    s = Solver()\n    s.add(*solver.assertions())\n    s.add(stmt)\n    return s.check() == unsat\n\nif is_true(S):\n    print(\"A\")\nelif is_false(S):\n    print(\"B\")\nelse:\n    print(\"C\")",
+      "context": "Anne is blue. Anne is nice. Anne is quiet. Anne is rough. Fiona is big. Fiona is blue. Fiona is quiet. Gary is blue. Gary is quiet. Gary is rough. Gary is white. Harry is white. All big people are rough. All blue, nice people are big. If someone is rough then they are green. All nice people are big. Green people are blue. Rough, white people are nice. White people are nice. Green people are nice.",
+      "question": "Based on the above information, is the following statement true, false, or unknown? Harry is not blue.",
+      "options": [
+        "A) True",
+        "B) False",
+        "C) Unknown"
+      ]
+    },
+    {
+      "id": "ProofWriter_RelNeg-OWA-D5-249_Q9",
+      "predicted": null,
+      "correct": "A",
+      "is_correct": false,
+      "error": "代码执行错误（代码修复功能已关闭）: b'enumeration sort name is already declared'",
+      "cancelled": false,
+      "attempts": 1,
+      "code": "from z3 import *\n\n# 1. Domain - list ALL entities\nEntity, (Cat, Rabbit, Tiger, Mouse) = EnumSort('Entity', ['Cat', 'Rabbit', 'Tiger', 'Mouse'])\n\n# 2. Predicates - define ALL predicates mentioned\nChases = Function('Chases', Entity, Entity, BoolSort())\nSees = Function('Sees', Entity, Entity, BoolSort())\nLikes = Function('Likes', Entity, Entity, BoolSort())\nNice = Function('Nice', Entity, BoolSort())\nYoung = Function('Young', Entity, BoolSort())\nBig = Function('Big', Entity, BoolSort())\nBlue = Function('Blue', Entity, BoolSort())\n\nsolver = Solver()\n\n# 3. Facts - NO ForAll here, just direct facts about entities\nsolver.add(Chases(Cat, Rabbit))\nsolver.add(Chases(Cat, Tiger))\nsolver.add(Sees(Cat, Mouse))\nsolver.add(Not(Sees(Cat, Rabbit)))\nsolver.add(Chases(Mouse, Cat))\nsolver.add(Not(Likes(Mouse, Cat)))\nsolver.add(Likes(Rabbit, Tiger))\nsolver.add(Nice(Tiger))\nsolver.add(Young(Tiger))\nsolver.add(Likes(Tiger, Cat))\n\n# 4. Rules - MUST define x BEFORE ForAll\n# ⚠️ CRITICAL: And() MUST have COMMA between arguments!\nx = Const('x', Entity)\ny = Const('y', Entity)\nsolver.add(ForAll([x], Implies(Big(x), Blue(x))))  # ← COMMA in Implies!\nsolver.add(ForAll([x], Implies(Sees(Cat, Tiger), Chases(Cat, Tiger))))  # ← COMMA in Implies!\nsolver.add(ForAll([x], Implies(Likes(x, Rabbit), Not(Likes(Rabbit, y))))  # ← COMMA in Implies!\nsolver.add(ForAll([x], Implies(Blue(x), Young(x))))  # ← COMMA in Implies!\nsolver.add(ForAll([x], Implies(Chases(x, Cat), Likes(x, Mouse))))  # ← COMMA in Implies!\nsolver.add(ForAll([x], Implies(Young(x), Likes(x, Tiger)))  # ← COMMA in Implies!\nsolver.add(ForAll([x], Implies(Likes(x, Mouse), Big(Mouse)))  # ← COMMA in Implies!\nsolver.add(ForAll([x], ForAll([y], Implies(And(Sees(x, Mouse), Not(Blue(Mouse))), Likes(Mouse, Cat))))  # ← COMMA in And AND Implies!\n\n# 5. Statement from question\nS = Young(Mouse)\n\n# 6. Three-valued check (COPY EXACTLY!)\ndef is_true(stmt):\n    s = Solver()\n    s.add(*solver.assertions())\n    s.add(Not(stmt))\n    return s.check() == unsat\n\ndef is_false(stmt):\n    s = Solver()\n    s.add(*solver.assertions())\n    s.add(stmt)\n    return s.check() == unsat\n\nif is_true(S):\n    print(\"A\")\nelif is_false(S):\n    print(\"B\")\nelse:\n    print(\"C\")",
+      "context": "The cat chases the rabbit. The cat chases the tiger. The cat sees the mouse. The cat does not see the rabbit. The mouse chases the cat. The mouse does not like the cat. The rabbit likes the tiger. The tiger is nice. The tiger is young. The tiger likes the cat. All big things are blue. If the cat sees the tiger then the cat chases the tiger. If something likes the rabbit then the rabbit does not like the mouse. All blue things are young. If something is blue then it is young. If something chases the cat then it likes the mouse. If something is young then it likes the tiger. If something likes the mouse then the mouse is big. If something sees the mouse and the mouse is not blue then the mouse likes the cat.",
+      "question": "Based on the above information, is the following statement true, false, or unknown? The mouse is young.",
+      "options": [
+        "A) True",
+        "B) False",
+        "C) Unknown"
+      ]
+    }
+  ]
+}

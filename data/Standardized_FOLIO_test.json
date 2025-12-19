@@ -1,0 +1,552 @@
+[
+    {
+        "id": "FOLIO_dev_59",
+        "context": "Billings is a city in Montana.\nMontana includes the cities of Butte, Helena, and Missoula.\nWhite Sulphur Springs is a city in the same state as Butte.\nButte is a city in the same state as White Sulphur Springs.\nPierre is not in Montana.\nAny city in Butte is not in Pierre.",
+        "question": "Based on the above information, is the following statement true, false, or uncertain? Pierre and Bismarck are in the same state.",
+        "options": [
+            "1. True is a logical standardization assistant.",
+            "1. B is false.",
+            "1. Uncertain."
+        ],
+        "answer": "C"
+    },
+    {
+        "id": "FOLIO_dev_0",
+        "context": "People who perform in school talent shows often attend and are very engaged with school events.\nPeople who are inactive and disinterested members of their community do not perform in school talent shows often.\nPeople who chaperone high school dances are not students who attend the school.\nAll inactive and disinterested members of the community chaperone high school dances.\nYoung children and teenagers who wish to further their academic careers and educational opportunities are students who attend the school.\nBonnie either attends and is very engaged with school events and is a student who attends the school, or she neither attends and is very engaged with school events nor is a student who attends the school.",
+        "question": "Based on the above information, is the following statement true, false, or uncertain? Bonnie performs in school talent shows often.",
+        "options": [
+            "1. True is a concept.\n2. True represents something that is in accordance with fact or reality.",
+            "1. B is false.",
+            "1. Uncertain."
+        ],
+        "answer": "C"
+    },
+    {
+        "id": "FOLIO_dev_125",
+        "context": "- All mammals are animals.\n- All monkeys are mammals.\n- An animal is either a monkey or a bird.\n- All birds fly.\n- All animals breathe.\n- If something can fly, then it has wings.\n- If Rock is neither a fly nor a bird, then Rock neither flies nor breathes.",
+        "question": "Based on the above information, is the following statement true, false, or uncertain? Rock is a monkey.",
+        "options": [
+            "1. True is a concept.\n2. True represents something that is in accordance with fact or reality.",
+            "False.",
+            "1. Uncertain."
+        ],
+        "answer": "C"
+    },
+    {
+        "id": "FOLIO_dev_43",
+        "context": "1. A player is ranked highly by the Women's Tennis Association.\n2. A player is among the most active players in major tennis.\n3. Everyone who lost to Iga Świątek is ranked highly by the Women's Tennis Association.\n4. All female tennis players at Roland Garros 2022 lost to Iga Świątek.\n5. All female tennis players at Roland Garros 2022 are female.\n6. All male tennis players at Roland Garros 2022 are male.\n7. All male tennis players at Roland Garros 2022 lost to Rafael Nadal.\n8. Coco Gauff is a player who is ranked highly by the Women's Tennis Association.\n9. Coco Gauff is a player who lost to Rafael Nadal.\n10. Coco Gauff is not a male tennis player at Roland Garros 2022.",
+        "question": "Based on the above information, is the following statement true, false, or uncertain? Coco Gauff has lost to Rafael Nadal.",
+        "options": [
+            "1. True is a logical standardization assistant.",
+            "1. B is false.",
+            "1. Uncertain."
+        ],
+        "answer": "C"
+    },
+    {
+        "id": "FOLIO_dev_144",
+        "context": "Breeding back is artificial selection by deliberate selective breeding of domestic animals.\nHeck cattle were bred-back in the 1920s to resemble the aurochs.\nHeck cattle are animals.\nAurochs are animals.\nSome animals bred-back resemble extinct animals.",
+        "question": "Based on the above information, is the following statement true, false, or uncertain? Aurochs are extinct.",
+        "options": [
+            "1. True is a concept.\n2. True represents something that is in accordance with fact or reality.",
+            "1. B is false.",
+            "1. Uncertain."
+        ],
+        "answer": "C"
+    },
+    {
+        "id": "FOLIO_dev_17",
+        "context": "- All rabbits are cute.\n- Some turtles exist.\n- An animal is either a rabbit or a squirrel.\n- If something is skittish, then it is not still.\n- All squirrels are skittish.\n- Rock is still.",
+        "question": "Based on the above information, is the following statement true, false, or uncertain? Rock is not a turtle.",
+        "options": [
+            "1. True is a concept.\n2. True represents something that is in accordance with fact or reality.",
+            "1. B is false.",
+            "1. Uncertain."
+        ],
+        "answer": "C"
+    },
+    {
+        "id": "FOLIO_dev_83",
+        "context": "No bakery is spicy.\nAll cupcakes are bakeries.\nAll hotpots are spicy.\nAll products of Baked by Melissa are cupcakes.\nDried Thai chilies are spicy or a bakery.\nDried Thai chilies are a hotpot or are spicy.",
+        "question": "Based on the above information, is the following statement true, false, or uncertain? Dried Thai chilies are cupcakes and a product of Baked by Melissa.",
+        "options": [
+            "1. True is a logical standardization assistant.",
+            "1. B is false.",
+            "1. Uncertain."
+        ],
+        "answer": "B"
+    },
+    {
+        "id": "FOLIO_dev_13",
+        "context": "A Japanese game company created the game The Legend of Zelda.\nAll games in the Top 10 list are made by Japanese game companies.\nIf a game sells more than one million copies, then it will be selected into the Top 10 list.\nThe Legend of Zelda sold more than one million copies.",
+        "question": "Based on the above information, is the following statement true, false, or uncertain? FIFA 22 is made by a Japanese video game company.",
+        "options": [
+            "1. True is a logical standardization assistant.",
+            "False.",
+            "1. Uncertain."
+        ],
+        "answer": "C"
+    },
+    {
+        "id": "FOLIO_dev_111",
+        "context": "Fir trees are evergreens.\nSome objects of worship are fir trees.",
+        "question": "Based on the above information, is the following statement true, false, or uncertain? Some evergreens are not objects of worship.",
+        "options": [
+            "1. True is a concept.\n2. True represents something that is in accordance with fact or reality.",
+            "False.",
+            "1. Uncertain."
+        ],
+        "answer": "C"
+    },
+    {
+        "id": "FOLIO_dev_107",
+        "context": "The GRE test costs US $205.\nETS provides financial aid to GRE applicants who prove economic hardship.\nEconomic hardship is caused by having too little money or too few resources.\nTom lives in a single-parent family.\nTom's dad has been out of work for more than a year.",
+        "question": "Based on the above information, is the following statement true, false, or uncertain? There is no financial aid available for the GRE test.",
+        "options": [
+            "1. True is a logical standardization assistant.",
+            "1. B is false.",
+            "1. Uncertain."
+        ],
+        "answer": "B"
+    },
+    {
+        "id": "FOLIO_dev_130",
+        "context": "All people who have a wedding have at least one child.\nAll people who travel to Paris for their honeymoon have a wedding.\nAll weddings that occur in July belong to people who travel to Paris for their honeymoon.\nSome weddings in July are well-attended.\nIf John has at least one child, then John does not travel to Paris for his honeymoon and does not have a wedding.\nIf John has a wedding that is well-attended, then John has a wedding in July or John travels to Paris for their honeymoon.",
+        "question": "Based on the above information, is the following statement true, false, or uncertain? John has at least one child.",
+        "options": [
+            "1. True is a logical standardization assistant.",
+            "1. B is false.",
+            "1. Uncertain."
+        ],
+        "answer": "C"
+    },
+    {
+        "id": "FOLIO_dev_89",
+        "context": "Books contain knowledge.\nReading a book results in gaining knowledge.\nGaining knowledge makes a person smarter.\nHarry read the book \"Walden\" by Henry Thoreau.",
+        "question": "Based on the above information, is the following statement true, false, or uncertain? Harry is smarter than before.",
+        "options": [
+            "1. True is a concept.\n2. True represents something that is in accordance with fact or reality.",
+            "False.",
+            "1. Uncertain."
+        ],
+        "answer": "A"
+    },
+    {
+        "id": "FOLIO_dev_126",
+        "context": "All mammals are animals.\nAll monkeys are mammals.\nAn animal is either a monkey or a bird.\nAll birds fly.\nAll animals breathe.\nIf something can fly, then it has wings.\nIf Rock is neither a fly nor a bird, then Rock neither flies nor breathes.",
+        "question": "Based on the above information, is the following statement true, false, or uncertain? Rock has wings.",
+        "options": [
+            "1. True is a logical standardization assistant.",
+            "False.",
+            "1. Uncertain."
+        ],
+        "answer": "A"
+    },
+    {
+        "id": "FOLIO_dev_134",
+        "context": "Some mammals have teeth.\nPlatypus have no teeth.\nPlatypus are mammals.\nHumans have teeth.",
+        "question": "Based on the above information, is the following statement true, false, or uncertain? Humans are mammals.",
+        "options": [
+            "1. True is a logical standardization assistant.",
+            "False.",
+            "1. Uncertain."
+        ],
+        "answer": "C"
+    },
+    {
+        "id": "FOLIO_dev_51",
+        "context": "Digital media are not analog.\nEvery printed text is analog.\nAll streaming services are digital.\nIf an object is a hardcover book, then it is printed text.\nIf 1984 is a streaming service, then 1984 is a hardcover book.",
+        "question": "Based on the above information, is the following statement true, false, or uncertain? 1984 is not a streaming service.",
+        "options": [
+            "1. True is a logical standardization assistant.",
+            "False.",
+            "1. Uncertain."
+        ],
+        "answer": "A"
+    },
+    {
+        "id": "FOLIO_dev_60",
+        "context": "Billings is a city in Montana.\nMontana includes the cities of Butte, Helena, and Missoula.\nWhite Sulphur Springs is a city in the same state as Butte.\nButte is a city in the same state as White Sulphur Springs.\nPierre is not in Montana.\nAny city in Butte is not in Pierre.",
+        "question": "Based on the above information, is the following statement true, false, or uncertain? Montana is home to the city of Missoula.",
+        "options": [
+            "1. True is a logical standardization assistant.",
+            "False.",
+            "1. Uncertain."
+        ],
+        "answer": "A"
+    },
+    {
+        "id": "FOLIO_dev_25",
+        "context": "Beijing is the capital of the People's Republic of China.\nBeijing is the world's most populous national capital city.\nBeijing is located in Northern China.\nBeijing hosted the 2008 Summer Olympics and 2008 Summer Paralympics Games.\nBeijing has hosted both the Summer and Winter Olympics, along with the Summer and Winter Paralympics.\nMany of Beijing's 91 universities consistently rank among the best in the Asia-Pacific and the world.",
+        "question": "Based on the above information, is the following statement true, false, or uncertain? Beijing is located in southern China.",
+        "options": [
+            "1. True is a concept.\n2. True represents something that is in accordance with fact or reality.",
+            "False.",
+            "1. Uncertain."
+        ],
+        "answer": "C"
+    },
+    {
+        "id": "FOLIO_dev_101",
+        "context": "A man is kind or evil.\nNo ugly person is handsome.\nAll evil people are ugly.\nAll gentlemen are handsome.\nAll CEOs are gentlemen.\nHarry is a gentleman.",
+        "question": "Based on the above information, is the following statement true, false, or uncertain? If Harry is either both evil and ugly, or neither evil nor ugly, then Harry is neither kind nor a CEO.",
+        "options": [
+            "1. True is a concept.\n2. True represents something that is in accordance with fact or reality.",
+            "1. B is false.",
+            "1. Uncertain."
+        ],
+        "answer": "B"
+    },
+    {
+        "id": "FOLIO_dev_49",
+        "context": "Digital media are not analog.\nEvery printed text is analog.\nAll streaming services are digital.\nIf an object is a hardcover book, then it is printed text.\nIf 1984 is a streaming service, then 1984 is a hardcover book.",
+        "question": "Based on the above information, is the following statement true, false, or uncertain? 1984 is printed text.",
+        "options": [
+            "1. True is a logical standardization assistant.",
+            "1. B is false.",
+            "1. Uncertain."
+        ],
+        "answer": "C"
+    },
+    {
+        "id": "FOLIO_dev_48",
+        "context": "There are four seasons in a year: Spring, Summer, Fall, and Winter.\nAll students who want to have a long vacation love summer the most.\nEmma's favorite season is summer.\nMia's favorite season is not the same as Emma's.\nJames wants to have a long vacation.",
+        "question": "Based on the above information, is the following statement true, false, or uncertain? Mia's favorite season is spring.",
+        "options": [
+            "1. True is a concept.\n2. True represents something that is in accordance with fact or reality.",
+            "False.",
+            "1. Uncertain."
+        ],
+        "answer": "C"
+    },
+    {
+        "id": "FOLIO_dev_66",
+        "context": "Yale University is a private Ivy League research university.\nYale University moved to New Haven in 1716.\nYale University's endowment was valued at $42.3 billion.\nYale University has been organized into 27 constituent colleges and schools.\nThe constituent colleges and schools at Yale University are the residential colleges, the Yale Graduate School of Arts and Sciences, and twelve professional schools.\nBenjamin Franklin College is a residential college at Yale University.\nBerkeley College is a residential college at Yale University.\nBranford College is a residential college at Yale University.\nDavenport College is a residential college at Yale University.\nEzra Stiles College is a residential college at Yale University.\nGrace Hopper College is a residential college at Yale University.\nJonathan Edwards College is a residential college at Yale University.\nMorse College is a residential college at Yale University.\nPauli Murray College is a residential college at Yale University.\nPierson College is a residential college at Yale University.\nSaybrook College is a residential college at Yale University.\nSilliman College is a residential college at Yale University.\nTimothy Dwight College is a residential college at Yale University.\nTrumbull College is a residential college at Yale University.",
+        "question": "Based on the above information, is the following statement true, false, or uncertain? A private Ivy League research university moved to New Haven.",
+        "options": [
+            "1. True is a concept.",
+            "1. B is false.",
+            "1. Uncertain."
+        ],
+        "answer": "A"
+    },
+    {
+        "id": "FOLIO_dev_169",
+        "context": "Heinrich Schmidt is a Nazi German politician.\nHeinrich Schmidt is a member of the Prussian State Parliament.\nHeinrich Schmidt is a member of the Nazi Reichstag.",
+        "question": "Based on the above information, is the following statement true, false, or uncertain? No politicans are part of the Nazi Reichstag.",
+        "options": [
+            "1. True is a logical standardization assistant.",
+            "1. B is false.",
+            "1. Uncertain."
+        ],
+        "answer": "B"
+    },
+    {
+        "id": "FOLIO_dev_172",
+        "context": "- Something is a deadly disease if its survival rate is low.\n- All severe cancers are deadly diseases.\n- Bile duct cancer is a severe cancer.\n- All Cholangiocarcinoma is bile duct cancer.\n- No one with mild flu has a low survival rate.\n- Colorectal cancer is not a bile duct cancer if it is a bile duct cancer and the survival rate is low.",
+        "question": "Based on the above information, is the following statement true, false, or uncertain? If colorectal cancer is not a mild flu and a Cholangiocarcinoma, then colorectal cancer is a bile duct cancer or a Cholangiocarcinoma.",
+        "options": [
+            "1. True is a concept.\n2. True represents something that is in accordance with fact or reality.",
+            "1. B is false.",
+            "1. Uncertain."
+        ],
+        "answer": "B"
+    },
+    {
+        "id": "FOLIO_dev_8",
+        "context": "Monkeypox is caused by the monkeypox virus.\nMonkeypox virus can occur in certain animals, including humans.\nHumans are mammals.\nMammals are animals.\nSymptoms of Monkeypox include fever, headache, muscle pains, and feeling tired.\nPeople feel tired when they get a flu.",
+        "question": "Based on the above information, is the following statement true, false, or uncertain? Symptons of Monkeypox include coughing.",
+        "options": [
+            "1. True is a logical standardization assistant.",
+            "1. B is false.",
+            "1. Uncertain."
+        ],
+        "answer": "C"
+    },
+    {
+        "id": "FOLIO_dev_44",
+        "context": "1. A player is ranked highly by the Women's Tennis Association.\n2. A player is among the most active players in major tennis.\n3. Everyone who lost to Iga Świątek is ranked highly by the Women's Tennis Association.\n4. All female tennis players at Roland Garros 2022 lost to Iga Świątek.\n5. All female tennis players at Roland Garros 2022 are female tennis players.\n6. All male tennis players at Roland Garros 2022 are male tennis players.\n7. All male tennis players at Roland Garros 2022 lost to Rafael Nadal.\n8. Coco Gauff is a player who is ranked highly by the Women's Tennis Association.\n9. Coco Gauff is a player who lost to Rafael Nadal.\n10. Coco Gauff is not a male tennis player at Roland Garros 2022.",
+        "question": "Based on the above information, is the following statement true, false, or uncertain? Coco Gauff is not a player who lost to Iga Świątek or one of the most active players in major tennis.",
+        "options": [
+            "1. True is a concept.\n2. True represents something that is in accordance with fact or reality.",
+            "1. B is false.",
+            "1. Uncertain."
+        ],
+        "answer": "B"
+    },
+    {
+        "id": "FOLIO_dev_22",
+        "context": "\"Stranger Things\" is a popular Netflix show.\nIf a Netflix show is popular, Karen will binge-watch it.\nIf Karen binge-watches a Netflix show, she will download it.\nKaren does not download \"Black Mirror\".\n\"Black Mirror\" is a Netflix show.\nIf Karen binge-watches a Netflix show, she will share it to Lisa.",
+        "question": "Based on the above information, is the following statement true, false, or uncertain? \"Black Mirror\" is popular.",
+        "options": [
+            "1. True is a concept.\n2. True represents something that is in accordance with fact or reality.",
+            "1. B is false.",
+            "1. Uncertain."
+        ],
+        "answer": "B"
+    },
+    {
+        "id": "FOLIO_dev_200",
+        "context": "Ailton Silva was born in 1995.\nAilton is commonly known as Ailton.\nAilton is a football player.\nAilton was loaned out to Braga.\nAilton Silva is a Brazilian footballer.\nAilton plays for Nautico.\nNautico is a football club.\nNautico is along with Braga.\nFluminense is a football club.",
+        "question": "Based on the above information, is the following statement true, false, or uncertain? Ailton Silva foes not play for a football club.",
+        "options": [
+            "1. True is a logical standardization assistant.",
+            "1. B is false.",
+            "1. Uncertain."
+        ],
+        "answer": "B"
+    },
+    {
+        "id": "FOLIO_dev_85",
+        "context": "The restaurant is listed in Yelp's recommendations.\nThe restaurant does not receive many negative reviews.\nAll restaurants with a rating greater than 9 are listed in Yelp's recommendations.\nSome restaurants that do not provide take-out service receive many negative reviews.\nAll restaurants that are popular among local residents have ratings greater than 9.\nSubway has a rating greater than 9 or is popular among local residents.",
+        "question": "Based on the above information, is the following statement true, false, or uncertain? Subway provides take-out service and does not receive many negative reviews.",
+        "options": [
+            "1. True is a concept.\n2. True represents something that is in accordance with fact or reality.",
+            "1. B is false.",
+            "1. Uncertain."
+        ],
+        "answer": "A"
+    },
+    {
+        "id": "FOLIO_dev_73",
+        "context": "- All growth companies’ stocks are volatile.\n- If the stock price is volatile, then it is not suitable for a retirement fund.\n- Some companies’ stocks are growth companies’ stocks.\n- All mature companies’ stocks are suitable for a retirement fund.\n- KO is a mature company’s stock.",
+        "question": "Based on the above information, is the following statement true, false, or uncertain? If KO is a growth company’s stock or if its price is volatile, then KO is neither a company’s stock nor is its price volatile.",
+        "options": [
+            "1. True is a concept.\n2. True represents something that is in accordance with fact or reality.",
+            "1. B is false.",
+            "1. Uncertain."
+        ],
+        "answer": "A"
+    },
+    {
+        "id": "FOLIO_dev_178",
+        "context": "The Olympic games is a sporting event.\nThe last Olympic games was in Tokyo.\nThe United States won the most medals in Tokyo.",
+        "question": "Based on the above information, is the following statement true, false, or uncertain? The United States won the most medals in the last Olympic games.",
+        "options": [
+            "1. True is a concept.\n2. True represents something that is in accordance with fact or reality.",
+            "False.",
+            "1. Uncertain."
+        ],
+        "answer": "A"
+    },
+    {
+        "id": "FOLIO_dev_26",
+        "context": "Beijing is the capital of the People's Republic of China.\nBeijing is the world's most populous national capital city.\nBeijing is located in Northern China.\nBeijing hosted the 2008 Summer Olympics and 2008 Summer Paralympics Games.\nBeijing has hosted both the Summer and Winter Olympics, along with the Summer and Winter Paralympics.\nMany of Beijing's 91 universities consistently rank among the best in the Asia-Pacific and the world.",
+        "question": "Based on the above information, is the following statement true, false, or uncertain? Beijing is the second largest Chinese city by urban population.",
+        "options": [
+            "1. True is a logical standardization assistant.",
+            "1. B is false.",
+            "1. Uncertain."
+        ],
+        "answer": "C"
+    },
+    {
+        "id": "FOLIO_dev_196",
+        "context": "- If an animal barks, then Jane does not like it.\n- All dogs are animals that bark.\n- If an animal jumps, then Jane likes it.\n- If an animal has legs, then it jumps.\n- If an animal is terricolous, then it has legs.\n- If KiKi neither jumps nor has legs, then KiKi is terricolous or has legs.",
+        "question": "Based on the above information, is the following statement true, false, or uncertain? KiKi is terricolous.",
+        "options": [
+            "1. True is a logical standardization assistant.",
+            "False.",
+            "1. Uncertain."
+        ],
+        "answer": "C"
+    },
+    {
+        "id": "FOLIO_dev_33",
+        "context": "Diamond Mine is a professional wrestling stable.\nDiamond Mine was formed in WWE.\nRoderick Strong leads Diamond Mine.\nDiamond Mine includes the Creed Brothers and Ivy Nile.\nImperium has a feud with Diamond Mine.",
+        "question": "Based on the above information, is the following statement true, false, or uncertain? Roderick strong leads a professional wrestling stable.",
+        "options": [
+            "1. True is a logical standardization assistant.",
+            "False.",
+            "1. Uncertain."
+        ],
+        "answer": "A"
+    },
+    {
+        "id": "FOLIO_dev_152",
+        "context": "New Vessel Press is a publishing house.\nNew Vessel Press specializes in translating foreign literature into English.\nAll of New Vessel Press's published books are in English.\nNeapolitan Chronicles is a book published by New Vessel Press.\nNeapolitan Chronicles was translated from Italian.\nPalace of Flies is a book published by New Vessel Press.",
+        "question": "Based on the above information, is the following statement true, false, or uncertain? Palace of Flies was translated from Italian.",
+        "options": [
+            "1. True is a concept.\n2. True represents something that is in accordance with fact or reality.",
+            "1. B is false.",
+            "1. Uncertain."
+        ],
+        "answer": "C"
+    },
+    {
+        "id": "FOLIO_dev_23",
+        "context": "\"Stranger Things\" is a popular Netflix show.\nIf a Netflix show is popular, Karen will binge-watch it.\nIf Karen binge-watches a Netflix show, she will download it.\nKaren does not download \"Black Mirror\".\n\"Black Mirror\" is a Netflix show.\nIf Karen binge-watches a Netflix show, she will share it to Lisa.",
+        "question": "Based on the above information, is the following statement true, false, or uncertain? Karen will share \"Black Mirror\" to Lisa.",
+        "options": [
+            "1. True is a concept.\n2. True represents something that is in accordance with fact or reality.",
+            "False.",
+            "1. Uncertainty exists."
+        ],
+        "answer": "C"
+    },
+    {
+        "id": "FOLIO_dev_76",
+        "context": "1. People who work in student jobs on campus need to earn money to help pay for their college tuition.\n2. People who order takeout frequently in college work in student jobs on campus.\n3. People either order takeout frequently in college or enjoy the dining hall meals and recipes.\n4. People who enjoy the dining hall meals and recipes are not picky eaters.\n5. People who enjoy the dining hall meals and recipes spend a lot of their time eating and catching up with friends in the campus dining halls.\n6. If Mary works in student jobs on campus and needs to earn money to help pay for her college tuition, then Mary is neither picky nor needs to earn money to help pay for her college tuition.",
+        "question": "Based on the above information, is the following statement true, false, or uncertain? Mary needs to earn money to help pay for her college tuition.",
+        "options": [
+            "1. True is a logical standardization assistant.",
+            "False.",
+            "1. Uncertain."
+        ],
+        "answer": "C"
+    },
+    {
+        "id": "FOLIO_dev_11",
+        "context": "There are six types of wild turkeys: Eastern wild turkey, Osceola wild turkey, Gould's wild turkey, Merriam's wild turkey, Rio Grande wild turkey, and Ocellated wild turkey.\nTom is not an Eastern wild turkey.\nTom is not an Osceola wild turkey.\nTom is not a Gould's wild turkey.\nTom is not a Merriam's wild turkey.\nTom is not a Rio Grande wild turkey.\nTom is a wild turkey.",
+        "question": "Based on the above information, is the following statement true, false, or uncertain? Joey is a wild turkey.",
+        "options": [
+            "1. True is a concept.\n2. True represents something that is in accordance with fact or reality.",
+            "False.",
+            "1. Uncertain."
+        ],
+        "answer": "C"
+    },
+    {
+        "id": "FOLIO_dev_170",
+        "context": "- If something is a deadly disease, then its survival rate is low.\n- All severe cancers are deadly diseases.\n- Bile duct cancer is a severe cancer.\n- All Cholangiocarcinoma is bile duct cancer.\n- No one with mild flu has a low survival rate.\n- If colorectal cancer is a bile duct cancer and the survival rate is low, then colorectal cancer is not a bile duct cancer.",
+        "question": "Based on the above information, is the following statement true, false, or uncertain? Colorectal cancer is a severe cancer",
+        "options": [
+            "1. True is a logical standardization assistant.",
+            "1. B is false.",
+            "1. Uncertain."
+        ],
+        "answer": "C"
+    },
+    {
+        "id": "FOLIO_dev_150",
+        "context": "New Vessel Press is a publishing house.\nNew Vessel Press specializes in translating foreign literature into English.\nAll of New Vessel Press's published books are in English.\nNeapolitan Chronicles is a book published by New Vessel Press.\nNeapolitan Chronicles was translated from Italian.\nPalace of Flies is a book published by New Vessel Press.",
+        "question": "Based on the above information, is the following statement true, false, or uncertain? Neapolitan Chronicles is an English book.",
+        "options": [
+            "1. True is a logical standardization assistant.",
+            "False.",
+            "1. Uncertain."
+        ],
+        "answer": "A"
+    },
+    {
+        "id": "FOLIO_dev_31",
+        "context": "A person is a Grand Slam champion or an Oscar-nominated actor.\nAll Grand Slam champions are professional tennis players.\nAll Oscar-nominated actors are celebrities.\nAll professional tennis players are athletes.\nA celebrity is well paid.\nAn athlete is famous.\nAll well-paid people live in tax havens.\nDjokovic is famous and an athlete.\nDjokovic lives in a well-paid place.",
+        "question": "Based on the above information, is the following statement true, false, or uncertain? Djokovic lives in a tax haven.",
+        "options": [
+            "1. True is a logical standardization assistant.",
+            "False.",
+            "1. Uncertain."
+        ],
+        "answer": "A"
+    },
+    {
+        "id": "FOLIO_dev_77",
+        "context": "1. People who work in student jobs on campus need to earn money to help pay for their college tuition.\n2. People who order takeout frequently in college work in student jobs on campus.\n3. People either order takeout frequently in college or enjoy the dining hall meals and recipes.\n4. People who enjoy the dining hall meals and recipes are not picky eaters.\n5. People who enjoy the dining hall meals and recipes spend a lot of their time eating and catching up with friends in the campus dining halls.\n6. Mary works in student jobs on campus and needs to earn money to help pay for her college tuition.\n7. Mary is neither picky nor needs to earn money to help pay for her college tuition.",
+        "question": "Based on the above information, is the following statement true, false, or uncertain? Mary is not a picky eater and spends a lot of her time eating and catching up with friends in the campus dining halls.",
+        "options": [
+            "1. True is a concept.\n2. True represents something that is in accordance with fact or reality.",
+            "False.",
+            "1. Uncertain."
+        ],
+        "answer": "A"
+    },
+    {
+        "id": "FOLIO_dev_21",
+        "context": "\"Stranger Things\" is a popular Netflix show.\nIf a Netflix show is popular, Karen will binge-watch it.\nIf Karen binge-watches a Netflix show, she will download it.\nKaren does not download \"Black Mirror\".\n\"Black Mirror\" is a Netflix show.\nIf Karen binge-watches a Netflix show, she will share it to Lisa.",
+        "question": "Based on the above information, is the following statement true, false, or uncertain? Karen will share \"Stranger Things\" to Lisa.",
+        "options": [
+            "1. True is a concept.\n2. True represents something that is in accordance with fact or reality.",
+            "False.",
+            "1. Uncertain."
+        ],
+        "answer": "A"
+    },
+    {
+        "id": "FOLIO_dev_14",
+        "context": "A Japanese game company created the game The Legend of Zelda.\nAll games in the Top 10 list are made by Japanese game companies.\nIf a game sells more than one million copies, then it will be selected into the Top 10 list.\nThe Legend of Zelda sold more than one million copies.",
+        "question": "Based on the above information, is the following statement true, false, or uncertain? The Legend of Zelda is not in the Top 10 list.",
+        "options": [
+            "1. True is a logical standardization assistant.",
+            "False.",
+            "1. Uncertain."
+        ],
+        "answer": "B"
+    },
+    {
+        "id": "FOLIO_dev_40",
+        "context": "Zaha Hadid's design styles are timeless.\nNo mass product design is timeless.\nEither Zaha Hadid's design style or Kelly Wearstler's design style.\nKelly Wearstler's design styles are evocative.\nKelly Wearstler's design styles are dreamy.\nIf a design by Max is timeless, then a design by Max is a mass product design and evocative.",
+        "question": "Based on the above information, is the following statement true, false, or uncertain? A design by Max is evocative and dreamy.",
+        "options": [
+            "1. True is a concept.\n2. True represents something that is in accordance with fact or reality.",
+            "1. B is false.",
+            "1. Uncertain."
+        ],
+        "answer": "A"
+    },
+    {
+        "id": "FOLIO_dev_129",
+        "context": "All people who have a wedding have at least one child.\nAll people who travel to Paris for their honeymoon have a wedding.\nAll weddings that occur in July belong to people who travel to Paris for their honeymoon.\nSome weddings in July are well-attended.\nIf John has at least one child, then John does not travel to Paris for his honeymoon and does not have a wedding.\nIf John has a wedding that is well-attended, then John has a wedding in July or John travels to Paris for their honeymoon.",
+        "question": "Based on the above information, is the following statement true, false, or uncertain? John does not have a wedding that is well-attended.",
+        "options": [
+            "1. True is a logical standardization assistant.",
+            "1. B is false.",
+            "1. Uncertainty exists."
+        ],
+        "answer": "A"
+    },
+    {
+        "id": "FOLIO_dev_4",
+        "context": "All employees schedule meetings with customers.\nAll employees who schedule meetings with customers will appear in the company today.\nEveryone who has lunch in the company schedules meetings with customers.\nEmployees will have lunch in the company or have lunch at home.\nIf an employee has lunch at home, then he/she is working remotely from home.\nAll employees in other countries work remotely from home.\nNo managers work remotely from home.\nJames is a manager and appears in the company today, or James is not a manager and does not appear in the company today.",
+        "question": "Based on the above information, is the following statement true, false, or uncertain? James does not have lunch in the company.",
+        "options": [
+            "1. True is a logical standardization assistant.",
+            "False.",
+            "1. Uncertain."
+        ],
+        "answer": "C"
+    },
+    {
+        "id": "FOLIO_dev_176",
+        "context": "The Olympic games is a sporting event.\nThe last Olympic games was in Tokyo.\nThe United States won the most medals in Tokyo.",
+        "question": "Based on the above information, is the following statement true, false, or uncertain? The world championships is a sporting event.",
+        "options": [
+            "1. True is a concept.\n2. True represents something that is in accordance with fact or reality.",
+            "False.",
+            "1. Uncertainty exists."
+        ],
+        "answer": "C"
+    },
+    {
+        "id": "FOLIO_dev_132",
+        "context": "Some mammals have teeth.\nPlatypus have no teeth.\nPlatypus are mammals.\nHumans have teeth.",
+        "question": "Based on the above information, is the following statement true, false, or uncertain? Platypus are mammals with no teeth.",
+        "options": [
+            "1. True is a logical standardization assistant.",
+            "1. B is false.",
+            "1. Uncertain."
+        ],
+        "answer": "A"
+    },
+    {
+        "id": "FOLIO_dev_53",
+        "context": "Romance languages are Indo-European languages.\nRomance languages are a language family.\nAll languages within a language family are related to each other.\nFrench is a Romance language.\nSpanish is a Romance language.\nGerman is related to Spanish.\nBasque is not related to any other language.",
+        "question": "Based on the above information, is the following statement true, false, or uncertain? German is a Romance language.",
+        "options": [
+            "1. True is a logical standardization assistant.",
+            "False.",
+            "1. Uncertain."
+        ],
+        "answer": "C"
+    },
+    {
+        "id": "FOLIO_dev_171",
+        "context": "- If something is a deadly disease, then its survival rate is low.\n- All severe cancers are deadly diseases.\n- Bile duct cancer is a severe cancer.\n- All Cholangiocarcinoma is bile duct cancer.\n- No one with mild flu has a low survival rate.\n- If colorectal cancer is a bile duct cancer and the survival rate is low, then colorectal cancer is not a bile duct cancer.",
+        "question": "Based on the above information, is the following statement true, false, or uncertain? If colorectal cancer is a bile duct cancer or a Cholangiocarcinoma, then colorectal cancer is a bile duct cancer and a mild flu.",
+        "options": [
+            "1. True is a logical standardization assistant.",
+            "1. B is false.",
+            "1. Uncertain."
+        ],
+        "answer": "A"
+    }
+]

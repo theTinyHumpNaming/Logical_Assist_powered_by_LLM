@@ -1,0 +1,10 @@
+# 逻辑推理评测系统依赖
+
+# Z3 约束求解器
+z3-solver>=4.12.0
+
+# OpenAI 官方库 (支持 OpenAI 和兼容 API 如 DeepSeek)
+openai>=1.0.0
+
+# GUI (tkinter 内置于 Python，无需安装)
+# tkinter

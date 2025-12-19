@@ -1,0 +1,122 @@
+=== 评测日志开始于 2025-12-19 13:49:06 ===
+[13:49:09] 代码修复功能已关闭
+[13:49:14] 正在加载数据集: D:/学习资料/课程/程序设计大作业/EnhancingLLM/EnhancingLLM/data/FOLIO_test.json
+[13:49:14] 共 50 道题目，使用 4 个 workers 并行处理
+[13:49:14] [Worker] 开始处理: FOLIO_dev_0 (mode=direct, semantic_check=False, refinement_code=False)
+[13:49:14] [Worker] 开始处理: FOLIO_dev_43 (mode=direct, semantic_check=False, refinement_code=False)
+[13:49:14] [Worker] 开始处理: FOLIO_dev_125 (mode=direct, semantic_check=False, refinement_code=False)
+[13:49:14] [Worker] 开始处理: FOLIO_dev_59 (mode=direct, semantic_check=False, refinement_code=False)
+[13:49:21]   [FOLIO_dev_59] code执行错误: name 'in_state' is not defined
+[13:49:21]   [FOLIO_dev_59] ⚠ 异常: 代码执行错误（代码修复功能已关闭）: name 'in_state' is not defined
+[13:49:21] [Worker] 开始处理: FOLIO_dev_144 (mode=direct, semantic_check=False, refinement_code=False)
+[13:49:21]   [FOLIO_dev_125] code执行错误: '(' was never closed (<string>, line 36)
+[13:49:21]   [FOLIO_dev_125] ⚠ 异常: 代码执行错误（代码修复功能已关闭）: '(' was never closed (<string>, line 36)
+[13:49:21] [Worker] 开始处理: FOLIO_dev_17 (mode=direct, semantic_check=False, refinement_code=False)
+[13:49:23]   [FOLIO_dev_43] ✓ 正确! 预测=C, 答案=C
+[13:49:23] [Worker] 开始处理: FOLIO_dev_83 (mode=direct, semantic_check=False, refinement_code=False)
+[13:49:23]   [FOLIO_dev_0] ✓ 正确! 预测=C, 答案=C
+[13:49:23] [Worker] 开始处理: FOLIO_dev_13 (mode=direct, semantic_check=False, refinement_code=False)
+[13:49:25] [Worker] 开始处理: FOLIO_dev_111 (mode=direct, semantic_check=False, refinement_code=False)
+[13:49:25]   [FOLIO_dev_144] ✓ 正确! 预测=C, 答案=C
+[13:49:28]   [FOLIO_dev_17] ✓ 正确! 预测=C, 答案=C
+[13:49:28] [Worker] 开始处理: FOLIO_dev_107 (mode=direct, semantic_check=False, refinement_code=False)
+[13:49:29]   [FOLIO_dev_13] ✓ 正确! 预测=C, 答案=C
+[13:49:29] [Worker] 开始处理: FOLIO_dev_130 (mode=direct, semantic_check=False, refinement_code=False)
+[13:49:29]   [FOLIO_dev_83] ✓ 正确! 预测=B, 答案=B
+[13:49:29] [Worker] 开始处理: FOLIO_dev_89 (mode=direct, semantic_check=False, refinement_code=False)
+[13:49:31]   [FOLIO_dev_111] ✓ 正确! 预测=C, 答案=C
+[13:49:31] [Worker] 开始处理: FOLIO_dev_126 (mode=direct, semantic_check=False, refinement_code=False)
+[13:49:33]   [FOLIO_dev_107] ✗ 错误! 预测=C, 答案=B
+[13:49:33] [Worker] 开始处理: FOLIO_dev_134 (mode=direct, semantic_check=False, refinement_code=False)
+[13:49:34] 正在停止评测，终止所有任务...
+[13:49:34] 正在终止所有任务...
+[13:49:34] ==================================================
+[13:49:34] 评测已停止!
+[13:49:34] 已完成: 10, 正确: 7, 错误: 1, 异常: 2
+[13:49:34] 准确率: 70.00%
+[13:49:34] ==================================================
+[13:49:51] 正在加载数据集: D:/学习资料/课程/程序设计大作业/EnhancingLLM/EnhancingLLM/data/FOLIO_test.json
+[13:49:51] 共 50 道题目，使用 4 个 workers 并行处理
+[13:49:51] [Worker] 开始处理: FOLIO_dev_0 (mode=direct, semantic_check=False, refinement_code=False)
+[13:49:51] [Worker] 开始处理: FOLIO_dev_125 (mode=direct, semantic_check=False, refinement_code=False)
+[13:49:51] [Worker] 开始处理: FOLIO_dev_59 (mode=direct, semantic_check=False, refinement_code=False)
+[13:49:51] [Worker] 开始处理: FOLIO_dev_43 (mode=direct, semantic_check=False, refinement_code=False)
+[13:49:57]   [FOLIO_dev_125] code执行错误: '(' was never closed (<string>, line 36)
+[13:49:57]   [FOLIO_dev_125] ⚠ 异常: 代码执行错误（代码修复功能已关闭）: '(' was never closed (<string>, line 36)
+[13:49:57] [Worker] 开始处理: FOLIO_dev_144 (mode=direct, semantic_check=False, refinement_code=False)
+[13:49:58]   [FOLIO_dev_59] code执行错误: Z3 internal error (known bug): invalid syntax. Perhaps you forgot a comma? (<string>, line 41)
+[13:49:58]   [FOLIO_dev_59] ⚠ 异常: 代码执行错误（代码修复功能已关闭）: Z3 internal error (known bug): invalid syntax. Perhaps you forgot a comma? (<string>, line 41)
+[13:49:58] [Worker] 开始处理: FOLIO_dev_17 (mode=direct, semantic_check=False, refinement_code=False)
+[13:49:58]   [FOLIO_dev_0] code执行错误: '(' was never closed (<string>, line 36)
+[13:49:58]   [FOLIO_dev_0] ⚠ 异常: 代码执行错误（代码修复功能已关闭）: '(' was never closed (<string>, line 36)
+[13:49:58] [Worker] 开始处理: FOLIO_dev_83 (mode=direct, semantic_check=False, refinement_code=False)
+[13:49:59]   [FOLIO_dev_43] code执行错误: True, False or Z3 Boolean expression expected. Received Iga_Świątek of type <class 'str'>
+[13:49:59]   [FOLIO_dev_43] ⚠ 异常: 代码执行错误（代码修复功能已关闭）: True, False or Z3 Boolean expression expected. Received Iga_Świątek of type <class 'str'>
+[13:49:59] [Worker] 开始处理: FOLIO_dev_13 (mode=direct, semantic_check=False, refinement_code=False)
+[13:50:02]   [FOLIO_dev_144] ✓ 正确! 预测=C, 答案=C
+[13:50:02] [Worker] 开始处理: FOLIO_dev_111 (mode=direct, semantic_check=False, refinement_code=False)
+[13:50:03]   [FOLIO_dev_17] ✓ 正确! 预测=C, 答案=C
+[13:50:03] [Worker] 开始处理: FOLIO_dev_107 (mode=direct, semantic_check=False, refinement_code=False)
+[13:50:04]   [FOLIO_dev_83] ✓ 正确! 预测=B, 答案=B
+[13:50:04] [Worker] 开始处理: FOLIO_dev_130 (mode=direct, semantic_check=False, refinement_code=False)
+[13:50:05]   [FOLIO_dev_13] ✗ 错误! 预测=A, 答案=C
+[13:50:05] [Worker] 开始处理: FOLIO_dev_89 (mode=direct, semantic_check=False, refinement_code=False)
+[13:50:07]   [FOLIO_dev_111] ✓ 正确! 预测=C, 答案=C
+[13:50:07] [Worker] 开始处理: FOLIO_dev_126 (mode=direct, semantic_check=False, refinement_code=False)
+[13:50:08]   [FOLIO_dev_107] ✗ 错误! 预测=C, 答案=B
+[13:50:08] [Worker] 开始处理: FOLIO_dev_134 (mode=direct, semantic_check=False, refinement_code=False)
+[13:50:10]   [FOLIO_dev_89] ✗ 错误! 预测=C, 答案=A
+[13:50:10] [Worker] 开始处理: FOLIO_dev_51 (mode=direct, semantic_check=False, refinement_code=False)
+[13:50:10]   [FOLIO_dev_130] ✓ 正确! 预测=C, 答案=C
+[13:50:10] [Worker] 开始处理: FOLIO_dev_60 (mode=direct, semantic_check=False, refinement_code=False)
+[13:50:12]   [FOLIO_dev_134] ✓ 正确! 预测=C, 答案=C
+[13:50:12] [Worker] 开始处理: FOLIO_dev_25 (mode=direct, semantic_check=False, refinement_code=False)
+[13:50:14]   [FOLIO_dev_126] code执行错误: '(' was never closed (<string>, line 36)
+[13:50:14]   [FOLIO_dev_126] ⚠ 异常: 代码执行错误（代码修复功能已关闭）: '(' was never closed (<string>, line 36)
+[13:50:14] [Worker] 开始处理: FOLIO_dev_101 (mode=direct, semantic_check=False, refinement_code=False)
+[13:50:15]   [FOLIO_dev_60] code执行错误: name 'same_state' is not defined
+[13:50:15]   [FOLIO_dev_60] ⚠ 异常: 代码执行错误（代码修复功能已关闭）: name 'same_state' is not defined
+[13:50:15] [Worker] 开始处理: FOLIO_dev_49 (mode=direct, semantic_check=False, refinement_code=False)
+[13:50:16]   [FOLIO_dev_51] ✓ 正确! 预测=A, 答案=A
+[13:50:16] [Worker] 开始处理: FOLIO_dev_48 (mode=direct, semantic_check=False, refinement_code=False)
+[13:50:18]   [FOLIO_dev_25] ✓ 正确! 预测=C, 答案=C
+[13:50:18] [Worker] 开始处理: FOLIO_dev_66 (mode=direct, semantic_check=False, refinement_code=False)
+[13:50:20]   [FOLIO_dev_49] ✓ 正确! 预测=C, 答案=C
+[13:50:20] [Worker] 开始处理: FOLIO_dev_169 (mode=direct, semantic_check=False, refinement_code=False)
+[13:50:20]   [FOLIO_dev_101] ✗ 错误! 预测=None, 答案=B
+[13:50:20] [Worker] 开始处理: FOLIO_dev_172 (mode=direct, semantic_check=False, refinement_code=False)
+[13:50:20]   [FOLIO_dev_48] ✗ 错误! 预测=B, 答案=C
+[13:50:20] [Worker] 开始处理: FOLIO_dev_44 (mode=direct, semantic_check=False, refinement_code=False)
+[13:50:23]   [FOLIO_dev_66] ✓ 正确! 预测=A, 答案=A
+[13:50:23] [Worker] 开始处理: FOLIO_dev_8 (mode=direct, semantic_check=False, refinement_code=False)
+[13:50:26]   [FOLIO_dev_169] ✗ 错误! 预测=C, 答案=B
+[13:50:26] [Worker] 开始处理: FOLIO_dev_22 (mode=direct, semantic_check=False, refinement_code=False)
+[13:50:26]   [FOLIO_dev_172] ✗ 错误! 预测=A, 答案=B
+[13:50:26] [Worker] 开始处理: FOLIO_dev_200 (mode=direct, semantic_check=False, refinement_code=False)
+[13:50:27]   [FOLIO_dev_8] ✓ 正确! 预测=C, 答案=C
+[13:50:27] [Worker] 开始处理: FOLIO_dev_85 (mode=direct, semantic_check=False, refinement_code=False)
+[13:50:27]   [FOLIO_dev_44] ✗ 错误! 预测=C, 答案=B
+[13:50:27] [Worker] 开始处理: FOLIO_dev_178 (mode=direct, semantic_check=False, refinement_code=False)
+[13:50:31]   [FOLIO_dev_22] ✓ 正确! 预测=B, 答案=B
+[13:50:31] [Worker] 开始处理: FOLIO_dev_73 (mode=direct, semantic_check=False, refinement_code=False)
+[13:50:32]   [FOLIO_dev_200] ✓ 正确! 预测=B, 答案=B
+[13:50:32] [Worker] 开始处理: FOLIO_dev_26 (mode=direct, semantic_check=False, refinement_code=False)
+[13:50:32]   [FOLIO_dev_178] ✓ 正确! 预测=A, 答案=A
+[13:50:32] [Worker] 开始处理: FOLIO_dev_196 (mode=direct, semantic_check=False, refinement_code=False)
+[13:50:33]   [FOLIO_dev_85] ✗ 错误! 预测=C, 答案=A
+[13:50:33] [Worker] 开始处理: FOLIO_dev_33 (mode=direct, semantic_check=False, refinement_code=False)
+[13:50:37]   [FOLIO_dev_26] ✓ 正确! 预测=C, 答案=C
+[13:50:37] [Worker] 开始处理: FOLIO_dev_152 (mode=direct, semantic_check=False, refinement_code=False)
+[13:50:37]   [FOLIO_dev_73] code执行错误: name 'growth_company_stock' is not defined
+[13:50:37]   [FOLIO_dev_73] ⚠ 异常: 代码执行错误（代码修复功能已关闭）: name 'growth_company_stock' is not defined
+[13:50:37] [Worker] 开始处理: FOLIO_dev_76 (mode=direct, semantic_check=False, refinement_code=False)
+[13:50:38]   [FOLIO_dev_196] code执行错误: name 'kiki_terricolous' is not defined
+[13:50:38]   [FOLIO_dev_196] ⚠ 异常: 代码执行错误（代码修复功能已关闭）: name 'kiki_terricolous' is not defined
+[13:50:38] [Worker] 开始处理: FOLIO_dev_23 (mode=direct, semantic_check=False, refinement_code=False)
+[13:50:38] 正在停止评测，终止所有任务...
+[13:50:39] 正在终止所有任务...
+[13:50:39] ==================================================
+[13:50:39] 评测已停止!
+[13:50:39] 已完成: 32, 正确: 15, 错误: 9, 异常: 8
+[13:50:39] 准确率: 46.88%
+[13:50:39] ==================================================

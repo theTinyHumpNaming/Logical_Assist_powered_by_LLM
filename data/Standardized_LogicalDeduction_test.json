@@ -1,0 +1,686 @@
+[
+    {
+        "id": "logical_deduction_26",
+        "context": "Mya finished first.\nAmy finished above Mel.\nAmy finished below Eli.\nDan finished last.",
+        "question": "Which of the following is true?",
+        "options": [
+            "Amy finished first.",
+            "Dan finished first.",
+            "Mya finished first.",
+            "Eli finished first.",
+            "Mel finished first."
+        ],
+        "answer": "C"
+    },
+    {
+        "id": "logical_deduction_32",
+        "context": "Rob is a golfer.\nEve is a golfer.\nEli is a golfer.\nAmy is a golfer.\nDan is a golfer.\nDan finished second.\nAmy finished below Eve.\nDan finished above Eve.\nAmy finished above Eli.",
+        "question": "Which of the following is true?",
+        "options": [
+            "Rob finished third.",
+            "Eve finished third.",
+            "Eli finished third.",
+            "Amy finished third.",
+            "Dan finished third."
+        ],
+        "answer": "B"
+    },
+    {
+        "id": "logical_deduction_27",
+        "context": "The owl is second from the right.\nThe robin is second from the left.\nThe robin is to the right of the blue jay.\nThe hummingbird is to the right of the hawk.",
+        "question": "Which of the following is true?",
+        "options": [
+            "The owl is the leftmost animal.",
+            "The robin is to the left of the blue jay.\nThe robin is to the left of the cardinal.\nThe robin is to the left of the sparrow.",
+            "The blue jay is the leftmost bird.",
+            "The hawk is the leftmost bird.",
+            "The hummingbird is to the left of the eagle.\nThe hummingbird is to the left of the finch.\nThe hummingbird is to the left of the sparrow."
+        ],
+        "answer": "C"
+    },
+    {
+        "id": "logical_deduction_166",
+        "context": "The owl is second from the left.\nThe quail is to the left of the owl.\nThe raven is to the left of the hummingbird.\nThe hummingbird is to the left of the blue jay.\nThe blue jay is to the left of the falcon.\nThe falcon is to the left of the crow.",
+        "question": "Which of the following is true?",
+        "options": [
+            "The falcon is the leftmost item.",
+            "The owl is to the left of the cat.\nThe owl is to the left of the dog.\nThe owl is to the left of the rabbit.",
+            "The quail is to the left of all other birds.",
+            "The raven is to the left of the crow.\nThe raven is to the left of the dove.\nThe raven is to the left of the hawk.",
+            "The hummingbird is to the left of the robin.\nThe hummingbird is to the left of the sparrow.\nThe hummingbird is to the left of the finch.",
+            "The blue jay is the leftmost bird.",
+            "The crow is to the left of the blue jay.\nThe crow is to the left of the sparrow.\nThe crow is to the left of the robin."
+        ],
+        "answer": "C"
+    },
+    {
+        "id": "logical_deduction_254",
+        "context": "Ana is a golfer.\nDan is a golfer.\nMel is a golfer.\nDan finished second.\nMel finished first.",
+        "question": "Which of the following is true?",
+        "options": [
+            "Ana finished first.",
+            "Dan finished first.",
+            "Mel finished first."
+        ],
+        "answer": "C"
+    },
+    {
+        "id": "logical_deduction_179",
+        "context": "The cardinal is the second from the left.\nThe owl is to the left of the cardinal.\nThe quail is to the left of the hummingbird.\nThe raven is to the right of the hummingbird.\nThe raven is the third from the right.\nThe falcon is the rightmost.",
+        "question": "Which of the following is true?",
+        "options": [
+            "The hawk is third from the left.",
+            "The raven is third from the left.",
+            "The hummingbird is third from the left.",
+            "The falcon is third from the left.",
+            "The owl is third from the left.",
+            "The quail is third from the left.",
+            "The cardinal is the third from the left."
+        ],
+        "answer": "F"
+    },
+    {
+        "id": "logical_deduction_223",
+        "context": "The blue jay is the leftmost.\nThe owl is the third from the left.\nThe cardinal is the fourth from the left.\nThe raven is the third from the right.\nThe hummingbird is to the left of the quail.\nThe robin is to the left of the cardinal.",
+        "question": "Which of the following is true?",
+        "options": [
+            "The hummingbird is the leftmost.",
+            "The cardinal is the leftmost bird.",
+            "The blue jay is the leftmost bird.",
+            "The owl is to the left of the cat.\nThe owl is to the left of the dog.\nThe owl is to the left of the rabbit.",
+            "The raven is the leftmost animal.",
+            "The quail is to the left of the pigeon.\nThe quail is to the left of the robin.\nThe quail is to the left of the sparrow.",
+            "The robin is to the left of the blue jay.\nThe robin is to the left of the cardinal.\nThe robin is to the left of the sparrow."
+        ],
+        "answer": "C"
+    },
+    {
+        "id": "logical_deduction_78",
+        "context": "The falcon is the leftmost.\nThe raven is second from the left.\nThe crow is to the left of the quail.\nThe quail is to the left of the blue jay.",
+        "question": "Which of the following is true?",
+        "options": [
+            "The blue jay is to the right of all other birds.",
+            "The raven is to the right of all other birds.",
+            "The crow is to the right of all other animals.\nThe crow is the rightmost animal.",
+            "The falcon is to the right of all other items.",
+            "The quail is to the right of all other animals."
+        ],
+        "answer": "A"
+    },
+    {
+        "id": "logical_deduction_131",
+        "context": "Rob finished first.\nEve finished last.\nDan finished above Ada.\nMel finished above Mya.\nJoe finished second-to-last.\nMya finished third.",
+        "question": "Which of the following is true?",
+        "options": [
+            "Joe finished third.",
+            "Mel finished third.",
+            "Mya finished third.",
+            "Eve finished third.",
+            "Rob finished third.",
+            "Ada finished third.",
+            "Dan finished third."
+        ],
+        "answer": "C"
+    },
+    {
+        "id": "logical_deduction_150",
+        "context": "Joe finished below Dan.\nDan finished below Ada.\nAda finished below Amy.\nAmy finished third.\nMel finished third-to-last.\nRob finished below Mya.",
+        "question": "Which of the following is true?",
+        "options": [
+            "Joe finished second.",
+            "Dan finished second.",
+            "Ada finished second.",
+            "Amy finished second.",
+            "Rob finished second.",
+            "Mya finished second.",
+            "Mel finished in second place."
+        ],
+        "answer": "E"
+    },
+    {
+        "id": "logical_deduction_6",
+        "context": "The blue jay is the leftmost bird.\nThe robin is to the left of the quail.\nThe falcon is the third bird from the left.\nThe crow is to the left of the falcon.",
+        "question": "Which of the following is true?",
+        "options": [
+            "The crow is third from the left.",
+            "The robin is third from the left.",
+            "The quail is third from the left.",
+            "The blue jay is third from the left.",
+            "The falcon is third from the left."
+        ],
+        "answer": "E"
+    },
+    {
+        "id": "logical_deduction_60",
+        "context": "The antique car show has five vehicles.\nThe vehicles are a bus, a truck, a motorcycle, a sedan, and a hatchback.\nThe sedan is the second-oldest vehicle.\nThe hatchback is newer than the motorcycle.\nThe motorcycle is newer than the sedan.\nThe hatchback is older than the truck.",
+        "question": "Which of the following is true?",
+        "options": [
+            "The bus is older than one vehicle.\nThe bus is newer than one vehicle.",
+            "The truck is older than one vehicle.\nThe truck is newer than one vehicle.",
+            "The motorcycle is older than one vehicle.\nThe motorcycle is newer than one vehicle.",
+            "The sedan is the second-oldest car.",
+            "The hatchback is older than one car.\nThe hatchback is newer than one car."
+        ],
+        "answer": "D"
+    },
+    {
+        "id": "logical_deduction_22",
+        "context": "The red book is the leftmost book.\nThe red book is to the left of the blue book.\nThe blue book is to the left of the green book.\nThe green book is to the left of the brown book.\nThe gray book is to the left of the blue book.",
+        "question": "Which of the following is true?",
+        "options": [
+            "The green book is second from the right.",
+            "The blue book is second from the right.",
+            "The brown book is second from the right.",
+            "The gray book is second from the right.",
+            "The red book is second from the right."
+        ],
+        "answer": "A"
+    },
+    {
+        "id": "logical_deduction_248",
+        "context": "The red book is the second from the left.\nThe white book is to the left of the gray book.\nThe white book is to the left of the red book.\nThe red book is to the left of the gray book.",
+        "question": "Which of the following is true?",
+        "options": [
+            "The red book is second from the left.",
+            "The gray book is second from the left.",
+            "The white book is second from the left."
+        ],
+        "answer": "A"
+    },
+    {
+        "id": "logical_deduction_66",
+        "context": "Joe finished below Dan.\nMya finished first.\nDan finished below Rob.\nEve finished above Rob.",
+        "question": "Which of the following is true?",
+        "options": [
+            "Joe finished last.",
+            "Eve finished last.",
+            "Mya finished last.",
+            "Rob finished last.",
+            "Dan finished last."
+        ],
+        "answer": "A"
+    },
+    {
+        "id": "logical_deduction_126",
+        "context": "The station wagon is the fourth-newest vehicle.\nThe motorcycle is newer than the truck.\nThe station wagon is older than the hatchback.\nThe minivan is newer than the hatchback.\nThe bus is newer than the minivan.\nThe truck is newer than the limousine.",
+        "question": "Which of the following is true?",
+        "options": [
+            "The bus is newer than one vehicle.\nThe bus is older than one vehicle.",
+            "The motorcycle is newer than one vehicle.\nThe motorcycle is older than one vehicle.",
+            "The hatchback is newer than one car.\nThe hatchback is older than one car.",
+            "The station wagon is newer than one vehicle.\nThe station wagon is older than one vehicle.",
+            "The minivan is newer than one vehicle.\nThe minivan is older than one vehicle.",
+            "The truck is newer than one vehicle.\nThe truck is older than one vehicle.",
+            "The limousine is newer than one vehicle.\nThe limousine is older than one vehicle."
+        ],
+        "answer": "E"
+    },
+    {
+        "id": "logical_deduction_116",
+        "context": "The station wagon is the newest vehicle.\nThe sedan is the third-newest vehicle.\nThe tractor is the third-oldest vehicle.\nThe hatchback is newer than the truck.\nThe motorcycle is older than the truck.\nThe minivan is newer than the sedan.",
+        "question": "Which of the following is true?",
+        "options": [
+            "The truck is the fourth-newest vehicle.",
+            "The motorcycle is the fourth-newest vehicle.",
+            "The sedan is the fourth-newest car.",
+            "The minivan is the fourth-newest vehicle.",
+            "The station wagon is newer than three cars.\nThe station wagon is older than one car.",
+            "The hatchback is the fourth-newest car.",
+            "The tractor is the fourth-newest vehicle."
+        ],
+        "answer": "F"
+    },
+    {
+        "id": "logical_deduction_230",
+        "context": "The gray book is to the left of the purple book.\nThe white book is to the right of the brown book.\nThe black book is the third from the right.\nThe purple book is to the left of the white book.\nThe white book is the second from the right.\nThe gray book is the third from the left.\nThe brown book is to the right of the green book.",
+        "question": "Which of the following is true?",
+        "options": [
+            "The purple book is second from the right.",
+            "The green book is second from the right.",
+            "The white book is second from the right.",
+            "The gray book is second from the right.",
+            "The red book is second from the right.",
+            "The black book is second from the right.",
+            "The brown book is second from the right."
+        ],
+        "answer": "C"
+    },
+    {
+        "id": "logical_deduction_217",
+        "context": "The pears are more expensive than the kiwis.\nThe watermelons are less expensive than the peaches.\nThe mangoes are the third-cheapest.\nThe watermelons are the third-most expensive.\nThe plums are the second-most expensive.\nThe loquats are the second-cheapest.",
+        "question": "Which of the following is true?",
+        "options": [
+            "The loquats are the most expensive.",
+            "The peaches are more expensive than every other fruit.",
+            "The watermelons are more expensive than every other fruit.",
+            "The plums are more expensive than every other fruit.",
+            "The kiwis are more expensive than every other fruit.",
+            "The mangoes are the most expensive fruit.",
+            "The pears are more expensive than every other fruit."
+        ],
+        "answer": "B"
+    },
+    {
+        "id": "logical_deduction_9",
+        "context": "The brown book exists.\nThe orange book exists.\nThe red book exists.\nThe purple book exists.\nThe black book exists.\nThe purple book is to the left of the black book.\nThe red book is to the right of the brown book.\nThe orange book is second from the left.\nThe black book is third from the left.",
+        "question": "Which of the following is true?",
+        "options": [
+            "The brown book is second from the right.",
+            "The orange book is second from the right.",
+            "The red book is second from the right.",
+            "The purple book is second from the right.",
+            "The black book is second from the right."
+        ],
+        "answer": "A"
+    },
+    {
+        "id": "logical_deduction_100",
+        "context": "The station wagon is the fourth-newest.\nThe minivan is the third-newest.\nThe tractor is the second-oldest.\nThe convertible is older than the station wagon.\nThe truck is newer than the bus.\nThe hatchback is older than the convertible.",
+        "question": "Which of the following is true?",
+        "options": [
+            "The truck is newer than one vehicle.\nThe truck is older than one vehicle.",
+            "The hatchback is newer than one car.\nThe hatchback is older than one car.",
+            "The minivan is newer than one vehicle.\nThe minivan is older than one vehicle.",
+            "The bus is newer than one vehicle.\nThe bus is older than one vehicle.",
+            "The tractor is newer than one vehicle.\nThe tractor is older than one vehicle.",
+            "The station wagon is newer than one car.\nThe station wagon is older than one car.",
+            "The convertible is newer than one car.\nThe convertible is older than one car."
+        ],
+        "answer": "D"
+    },
+    {
+        "id": "logical_deduction_222",
+        "context": "The station wagon is the fourth-newest.\nThe minivan is the third-newest.\nThe tractor is the second-oldest.\nThe convertible is older than the station wagon.\nThe truck is newer than the bus.\nThe hatchback is older than the convertible.",
+        "question": "Which of the following is true?",
+        "options": [
+            "The truck is the oldest vehicle.",
+            "The hatchback is the oldest car.",
+            "The minivan is the oldest vehicle.",
+            "The bus is older than the car.\nThe bus is older than the truck.\nThe bus is older than the motorcycle.",
+            "The tractor is the oldest vehicle.",
+            "The station wagon is the oldest vehicle.",
+            "The convertible is the oldest car."
+        ],
+        "answer": "B"
+    },
+    {
+        "id": "logical_deduction_36",
+        "context": "Dan finished above Eve.\nDan finished below Mya.\nAmy finished third.\nAna finished fourth.\nThe golfers are Dan, Amy, Eve, Ana, and Mya.",
+        "question": "Which of the following is true?",
+        "options": [
+            "Dan finished last.",
+            "Amy finished last.",
+            "Eve finished last.",
+            "Ana finished last.",
+            "Mya finished last."
+        ],
+        "answer": "C"
+    },
+    {
+        "id": "logical_deduction_37",
+        "context": "Joe finished fifth.\nAna finished second.\nMya finished fourth.\nEve finished below Amy.",
+        "question": "Which of the following is true?",
+        "options": [
+            "Joe finished first.",
+            "Ana finished first.",
+            "Amy finished first.",
+            "Mya finished first.",
+            "Eve finished first."
+        ],
+        "answer": "C"
+    },
+    {
+        "id": "logical_deduction_292",
+        "context": "The pears are more expensive than the loquats.\nThe pears are less expensive than the apples.",
+        "question": "Which of the following is true?",
+        "options": [
+            "The apples are the most expensive.",
+            "The pears are more expensive than every other fruit.",
+            "The loquats are more expensive than every other fruit."
+        ],
+        "answer": "A"
+    },
+    {
+        "id": "logical_deduction_143",
+        "context": "The blue jay is to the left of the falcon.\nThe blue jay is second from the right.\nThe raven is to the left of the robin.\nThe owl is third from the right.\nThe hummingbird is to the left of the quail.\nThe raven is third from the left.",
+        "question": "Which of the following is true?",
+        "options": [
+            "The quail is the leftmost animal.",
+            "The raven is to the left of the crow.\nThe raven is to the left of the dove.\nThe raven is to the left of the sparrow.",
+            "The hummingbird is to the left of the robin.\nThe hummingbird is to the left of the sparrow.\nThe hummingbird is to the left of the finch.",
+            "The robin is to the left of the blue jay.\nThe robin is to the left of the cardinal.\nThe robin is to the left of the sparrow.",
+            "The falcon is the leftmost item.",
+            "The owl is to the left of all other items.\nThe owl is the first item.",
+            "The blue jay is the leftmost bird."
+        ],
+        "answer": "C"
+    },
+    {
+        "id": "logical_deduction_286",
+        "context": "The blue jay is to the left of the quail.\nThe quail is to the left of the cardinal.\nThe blue jay is to the left of the cardinal.",
+        "question": "Which of the following is true?",
+        "options": [
+            "The blue jay is the leftmost bird.",
+            "The cardinal is the leftmost bird.",
+            "The quail is to the left of the pigeon.\nThe quail is to the left of the robin.\nThe quail is to the left of the sparrow."
+        ],
+        "answer": "A"
+    },
+    {
+        "id": "logical_deduction_207",
+        "context": "Ada finished above Mya.\nEli finished below Joe.\nEli finished above Eve.\nAda finished second-to-last.\nMel finished third.\nRob finished fourth.",
+        "question": "Which of the following is true?",
+        "options": [
+            "Eli finished second-to-last.",
+            "Eve finished second-to-last.",
+            "Mel finished second-to-last.",
+            "Joe finished second-to-last.",
+            "Mya finished second-to-last.\nMya finished after the person who finished last.\nMya finished before the person who finished last.\nThe person who finished last is after Mya.\nThe person who finished last is before Mya.",
+            "Rob finished second-to-last.",
+            "Ada finished second-to-last."
+        ],
+        "answer": "G"
+    },
+    {
+        "id": "logical_deduction_220",
+        "context": "The red book is to the right of the white book.\nThe gray book is to the left of the orange book.\nThe gray book is to the right of the blue book.\nThe red book is the second from the right.\nThe black book is the fourth from the left.\nThe orange book is to the left of the white book.",
+        "question": "Which of the following is true?",
+        "options": [
+            "The red book is to the right of the green book.\nThe red book is to the right of the blue book.\nThe red book is the rightmost book.",
+            "The white book is to the right of every other book.",
+            "The purple book is to the right of every other book.",
+            "The black book is to the right of every other book.",
+            "The gray book is to the right of every other book.",
+            "The orange book is to the right of every other book.",
+            "The blue book is to the right of every other book.\nThe blue book is the rightmost book."
+        ],
+        "answer": "C"
+    },
+    {
+        "id": "logical_deduction_1",
+        "context": "The antique car show has five vehicles.\nThe vehicles are a convertible, a sedan, a tractor, a minivan, and a limousine.\nThe minivan is older than the tractor.\nThe tractor is older than the limousine.\nThe convertible is older than the sedan.\nThe convertible is the second-newest.",
+        "question": "Which of the following is true?",
+        "options": [
+            "The convertible is the second-newest car.",
+            "The sedan is newer than one car.\nThe sedan is older than one car.",
+            "The tractor is newer than one item.\nThe tractor is older than one item.",
+            "The minivan is newer than one vehicle.\nThe minivan is older than one vehicle.",
+            "The limousine is newer than one vehicle.\nThe limousine is older than one vehicle."
+        ],
+        "answer": "A"
+    },
+    {
+        "id": "logical_deduction_186",
+        "context": "The pears are the third-cheapest fruit.\nThe kiwis are the second-most expensive fruit.\nThe pears are more expensive than the plums.\nThe oranges are less expensive than the kiwis.\nThe mangoes are the third-most expensive fruit.\nThe peaches are the second-cheapest fruit.",
+        "question": "Which of the following is true?",
+        "options": [
+            "The kiwis are the cheapest fruit.",
+            "The plums are cheaper than every other fruit.",
+            "The mangoes are the cheapest fruit.",
+            "The watermelons are cheaper than every other fruit.",
+            "The pears are cheaper than the apples.\nThe pears are cheaper than the bananas.\nThe pears are cheaper than the oranges.",
+            "The peaches are cheaper than every other fruit.",
+            "The oranges are cheaper than the apples.\nThe oranges are cheaper than the bananas.\nThe oranges are cheaper than the cherries."
+        ],
+        "answer": "B"
+    },
+    {
+        "id": "logical_deduction_21",
+        "context": "The station wagon is the oldest.\nThe limousine is older than the truck.\nThe sedan is newer than the motorcycle.\nThe limousine is newer than the sedan.",
+        "question": "Which of the following is true?",
+        "options": [
+            "The truck is older than one vehicle.\nThe truck is newer than one vehicle.",
+            "The motorcycle is older than one vehicle.\nThe motorcycle is newer than one vehicle.",
+            "The limousine is older than one car.\nThe limousine is newer than one car.",
+            "The station wagon is older than one car.\nThe station wagon is newer than three cars.",
+            "The sedan is older than one car.\nThe sedan is newer than three cars."
+        ],
+        "answer": "B"
+    },
+    {
+        "id": "logical_deduction_206",
+        "context": "The pears are more expensive than the kiwis.\nThe watermelons are less expensive than the peaches.\nThe mangoes are the third-cheapest.\nThe watermelons are the third-most expensive.\nThe plums are the second-most expensive.\nThe loquats are the second-cheapest.",
+        "question": "Which of the following is true?",
+        "options": [
+            "The loquats are cheaper than every other fruit.",
+            "The peaches are the cheapest fruit.",
+            "The watermelons are cheaper than the apples.\nThe watermelons are cheaper than the bananas.\nThe watermelons are cheaper than the cherries.",
+            "The plums are cheaper than the apples.\nThe plums are cheaper than the bananas.\nThe plums are cheaper than the cherries.",
+            "The kiwis are cheaper than every other fruit.",
+            "The mangoes are cheaper than every other fruit.\nThe mangoes are the cheapest fruit.",
+            "The pears are cheaper than every other fruit."
+        ],
+        "answer": "E"
+    },
+    {
+        "id": "logical_deduction_40",
+        "context": "The kiwis are cheaper than the mangoes.\nThe peaches are cheaper than the oranges.\nThe oranges are the second-most expensive.\nThe mangoes are the second-cheapest.",
+        "question": "Which of the following is true?",
+        "options": [
+            "The cantaloupes are the second-cheapest fruit.",
+            "The kiwis are cheaper than every fruit except one fruit.\nThe kiwis are more expensive than exactly one fruit.",
+            "The oranges are cheaper than three items.\nThe oranges are more expensive than one item.",
+            "The mangoes are the second-cheapest fruit.",
+            "The peaches are cheaper than three fruits.\nThe peaches are more expensive than one fruit."
+        ],
+        "answer": "D"
+    },
+    {
+        "id": "logical_deduction_280",
+        "context": "The sedan is the oldest.\nThe motorcycle is the second-newest.\nThe minivan is the newest.\nThe minivan is newer than the motorcycle.\nThe motorcycle is newer than the sedan.",
+        "question": "Which of the following is true?",
+        "options": [
+            "The sedan is the second-newest car.",
+            "The minivan is newer than one vehicle.\nThe minivan is older than one vehicle.",
+            "The motorcycle is newer than one vehicle.\nThe motorcycle is older than one vehicle."
+        ],
+        "answer": "C"
+    },
+    {
+        "id": "logical_deduction_34",
+        "context": "The blue jay is the rightmost bird.\nThe robin is to the right of the falcon.\nThe cardinal is to the left of the hawk.\nThe falcon is to the right of the hawk.",
+        "question": "Which of the following is true?",
+        "options": [
+            "The blue jay is second from the right.",
+            "The robin is second from the right.",
+            "The cardinal is second from the right.",
+            "The hawk is second from the right.",
+            "The falcon is second from the right."
+        ],
+        "answer": "B"
+    },
+    {
+        "id": "logical_deduction_67",
+        "context": "The raven is to the left of the hummingbird.\nThe hawk is to the left of the owl.\nThe cardinal is to the left of the hawk.\nThe raven is second from the right.",
+        "question": "Which of the following is true?",
+        "options": [
+            "The cardinal is third from the left.",
+            "The hawk is third from the left.",
+            "The hummingbird is third from the left.",
+            "The raven is third from the left.",
+            "The owl is third from the left."
+        ],
+        "answer": "E"
+    },
+    {
+        "id": "logical_deduction_285",
+        "context": "The falcon is the leftmost.\nThe raven is to the left of the owl.\nThe falcon is to the left of the raven.\nThe falcon is to the left of the owl.",
+        "question": "Which of the following is true?",
+        "options": [
+            "The falcon is to the right of all other items.",
+            "The owl is to the right of all other items.",
+            "The raven is to the right of all other birds."
+        ],
+        "answer": "B"
+    },
+    {
+        "id": "logical_deduction_208",
+        "context": "The oranges are more expensive than the peaches.\nThe cantaloupes are the fourth-most expensive.\nThe pears are less expensive than the cantaloupes.\nThe peaches are the second-most expensive.\nThe mangoes are the cheapest.\nThe kiwis are the third-cheapest.",
+        "question": "Which of the following is true?",
+        "options": [
+            "The watermelons are the third-most expensive.",
+            "The mangoes are the third-most expensive fruit.",
+            "The kiwis are more expensive than two items.\nThe kiwis are less expensive than one item.",
+            "The pears are more expensive than two items.\nThe pears are cheaper than one item.",
+            "The cantaloupes are more expensive than two items.\nThe cantaloupes are less expensive than two items.",
+            "The oranges are more expensive than two items.\nThe oranges are less expensive than two items.",
+            "The peaches are more expensive than two items.\nThe peaches are less expensive than two items."
+        ],
+        "answer": "A"
+    },
+    {
+        "id": "logical_deduction_121",
+        "context": "The pears are more expensive than the kiwis.\nThe watermelons are less expensive than the peaches.\nThe mangoes are the third-cheapest.\nThe watermelons are the third-most expensive.\nThe plums are the second-most expensive.\nThe loquats are the second-cheapest.",
+        "question": "Which of the following is true?",
+        "options": [
+            "The loquats are the third-cheapest fruit.",
+            "The peaches are the third-cheapest fruit.",
+            "The watermelons are the third-cheapest item.",
+            "The plums are the third-cheapest fruit.",
+            "The kiwis are the third-cheapest fruit.",
+            "The mangoes are the third-cheapest fruit.",
+            "The pears are the third-cheapest fruit."
+        ],
+        "answer": "F"
+    },
+    {
+        "id": "logical_deduction_279",
+        "context": "The blue jay is to the left of the quail.\nThe quail is to the left of the cardinal.\nThe blue jay is to the left of the cardinal.",
+        "question": "Which of the following is true?",
+        "options": [
+            "The blue jay is second from the left.",
+            "The cardinal is the second from the left.",
+            "The quail is second from the left."
+        ],
+        "answer": "C"
+    },
+    {
+        "id": "logical_deduction_237",
+        "context": "The red book is to the right of the white book.\nThe gray book is to the left of the orange book.\nThe gray book is to the right of the blue book.\nThe red book is the second from the right.\nThe black book is the fourth from the left.\nThe orange book is to the left of the white book.",
+        "question": "Which of the following is true?",
+        "options": [
+            "The red book is third from the right.",
+            "The white book is third from the right.",
+            "The purple book is third from the right.",
+            "The black book is third from the right.",
+            "The gray book is third from the right.",
+            "The orange book is third from the right.",
+            "The blue book is third from the right."
+        ],
+        "answer": "B"
+    },
+    {
+        "id": "logical_deduction_231",
+        "context": "The sedan is the third-oldest.\nThe tractor is newer than the motorcycle.\nThe bus is older than the motorcycle.\nThe bus is newer than the hatchback.\nThe minivan is the newest.\nThe station wagon is the oldest.",
+        "question": "Which of the following is true?",
+        "options": [
+            "The station wagon is older than one car.\nThe station wagon is newer than one car.",
+            "The sedan is older than one car.\nThe sedan is newer than one car.",
+            "The bus is older than one vehicle.\nThe bus is newer than one vehicle.",
+            "The motorcycle is older than one vehicle.\nThe motorcycle is newer than one vehicle.",
+            "The hatchback is older than one car.\nThe hatchback is newer than one car.",
+            "The tractor is older than one item.\nThe tractor is newer than one item.",
+            "The minivan is older than one vehicle.\nThe minivan is newer than one vehicle."
+        ],
+        "answer": "E"
+    },
+    {
+        "id": "logical_deduction_74",
+        "context": "Ana finished above Joe.\nRob finished below Dan.\nJoe finished above Amy.\nDan finished below Amy.\nJoe finished below Ana.",
+        "question": "Which of the following is true?",
+        "options": [
+            "Ana finished third.",
+            "Rob finished third.",
+            "Amy finished third.",
+            "Dan finished third.",
+            "Joe finished third."
+        ],
+        "answer": "C"
+    },
+    {
+        "id": "logical_deduction_18",
+        "context": "The robin is the leftmost bird.\nThe raven is the second from the left.\nThe hawk is the second from the right.\nThe crow is the third from the left.\nThere are five birds.\nThe birds are a hawk, a raven, a robin, a hummingbird, and a crow.",
+        "question": "Which of the following is true?",
+        "options": [
+            "The hawk is second from the right.",
+            "The raven is second from the right.",
+            "The robin is second from the right.",
+            "The hummingbird is second from the right.",
+            "The crow is second from the right."
+        ],
+        "answer": "A"
+    },
+    {
+        "id": "logical_deduction_169",
+        "context": "Joe is a golfer.\nDan is a golfer.\nAna is a golfer.\nMel is a golfer.\nAda is a golfer.\nEve is a golfer.\nAmy is a golfer.\nEve finished above Amy.\nDan finished second.\nAda finished below Ana.\nAna finished third-to-last.\nMel finished last.\nAmy finished third.",
+        "question": "Which of the following is true?",
+        "options": [
+            "Joe finished second.",
+            "Dan finished second.",
+            "Ana finished second.",
+            "Mel finished second.",
+            "Ada finished second.",
+            "Eve finished second.",
+            "Amy finished second."
+        ],
+        "answer": "B"
+    },
+    {
+        "id": "logical_deduction_187",
+        "context": "Eve is a golfer.\nAna is a golfer.\nAmy is a golfer.\nDan is a golfer.\nEli is a golfer.\nRob is a golfer.\nMya is a golfer.\nMya finished above Eli.\nEve finished below Rob.\nAmy finished second.\nRob finished below Dan.\nAna finished second-to-last.\nDan finished fourth.",
+        "question": "Which of the following is true?",
+        "options": [
+            "Eve finished last.",
+            "Ana finished last.",
+            "Amy finished last.",
+            "Dan finished last.",
+            "Eli finished last.",
+            "Rob finished last.",
+            "Mya finished last."
+        ],
+        "answer": "A"
+    },
+    {
+        "id": "logical_deduction_212",
+        "context": "The plums are the cheapest.\nThe apples are the second-cheapest.\nThe loquats are the fourth-most expensive.\nThe loquats are cheaper than the kiwis.\nThe peaches are more expensive than the kiwis.\nThe peaches are cheaper than the oranges.",
+        "question": "Which of the following is true?",
+        "options": [
+            "The oranges are more expensive than one item.\nThe oranges are cheaper than one item.",
+            "The plums are more expensive than one fruit.\nThe plums are cheaper than one fruit.",
+            "The loquats are more expensive than one fruit.\nThe loquats are cheaper than one fruit.",
+            "The apples are more expensive than one item.\nThe apples are less expensive than one item.",
+            "The kiwis are more expensive than one fruit.\nThe kiwis are cheaper than one fruit.",
+            "The cantaloupes are more expensive than one item.\nThe cantaloupes are less expensive than all other items except one.",
+            "The peaches are more expensive than one fruit.\nThe peaches are less expensive than one fruit."
+        ],
+        "answer": "G"
+    },
+    {
+        "id": "logical_deduction_79",
+        "context": "The raven is to the left of the hummingbird.\nThe hawk is to the left of the owl.\nThe cardinal is to the left of the hawk.\nThe raven is second from the right.",
+        "question": "Which of the following is true?",
+        "options": [
+            "The cardinal is second from the left.",
+            "The hawk is in position two.\nThe leftmost position is position one.",
+            "The hummingbird is second from the left.",
+            "The raven is second from the left.",
+            "The owl is second from the left."
+        ],
+        "answer": "B"
+    },
+    {
+        "id": "logical_deduction_105",
+        "context": "The limousine is the newest vehicle.\nThe bus is the third-newest vehicle.\nThe bus is older than the convertible.\nThe sedan is the third-oldest vehicle.\nThe station wagon is older than the truck.\nThe hatchback is the oldest vehicle.",
+        "question": "Which of the following is true?",
+        "options": [
+            "The station wagon is older than two vehicles.\nThe station wagon is newer than two vehicles.",
+            "The truck is older than two vehicles.\nThe truck is newer than one vehicle.",
+            "The sedan is the third-oldest car.",
+            "The limousine is older than two vehicles.\nThe limousine is younger than two vehicles.",
+            "The convertible is the third-oldest car.",
+            "The bus is older than two items.\nThe bus is younger than one item.",
+            "The hatchback is the third-oldest car."
+        ],
+        "answer": "C"
+    }
+]

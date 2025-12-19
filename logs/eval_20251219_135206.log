@@ -1,0 +1,273 @@
+=== 评测日志开始于 2025-12-19 13:52:06 ===
+[13:52:17] 代码修复功能已关闭
+[13:52:18] 正在加载数据集: D:/学习资料/课程/程序设计大作业/EnhancingLLM/EnhancingLLM/data/FOLIO_test.json
+[13:52:18] 共 50 道题目，使用 4 个 workers 并行处理
+[13:52:18] [Worker] 开始处理: FOLIO_dev_125 (mode=direct, semantic_check=False, refinement_code=False)
+[13:52:18] [Worker] 开始处理: FOLIO_dev_43 (mode=direct, semantic_check=False, refinement_code=False)
+[13:52:18] [Worker] 开始处理: FOLIO_dev_59 (mode=direct, semantic_check=False, refinement_code=False)
+[13:52:18] [Worker] 开始处理: FOLIO_dev_0 (mode=direct, semantic_check=False, refinement_code=False)
+[13:52:25]   [FOLIO_dev_0] code执行错误: '(' was never closed (<string>, line 36)
+[13:52:25]   [FOLIO_dev_0] 代码修复功能关闭，使用repair.py进行修复
+[13:52:25]   [FOLIO_dev_0] repair.py修复: 检测到缺少 1 个右括号; 第36行: 添加 2 个右括号; 第36行: 替换 Or() 为 False; 第36行: 注释掉 solver.add(False)
+[13:52:25]   [FOLIO_dev_0] 修复后仍执行失败: Z3 internal error (known bug): unexpected indent (<string>, line 37)
+[13:52:25]   [FOLIO_dev_0] ⚠ 异常: 代码执行失败（已达修复上限）: Z3 internal error (known bug): unexpected indent (<string>, line 37)
+[13:52:25] [Worker] 开始处理: FOLIO_dev_144 (mode=direct, semantic_check=False, refinement_code=False)
+[13:52:25]   [FOLIO_dev_43] ✓ 正确! 预测=C, 答案=C
+[13:52:25] [Worker] 开始处理: FOLIO_dev_17 (mode=direct, semantic_check=False, refinement_code=False)
+[13:52:26]   [FOLIO_dev_59] code执行错误: name 'in_state' is not defined
+[13:52:26]   [FOLIO_dev_59] 代码修复功能关闭，使用repair.py进行修复
+[13:52:26]   [FOLIO_dev_59] repair.py修复: 第22行: 添加 2 个右括号; 自动添加未定义的Bool变量: in_state; 自动添加未定义的Bool变量: montana; 自动添加未定义的Bool变量: same_state; 第25行: 替换 And() 为 True; 第25行: 移除无意义的 solver.add(True)
+[13:52:26]   [FOLIO_dev_59] 修复后仍执行失败: Z3 internal error (known bug): unexpected indent (<string>, line 26)
+[13:52:26]   [FOLIO_dev_59] ⚠ 异常: 代码执行失败（已达修复上限）: Z3 internal error (known bug): unexpected indent (<string>, line 26)
+[13:52:26] [Worker] 开始处理: FOLIO_dev_83 (mode=direct, semantic_check=False, refinement_code=False)
+[13:52:30]   [FOLIO_dev_17] ✓ 正确! 预测=C, 答案=C
+[13:52:30] [Worker] 开始处理: FOLIO_dev_13 (mode=direct, semantic_check=False, refinement_code=False)
+[13:52:33]   [FOLIO_dev_83] ✓ 正确! 预测=B, 答案=B
+[13:52:33] [Worker] 开始处理: FOLIO_dev_111 (mode=direct, semantic_check=False, refinement_code=False)
+[13:52:34]   [FOLIO_dev_125] code执行错误: '(' was never closed (<string>, line 36)
+[13:52:34]   [FOLIO_dev_125] 代码修复功能关闭，使用repair.py进行修复
+[13:52:34]   [FOLIO_dev_125] repair.py修复: 检测到缺少 1 个右括号; 第36行: 添加 1 个右括号; 自动添加未定义的Bool变量: rock_is_animal
+[13:52:34]   [FOLIO_dev_125] ✓ 正确! 预测=C, 答案=C
+[13:52:34] [Worker] 开始处理: FOLIO_dev_107 (mode=direct, semantic_check=False, refinement_code=False)
+[13:52:34]   [FOLIO_dev_144] ✓ 正确! 预测=C, 答案=C
+[13:52:34] [Worker] 开始处理: FOLIO_dev_130 (mode=direct, semantic_check=False, refinement_code=False)
+[13:52:35]   [FOLIO_dev_13] ✗ 错误! 预测=A, 答案=C
+[13:52:35] [Worker] 开始处理: FOLIO_dev_89 (mode=direct, semantic_check=False, refinement_code=False)
+[13:52:37]   [FOLIO_dev_111] ✓ 正确! 预测=C, 答案=C
+[13:52:37] [Worker] 开始处理: FOLIO_dev_126 (mode=direct, semantic_check=False, refinement_code=False)
+[13:52:40]   [FOLIO_dev_107] ✗ 错误! 预测=C, 答案=B
+[13:52:40] [Worker] 开始处理: FOLIO_dev_134 (mode=direct, semantic_check=False, refinement_code=False)
+[13:52:41]   [FOLIO_dev_89] ✗ 错误! 预测=C, 答案=A
+[13:52:41] [Worker] 开始处理: FOLIO_dev_51 (mode=direct, semantic_check=False, refinement_code=False)
+[13:52:41]   [FOLIO_dev_130] ✓ 正确! 预测=C, 答案=C
+[13:52:41] [Worker] 开始处理: FOLIO_dev_60 (mode=direct, semantic_check=False, refinement_code=False)
+[13:52:44]   [FOLIO_dev_126] code执行错误: '(' was never closed (<string>, line 36)
+[13:52:44]   [FOLIO_dev_126] 代码修复功能关闭，使用repair.py进行修复
+[13:52:44]   [FOLIO_dev_126] repair.py修复: 检测到缺少 1 个右括号; 第36行: 添加 1 个右括号; 自动添加未定义的Bool变量: rock_is_animal
+[13:52:44]   [FOLIO_dev_126] ✓ 正确! 预测=A, 答案=A
+[13:52:44] [Worker] 开始处理: FOLIO_dev_25 (mode=direct, semantic_check=False, refinement_code=False)
+[13:52:45]   [FOLIO_dev_51] ✓ 正确! 预测=A, 答案=A
+[13:52:45] [Worker] 开始处理: FOLIO_dev_101 (mode=direct, semantic_check=False, refinement_code=False)
+[13:52:46]   [FOLIO_dev_134] ✗ 错误! 预测=A, 答案=C
+[13:52:46] [Worker] 开始处理: FOLIO_dev_49 (mode=direct, semantic_check=False, refinement_code=False)
+[13:52:47]   [FOLIO_dev_60] code执行错误: name 'same_state' is not defined
+[13:52:47]   [FOLIO_dev_60] 代码修复功能关闭，使用repair.py进行修复
+[13:52:47]   [FOLIO_dev_60] repair.py修复: 自动添加未定义的Bool变量: same_state
+[13:52:47]   [FOLIO_dev_60] 修复后仍执行失败: 'BoolRef' object is not callable
+[13:52:47]   [FOLIO_dev_60] ⚠ 异常: 代码执行失败（已达修复上限）: 'BoolRef' object is not callable
+[13:52:47] [Worker] 开始处理: FOLIO_dev_48 (mode=direct, semantic_check=False, refinement_code=False)
+[13:52:51]   [FOLIO_dev_25] ✓ 正确! 预测=C, 答案=C
+[13:52:51] [Worker] 开始处理: FOLIO_dev_66 (mode=direct, semantic_check=False, refinement_code=False)
+[13:52:52]   [FOLIO_dev_48] ✗ 错误! 预测=B, 答案=C
+[13:52:52] [Worker] 开始处理: FOLIO_dev_169 (mode=direct, semantic_check=False, refinement_code=False)
+[13:52:53]   [FOLIO_dev_49] ✓ 正确! 预测=C, 答案=C
+[13:52:53] [Worker] 开始处理: FOLIO_dev_172 (mode=direct, semantic_check=False, refinement_code=False)
+[13:52:57] [Worker] 开始处理: FOLIO_dev_44 (mode=direct, semantic_check=False, refinement_code=False)
+[13:52:57]   [FOLIO_dev_66] ✓ 正确! 预测=A, 答案=A
+[13:52:58]   [FOLIO_dev_169] ✗ 错误! 预测=C, 答案=B
+[13:52:58] [Worker] 开始处理: FOLIO_dev_8 (mode=direct, semantic_check=False, refinement_code=False)
+[13:52:58]   [FOLIO_dev_172] ✗ 错误! 预测=A, 答案=B
+[13:52:58] [Worker] 开始处理: FOLIO_dev_22 (mode=direct, semantic_check=False, refinement_code=False)
+[13:53:02]   [FOLIO_dev_8] ✓ 正确! 预测=C, 答案=C
+[13:53:02] [Worker] 开始处理: FOLIO_dev_200 (mode=direct, semantic_check=False, refinement_code=False)
+[13:53:05]   [FOLIO_dev_22] ✗ 错误! 预测=C, 答案=B
+[13:53:05] [Worker] 开始处理: FOLIO_dev_85 (mode=direct, semantic_check=False, refinement_code=False)
+[13:53:08]   [FOLIO_dev_44] code执行错误: Z3 internal error (known bug): invalid syntax. Perhaps you forgot a comma? (<string>, line 30)
+[13:53:08]   [FOLIO_dev_44] 代码修复功能关闭，使用repair.py进行修复
+[13:53:08]   [FOLIO_dev_44] repair.py修复: 检测到缺少 4 个右括号; 第30行: 添加 1 个右括号; 第33行: 添加 1 个右括号; 第36行: 添加 1 个右括号; 第39行: 添加 1 个右括号; 自动添加未定义的Bool变量: lost_to; 自动添加未定义的量化变量: x = Const('x', Entity)
+[13:53:08]   [FOLIO_dev_44] 修复后仍执行失败: name 'Entity' is not defined
+[13:53:08]   [FOLIO_dev_44] ⚠ 异常: 代码执行失败（已达修复上限）: name 'Entity' is not defined
+[13:53:08] [Worker] 开始处理: FOLIO_dev_178 (mode=direct, semantic_check=False, refinement_code=False)
+[13:53:08]   [FOLIO_dev_200] ✗ 错误! 预测=C, 答案=B
+[13:53:08] [Worker] 开始处理: FOLIO_dev_73 (mode=direct, semantic_check=False, refinement_code=False)
+[13:53:11]   [FOLIO_dev_85] ✗ 错误! 预测=C, 答案=A
+[13:53:11] [Worker] 开始处理: FOLIO_dev_26 (mode=direct, semantic_check=False, refinement_code=False)
+[13:53:13]   [FOLIO_dev_178] ✓ 正确! 预测=A, 答案=A
+[13:53:13] [Worker] 开始处理: FOLIO_dev_196 (mode=direct, semantic_check=False, refinement_code=False)
+[13:53:14]   [FOLIO_dev_73] ✗ 错误! 预测=B, 答案=A
+[13:53:14] [Worker] 开始处理: FOLIO_dev_33 (mode=direct, semantic_check=False, refinement_code=False)
+[13:53:16]   [FOLIO_dev_26] ✓ 正确! 预测=C, 答案=C
+[13:53:16] [Worker] 开始处理: FOLIO_dev_152 (mode=direct, semantic_check=False, refinement_code=False)
+[13:53:19]   [FOLIO_dev_33] ✗ 错误! 预测=C, 答案=A
+[13:53:19] [Worker] 开始处理: FOLIO_dev_76 (mode=direct, semantic_check=False, refinement_code=False)
+[13:53:20]   [FOLIO_dev_196] code执行错误: name 'kiki_terricolous' is not defined
+[13:53:20]   [FOLIO_dev_196] 代码修复功能关闭，使用repair.py进行修复
+[13:53:20]   [FOLIO_dev_196] repair.py修复: 自动添加未定义的Bool变量: kiki_terricolous
+[13:53:20]   [FOLIO_dev_196] ✓ 正确! 预测=C, 答案=C
+[13:53:20] [Worker] 开始处理: FOLIO_dev_23 (mode=direct, semantic_check=False, refinement_code=False)
+[13:53:21]   [FOLIO_dev_152] ✓ 正确! 预测=C, 答案=C
+[13:53:21] [Worker] 开始处理: FOLIO_dev_11 (mode=direct, semantic_check=False, refinement_code=False)
+[13:53:22]   [FOLIO_dev_101] ✗ 错误! 预测=None, 答案=B
+[13:53:22] [Worker] 开始处理: FOLIO_dev_170 (mode=direct, semantic_check=False, refinement_code=False)
+[13:53:25]   [FOLIO_dev_76] code执行错误: '(' was never closed (<string>, line 34)
+[13:53:25]   [FOLIO_dev_76] 代码修复功能关闭，使用repair.py进行修复
+[13:53:25]   [FOLIO_dev_76] repair.py修复: 检测到缺少 1 个右括号; 第34行: 添加 1 个右括号
+[13:53:25]   [FOLIO_dev_76] ✓ 正确! 预测=C, 答案=C
+[13:53:25] [Worker] 开始处理: FOLIO_dev_150 (mode=direct, semantic_check=False, refinement_code=False)
+[13:53:25]   [FOLIO_dev_23] ✓ 正确! 预测=C, 答案=C
+[13:53:25] [Worker] 开始处理: FOLIO_dev_77 (mode=direct, semantic_check=False, refinement_code=False)
+[13:53:29]   [FOLIO_dev_11] ✓ 正确! 预测=C, 答案=C
+[13:53:29] [Worker] 开始处理: FOLIO_dev_31 (mode=direct, semantic_check=False, refinement_code=False)
+[13:53:29]   [FOLIO_dev_170] ✓ 正确! 预测=C, 答案=C
+[13:53:29] [Worker] 开始处理: FOLIO_dev_21 (mode=direct, semantic_check=False, refinement_code=False)
+[13:53:30]   [FOLIO_dev_150] ✗ 错误! 预测=C, 答案=A
+[13:53:30] [Worker] 开始处理: FOLIO_dev_14 (mode=direct, semantic_check=False, refinement_code=False)
+[13:53:32]   [FOLIO_dev_77] ✗ 错误! 预测=C, 答案=A
+[13:53:32] [Worker] 开始处理: FOLIO_dev_129 (mode=direct, semantic_check=False, refinement_code=False)
+[13:53:35]   [FOLIO_dev_14] ✓ 正确! 预测=B, 答案=B
+[13:53:35] [Worker] 开始处理: FOLIO_dev_40 (mode=direct, semantic_check=False, refinement_code=False)
+[13:53:35]   [FOLIO_dev_31] ✗ 错误! 预测=C, 答案=A
+[13:53:35] [Worker] 开始处理: FOLIO_dev_4 (mode=direct, semantic_check=False, refinement_code=False)
+[13:53:36]   [FOLIO_dev_21] ✗ 错误! 预测=C, 答案=A
+[13:53:36] [Worker] 开始处理: FOLIO_dev_132 (mode=direct, semantic_check=False, refinement_code=False)
+[13:53:38]   [FOLIO_dev_129] ✓ 正确! 预测=A, 答案=A
+[13:53:38] [Worker] 开始处理: FOLIO_dev_176 (mode=direct, semantic_check=False, refinement_code=False)
+[13:53:40]   [FOLIO_dev_4] code执行错误: '(' was never closed (<string>, line 28)
+[13:53:40]   [FOLIO_dev_4] 代码修复功能关闭，使用repair.py进行修复
+[13:53:40]   [FOLIO_dev_4] repair.py修复: 检测到缺少 1 个右括号; 第28行: 添加 1 个右括号; 自动添加未定义的Bool变量: james_appears_in_company_today; 自动添加未定义的Bool变量: james_has_lunch_at_home; 自动添加未定义的Bool变量: james_in_other_countries; 自动添加未定义的Bool变量: james_is_manager; 自动添加未定义的Bool变量: james_schedules_meeting_with_customers; 自动添加未定义的Bool变量: james_works_remotely_from_home
+[13:53:40]   [FOLIO_dev_4] ✓ 正确! 预测=C, 答案=C
+[13:53:40] [Worker] 开始处理: FOLIO_dev_53 (mode=direct, semantic_check=False, refinement_code=False)
+[13:53:41]   [FOLIO_dev_132] code执行错误: '(' was never closed (<string>, line 41)
+[13:53:41]   [FOLIO_dev_132] 代码修复功能关闭，使用repair.py进行修复
+[13:53:41]   [FOLIO_dev_132] repair.py修复: 检测到缺少 1 个右括号; 第41行: 添加 1 个右括号
+[13:53:41]   [FOLIO_dev_132] ✗ 错误! 预测=C, 答案=A
+[13:53:41] [Worker] 开始处理: FOLIO_dev_171 (mode=direct, semantic_check=False, refinement_code=False)
+[13:53:43]   [FOLIO_dev_40] ✗ 错误! 预测=C, 答案=A
+[13:53:44]   [FOLIO_dev_176] ✓ 正确! 预测=C, 答案=C
+[13:53:46]   [FOLIO_dev_171] ✓ 正确! 预测=A, 答案=A
+[13:53:53]   [FOLIO_dev_53] ✓ 正确! 预测=C, 答案=C
+[13:53:53] ==================================================
+[13:53:53] 评测完成!
+[13:53:53] 已完成: 50, 正确: 27, 错误: 19, 异常: 4
+[13:53:53] 准确率: 54.00%
+[13:53:53] ==================================================
+[13:54:02] 正在加载数据集: D:/学习资料/课程/程序设计大作业/EnhancingLLM/EnhancingLLM/data/FOLIO_test.json
+[13:54:02] 共 50 道题目，使用 4 个 workers 并行处理
+[13:54:02] [Worker] 开始处理: FOLIO_dev_125 (mode=single_text, semantic_check=False, refinement_code=False)
+[13:54:02] [Worker] 开始处理: FOLIO_dev_43 (mode=single_text, semantic_check=False, refinement_code=False)
+[13:54:02] [Worker] 开始处理: FOLIO_dev_0 (mode=single_text, semantic_check=False, refinement_code=False)
+[13:54:02] [Worker] 开始处理: FOLIO_dev_59 (mode=single_text, semantic_check=False, refinement_code=False)
+[13:54:08]   [FOLIO_dev_59] code执行错误: '(' was never closed (<string>, line 52)
+[13:54:08]   [FOLIO_dev_59] 代码修复功能关闭，使用repair.py进行修复
+[13:54:08]   [FOLIO_dev_59] repair.py修复: 检测到缺少 1 个右括号; 第52行: 添加 1 个右括号; 自动添加未定义的Bool变量: in_state; 自动添加未定义的Bool变量: is_city; 自动添加未定义的Bool变量: same_state; 检测到未定义的谓词: StringSort; 添加谓词定义: StringSort (参数数量: 1)
+[13:54:08]   [FOLIO_dev_59] 修复后仍执行失败: name 'Entity' is not defined
+[13:54:08]   [FOLIO_dev_59] ⚠ 异常: 代码执行失败（已达修复上限）: name 'Entity' is not defined
+[13:54:08] [Worker] 开始处理: FOLIO_dev_144 (mode=single_text, semantic_check=False, refinement_code=False)
+[13:54:08]   [FOLIO_dev_125] code执行错误: '(' was never closed (<string>, line 36)
+[13:54:08]   [FOLIO_dev_125] 代码修复功能关闭，使用repair.py进行修复
+[13:54:08]   [FOLIO_dev_125] repair.py修复: 检测到缺少 1 个右括号; 第36行: 添加 1 个右括号; 自动添加未定义的Bool变量: rock_is_animal
+[13:54:08]   [FOLIO_dev_125] ✓ 正确! 预测=C, 答案=C
+[13:54:08] [Worker] 开始处理: FOLIO_dev_17 (mode=single_text, semantic_check=False, refinement_code=False)
+[13:54:09]   [FOLIO_dev_43] code执行错误: 'BoolRef' object is not callable
+[13:54:09]   [FOLIO_dev_43] 代码修复功能关闭，使用repair.py进行修复
+[13:54:09]   [FOLIO_dev_43] 修复后仍执行失败: 'BoolRef' object is not callable
+[13:54:09]   [FOLIO_dev_43] ⚠ 异常: 代码执行失败（已达修复上限）: 'BoolRef' object is not callable
+[13:54:09] [Worker] 开始处理: FOLIO_dev_83 (mode=single_text, semantic_check=False, refinement_code=False)
+[13:54:10]   [FOLIO_dev_0] ✓ 正确! 预测=C, 答案=C
+[13:54:10] [Worker] 开始处理: FOLIO_dev_13 (mode=single_text, semantic_check=False, refinement_code=False)
+[13:54:13]   [FOLIO_dev_17] ✗ 错误! 预测=B, 答案=C
+[13:54:13] [Worker] 开始处理: FOLIO_dev_111 (mode=single_text, semantic_check=False, refinement_code=False)
+[13:54:13]   [FOLIO_dev_144] ✓ 正确! 预测=C, 答案=C
+[13:54:13] [Worker] 开始处理: FOLIO_dev_107 (mode=single_text, semantic_check=False, refinement_code=False)
+[13:54:15]   [FOLIO_dev_13] ✓ 正确! 预测=C, 答案=C
+[13:54:15] [Worker] 开始处理: FOLIO_dev_130 (mode=single_text, semantic_check=False, refinement_code=False)
+[13:54:16]   [FOLIO_dev_83] ✓ 正确! 预测=B, 答案=B
+[13:54:16] [Worker] 开始处理: FOLIO_dev_89 (mode=single_text, semantic_check=False, refinement_code=False)
+[13:54:19]   [FOLIO_dev_111] ✓ 正确! 预测=C, 答案=C
+[13:54:19] [Worker] 开始处理: FOLIO_dev_126 (mode=single_text, semantic_check=False, refinement_code=False)
+[13:54:19]   [FOLIO_dev_107] ✗ 错误! 预测=C, 答案=B
+[13:54:19] [Worker] 开始处理: FOLIO_dev_134 (mode=single_text, semantic_check=False, refinement_code=False)
+[13:54:21]   [FOLIO_dev_89] ✗ 错误! 预测=C, 答案=A
+[13:54:21] [Worker] 开始处理: FOLIO_dev_51 (mode=single_text, semantic_check=False, refinement_code=False)
+[13:54:22]   [FOLIO_dev_130] ✓ 正确! 预测=C, 答案=C
+[13:54:22] [Worker] 开始处理: FOLIO_dev_60 (mode=single_text, semantic_check=False, refinement_code=False)
+[13:54:24]   [FOLIO_dev_134] ✗ 错误! 预测=B, 答案=C
+[13:54:24] [Worker] 开始处理: FOLIO_dev_25 (mode=single_text, semantic_check=False, refinement_code=False)
+[13:54:26]   [FOLIO_dev_126] code执行错误: '(' was never closed (<string>, line 35)
+[13:54:26]   [FOLIO_dev_126] 代码修复功能关闭，使用repair.py进行修复
+[13:54:26]   [FOLIO_dev_126] repair.py修复: 检测到缺少 1 个右括号; 第35行: 添加 1 个右括号; 自动添加未定义的Bool变量: rock_breathes; 自动添加未定义的Bool变量: rock_is_animal; 自动添加未定义的Bool变量: rock_is_fly
+[13:54:26]   [FOLIO_dev_126] ✗ 错误! 预测=C, 答案=A
+[13:54:26] [Worker] 开始处理: FOLIO_dev_101 (mode=single_text, semantic_check=False, refinement_code=False)
+[13:54:26]   [FOLIO_dev_51] ✓ 正确! 预测=A, 答案=A
+[13:54:26] [Worker] 开始处理: FOLIO_dev_49 (mode=single_text, semantic_check=False, refinement_code=False)
+[13:54:29]   [FOLIO_dev_60] ✗ 错误! 预测=C, 答案=A
+[13:54:29] [Worker] 开始处理: FOLIO_dev_48 (mode=single_text, semantic_check=False, refinement_code=False)
+[13:54:31]   [FOLIO_dev_49] ✓ 正确! 预测=C, 答案=C
+[13:54:31] [Worker] 开始处理: FOLIO_dev_66 (mode=single_text, semantic_check=False, refinement_code=False)
+[13:54:32]   [FOLIO_dev_25] ✓ 正确! 预测=C, 答案=C
+[13:54:32] [Worker] 开始处理: FOLIO_dev_169 (mode=single_text, semantic_check=False, refinement_code=False)
+[13:54:32]   [FOLIO_dev_101] ✓ 正确! 预测=B, 答案=B
+[13:54:32] [Worker] 开始处理: FOLIO_dev_172 (mode=single_text, semantic_check=False, refinement_code=False)
+[13:54:34]   [FOLIO_dev_48] ✗ 错误! 预测=None, 答案=C
+[13:54:34] [Worker] 开始处理: FOLIO_dev_44 (mode=single_text, semantic_check=False, refinement_code=False)
+[13:54:36]   [FOLIO_dev_66] ✓ 正确! 预测=A, 答案=A
+[13:54:36] [Worker] 开始处理: FOLIO_dev_8 (mode=single_text, semantic_check=False, refinement_code=False)
+[13:54:39]   [FOLIO_dev_169] ✗ 错误! 预测=C, 答案=B
+[13:54:39] [Worker] 开始处理: FOLIO_dev_22 (mode=single_text, semantic_check=False, refinement_code=False)
+[13:54:39]   [FOLIO_dev_172] ✗ 错误! 预测=C, 答案=B
+[13:54:39] [Worker] 开始处理: FOLIO_dev_200 (mode=single_text, semantic_check=False, refinement_code=False)
+[13:54:41]   [FOLIO_dev_44] ✗ 错误! 预测=C, 答案=B
+[13:54:41] [Worker] 开始处理: FOLIO_dev_85 (mode=single_text, semantic_check=False, refinement_code=False)
+[13:54:41]   [FOLIO_dev_8] ✓ 正确! 预测=C, 答案=C
+[13:54:41] [Worker] 开始处理: FOLIO_dev_178 (mode=single_text, semantic_check=False, refinement_code=False)
+[13:54:45]   [FOLIO_dev_22] ✗ 错误! 预测=None, 答案=B
+[13:54:45] [Worker] 开始处理: FOLIO_dev_73 (mode=single_text, semantic_check=False, refinement_code=False)
+[13:54:47]   [FOLIO_dev_178] ✓ 正确! 预测=A, 答案=A
+[13:54:47] [Worker] 开始处理: FOLIO_dev_26 (mode=single_text, semantic_check=False, refinement_code=False)
+[13:54:47]   [FOLIO_dev_200] ✓ 正确! 预测=B, 答案=B
+[13:54:47] [Worker] 开始处理: FOLIO_dev_196 (mode=single_text, semantic_check=False, refinement_code=False)
+[13:54:48]   [FOLIO_dev_85] ✗ 错误! 预测=C, 答案=A
+[13:54:48] [Worker] 开始处理: FOLIO_dev_33 (mode=single_text, semantic_check=False, refinement_code=False)
+[13:54:51]   [FOLIO_dev_73] ✗ 错误! 预测=C, 答案=A
+[13:54:51] [Worker] 开始处理: FOLIO_dev_152 (mode=single_text, semantic_check=False, refinement_code=False)
+[13:54:53]   [FOLIO_dev_33] ✗ 错误! 预测=C, 答案=A
+[13:54:53] [Worker] 开始处理: FOLIO_dev_76 (mode=single_text, semantic_check=False, refinement_code=False)
+[13:54:54]   [FOLIO_dev_26] ✓ 正确! 预测=C, 答案=C
+[13:54:54] [Worker] 开始处理: FOLIO_dev_23 (mode=single_text, semantic_check=False, refinement_code=False)
+[13:54:55]   [FOLIO_dev_196] ✓ 正确! 预测=C, 答案=C
+[13:54:55] [Worker] 开始处理: FOLIO_dev_11 (mode=single_text, semantic_check=False, refinement_code=False)
+[13:54:57]   [FOLIO_dev_152] ✓ 正确! 预测=C, 答案=C
+[13:54:57] [Worker] 开始处理: FOLIO_dev_170 (mode=single_text, semantic_check=False, refinement_code=False)
+[13:54:59]   [FOLIO_dev_76] code执行错误: '(' was never closed (<string>, line 33)
+[13:54:59]   [FOLIO_dev_76] 代码修复功能关闭，使用repair.py进行修复
+[13:54:59]   [FOLIO_dev_76] repair.py修复: 检测到缺少 1 个右括号; 第33行: 添加 1 个右括号
+[13:54:59]   [FOLIO_dev_76] ✓ 正确! 预测=C, 答案=C
+[13:54:59] [Worker] 开始处理: FOLIO_dev_150 (mode=single_text, semantic_check=False, refinement_code=False)
+[13:55:00]   [FOLIO_dev_23] ✓ 正确! 预测=C, 答案=C
+[13:55:00] [Worker] 开始处理: FOLIO_dev_77 (mode=single_text, semantic_check=False, refinement_code=False)
+[13:55:02]   [FOLIO_dev_11] ✓ 正确! 预测=C, 答案=C
+[13:55:02] [Worker] 开始处理: FOLIO_dev_31 (mode=single_text, semantic_check=False, refinement_code=False)
+[13:55:03]   [FOLIO_dev_170] ✓ 正确! 预测=C, 答案=C
+[13:55:03] [Worker] 开始处理: FOLIO_dev_21 (mode=single_text, semantic_check=False, refinement_code=False)
+[13:55:05]   [FOLIO_dev_150] ✗ 错误! 预测=C, 答案=A
+[13:55:05] [Worker] 开始处理: FOLIO_dev_14 (mode=single_text, semantic_check=False, refinement_code=False)
+[13:55:08]   [FOLIO_dev_77] ✗ 错误! 预测=C, 答案=A
+[13:55:08] [Worker] 开始处理: FOLIO_dev_129 (mode=single_text, semantic_check=False, refinement_code=False)
+[13:55:09]   [FOLIO_dev_21] ✗ 错误! 预测=C, 答案=A
+[13:55:09] [Worker] 开始处理: FOLIO_dev_40 (mode=single_text, semantic_check=False, refinement_code=False)
+[13:55:10]   [FOLIO_dev_31] ✓ 正确! 预测=A, 答案=A
+[13:55:10] [Worker] 开始处理: FOLIO_dev_4 (mode=single_text, semantic_check=False, refinement_code=False)
+[13:55:10]   [FOLIO_dev_14] ✓ 正确! 预测=B, 答案=B
+[13:55:10] [Worker] 开始处理: FOLIO_dev_132 (mode=single_text, semantic_check=False, refinement_code=False)
+[13:55:13]   [FOLIO_dev_129] ✓ 正确! 预测=A, 答案=A
+[13:55:13] [Worker] 开始处理: FOLIO_dev_176 (mode=single_text, semantic_check=False, refinement_code=False)
+[13:55:15]   [FOLIO_dev_132] code执行错误: '(' was never closed (<string>, line 41)
+[13:55:15]   [FOLIO_dev_132] 代码修复功能关闭，使用repair.py进行修复
+[13:55:15]   [FOLIO_dev_132] repair.py修复: 检测到缺少 1 个右括号; 第41行: 添加 1 个右括号
+[13:55:15]   [FOLIO_dev_132] ✗ 错误! 预测=B, 答案=A
+[13:55:15] [Worker] 开始处理: FOLIO_dev_53 (mode=single_text, semantic_check=False, refinement_code=False)
+[13:55:16]   [FOLIO_dev_40] ✗ 错误! 预测=C, 答案=A
+[13:55:16] [Worker] 开始处理: FOLIO_dev_171 (mode=single_text, semantic_check=False, refinement_code=False)
+[13:55:19]   [FOLIO_dev_4] code执行错误: '(' was never closed (<string>, line 40)
+[13:55:19]   [FOLIO_dev_4] 代码修复功能关闭，使用repair.py进行修复
+[13:55:19]   [FOLIO_dev_4] repair.py修复: 检测到缺少 1 个右括号; 第40行: 添加 1 个右括号
+[13:55:19]   [FOLIO_dev_4] ✓ 正确! 预测=C, 答案=C
+[13:55:19]   [FOLIO_dev_176] ✓ 正确! 预测=C, 答案=C
+[13:55:23]   [FOLIO_dev_53] ✓ 正确! 预测=C, 答案=C
+[13:55:23]   [FOLIO_dev_171] ✗ 错误! 预测=C, 答案=A
+[13:55:23] ==================================================
+[13:55:23] 评测完成!
+[13:55:23] 已完成: 50, 正确: 28, 错误: 20, 异常: 2
+[13:55:23] 准确率: 56.00%
+[13:55:23] ==================================================
+=== 评测日志结束于 2025-12-19 13:56:27 ===
