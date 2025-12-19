@@ -19,10 +19,10 @@ from concurrent.futures import ThreadPoolExecutor, as_completed
 
 from request import LLMClient, query_llm_loop_messages, test_api_connection
 from semantic_check import generate_semantic_check_full_prompt, semantic_check_response_analyze
-from dataset_and_prompt import (detect_dataset_type, build_initial_messages_for_all_datasets, 
+from dataset_and_prompt import (detect_dataset_type, build_initial_messages_for_all_datasets,
                                  build_next_messages_for_all_datasets, build_single_text_message_for_all_datasets,
-                                 build_next_single_text_message_for_all_datasets, convert_messages_to_single_text_format)
-from z3_execute import execute_z3_code
+                                 build_next_single_text_message_for_all_datasets)
+from z3_execute import execute_z3_code, execute_z3_code_without_repair
 
 
 class LogicEvalApp:
@@ -695,16 +695,12 @@ class LogicEvalApp:
             # 初次生成对话 - 根据模式选择不同的消息构建方式
             if mode == "single_text":
                 messages = build_single_text_message_for_all_datasets(dataset_type, *self._get_question_context(problem))
-                # 保存初始上下文用于后续修复
-                accumulated_context = messages[0]['content']
-                extra_type_is_semantic = None
-                extra_info = ''
-                llm_output = ''
             else:  # direct mode
                 messages = build_initial_messages_for_all_datasets(dataset_type, *self._get_question_context(problem))
-                extra_type_is_semantic = None
-                extra_info = ''
-                llm_output = ''
+
+            extra_type_is_semantic = None
+            extra_info = ''
+            llm_output = ''
             
             while attempt < max_attempts:
                 # 每次循环开始时检查停止标志
@@ -729,7 +725,7 @@ class LogicEvalApp:
                             extra_type_is_semantic,
                             extra_info,
                             llm_output,
-                            accumulated_context
+                            messages
                         )
                     else:  # direct mode
                         next_message = build_next_messages_for_all_datasets(dataset_type, *self._get_question_context(problem),
@@ -810,7 +806,6 @@ class LogicEvalApp:
                     raise Exception('用户停止')
                 
                 # 直接执行代码（不使用repair）
-                from z3_execute import execute_z3_code_without_repair
                 result, exec_error = execute_z3_code_without_repair(code)
                 
                 # self refine
