@@ -21,7 +21,7 @@ from request import LLMClient, query_llm_loop_messages, test_api_connection
 from semantic_check import generate_semantic_check_full_prompt, semantic_check_response_analyze
 from dataset_and_prompt import (detect_dataset_type, build_initial_messages_for_all_datasets, 
                                  build_next_messages_for_all_datasets, build_single_text_message_for_all_datasets,
-                                 build_next_single_text_message_for_all_datasets, convert_messages_to_single_text_format)
+                                 build_next_single_text_message_for_all_datasets)
 from z3_execute import execute_z3_code
 
 

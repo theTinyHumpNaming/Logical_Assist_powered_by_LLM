@@ -1,0 +1,32 @@
+=== 评测日志开始于 2025-12-20 12:29:11 ===
+[12:29:18] 代码修复功能已关闭
+[12:29:26] 正在加载数据集: D:/学习资料/课程/程序设计大作业/EnhancingLLM/EnhancingLLM/data/ProofWriter_test.json
+[12:29:26] 共 50 道题目，使用 4 个 workers 并行处理
+[12:29:26] [Worker] 开始处理: ProofWriter_AttNeg-OWA-D5-489_Q2 (mode=direct, semantic_check=False, refinement_code=False)
+[12:29:26] [Worker] 开始处理: ProofWriter_AttNeg-OWA-D5-1015_Q3 (mode=direct, semantic_check=False, refinement_code=False)
+[12:29:26] [Worker] 开始处理: ProofWriter_AttNoneg-OWA-D5-178_Q18 (mode=direct, semantic_check=False, refinement_code=False)
+[12:29:26] [Worker] 开始处理: ProofWriter_AttNoneg-OWA-D5-20_Q10 (mode=direct, semantic_check=False, refinement_code=False)
+[12:29:33]   [ProofWriter_AttNeg-OWA-D5-489_Q2] 代码自动修复: 检测到缺少 6 个右括号; 第29行: 添加 1 个右括号; 第30行: 添加 1 个右括号; 第31行: 添加 1 个右括号; 第32行: 添加 1 个右括号; 第33行: 添加 1 个右括号; 第34行: 添加 1 个右括号; 自动添加未定义的Bool变量: s; 自动添加未定义的Bool变量: stmt
+[12:29:33]   [ProofWriter_AttNeg-OWA-D5-489_Q2] ✓ 正确! 预测=B, 答案=B
+[12:29:33] [Worker] 开始处理: ProofWriter_AttNoneg-OWA-D5-613_Q12 (mode=direct, semantic_check=False, refinement_code=False)
+[12:29:33]   [ProofWriter_AttNoneg-OWA-D5-178_Q18] 代码自动修复: 检测到缺少 5 个右括号; 第30行: 添加 1 个右括号; 第31行: 添加 1 个右括号; 第32行: 添加 1 个右括号; 第33行: 添加 1 个右括号; 第35行: 添加 1 个右括号; 自动添加未定义的Bool变量: s; 自动添加未定义的Bool变量: stmt
+[12:29:33]   [ProofWriter_AttNoneg-OWA-D5-178_Q18] ✓ 正确! 预测=C, 答案=C
+[12:29:33] [Worker] 开始处理: ProofWriter_RelNeg-OWA-D5-249_Q9 (mode=direct, semantic_check=False, refinement_code=False)
+[12:29:33]   [ProofWriter_AttNeg-OWA-D5-1015_Q3] 代码自动修复: 检测到缺少 8 个右括号; 第30行: 添加 1 个右括号; 第34行: 添加 1 个右括号; 第35行: 添加 1 个右括号; 第36行: 添加 1 个右括号; 第37行: 添加 1 个右括号; 第38行: 添加 1 个右括号; 第39行: 添加 2 个右括号; 自动添加未定义的Bool变量: s; 自动添加未定义的Bool变量: stmt
+[12:29:33]   [ProofWriter_AttNeg-OWA-D5-1015_Q3] ✗ 错误! 预测=C, 答案=A
+[12:29:33] [Worker] 开始处理: ProofWriter_AttNeg-OWA-D5-1170_Q10 (mode=direct, semantic_check=False, refinement_code=False)
+[12:29:34]   [ProofWriter_AttNoneg-OWA-D5-20_Q10] 代码自动修复: 检测到缺少 2 个右括号; 第36行: 添加 1 个右括号; 第39行: 添加 1 个右括号; 自动添加未定义的Bool变量: s; 自动添加未定义的Bool变量: stmt
+[12:29:34]   [ProofWriter_AttNoneg-OWA-D5-20_Q10] ✓ 正确! 预测=B, 答案=B
+[12:29:34] [Worker] 开始处理: ProofWriter_AttNoneg-OWA-D5-308_Q8 (mode=direct, semantic_check=False, refinement_code=False)
+[12:29:38]   [ProofWriter_RelNeg-OWA-D5-249_Q9] 代码自动修复: 检测到缺少 3 个右括号; 第33行: 添加 1 个右括号; 第34行: 添加 1 个右括号; 第35行: 添加 1 个右括号; 自动添加未定义的Bool变量: s; 自动添加未定义的Bool变量: stmt
+[12:29:38]   [ProofWriter_RelNeg-OWA-D5-249_Q9] ✗ 错误! 预测=C, 答案=A
+[12:29:38] [Worker] 开始处理: ProofWriter_RelNoneg-OWA-D5-789_Q21 (mode=direct, semantic_check=False, refinement_code=False)
+[12:29:39]   [ProofWriter_AttNoneg-OWA-D5-613_Q12] 代码自动修复: 检测到缺少 6 个右括号; 第33行: 添加 1 个右括号; 第34行: 添加 1 个右括号; 第35行: 添加 1 个右括号; 第36行: 添加 1 个右括号; 第37行: 添加 1 个右括号; 第38行: 添加 1 个右括号; 自动添加未定义的Bool变量: s; 自动添加未定义的Bool变量: stmt
+[12:29:39]   [ProofWriter_AttNoneg-OWA-D5-613_Q12] ✗ 错误! 预测=C, 答案=B
+[12:29:39] [Worker] 开始处理: ProofWriter_RelNoneg-OWA-D5-502_Q3 (mode=direct, semantic_check=False, refinement_code=False)
+[12:29:40]   [ProofWriter_AttNoneg-OWA-D5-308_Q8] 代码自动修复: 检测到缺少 8 个右括号; 第28行: 添加 1 个右括号; 第29行: 添加 1 个右括号; 第30行: 添加 1 个右括号; 第31行: 添加 1 个右括号; 第32行: 添加 1 个右括号; 第33行: 添加 1 个右括号; 第34行: 添加 1 个右括号; 第35行: 添加 1 个右括号; 自动添加未定义的Bool变量: s; 自动添加未定义的Bool变量: stmt
+[12:29:40]   [ProofWriter_AttNoneg-OWA-D5-308_Q8] ✓ 正确! 预测=B, 答案=B
+[12:29:40] [Worker] 开始处理: ProofWriter_AttNeg-OWA-D5-891_Q1 (mode=direct, semantic_check=False, refinement_code=False)
+[12:29:40]   [ProofWriter_AttNeg-OWA-D5-1170_Q10] 代码自动修复: 检测到缺少 11 个右括号; 第29行: 添加 1 个右括号; 第30行: 添加 1 个右括号; 第31行: 添加 1 个右括号; 第32行: 添加 1 个右括号; 第33行: 添加 1 个右括号; 第34行: 添加 1 个右括号; 第35行: 添加 2 个右括号; 第36行: 添加 1 个右括号; 第37行: 添加 2 个右括号; 自动添加未定义的Bool变量: s; 自动添加未定义的Bool变量: stmt; 第37行: 修复 Implies 缺少第二个参数（从And中提取）; 第39行: 修复 Implies 缺少第二个参数（从And中提取）
+[12:29:40]   [ProofWriter_AttNeg-OWA-D5-1170_Q10] ✗ 错误! 预测=A, 答案=B
+[12:29:40] [Worker] 开始处理: ProofWriter_AttNoneg-OWA-D5-785_Q10 (mode=direct, semantic_check=False, refinement_code=False)
