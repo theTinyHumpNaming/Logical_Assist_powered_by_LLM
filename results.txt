@@ -1,17 +1,23 @@
-DeepseekV3.2 without refinement
-ProntoQA  
-LogicalDeduction
-FOLIO
-proofwriter
-
 GPT 3.5 turbo without refinement
-ProntoQA  
-LogicalDeduction
-FOLIO
+ProntoQA 98%
+LogicalDeduction 88%
+FOLIO 58%
 proofwriter 90%
 
 GPT 4  without refinement
-ProntoQA  
-LogicalDeduction
-FOLIO
-proofwriter
+ProntoQA  94%
+LogicalDeduction 100%
+FOLIO 86%
+proofwriter 98%
+
+GPT 3.5 turbo without refinement&repair
+ProntoQA 88%
+LogicalDeduction 88%
+FOLIO 48%
+proofwriter 8%
+
+GPT 4  without refinement&repair
+ProntoQA  94%
+LogicalDeduction 100%
+FOLIO 80%
+proofwriter 98%
