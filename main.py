@@ -806,10 +806,10 @@ class LogicEvalApp:
                 if self.stop_flag:
                     raise Exception('用户停止')
                 
-                # 每次执行代码之前都使用repair修复
-                result, exec_error, repair_log = execute_z3_code(code, auto_repair=True)
+                # 每次执行前都使用repair修复代码
+                result, exec_error, repair_log = execute_z3_code(code)
                 
-                # 记录repair修复日志
+                # 记录修复日志
                 if repair_log:
                     self.root.after(0, lambda pid=problem_id, logs=repair_log: 
                                    self.log(f"  [{pid}] 代码自动修复: {'; '.join(logs)}", 'debug'))
@@ -817,21 +817,20 @@ class LogicEvalApp:
                 # self refine
                 if exec_error:
                     self.root.after(0, lambda pid=problem_id, e=exec_error: 
-                                   self.log(f"  [{pid}] code执行错误: {e}", 'warning'))
+                                   self.log(f"  [{pid}] code执行错误（repair修复后）: {e}", 'warning'))
                     
                     # 如果代码修复功能关闭，直接抛出错误
                     if not refinement_code_enabled:
                         raise Exception(f"代码执行错误（repair修复后仍失败）: {exec_error}")
-                    else:
-                        # 代码修复功能开启，继续LLM refine循环
-                        if attempt >= max_attempts - 1:
-                            # 已达到最大尝试次数，抛出错误
-                            raise Exception(f"代码执行错误（LLM修复{max_attempts}次 + repair后仍失败）: {exec_error}")
-                        else:
-                            # 继续LLM refine
-                            extra_info=exec_error
-                            extra_type_is_semantic=False
-                            continue
+                    
+                    # 如果达到最大尝试次数，抛出错误
+                    if attempt >= max_attempts - 1:
+                        raise Exception(f"代码执行错误（repair修复 + LLM修复{max_attempts}次后仍失败）: {exec_error}")
+                    
+                    # 继续LLM refine循环
+                    extra_info=exec_error
+                    extra_type_is_semantic=False
+                    continue
                 
                 # 成功执行结束
                 predicted = result.upper() if result else None
