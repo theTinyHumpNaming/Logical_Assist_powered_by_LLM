@@ -403,9 +403,9 @@ class CustomLLMClient(LLMClient):
 
 ## 项目链接
 
-- **GitHub**: [https://github.com/your-username/Logical_Assist_powered_by_LLM](https://github.com/your-username/Logical_Assist_powered_by_LLM)
+- **GitHub**: [https://github.com/theTinyHumpNaming/Logical_Assist_powered_by_LLM](https://github.com/theTinyHumpNaming/Logical_Assist_powered_by_LLM)
 - **文档**: 查看本 README 文件
-- **问题反馈**: [提交 Issue](https://github.com/your-username/Logical_Assist_powered_by_LLM/issues)
+- **问题反馈**: [提交 Issue](https://github.com/theTinyHumpNaming/Logical_Assist_powered_by_LLM/issues)
 
 ## 联系方式
 
