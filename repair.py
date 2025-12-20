@@ -32,33 +32,49 @@ def repair_code(code: str) -> Tuple[str, List[str]]:
     repaired_code, line_repairs = fix_line_brackets(repaired_code)
     repairs.extend(line_repairs)
     
-    # 3. 修复未定义的Bool变量（新增）
+    # 3. 修复未定义但被调用的函数（如in_state, same_state等） - 必须在Bool变量修复之前
+    repaired_code, undefined_func_repairs = fix_undefined_function_calls(repaired_code)
+    repairs.extend(undefined_func_repairs)
+    
+    # 4. 修复未定义的Bool变量
     repaired_code, bool_repairs = fix_undefined_bool_variables(repaired_code)
     repairs.extend(bool_repairs)
     
-    # 4. 修复未定义的谓词
+    # 5. 修复未定义的谓词
     repaired_code, predicate_repairs = fix_undefined_predicates(repaired_code)
     repairs.extend(predicate_repairs)
     
-    # 5. 修复常见的Z3语法问题
+    # 6. 修复常见的Z3语法问题
     repaired_code, syntax_repairs = fix_common_syntax_issues(repaired_code)
     repairs.extend(syntax_repairs)
     
-    # 6. 修复Python逻辑运算符（or/and）为Z3函数（Or/And）
+    # 7. 修复Python逻辑运算符（or/and）为Z3函数（Or/And）
     repaired_code, logic_repairs = fix_python_logical_operators(repaired_code)
     repairs.extend(logic_repairs)
     
-    # 7. 修复未定义的量化变量（x, y等）
+    # 8. 修复未定义的量化变量（x, y等）
     repaired_code, quantifier_repairs = fix_undefined_quantifier_variables(repaired_code)
     repairs.extend(quantifier_repairs)
     
-    # 8. 修复ForAll在Facts部分的问题（需要移动到Rules部分）
+    # 9. 修复ForAll在Facts部分的问题（需要移动到Rules部分）
     repaired_code, forall_move_repairs = fix_forall_in_facts(repaired_code)
     repairs.extend(forall_move_repairs)
     
-    # 9. 修复Z3表达式类型错误
+    # 10. 修复Z3表达式类型错误
     repaired_code, type_repairs = fix_z3_type_errors(repaired_code)
     repairs.extend(type_repairs)
+    
+    # 11. 修复Function定义错误（BoolSort应该是Entity）
+    repaired_code, func_sig_repairs = fix_function_signature_errors(repaired_code)
+    repairs.extend(func_sig_repairs)
+    
+    # 12. 修复孤立的缩进行（在注释掉某行后留下的缩进行）
+    repaired_code, orphan_repairs = fix_orphaned_indented_lines(repaired_code)
+    repairs.extend(orphan_repairs)
+    
+    # 13. 最终清理：移除孤立的括号行
+    repaired_code, final_repairs = final_cleanup_orphaned_brackets(repaired_code)
+    repairs.extend(final_repairs)
     
     return repaired_code, repairs
 
@@ -595,6 +611,8 @@ def fix_undefined_quantifier_variables(code: str) -> Tuple[str, List[str]]:
     
     例如：代码中使用了 ForAll([x], ...) 但没有定义 x = Const('x', Entity)
     
+    注意：如果代码中没有定义Entity类型，会注释掉使用ForAll的行
+    
     Args:
         code: 原始代码
         
@@ -631,19 +649,39 @@ def fix_undefined_quantifier_variables(code: str) -> Tuple[str, List[str]]:
     undefined_vars = used_vars - defined_vars
     
     if undefined_vars:
-        # 找到Entity类型定义的位置
-        entity_type = 'Entity'  # 默认类型
-        insert_position = None
+        # 检查是否定义了Entity类型
+        has_entity_def = False
+        entity_type = 'Entity'
         
-        # 查找Entity定义
-        for i, line in enumerate(lines):
+        for line in lines:
             if 'EnumSort' in line and '=' in line:
+                has_entity_def = True
                 # 提取Entity类型名
                 match = re.search(r'(\w+)\s*,\s*\([^)]+\)\s*=\s*EnumSort', line)
                 if match:
                     entity_type = match.group(1)
+                break
+        
+        if not has_entity_def:
+            # 没有Entity定义，无法添加Const变量
+            # 需要注释掉所有使用ForAll/Exists的行
+            repairs.append(f"警告：代码使用了ForAll/Exists但缺少Entity定义，将注释掉相关行")
             
-            # 查找solver = Solver()的位置，在它之前插入
+            fixed_lines = []
+            for i, line in enumerate(lines):
+                if re.search(forall_pattern, line) and not line.strip().startswith('#'):
+                    fixed_lines.append('# ERROR_NO_ENTITY: ' + line.lstrip() + '  # 缺少Entity定义，无法使用ForAll/Exists')
+                    repairs.append(f"第{i+1}行: 注释掉ForAll/Exists（缺少Entity定义）")
+                else:
+                    fixed_lines.append(line)
+            
+            return '\n'.join(fixed_lines), repairs
+        
+        # 有Entity定义，可以添加变量
+        insert_position = None
+        
+        # 查找solver = Solver()的位置，在它之前插入
+        for i, line in enumerate(lines):
             if 'solver = Solver()' in line or 'solver=Solver()' in line:
                 insert_position = i
                 break
@@ -846,6 +884,337 @@ def analyze_bracket_error(code: str, error_line: int) -> Optional[str]:
         return f"在第 {error_line} 行之前累计缺少 {total_open - total_close} 个右括号"
     
     return None
+
+
+def fix_undefined_function_calls(code: str) -> Tuple[str, List[str]]:
+    """
+    修复未定义但被调用的函数
+    
+    常见情况：
+    - in_state("montana") 但 in_state 未定义
+    - same_state(x, y) 但 same_state 未定义
+    
+    Args:
+        code: 原始代码
+        
+    Returns:
+        (修复后的代码, 修复记录)
+    """
+    repairs = []
+    lines = code.split('\n')
+    
+    # 查找已定义的函数和变量
+    defined_items = set()
+    
+    # Bool变量
+    for match in re.finditer(r'(\w+)\s*=\s*Bool\s*\(', code):
+        defined_items.add(match.group(1))
+    
+    # Function定义
+    for match in re.finditer(r'(\w+)\s*=\s*Function\s*\(', code):
+        defined_items.add(match.group(1))
+    
+    # Const定义
+    for match in re.finditer(r'(\w+)\s*=\s*Const\s*\(', code):
+        defined_items.add(match.group(1))
+    
+    # 查找被调用的函数（形如 func_name(...) ）
+    z3_builtins = {
+        'Solver', 'Bool', 'Int', 'Function', 'Const', 'And', 'Or', 'Not', 
+        'Implies', 'ForAll', 'Exists', 'Distinct', 'If', 'EnumSort', 'BoolSort',
+        'IntSort', 'print', 'exit', 'unsat', 'sat', 'unknown', 'check', 'push', 'pop', 'add'
+    }
+    
+    called_functions = set()
+    for line in lines:
+        # 跳过注释和定义行
+        if line.strip().startswith('#'):
+            continue
+        
+        # 查找函数调用 func_name(...)
+        for match in re.finditer(r'(\w+)\s*\(', line):
+            func_name = match.group(1)
+            if func_name not in z3_builtins and func_name not in defined_items:
+                # 检查是否看起来像函数调用（不是关键字）
+                if func_name not in ['if', 'elif', 'while', 'for', 'def', 'class']:
+                    called_functions.add(func_name)
+    
+    # 分析未定义的函数调用
+    undefined_functions = called_functions - defined_items
+    
+    if undefined_functions:
+        repairs.append(f"检测到未定义的函数调用: {', '.join(sorted(undefined_functions))}")
+        
+        # 检查是否有Entity定义
+        has_entity = 'EnumSort' in code
+        
+        if not has_entity:
+            # 没有Entity，无法定义这些函数，需要注释掉调用
+            repairs.append("警告：代码缺少Entity定义，无法定义函数，将注释掉相关调用")
+            
+            fixed_lines = []
+            for i, line in enumerate(lines):
+                if line.strip().startswith('#'):
+                    fixed_lines.append(line)
+                    continue
+                
+                # 检查是否调用了未定义的函数
+                has_undefined_call = False
+                for func in undefined_functions:
+                    if re.search(rf'\b{func}\s*\(', line):
+                        has_undefined_call = True
+                        break
+                
+                if has_undefined_call:
+                    fixed_lines.append('# ERROR_UNDEFINED_FUNC: ' + line.lstrip() + '  # 调用了未定义的函数')
+                    repairs.append(f"第{i+1}行: 注释掉对未定义函数的调用")
+                else:
+                    fixed_lines.append(line)
+            
+            return '\n'.join(fixed_lines), repairs
+    
+    return code, repairs
+
+
+def fix_function_signature_errors(code: str) -> Tuple[str, List[str]]:
+    """
+    修复Function定义的签名错误
+    
+    常见错误:
+    - Function("lost_to", BoolSort(), BoolSort()) 应该是 Function("lost_to", Entity, Entity, BoolSort())
+    - 参数类型应该是Entity或其他具体类型，而不是BoolSort
+    
+    这个函数会:
+    1. 检测错误的Function定义（使用BoolSort作为参数）
+    2. 注释掉这些定义
+    3. 移除对这些函数的所有调用（因为它们无法正确定义）
+    
+    Args:
+        code: 原始代码
+        
+    Returns:
+        (修复后的代码, 修复记录)
+    """
+    repairs = []
+    lines = code.split('\n')
+    fixed_lines = []
+    
+    # 检查是否定义了Entity类型
+    has_entity = 'EnumSort' in code
+    
+    # 第一遍：找出所有有问题的Function定义
+    problematic_functions = set()
+    
+    for line_num, line in enumerate(lines):
+        if 'Function(' in line and '=' in line and not line.strip().startswith('#'):
+            match = re.search(r'(\w+)\s*=\s*Function\s*\(\s*["\'](\w+)["\']\s*,\s*(.+)\)', line)
+            if match:
+                func_var = match.group(1)
+                func_name = match.group(2)
+                type_args = match.group(3)
+                
+                # 分割类型参数
+                type_parts = []
+                depth = 0
+                current = []
+                for char in type_args:
+                    if char == '(':
+                        depth += 1
+                        current.append(char)
+                    elif char == ')':
+                        depth -= 1
+                        current.append(char)
+                    elif char == ',' and depth == 0:
+                        type_parts.append(''.join(current).strip())
+                        current = []
+                    else:
+                        current.append(char)
+                
+                if current:
+                    type_parts.append(''.join(current).strip())
+                
+                # 检查是否有BoolSort()作为非返回类型参数（错误）
+                if len(type_parts) >= 2:
+                    has_bool_param = False
+                    for i, part in enumerate(type_parts[:-1]):  # 除了最后一个（返回类型）
+                        if 'BoolSort' in part:
+                            has_bool_param = True
+                            break
+                    
+                    if has_bool_param:
+                        problematic_functions.add(func_var)
+                        problematic_functions.add(func_name)
+    
+    # 第二遍：注释掉有问题的定义，并移除对它们的调用
+    for line_num, line in enumerate(lines):
+        original_line = line
+        modified = False
+        
+        # 检查Function定义
+        if 'Function(' in line and '=' in line and not line.strip().startswith('#'):
+            match = re.search(r'(\w+)\s*=\s*Function\s*\(\s*["\'](\w+)["\']\s*,', line)
+            if match:
+                func_var = match.group(1)
+                if func_var in problematic_functions:
+                    line = '# ERROR_FUNCTION_SIGNATURE: ' + line.lstrip() + f'  # {func_var} 参数类型错误（无法修复，已移除）'
+                    repairs.append(f"第{line_num+1}行: 注释掉错误的函数定义 {func_var}（BoolSort不应作为参数）")
+                    modified = True
+        
+        # 检查是否调用了有问题的函数，如果是则注释掉整行
+        if not modified and not line.strip().startswith('#'):
+            for prob_func in problematic_functions:
+                # 检查函数调用模式：prob_func(...)
+                if re.search(rf'\b{prob_func}\s*\(', line):
+                    # 这是一个对有问题函数的调用，需要注释掉
+                    line = '# ERROR_REMOVED_CALL: ' + line.lstrip() + f'  # 调用了未定义的函数 {prob_func}'
+                    repairs.append(f"第{line_num+1}行: 注释掉对错误函数 {prob_func} 的调用")
+                    modified = True
+                    break
+        
+        fixed_lines.append(line)
+    
+    return '\n'.join(fixed_lines), repairs
+
+
+def fix_orphaned_indented_lines(code: str) -> Tuple[str, List[str]]:
+    """
+    修复孤立的缩进行和多余的括号
+    
+    当某一行被注释掉后，如果它后面有缩进的延续行，这些行会变成孤立的缩进行
+    导致IndentationError。同时，结束的括号也会变成多余的。
+    
+    例如:
+        # solver.add(And(
+            Implies(...),
+            ...
+        ))
+    
+    修复方法：注释掉这些孤立的缩进行和后续的单独括号行
+    
+    注意：只处理真正孤立的行，不处理合法的缩进块（如if/else/for等后的缩进）
+    
+    Args:
+        code: 原始代码
+        
+    Returns:
+        (修复后的代码, 修复记录)
+    """
+    repairs = []
+    lines = code.split('\n')
+    fixed_lines = []
+    
+    # Python块开始关键字（这些后面的缩进行是合法的）
+    block_keywords = ['if ', 'elif ', 'else:', 'for ', 'while ', 'def ', 'class ', 
+                     'try:', 'except ', 'except:', 'finally:', 'with ']
+    
+    i = 0
+    while i < len(lines):
+        line = lines[i]
+        
+        # 检查当前行是否是被注释掉的行（以 # ERROR、# ORPHANED 等开头）
+        is_commented_error = line.strip().startswith(('# ERROR', '# ORPHANED', '# WARNING'))
+        
+        # 只在行是错误注释时才检查孤立行
+        if is_commented_error and i + 1 < len(lines):
+            # 检查这个注释行之前是否有合法的块结构
+            # 向前查找最近的非空非注释行
+            prev_line_idx = i - 1
+            while prev_line_idx >= 0:
+                prev_line = lines[prev_line_idx].strip()
+                if prev_line and not prev_line.startswith('#'):
+                    break
+                prev_line_idx -= 1
+            
+            # 如果前一行是块开始（如 else:），则当前注释后的缩进行不是孤立的
+            is_in_block = False
+            if prev_line_idx >= 0:
+                prev_line = lines[prev_line_idx].strip()
+                for keyword in block_keywords:
+                    if keyword in prev_line:
+                        is_in_block = True
+                        break
+            
+            # 如果在合法块中，不处理为孤立行
+            if is_in_block:
+                fixed_lines.append(line)
+                i += 1
+                continue
+            
+            # 检查下一行是否有缩进（可能是孤立的延续行）
+            next_line = lines[i + 1]
+            
+            # 如果下一行有缩进但不是注释，可能是孤立行
+            if next_line.startswith((' ', '\t')) and not next_line.strip().startswith('#') and next_line.strip():
+                # 这是孤立的缩进行，找到所有连续的缩进行并注释掉
+                fixed_lines.append(line)
+                i += 1
+                
+                orphan_count = 0
+                while i < len(lines):
+                    current = lines[i]
+                    stripped = current.strip()
+                    
+                    # 如果这行有缩进且不是注释
+                    if current.startswith((' ', '\t')) and not stripped.startswith('#') and stripped:
+                        # 注释掉这行
+                        fixed_lines.append('# ORPHANED_LINE: ' + current.lstrip() + '  # 孤立的延续行')
+                        orphan_count += 1
+                        i += 1
+                    elif not stripped:  # 空行
+                        fixed_lines.append(current)
+                        i += 1
+                    else:
+                        # 检查是否是单独的括号行（如 `)` 或 `))` 等）
+                        if re.match(r'^[)\s]+$', stripped):
+                            # 这是多余的括号行
+                            fixed_lines.append('# ORPHANED_BRACKETS: ' + current.lstrip() + '  # 多余的括号')
+                            repairs.append(f"第{i+1}行: 注释掉多余的括号")
+                            i += 1
+                            # 继续检查后续行
+                            continue
+                        else:
+                            # 不再是相关的行，停止
+                            break
+                
+                if orphan_count > 0:
+                    repairs.append(f"注释掉 {orphan_count} 行孤立的延续行")
+                continue
+        
+        fixed_lines.append(line)
+        i += 1
+    
+    return '\n'.join(fixed_lines), repairs
+
+
+def final_cleanup_orphaned_brackets(code: str) -> Tuple[str, List[str]]:
+    """
+    最终清理：移除孤立的括号行
+    
+    当多行被注释掉后，可能会留下单独的括号行（如 `))` 或 `)`）
+    这些行会导致语法错误
+    
+    Args:
+        code: 代码
+        
+    Returns:
+        (修复后的代码, 修复记录)
+    """
+    repairs = []
+    lines = code.split('\n')
+    fixed_lines = []
+    
+    for i, line in enumerate(lines):
+        stripped = line.strip()
+        
+        # 如果这行只包含括号和空白
+        if stripped and re.match(r'^[)\s]+$', stripped) and not line.strip().startswith('#'):
+            # 注释掉这行
+            fixed_lines.append('# ORPHANED_BRACKETS: ' + line.lstrip() + '  # 孤立的括号')
+            repairs.append(f"第{i+1}行: 注释掉孤立的括号")
+        else:
+            fixed_lines.append(line)
+    
+    return '\n'.join(fixed_lines), repairs
 
 
 def quick_bracket_fix(code: str) -> str:
