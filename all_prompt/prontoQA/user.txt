@@ -5,6 +5,8 @@ Task Description: You are given a problem description and a question. The task i
 4) Create statements to be checked.
 5) Check if the solver can find a model that satisfies the conditions, if true, return A, if false, return B.
 
+Note: When using solver.add(), add constraints one at a time to avoid potential issues.
+
 Following is an example to follow:
 Problem:
 Every zumpus is aggressive. Zumpuses are Wumpuses. Wumpuses are not small. Wumpuses are aggressive. Polly is zumpus.

@@ -1,0 +1,124 @@
+=== 评测日志开始于 2025-12-20 14:59:07 ===
+[14:59:11] Repair功能已关闭
+[14:59:12] 代码修复功能已关闭
+[14:59:12] Repair功能已启用
+[14:59:13] Repair功能已关闭
+[14:59:15] Repair功能已启用
+[15:00:10] 正在加载数据集: D:/学习资料/课程/程序设计大作业/EnhancingLLM/EnhancingLLM/data/LogicalDeduction_test.json
+[15:00:10] 共 50 道题目，使用 4 个 workers 并行处理
+[15:00:10] [Worker] 开始处理: logical_deduction_166 (mode=direct, semantic_check=False, refinement_code=False, repair=True)
+[15:00:10] [Worker] 开始处理: logical_deduction_27 (mode=direct, semantic_check=False, refinement_code=False, repair=True)
+[15:00:10] [Worker] 开始处理: logical_deduction_32 (mode=direct, semantic_check=False, refinement_code=False, repair=True)
+[15:00:10] [Worker] 开始处理: logical_deduction_26 (mode=direct, semantic_check=False, refinement_code=False, repair=True)
+[15:00:17]   [logical_deduction_27] 代码自动修复: 检测到未定义的函数调用: Ints, as_long, eval, model; 警告：代码缺少Entity定义，无法定义函数，将注释掉相关调用; 第5行: 注释掉对未定义函数的调用; 第26行: 注释掉对未定义函数的调用; 第27行: 注释掉对未定义函数的调用; 第28行: 注释掉对未定义函数的调用; 第29行: 注释掉对未定义函数的调用; 第30行: 注释掉对未定义函数的调用; 第31行: 注释掉对未定义函数的调用; 自动添加未定义的Bool变量: b; 自动添加未定义的Bool变量: birds; 检测到未定义的谓词: Ints
+[15:00:17]   [logical_deduction_27] code执行错误（repair修复后）: name 'Owl' is not defined
+[15:00:17]   [logical_deduction_27] ⚠ 异常: 代码执行错误（repair修复后仍失败）: name 'Owl' is not defined
+[15:00:17] [Worker] 开始处理: logical_deduction_179 (mode=direct, semantic_check=False, refinement_code=False, repair=True)
+[15:00:18]   [logical_deduction_32] 代码自动修复: 检测到未定义的函数调用: Ints, as_long, eval, model; 警告：代码缺少Entity定义，无法定义函数，将注释掉相关调用; 第4行: 注释掉对未定义函数的调用; 第24行: 注释掉对未定义函数的调用; 第25行: 注释掉对未定义函数的调用; 第26行: 注释掉对未定义函数的调用; 第27行: 注释掉对未定义函数的调用; 第28行: 注释掉对未定义函数的调用; 第29行: 注释掉对未定义函数的调用; 自动添加未定义的Bool变量: g; 自动添加未定义的Bool变量: golfers; 检测到未定义的谓词: Ints
+[15:00:18]   [logical_deduction_32] code执行错误（repair修复后）: name 'Rob' is not defined
+[15:00:18]   [logical_deduction_32] ⚠ 异常: 代码执行错误（repair修复后仍失败）: name 'Rob' is not defined
+[15:00:18] [Worker] 开始处理: logical_deduction_223 (mode=direct, semantic_check=False, refinement_code=False, repair=True)
+[15:00:18]   [logical_deduction_26] 代码自动修复: 检测到未定义的函数调用: Ints, as_long, eval, model; 警告：代码缺少Entity定义，无法定义函数，将注释掉相关调用; 第4行: 注释掉对未定义函数的调用; 第25行: 注释掉对未定义函数的调用; 第26行: 注释掉对未定义函数的调用; 第27行: 注释掉对未定义函数的调用; 第28行: 注释掉对未定义函数的调用; 第29行: 注释掉对未定义函数的调用; 第30行: 注释掉对未定义函数的调用; 自动添加未定义的Bool变量: g; 自动添加未定义的Bool变量: golfers; 检测到未定义的谓词: Ints
+[15:00:18]   [logical_deduction_26] code执行错误（repair修复后）: name 'Amy' is not defined
+[15:00:18]   [logical_deduction_26] ⚠ 异常: 代码执行错误（repair修复后仍失败）: name 'Amy' is not defined
+[15:00:18] [Worker] 开始处理: logical_deduction_254 (mode=direct, semantic_check=False, refinement_code=False, repair=True)
+[15:00:19]   [logical_deduction_166] 代码自动修复: 检测到未定义的函数调用: Ints, as_long, eval, model; 警告：代码缺少Entity定义，无法定义函数，将注释掉相关调用; 第5行: 注释掉对未定义函数的调用; 第32行: 注释掉对未定义函数的调用; 第33行: 注释掉对未定义函数的调用; 第34行: 注释掉对未定义函数的调用; 第35行: 注释掉对未定义函数的调用; 第36行: 注释掉对未定义函数的调用; 第37行: 注释掉对未定义函数的调用; 第38行: 注释掉对未定义函数的调用; 第39行: 注释掉对未定义函数的调用; 自动添加未定义的Bool变量: b; 自动添加未定义的Bool变量: birds; 检测到未定义的谓词: Ints
+[15:00:19]   [logical_deduction_166] code执行错误（repair修复后）: name 'Falcon' is not defined
+[15:00:19]   [logical_deduction_166] ⚠ 异常: 代码执行错误（repair修复后仍失败）: name 'Falcon' is not defined
+[15:00:19] [Worker] 开始处理: logical_deduction_131 (mode=direct, semantic_check=False, refinement_code=False, repair=True)
+[15:00:23]   [logical_deduction_254] 代码自动修复: 检测到未定义的函数调用: Ints, as_long, eval, model; 警告：代码缺少Entity定义，无法定义函数，将注释掉相关调用; 第4行: 注释掉对未定义函数的调用; 第19行: 注释掉对未定义函数的调用; 第20行: 注释掉对未定义函数的调用; 第21行: 注释掉对未定义函数的调用; 第22行: 注释掉对未定义函数的调用; 检测到未定义的谓词: Ints
+[15:00:23]   [logical_deduction_254] code执行错误（repair修复后）: name 'Ana' is not defined
+[15:00:23]   [logical_deduction_254] ⚠ 异常: 代码执行错误（repair修复后仍失败）: name 'Ana' is not defined
+[15:00:23] [Worker] 开始处理: logical_deduction_78 (mode=direct, semantic_check=False, refinement_code=False, repair=True)
+[15:00:25]   [logical_deduction_179] 代码自动修复: 检测到未定义的函数调用: Ints, as_long, eval, model; 警告：代码缺少Entity定义，无法定义函数，将注释掉相关调用; 第5行: 注释掉对未定义函数的调用; 第32行: 注释掉对未定义函数的调用; 第33行: 注释掉对未定义函数的调用; 第34行: 注释掉对未定义函数的调用; 第35行: 注释掉对未定义函数的调用; 第36行: 注释掉对未定义函数的调用; 第37行: 注释掉对未定义函数的调用; 第38行: 注释掉对未定义函数的调用; 第39行: 注释掉对未定义函数的调用; 自动添加未定义的Bool变量: b; 自动添加未定义的Bool变量: birds; 检测到未定义的谓词: Ints
+[15:00:25]   [logical_deduction_179] code执行错误（repair修复后）: name 'Hawk' is not defined
+[15:00:25]   [logical_deduction_179] ⚠ 异常: 代码执行错误（repair修复后仍失败）: name 'Hawk' is not defined
+[15:00:25] [Worker] 开始处理: logical_deduction_150 (mode=direct, semantic_check=False, refinement_code=False, repair=True)
+[15:00:26]   [logical_deduction_131] 代码自动修复: 检测到未定义的函数调用: Ints, as_long, eval, model; 警告：代码缺少Entity定义，无法定义函数，将注释掉相关调用; 第4行: 注释掉对未定义函数的调用; 第31行: 注释掉对未定义函数的调用; 第32行: 注释掉对未定义函数的调用; 第33行: 注释掉对未定义函数的调用; 第34行: 注释掉对未定义函数的调用; 第35行: 注释掉对未定义函数的调用; 第36行: 注释掉对未定义函数的调用; 第37行: 注释掉对未定义函数的调用; 第38行: 注释掉对未定义函数的调用; 自动添加未定义的Bool变量: g; 自动添加未定义的Bool变量: golfers; 检测到未定义的谓词: Ints
+[15:00:26]   [logical_deduction_131] code执行错误（repair修复后）: name 'Joe' is not defined
+[15:00:26]   [logical_deduction_131] ⚠ 异常: 代码执行错误（repair修复后仍失败）: name 'Joe' is not defined
+[15:00:26] [Worker] 开始处理: logical_deduction_6 (mode=direct, semantic_check=False, refinement_code=False, repair=True)
+[15:00:27]   [logical_deduction_223] 代码自动修复: 检测到未定义的函数调用: Ints, as_long, eval, model; 警告：代码缺少Entity定义，无法定义函数，将注释掉相关调用; 第5行: 注释掉对未定义函数的调用; 第32行: 注释掉对未定义函数的调用; 第33行: 注释掉对未定义函数的调用; 第34行: 注释掉对未定义函数的调用; 第35行: 注释掉对未定义函数的调用; 第36行: 注释掉对未定义函数的调用; 第37行: 注释掉对未定义函数的调用; 第38行: 注释掉对未定义函数的调用; 第39行: 注释掉对未定义函数的调用; 自动添加未定义的Bool变量: b; 自动添加未定义的Bool变量: birds; 检测到未定义的谓词: Ints
+[15:00:27]   [logical_deduction_223] code执行错误（repair修复后）: name 'Hummingbird' is not defined
+[15:00:27]   [logical_deduction_223] ⚠ 异常: 代码执行错误（repair修复后仍失败）: name 'Hummingbird' is not defined
+[15:00:27] [Worker] 开始处理: logical_deduction_60 (mode=direct, semantic_check=False, refinement_code=False, repair=True)
+[15:00:30]   [logical_deduction_150] 代码自动修复: 检测到未定义的函数调用: Ints, as_long, eval, model; 警告：代码缺少Entity定义，无法定义函数，将注释掉相关调用; 第4行: 注释掉对未定义函数的调用; 第31行: 注释掉对未定义函数的调用; 第32行: 注释掉对未定义函数的调用; 第33行: 注释掉对未定义函数的调用; 第34行: 注释掉对未定义函数的调用; 第35行: 注释掉对未定义函数的调用; 第36行: 注释掉对未定义函数的调用; 第37行: 注释掉对未定义函数的调用; 第38行: 注释掉对未定义函数的调用; 自动添加未定义的Bool变量: g; 自动添加未定义的Bool变量: golfers; 检测到未定义的谓词: Ints
+[15:00:30]   [logical_deduction_150] code执行错误（repair修复后）: name 'Joe' is not defined
+[15:00:30]   [logical_deduction_150] ⚠ 异常: 代码执行错误（repair修复后仍失败）: name 'Joe' is not defined
+[15:00:30] [Worker] 开始处理: logical_deduction_22 (mode=direct, semantic_check=False, refinement_code=False, repair=True)
+[15:00:31]   [logical_deduction_6] 代码自动修复: 检测到未定义的函数调用: Ints, as_long, eval, model; 警告：代码缺少Entity定义，无法定义函数，将注释掉相关调用; 第5行: 注释掉对未定义函数的调用; 第26行: 注释掉对未定义函数的调用; 第27行: 注释掉对未定义函数的调用; 第28行: 注释掉对未定义函数的调用; 第29行: 注释掉对未定义函数的调用; 第30行: 注释掉对未定义函数的调用; 第31行: 注释掉对未定义函数的调用; 自动添加未定义的Bool变量: b; 自动添加未定义的Bool变量: birds; 检测到未定义的谓词: Ints
+[15:00:31]   [logical_deduction_6] code执行错误（repair修复后）: name 'Crow' is not defined
+[15:00:31]   [logical_deduction_6] ⚠ 异常: 代码执行错误（repair修复后仍失败）: name 'Crow' is not defined
+[15:00:31] [Worker] 开始处理: logical_deduction_126 (mode=direct, semantic_check=False, refinement_code=False, repair=True)
+[15:00:31]   [logical_deduction_78] 代码自动修复: 检测到未定义的函数调用: Ints, as_long, eval, model; 警告：代码缺少Entity定义，无法定义函数，将注释掉相关调用; 第5行: 注释掉对未定义函数的调用; 第26行: 注释掉对未定义函数的调用; 第27行: 注释掉对未定义函数的调用; 第28行: 注释掉对未定义函数的调用; 第29行: 注释掉对未定义函数的调用; 第30行: 注释掉对未定义函数的调用; 第31行: 注释掉对未定义函数的调用; 自动添加未定义的Bool变量: b; 自动添加未定义的Bool变量: birds; 检测到未定义的谓词: Ints
+[15:00:31]   [logical_deduction_78] code执行错误（repair修复后）: name 'BlueJay' is not defined
+[15:00:31]   [logical_deduction_78] ⚠ 异常: 代码执行错误（repair修复后仍失败）: name 'BlueJay' is not defined
+[15:00:31] [Worker] 开始处理: logical_deduction_248 (mode=direct, semantic_check=False, refinement_code=False, repair=True)
+[15:00:31]   [logical_deduction_60] 代码自动修复: 检测到未定义的函数调用: Ints, as_long, eval, model; 警告：代码缺少Entity定义，无法定义函数，将注释掉相关调用; 第5行: 注释掉对未定义函数的调用; 第26行: 注释掉对未定义函数的调用; 第27行: 注释掉对未定义函数的调用; 第28行: 注释掉对未定义函数的调用; 第29行: 注释掉对未定义函数的调用; 第30行: 注释掉对未定义函数的调用; 第31行: 注释掉对未定义函数的调用; 自动添加未定义的Bool变量: v; 自动添加未定义的Bool变量: vehicles; 检测到未定义的谓词: Ints
+[15:00:31]   [logical_deduction_60] code执行错误（repair修复后）: name 'Bus' is not defined
+[15:00:31]   [logical_deduction_60] ⚠ 异常: 代码执行错误（repair修复后仍失败）: name 'Bus' is not defined
+[15:00:31] [Worker] 开始处理: logical_deduction_116 (mode=direct, semantic_check=False, refinement_code=False, repair=True)
+[15:00:35]   [logical_deduction_22] 代码自动修复: 检测到未定义的函数调用: Ints, as_long, eval, model; 警告：代码缺少Entity定义，无法定义函数，将注释掉相关调用; 第5行: 注释掉对未定义函数的调用; 第26行: 注释掉对未定义函数的调用; 第27行: 注释掉对未定义函数的调用; 第28行: 注释掉对未定义函数的调用; 第29行: 注释掉对未定义函数的调用; 第30行: 注释掉对未定义函数的调用; 第31行: 注释掉对未定义函数的调用; 自动添加未定义的Bool变量: b; 自动添加未定义的Bool变量: books; 检测到未定义的谓词: Ints
+[15:00:35]   [logical_deduction_22] code执行错误（repair修复后）: name 'Green' is not defined
+[15:00:35]   [logical_deduction_22] ⚠ 异常: 代码执行错误（repair修复后仍失败）: name 'Green' is not defined
+[15:00:35] [Worker] 开始处理: logical_deduction_230 (mode=direct, semantic_check=False, refinement_code=False, repair=True)
+[15:00:36]   [logical_deduction_248] 代码自动修复: 检测到未定义的函数调用: Ints, as_long, eval, model; 警告：代码缺少Entity定义，无法定义函数，将注释掉相关调用; 第5行: 注释掉对未定义函数的调用; 第19行: 注释掉对未定义函数的调用; 第20行: 注释掉对未定义函数的调用; 第21行: 注释掉对未定义函数的调用; 第22行: 注释掉对未定义函数的调用; 自动添加未定义的Bool变量: b; 检测到未定义的谓词: Ints
+[15:00:36]   [logical_deduction_248] code执行错误（repair修复后）: name 'Red' is not defined
+[15:00:36]   [logical_deduction_248] ⚠ 异常: 代码执行错误（repair修复后仍失败）: name 'Red' is not defined
+[15:00:36] [Worker] 开始处理: logical_deduction_66 (mode=direct, semantic_check=False, refinement_code=False, repair=True)
+[15:00:37]   [logical_deduction_116] 代码自动修复: 检测到未定义的函数调用: Ints, as_long, eval, model; 警告：代码缺少Entity定义，无法定义函数，将注释掉相关调用; 第4行: 注释掉对未定义函数的调用; 第31行: 注释掉对未定义函数的调用; 第32行: 注释掉对未定义函数的调用; 第33行: 注释掉对未定义函数的调用; 第34行: 注释掉对未定义函数的调用; 第35行: 注释掉对未定义函数的调用; 第36行: 注释掉对未定义函数的调用; 第37行: 注释掉对未定义函数的调用; 第38行: 注释掉对未定义函数的调用; 自动添加未定义的Bool变量: v; 自动添加未定义的Bool变量: vehicles; 检测到未定义的谓词: Ints
+[15:00:37]   [logical_deduction_116] code执行错误（repair修复后）: name 'Truck' is not defined
+[15:00:37]   [logical_deduction_116] ⚠ 异常: 代码执行错误（repair修复后仍失败）: name 'Truck' is not defined
+[15:00:37] [Worker] 开始处理: logical_deduction_217 (mode=direct, semantic_check=False, refinement_code=False, repair=True)
+[15:00:37]   [logical_deduction_126] 代码自动修复: 检测到未定义的函数调用: Ints, as_long, eval, model; 警告：代码缺少Entity定义，无法定义函数，将注释掉相关调用; 第4行: 注释掉对未定义函数的调用; 第31行: 注释掉对未定义函数的调用; 第32行: 注释掉对未定义函数的调用; 第33行: 注释掉对未定义函数的调用; 第34行: 注释掉对未定义函数的调用; 第35行: 注释掉对未定义函数的调用; 第36行: 注释掉对未定义函数的调用; 第37行: 注释掉对未定义函数的调用; 第38行: 注释掉对未定义函数的调用; 自动添加未定义的Bool变量: v; 自动添加未定义的Bool变量: vehicles; 检测到未定义的谓词: Ints
+[15:00:37]   [logical_deduction_126] code执行错误（repair修复后）: name 'Bus' is not defined
+[15:00:37]   [logical_deduction_126] ⚠ 异常: 代码执行错误（repair修复后仍失败）: name 'Bus' is not defined
+[15:00:37] [Worker] 开始处理: logical_deduction_100 (mode=direct, semantic_check=False, refinement_code=False, repair=True)
+[15:00:41]   [logical_deduction_66] 代码自动修复: 检测到未定义的函数调用: Ints, as_long, eval, model; 警告：代码缺少Entity定义，无法定义函数，将注释掉相关调用; 第4行: 注释掉对未定义函数的调用; 第25行: 注释掉对未定义函数的调用; 第26行: 注释掉对未定义函数的调用; 第27行: 注释掉对未定义函数的调用; 第28行: 注释掉对未定义函数的调用; 第29行: 注释掉对未定义函数的调用; 第30行: 注释掉对未定义函数的调用; 自动添加未定义的Bool变量: g; 自动添加未定义的Bool变量: golfers; 检测到未定义的谓词: Ints
+[15:00:41]   [logical_deduction_66] code执行错误（repair修复后）: name 'Joe' is not defined
+[15:00:41]   [logical_deduction_66] ⚠ 异常: 代码执行错误（repair修复后仍失败）: name 'Joe' is not defined
+[15:00:41] [Worker] 开始处理: logical_deduction_9 (mode=direct, semantic_check=False, refinement_code=False, repair=True)
+[15:00:42]   [logical_deduction_230] 代码自动修复: 检测到未定义的函数调用: Ints, as_long, eval, model; 警告：代码缺少Entity定义，无法定义函数，将注释掉相关调用; 第4行: 注释掉对未定义函数的调用; 第34行: 注释掉对未定义函数的调用; 第35行: 注释掉对未定义函数的调用; 第36行: 注释掉对未定义函数的调用; 第37行: 注释掉对未定义函数的调用; 第38行: 注释掉对未定义函数的调用; 第39行: 注释掉对未定义函数的调用; 第40行: 注释掉对未定义函数的调用; 第41行: 注释掉对未定义函数的调用; 自动添加未定义的Bool变量: b; 自动添加未定义的Bool变量: books; 检测到未定义的谓词: Ints
+[15:00:42]   [logical_deduction_230] code执行错误（repair修复后）: name 'Purple' is not defined
+[15:00:42]   [logical_deduction_230] ⚠ 异常: 代码执行错误（repair修复后仍失败）: name 'Purple' is not defined
+[15:00:42] [Worker] 开始处理: logical_deduction_222 (mode=direct, semantic_check=False, refinement_code=False, repair=True)
+[15:00:44]   [logical_deduction_100] 代码自动修复: 检测到未定义的函数调用: Ints, as_long, eval, model; 警告：代码缺少Entity定义，无法定义函数，将注释掉相关调用; 第4行: 注释掉对未定义函数的调用; 第31行: 注释掉对未定义函数的调用; 第32行: 注释掉对未定义函数的调用; 第33行: 注释掉对未定义函数的调用; 第34行: 注释掉对未定义函数的调用; 第35行: 注释掉对未定义函数的调用; 第36行: 注释掉对未定义函数的调用; 第37行: 注释掉对未定义函数的调用; 第38行: 注释掉对未定义函数的调用; 自动添加未定义的Bool变量: v; 自动添加未定义的Bool变量: vehicles; 检测到未定义的谓词: Ints
+[15:00:44]   [logical_deduction_100] code执行错误（repair修复后）: name 'Truck' is not defined
+[15:00:44]   [logical_deduction_100] ⚠ 异常: 代码执行错误（repair修复后仍失败）: name 'Truck' is not defined
+[15:00:44] [Worker] 开始处理: logical_deduction_143 (mode=direct, semantic_check=False, refinement_code=False, repair=True)
+[15:00:45]   [logical_deduction_217] 代码自动修复: 检测到未定义的函数调用: Ints, as_long, eval, model; 警告：代码缺少Entity定义，无法定义函数，将注释掉相关调用; 第4行: 注释掉对未定义函数的调用; 第31行: 注释掉对未定义函数的调用; 第32行: 注释掉对未定义函数的调用; 第33行: 注释掉对未定义函数的调用; 第34行: 注释掉对未定义函数的调用; 第35行: 注释掉对未定义函数的调用; 第36行: 注释掉对未定义函数的调用; 第37行: 注释掉对未定义函数的调用; 第38行: 注释掉对未定义函数的调用; 自动添加未定义的Bool变量: f; 自动添加未定义的Bool变量: fruits; 检测到未定义的谓词: Ints
+[15:00:45]   [logical_deduction_217] code执行错误（repair修复后）: name 'Loquats' is not defined
+[15:00:45]   [logical_deduction_217] ⚠ 异常: 代码执行错误（repair修复后仍失败）: name 'Loquats' is not defined
+[15:00:45] [Worker] 开始处理: logical_deduction_36 (mode=direct, semantic_check=False, refinement_code=False, repair=True)
+[15:00:48]   [logical_deduction_222] 代码自动修复: 检测到未定义的函数调用: Ints, as_long, eval, model; 警告：代码缺少Entity定义，无法定义函数，将注释掉相关调用; 第4行: 注释掉对未定义函数的调用; 第31行: 注释掉对未定义函数的调用; 第32行: 注释掉对未定义函数的调用; 第33行: 注释掉对未定义函数的调用; 第34行: 注释掉对未定义函数的调用; 第35行: 注释掉对未定义函数的调用; 第36行: 注释掉对未定义函数的调用; 第37行: 注释掉对未定义函数的调用; 第38行: 注释掉对未定义函数的调用; 自动添加未定义的Bool变量: v; 自动添加未定义的Bool变量: vehicles; 检测到未定义的谓词: Ints
+[15:00:48]   [logical_deduction_222] code执行错误（repair修复后）: name 'Truck' is not defined
+[15:00:48]   [logical_deduction_9] 代码自动修复: 检测到未定义的函数调用: Ints, as_long, eval, model; 警告：代码缺少Entity定义，无法定义函数，将注释掉相关调用; 第5行: 注释掉对未定义函数的调用; 第26行: 注释掉对未定义函数的调用; 第27行: 注释掉对未定义函数的调用; 第28行: 注释掉对未定义函数的调用; 第29行: 注释掉对未定义函数的调用; 第30行: 注释掉对未定义函数的调用; 第31行: 注释掉对未定义函数的调用; 自动添加未定义的Bool变量: b; 自动添加未定义的Bool变量: books; 检测到未定义的谓词: Ints
+[15:00:48]   [logical_deduction_222] ⚠ 异常: 代码执行错误（repair修复后仍失败）: name 'Truck' is not defined
+[15:00:48]   [logical_deduction_9] code执行错误（repair修复后）: name 'Brown' is not defined
+[15:00:48] [Worker] 开始处理: logical_deduction_37 (mode=direct, semantic_check=False, refinement_code=False, repair=True)
+[15:00:48]   [logical_deduction_9] ⚠ 异常: 代码执行错误（repair修复后仍失败）: name 'Brown' is not defined
+[15:00:48] [Worker] 开始处理: logical_deduction_292 (mode=direct, semantic_check=False, refinement_code=False, repair=True)
+[15:00:50]   [logical_deduction_143] 代码自动修复: 检测到未定义的函数调用: Ints, as_long, eval, model; 警告：代码缺少Entity定义，无法定义函数，将注释掉相关调用; 第5行: 注释掉对未定义函数的调用; 第32行: 注释掉对未定义函数的调用; 第33行: 注释掉对未定义函数的调用; 第34行: 注释掉对未定义函数的调用; 第35行: 注释掉对未定义函数的调用; 第36行: 注释掉对未定义函数的调用; 第37行: 注释掉对未定义函数的调用; 第38行: 注释掉对未定义函数的调用; 第39行: 注释掉对未定义函数的调用; 自动添加未定义的Bool变量: b; 自动添加未定义的Bool变量: birds; 检测到未定义的谓词: Ints
+[15:00:50]   [logical_deduction_143] code执行错误（repair修复后）: name 'Quail' is not defined
+[15:00:50]   [logical_deduction_143] ⚠ 异常: 代码执行错误（repair修复后仍失败）: name 'Quail' is not defined
+[15:00:50] [Worker] 开始处理: logical_deduction_220 (mode=direct, semantic_check=False, refinement_code=False, repair=True)
+[15:00:51]   [logical_deduction_36] 代码自动修复: 检测到未定义的函数调用: Ints, as_long, eval, model; 警告：代码缺少Entity定义，无法定义函数，将注释掉相关调用; 第4行: 注释掉对未定义函数的调用; 第25行: 注释掉对未定义函数的调用; 第26行: 注释掉对未定义函数的调用; 第27行: 注释掉对未定义函数的调用; 第28行: 注释掉对未定义函数的调用; 第29行: 注释掉对未定义函数的调用; 第30行: 注释掉对未定义函数的调用; 自动添加未定义的Bool变量: g; 自动添加未定义的Bool变量: golfers; 检测到未定义的谓词: Eve, Ints, Mya
+[15:00:51]   [logical_deduction_36] code执行错误（repair修复后）: name 'Dan' is not defined
+[15:00:51]   [logical_deduction_36] ⚠ 异常: 代码执行错误（repair修复后仍失败）: name 'Dan' is not defined
+[15:00:51] [Worker] 开始处理: logical_deduction_207 (mode=direct, semantic_check=False, refinement_code=False, repair=True)
+[15:00:54]   [logical_deduction_292] 代码自动修复: 检测到未定义的函数调用: Ints, as_long, eval, model; 警告：代码缺少Entity定义，无法定义函数，将注释掉相关调用; 第5行: 注释掉对未定义函数的调用; 第20行: 注释掉对未定义函数的调用; 第21行: 注释掉对未定义函数的调用; 第22行: 注释掉对未定义函数的调用; 第23行: 注释掉对未定义函数的调用; 自动添加未定义的Bool变量: f; 自动添加未定义的Bool变量: fruits; 检测到未定义的谓词: Ints
+[15:00:54]   [logical_deduction_292] code执行错误（repair修复后）: name 'Apples' is not defined
+[15:00:54]   [logical_deduction_292] ⚠ 异常: 代码执行错误（repair修复后仍失败）: name 'Apples' is not defined
+[15:00:54] [Worker] 开始处理: logical_deduction_286 (mode=direct, semantic_check=False, refinement_code=False, repair=True)
+[15:00:54]   [logical_deduction_37] 代码自动修复: 检测到未定义的函数调用: Ints, as_long, eval, model; 警告：代码缺少Entity定义，无法定义函数，将注释掉相关调用; 第4行: 注释掉对未定义函数的调用; 第25行: 注释掉对未定义函数的调用; 第26行: 注释掉对未定义函数的调用; 第27行: 注释掉对未定义函数的调用; 第28行: 注释掉对未定义函数的调用; 第29行: 注释掉对未定义函数的调用; 第30行: 注释掉对未定义函数的调用; 自动添加未定义的Bool变量: g; 自动添加未定义的Bool变量: golfers; 检测到未定义的谓词: Ints
+[15:00:54]   [logical_deduction_37] code执行错误（repair修复后）: name 'Joe' is not defined
+[15:00:54]   [logical_deduction_37] ⚠ 异常: 代码执行错误（repair修复后仍失败）: name 'Joe' is not defined
+[15:00:54] [Worker] 开始处理: logical_deduction_1 (mode=direct, semantic_check=False, refinement_code=False, repair=True)
+[15:00:54] 正在停止评测，终止所有任务...
+[15:00:56] 正在终止所有任务...
+[15:00:56] ==================================================
+[15:00:56] 评测已停止!
+[15:00:56] 已完成: 26, 正确: 0, 错误: 0, 异常: 26
+[15:00:56] 准确率: 0.00%
+[15:00:56] ==================================================
+[15:01:08] 结果已导出到: D:/学习资料/课程/程序设计大作业/EnhancingLLM/EnhancingLLM/data/test17.json

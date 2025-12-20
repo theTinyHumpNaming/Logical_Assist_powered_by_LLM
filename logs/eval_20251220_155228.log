@@ -1,0 +1,162 @@
+=== 评测日志开始于 2025-12-20 15:52:28 ===
+[15:52:34] 代码修复功能已关闭
+[15:52:44] 正在测试API连接...
+[15:52:46] 正在加载数据集: D:/学习资料/课程/程序设计大作业/EnhancingLLM/EnhancingLLM/data/ProntoQA_test.json
+[15:52:46] 共 50 道题目，使用 4 个 workers 并行处理
+[15:52:46] [Worker] 开始处理: ProntoQA_118 (mode=direct, semantic_check=False, refinement_code=False, repair=True)
+[15:52:46] [Worker] 开始处理: ProntoQA_281 (mode=direct, semantic_check=False, refinement_code=False, repair=True)
+[15:52:46] [Worker] 开始处理: ProntoQA_152 (mode=direct, semantic_check=False, refinement_code=False, repair=True)
+[15:52:46] [Worker] 开始处理: ProntoQA_285 (mode=direct, semantic_check=False, refinement_code=False, repair=True)
+[15:52:47] ✓ 连接成功！模型: gpt-3.5-turbo
+[15:52:54]   [ProntoQA_281] 代码自动修复: 自动添加未定义的Bool变量: s
+[15:52:54]   [ProntoQA_281] code执行错误（repair修复后）: Value cannot be converted into a Z3 Boolean value
+[15:52:54]   [ProntoQA_118] 代码自动修复: 自动添加未定义的Bool变量: s; 自动添加未定义的Bool变量: statement
+[15:52:54]   [ProntoQA_281] ⚠ 异常: 代码执行错误（repair修复后仍失败）: Value cannot be converted into a Z3 Boolean value
+[15:52:54] [Worker] 开始处理: ProntoQA_293 (mode=direct, semantic_check=False, refinement_code=False, repair=True)
+[15:52:54] [Worker] 开始处理: ProntoQA_30 (mode=direct, semantic_check=False, refinement_code=False, repair=True)
+[15:52:54]   [ProntoQA_118] ✗ 错误! 预测=None, 答案=B
+[15:52:58]   [ProntoQA_285] 代码自动修复: 自动添加未定义的Bool变量: s
+[15:52:58]   [ProntoQA_285] ✓ 正确! 预测=A, 答案=A
+[15:52:58] [Worker] 开始处理: ProntoQA_189 (mode=direct, semantic_check=False, refinement_code=False, repair=True)
+[15:52:58]   [ProntoQA_152] 代码自动修复: 自动添加未定义的Bool变量: s
+[15:52:58]   [ProntoQA_152] ✓ 正确! 预测=A, 答案=A
+[15:52:58] [Worker] 开始处理: ProntoQA_187 (mode=direct, semantic_check=False, refinement_code=False, repair=True)
+[15:53:02]   [ProntoQA_30] 代码自动修复: 自动添加未定义的Bool变量: s
+[15:53:02]   [ProntoQA_30] ✓ 正确! 预测=A, 答案=A
+[15:53:02] [Worker] 开始处理: ProntoQA_267 (mode=direct, semantic_check=False, refinement_code=False, repair=True)
+[15:53:03]   [ProntoQA_293] 代码自动修复: 自动添加未定义的Bool变量: s; 自动添加未定义的Bool变量: statement
+[15:53:03]   [ProntoQA_293] ✓ 正确! 预测=A, 答案=A
+[15:53:03] [Worker] 开始处理: ProntoQA_169 (mode=direct, semantic_check=False, refinement_code=False, repair=True)
+[15:53:05]   [ProntoQA_189] 代码自动修复: 自动添加未定义的Bool变量: s
+[15:53:05]   [ProntoQA_189] ✓ 正确! 预测=B, 答案=B
+[15:53:05] [Worker] 开始处理: ProntoQA_487 (mode=direct, semantic_check=False, refinement_code=False, repair=True)
+[15:53:05]   [ProntoQA_187] 代码自动修复: 自动添加未定义的Bool变量: s
+[15:53:05]   [ProntoQA_187] ✗ 错误! 预测=C, 答案=A
+[15:53:05] [Worker] 开始处理: ProntoQA_231 (mode=direct, semantic_check=False, refinement_code=False, repair=True)
+[15:53:10]   [ProntoQA_169] 代码自动修复: 自动添加未定义的Bool变量: s
+[15:53:10]   [ProntoQA_169] ✗ 错误! 预测=C, 答案=B
+[15:53:10] [Worker] 开始处理: ProntoQA_449 (mode=direct, semantic_check=False, refinement_code=False, repair=True)
+[15:53:12]   [ProntoQA_267] 代码自动修复: 自动添加未定义的Bool变量: s; 自动添加未定义的Bool变量: statement
+[15:53:12]   [ProntoQA_267] ✓ 正确! 预测=B, 答案=B
+[15:53:12] [Worker] 开始处理: ProntoQA_434 (mode=direct, semantic_check=False, refinement_code=False, repair=True)
+[15:53:13]   [ProntoQA_231] 代码自动修复: 自动添加未定义的Bool变量: s; 自动添加未定义的Bool变量: statement
+[15:53:13]   [ProntoQA_231] ✗ 错误! 预测=C, 答案=B
+[15:53:13] [Worker] 开始处理: ProntoQA_495 (mode=direct, semantic_check=False, refinement_code=False, repair=True)
+[15:53:17]   [ProntoQA_487] 代码自动修复: 自动添加未定义的Bool变量: s
+[15:53:17]   [ProntoQA_487] ✓ 正确! 预测=A, 答案=A
+[15:53:17] [Worker] 开始处理: ProntoQA_165 (mode=direct, semantic_check=False, refinement_code=False, repair=True)
+[15:53:18]   [ProntoQA_449] 代码自动修复: 自动添加未定义的Bool变量: s
+[15:53:18]   [ProntoQA_449] ✗ 错误! 预测=C, 答案=B
+[15:53:18] [Worker] 开始处理: ProntoQA_194 (mode=direct, semantic_check=False, refinement_code=False, repair=True)
+[15:53:21]   [ProntoQA_434] 代码自动修复: 自动添加未定义的Bool变量: s
+[15:53:21]   [ProntoQA_434] ✓ 正确! 预测=A, 答案=A
+[15:53:21] [Worker] 开始处理: ProntoQA_436 (mode=direct, semantic_check=False, refinement_code=False, repair=True)
+[15:53:22]   [ProntoQA_495] 代码自动修复: 自动添加未定义的Bool变量: s
+[15:53:22]   [ProntoQA_495] ✗ 错误! 预测=C, 答案=A
+[15:53:22] [Worker] 开始处理: ProntoQA_217 (mode=direct, semantic_check=False, refinement_code=False, repair=True)
+[15:53:25]   [ProntoQA_165] 代码自动修复: 自动添加未定义的Bool变量: s; 自动添加未定义的Bool变量: statement
+[15:53:25]   [ProntoQA_165] ✗ 错误! 预测=C, 答案=A
+[15:53:25] [Worker] 开始处理: ProntoQA_342 (mode=direct, semantic_check=False, refinement_code=False, repair=True)
+[15:53:25]   [ProntoQA_194] 代码自动修复: 自动添加未定义的Bool变量: s; 自动添加未定义的Bool变量: statement
+[15:53:25]   [ProntoQA_194] ✓ 正确! 预测=B, 答案=B
+[15:53:25] [Worker] 开始处理: ProntoQA_111 (mode=direct, semantic_check=False, refinement_code=False, repair=True)
+[15:53:33]   [ProntoQA_436] 代码自动修复: 自动添加未定义的Bool变量: s
+[15:53:33]   [ProntoQA_217] 代码自动修复: 自动添加未定义的Bool变量: s; 自动添加未定义的Bool变量: statement
+[15:53:33]   [ProntoQA_436] ✓ 正确! 预测=A, 答案=A
+[15:53:33] [Worker] 开始处理: ProntoQA_121 (mode=direct, semantic_check=False, refinement_code=False, repair=True)
+[15:53:33] [Worker] 开始处理: ProntoQA_437 (mode=direct, semantic_check=False, refinement_code=False, repair=True)
+[15:53:33]   [ProntoQA_217] ✗ 错误! 预测=None, 答案=A
+[15:53:33]   [ProntoQA_342] 代码自动修复: 自动添加未定义的Bool变量: s
+[15:53:33]   [ProntoQA_342] ✓ 正确! 预测=B, 答案=B
+[15:53:33] [Worker] 开始处理: ProntoQA_430 (mode=direct, semantic_check=False, refinement_code=False, repair=True)
+[15:53:34]   [ProntoQA_111] 代码自动修复: 自动添加未定义的Bool变量: s
+[15:53:34]   [ProntoQA_111] ✓ 正确! 预测=B, 答案=B
+[15:53:34] [Worker] 开始处理: ProntoQA_372 (mode=direct, semantic_check=False, refinement_code=False, repair=True)
+[15:53:41]   [ProntoQA_437] 代码自动修复: 自动添加未定义的Bool变量: s
+[15:53:41]   [ProntoQA_437] ✓ 正确! 预测=B, 答案=B
+[15:53:41] [Worker] 开始处理: ProntoQA_360 (mode=direct, semantic_check=False, refinement_code=False, repair=True)
+[15:53:42]   [ProntoQA_372] 代码自动修复: 自动添加未定义的Bool变量: s
+[15:53:42]   [ProntoQA_372] ✓ 正确! 预测=B, 答案=B
+[15:53:42] [Worker] 开始处理: ProntoQA_477 (mode=direct, semantic_check=False, refinement_code=False, repair=True)
+[15:53:42]   [ProntoQA_121] 代码自动修复: 自动添加未定义的Bool变量: s; 自动添加未定义的Bool变量: statement
+[15:53:42]   [ProntoQA_121] ✗ 错误! 预测=C, 答案=A
+[15:53:42] [Worker] 开始处理: ProntoQA_237 (mode=direct, semantic_check=False, refinement_code=False, repair=True)
+[15:53:43]   [ProntoQA_430] 代码自动修复: 自动添加未定义的Bool变量: s; 自动添加未定义的Bool变量: statement
+[15:53:43]   [ProntoQA_430] ✓ 正确! 预测=A, 答案=A
+[15:53:43] [Worker] 开始处理: ProntoQA_329 (mode=direct, semantic_check=False, refinement_code=False, repair=True)
+[15:53:51]   [ProntoQA_329] 代码自动修复: 自动添加未定义的Bool变量: s; 自动添加未定义的Bool变量: statement
+[15:53:51]   [ProntoQA_329] ✗ 错误! 预测=C, 答案=B
+[15:53:52] [Worker] 开始处理: ProntoQA_160 (mode=direct, semantic_check=False, refinement_code=False, repair=True)
+[15:53:52]   [ProntoQA_477] 代码自动修复: 自动添加未定义的Bool变量: s; 自动添加未定义的Bool变量: statement
+[15:53:52]   [ProntoQA_477] ✓ 正确! 预测=A, 答案=A
+[15:53:52] [Worker] 开始处理: ProntoQA_465 (mode=direct, semantic_check=False, refinement_code=False, repair=True)
+[15:53:52]   [ProntoQA_237] 代码自动修复: 自动添加未定义的Bool变量: s
+[15:53:52]   [ProntoQA_237] ✓ 正确! 预测=B, 答案=B
+[15:53:52] [Worker] 开始处理: ProntoQA_47 (mode=direct, semantic_check=False, refinement_code=False, repair=True)
+[15:53:53]   [ProntoQA_360] 代码自动修复: 自动添加未定义的Bool变量: s
+[15:53:53]   [ProntoQA_360] ✓ 正确! 预测=B, 答案=B
+[15:53:53] [Worker] 开始处理: ProntoQA_403 (mode=direct, semantic_check=False, refinement_code=False, repair=True)
+[15:54:00]   [ProntoQA_47] 代码自动修复: 自动添加未定义的Bool变量: s; 自动添加未定义的Bool变量: statement
+[15:54:00]   [ProntoQA_47] ✗ 错误! 预测=C, 答案=B
+[15:54:00] [Worker] 开始处理: ProntoQA_345 (mode=direct, semantic_check=False, refinement_code=False, repair=True)
+[15:54:00]   [ProntoQA_403] 代码自动修复: 自动添加未定义的Bool变量: s
+[15:54:01]   [ProntoQA_403] ✗ 错误! 预测=C, 答案=B
+[15:54:01] [Worker] 开始处理: ProntoQA_444 (mode=direct, semantic_check=False, refinement_code=False, repair=True)
+[15:54:01]   [ProntoQA_465] 代码自动修复: 自动添加未定义的Bool变量: s; 自动添加未定义的Bool变量: statement
+[15:54:01]   [ProntoQA_465] ✓ 正确! 预测=B, 答案=B
+[15:54:01] [Worker] 开始处理: ProntoQA_68 (mode=direct, semantic_check=False, refinement_code=False, repair=True)
+[15:54:01]   [ProntoQA_160] 代码自动修复: 自动添加未定义的Bool变量: s; 自动添加未定义的Bool变量: statement
+[15:54:01]   [ProntoQA_160] ✗ 错误! 预测=C, 答案=B
+[15:54:01] [Worker] 开始处理: ProntoQA_183 (mode=direct, semantic_check=False, refinement_code=False, repair=True)
+[15:54:09]   [ProntoQA_345] 代码自动修复: 自动添加未定义的Bool变量: s; 自动添加未定义的Bool变量: statement
+[15:54:09]   [ProntoQA_345] ✓ 正确! 预测=B, 答案=B
+[15:54:09] [Worker] 开始处理: ProntoQA_257 (mode=direct, semantic_check=False, refinement_code=False, repair=True)
+[15:54:10]   [ProntoQA_444] 代码自动修复: 自动添加未定义的Bool变量: s; 自动添加未定义的Bool变量: statement
+[15:54:10]   [ProntoQA_444] ✓ 正确! 预测=A, 答案=A
+[15:54:10] [Worker] 开始处理: ProntoQA_58 (mode=direct, semantic_check=False, refinement_code=False, repair=True)
+[15:54:11]   [ProntoQA_68] 代码自动修复: 自动添加未定义的Bool变量: s
+[15:54:11]   [ProntoQA_68] ✓ 正确! 预测=A, 答案=A
+[15:54:11] [Worker] 开始处理: ProntoQA_60 (mode=direct, semantic_check=False, refinement_code=False, repair=True)
+[15:54:11]   [ProntoQA_183] 代码自动修复: 自动添加未定义的Bool变量: s
+[15:54:11]   [ProntoQA_183] ✓ 正确! 预测=B, 答案=B
+[15:54:11] [Worker] 开始处理: ProntoQA_150 (mode=direct, semantic_check=False, refinement_code=False, repair=True)
+[15:54:18]   [ProntoQA_60] 代码自动修复: 自动添加未定义的Bool变量: s
+[15:54:18]   [ProntoQA_60] ✗ 错误! 预测=C, 答案=B
+[15:54:18] [Worker] 开始处理: ProntoQA_273 (mode=direct, semantic_check=False, refinement_code=False, repair=True)
+[15:54:19]   [ProntoQA_257] 代码自动修复: 自动添加未定义的Bool变量: s
+[15:54:19]   [ProntoQA_257] ✗ 错误! 预测=C, 答案=A
+[15:54:19] [Worker] 开始处理: ProntoQA_425 (mode=direct, semantic_check=False, refinement_code=False, repair=True)
+[15:54:19]   [ProntoQA_58] 代码自动修复: 自动添加未定义的Bool变量: s; 自动添加未定义的Bool变量: statement
+[15:54:19]   [ProntoQA_58] ✓ 正确! 预测=B, 答案=B
+[15:54:19] [Worker] 开始处理: ProntoQA_271 (mode=direct, semantic_check=False, refinement_code=False, repair=True)
+[15:54:21]   [ProntoQA_150] 代码自动修复: 自动添加未定义的Bool变量: s
+[15:54:21]   [ProntoQA_150] ✓ 正确! 预测=A, 答案=A
+[15:54:21] [Worker] 开始处理: ProntoQA_263 (mode=direct, semantic_check=False, refinement_code=False, repair=True)
+[15:54:25]   [ProntoQA_271] 代码自动修复: 自动添加未定义的Bool变量: s; 自动添加未定义的Bool变量: statement
+[15:54:25]   [ProntoQA_271] ✓ 正确! 预测=A, 答案=A
+[15:54:25] [Worker] 开始处理: ProntoQA_6 (mode=direct, semantic_check=False, refinement_code=False, repair=True)
+[15:54:26]   [ProntoQA_273] 代码自动修复: 自动添加未定义的Bool变量: s
+[15:54:26]   [ProntoQA_273] ✓ 正确! 预测=A, 答案=A
+[15:54:26] [Worker] 开始处理: ProntoQA_197 (mode=direct, semantic_check=False, refinement_code=False, repair=True)
+[15:54:28]   [ProntoQA_425] 代码自动修复: 自动添加未定义的Bool变量: s; 自动添加未定义的Bool变量: statement
+[15:54:28]   [ProntoQA_425] ✓ 正确! 预测=B, 答案=B
+[15:54:28] [Worker] 开始处理: ProntoQA_439 (mode=direct, semantic_check=False, refinement_code=False, repair=True)
+[15:54:32]   [ProntoQA_263] 代码自动修复: 自动添加未定义的Bool变量: s
+[15:54:32]   [ProntoQA_263] ✗ 错误! 预测=C, 答案=B
+[15:54:32] [Worker] 开始处理: ProntoQA_405 (mode=direct, semantic_check=False, refinement_code=False, repair=True)
+[15:54:34]   [ProntoQA_6] 代码自动修复: 自动添加未定义的Bool变量: s
+[15:54:34]   [ProntoQA_6] ✓ 正确! 预测=A, 答案=A
+[15:54:34] [Worker] 开始处理: ProntoQA_289 (mode=direct, semantic_check=False, refinement_code=False, repair=True)
+[15:54:35]   [ProntoQA_197] 代码自动修复: 自动添加未定义的Bool变量: s
+[15:54:35]   [ProntoQA_197] ✗ 错误! 预测=C, 答案=B
+[15:54:36]   [ProntoQA_439] 代码自动修复: 自动添加未定义的Bool变量: s; 自动添加未定义的Bool变量: statement
+[15:54:36]   [ProntoQA_439] ✓ 正确! 预测=A, 答案=A
+[15:54:42]   [ProntoQA_289] 代码自动修复: 自动添加未定义的Bool变量: s
+[15:54:42]   [ProntoQA_289] ✓ 正确! 预测=B, 答案=B
+[15:54:42]   [ProntoQA_405] 代码自动修复: 自动添加未定义的Bool变量: s; 自动添加未定义的Bool变量: statement
+[15:54:42]   [ProntoQA_405] ✗ 错误! 预测=C, 答案=A
+[15:54:42] ==================================================
+[15:54:42] 评测完成!
+[15:54:42] 已完成: 50, 正确: 31, 错误: 18, 异常: 1
+[15:54:42] 准确率: 62.00%
+[15:54:42] ==================================================

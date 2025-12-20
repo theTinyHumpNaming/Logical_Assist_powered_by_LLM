@@ -1,0 +1,113 @@
+=== 评测日志开始于 2025-12-20 15:42:45 ===
+[15:43:02] 代码修复功能已关闭
+[15:43:23] 正在加载数据集: D:/学习资料/课程/程序设计大作业/EnhancingLLM/EnhancingLLM/data/ProntoQA_test.json
+[15:43:23] 共 50 道题目，使用 4 个 workers 并行处理
+[15:43:23] [Worker] 开始处理: ProntoQA_152 (mode=direct, semantic_check=False, refinement_code=False, repair=True)
+[15:43:23] [Worker] 开始处理: ProntoQA_281 (mode=direct, semantic_check=False, refinement_code=False, repair=True)
+[15:43:23] [Worker] 开始处理: ProntoQA_285 (mode=direct, semantic_check=False, refinement_code=False, repair=True)
+[15:43:23] [Worker] 开始处理: ProntoQA_118 (mode=direct, semantic_check=False, refinement_code=False, repair=True)
+[15:43:32]   [ProntoQA_281] ✓ 正确! 预测=A, 答案=A
+[15:43:32] [Worker] 开始处理: ProntoQA_293 (mode=direct, semantic_check=False, refinement_code=False, repair=True)
+[15:43:32]   [ProntoQA_152] ✓ 正确! 预测=A, 答案=A
+[15:43:32] [Worker] 开始处理: ProntoQA_30 (mode=direct, semantic_check=False, refinement_code=False, repair=True)
+[15:43:32]   [ProntoQA_118] ✗ 错误! 预测=A, 答案=B
+[15:43:32] [Worker] 开始处理: ProntoQA_189 (mode=direct, semantic_check=False, refinement_code=False, repair=True)
+[15:43:34]   [ProntoQA_285] ✓ 正确! 预测=A, 答案=A
+[15:43:34] [Worker] 开始处理: ProntoQA_187 (mode=direct, semantic_check=False, refinement_code=False, repair=True)
+[15:43:38]   [ProntoQA_189] ✓ 正确! 预测=B, 答案=B
+[15:43:38] [Worker] 开始处理: ProntoQA_267 (mode=direct, semantic_check=False, refinement_code=False, repair=True)
+[15:43:40]   [ProntoQA_293] ✓ 正确! 预测=A, 答案=A
+[15:43:40] [Worker] 开始处理: ProntoQA_169 (mode=direct, semantic_check=False, refinement_code=False, repair=True)
+[15:43:41]   [ProntoQA_30] ✓ 正确! 预测=A, 答案=A
+[15:43:41] [Worker] 开始处理: ProntoQA_487 (mode=direct, semantic_check=False, refinement_code=False, repair=True)
+[15:43:41]   [ProntoQA_187] ✓ 正确! 预测=A, 答案=A
+[15:43:41] [Worker] 开始处理: ProntoQA_231 (mode=direct, semantic_check=False, refinement_code=False, repair=True)
+[15:43:45]   [ProntoQA_267] ✓ 正确! 预测=B, 答案=B
+[15:43:45] [Worker] 开始处理: ProntoQA_449 (mode=direct, semantic_check=False, refinement_code=False, repair=True)
+[15:43:46]   [ProntoQA_169] ✓ 正确! 预测=B, 答案=B
+[15:43:46] [Worker] 开始处理: ProntoQA_434 (mode=direct, semantic_check=False, refinement_code=False, repair=True)
+[15:43:48]   [ProntoQA_231] ✓ 正确! 预测=B, 答案=B
+[15:43:48] [Worker] 开始处理: ProntoQA_495 (mode=direct, semantic_check=False, refinement_code=False, repair=True)
+[15:43:52]   [ProntoQA_487] ✓ 正确! 预测=A, 答案=A
+[15:43:52] [Worker] 开始处理: ProntoQA_165 (mode=direct, semantic_check=False, refinement_code=False, repair=True)
+[15:43:52]   [ProntoQA_449] ✓ 正确! 预测=B, 答案=B
+[15:43:52] [Worker] 开始处理: ProntoQA_194 (mode=direct, semantic_check=False, refinement_code=False, repair=True)
+[15:43:56]   [ProntoQA_434] ✓ 正确! 预测=A, 答案=A
+[15:43:56] [Worker] 开始处理: ProntoQA_436 (mode=direct, semantic_check=False, refinement_code=False, repair=True)
+[15:43:57]   [ProntoQA_495] ✓ 正确! 预测=A, 答案=A
+[15:43:57] [Worker] 开始处理: ProntoQA_217 (mode=direct, semantic_check=False, refinement_code=False, repair=True)
+[15:44:01]   [ProntoQA_165] ✓ 正确! 预测=A, 答案=A
+[15:44:01] [Worker] 开始处理: ProntoQA_342 (mode=direct, semantic_check=False, refinement_code=False, repair=True)
+[15:44:01]   [ProntoQA_194] ✓ 正确! 预测=B, 答案=B
+[15:44:01] [Worker] 开始处理: ProntoQA_111 (mode=direct, semantic_check=False, refinement_code=False, repair=True)
+[15:44:03]   [ProntoQA_436] ✓ 正确! 预测=A, 答案=A
+[15:44:03] [Worker] 开始处理: ProntoQA_121 (mode=direct, semantic_check=False, refinement_code=False, repair=True)
+[15:44:08]   [ProntoQA_217] ✓ 正确! 预测=A, 答案=A
+[15:44:08] [Worker] 开始处理: ProntoQA_437 (mode=direct, semantic_check=False, refinement_code=False, repair=True)
+[15:44:08]   [ProntoQA_342] ✓ 正确! 预测=B, 答案=B
+[15:44:08] [Worker] 开始处理: ProntoQA_430 (mode=direct, semantic_check=False, refinement_code=False, repair=True)
+[15:44:10]   [ProntoQA_121] ✓ 正确! 预测=A, 答案=A
+[15:44:10] [Worker] 开始处理: ProntoQA_372 (mode=direct, semantic_check=False, refinement_code=False, repair=True)
+[15:44:11]   [ProntoQA_111] ✓ 正确! 预测=B, 答案=B
+[15:44:11] [Worker] 开始处理: ProntoQA_360 (mode=direct, semantic_check=False, refinement_code=False, repair=True)
+[15:44:15]   [ProntoQA_437] ✓ 正确! 预测=B, 答案=B
+[15:44:15] [Worker] 开始处理: ProntoQA_477 (mode=direct, semantic_check=False, refinement_code=False, repair=True)
+[15:44:17]   [ProntoQA_372] ✓ 正确! 预测=B, 答案=B
+[15:44:17] [Worker] 开始处理: ProntoQA_237 (mode=direct, semantic_check=False, refinement_code=False, repair=True)
+[15:44:18]   [ProntoQA_430] 代码自动修复: 自动添加未定义的Bool变量: wumpus
+[15:44:18]   [ProntoQA_430] ✓ 正确! 预测=A, 答案=A
+[15:44:19] [Worker] 开始处理: ProntoQA_329 (mode=direct, semantic_check=False, refinement_code=False, repair=True)
+[15:44:19]   [ProntoQA_360] ✓ 正确! 预测=B, 答案=B
+[15:44:20] [Worker] 开始处理: ProntoQA_160 (mode=direct, semantic_check=False, refinement_code=False, repair=True)
+[15:44:23]   [ProntoQA_477] ✓ 正确! 预测=A, 答案=A
+[15:44:23] [Worker] 开始处理: ProntoQA_465 (mode=direct, semantic_check=False, refinement_code=False, repair=True)
+[15:44:25]   [ProntoQA_237] ✓ 正确! 预测=B, 答案=B
+[15:44:25] [Worker] 开始处理: ProntoQA_47 (mode=direct, semantic_check=False, refinement_code=False, repair=True)
+[15:44:26]   [ProntoQA_329] ✗ 错误! 预测=A, 答案=B
+[15:44:26] [Worker] 开始处理: ProntoQA_403 (mode=direct, semantic_check=False, refinement_code=False, repair=True)
+[15:44:29]   [ProntoQA_160] ✗ 错误! 预测=A, 答案=B
+[15:44:29] [Worker] 开始处理: ProntoQA_345 (mode=direct, semantic_check=False, refinement_code=False, repair=True)
+[15:44:31]   [ProntoQA_47] ✓ 正确! 预测=B, 答案=B
+[15:44:31] [Worker] 开始处理: ProntoQA_444 (mode=direct, semantic_check=False, refinement_code=False, repair=True)
+[15:44:32]   [ProntoQA_465] ✓ 正确! 预测=B, 答案=B
+[15:44:32] [Worker] 开始处理: ProntoQA_68 (mode=direct, semantic_check=False, refinement_code=False, repair=True)
+[15:44:36]   [ProntoQA_403] ✓ 正确! 预测=B, 答案=B
+[15:44:36] [Worker] 开始处理: ProntoQA_183 (mode=direct, semantic_check=False, refinement_code=False, repair=True)
+[15:44:37]   [ProntoQA_345] ✓ 正确! 预测=B, 答案=B
+[15:44:37] [Worker] 开始处理: ProntoQA_257 (mode=direct, semantic_check=False, refinement_code=False, repair=True)
+[15:44:40]   [ProntoQA_68] ✓ 正确! 预测=A, 答案=A
+[15:44:40] [Worker] 开始处理: ProntoQA_58 (mode=direct, semantic_check=False, refinement_code=False, repair=True)
+[15:44:41]   [ProntoQA_444] ✓ 正确! 预测=A, 答案=A
+[15:44:42] [Worker] 开始处理: ProntoQA_60 (mode=direct, semantic_check=False, refinement_code=False, repair=True)
+[15:44:44]   [ProntoQA_183] ✓ 正确! 预测=B, 答案=B
+[15:44:44] [Worker] 开始处理: ProntoQA_150 (mode=direct, semantic_check=False, refinement_code=False, repair=True)
+[15:44:47]   [ProntoQA_60] ✓ 正确! 预测=B, 答案=B
+[15:44:47] [Worker] 开始处理: ProntoQA_273 (mode=direct, semantic_check=False, refinement_code=False, repair=True)
+[15:44:49]   [ProntoQA_58] ✓ 正确! 预测=B, 答案=B
+[15:44:49] [Worker] 开始处理: ProntoQA_425 (mode=direct, semantic_check=False, refinement_code=False, repair=True)
+[15:44:52]   [ProntoQA_150] ✓ 正确! 预测=A, 答案=A
+[15:44:52] [Worker] 开始处理: ProntoQA_271 (mode=direct, semantic_check=False, refinement_code=False, repair=True)
+[15:44:55]   [ProntoQA_273] ✓ 正确! 预测=A, 答案=A
+[15:44:55] [Worker] 开始处理: ProntoQA_263 (mode=direct, semantic_check=False, refinement_code=False, repair=True)
+[15:44:56]   [ProntoQA_425] ✓ 正确! 预测=B, 答案=B
+[15:44:56] [Worker] 开始处理: ProntoQA_6 (mode=direct, semantic_check=False, refinement_code=False, repair=True)
+[15:44:57]   [ProntoQA_271] ✓ 正确! 预测=A, 答案=A
+[15:44:57] [Worker] 开始处理: ProntoQA_197 (mode=direct, semantic_check=False, refinement_code=False, repair=True)
+[15:45:03]   [ProntoQA_263] ✗ 错误! 预测=A, 答案=B
+[15:45:03] [Worker] 开始处理: ProntoQA_439 (mode=direct, semantic_check=False, refinement_code=False, repair=True)
+[15:45:05]   [ProntoQA_257] code执行错误（repair修复后）: Z3 internal error (known bug): b'unreachable'
+[15:45:05]   [ProntoQA_197] ✗ 错误! 预测=A, 答案=B
+[15:45:05]   [ProntoQA_257] ⚠ 异常: 代码执行错误（repair修复后仍失败）: Z3 internal error (known bug): b'unreachable'
+[15:45:05] [Worker] 开始处理: ProntoQA_405 (mode=direct, semantic_check=False, refinement_code=False, repair=True)
+[15:45:05] [Worker] 开始处理: ProntoQA_289 (mode=direct, semantic_check=False, refinement_code=False, repair=True)
+[15:45:06]   [ProntoQA_6] code执行错误（repair修复后）: Z3 internal error (known bug): exception: access violation reading 0xFFFFFFFFFFFFFFFF
+[15:45:06]   [ProntoQA_6] ⚠ 异常: 代码执行错误（repair修复后仍失败）: Z3 internal error (known bug): exception: access violation reading 0xFFFFFFFFFFFFFFFF
+[15:45:12]   [ProntoQA_439] ✗ 错误! 预测=B, 答案=A
+[15:45:12]   [ProntoQA_289] ✓ 正确! 预测=B, 答案=B
+[15:45:13]   [ProntoQA_405] ✗ 错误! 预测=B, 答案=A
+[15:45:13] ==================================================
+[15:45:13] 评测完成!
+[15:45:13] 已完成: 50, 正确: 41, 错误: 7, 异常: 2
+[15:45:13] 准确率: 82.00%
+[15:45:13] ==================================================
+[15:45:42] 结果已导出到: D:/学习资料/课程/程序设计大作业/EnhancingLLM/EnhancingLLM/data/test19.json

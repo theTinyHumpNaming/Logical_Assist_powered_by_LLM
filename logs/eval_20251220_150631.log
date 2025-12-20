@@ -1,0 +1,237 @@
+=== 评测日志开始于 2025-12-20 15:06:31 ===
+[15:06:41] 代码修复功能已关闭
+[15:06:52] Repair功能已关闭
+[15:06:54] Repair功能已启用
+[15:09:14] 正在加载数据集: D:/学习资料/课程/程序设计大作业/EnhancingLLM/EnhancingLLM/data/LogicalDeduction_test.json
+[15:09:14] 共 50 道题目，使用 4 个 workers 并行处理
+[15:09:14] [Worker] 开始处理: logical_deduction_32 (mode=direct, semantic_check=False, refinement_code=False, repair=True)
+[15:09:14] [Worker] 开始处理: logical_deduction_26 (mode=direct, semantic_check=False, refinement_code=False, repair=True)
+[15:09:14] [Worker] 开始处理: logical_deduction_166 (mode=direct, semantic_check=False, refinement_code=False, repair=True)
+[15:09:14] [Worker] 开始处理: logical_deduction_27 (mode=direct, semantic_check=False, refinement_code=False, repair=True)
+[15:09:21]   [logical_deduction_26] ✓ 正确! 预测=C, 答案=C
+[15:09:21] [Worker] 开始处理: logical_deduction_179 (mode=direct, semantic_check=False, refinement_code=False, repair=True)
+[15:09:21]   [logical_deduction_32] ✓ 正确! 预测=B, 答案=B
+[15:09:21] [Worker] 开始处理: logical_deduction_223 (mode=direct, semantic_check=False, refinement_code=False, repair=True)
+[15:09:21]   [logical_deduction_27] ✓ 正确! 预测=C, 答案=C
+[15:09:21] [Worker] 开始处理: logical_deduction_254 (mode=direct, semantic_check=False, refinement_code=False, repair=True)
+[15:09:21]   [logical_deduction_166] ✓ 正确! 预测=C, 答案=C
+[15:09:21] [Worker] 开始处理: logical_deduction_131 (mode=direct, semantic_check=False, refinement_code=False, repair=True)
+[15:09:26]   [logical_deduction_254] ✓ 正确! 预测=C, 答案=C
+[15:09:26] [Worker] 开始处理: logical_deduction_78 (mode=direct, semantic_check=False, refinement_code=False, repair=True)
+[15:09:27]   [logical_deduction_179] ✓ 正确! 预测=F, 答案=F
+[15:09:27] [Worker] 开始处理: logical_deduction_150 (mode=direct, semantic_check=False, refinement_code=False, repair=True)
+[15:09:28]   [logical_deduction_131] ✓ 正确! 预测=C, 答案=C
+[15:09:28] [Worker] 开始处理: logical_deduction_6 (mode=direct, semantic_check=False, refinement_code=False, repair=True)
+[15:09:28]   [logical_deduction_223] ✓ 正确! 预测=C, 答案=C
+[15:09:28] [Worker] 开始处理: logical_deduction_60 (mode=direct, semantic_check=False, refinement_code=False, repair=True)
+[15:09:32]   [logical_deduction_78] ✓ 正确! 预测=A, 答案=A
+[15:09:32] [Worker] 开始处理: logical_deduction_22 (mode=direct, semantic_check=False, refinement_code=False, repair=True)
+[15:09:33]   [logical_deduction_150] ✓ 正确! 预测=E, 答案=E
+[15:09:33] [Worker] 开始处理: logical_deduction_126 (mode=direct, semantic_check=False, refinement_code=False, repair=True)
+[15:09:33]   [logical_deduction_6] ✓ 正确! 预测=E, 答案=E
+[15:09:33] [Worker] 开始处理: logical_deduction_248 (mode=direct, semantic_check=False, refinement_code=False, repair=True)
+[15:09:34]   [logical_deduction_60] ✓ 正确! 预测=D, 答案=D
+[15:09:34] [Worker] 开始处理: logical_deduction_116 (mode=direct, semantic_check=False, refinement_code=False, repair=True)
+[15:09:37]   [logical_deduction_22] ✓ 正确! 预测=A, 答案=A
+[15:09:37] [Worker] 开始处理: logical_deduction_230 (mode=direct, semantic_check=False, refinement_code=False, repair=True)
+[15:09:38]   [logical_deduction_248] ✓ 正确! 预测=A, 答案=A
+[15:09:38] [Worker] 开始处理: logical_deduction_66 (mode=direct, semantic_check=False, refinement_code=False, repair=True)
+[15:09:40]   [logical_deduction_126] ✓ 正确! 预测=E, 答案=E
+[15:09:40] [Worker] 开始处理: logical_deduction_217 (mode=direct, semantic_check=False, refinement_code=False, repair=True)
+[15:09:40]   [logical_deduction_116] ✓ 正确! 预测=F, 答案=F
+[15:09:40] [Worker] 开始处理: logical_deduction_100 (mode=direct, semantic_check=False, refinement_code=False, repair=True)
+[15:09:43]   [logical_deduction_66] 代码自动修复: 检测到未定义的谓词: Dan, Rob
+[15:09:43]   [logical_deduction_66] ✓ 正确! 预测=A, 答案=A
+[15:09:43]   [logical_deduction_230] code执行错误（repair修复后）: Z3 internal error (known bug): exception: access violation reading 0x0000000000000260
+[15:09:43] [Worker] 开始处理: logical_deduction_9 (mode=direct, semantic_check=False, refinement_code=False, repair=True)
+[15:09:43]   [logical_deduction_230] ⚠ 异常: 代码执行错误（repair修复后仍失败）: Z3 internal error (known bug): exception: access violation reading 0x0000000000000260
+[15:09:43] [Worker] 开始处理: logical_deduction_222 (mode=direct, semantic_check=False, refinement_code=False, repair=True)
+[15:09:47]   [logical_deduction_100] ✓ 正确! 预测=D, 答案=D
+[15:09:47] [Worker] 开始处理: logical_deduction_143 (mode=direct, semantic_check=False, refinement_code=False, repair=True)
+[15:09:48]   [logical_deduction_217] ✓ 正确! 预测=B, 答案=B
+[15:09:48] [Worker] 开始处理: logical_deduction_36 (mode=direct, semantic_check=False, refinement_code=False, repair=True)
+[15:09:49]   [logical_deduction_9] 代码自动修复: 自动添加未定义的Bool变量: m; 自动添加未定义的Bool变量: orange_pos
+[15:09:49]   [logical_deduction_9] ✓ 正确! 预测=A, 答案=A
+[15:09:49] [Worker] 开始处理: logical_deduction_37 (mode=direct, semantic_check=False, refinement_code=False, repair=True)
+[15:09:50]   [logical_deduction_222] ✓ 正确! 预测=B, 答案=B
+[15:09:51] [Worker] 开始处理: logical_deduction_292 (mode=direct, semantic_check=False, refinement_code=False, repair=True)
+[15:09:53]   [logical_deduction_36] 代码自动修复: 检测到未定义的谓词: Eve, Mya
+[15:09:53]   [logical_deduction_36] ✓ 正确! 预测=C, 答案=C
+[15:09:53] [Worker] 开始处理: logical_deduction_220 (mode=direct, semantic_check=False, refinement_code=False, repair=True)
+[15:09:54]   [logical_deduction_143] ✓ 正确! 预测=C, 答案=C
+[15:09:54] [Worker] 开始处理: logical_deduction_207 (mode=direct, semantic_check=False, refinement_code=False, repair=True)
+[15:09:54]   [logical_deduction_37] ✗ 错误! 预测=E, 答案=C
+[15:09:54] [Worker] 开始处理: logical_deduction_286 (mode=direct, semantic_check=False, refinement_code=False, repair=True)
+[15:09:56]   [logical_deduction_292] ✓ 正确! 预测=A, 答案=A
+[15:09:56] [Worker] 开始处理: logical_deduction_1 (mode=direct, semantic_check=False, refinement_code=False, repair=True)
+[15:09:59]   [logical_deduction_220] 代码自动修复: 自动添加未定义的Bool变量: m; 自动添加未定义的Bool变量: orange_pos
+[15:09:59]   [logical_deduction_220] ✗ 错误! 预测=ERROR: UNSATISFIABLE, 答案=C
+[15:09:59] [Worker] 开始处理: logical_deduction_186 (mode=direct, semantic_check=False, refinement_code=False, repair=True)
+[15:10:00]   [logical_deduction_286] ✓ 正确! 预测=A, 答案=A
+[15:10:00] [Worker] 开始处理: logical_deduction_206 (mode=direct, semantic_check=False, refinement_code=False, repair=True)
+[15:10:03]   [logical_deduction_1] ✓ 正确! 预测=A, 答案=A
+[15:10:03] [Worker] 开始处理: logical_deduction_21 (mode=direct, semantic_check=False, refinement_code=False, repair=True)
+[15:10:03]   [logical_deduction_207] ✓ 正确! 预测=G, 答案=G
+[15:10:03] [Worker] 开始处理: logical_deduction_40 (mode=direct, semantic_check=False, refinement_code=False, repair=True)
+[15:10:07]   [logical_deduction_186] 代码自动修复: 自动添加未定义的Bool变量: m; 自动添加未定义的Bool变量: oranges_pos
+[15:10:07]   [logical_deduction_186] ✓ 正确! 预测=B, 答案=B
+[15:10:07] [Worker] 开始处理: logical_deduction_34 (mode=direct, semantic_check=False, refinement_code=False, repair=True)
+[15:10:07]   [logical_deduction_21] ✓ 正确! 预测=B, 答案=B
+[15:10:07] [Worker] 开始处理: logical_deduction_280 (mode=direct, semantic_check=False, refinement_code=False, repair=True)
+[15:10:08]   [logical_deduction_206] ✓ 正确! 预测=E, 答案=E
+[15:10:08] [Worker] 开始处理: logical_deduction_67 (mode=direct, semantic_check=False, refinement_code=False, repair=True)
+[15:10:10]   [logical_deduction_40] 代码自动修复: 自动添加未定义的Bool变量: m; 自动添加未定义的Bool变量: oranges_pos
+[15:10:10]   [logical_deduction_40] ✓ 正确! 预测=D, 答案=D
+[15:10:10] [Worker] 开始处理: logical_deduction_208 (mode=direct, semantic_check=False, refinement_code=False, repair=True)
+[15:10:12]   [logical_deduction_280] ✓ 正确! 预测=C, 答案=C
+[15:10:12] [Worker] 开始处理: logical_deduction_121 (mode=direct, semantic_check=False, refinement_code=False, repair=True)
+[15:10:13]   [logical_deduction_34] ✓ 正确! 预测=B, 答案=B
+[15:10:13] [Worker] 开始处理: logical_deduction_285 (mode=direct, semantic_check=False, refinement_code=False, repair=True)
+[15:10:15]   [logical_deduction_67] ✓ 正确! 预测=E, 答案=E
+[15:10:15] [Worker] 开始处理: logical_deduction_231 (mode=direct, semantic_check=False, refinement_code=False, repair=True)
+[15:10:16]   [logical_deduction_208] 代码自动修复: 自动添加未定义的Bool变量: m; 自动添加未定义的Bool变量: oranges_pos
+[15:10:16]   [logical_deduction_208] ✗ 错误! 预测=C, 答案=A
+[15:10:16] [Worker] 开始处理: logical_deduction_237 (mode=direct, semantic_check=False, refinement_code=False, repair=True)
+[15:10:18]   [logical_deduction_285] ✓ 正确! 预测=B, 答案=B
+[15:10:18] [Worker] 开始处理: logical_deduction_279 (mode=direct, semantic_check=False, refinement_code=False, repair=True)
+[15:10:18]   [logical_deduction_121] ✓ 正确! 预测=F, 答案=F
+[15:10:18] [Worker] 开始处理: logical_deduction_74 (mode=direct, semantic_check=False, refinement_code=False, repair=True)
+[15:10:20]   [logical_deduction_231] ✓ 正确! 预测=E, 答案=E
+[15:10:20] [Worker] 开始处理: logical_deduction_18 (mode=direct, semantic_check=False, refinement_code=False, repair=True)
+[15:10:21]   [logical_deduction_237] 代码自动修复: 自动添加未定义的Bool变量: m; 自动添加未定义的Bool变量: orange_pos
+[15:10:21]   [logical_deduction_237] ✗ 错误! 预测=ERROR: UNSATISFIABLE, 答案=B
+[15:10:21] [Worker] 开始处理: logical_deduction_212 (mode=direct, semantic_check=False, refinement_code=False, repair=True)
+[15:10:23]   [logical_deduction_74] ✓ 正确! 预测=C, 答案=C
+[15:10:23] [Worker] 开始处理: logical_deduction_169 (mode=direct, semantic_check=False, refinement_code=False, repair=True)
+[15:10:23]   [logical_deduction_279] ✓ 正确! 预测=C, 答案=C
+[15:10:23] [Worker] 开始处理: logical_deduction_187 (mode=direct, semantic_check=False, refinement_code=False, repair=True)
+[15:10:26]   [logical_deduction_18] ✓ 正确! 预测=A, 答案=A
+[15:10:26] [Worker] 开始处理: logical_deduction_79 (mode=direct, semantic_check=False, refinement_code=False, repair=True)
+[15:10:27]   [logical_deduction_212] 代码自动修复: 自动添加未定义的Bool变量: m; 自动添加未定义的Bool变量: oranges_pos
+[15:10:27]   [logical_deduction_212] ✗ 错误! 预测=D, 答案=G
+[15:10:27] [Worker] 开始处理: logical_deduction_105 (mode=direct, semantic_check=False, refinement_code=False, repair=True)
+[15:10:28]   [logical_deduction_169] ✓ 正确! 预测=B, 答案=B
+[15:10:29]   [logical_deduction_187] ✗ 错误! 预测=G, 答案=A
+[15:10:32]   [logical_deduction_79] ✓ 正确! 预测=B, 答案=B
+[15:10:33]   [logical_deduction_105] ✓ 正确! 预测=C, 答案=C
+[15:10:33] ==================================================
+[15:10:33] 评测完成!
+[15:10:33] 已完成: 50, 正确: 43, 错误: 6, 异常: 1
+[15:10:33] 准确率: 86.00%
+[15:10:33] ==================================================
+[15:17:32] 正在加载数据集: D:/学习资料/课程/程序设计大作业/EnhancingLLM/EnhancingLLM/data/ProntoQA_test.json
+[15:17:32] 共 50 道题目，使用 4 个 workers 并行处理
+[15:17:32] [Worker] 开始处理: ProntoQA_285 (mode=direct, semantic_check=False, refinement_code=False, repair=True)
+[15:17:32] [Worker] 开始处理: ProntoQA_118 (mode=direct, semantic_check=False, refinement_code=False, repair=True)
+[15:17:32] [Worker] 开始处理: ProntoQA_152 (mode=direct, semantic_check=False, refinement_code=False, repair=True)
+[15:17:32] [Worker] 开始处理: ProntoQA_281 (mode=direct, semantic_check=False, refinement_code=False, repair=True)
+[15:17:42]   [ProntoQA_152] ✓ 正确! 预测=A, 答案=A
+[15:17:42] [Worker] 开始处理: ProntoQA_293 (mode=direct, semantic_check=False, refinement_code=False, repair=True)
+[15:17:42]   [ProntoQA_281] ✓ 正确! 预测=A, 答案=A
+[15:17:42] [Worker] 开始处理: ProntoQA_30 (mode=direct, semantic_check=False, refinement_code=False, repair=True)
+[15:17:43]   [ProntoQA_118] ✓ 正确! 预测=B, 答案=B
+[15:17:43] [Worker] 开始处理: ProntoQA_189 (mode=direct, semantic_check=False, refinement_code=False, repair=True)
+[15:17:44]   [ProntoQA_285] 代码自动修复: 检测到缺少 1 个右括号; 第83行: 添加 1 个右括号
+[15:17:44]   [ProntoQA_285] ✓ 正确! 预测=A, 答案=A
+[15:17:44] [Worker] 开始处理: ProntoQA_187 (mode=direct, semantic_check=False, refinement_code=False, repair=True)
+[15:17:50]   [ProntoQA_30] code执行错误（repair修复后）: b'ast is not an expression'
+[15:17:50]   [ProntoQA_30] ⚠ 异常: 代码执行错误（repair修复后仍失败）: b'ast is not an expression'
+[15:17:50]   [ProntoQA_293] code执行错误（repair修复后）: b'ast is not an expression'
+[15:17:50] [Worker] 开始处理: ProntoQA_267 (mode=direct, semantic_check=False, refinement_code=False, repair=True)
+[15:17:50]   [ProntoQA_293] ⚠ 异常: 代码执行错误（repair修复后仍失败）: b'ast is not an expression'
+[15:17:50] [Worker] 开始处理: ProntoQA_169 (mode=direct, semantic_check=False, refinement_code=False, repair=True)
+[15:17:50]   [ProntoQA_189] ✓ 正确! 预测=B, 答案=B
+[15:17:50] [Worker] 开始处理: ProntoQA_487 (mode=direct, semantic_check=False, refinement_code=False, repair=True)
+[15:17:53]   [ProntoQA_187] ✓ 正确! 预测=A, 答案=A
+[15:17:53] [Worker] 开始处理: ProntoQA_231 (mode=direct, semantic_check=False, refinement_code=False, repair=True)
+[15:17:57]   [ProntoQA_169] ✓ 正确! 预测=B, 答案=B
+[15:17:57] [Worker] 开始处理: ProntoQA_449 (mode=direct, semantic_check=False, refinement_code=False, repair=True)
+[15:17:58]   [ProntoQA_487] ✓ 正确! 预测=A, 答案=A
+[15:17:58] [Worker] 开始处理: ProntoQA_434 (mode=direct, semantic_check=False, refinement_code=False, repair=True)
+[15:17:59]   [ProntoQA_267] ✓ 正确! 预测=B, 答案=B
+[15:17:59] [Worker] 开始处理: ProntoQA_495 (mode=direct, semantic_check=False, refinement_code=False, repair=True)
+[15:18:00]   [ProntoQA_231] ✓ 正确! 预测=B, 答案=B
+[15:18:00] [Worker] 开始处理: ProntoQA_165 (mode=direct, semantic_check=False, refinement_code=False, repair=True)
+[15:18:04]   [ProntoQA_449] ✓ 正确! 预测=B, 答案=B
+[15:18:04] [Worker] 开始处理: ProntoQA_194 (mode=direct, semantic_check=False, refinement_code=False, repair=True)
+[15:18:06]   [ProntoQA_434] ✓ 正确! 预测=A, 答案=A
+[15:18:06] [Worker] 开始处理: ProntoQA_436 (mode=direct, semantic_check=False, refinement_code=False, repair=True)
+[15:18:06]   [ProntoQA_495] ✓ 正确! 预测=A, 答案=A
+[15:18:06] [Worker] 开始处理: ProntoQA_217 (mode=direct, semantic_check=False, refinement_code=False, repair=True)
+[15:18:10]   [ProntoQA_165] ✓ 正确! 预测=A, 答案=A
+[15:18:10] [Worker] 开始处理: ProntoQA_342 (mode=direct, semantic_check=False, refinement_code=False, repair=True)
+[15:18:11]   [ProntoQA_194] ✓ 正确! 预测=B, 答案=B
+[15:18:11] [Worker] 开始处理: ProntoQA_111 (mode=direct, semantic_check=False, refinement_code=False, repair=True)
+[15:18:13]   [ProntoQA_436] ✓ 正确! 预测=A, 答案=A
+[15:18:13] [Worker] 开始处理: ProntoQA_121 (mode=direct, semantic_check=False, refinement_code=False, repair=True)
+[15:18:16]   [ProntoQA_217] ✓ 正确! 预测=A, 答案=A
+[15:18:16] [Worker] 开始处理: ProntoQA_437 (mode=direct, semantic_check=False, refinement_code=False, repair=True)
+[15:18:17]   [ProntoQA_342] ✓ 正确! 预测=B, 答案=B
+[15:18:17] [Worker] 开始处理: ProntoQA_430 (mode=direct, semantic_check=False, refinement_code=False, repair=True)
+[15:18:19]   [ProntoQA_111] ✓ 正确! 预测=B, 答案=B
+[15:18:19] [Worker] 开始处理: ProntoQA_372 (mode=direct, semantic_check=False, refinement_code=False, repair=True)
+[15:18:21]   [ProntoQA_121] ✓ 正确! 预测=A, 答案=A
+[15:18:21] [Worker] 开始处理: ProntoQA_360 (mode=direct, semantic_check=False, refinement_code=False, repair=True)
+[15:18:23]   [ProntoQA_437] ✓ 正确! 预测=B, 答案=B
+[15:18:23] [Worker] 开始处理: ProntoQA_477 (mode=direct, semantic_check=False, refinement_code=False, repair=True)
+[15:18:24]   [ProntoQA_430] ✓ 正确! 预测=A, 答案=A
+[15:18:24] [Worker] 开始处理: ProntoQA_237 (mode=direct, semantic_check=False, refinement_code=False, repair=True)
+[15:18:25]   [ProntoQA_372] ✓ 正确! 预测=B, 答案=B
+[15:18:25] [Worker] 开始处理: ProntoQA_329 (mode=direct, semantic_check=False, refinement_code=False, repair=True)
+[15:18:29]   [ProntoQA_477] ✓ 正确! 预测=A, 答案=A
+[15:18:29] [Worker] 开始处理: ProntoQA_160 (mode=direct, semantic_check=False, refinement_code=False, repair=True)
+[15:18:30]   [ProntoQA_360] ✓ 正确! 预测=B, 答案=B
+[15:18:30] [Worker] 开始处理: ProntoQA_465 (mode=direct, semantic_check=False, refinement_code=False, repair=True)
+[15:18:31]   [ProntoQA_237] ✓ 正确! 预测=B, 答案=B
+[15:18:31] [Worker] 开始处理: ProntoQA_47 (mode=direct, semantic_check=False, refinement_code=False, repair=True)
+[15:18:32]   [ProntoQA_329] ✓ 正确! 预测=B, 答案=B
+[15:18:32] [Worker] 开始处理: ProntoQA_403 (mode=direct, semantic_check=False, refinement_code=False, repair=True)
+[15:18:38]   [ProntoQA_47] ✓ 正确! 预测=B, 答案=B
+[15:18:38] [Worker] 开始处理: ProntoQA_345 (mode=direct, semantic_check=False, refinement_code=False, repair=True)
+[15:18:38]   [ProntoQA_160] code执行错误（repair修复后）: Z3 internal error (known bug): b'unreachable'
+[15:18:38]   [ProntoQA_160] ⚠ 异常: 代码执行错误（repair修复后仍失败）: Z3 internal error (known bug): b'unreachable'
+[15:18:39] [Worker] 开始处理: ProntoQA_444 (mode=direct, semantic_check=False, refinement_code=False, repair=True)
+[15:18:41]   [ProntoQA_465] code执行错误（repair修复后）: Value cannot be converted into a Z3 Boolean value
+[15:18:41]   [ProntoQA_465] ⚠ 异常: 代码执行错误（repair修复后仍失败）: Value cannot be converted into a Z3 Boolean value
+[15:18:41] [Worker] 开始处理: ProntoQA_68 (mode=direct, semantic_check=False, refinement_code=False, repair=True)
+[15:18:42]   [ProntoQA_403] code执行错误（repair修复后）: Value cannot be converted into a Z3 Boolean value
+[15:18:42]   [ProntoQA_403] ⚠ 异常: 代码执行错误（repair修复后仍失败）: Value cannot be converted into a Z3 Boolean value
+[15:18:42] [Worker] 开始处理: ProntoQA_183 (mode=direct, semantic_check=False, refinement_code=False, repair=True)
+[15:18:48]   [ProntoQA_345] code执行错误（repair修复后）: Value cannot be converted into a Z3 Boolean value
+[15:18:48]   [ProntoQA_345] ⚠ 异常: 代码执行错误（repair修复后仍失败）: Value cannot be converted into a Z3 Boolean value
+[15:18:48] [Worker] 开始处理: ProntoQA_257 (mode=direct, semantic_check=False, refinement_code=False, repair=True)
+[15:18:48]   [ProntoQA_444] code执行错误（repair修复后）: Z3 internal error (known bug): exception: access violation reading 0xFFFFFFFFFFFFFFFF
+[15:18:48]   [ProntoQA_444] ⚠ 异常: 代码执行错误（repair修复后仍失败）: Z3 internal error (known bug): exception: access violation reading 0xFFFFFFFFFFFFFFFF
+[15:18:48] [Worker] 开始处理: ProntoQA_58 (mode=direct, semantic_check=False, refinement_code=False, repair=True)
+[15:18:50]   [ProntoQA_68] ✓ 正确! 预测=A, 答案=A
+[15:18:50] [Worker] 开始处理: ProntoQA_60 (mode=direct, semantic_check=False, refinement_code=False, repair=True)
+[15:18:52]   [ProntoQA_183] ✓ 正确! 预测=B, 答案=B
+[15:18:52] [Worker] 开始处理: ProntoQA_150 (mode=direct, semantic_check=False, refinement_code=False, repair=True)
+[15:18:55]   [ProntoQA_58] ✓ 正确! 预测=B, 答案=B
+[15:18:55] [Worker] 开始处理: ProntoQA_273 (mode=direct, semantic_check=False, refinement_code=False, repair=True)
+[15:18:58]   [ProntoQA_60] ✗ 错误! 预测=A, 答案=B
+[15:18:58] [Worker] 开始处理: ProntoQA_425 (mode=direct, semantic_check=False, refinement_code=False, repair=True)
+[15:18:58]   [ProntoQA_257] ✓ 正确! 预测=A, 答案=A
+[15:18:58] [Worker] 开始处理: ProntoQA_271 (mode=direct, semantic_check=False, refinement_code=False, repair=True)
+[15:19:01]   [ProntoQA_150] ✓ 正确! 预测=A, 答案=A
+[15:19:01] [Worker] 开始处理: ProntoQA_263 (mode=direct, semantic_check=False, refinement_code=False, repair=True)
+[15:19:05]   [ProntoQA_273] ✓ 正确! 预测=A, 答案=A
+[15:19:05] [Worker] 开始处理: ProntoQA_6 (mode=direct, semantic_check=False, refinement_code=False, repair=True)
+[15:19:06]   [ProntoQA_271] ✓ 正确! 预测=A, 答案=A
+[15:19:06] [Worker] 开始处理: ProntoQA_197 (mode=direct, semantic_check=False, refinement_code=False, repair=True)
+[15:19:08]   [ProntoQA_425] ✗ 错误! 预测=A, 答案=B
+[15:19:08] [Worker] 开始处理: ProntoQA_439 (mode=direct, semantic_check=False, refinement_code=False, repair=True)
+[15:19:08]   [ProntoQA_263] ✓ 正确! 预测=B, 答案=B
+[15:19:08] [Worker] 开始处理: ProntoQA_405 (mode=direct, semantic_check=False, refinement_code=False, repair=True)
+[15:19:13]   [ProntoQA_6] ✓ 正确! 预测=A, 答案=A
+[15:19:13] [Worker] 开始处理: ProntoQA_289 (mode=direct, semantic_check=False, refinement_code=False, repair=True)
+[15:19:14]   [ProntoQA_197] ✓ 正确! 预测=B, 答案=B
+[15:19:15]   [ProntoQA_439] ✓ 正确! 预测=A, 答案=A
+[15:19:20]   [ProntoQA_289] ✓ 正确! 预测=B, 答案=B
+[15:19:21]   [ProntoQA_405] ✓ 正确! 预测=A, 答案=A
+[15:19:21] ==================================================
+[15:19:21] 评测完成!
+[15:19:21] 已完成: 50, 正确: 41, 错误: 2, 异常: 7
+[15:19:21] 准确率: 82.00%
+[15:19:21] ==================================================
+[15:19:41] 结果已导出到: D:/学习资料/课程/程序设计大作业/EnhancingLLM/EnhancingLLM/data/test18.json

@@ -290,6 +290,18 @@ class LogicEvalApp:
         ttk.Label(refinement_code_frame, text="(代码执行失败时自动修复重试)",
                  foreground=self.colors['subtext']).pack(side=tk.LEFT)
         
+        # Repair功能选项
+        repair_frame = ttk.Frame(config_frame)
+        repair_frame.pack(fill=tk.X, pady=(0, 10))
+
+        ttk.Label(repair_frame, text="Repair:", width=12).pack(side=tk.LEFT)
+        self.repair_var = tk.BooleanVar(value=True)  # 默认开启
+        ttk.Checkbutton(repair_frame, text="启用Repair功能",
+                       variable=self.repair_var,
+                       command=self.on_repair_toggle).pack(side=tk.LEFT, padx=(0, 10))
+        ttk.Label(repair_frame, text="(执行前自动修复代码语法错误)",
+                 foreground=self.colors['subtext']).pack(side=tk.LEFT)
+        
         
         # 题目数量限制
         limit_frame = ttk.Frame(config_frame)
@@ -432,6 +444,14 @@ class LogicEvalApp:
             self.log("代码修复功能已启用", 'info')
         else:
             self.log("代码修复功能已关闭", 'info')
+
+    def on_repair_toggle(self):
+        """Repair功能切换时的处理"""
+        enabled = self.repair_var.get()
+        if enabled:
+            self.log("Repair功能已启用", 'info')
+        else:
+            self.log("Repair功能已关闭", 'info')
         
     def browse_dataset(self):
         """浏览选择数据集文件"""
@@ -678,12 +698,13 @@ class LogicEvalApp:
 
         semantic_check_enabled = self.semantic_check_var.get()
         refinement_code_enabled = self.refinement_code_var.get()
+        repair_enabled = self.repair_var.get()
 
         # 直接生成模式只支持direct模式
         dataset_type = detect_dataset_type(problem)
         
         self.root.after(0, lambda pid=problem_id:
-                       self.log(f"[Worker] 开始处理: {pid} (mode={mode}, semantic_check={semantic_check_enabled}, refinement_code={refinement_code_enabled})", 'info'))
+                       self.log(f"[Worker] 开始处理: {pid} (mode={mode}, semantic_check={semantic_check_enabled}, refinement_code={refinement_code_enabled}, repair={repair_enabled})", 'info'))
         
         # 在try块外初始化code变量，以便在异常时也能保存
         code = None
@@ -806,8 +827,8 @@ class LogicEvalApp:
                 if self.stop_flag:
                     raise Exception('用户停止')
                 
-                # 每次执行前都使用repair修复代码
-                result, exec_error, repair_log = execute_z3_code(code)
+                # 根据 repair 开关决定是否使用 repair 修复
+                result, exec_error, repair_log = execute_z3_code(code, auto_repair=repair_enabled)
                 
                 # 记录修复日志
                 if repair_log:

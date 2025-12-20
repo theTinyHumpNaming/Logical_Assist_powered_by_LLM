@@ -1,6 +1,8 @@
 The script you provided has encountered an error:
 {info_text}
 
+Hint: If you see errors related to solver.add(), try adding constraints one at a time instead of passing multiple arguments.
+
 Please correct this error and resolve the issue again:
 >>>>>>>>>>>>>>>>>>>>>>>>>>>>
 [Problem]:

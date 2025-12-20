@@ -1,6 +1,8 @@
 The script you provided does not match the semantics of the original problem. This is the detailed information for checking semantic inconsistencies:
 {info_text}
 
+Hint: Ensure each constraint is added correctly. Consider adding constraints one at a time for clarity.
+
 Please resolve the issue again and ensure that the semantics remain unchanged:
 >>>>>>>>>>>>>>>>>>>>>>>>>>>>
 [Problem]:

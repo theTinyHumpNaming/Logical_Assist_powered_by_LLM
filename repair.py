@@ -186,11 +186,13 @@ def fix_undefined_bool_variables(code: str) -> Tuple[str, List[str]]:
     
     # Z3关键字和内置函数，不应被视为变量
     z3_keywords = {
-        'Solver', 'Bool', 'Int', 'BoolSort', 'IntSort', 'EnumSort', 'Function',
-        'Const', 'And', 'Or', 'Not', 'Implies', 'ForAll', 'Exists', 'Distinct',
+        'Solver', 'Bool', 'Bools', 'Int', 'Ints', 'BoolSort', 'IntSort', 'EnumSort', 'Function',
+        'Const', 'Consts', 'And', 'Or', 'Not', 'Implies', 'ForAll', 'Exists', 'Distinct',
         'If', 'sat', 'unsat', 'unknown', 'is_true', 'is_false', 'check', 'add',
-        'push', 'pop', 'model', 'assertions', 'print',
+        'push', 'pop', 'model', 'assertions', 'print', 'eval', 'as_long',
         'solver', 'x', 'y', 'z',  # 常见的量化变量名
+        'b', 'birds', 'golfers', 'vehicles', 'fruits', 'books',  # 常见的循环变量名
+        'i', 'j', 'k', 'v', 'f', 'g',  # 循环计数器
     }
     
     # 合并所有关键字
@@ -203,12 +205,16 @@ def fix_undefined_bool_variables(code: str) -> Tuple[str, List[str]]:
     # 只在特定上下文中查找：solver.add、Implies、And、Or、Not后面
     lines = code.split('\n')
     for line in lines:
+        # 跳过注释
+        if line.strip().startswith('#'):
+            continue
+        
+        # 跳过for循环行（避免将循环变量误认为Bool变量）
+        if 'for ' in line and ' in ' in line:
+            continue
+        
         # 只检查包含Z3约束的行
         if any(keyword in line for keyword in ['solver.add', 'Implies', 'And', 'Or', 'Not', 'ForAll']):
-            # 跳过注释
-            if line.strip().startswith('#'):
-                continue
-                
             # 提取该行中的变量
             for match in re.finditer(var_usage_pattern, line):
                 var_name = match.group(1)
@@ -276,9 +282,9 @@ def fix_undefined_predicates(code: str) -> Tuple[str, List[str]]:
     # 但要排除Python内置函数和z3函数
     builtin_functions = {
         'print', 'len', 'str', 'int', 'bool', 'list', 'dict', 'set', 'tuple',
-        'Solver', 'Bool', 'Int', 'BoolSort', 'IntSort', 'EnumSort', 'Function',
-        'Const', 'And', 'Or', 'Not', 'Implies', 'ForAll', 'Exists', 'Distinct',
-        'If', 'is_true', 'is_false', 'check', 'add', 'assertions', 'model', 'Consts'
+        'Solver', 'Bool', 'Bools', 'Int', 'Ints', 'BoolSort', 'IntSort', 'EnumSort', 'Function',
+        'Const', 'Consts', 'And', 'Or', 'Not', 'Implies', 'ForAll', 'Exists', 'Distinct',
+        'If', 'is_true', 'is_false', 'check', 'add', 'assertions', 'model', 'eval', 'as_long', 'range', 'sum'
     }
     
     used_predicates = set()
@@ -920,9 +926,10 @@ def fix_undefined_function_calls(code: str) -> Tuple[str, List[str]]:
     
     # 查找被调用的函数（形如 func_name(...) ）
     z3_builtins = {
-        'Solver', 'Bool', 'Int', 'Function', 'Const', 'And', 'Or', 'Not', 
+        'Solver', 'Bool', 'Bools', 'Int', 'Ints', 'Function', 'Const', 'Consts', 'And', 'Or', 'Not', 
         'Implies', 'ForAll', 'Exists', 'Distinct', 'If', 'EnumSort', 'BoolSort',
-        'IntSort', 'print', 'exit', 'unsat', 'sat', 'unknown', 'check', 'push', 'pop', 'add'
+        'IntSort', 'print', 'exit', 'unsat', 'sat', 'unknown', 'check', 'push', 'pop', 'add',
+        'is_true', 'is_false', 'model', 'eval', 'as_long', 'range', 'len', 'sum'
     }
     
     called_functions = set()

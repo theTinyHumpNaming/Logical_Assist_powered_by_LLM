@@ -1,0 +1,927 @@
+=== 评测日志开始于 2025-12-20 16:07:54 ===
+[16:07:57] 代码修复功能已关闭
+[16:08:15] 正在加载数据集: D:/学习资料/课程/程序设计大作业/EnhancingLLM/EnhancingLLM/data/ProntoQA_test.json
+[16:08:15] 共 50 道题目，使用 4 个 workers 并行处理
+[16:08:15] [Worker] 开始处理: ProntoQA_285 (mode=direct, semantic_check=False, refinement_code=False, repair=True)
+[16:08:15] [Worker] 开始处理: ProntoQA_152 (mode=direct, semantic_check=False, refinement_code=False, repair=True)
+[16:08:15] [Worker] 开始处理: ProntoQA_281 (mode=direct, semantic_check=False, refinement_code=False, repair=True)
+[16:08:15] [Worker] 开始处理: ProntoQA_118 (mode=direct, semantic_check=False, refinement_code=False, repair=True)
+[16:08:23]   [ProntoQA_118] ✗ 错误! 预测=A, 答案=B
+[16:08:23] [Worker] 开始处理: ProntoQA_293 (mode=direct, semantic_check=False, refinement_code=False, repair=True)
+[16:08:23]   [ProntoQA_281] ✓ 正确! 预测=A, 答案=A
+[16:08:23] [Worker] 开始处理: ProntoQA_30 (mode=direct, semantic_check=False, refinement_code=False, repair=True)
+[16:08:24]   [ProntoQA_152] ✓ 正确! 预测=A, 答案=A
+[16:08:24] [Worker] 开始处理: ProntoQA_189 (mode=direct, semantic_check=False, refinement_code=False, repair=True)
+[16:08:24]   [ProntoQA_285] ✓ 正确! 预测=A, 答案=A
+[16:08:24] [Worker] 开始处理: ProntoQA_187 (mode=direct, semantic_check=False, refinement_code=False, repair=True)
+[16:08:30]   [ProntoQA_187] ✓ 正确! 预测=A, 答案=A
+[16:08:30] [Worker] 开始处理: ProntoQA_267 (mode=direct, semantic_check=False, refinement_code=False, repair=True)
+[16:08:31]   [ProntoQA_189] ✓ 正确! 预测=B, 答案=B
+[16:08:31] [Worker] 开始处理: ProntoQA_169 (mode=direct, semantic_check=False, refinement_code=False, repair=True)
+[16:08:33]   [ProntoQA_30] ✓ 正确! 预测=A, 答案=A
+[16:08:33] [Worker] 开始处理: ProntoQA_487 (mode=direct, semantic_check=False, refinement_code=False, repair=True)
+[16:08:33]   [ProntoQA_293] ✓ 正确! 预测=A, 答案=A
+[16:08:33] [Worker] 开始处理: ProntoQA_231 (mode=direct, semantic_check=False, refinement_code=False, repair=True)
+[16:08:37]   [ProntoQA_267] ✓ 正确! 预测=B, 答案=B
+[16:08:38] [Worker] 开始处理: ProntoQA_449 (mode=direct, semantic_check=False, refinement_code=False, repair=True)
+[16:08:38]   [ProntoQA_169] ✓ 正确! 预测=B, 答案=B
+[16:08:38] [Worker] 开始处理: ProntoQA_434 (mode=direct, semantic_check=False, refinement_code=False, repair=True)
+[16:08:41]   [ProntoQA_231] ✓ 正确! 预测=B, 答案=B
+[16:08:41] [Worker] 开始处理: ProntoQA_495 (mode=direct, semantic_check=False, refinement_code=False, repair=True)
+[16:08:42]   [ProntoQA_487] ✓ 正确! 预测=A, 答案=A
+[16:08:42] [Worker] 开始处理: ProntoQA_165 (mode=direct, semantic_check=False, refinement_code=False, repair=True)
+[16:08:45]   [ProntoQA_434] ✓ 正确! 预测=A, 答案=A
+[16:08:45] [Worker] 开始处理: ProntoQA_194 (mode=direct, semantic_check=False, refinement_code=False, repair=True)
+[16:08:46]   [ProntoQA_449] ✓ 正确! 预测=B, 答案=B
+[16:08:46] [Worker] 开始处理: ProntoQA_436 (mode=direct, semantic_check=False, refinement_code=False, repair=True)
+[16:08:49]   [ProntoQA_165] ✓ 正确! 预测=A, 答案=A
+[16:08:49] [Worker] 开始处理: ProntoQA_217 (mode=direct, semantic_check=False, refinement_code=False, repair=True)
+[16:08:50]   [ProntoQA_495] ✓ 正确! 预测=A, 答案=A
+[16:08:50] [Worker] 开始处理: ProntoQA_342 (mode=direct, semantic_check=False, refinement_code=False, repair=True)
+[16:08:53]   [ProntoQA_194] ✓ 正确! 预测=B, 答案=B
+[16:08:53] [Worker] 开始处理: ProntoQA_111 (mode=direct, semantic_check=False, refinement_code=False, repair=True)
+[16:08:54]   [ProntoQA_436] ✓ 正确! 预测=A, 答案=A
+[16:08:54] [Worker] 开始处理: ProntoQA_121 (mode=direct, semantic_check=False, refinement_code=False, repair=True)
+[16:09:00]   [ProntoQA_217] ✓ 正确! 预测=A, 答案=A
+[16:09:00] [Worker] 开始处理: ProntoQA_437 (mode=direct, semantic_check=False, refinement_code=False, repair=True)
+[16:09:00]   [ProntoQA_111] ✓ 正确! 预测=B, 答案=B
+[16:09:00]   [ProntoQA_342] ✓ 正确! 预测=B, 答案=B
+[16:09:00] [Worker] 开始处理: ProntoQA_430 (mode=direct, semantic_check=False, refinement_code=False, repair=True)
+[16:09:00] [Worker] 开始处理: ProntoQA_372 (mode=direct, semantic_check=False, refinement_code=False, repair=True)
+[16:09:01]   [ProntoQA_121] ✓ 正确! 预测=A, 答案=A
+[16:09:01] [Worker] 开始处理: ProntoQA_360 (mode=direct, semantic_check=False, refinement_code=False, repair=True)
+[16:09:07]   [ProntoQA_437] ✓ 正确! 预测=B, 答案=B
+[16:09:07] [Worker] 开始处理: ProntoQA_477 (mode=direct, semantic_check=False, refinement_code=False, repair=True)
+[16:09:07]   [ProntoQA_372] ✓ 正确! 预测=B, 答案=B
+[16:09:07] [Worker] 开始处理: ProntoQA_237 (mode=direct, semantic_check=False, refinement_code=False, repair=True)
+[16:09:08]   [ProntoQA_430] ✓ 正确! 预测=A, 答案=A
+[16:09:08] [Worker] 开始处理: ProntoQA_329 (mode=direct, semantic_check=False, refinement_code=False, repair=True)
+[16:09:10]   [ProntoQA_360] 代码自动修复: 自动添加未定义的Bool变量: sally
+[16:09:10]   [ProntoQA_360] ✓ 正确! 预测=B, 答案=B
+[16:09:10] [Worker] 开始处理: ProntoQA_160 (mode=direct, semantic_check=False, refinement_code=False, repair=True)
+[16:09:14]   [ProntoQA_237] 代码自动修复: 自动添加未定义的Bool变量: wumpus
+[16:09:14]   [ProntoQA_237] ✓ 正确! 预测=B, 答案=B
+[16:09:14] [Worker] 开始处理: ProntoQA_465 (mode=direct, semantic_check=False, refinement_code=False, repair=True)
+[16:09:17]   [ProntoQA_329] ✓ 正确! 预测=B, 答案=B
+[16:09:17] [Worker] 开始处理: ProntoQA_47 (mode=direct, semantic_check=False, refinement_code=False, repair=True)
+[16:09:18]   [ProntoQA_477] ✓ 正确! 预测=A, 答案=A
+[16:09:18] [Worker] 开始处理: ProntoQA_403 (mode=direct, semantic_check=False, refinement_code=False, repair=True)
+[16:09:19]   [ProntoQA_160] ✓ 正确! 预测=B, 答案=B
+[16:09:19] [Worker] 开始处理: ProntoQA_345 (mode=direct, semantic_check=False, refinement_code=False, repair=True)
+[16:09:22]   [ProntoQA_465] ✓ 正确! 预测=B, 答案=B
+[16:09:22] [Worker] 开始处理: ProntoQA_444 (mode=direct, semantic_check=False, refinement_code=False, repair=True)
+[16:09:23]   [ProntoQA_47] ✓ 正确! 预测=B, 答案=B
+[16:09:23] [Worker] 开始处理: ProntoQA_68 (mode=direct, semantic_check=False, refinement_code=False, repair=True)
+[16:09:28]   [ProntoQA_403] ✓ 正确! 预测=B, 答案=B
+[16:09:28] [Worker] 开始处理: ProntoQA_183 (mode=direct, semantic_check=False, refinement_code=False, repair=True)
+[16:09:29]   [ProntoQA_345] ✓ 正确! 预测=B, 答案=B
+[16:09:29] [Worker] 开始处理: ProntoQA_257 (mode=direct, semantic_check=False, refinement_code=False, repair=True)
+[16:09:31]   [ProntoQA_444] ✓ 正确! 预测=A, 答案=A
+[16:09:31] [Worker] 开始处理: ProntoQA_58 (mode=direct, semantic_check=False, refinement_code=False, repair=True)
+[16:09:34]   [ProntoQA_68] ✓ 正确! 预测=A, 答案=A
+[16:09:34] [Worker] 开始处理: ProntoQA_60 (mode=direct, semantic_check=False, refinement_code=False, repair=True)
+[16:09:37]   [ProntoQA_183] ✓ 正确! 预测=B, 答案=B
+[16:09:37] [Worker] 开始处理: ProntoQA_150 (mode=direct, semantic_check=False, refinement_code=False, repair=True)
+[16:09:39]   [ProntoQA_58] ✓ 正确! 预测=B, 答案=B
+[16:09:39] [Worker] 开始处理: ProntoQA_273 (mode=direct, semantic_check=False, refinement_code=False, repair=True)
+[16:09:39]   [ProntoQA_257] ✓ 正确! 预测=A, 答案=A
+[16:09:39] [Worker] 开始处理: ProntoQA_425 (mode=direct, semantic_check=False, refinement_code=False, repair=True)
+[16:09:42]   [ProntoQA_60] ✓ 正确! 预测=B, 答案=B
+[16:09:42] [Worker] 开始处理: ProntoQA_271 (mode=direct, semantic_check=False, refinement_code=False, repair=True)
+[16:09:46]   [ProntoQA_150] ✓ 正确! 预测=A, 答案=A
+[16:09:46] [Worker] 开始处理: ProntoQA_263 (mode=direct, semantic_check=False, refinement_code=False, repair=True)
+[16:09:47]   [ProntoQA_425] ✓ 正确! 预测=B, 答案=B
+[16:09:47] [Worker] 开始处理: ProntoQA_6 (mode=direct, semantic_check=False, refinement_code=False, repair=True)
+[16:09:48]   [ProntoQA_273] ✓ 正确! 预测=A, 答案=A
+[16:09:48] [Worker] 开始处理: ProntoQA_197 (mode=direct, semantic_check=False, refinement_code=False, repair=True)
+[16:09:51]   [ProntoQA_271] ✓ 正确! 预测=A, 答案=A
+[16:09:51] [Worker] 开始处理: ProntoQA_439 (mode=direct, semantic_check=False, refinement_code=False, repair=True)
+[16:09:55]   [ProntoQA_263] ✗ 错误! 预测=A, 答案=B
+[16:09:55] [Worker] 开始处理: ProntoQA_405 (mode=direct, semantic_check=False, refinement_code=False, repair=True)
+[16:09:56]   [ProntoQA_6] ✓ 正确! 预测=A, 答案=A
+[16:09:56] [Worker] 开始处理: ProntoQA_289 (mode=direct, semantic_check=False, refinement_code=False, repair=True)
+[16:09:57]   [ProntoQA_197] ✓ 正确! 预测=B, 答案=B
+[16:09:59]   [ProntoQA_439] ✓ 正确! 预测=A, 答案=A
+[16:10:03]   [ProntoQA_405] ✓ 正确! 预测=A, 答案=A
+[16:10:07]   [ProntoQA_289] ✓ 正确! 预测=B, 答案=B
+[16:10:07] ==================================================
+[16:10:07] 评测完成!
+[16:10:07] 已完成: 50, 正确: 48, 错误: 2, 异常: 0
+[16:10:07] 准确率: 96.00%
+[16:10:07] ==================================================
+[16:10:13] 正在加载数据集: D:/学习资料/课程/程序设计大作业/EnhancingLLM/EnhancingLLM/data/FOLIO_test.json
+[16:10:13] 共 50 道题目，使用 4 个 workers 并行处理
+[16:10:13] [Worker] 开始处理: FOLIO_dev_0 (mode=direct, semantic_check=False, refinement_code=False, repair=True)
+[16:10:13] [Worker] 开始处理: FOLIO_dev_125 (mode=direct, semantic_check=False, refinement_code=False, repair=True)
+[16:10:13] [Worker] 开始处理: FOLIO_dev_59 (mode=direct, semantic_check=False, refinement_code=False, repair=True)
+[16:10:13] [Worker] 开始处理: FOLIO_dev_43 (mode=direct, semantic_check=False, refinement_code=False, repair=True)
+[16:10:20]   [FOLIO_dev_59] 代码自动修复: 自动添加未定义的Bool变量: is_in_state; 第15行: 注释掉错误的函数定义 is_in_state（BoolSort不应作为参数）; 第28行: 注释掉对错误函数 is_in_state 的调用; 第34行: 注释掉对错误函数 is_in_state 的调用; 第44行: 注释掉对错误函数 is_in_state 的调用; 第50行: 注释掉对错误函数 is_in_state 的调用
+[16:10:20]   [FOLIO_dev_59] ✓ 正确! 预测=C, 答案=C
+[16:10:20]   [FOLIO_dev_125] 代码自动修复: 检测到缺少 1 个右括号; 第36行: 添加 1 个右括号; 自动添加未定义的Bool变量: rock_is_animal
+[16:10:20] [Worker] 开始处理: FOLIO_dev_144 (mode=direct, semantic_check=False, refinement_code=False, repair=True)
+[16:10:20]   [FOLIO_dev_125] ✓ 正确! 预测=C, 答案=C
+[16:10:20] [Worker] 开始处理: FOLIO_dev_17 (mode=direct, semantic_check=False, refinement_code=False, repair=True)
+[16:10:20]   [FOLIO_dev_0] ✓ 正确! 预测=C, 答案=C
+[16:10:20] [Worker] 开始处理: FOLIO_dev_83 (mode=direct, semantic_check=False, refinement_code=False, repair=True)
+[16:10:21]   [FOLIO_dev_43] 代码自动修复: 自动添加未定义的Bool变量: lost_to; 第10行: 注释掉错误的函数定义 lost_to（BoolSort不应作为参数）; 第28行: 注释掉对错误函数 lost_to 的调用; 第31行: 注释掉对错误函数 lost_to 的调用; 第50行: 注释掉对错误函数 lost_to 的调用; 第56行: 注释掉对错误函数 lost_to 的调用
+[16:10:21]   [FOLIO_dev_43] ✓ 正确! 预测=C, 答案=C
+[16:10:21] [Worker] 开始处理: FOLIO_dev_13 (mode=direct, semantic_check=False, refinement_code=False, repair=True)
+[16:10:27]   [FOLIO_dev_17] ✓ 正确! 预测=C, 答案=C
+[16:10:27] [Worker] 开始处理: FOLIO_dev_111 (mode=direct, semantic_check=False, refinement_code=False, repair=True)
+[16:10:27]   [FOLIO_dev_144] ✓ 正确! 预测=C, 答案=C
+[16:10:27] [Worker] 开始处理: FOLIO_dev_107 (mode=direct, semantic_check=False, refinement_code=False, repair=True)
+[16:10:28]   [FOLIO_dev_83] ✓ 正确! 预测=B, 答案=B
+[16:10:28] [Worker] 开始处理: FOLIO_dev_130 (mode=direct, semantic_check=False, refinement_code=False, repair=True)
+[16:10:29]   [FOLIO_dev_13] ✗ 错误! 预测=A, 答案=C
+[16:10:29] [Worker] 开始处理: FOLIO_dev_89 (mode=direct, semantic_check=False, refinement_code=False, repair=True)
+[16:10:33]   [FOLIO_dev_111] ✓ 正确! 预测=C, 答案=C
+[16:10:33] [Worker] 开始处理: FOLIO_dev_126 (mode=direct, semantic_check=False, refinement_code=False, repair=True)
+[16:10:33]   [FOLIO_dev_89] ✗ 错误! 预测=C, 答案=A
+[16:10:33] [Worker] 开始处理: FOLIO_dev_134 (mode=direct, semantic_check=False, refinement_code=False, repair=True)
+[16:10:34]   [FOLIO_dev_130] ✓ 正确! 预测=C, 答案=C
+[16:10:34] [Worker] 开始处理: FOLIO_dev_51 (mode=direct, semantic_check=False, refinement_code=False, repair=True)
+[16:10:34]   [FOLIO_dev_107] ✗ 错误! 预测=C, 答案=B
+[16:10:34] [Worker] 开始处理: FOLIO_dev_60 (mode=direct, semantic_check=False, refinement_code=False, repair=True)
+[16:10:40]   [FOLIO_dev_134] ✗ 错误! 预测=A, 答案=C
+[16:10:40] [Worker] 开始处理: FOLIO_dev_25 (mode=direct, semantic_check=False, refinement_code=False, repair=True)
+[16:10:41]   [FOLIO_dev_51] 代码自动修复: 自动添加未定义的Bool变量: analog; 自动添加未定义的Bool变量: are; 自动添加未定义的Bool变量: book; 自动添加未定义的Bool变量: digital; 自动添加未定义的Bool变量: hardcover; 自动添加未定义的Bool变量: it; 自动添加未定义的Bool变量: media; 自动添加未定义的Bool变量: printed; 自动添加未定义的Bool变量: s; 自动添加未定义的Bool变量: service; 自动添加未定义的Bool变量: services; 自动添加未定义的Bool变量: streaming; 自动添加未定义的Bool变量: text; 自动添加未定义的Bool变量: then
+[16:10:41]   [FOLIO_dev_51] ✓ 正确! 预测=A, 答案=A
+[16:10:41] [Worker] 开始处理: FOLIO_dev_101 (mode=direct, semantic_check=False, refinement_code=False, repair=True)
+[16:10:41]   [FOLIO_dev_126] 代码自动修复: 检测到缺少 1 个右括号; 第36行: 添加 1 个右括号; 自动添加未定义的Bool变量: rock_is_animal
+[16:10:41]   [FOLIO_dev_126] ✓ 正确! 预测=A, 答案=A
+[16:10:41] [Worker] 开始处理: FOLIO_dev_49 (mode=direct, semantic_check=False, refinement_code=False, repair=True)
+[16:10:43]   [FOLIO_dev_60] ✗ 错误! 预测=C, 答案=A
+[16:10:43] [Worker] 开始处理: FOLIO_dev_48 (mode=direct, semantic_check=False, refinement_code=False, repair=True)
+[16:10:46]   [FOLIO_dev_101] ✗ 错误! 预测=None, 答案=B
+[16:10:46] [Worker] 开始处理: FOLIO_dev_66 (mode=direct, semantic_check=False, refinement_code=False, repair=True)
+[16:10:47]   [FOLIO_dev_49] ✓ 正确! 预测=C, 答案=C
+[16:10:47] [Worker] 开始处理: FOLIO_dev_169 (mode=direct, semantic_check=False, refinement_code=False, repair=True)
+[16:10:47]   [FOLIO_dev_48] ✗ 错误! 预测=B, 答案=C
+[16:10:47] [Worker] 开始处理: FOLIO_dev_172 (mode=direct, semantic_check=False, refinement_code=False, repair=True)
+[16:10:47]   [FOLIO_dev_25] ✓ 正确! 预测=C, 答案=C
+[16:10:47] [Worker] 开始处理: FOLIO_dev_44 (mode=direct, semantic_check=False, refinement_code=False, repair=True)
+[16:10:53]   [FOLIO_dev_169] ✗ 错误! 预测=C, 答案=B
+[16:10:53] [Worker] 开始处理: FOLIO_dev_8 (mode=direct, semantic_check=False, refinement_code=False, repair=True)
+[16:10:54]   [FOLIO_dev_66] ✓ 正确! 预测=A, 答案=A
+[16:10:54] [Worker] 开始处理: FOLIO_dev_22 (mode=direct, semantic_check=False, refinement_code=False, repair=True)
+[16:10:55]   [FOLIO_dev_172] ✗ 错误! 预测=A, 答案=B
+[16:10:55] [Worker] 开始处理: FOLIO_dev_200 (mode=direct, semantic_check=False, refinement_code=False, repair=True)
+[16:10:58]   [FOLIO_dev_44] 代码自动修复: 自动添加未定义的Bool变量: lost_to; 警告：代码使用了ForAll/Exists但缺少Entity定义，将注释掉相关行; 第25行: 注释掉ForAll/Exists（缺少Entity定义）; 第9行: 注释掉错误的函数定义 lost_to（BoolSort不应作为参数）; 第28行: 注释掉对错误函数 lost_to 的调用; 第34行: 注释掉对错误函数 lost_to 的调用; 第37行: 注释掉对错误函数 lost_to 的调用; 第47行: 注释掉对错误函数 lost_to 的调用; 第53行: 注释掉对错误函数 lost_to 的调用
+[16:10:58]   [FOLIO_dev_44] ✗ 错误! 预测=C, 答案=B
+[16:10:58] [Worker] 开始处理: FOLIO_dev_85 (mode=direct, semantic_check=False, refinement_code=False, repair=True)
+[16:11:00]   [FOLIO_dev_8] ✓ 正确! 预测=C, 答案=C
+[16:11:00] [Worker] 开始处理: FOLIO_dev_178 (mode=direct, semantic_check=False, refinement_code=False, repair=True)
+[16:11:02]   [FOLIO_dev_200] ✗ 错误! 预测=C, 答案=B
+[16:11:02] [Worker] 开始处理: FOLIO_dev_73 (mode=direct, semantic_check=False, refinement_code=False, repair=True)
+[16:11:04]   [FOLIO_dev_85] ✗ 错误! 预测=C, 答案=A
+[16:11:04] [Worker] 开始处理: FOLIO_dev_26 (mode=direct, semantic_check=False, refinement_code=False, repair=True)
+[16:11:04]   [FOLIO_dev_22] ✓ 正确! 预测=B, 答案=B
+[16:11:04] [Worker] 开始处理: FOLIO_dev_196 (mode=direct, semantic_check=False, refinement_code=False, repair=True)
+[16:11:05]   [FOLIO_dev_178] ✓ 正确! 预测=A, 答案=A
+[16:11:05] [Worker] 开始处理: FOLIO_dev_33 (mode=direct, semantic_check=False, refinement_code=False, repair=True)
+[16:11:09]   [FOLIO_dev_73] ✗ 错误! 预测=B, 答案=A
+[16:11:09] [Worker] 开始处理: FOLIO_dev_152 (mode=direct, semantic_check=False, refinement_code=False, repair=True)
+[16:11:11]   [FOLIO_dev_26] ✓ 正确! 预测=C, 答案=C
+[16:11:11] [Worker] 开始处理: FOLIO_dev_76 (mode=direct, semantic_check=False, refinement_code=False, repair=True)
+[16:11:11]   [FOLIO_dev_196] 代码自动修复: 自动添加未定义的Bool变量: kiki_terricolous
+[16:11:11]   [FOLIO_dev_196] ✓ 正确! 预测=C, 答案=C
+[16:11:11] [Worker] 开始处理: FOLIO_dev_23 (mode=direct, semantic_check=False, refinement_code=False, repair=True)
+[16:11:12]   [FOLIO_dev_33] ✗ 错误! 预测=C, 答案=A
+[16:11:12] [Worker] 开始处理: FOLIO_dev_11 (mode=direct, semantic_check=False, refinement_code=False, repair=True)
+[16:11:14]   [FOLIO_dev_152] ✓ 正确! 预测=C, 答案=C
+[16:11:14] [Worker] 开始处理: FOLIO_dev_170 (mode=direct, semantic_check=False, refinement_code=False, repair=True)
+[16:11:19]   [FOLIO_dev_23] ✓ 正确! 预测=C, 答案=C
+[16:11:19] [Worker] 开始处理: FOLIO_dev_150 (mode=direct, semantic_check=False, refinement_code=False, repair=True)
+[16:11:19]   [FOLIO_dev_76] ✓ 正确! 预测=C, 答案=C
+[16:11:19] [Worker] 开始处理: FOLIO_dev_77 (mode=direct, semantic_check=False, refinement_code=False, repair=True)
+[16:11:21]   [FOLIO_dev_11] ✓ 正确! 预测=C, 答案=C
+[16:11:21] [Worker] 开始处理: FOLIO_dev_31 (mode=direct, semantic_check=False, refinement_code=False, repair=True)
+[16:11:21]   [FOLIO_dev_170] ✗ 错误! 预测=A, 答案=C
+[16:11:21] [Worker] 开始处理: FOLIO_dev_21 (mode=direct, semantic_check=False, refinement_code=False, repair=True)
+[16:11:27]   [FOLIO_dev_31] ✗ 错误! 预测=C, 答案=A
+[16:11:27] [Worker] 开始处理: FOLIO_dev_14 (mode=direct, semantic_check=False, refinement_code=False, repair=True)
+[16:11:27]   [FOLIO_dev_150] ✗ 错误! 预测=C, 答案=A
+[16:11:27] [Worker] 开始处理: FOLIO_dev_129 (mode=direct, semantic_check=False, refinement_code=False, repair=True)
+[16:11:28]   [FOLIO_dev_21] ✗ 错误! 预测=C, 答案=A
+[16:11:28] [Worker] 开始处理: FOLIO_dev_40 (mode=direct, semantic_check=False, refinement_code=False, repair=True)
+[16:11:28]   [FOLIO_dev_77] ✗ 错误! 预测=C, 答案=A
+[16:11:28] [Worker] 开始处理: FOLIO_dev_4 (mode=direct, semantic_check=False, refinement_code=False, repair=True)
+[16:11:33]   [FOLIO_dev_14] ✓ 正确! 预测=B, 答案=B
+[16:11:33] [Worker] 开始处理: FOLIO_dev_132 (mode=direct, semantic_check=False, refinement_code=False, repair=True)
+[16:11:34]   [FOLIO_dev_129] ✓ 正确! 预测=A, 答案=A
+[16:11:34] [Worker] 开始处理: FOLIO_dev_176 (mode=direct, semantic_check=False, refinement_code=False, repair=True)
+[16:11:35]   [FOLIO_dev_4] 代码自动修复: 检测到缺少 1 个右括号; 第28行: 添加 1 个右括号; 自动添加未定义的Bool变量: james_appears_in_company_today; 自动添加未定义的Bool变量: james_has_lunch_at_home; 自动添加未定义的Bool变量: james_in_other_countries; 自动添加未定义的Bool变量: james_is_manager; 自动添加未定义的Bool变量: james_schedules_meeting_with_customers; 自动添加未定义的Bool变量: james_works_remotely_from_home
+[16:11:35]   [FOLIO_dev_4] ✓ 正确! 预测=C, 答案=C
+[16:11:35] [Worker] 开始处理: FOLIO_dev_53 (mode=direct, semantic_check=False, refinement_code=False, repair=True)
+[16:11:37]   [FOLIO_dev_40] ✗ 错误! 预测=C, 答案=A
+[16:11:37] [Worker] 开始处理: FOLIO_dev_171 (mode=direct, semantic_check=False, refinement_code=False, repair=True)
+[16:11:40]   [FOLIO_dev_132] 代码自动修复: 检测到缺少 1 个右括号; 第41行: 添加 1 个右括号
+[16:11:40]   [FOLIO_dev_132] ✗ 错误! 预测=B, 答案=A
+[16:11:42]   [FOLIO_dev_176] ✓ 正确! 预测=C, 答案=C
+[16:11:42]   [FOLIO_dev_53] ✓ 正确! 预测=C, 答案=C
+[16:11:43]   [FOLIO_dev_171] ✓ 正确! 预测=A, 答案=A
+[16:11:43] ==================================================
+[16:11:43] 评测完成!
+[16:11:43] 已完成: 50, 正确: 29, 错误: 21, 异常: 0
+[16:11:43] 准确率: 58.00%
+[16:11:43] ==================================================
+[16:13:15] 正在加载数据集: D:/学习资料/课程/程序设计大作业/EnhancingLLM/EnhancingLLM/data/ProntoQA_test.json
+[16:13:15] 共 50 道题目，使用 4 个 workers 并行处理
+[16:13:15] [Worker] 开始处理: ProntoQA_152 (mode=direct, semantic_check=False, refinement_code=False, repair=True)
+[16:13:15] [Worker] 开始处理: ProntoQA_285 (mode=direct, semantic_check=False, refinement_code=False, repair=True)
+[16:13:15] [Worker] 开始处理: ProntoQA_281 (mode=direct, semantic_check=False, refinement_code=False, repair=True)
+[16:13:15] [Worker] 开始处理: ProntoQA_118 (mode=direct, semantic_check=False, refinement_code=False, repair=True)
+[16:13:37]   [ProntoQA_152] ✓ 正确! 预测=A, 答案=A
+[16:13:37] [Worker] 开始处理: ProntoQA_293 (mode=direct, semantic_check=False, refinement_code=False, repair=True)
+[16:13:37]   [ProntoQA_281] ✓ 正确! 预测=A, 答案=A
+[16:13:37] [Worker] 开始处理: ProntoQA_30 (mode=direct, semantic_check=False, refinement_code=False, repair=True)
+[16:13:39]   [ProntoQA_118] ✓ 正确! 预测=B, 答案=B
+[16:13:39] [Worker] 开始处理: ProntoQA_189 (mode=direct, semantic_check=False, refinement_code=False, repair=True)
+[16:13:41]   [ProntoQA_285] ✓ 正确! 预测=A, 答案=A
+[16:13:41] [Worker] 开始处理: ProntoQA_187 (mode=direct, semantic_check=False, refinement_code=False, repair=True)
+[16:13:55]   [ProntoQA_189] ✓ 正确! 预测=B, 答案=B
+[16:13:55] [Worker] 开始处理: ProntoQA_267 (mode=direct, semantic_check=False, refinement_code=False, repair=True)
+[16:14:02]   [ProntoQA_293] ✓ 正确! 预测=A, 答案=A
+[16:14:02] [Worker] 开始处理: ProntoQA_169 (mode=direct, semantic_check=False, refinement_code=False, repair=True)
+[16:14:03]   [ProntoQA_30] ✓ 正确! 预测=A, 答案=A
+[16:14:03] [Worker] 开始处理: ProntoQA_487 (mode=direct, semantic_check=False, refinement_code=False, repair=True)
+[16:14:06]   [ProntoQA_187] ✓ 正确! 预测=A, 答案=A
+[16:14:06] [Worker] 开始处理: ProntoQA_231 (mode=direct, semantic_check=False, refinement_code=False, repair=True)
+[16:14:23]   [ProntoQA_267] ✓ 正确! 预测=B, 答案=B
+[16:14:23] [Worker] 开始处理: ProntoQA_449 (mode=direct, semantic_check=False, refinement_code=False, repair=True)
+[16:14:29]   [ProntoQA_487] ✓ 正确! 预测=A, 答案=A
+[16:14:29] [Worker] 开始处理: ProntoQA_434 (mode=direct, semantic_check=False, refinement_code=False, repair=True)
+[16:14:48]   [ProntoQA_449] ✓ 正确! 预测=B, 答案=B
+[16:14:48] [Worker] 开始处理: ProntoQA_495 (mode=direct, semantic_check=False, refinement_code=False, repair=True)
+[16:14:54]   [ProntoQA_231] ✗ 错误! 预测=A, 答案=B
+[16:14:54] [Worker] 开始处理: ProntoQA_165 (mode=direct, semantic_check=False, refinement_code=False, repair=True)
+[16:14:54]   [ProntoQA_169] ✓ 正确! 预测=B, 答案=B
+[16:14:54] [Worker] 开始处理: ProntoQA_194 (mode=direct, semantic_check=False, refinement_code=False, repair=True)
+[16:15:11]   [ProntoQA_495] ✓ 正确! 预测=A, 答案=A
+[16:15:11] [Worker] 开始处理: ProntoQA_436 (mode=direct, semantic_check=False, refinement_code=False, repair=True)
+[16:15:13]   [ProntoQA_434] ✓ 正确! 预测=A, 答案=A
+[16:15:13] [Worker] 开始处理: ProntoQA_217 (mode=direct, semantic_check=False, refinement_code=False, repair=True)
+[16:15:18]   [ProntoQA_165] ✓ 正确! 预测=A, 答案=A
+[16:15:18] [Worker] 开始处理: ProntoQA_342 (mode=direct, semantic_check=False, refinement_code=False, repair=True)
+[16:15:18]   [ProntoQA_194] ✓ 正确! 预测=B, 答案=B
+[16:15:18] [Worker] 开始处理: ProntoQA_111 (mode=direct, semantic_check=False, refinement_code=False, repair=True)
+[16:15:32]   [ProntoQA_436] ✓ 正确! 预测=A, 答案=A
+[16:15:32] [Worker] 开始处理: ProntoQA_121 (mode=direct, semantic_check=False, refinement_code=False, repair=True)
+[16:15:35]   [ProntoQA_111] ✗ 错误! 预测=A, 答案=B
+[16:15:35] [Worker] 开始处理: ProntoQA_437 (mode=direct, semantic_check=False, refinement_code=False, repair=True)
+[16:15:36]   [ProntoQA_217] ✓ 正确! 预测=A, 答案=A
+[16:15:36] [Worker] 开始处理: ProntoQA_430 (mode=direct, semantic_check=False, refinement_code=False, repair=True)
+[16:15:53]   [ProntoQA_437] ✓ 正确! 预测=B, 答案=B
+[16:15:53] [Worker] 开始处理: ProntoQA_372 (mode=direct, semantic_check=False, refinement_code=False, repair=True)
+[16:16:00]   [ProntoQA_430] ✓ 正确! 预测=A, 答案=A
+[16:16:00] [Worker] 开始处理: ProntoQA_360 (mode=direct, semantic_check=False, refinement_code=False, repair=True)
+[16:16:08]   [ProntoQA_121] ✓ 正确! 预测=A, 答案=A
+[16:16:08] [Worker] 开始处理: ProntoQA_477 (mode=direct, semantic_check=False, refinement_code=False, repair=True)
+[16:16:09]   [ProntoQA_342] ✓ 正确! 预测=B, 答案=B
+[16:16:09] [Worker] 开始处理: ProntoQA_237 (mode=direct, semantic_check=False, refinement_code=False, repair=True)
+[16:16:11]   [ProntoQA_372] ✓ 正确! 预测=B, 答案=B
+[16:16:11] [Worker] 开始处理: ProntoQA_329 (mode=direct, semantic_check=False, refinement_code=False, repair=True)
+[16:16:29]   [ProntoQA_477] ✓ 正确! 预测=A, 答案=A
+[16:16:29] [Worker] 开始处理: ProntoQA_160 (mode=direct, semantic_check=False, refinement_code=False, repair=True)
+[16:16:31]   [ProntoQA_237] ✓ 正确! 预测=B, 答案=B
+[16:16:31] [Worker] 开始处理: ProntoQA_465 (mode=direct, semantic_check=False, refinement_code=False, repair=True)
+[16:16:36]   [ProntoQA_329] ✓ 正确! 预测=B, 答案=B
+[16:16:36] [Worker] 开始处理: ProntoQA_47 (mode=direct, semantic_check=False, refinement_code=False, repair=True)
+[16:16:42] [Worker] 开始处理: ProntoQA_403 (mode=direct, semantic_check=False, refinement_code=False, repair=True)
+[16:16:42]   [ProntoQA_360] ✓ 正确! 预测=B, 答案=B
+[16:16:49]   [ProntoQA_160] ✓ 正确! 预测=B, 答案=B
+[16:16:50] [Worker] 开始处理: ProntoQA_345 (mode=direct, semantic_check=False, refinement_code=False, repair=True)
+[16:16:57]   [ProntoQA_465] ✗ 错误! 预测=A, 答案=B
+[16:16:57] [Worker] 开始处理: ProntoQA_444 (mode=direct, semantic_check=False, refinement_code=False, repair=True)
+[16:16:59]   [ProntoQA_47] ✗ 错误! 预测=A, 答案=B
+[16:16:59] [Worker] 开始处理: ProntoQA_68 (mode=direct, semantic_check=False, refinement_code=False, repair=True)
+[16:17:06]   [ProntoQA_403] ✗ 错误! 预测=A, 答案=B
+[16:17:06] [Worker] 开始处理: ProntoQA_183 (mode=direct, semantic_check=False, refinement_code=False, repair=True)
+[16:17:14]   [ProntoQA_345] ✓ 正确! 预测=B, 答案=B
+[16:17:14] [Worker] 开始处理: ProntoQA_257 (mode=direct, semantic_check=False, refinement_code=False, repair=True)
+[16:17:24]   [ProntoQA_444] ✓ 正确! 预测=A, 答案=A
+[16:17:24] [Worker] 开始处理: ProntoQA_58 (mode=direct, semantic_check=False, refinement_code=False, repair=True)
+[16:17:31]   [ProntoQA_183] ✓ 正确! 预测=B, 答案=B
+[16:17:31] [Worker] 开始处理: ProntoQA_60 (mode=direct, semantic_check=False, refinement_code=False, repair=True)
+[16:17:43]   [ProntoQA_68] ✓ 正确! 预测=A, 答案=A
+[16:17:43] [Worker] 开始处理: ProntoQA_150 (mode=direct, semantic_check=False, refinement_code=False, repair=True)
+[16:17:59]   [ProntoQA_60] ✓ 正确! 预测=B, 答案=B
+[16:17:59] [Worker] 开始处理: ProntoQA_273 (mode=direct, semantic_check=False, refinement_code=False, repair=True)
+[16:17:59]   [ProntoQA_150] ✓ 正确! 预测=A, 答案=A
+[16:17:59] [Worker] 开始处理: ProntoQA_425 (mode=direct, semantic_check=False, refinement_code=False, repair=True)
+[16:18:09]   [ProntoQA_58] ✗ 错误! 预测=A, 答案=B
+[16:18:09] [Worker] 开始处理: ProntoQA_271 (mode=direct, semantic_check=False, refinement_code=False, repair=True)
+[16:18:25]   [ProntoQA_425] ✗ 错误! 预测=A, 答案=B
+[16:18:25] [Worker] 开始处理: ProntoQA_263 (mode=direct, semantic_check=False, refinement_code=False, repair=True)
+[16:18:27]   [ProntoQA_273] ✓ 正确! 预测=A, 答案=A
+[16:18:27] [Worker] 开始处理: ProntoQA_6 (mode=direct, semantic_check=False, refinement_code=False, repair=True)
+[16:18:42]   [ProntoQA_271] ✓ 正确! 预测=A, 答案=A
+[16:18:42] [Worker] 开始处理: ProntoQA_197 (mode=direct, semantic_check=False, refinement_code=False, repair=True)
+[16:18:48]   [ProntoQA_263] ✓ 正确! 预测=B, 答案=B
+[16:18:48] [Worker] 开始处理: ProntoQA_439 (mode=direct, semantic_check=False, refinement_code=False, repair=True)
+[16:18:50]   [ProntoQA_6] ✓ 正确! 预测=A, 答案=A
+[16:18:50] [Worker] 开始处理: ProntoQA_405 (mode=direct, semantic_check=False, refinement_code=False, repair=True)
+[16:19:07]   [ProntoQA_197] ✗ 错误! 预测=A, 答案=B
+[16:19:07] [Worker] 开始处理: ProntoQA_289 (mode=direct, semantic_check=False, refinement_code=False, repair=True)
+[16:19:32]   [ProntoQA_289] ✓ 正确! 预测=B, 答案=B
+[16:19:37]   [ProntoQA_257] ✓ 正确! 预测=A, 答案=A
+[16:21:17]   [ProntoQA_439] ✓ 正确! 预测=A, 答案=A
+[16:21:28]   [ProntoQA_405] ✓ 正确! 预测=A, 答案=A
+[16:21:28] ==================================================
+[16:21:28] 评测完成!
+[16:21:28] 已完成: 50, 正确: 42, 错误: 8, 异常: 0
+[16:21:28] 准确率: 84.00%
+[16:21:28] ==================================================
+[16:21:29] 正在加载数据集: D:/学习资料/课程/程序设计大作业/EnhancingLLM/EnhancingLLM/data/ProntoQA_test.json
+[16:21:29] 共 50 道题目，使用 4 个 workers 并行处理
+[16:21:29] [Worker] 开始处理: ProntoQA_152 (mode=direct, semantic_check=False, refinement_code=False, repair=True)
+[16:21:29] [Worker] 开始处理: ProntoQA_281 (mode=direct, semantic_check=False, refinement_code=False, repair=True)
+[16:21:29] [Worker] 开始处理: ProntoQA_118 (mode=direct, semantic_check=False, refinement_code=False, repair=True)
+[16:21:29] [Worker] 开始处理: ProntoQA_285 (mode=direct, semantic_check=False, refinement_code=False, repair=True)
+[16:21:51]   [ProntoQA_281] ✓ 正确! 预测=A, 答案=A
+[16:21:51] [Worker] 开始处理: ProntoQA_293 (mode=direct, semantic_check=False, refinement_code=False, repair=True)
+[16:21:52]   [ProntoQA_152] ✓ 正确! 预测=A, 答案=A
+[16:21:52] [Worker] 开始处理: ProntoQA_30 (mode=direct, semantic_check=False, refinement_code=False, repair=True)
+[16:21:52]   [ProntoQA_118] ✓ 正确! 预测=B, 答案=B
+[16:21:52] [Worker] 开始处理: ProntoQA_189 (mode=direct, semantic_check=False, refinement_code=False, repair=True)
+[16:21:54]   [ProntoQA_285] ✓ 正确! 预测=A, 答案=A
+[16:21:54] [Worker] 开始处理: ProntoQA_187 (mode=direct, semantic_check=False, refinement_code=False, repair=True)
+[16:22:15]   [ProntoQA_187] ✓ 正确! 预测=A, 答案=A
+[16:22:15] [Worker] 开始处理: ProntoQA_267 (mode=direct, semantic_check=False, refinement_code=False, repair=True)
+[16:22:18]   [ProntoQA_293] ✓ 正确! 预测=A, 答案=A
+[16:22:18] [Worker] 开始处理: ProntoQA_169 (mode=direct, semantic_check=False, refinement_code=False, repair=True)
+[16:22:22]   [ProntoQA_189] ✓ 正确! 预测=B, 答案=B
+[16:22:22] [Worker] 开始处理: ProntoQA_487 (mode=direct, semantic_check=False, refinement_code=False, repair=True)
+[16:22:34]   [ProntoQA_30] ✓ 正确! 预测=A, 答案=A
+[16:22:34] [Worker] 开始处理: ProntoQA_231 (mode=direct, semantic_check=False, refinement_code=False, repair=True)
+[16:22:39]   [ProntoQA_169] ✓ 正确! 预测=B, 答案=B
+[16:22:39] [Worker] 开始处理: ProntoQA_449 (mode=direct, semantic_check=False, refinement_code=False, repair=True)
+[16:22:46]   [ProntoQA_487] ✓ 正确! 预测=A, 答案=A
+[16:22:46] [Worker] 开始处理: ProntoQA_434 (mode=direct, semantic_check=False, refinement_code=False, repair=True)
+[16:22:58]   [ProntoQA_267] ✓ 正确! 预测=B, 答案=B
+[16:22:58] [Worker] 开始处理: ProntoQA_495 (mode=direct, semantic_check=False, refinement_code=False, repair=True)
+[16:22:59]   [ProntoQA_231] ✗ 错误! 预测=A, 答案=B
+[16:22:59] [Worker] 开始处理: ProntoQA_165 (mode=direct, semantic_check=False, refinement_code=False, repair=True)
+[16:23:09]   [ProntoQA_434] ✓ 正确! 预测=A, 答案=A
+[16:23:09] [Worker] 开始处理: ProntoQA_194 (mode=direct, semantic_check=False, refinement_code=False, repair=True)
+[16:23:24]   [ProntoQA_495] ✓ 正确! 预测=A, 答案=A
+[16:23:24] [Worker] 开始处理: ProntoQA_436 (mode=direct, semantic_check=False, refinement_code=False, repair=True)
+[16:23:24]   [ProntoQA_165] ✓ 正确! 预测=A, 答案=A
+[16:23:24] [Worker] 开始处理: ProntoQA_217 (mode=direct, semantic_check=False, refinement_code=False, repair=True)
+[16:23:25]   [ProntoQA_449] ✓ 正确! 预测=B, 答案=B
+[16:23:25] [Worker] 开始处理: ProntoQA_342 (mode=direct, semantic_check=False, refinement_code=False, repair=True)
+[16:23:35]   [ProntoQA_194] ✓ 正确! 预测=B, 答案=B
+[16:23:35] [Worker] 开始处理: ProntoQA_111 (mode=direct, semantic_check=False, refinement_code=False, repair=True)
+[16:23:47]   [ProntoQA_217] ✓ 正确! 预测=A, 答案=A
+[16:23:47] [Worker] 开始处理: ProntoQA_121 (mode=direct, semantic_check=False, refinement_code=False, repair=True)
+[16:23:49]   [ProntoQA_436] ✓ 正确! 预测=A, 答案=A
+[16:23:49] [Worker] 开始处理: ProntoQA_437 (mode=direct, semantic_check=False, refinement_code=False, repair=True)
+[16:23:51]   [ProntoQA_342] ✓ 正确! 预测=B, 答案=B
+[16:23:51] [Worker] 开始处理: ProntoQA_430 (mode=direct, semantic_check=False, refinement_code=False, repair=True)
+[16:23:53]   [ProntoQA_111] ✓ 正确! 预测=B, 答案=B
+[16:23:53] [Worker] 开始处理: ProntoQA_372 (mode=direct, semantic_check=False, refinement_code=False, repair=True)
+[16:24:07]   [ProntoQA_437] ✓ 正确! 预测=B, 答案=B
+[16:24:07] [Worker] 开始处理: ProntoQA_360 (mode=direct, semantic_check=False, refinement_code=False, repair=True)
+[16:24:08]   [ProntoQA_372] ✓ 正确! 预测=B, 答案=B
+[16:24:08] [Worker] 开始处理: ProntoQA_477 (mode=direct, semantic_check=False, refinement_code=False, repair=True)
+[16:24:10]   [ProntoQA_121] ✓ 正确! 预测=A, 答案=A
+[16:24:10] [Worker] 开始处理: ProntoQA_237 (mode=direct, semantic_check=False, refinement_code=False, repair=True)
+[16:24:13]   [ProntoQA_430] ✓ 正确! 预测=A, 答案=A
+[16:24:13] [Worker] 开始处理: ProntoQA_329 (mode=direct, semantic_check=False, refinement_code=False, repair=True)
+[16:24:27]   [ProntoQA_360] ✓ 正确! 预测=B, 答案=B
+[16:24:27] [Worker] 开始处理: ProntoQA_160 (mode=direct, semantic_check=False, refinement_code=False, repair=True)
+[16:24:32]   [ProntoQA_477] ✓ 正确! 预测=A, 答案=A
+[16:24:32] [Worker] 开始处理: ProntoQA_465 (mode=direct, semantic_check=False, refinement_code=False, repair=True)
+[16:24:46]   [ProntoQA_237] ✗ 错误! 预测=A, 答案=B
+[16:24:46] [Worker] 开始处理: ProntoQA_47 (mode=direct, semantic_check=False, refinement_code=False, repair=True)
+[16:24:49]   [ProntoQA_160] ✓ 正确! 预测=B, 答案=B
+[16:24:49] [Worker] 开始处理: ProntoQA_403 (mode=direct, semantic_check=False, refinement_code=False, repair=True)
+[16:24:53]   [ProntoQA_329] ✓ 正确! 预测=B, 答案=B
+[16:24:53] [Worker] 开始处理: ProntoQA_345 (mode=direct, semantic_check=False, refinement_code=False, repair=True)
+[16:24:55]   [ProntoQA_465] ✗ 错误! 预测=A, 答案=B
+[16:24:55] [Worker] 开始处理: ProntoQA_444 (mode=direct, semantic_check=False, refinement_code=False, repair=True)
+[16:25:12]   [ProntoQA_403] ✗ 错误! 预测=A, 答案=B
+[16:25:12] [Worker] 开始处理: ProntoQA_68 (mode=direct, semantic_check=False, refinement_code=False, repair=True)
+[16:25:19]   [ProntoQA_345] ✓ 正确! 预测=B, 答案=B
+[16:25:19] [Worker] 开始处理: ProntoQA_183 (mode=direct, semantic_check=False, refinement_code=False, repair=True)
+[16:25:20]   [ProntoQA_444] ✓ 正确! 预测=A, 答案=A
+[16:25:20] [Worker] 开始处理: ProntoQA_257 (mode=direct, semantic_check=False, refinement_code=False, repair=True)
+[16:25:28]   [ProntoQA_47] ✓ 正确! 预测=B, 答案=B
+[16:25:28] [Worker] 开始处理: ProntoQA_58 (mode=direct, semantic_check=False, refinement_code=False, repair=True)
+[16:25:36]   [ProntoQA_68] ✓ 正确! 预测=A, 答案=A
+[16:25:36] [Worker] 开始处理: ProntoQA_60 (mode=direct, semantic_check=False, refinement_code=False, repair=True)
+[16:25:42]   [ProntoQA_257] ✓ 正确! 预测=A, 答案=A
+[16:25:42] [Worker] 开始处理: ProntoQA_150 (mode=direct, semantic_check=False, refinement_code=False, repair=True)
+[16:25:45]   [ProntoQA_183] ✓ 正确! 预测=B, 答案=B
+[16:25:45] [Worker] 开始处理: ProntoQA_273 (mode=direct, semantic_check=False, refinement_code=False, repair=True)
+[16:25:55]   [ProntoQA_60] ✓ 正确! 预测=B, 答案=B
+[16:25:55] [Worker] 开始处理: ProntoQA_425 (mode=direct, semantic_check=False, refinement_code=False, repair=True)
+[16:26:09]   [ProntoQA_273] ✓ 正确! 预测=A, 答案=A
+[16:26:09] [Worker] 开始处理: ProntoQA_271 (mode=direct, semantic_check=False, refinement_code=False, repair=True)
+[16:26:11]   [ProntoQA_58] ✗ 错误! 预测=A, 答案=B
+[16:26:11] [Worker] 开始处理: ProntoQA_263 (mode=direct, semantic_check=False, refinement_code=False, repair=True)
+[16:26:17]   [ProntoQA_425] ✓ 正确! 预测=B, 答案=B
+[16:26:17] [Worker] 开始处理: ProntoQA_6 (mode=direct, semantic_check=False, refinement_code=False, repair=True)
+[16:26:23]   [ProntoQA_150] 代码自动修复: 自动添加未定义的Bool变量: small
+[16:26:23]   [ProntoQA_150] ✓ 正确! 预测=A, 答案=A
+[16:26:23] [Worker] 开始处理: ProntoQA_197 (mode=direct, semantic_check=False, refinement_code=False, repair=True)
+[16:26:26]   [ProntoQA_271] ✓ 正确! 预测=A, 答案=A
+[16:26:26] [Worker] 开始处理: ProntoQA_439 (mode=direct, semantic_check=False, refinement_code=False, repair=True)
+[16:26:35]   [ProntoQA_263] ✓ 正确! 预测=B, 答案=B
+[16:26:36] [Worker] 开始处理: ProntoQA_405 (mode=direct, semantic_check=False, refinement_code=False, repair=True)
+[16:26:47]   [ProntoQA_439] ✓ 正确! 预测=A, 答案=A
+[16:26:48] [Worker] 开始处理: ProntoQA_289 (mode=direct, semantic_check=False, refinement_code=False, repair=True)
+[16:26:49]   [ProntoQA_197] ✓ 正确! 预测=B, 答案=B
+[16:26:57]   [ProntoQA_6] ✓ 正确! 预测=A, 答案=A
+[16:27:11]   [ProntoQA_405] ✓ 正确! 预测=A, 答案=A
+[16:27:12]   [ProntoQA_289] ✓ 正确! 预测=B, 答案=B
+[16:27:12] ==================================================
+[16:27:12] 评测完成!
+[16:27:12] 已完成: 50, 正确: 45, 错误: 5, 异常: 0
+[16:27:12] 准确率: 90.00%
+[16:27:12] ==================================================
+[16:28:52] 正在加载数据集: D:/学习资料/课程/程序设计大作业/EnhancingLLM/EnhancingLLM/data/LogicalDeduction_test.json
+[16:28:52] 共 50 道题目，使用 4 个 workers 并行处理
+[16:28:52] [Worker] 开始处理: logical_deduction_26 (mode=direct, semantic_check=False, refinement_code=False, repair=True)
+[16:28:52] [Worker] 开始处理: logical_deduction_27 (mode=direct, semantic_check=False, refinement_code=False, repair=True)
+[16:28:52] [Worker] 开始处理: logical_deduction_32 (mode=direct, semantic_check=False, refinement_code=False, repair=True)
+[16:28:52] [Worker] 开始处理: logical_deduction_166 (mode=direct, semantic_check=False, refinement_code=False, repair=True)
+[16:29:06]   [logical_deduction_32] ✓ 正确! 预测=B, 答案=B
+[16:29:06] [Worker] 开始处理: logical_deduction_179 (mode=direct, semantic_check=False, refinement_code=False, repair=True)
+[16:29:08]   [logical_deduction_26] ✓ 正确! 预测=C, 答案=C
+[16:29:08] [Worker] 开始处理: logical_deduction_223 (mode=direct, semantic_check=False, refinement_code=False, repair=True)
+[16:29:11]   [logical_deduction_27] ✓ 正确! 预测=C, 答案=C
+[16:29:11] [Worker] 开始处理: logical_deduction_254 (mode=direct, semantic_check=False, refinement_code=False, repair=True)
+[16:29:12]   [logical_deduction_166] ✓ 正确! 预测=C, 答案=C
+[16:29:12] [Worker] 开始处理: logical_deduction_131 (mode=direct, semantic_check=False, refinement_code=False, repair=True)
+[16:29:26]   [logical_deduction_254] ✓ 正确! 预测=C, 答案=C
+[16:29:26] [Worker] 开始处理: logical_deduction_78 (mode=direct, semantic_check=False, refinement_code=False, repair=True)
+[16:29:34]   [logical_deduction_223] ✓ 正确! 预测=C, 答案=C
+[16:29:34] [Worker] 开始处理: logical_deduction_150 (mode=direct, semantic_check=False, refinement_code=False, repair=True)
+[16:29:36]   [logical_deduction_179] ✓ 正确! 预测=F, 答案=F
+[16:29:36] [Worker] 开始处理: logical_deduction_6 (mode=direct, semantic_check=False, refinement_code=False, repair=True)
+[16:29:36]   [logical_deduction_131] ✓ 正确! 预测=C, 答案=C
+[16:29:36] [Worker] 开始处理: logical_deduction_60 (mode=direct, semantic_check=False, refinement_code=False, repair=True)
+[16:29:39]   [logical_deduction_78] ✓ 正确! 预测=A, 答案=A
+[16:29:39] [Worker] 开始处理: logical_deduction_22 (mode=direct, semantic_check=False, refinement_code=False, repair=True)
+[16:29:50]   [logical_deduction_6] ✓ 正确! 预测=E, 答案=E
+[16:29:50] [Worker] 开始处理: logical_deduction_126 (mode=direct, semantic_check=False, refinement_code=False, repair=True)
+[16:29:56]   [logical_deduction_60] ✓ 正确! 预测=D, 答案=D
+[16:29:56] [Worker] 开始处理: logical_deduction_248 (mode=direct, semantic_check=False, refinement_code=False, repair=True)
+[16:29:57]   [logical_deduction_22] ✓ 正确! 预测=A, 答案=A
+[16:29:57] [Worker] 开始处理: logical_deduction_116 (mode=direct, semantic_check=False, refinement_code=False, repair=True)
+[16:29:59]   [logical_deduction_150] ✓ 正确! 预测=E, 答案=E
+[16:29:59] [Worker] 开始处理: logical_deduction_230 (mode=direct, semantic_check=False, refinement_code=False, repair=True)
+[16:30:05]   [logical_deduction_248] ✓ 正确! 预测=A, 答案=A
+[16:30:05] [Worker] 开始处理: logical_deduction_66 (mode=direct, semantic_check=False, refinement_code=False, repair=True)
+[16:30:06]   [logical_deduction_126] ✓ 正确! 预测=E, 答案=E
+[16:30:06] [Worker] 开始处理: logical_deduction_217 (mode=direct, semantic_check=False, refinement_code=False, repair=True)
+[16:30:14]   [logical_deduction_116] ✓ 正确! 预测=F, 答案=F
+[16:30:14] [Worker] 开始处理: logical_deduction_100 (mode=direct, semantic_check=False, refinement_code=False, repair=True)
+[16:30:15]   [logical_deduction_230] ✓ 正确! 预测=C, 答案=C
+[16:30:15] [Worker] 开始处理: logical_deduction_9 (mode=direct, semantic_check=False, refinement_code=False, repair=True)
+[16:30:22]   [logical_deduction_66] ✓ 正确! 预测=A, 答案=A
+[16:30:22] [Worker] 开始处理: logical_deduction_222 (mode=direct, semantic_check=False, refinement_code=False, repair=True)
+[16:30:23]   [logical_deduction_217] ✓ 正确! 预测=B, 答案=B
+[16:30:23] [Worker] 开始处理: logical_deduction_143 (mode=direct, semantic_check=False, refinement_code=False, repair=True)
+[16:30:27]   [logical_deduction_9] 代码自动修复: 自动添加未定义的Bool变量: m; 自动添加未定义的Bool变量: orange_pos
+[16:30:27]   [logical_deduction_9] ✓ 正确! 预测=A, 答案=A
+[16:30:27] [Worker] 开始处理: logical_deduction_36 (mode=direct, semantic_check=False, refinement_code=False, repair=True)
+[16:30:28]   [logical_deduction_100] ✓ 正确! 预测=D, 答案=D
+[16:30:28] [Worker] 开始处理: logical_deduction_37 (mode=direct, semantic_check=False, refinement_code=False, repair=True)
+[16:30:38]   [logical_deduction_222] ✓ 正确! 预测=B, 答案=B
+[16:30:38] [Worker] 开始处理: logical_deduction_292 (mode=direct, semantic_check=False, refinement_code=False, repair=True)
+[16:30:40]   [logical_deduction_143] ✓ 正确! 预测=C, 答案=C
+[16:30:40] [Worker] 开始处理: logical_deduction_220 (mode=direct, semantic_check=False, refinement_code=False, repair=True)
+[16:30:46]   [logical_deduction_37] ✓ 正确! 预测=C, 答案=C
+[16:30:46] [Worker] 开始处理: logical_deduction_207 (mode=direct, semantic_check=False, refinement_code=False, repair=True)
+[16:30:46]   [logical_deduction_36] ✓ 正确! 预测=C, 答案=C
+[16:30:46] [Worker] 开始处理: logical_deduction_286 (mode=direct, semantic_check=False, refinement_code=False, repair=True)
+[16:30:49]   [logical_deduction_292] ✓ 正确! 预测=A, 答案=A
+[16:30:49] [Worker] 开始处理: logical_deduction_1 (mode=direct, semantic_check=False, refinement_code=False, repair=True)
+[16:31:11]   [logical_deduction_286] ✓ 正确! 预测=A, 答案=A
+[16:31:11] [Worker] 开始处理: logical_deduction_186 (mode=direct, semantic_check=False, refinement_code=False, repair=True)
+[16:31:12]   [logical_deduction_207] ✓ 正确! 预测=G, 答案=G
+[16:31:13] [Worker] 开始处理: logical_deduction_206 (mode=direct, semantic_check=False, refinement_code=False, repair=True)
+[16:31:13]   [logical_deduction_220] 代码自动修复: 自动添加未定义的Bool变量: m; 自动添加未定义的Bool变量: orange_pos
+[16:31:13]   [logical_deduction_220] ✓ 正确! 预测=C, 答案=C
+[16:31:13] [Worker] 开始处理: logical_deduction_21 (mode=direct, semantic_check=False, refinement_code=False, repair=True)
+[16:31:33]   [logical_deduction_21] ✓ 正确! 预测=B, 答案=B
+[16:31:33] [Worker] 开始处理: logical_deduction_40 (mode=direct, semantic_check=False, refinement_code=False, repair=True)
+[16:31:49]   [logical_deduction_40] 代码自动修复: 自动添加未定义的Bool变量: m; 自动添加未定义的Bool变量: oranges_pos
+[16:31:49]   [logical_deduction_40] ✓ 正确! 预测=D, 答案=D
+[16:31:49] [Worker] 开始处理: logical_deduction_34 (mode=direct, semantic_check=False, refinement_code=False, repair=True)
+[16:31:51]   [logical_deduction_1] ✓ 正确! 预测=A, 答案=A
+[16:31:51] [Worker] 开始处理: logical_deduction_280 (mode=direct, semantic_check=False, refinement_code=False, repair=True)
+[16:31:56]   [logical_deduction_186] 代码自动修复: 自动添加未定义的Bool变量: m; 自动添加未定义的Bool变量: oranges_pos
+[16:31:56]   [logical_deduction_186] ✓ 正确! 预测=B, 答案=B
+[16:31:56] [Worker] 开始处理: logical_deduction_67 (mode=direct, semantic_check=False, refinement_code=False, repair=True)
+[16:32:03]   [logical_deduction_280] ✓ 正确! 预测=C, 答案=C
+[16:32:03] [Worker] 开始处理: logical_deduction_208 (mode=direct, semantic_check=False, refinement_code=False, repair=True)
+[16:32:04]   [logical_deduction_34] ✓ 正确! 预测=B, 答案=B
+[16:32:04] [Worker] 开始处理: logical_deduction_121 (mode=direct, semantic_check=False, refinement_code=False, repair=True)
+[16:32:18]   [logical_deduction_206] ✓ 正确! 预测=E, 答案=E
+[16:32:18] [Worker] 开始处理: logical_deduction_285 (mode=direct, semantic_check=False, refinement_code=False, repair=True)
+[16:32:26]   [logical_deduction_121] ✓ 正确! 预测=F, 答案=F
+[16:32:26] [Worker] 开始处理: logical_deduction_231 (mode=direct, semantic_check=False, refinement_code=False, repair=True)
+[16:32:27]   [logical_deduction_208] 代码自动修复: 自动添加未定义的Bool变量: m; 自动添加未定义的Bool变量: oranges_pos
+[16:32:27]   [logical_deduction_208] ✓ 正确! 预测=A, 答案=A
+[16:32:27] [Worker] 开始处理: logical_deduction_237 (mode=direct, semantic_check=False, refinement_code=False, repair=True)
+[16:32:31]   [logical_deduction_285] ✓ 正确! 预测=B, 答案=B
+[16:32:31] [Worker] 开始处理: logical_deduction_279 (mode=direct, semantic_check=False, refinement_code=False, repair=True)
+[16:32:35]   [logical_deduction_67] ✓ 正确! 预测=E, 答案=E
+[16:32:35] [Worker] 开始处理: logical_deduction_74 (mode=direct, semantic_check=False, refinement_code=False, repair=True)
+[16:32:48]   [logical_deduction_279] ✓ 正确! 预测=C, 答案=C
+[16:32:48] [Worker] 开始处理: logical_deduction_18 (mode=direct, semantic_check=False, refinement_code=False, repair=True)
+[16:32:48]   [logical_deduction_74] ✓ 正确! 预测=C, 答案=C
+[16:32:48] [Worker] 开始处理: logical_deduction_212 (mode=direct, semantic_check=False, refinement_code=False, repair=True)
+[16:32:59]   [logical_deduction_231] ✓ 正确! 预测=E, 答案=E
+[16:32:59] [Worker] 开始处理: logical_deduction_169 (mode=direct, semantic_check=False, refinement_code=False, repair=True)
+[16:33:01]   [logical_deduction_237] 代码自动修复: 自动添加未定义的Bool变量: m; 自动添加未定义的Bool变量: orange_pos
+[16:33:01]   [logical_deduction_237] ✓ 正确! 预测=B, 答案=B
+[16:33:01] [Worker] 开始处理: logical_deduction_187 (mode=direct, semantic_check=False, refinement_code=False, repair=True)
+[16:33:20]   [logical_deduction_18] ✓ 正确! 预测=A, 答案=A
+[16:33:20] [Worker] 开始处理: logical_deduction_79 (mode=direct, semantic_check=False, refinement_code=False, repair=True)
+[16:33:24]   [logical_deduction_187] ✓ 正确! 预测=A, 答案=A
+[16:33:24] [Worker] 开始处理: logical_deduction_105 (mode=direct, semantic_check=False, refinement_code=False, repair=True)
+[16:33:35]   [logical_deduction_212] 代码自动修复: 自动添加未定义的Bool变量: m; 自动添加未定义的Bool变量: oranges_pos
+[16:33:35]   [logical_deduction_212] ✓ 正确! 预测=G, 答案=G
+[16:33:39]   [logical_deduction_169] ✓ 正确! 预测=B, 答案=B
+[16:33:42]   [logical_deduction_79] ✓ 正确! 预测=B, 答案=B
+[16:33:45]   [logical_deduction_105] ✓ 正确! 预测=C, 答案=C
+[16:33:45] ==================================================
+[16:33:45] 评测完成!
+[16:33:45] 已完成: 50, 正确: 50, 错误: 0, 异常: 0
+[16:33:45] 准确率: 100.00%
+[16:33:45] ==================================================
+[16:39:27] 正在加载数据集: D:/学习资料/课程/程序设计大作业/EnhancingLLM/EnhancingLLM/data/FOLIO_test.json
+[16:39:27] 共 50 道题目，使用 4 个 workers 并行处理
+[16:39:27] [Worker] 开始处理: FOLIO_dev_125 (mode=direct, semantic_check=False, refinement_code=False, repair=True)
+[16:39:27] [Worker] 开始处理: FOLIO_dev_43 (mode=direct, semantic_check=False, refinement_code=False, repair=True)
+[16:39:27] [Worker] 开始处理: FOLIO_dev_59 (mode=direct, semantic_check=False, refinement_code=False, repair=True)
+[16:39:27] [Worker] 开始处理: FOLIO_dev_0 (mode=direct, semantic_check=False, refinement_code=False, repair=True)
+[16:39:43]   [FOLIO_dev_0] ✓ 正确! 预测=C, 答案=C
+[16:39:43] [Worker] 开始处理: FOLIO_dev_144 (mode=direct, semantic_check=False, refinement_code=False, repair=True)
+[16:39:45]   [FOLIO_dev_59] ✓ 正确! 预测=C, 答案=C
+[16:39:45] [Worker] 开始处理: FOLIO_dev_17 (mode=direct, semantic_check=False, refinement_code=False, repair=True)
+[16:39:47]   [FOLIO_dev_43] ✓ 正确! 预测=C, 答案=C
+[16:39:48] [Worker] 开始处理: FOLIO_dev_83 (mode=direct, semantic_check=False, refinement_code=False, repair=True)
+[16:39:56]   [FOLIO_dev_125] ✓ 正确! 预测=C, 答案=C
+[16:39:56] [Worker] 开始处理: FOLIO_dev_13 (mode=direct, semantic_check=False, refinement_code=False, repair=True)
+[16:39:56]   [FOLIO_dev_144] ✓ 正确! 预测=C, 答案=C
+[16:39:56] [Worker] 开始处理: FOLIO_dev_111 (mode=direct, semantic_check=False, refinement_code=False, repair=True)
+[16:39:57]   [FOLIO_dev_17] ✓ 正确! 预测=C, 答案=C
+[16:39:57] [Worker] 开始处理: FOLIO_dev_107 (mode=direct, semantic_check=False, refinement_code=False, repair=True)
+[16:40:03]   [FOLIO_dev_83] ✓ 正确! 预测=B, 答案=B
+[16:40:03] [Worker] 开始处理: FOLIO_dev_130 (mode=direct, semantic_check=False, refinement_code=False, repair=True)
+[16:40:08]   [FOLIO_dev_111] ✓ 正确! 预测=C, 答案=C
+[16:40:08] [Worker] 开始处理: FOLIO_dev_89 (mode=direct, semantic_check=False, refinement_code=False, repair=True)
+[16:40:10]   [FOLIO_dev_13] ✓ 正确! 预测=C, 答案=C
+[16:40:10] [Worker] 开始处理: FOLIO_dev_126 (mode=direct, semantic_check=False, refinement_code=False, repair=True)
+[16:40:16]   [FOLIO_dev_107] ✓ 正确! 预测=B, 答案=B
+[16:40:16] [Worker] 开始处理: FOLIO_dev_134 (mode=direct, semantic_check=False, refinement_code=False, repair=True)
+[16:40:19]   [FOLIO_dev_89] ✓ 正确! 预测=A, 答案=A
+[16:40:19] [Worker] 开始处理: FOLIO_dev_51 (mode=direct, semantic_check=False, refinement_code=False, repair=True)
+[16:40:20]   [FOLIO_dev_130] ✓ 正确! 预测=C, 答案=C
+[16:40:20] [Worker] 开始处理: FOLIO_dev_60 (mode=direct, semantic_check=False, refinement_code=False, repair=True)
+[16:40:28]   [FOLIO_dev_134] ✓ 正确! 预测=C, 答案=C
+[16:40:28] [Worker] 开始处理: FOLIO_dev_25 (mode=direct, semantic_check=False, refinement_code=False, repair=True)
+[16:40:33]   [FOLIO_dev_51] ✓ 正确! 预测=A, 答案=A
+[16:40:33] [Worker] 开始处理: FOLIO_dev_101 (mode=direct, semantic_check=False, refinement_code=False, repair=True)
+[16:40:35]   [FOLIO_dev_126] ✗ 错误! 预测=C, 答案=A
+[16:40:35] [Worker] 开始处理: FOLIO_dev_49 (mode=direct, semantic_check=False, refinement_code=False, repair=True)
+[16:40:39] [Worker] 开始处理: FOLIO_dev_48 (mode=direct, semantic_check=False, refinement_code=False, repair=True)
+[16:40:39]   [FOLIO_dev_25] ✓ 正确! 预测=C, 答案=C
+[16:40:46]   [FOLIO_dev_60] ✓ 正确! 预测=A, 答案=A
+[16:40:46] [Worker] 开始处理: FOLIO_dev_66 (mode=direct, semantic_check=False, refinement_code=False, repair=True)
+[16:40:50]   [FOLIO_dev_101] ✗ 错误! 预测=A, 答案=B
+[16:40:50] [Worker] 开始处理: FOLIO_dev_169 (mode=direct, semantic_check=False, refinement_code=False, repair=True)
+[16:40:51]   [FOLIO_dev_49] ✓ 正确! 预测=C, 答案=C
+[16:40:51] [Worker] 开始处理: FOLIO_dev_172 (mode=direct, semantic_check=False, refinement_code=False, repair=True)
+[16:40:51]   [FOLIO_dev_48] ✓ 正确! 预测=C, 答案=C
+[16:40:51] [Worker] 开始处理: FOLIO_dev_44 (mode=direct, semantic_check=False, refinement_code=False, repair=True)
+[16:41:04]   [FOLIO_dev_66] ✓ 正确! 预测=A, 答案=A
+[16:41:04] [Worker] 开始处理: FOLIO_dev_8 (mode=direct, semantic_check=False, refinement_code=False, repair=True)
+[16:41:10]   [FOLIO_dev_44] ✗ 错误! 预测=C, 答案=B
+[16:41:10] [Worker] 开始处理: FOLIO_dev_22 (mode=direct, semantic_check=False, refinement_code=False, repair=True)
+[16:41:11]   [FOLIO_dev_172] ✗ 错误! 预测=C, 答案=B
+[16:41:11] [Worker] 开始处理: FOLIO_dev_200 (mode=direct, semantic_check=False, refinement_code=False, repair=True)
+[16:41:13]   [FOLIO_dev_169] ✓ 正确! 预测=B, 答案=B
+[16:41:13] [Worker] 开始处理: FOLIO_dev_85 (mode=direct, semantic_check=False, refinement_code=False, repair=True)
+[16:41:29]   [FOLIO_dev_22] ✓ 正确! 预测=B, 答案=B
+[16:41:29] [Worker] 开始处理: FOLIO_dev_178 (mode=direct, semantic_check=False, refinement_code=False, repair=True)
+[16:41:34]   [FOLIO_dev_8] ✓ 正确! 预测=C, 答案=C
+[16:41:34] [Worker] 开始处理: FOLIO_dev_73 (mode=direct, semantic_check=False, refinement_code=False, repair=True)
+[16:41:38]   [FOLIO_dev_85] ✗ 错误! 预测=C, 答案=A
+[16:41:38] [Worker] 开始处理: FOLIO_dev_26 (mode=direct, semantic_check=False, refinement_code=False, repair=True)
+[16:41:39]   [FOLIO_dev_200] ✓ 正确! 预测=B, 答案=B
+[16:41:39] [Worker] 开始处理: FOLIO_dev_196 (mode=direct, semantic_check=False, refinement_code=False, repair=True)
+[16:41:44]   [FOLIO_dev_178] ✓ 正确! 预测=A, 答案=A
+[16:41:44] [Worker] 开始处理: FOLIO_dev_33 (mode=direct, semantic_check=False, refinement_code=False, repair=True)
+[16:41:48]   [FOLIO_dev_26] ✓ 正确! 预测=C, 答案=C
+[16:41:48] [Worker] 开始处理: FOLIO_dev_152 (mode=direct, semantic_check=False, refinement_code=False, repair=True)
+[16:41:54]   [FOLIO_dev_196] ✓ 正确! 预测=C, 答案=C
+[16:41:54] [Worker] 开始处理: FOLIO_dev_76 (mode=direct, semantic_check=False, refinement_code=False, repair=True)
+[16:41:56]   [FOLIO_dev_73] ✓ 正确! 预测=A, 答案=A
+[16:41:56] [Worker] 开始处理: FOLIO_dev_23 (mode=direct, semantic_check=False, refinement_code=False, repair=True)
+[16:42:03]   [FOLIO_dev_33] ✓ 正确! 预测=A, 答案=A
+[16:42:03] [Worker] 开始处理: FOLIO_dev_11 (mode=direct, semantic_check=False, refinement_code=False, repair=True)
+[16:42:03]   [FOLIO_dev_152] ✓ 正确! 预测=C, 答案=C
+[16:42:03] [Worker] 开始处理: FOLIO_dev_170 (mode=direct, semantic_check=False, refinement_code=False, repair=True)
+[16:42:11]   [FOLIO_dev_76] ✓ 正确! 预测=C, 答案=C
+[16:42:11] [Worker] 开始处理: FOLIO_dev_150 (mode=direct, semantic_check=False, refinement_code=False, repair=True)
+[16:42:12]   [FOLIO_dev_23] ✓ 正确! 预测=C, 答案=C
+[16:42:12] [Worker] 开始处理: FOLIO_dev_77 (mode=direct, semantic_check=False, refinement_code=False, repair=True)
+[16:42:17]   [FOLIO_dev_11] ✓ 正确! 预测=C, 答案=C
+[16:42:17] [Worker] 开始处理: FOLIO_dev_31 (mode=direct, semantic_check=False, refinement_code=False, repair=True)
+[16:42:24]   [FOLIO_dev_150] ✓ 正确! 预测=A, 答案=A
+[16:42:24] [Worker] 开始处理: FOLIO_dev_21 (mode=direct, semantic_check=False, refinement_code=False, repair=True)
+[16:42:27]   [FOLIO_dev_170] ✓ 正确! 预测=C, 答案=C
+[16:42:28] [Worker] 开始处理: FOLIO_dev_14 (mode=direct, semantic_check=False, refinement_code=False, repair=True)
+[16:42:33]   [FOLIO_dev_77] ✓ 正确! 预测=A, 答案=A
+[16:42:33] [Worker] 开始处理: FOLIO_dev_129 (mode=direct, semantic_check=False, refinement_code=False, repair=True)
+[16:42:37]   [FOLIO_dev_31] ✓ 正确! 预测=A, 答案=A
+[16:42:37] [Worker] 开始处理: FOLIO_dev_40 (mode=direct, semantic_check=False, refinement_code=False, repair=True)
+[16:42:42]   [FOLIO_dev_21] ✓ 正确! 预测=A, 答案=A
+[16:42:42] [Worker] 开始处理: FOLIO_dev_4 (mode=direct, semantic_check=False, refinement_code=False, repair=True)
+[16:42:47]   [FOLIO_dev_14] ✓ 正确! 预测=B, 答案=B
+[16:42:47] [Worker] 开始处理: FOLIO_dev_132 (mode=direct, semantic_check=False, refinement_code=False, repair=True)
+[16:42:53]   [FOLIO_dev_40] ✗ 错误! 预测=C, 答案=A
+[16:42:53] [Worker] 开始处理: FOLIO_dev_176 (mode=direct, semantic_check=False, refinement_code=False, repair=True)
+[16:42:58]   [FOLIO_dev_129] ✓ 正确! 预测=A, 答案=A
+[16:42:58] [Worker] 开始处理: FOLIO_dev_53 (mode=direct, semantic_check=False, refinement_code=False, repair=True)
+[16:43:00]   [FOLIO_dev_132] ✓ 正确! 预测=A, 答案=A
+[16:43:00] [Worker] 开始处理: FOLIO_dev_171 (mode=direct, semantic_check=False, refinement_code=False, repair=True)
+[16:43:01]   [FOLIO_dev_4] ✓ 正确! 预测=C, 答案=C
+[16:43:05]   [FOLIO_dev_176] ✓ 正确! 预测=C, 答案=C
+[16:43:20]   [FOLIO_dev_53] ✓ 正确! 预测=C, 答案=C
+[16:43:28]   [FOLIO_dev_171] ✗ 错误! 预测=C, 答案=A
+[16:43:28] ==================================================
+[16:43:28] 评测完成!
+[16:43:28] 已完成: 50, 正确: 43, 错误: 7, 异常: 0
+[16:43:28] 准确率: 86.00%
+[16:43:28] ==================================================
+[16:59:03] 正在加载数据集: D:/学习资料/课程/程序设计大作业/EnhancingLLM/EnhancingLLM/data/ProofWriter_test.json
+[16:59:03] 共 50 道题目，使用 4 个 workers 并行处理
+[16:59:03] [Worker] 开始处理: ProofWriter_AttNeg-OWA-D5-1015_Q3 (mode=direct, semantic_check=False, refinement_code=False, repair=True)
+[16:59:03] [Worker] 开始处理: ProofWriter_AttNoneg-OWA-D5-20_Q10 (mode=direct, semantic_check=False, refinement_code=False, repair=True)
+[16:59:03] [Worker] 开始处理: ProofWriter_AttNeg-OWA-D5-489_Q2 (mode=direct, semantic_check=False, refinement_code=False, repair=True)
+[16:59:03] [Worker] 开始处理: ProofWriter_AttNoneg-OWA-D5-178_Q18 (mode=direct, semantic_check=False, refinement_code=False, repair=True)
+[16:59:19]   [ProofWriter_AttNoneg-OWA-D5-178_Q18] 代码自动修复: 检测到未定义的函数调用: assertions; 自动添加未定义的Bool变量: s; 自动添加未定义的Bool变量: stmt
+[16:59:19]   [ProofWriter_AttNoneg-OWA-D5-178_Q18] ✓ 正确! 预测=C, 答案=C
+[16:59:19] [Worker] 开始处理: ProofWriter_AttNoneg-OWA-D5-613_Q12 (mode=direct, semantic_check=False, refinement_code=False, repair=True)
+[16:59:20]   [ProofWriter_AttNeg-OWA-D5-489_Q2] 代码自动修复: 检测到未定义的函数调用: assertions; 自动添加未定义的Bool变量: rule; 自动添加未定义的Bool变量: s; 自动添加未定义的Bool变量: specific; 自动添加未定义的Bool变量: stmt
+[16:59:20]   [ProofWriter_AttNeg-OWA-D5-489_Q2] ✓ 正确! 预测=B, 答案=B
+[16:59:20] [Worker] 开始处理: ProofWriter_RelNeg-OWA-D5-249_Q9 (mode=direct, semantic_check=False, refinement_code=False, repair=True)
+[16:59:22]   [ProofWriter_AttNeg-OWA-D5-1015_Q3] 代码自动修复: 检测到未定义的函数调用: assertions; 自动添加未定义的Bool变量: s; 自动添加未定义的Bool变量: stmt
+[16:59:22]   [ProofWriter_AttNeg-OWA-D5-1015_Q3] ✓ 正确! 预测=A, 答案=A
+[16:59:22] [Worker] 开始处理: ProofWriter_AttNeg-OWA-D5-1170_Q10 (mode=direct, semantic_check=False, refinement_code=False, repair=True)
+[16:59:30]   [ProofWriter_AttNoneg-OWA-D5-20_Q10] 代码自动修复: 检测到未定义的函数调用: assertions; 自动添加未定义的Bool变量: s; 自动添加未定义的Bool变量: stmt
+[16:59:30]   [ProofWriter_AttNoneg-OWA-D5-20_Q10] ✓ 正确! 预测=B, 答案=B
+[16:59:30] [Worker] 开始处理: ProofWriter_AttNoneg-OWA-D5-308_Q8 (mode=direct, semantic_check=False, refinement_code=False, repair=True)
+[16:59:34]   [ProofWriter_AttNoneg-OWA-D5-613_Q12] 代码自动修复: 检测到未定义的函数调用: assertions; 自动添加未定义的Bool变量: s; 自动添加未定义的Bool变量: stmt
+[16:59:34]   [ProofWriter_AttNoneg-OWA-D5-613_Q12] ✓ 正确! 预测=B, 答案=B
+[16:59:34] [Worker] 开始处理: ProofWriter_RelNoneg-OWA-D5-789_Q21 (mode=direct, semantic_check=False, refinement_code=False, repair=True)
+[16:59:39]   [ProofWriter_RelNeg-OWA-D5-249_Q9] 代码自动修复: 检测到未定义的函数调用: assertions; 自动添加未定义的Bool变量: s; 自动添加未定义的Bool变量: stmt
+[16:59:40]   [ProofWriter_RelNeg-OWA-D5-249_Q9] ✓ 正确! 预测=A, 答案=A
+[16:59:40] [Worker] 开始处理: ProofWriter_RelNoneg-OWA-D5-502_Q3 (mode=direct, semantic_check=False, refinement_code=False, repair=True)
+[16:59:47]   [ProofWriter_AttNeg-OWA-D5-1170_Q10] 代码自动修复: 检测到未定义的函数调用: assertions; 自动添加未定义的Bool变量: s; 自动添加未定义的Bool变量: stmt
+[16:59:47]   [ProofWriter_AttNeg-OWA-D5-1170_Q10] ✓ 正确! 预测=B, 答案=B
+[16:59:47] [Worker] 开始处理: ProofWriter_AttNeg-OWA-D5-891_Q1 (mode=direct, semantic_check=False, refinement_code=False, repair=True)
+[16:59:48]   [ProofWriter_AttNoneg-OWA-D5-308_Q8] 代码自动修复: 检测到未定义的函数调用: assertions; 自动添加未定义的Bool变量: s; 自动添加未定义的Bool变量: stmt
+[16:59:48]   [ProofWriter_AttNoneg-OWA-D5-308_Q8] ✓ 正确! 预测=B, 答案=B
+[16:59:48] [Worker] 开始处理: ProofWriter_AttNoneg-OWA-D5-785_Q10 (mode=direct, semantic_check=False, refinement_code=False, repair=True)
+[16:59:55]   [ProofWriter_RelNoneg-OWA-D5-789_Q21] 代码自动修复: 检测到未定义的函数调用: assertions; 自动添加未定义的Bool变量: s; 自动添加未定义的Bool变量: stmt
+[16:59:55]   [ProofWriter_RelNoneg-OWA-D5-789_Q21] ✓ 正确! 预测=C, 答案=C
+[16:59:55] [Worker] 开始处理: ProofWriter_RelNeg-OWA-D5-173_Q10 (mode=direct, semantic_check=False, refinement_code=False, repair=True)
+[17:00:05]   [ProofWriter_AttNeg-OWA-D5-891_Q1] 代码自动修复: 检测到未定义的函数调用: assertions; 自动添加未定义的Bool变量: s; 自动添加未定义的Bool变量: stmt
+[17:00:05]   [ProofWriter_AttNeg-OWA-D5-891_Q1] ✓ 正确! 预测=A, 答案=A
+[17:00:05] [Worker] 开始处理: ProofWriter_AttNoneg-OWA-D5-308_Q1 (mode=direct, semantic_check=False, refinement_code=False, repair=True)
+[17:00:06]   [ProofWriter_AttNoneg-OWA-D5-785_Q10] 代码自动修复: 检测到未定义的函数调用: assertions; 自动添加未定义的Bool变量: s; 自动添加未定义的Bool变量: stmt
+[17:00:06]   [ProofWriter_AttNoneg-OWA-D5-785_Q10] ✓ 正确! 预测=B, 答案=B
+[17:00:06] [Worker] 开始处理: ProofWriter_AttNeg-OWA-D5-891_Q18 (mode=direct, semantic_check=False, refinement_code=False, repair=True)
+[17:00:09]   [ProofWriter_RelNoneg-OWA-D5-502_Q3] 代码自动修复: 检测到未定义的函数调用: assertions; 自动添加未定义的Bool变量: s; 自动添加未定义的Bool变量: stmt
+[17:00:09]   [ProofWriter_RelNoneg-OWA-D5-502_Q3] ✓ 正确! 预测=A, 答案=A
+[17:00:09] [Worker] 开始处理: ProofWriter_AttNeg-OWA-D5-959_Q2 (mode=direct, semantic_check=False, refinement_code=False, repair=True)
+[17:00:23]   [ProofWriter_AttNeg-OWA-D5-891_Q18] 代码自动修复: 检测到未定义的函数调用: assertions; 自动添加未定义的Bool变量: s; 自动添加未定义的Bool变量: stmt
+[17:00:23]   [ProofWriter_AttNeg-OWA-D5-891_Q18] ✓ 正确! 预测=C, 答案=C
+[17:00:23] [Worker] 开始处理: ProofWriter_RelNoneg-OWA-D5-116_Q12 (mode=direct, semantic_check=False, refinement_code=False, repair=True)
+[17:00:26]   [ProofWriter_RelNeg-OWA-D5-173_Q10] 代码自动修复: 检测到未定义的函数调用: assertions; 自动添加未定义的Bool变量: s; 自动添加未定义的Bool变量: stmt
+[17:00:26]   [ProofWriter_RelNeg-OWA-D5-173_Q10] ✓ 正确! 预测=B, 答案=B
+[17:00:26] [Worker] 开始处理: ProofWriter_AttNoneg-OWA-D5-844_Q7 (mode=direct, semantic_check=False, refinement_code=False, repair=True)
+[17:00:26]   [ProofWriter_AttNeg-OWA-D5-959_Q2] 代码自动修复: 检测到未定义的函数调用: assertions; 自动添加未定义的Bool变量: s; 自动添加未定义的Bool变量: stmt
+[17:00:26]   [ProofWriter_AttNeg-OWA-D5-959_Q2] ✓ 正确! 预测=B, 答案=B
+[17:00:26] [Worker] 开始处理: ProofWriter_RelNoneg-OWA-D5-280_Q3 (mode=direct, semantic_check=False, refinement_code=False, repair=True)
+[17:00:36]   [ProofWriter_AttNoneg-OWA-D5-308_Q1] 代码自动修复: 检测到未定义的函数调用: assertions; 自动添加未定义的Bool变量: s; 自动添加未定义的Bool变量: stmt
+[17:00:36]   [ProofWriter_AttNoneg-OWA-D5-308_Q1] ✓ 正确! 预测=A, 答案=A
+[17:00:36] [Worker] 开始处理: ProofWriter_RelNoneg-OWA-D5-272_Q14 (mode=direct, semantic_check=False, refinement_code=False, repair=True)
+[17:00:42]   [ProofWriter_AttNoneg-OWA-D5-844_Q7] 代码自动修复: 检测到未定义的函数调用: assertions; 自动添加未定义的Bool变量: s; 自动添加未定义的Bool变量: stmt
+[17:00:42]   [ProofWriter_AttNoneg-OWA-D5-844_Q7] ✓ 正确! 预测=A, 答案=A
+[17:00:42] [Worker] 开始处理: ProofWriter_AttNoneg-OWA-D5-83_Q10 (mode=direct, semantic_check=False, refinement_code=False, repair=True)
+[17:00:43]   [ProofWriter_RelNoneg-OWA-D5-116_Q12] 代码自动修复: 检测到未定义的函数调用: assertions; 自动添加未定义的Bool变量: s; 自动添加未定义的Bool变量: stmt
+[17:00:43]   [ProofWriter_RelNoneg-OWA-D5-116_Q12] ✓ 正确! 预测=B, 答案=B
+[17:00:43] [Worker] 开始处理: ProofWriter_AttNeg-OWA-D5-694_Q2 (mode=direct, semantic_check=False, refinement_code=False, repair=True)
+[17:00:44]   [ProofWriter_RelNoneg-OWA-D5-280_Q3] 代码自动修复: 检测到未定义的函数调用: assertions; 自动添加未定义的Bool变量: s; 自动添加未定义的Bool变量: stmt
+[17:00:44]   [ProofWriter_RelNoneg-OWA-D5-280_Q3] ✓ 正确! 预测=A, 答案=A
+[17:00:44] [Worker] 开始处理: ProofWriter_RelNeg-OWA-D5-668_Q14 (mode=direct, semantic_check=False, refinement_code=False, repair=True)
+[17:00:56]   [ProofWriter_RelNoneg-OWA-D5-272_Q14] 代码自动修复: 检测到未定义的函数调用: assertions; 自动添加未定义的Bool变量: s; 自动添加未定义的Bool变量: stmt
+[17:00:56]   [ProofWriter_RelNoneg-OWA-D5-272_Q14] ✓ 正确! 预测=C, 答案=C
+[17:00:56] [Worker] 开始处理: ProofWriter_RelNoneg-OWA-D5-213_Q8 (mode=direct, semantic_check=False, refinement_code=False, repair=True)
+[17:00:59]   [ProofWriter_AttNeg-OWA-D5-694_Q2] 代码自动修复: 检测到未定义的函数调用: assertions; 自动添加未定义的Bool变量: s; 自动添加未定义的Bool变量: stmt
+[17:00:59]   [ProofWriter_AttNeg-OWA-D5-694_Q2] ✓ 正确! 预测=B, 答案=B
+[17:00:59] [Worker] 开始处理: ProofWriter_RelNeg-OWA-D5-345_Q13 (mode=direct, semantic_check=False, refinement_code=False, repair=True)
+[17:01:01]   [ProofWriter_AttNoneg-OWA-D5-83_Q10] 代码自动修复: 检测到未定义的函数调用: assertions; 自动添加未定义的Bool变量: s; 自动添加未定义的Bool变量: stmt
+[17:01:01]   [ProofWriter_AttNoneg-OWA-D5-83_Q10] ✓ 正确! 预测=B, 答案=B
+[17:01:01] [Worker] 开始处理: ProofWriter_RelNeg-OWA-D5-294_Q2 (mode=direct, semantic_check=False, refinement_code=False, repair=True)
+[17:01:05]   [ProofWriter_RelNeg-OWA-D5-668_Q14] 代码自动修复: 检测到未定义的函数调用: assertions; 自动添加未定义的Bool变量: s; 自动添加未定义的Bool变量: stmt
+[17:01:05]   [ProofWriter_RelNeg-OWA-D5-668_Q14] ✓ 正确! 预测=C, 答案=C
+[17:01:05] [Worker] 开始处理: ProofWriter_RelNeg-OWA-D5-174_Q18 (mode=direct, semantic_check=False, refinement_code=False, repair=True)
+[17:01:17]   [ProofWriter_RelNoneg-OWA-D5-213_Q8] 代码自动修复: 检测到未定义的函数调用: assertions; 自动添加未定义的Bool变量: s; 自动添加未定义的Bool变量: stmt
+[17:01:17]   [ProofWriter_RelNoneg-OWA-D5-213_Q8] ✓ 正确! 预测=B, 答案=B
+[17:01:17] [Worker] 开始处理: ProofWriter_AttNoneg-OWA-D5-1331_Q16 (mode=direct, semantic_check=False, refinement_code=False, repair=True)
+[17:01:22]   [ProofWriter_RelNeg-OWA-D5-294_Q2] 代码自动修复: 检测到未定义的函数调用: assertions; 自动添加未定义的Bool变量: s; 自动添加未定义的Bool变量: stmt
+[17:01:22]   [ProofWriter_RelNeg-OWA-D5-294_Q2] ✓ 正确! 预测=B, 答案=B
+[17:01:22] [Worker] 开始处理: ProofWriter_AttNeg-OWA-D5-960_Q6 (mode=direct, semantic_check=False, refinement_code=False, repair=True)
+[17:01:28]   [ProofWriter_RelNeg-OWA-D5-174_Q18] 代码自动修复: 检测到未定义的函数调用: assertions; 自动添加未定义的Bool变量: s; 自动添加未定义的Bool变量: stmt
+[17:01:28]   [ProofWriter_RelNeg-OWA-D5-174_Q18] ✓ 正确! 预测=C, 答案=C
+[17:01:28] [Worker] 开始处理: ProofWriter_AttNeg-OWA-D5-908_Q16 (mode=direct, semantic_check=False, refinement_code=False, repair=True)
+[17:01:36]   [ProofWriter_RelNeg-OWA-D5-345_Q13] 代码自动修复: 检测到未定义的函数调用: assertions; 自动添加未定义的Bool变量: s; 自动添加未定义的Bool变量: stmt
+[17:01:36]   [ProofWriter_RelNeg-OWA-D5-345_Q13] ✓ 正确! 预测=C, 答案=C
+[17:01:36] [Worker] 开始处理: ProofWriter_AttNoneg-OWA-D5-1251_Q3 (mode=direct, semantic_check=False, refinement_code=False, repair=True)
+[17:01:39]   [ProofWriter_AttNeg-OWA-D5-960_Q6] 代码自动修复: 检测到未定义的函数调用: assertions; 自动添加未定义的Bool变量: s; 自动添加未定义的Bool变量: stmt
+[17:01:39]   [ProofWriter_AttNeg-OWA-D5-960_Q6] ✓ 正确! 预测=B, 答案=B
+[17:01:39] [Worker] 开始处理: ProofWriter_RelNeg-OWA-D5-355_Q4 (mode=direct, semantic_check=False, refinement_code=False, repair=True)
+[17:01:44]   [ProofWriter_AttNoneg-OWA-D5-1331_Q16] 代码自动修复: 检测到未定义的函数调用: assertions; 自动添加未定义的Bool变量: s; 自动添加未定义的Bool变量: stmt
+[17:01:44]   [ProofWriter_AttNoneg-OWA-D5-1331_Q16] ✓ 正确! 预测=C, 答案=C
+[17:01:44] [Worker] 开始处理: ProofWriter_AttNeg-OWA-D5-401_Q4 (mode=direct, semantic_check=False, refinement_code=False, repair=True)
+[17:01:47]   [ProofWriter_AttNeg-OWA-D5-908_Q16] 代码自动修复: 检测到未定义的函数调用: assertions; 自动添加未定义的Bool变量: s; 自动添加未定义的Bool变量: stmt
+[17:01:47]   [ProofWriter_AttNeg-OWA-D5-908_Q16] ✓ 正确! 预测=C, 答案=C
+[17:01:47] [Worker] 开始处理: ProofWriter_RelNeg-OWA-D5-940_Q9 (mode=direct, semantic_check=False, refinement_code=False, repair=True)
+[17:01:55]   [ProofWriter_AttNoneg-OWA-D5-1251_Q3] 代码自动修复: 检测到未定义的函数调用: assertions; 自动添加未定义的Bool变量: s; 自动添加未定义的Bool变量: stmt
+[17:01:55]   [ProofWriter_AttNoneg-OWA-D5-1251_Q3] ✓ 正确! 预测=A, 答案=A
+[17:01:55] [Worker] 开始处理: ProofWriter_AttNoneg-OWA-D5-583_Q11 (mode=direct, semantic_check=False, refinement_code=False, repair=True)
+[17:02:04]   [ProofWriter_RelNeg-OWA-D5-940_Q9] 代码自动修复: 检测到未定义的函数调用: assertions; 自动添加未定义的Bool变量: s; 自动添加未定义的Bool变量: stmt
+[17:02:04]   [ProofWriter_RelNeg-OWA-D5-940_Q9] ✓ 正确! 预测=A, 答案=A
+[17:02:04] [Worker] 开始处理: ProofWriter_RelNeg-OWA-D5-890_Q2 (mode=direct, semantic_check=False, refinement_code=False, repair=True)
+[17:02:11]   [ProofWriter_RelNeg-OWA-D5-355_Q4] 代码自动修复: 检测到未定义的函数调用: assertions; 自动添加未定义的Bool变量: s; 自动添加未定义的Bool变量: stmt
+[17:02:11]   [ProofWriter_RelNeg-OWA-D5-355_Q4] ✓ 正确! 预测=B, 答案=B
+[17:02:11] [Worker] 开始处理: ProofWriter_AttNeg-OWA-D5-804_Q1 (mode=direct, semantic_check=False, refinement_code=False, repair=True)
+[17:02:11]   [ProofWriter_AttNeg-OWA-D5-401_Q4] 代码自动修复: 检测到未定义的函数调用: assertions; 自动添加未定义的Bool变量: s; 自动添加未定义的Bool变量: stmt
+[17:02:11]   [ProofWriter_AttNeg-OWA-D5-401_Q4] ✗ 错误! 预测=A, 答案=B
+[17:02:11] [Worker] 开始处理: ProofWriter_RelNoneg-OWA-D5-977_Q5 (mode=direct, semantic_check=False, refinement_code=False, repair=True)
+[17:02:13]   [ProofWriter_AttNoneg-OWA-D5-583_Q11] 代码自动修复: 检测到未定义的函数调用: assertions; 自动添加未定义的Bool变量: s; 自动添加未定义的Bool变量: stmt
+[17:02:13]   [ProofWriter_AttNoneg-OWA-D5-583_Q11] ✓ 正确! 预测=A, 答案=A
+[17:02:13] [Worker] 开始处理: ProofWriter_AttNoneg-OWA-D5-515_Q4 (mode=direct, semantic_check=False, refinement_code=False, repair=True)
+[17:02:24]   [ProofWriter_RelNeg-OWA-D5-890_Q2] 代码自动修复: 检测到未定义的函数调用: assertions; 自动添加未定义的Bool变量: s; 自动添加未定义的Bool变量: stmt
+[17:02:24]   [ProofWriter_RelNeg-OWA-D5-890_Q2] ✓ 正确! 预测=B, 答案=B
+[17:02:24] [Worker] 开始处理: ProofWriter_AttNoneg-OWA-D5-754_Q4 (mode=direct, semantic_check=False, refinement_code=False, repair=True)
+[17:02:29]   [ProofWriter_AttNeg-OWA-D5-804_Q1] 代码自动修复: 检测到未定义的函数调用: assertions; 自动添加未定义的Bool变量: s; 自动添加未定义的Bool变量: stmt
+[17:02:29]   [ProofWriter_AttNeg-OWA-D5-804_Q1] ✓ 正确! 预测=A, 答案=A
+[17:02:29] [Worker] 开始处理: ProofWriter_RelNeg-OWA-D5-317_Q2 (mode=direct, semantic_check=False, refinement_code=False, repair=True)
+[17:02:32]   [ProofWriter_RelNoneg-OWA-D5-977_Q5] 代码自动修复: 检测到未定义的函数调用: assertions; 自动添加未定义的Bool变量: s; 自动添加未定义的Bool变量: stmt
+[17:02:32]   [ProofWriter_RelNoneg-OWA-D5-977_Q5] ✓ 正确! 预测=A, 答案=A
+[17:02:32] [Worker] 开始处理: ProofWriter_AttNoneg-OWA-D5-412_Q9 (mode=direct, semantic_check=False, refinement_code=False, repair=True)
+[17:02:33]   [ProofWriter_AttNoneg-OWA-D5-515_Q4] 代码自动修复: 检测到未定义的函数调用: assertions; 自动添加未定义的Bool变量: s; 自动添加未定义的Bool变量: stmt
+[17:02:33]   [ProofWriter_AttNoneg-OWA-D5-515_Q4] ✓ 正确! 预测=B, 答案=B
+[17:02:34] [Worker] 开始处理: ProofWriter_AttNoneg-OWA-D5-572_Q4 (mode=direct, semantic_check=False, refinement_code=False, repair=True)
+[17:02:44]   [ProofWriter_AttNoneg-OWA-D5-754_Q4] 代码自动修复: 检测到未定义的函数调用: assertions; 自动添加未定义的Bool变量: s; 自动添加未定义的Bool变量: stmt
+[17:02:44]   [ProofWriter_AttNoneg-OWA-D5-754_Q4] ✓ 正确! 预测=B, 答案=B
+[17:02:44] [Worker] 开始处理: ProofWriter_RelNoneg-OWA-D5-992_Q10 (mode=direct, semantic_check=False, refinement_code=False, repair=True)
+[17:02:48]   [ProofWriter_RelNeg-OWA-D5-317_Q2] 代码自动修复: 检测到未定义的函数调用: assertions; 自动添加未定义的Bool变量: s; 自动添加未定义的Bool变量: stmt
+[17:02:48]   [ProofWriter_RelNeg-OWA-D5-317_Q2] ✓ 正确! 预测=B, 答案=B
+[17:02:49] [Worker] 开始处理: ProofWriter_RelNeg-OWA-D5-68_Q2 (mode=direct, semantic_check=False, refinement_code=False, repair=True)
+[17:02:52]   [ProofWriter_AttNoneg-OWA-D5-412_Q9] 代码自动修复: 检测到未定义的函数调用: assertions; 自动添加未定义的Bool变量: rule; 自动添加未定义的Bool变量: s; 自动添加未定义的Bool变量: specific; 自动添加未定义的Bool变量: stmt
+[17:02:52]   [ProofWriter_AttNoneg-OWA-D5-412_Q9] ✓ 正确! 预测=A, 答案=A
+[17:02:52] [Worker] 开始处理: ProofWriter_AttNeg-OWA-D5-107_Q1 (mode=direct, semantic_check=False, refinement_code=False, repair=True)
+[17:02:54]   [ProofWriter_AttNoneg-OWA-D5-572_Q4] 代码自动修复: 检测到未定义的函数调用: assertions; 自动添加未定义的Bool变量: s; 自动添加未定义的Bool变量: stmt
+[17:02:54]   [ProofWriter_AttNoneg-OWA-D5-572_Q4] ✓ 正确! 预测=B, 答案=B
+[17:02:54] [Worker] 开始处理: ProofWriter_RelNeg-OWA-D5-224_Q4 (mode=direct, semantic_check=False, refinement_code=False, repair=True)
+[17:03:07]   [ProofWriter_RelNeg-OWA-D5-68_Q2] 代码自动修复: 检测到未定义的函数调用: assertions; 自动添加未定义的Bool变量: s; 自动添加未定义的Bool变量: stmt
+[17:03:07]   [ProofWriter_RelNeg-OWA-D5-68_Q2] ✓ 正确! 预测=B, 答案=B
+[17:03:07] [Worker] 开始处理: ProofWriter_RelNeg-OWA-D5-13_Q11 (mode=direct, semantic_check=False, refinement_code=False, repair=True)
+[17:03:10]   [ProofWriter_RelNoneg-OWA-D5-992_Q10] 代码自动修复: 检测到未定义的函数调用: assertions; 自动添加未定义的Bool变量: s; 自动添加未定义的Bool变量: stmt
+[17:03:10]   [ProofWriter_RelNoneg-OWA-D5-992_Q10] ✓ 正确! 预测=B, 答案=B
+[17:03:10] [Worker] 开始处理: ProofWriter_RelNoneg-OWA-D5-781_Q8 (mode=direct, semantic_check=False, refinement_code=False, repair=True)
+[17:03:11]   [ProofWriter_AttNeg-OWA-D5-107_Q1] 代码自动修复: 检测到未定义的函数调用: assertions; 自动添加未定义的Bool变量: s; 自动添加未定义的Bool变量: stmt
+[17:03:11]   [ProofWriter_AttNeg-OWA-D5-107_Q1] ✓ 正确! 预测=A, 答案=A
+[17:03:11] [Worker] 开始处理: ProofWriter_RelNoneg-OWA-D5-428_Q17 (mode=direct, semantic_check=False, refinement_code=False, repair=True)
+[17:03:15]   [ProofWriter_RelNeg-OWA-D5-224_Q4] 代码自动修复: 检测到未定义的函数调用: assertions; 自动添加未定义的Bool变量: s; 自动添加未定义的Bool变量: stmt
+[17:03:15]   [ProofWriter_RelNeg-OWA-D5-224_Q4] ✓ 正确! 预测=B, 答案=B
+[17:03:29]   [ProofWriter_RelNoneg-OWA-D5-428_Q17] 代码自动修复: 检测到未定义的函数调用: assertions; 自动添加未定义的Bool变量: s; 自动添加未定义的Bool变量: stmt
+[17:03:29]   [ProofWriter_RelNoneg-OWA-D5-428_Q17] ✓ 正确! 预测=C, 答案=C
+[17:03:32]   [ProofWriter_RelNoneg-OWA-D5-781_Q8] 代码自动修复: 检测到未定义的函数调用: assertions; 自动添加未定义的Bool变量: s; 自动添加未定义的Bool变量: stmt
+[17:03:32]   [ProofWriter_RelNoneg-OWA-D5-781_Q8] ✓ 正确! 预测=B, 答案=B
+[17:03:36]   [ProofWriter_RelNeg-OWA-D5-13_Q11] 代码自动修复: 检测到未定义的函数调用: assertions; 自动添加未定义的Bool变量: s; 自动添加未定义的Bool变量: stmt
+[17:03:36]   [ProofWriter_RelNeg-OWA-D5-13_Q11] ✓ 正确! 预测=A, 答案=A
+[17:03:36] ==================================================
+[17:03:36] 评测完成!
+[17:03:36] 已完成: 50, 正确: 49, 错误: 1, 异常: 0
+[17:03:36] 准确率: 98.00%
+[17:03:36] ==================================================
+[17:05:33] 正在加载数据集: D:/学习资料/课程/程序设计大作业/EnhancingLLM/EnhancingLLM/data/ProntoQA_test.json
+[17:05:33] 共 50 道题目，使用 4 个 workers 并行处理
+[17:05:33] [Worker] 开始处理: ProntoQA_118 (mode=direct, semantic_check=False, refinement_code=False, repair=True)
+[17:05:34] [Worker] 开始处理: ProntoQA_152 (mode=direct, semantic_check=False, refinement_code=False, repair=True)
+[17:05:34] [Worker] 开始处理: ProntoQA_285 (mode=direct, semantic_check=False, refinement_code=False, repair=True)
+[17:05:34] [Worker] 开始处理: ProntoQA_281 (mode=direct, semantic_check=False, refinement_code=False, repair=True)
+[17:05:56]   [ProntoQA_285] ✓ 正确! 预测=A, 答案=A
+[17:05:56] [Worker] 开始处理: ProntoQA_293 (mode=direct, semantic_check=False, refinement_code=False, repair=True)
+[17:05:58]   [ProntoQA_118] ✓ 正确! 预测=B, 答案=B
+[17:05:58] [Worker] 开始处理: ProntoQA_30 (mode=direct, semantic_check=False, refinement_code=False, repair=True)
+[17:05:58]   [ProntoQA_152] ✓ 正确! 预测=A, 答案=A
+[17:05:58] [Worker] 开始处理: ProntoQA_189 (mode=direct, semantic_check=False, refinement_code=False, repair=True)
+[17:06:08]   [ProntoQA_281] ✓ 正确! 预测=A, 答案=A
+[17:06:08] [Worker] 开始处理: ProntoQA_187 (mode=direct, semantic_check=False, refinement_code=False, repair=True)
+[17:06:19]   [ProntoQA_189] ✓ 正确! 预测=B, 答案=B
+[17:06:19] [Worker] 开始处理: ProntoQA_267 (mode=direct, semantic_check=False, refinement_code=False, repair=True)
+[17:06:21]   [ProntoQA_30] ✓ 正确! 预测=A, 答案=A
+[17:06:21] [Worker] 开始处理: ProntoQA_169 (mode=direct, semantic_check=False, refinement_code=False, repair=True)
+[17:06:24]   [ProntoQA_293] ✓ 正确! 预测=A, 答案=A
+[17:06:24] [Worker] 开始处理: ProntoQA_487 (mode=direct, semantic_check=False, refinement_code=False, repair=True)
+[17:06:31]   [ProntoQA_187] ✓ 正确! 预测=A, 答案=A
+[17:06:31] [Worker] 开始处理: ProntoQA_231 (mode=direct, semantic_check=False, refinement_code=False, repair=True)
+[17:06:41]   [ProntoQA_267] ✓ 正确! 预测=B, 答案=B
+[17:06:41] [Worker] 开始处理: ProntoQA_449 (mode=direct, semantic_check=False, refinement_code=False, repair=True)
+[17:06:48]   [ProntoQA_231] ✓ 正确! 预测=B, 答案=B
+[17:06:48] [Worker] 开始处理: ProntoQA_434 (mode=direct, semantic_check=False, refinement_code=False, repair=True)
+[17:06:48]   [ProntoQA_487] ✓ 正确! 预测=A, 答案=A
+[17:06:48] [Worker] 开始处理: ProntoQA_495 (mode=direct, semantic_check=False, refinement_code=False, repair=True)
+[17:06:58]   [ProntoQA_169] ✓ 正确! 预测=B, 答案=B
+[17:06:58] [Worker] 开始处理: ProntoQA_165 (mode=direct, semantic_check=False, refinement_code=False, repair=True)
+[17:07:08]   [ProntoQA_449] ✓ 正确! 预测=B, 答案=B
+[17:07:08] [Worker] 开始处理: ProntoQA_194 (mode=direct, semantic_check=False, refinement_code=False, repair=True)
+[17:07:10]   [ProntoQA_434] ✓ 正确! 预测=A, 答案=A
+[17:07:10] [Worker] 开始处理: ProntoQA_436 (mode=direct, semantic_check=False, refinement_code=False, repair=True)
+[17:07:25]   [ProntoQA_165] ✓ 正确! 预测=A, 答案=A
+[17:07:25] [Worker] 开始处理: ProntoQA_217 (mode=direct, semantic_check=False, refinement_code=False, repair=True)
+[17:07:26]   [ProntoQA_495] ✓ 正确! 预测=A, 答案=A
+[17:07:26] [Worker] 开始处理: ProntoQA_342 (mode=direct, semantic_check=False, refinement_code=False, repair=True)
+[17:07:30]   [ProntoQA_194] ✓ 正确! 预测=B, 答案=B
+[17:07:30] [Worker] 开始处理: ProntoQA_111 (mode=direct, semantic_check=False, refinement_code=False, repair=True)
+[17:07:48]   [ProntoQA_436] ✓ 正确! 预测=A, 答案=A
+[17:07:48] [Worker] 开始处理: ProntoQA_121 (mode=direct, semantic_check=False, refinement_code=False, repair=True)
+[17:07:52]   [ProntoQA_342] ✓ 正确! 预测=B, 答案=B
+[17:07:52] [Worker] 开始处理: ProntoQA_437 (mode=direct, semantic_check=False, refinement_code=False, repair=True)
+[17:07:55]   [ProntoQA_111] ✗ 错误! 预测=A, 答案=B
+[17:07:55] [Worker] 开始处理: ProntoQA_430 (mode=direct, semantic_check=False, refinement_code=False, repair=True)
+[17:08:03]   [ProntoQA_217] ✓ 正确! 预测=A, 答案=A
+[17:08:03] [Worker] 开始处理: ProntoQA_372 (mode=direct, semantic_check=False, refinement_code=False, repair=True)
+[17:08:12]   [ProntoQA_437] ✓ 正确! 预测=B, 答案=B
+[17:08:12] [Worker] 开始处理: ProntoQA_360 (mode=direct, semantic_check=False, refinement_code=False, repair=True)
+[17:08:15]   [ProntoQA_121] ✓ 正确! 预测=A, 答案=A
+[17:08:15] [Worker] 开始处理: ProntoQA_477 (mode=direct, semantic_check=False, refinement_code=False, repair=True)
+[17:08:20]   [ProntoQA_372] ✓ 正确! 预测=B, 答案=B
+[17:08:20] [Worker] 开始处理: ProntoQA_237 (mode=direct, semantic_check=False, refinement_code=False, repair=True)
+[17:08:21]   [ProntoQA_430] ✓ 正确! 预测=A, 答案=A
+[17:08:21] [Worker] 开始处理: ProntoQA_329 (mode=direct, semantic_check=False, refinement_code=False, repair=True)
+[17:08:35]   [ProntoQA_360] ✓ 正确! 预测=B, 答案=B
+[17:08:35] [Worker] 开始处理: ProntoQA_160 (mode=direct, semantic_check=False, refinement_code=False, repair=True)
+[17:08:37]   [ProntoQA_477] ✓ 正确! 预测=A, 答案=A
+[17:08:37] [Worker] 开始处理: ProntoQA_465 (mode=direct, semantic_check=False, refinement_code=False, repair=True)
+[17:08:49]   [ProntoQA_237] ✓ 正确! 预测=B, 答案=B
+[17:08:49] [Worker] 开始处理: ProntoQA_47 (mode=direct, semantic_check=False, refinement_code=False, repair=True)
+[17:08:50]   [ProntoQA_329] ✓ 正确! 预测=B, 答案=B
+[17:08:50] [Worker] 开始处理: ProntoQA_403 (mode=direct, semantic_check=False, refinement_code=False, repair=True)
+[17:09:04]   [ProntoQA_160] ✓ 正确! 预测=B, 答案=B
+[17:09:04] [Worker] 开始处理: ProntoQA_345 (mode=direct, semantic_check=False, refinement_code=False, repair=True)
+[17:09:12]   [ProntoQA_47] ✗ 错误! 预测=A, 答案=B
+[17:09:12] [Worker] 开始处理: ProntoQA_444 (mode=direct, semantic_check=False, refinement_code=False, repair=True)
+[17:09:14]   [ProntoQA_403] ✗ 错误! 预测=A, 答案=B
+[17:09:14] [Worker] 开始处理: ProntoQA_68 (mode=direct, semantic_check=False, refinement_code=False, repair=True)
+[17:09:16]   [ProntoQA_465] ✓ 正确! 预测=B, 答案=B
+[17:09:16] [Worker] 开始处理: ProntoQA_183 (mode=direct, semantic_check=False, refinement_code=False, repair=True)
+[17:09:27]   [ProntoQA_345] ✓ 正确! 预测=B, 答案=B
+[17:09:27] [Worker] 开始处理: ProntoQA_257 (mode=direct, semantic_check=False, refinement_code=False, repair=True)
+[17:09:38]   [ProntoQA_68] ✓ 正确! 预测=A, 答案=A
+[17:09:38] [Worker] 开始处理: ProntoQA_58 (mode=direct, semantic_check=False, refinement_code=False, repair=True)
+[17:09:39]   [ProntoQA_444] ✓ 正确! 预测=A, 答案=A
+[17:09:39] [Worker] 开始处理: ProntoQA_60 (mode=direct, semantic_check=False, refinement_code=False, repair=True)
+[17:09:51]   [ProntoQA_183] ✓ 正确! 预测=B, 答案=B
+[17:09:51] [Worker] 开始处理: ProntoQA_150 (mode=direct, semantic_check=False, refinement_code=False, repair=True)
+[17:09:55]   [ProntoQA_257] ✓ 正确! 预测=A, 答案=A
+[17:09:55] [Worker] 开始处理: ProntoQA_273 (mode=direct, semantic_check=False, refinement_code=False, repair=True)
+[17:10:01]   [ProntoQA_58] ✗ 错误! 预测=A, 答案=B
+[17:10:01] [Worker] 开始处理: ProntoQA_425 (mode=direct, semantic_check=False, refinement_code=False, repair=True)
+[17:10:08]   [ProntoQA_150] ✓ 正确! 预测=A, 答案=A
+[17:10:08] [Worker] 开始处理: ProntoQA_271 (mode=direct, semantic_check=False, refinement_code=False, repair=True)
+[17:10:10] [Worker] 开始处理: ProntoQA_263 (mode=direct, semantic_check=False, refinement_code=False, repair=True)
+[17:10:10]   [ProntoQA_60] ✓ 正确! 预测=B, 答案=B
+[17:10:21]   [ProntoQA_273] ✓ 正确! 预测=A, 答案=A
+[17:10:21] [Worker] 开始处理: ProntoQA_6 (mode=direct, semantic_check=False, refinement_code=False, repair=True)
+[17:10:34]   [ProntoQA_263] ✓ 正确! 预测=B, 答案=B
+[17:10:34] [Worker] 开始处理: ProntoQA_197 (mode=direct, semantic_check=False, refinement_code=False, repair=True)
+[17:10:36]   [ProntoQA_271] ✓ 正确! 预测=A, 答案=A
+[17:10:36] [Worker] 开始处理: ProntoQA_439 (mode=direct, semantic_check=False, refinement_code=False, repair=True)
+[17:10:43]   [ProntoQA_425] ✗ 错误! 预测=A, 答案=B
+[17:10:43] [Worker] 开始处理: ProntoQA_405 (mode=direct, semantic_check=False, refinement_code=False, repair=True)
+[17:10:44]   [ProntoQA_6] ✓ 正确! 预测=A, 答案=A
+[17:10:44] [Worker] 开始处理: ProntoQA_289 (mode=direct, semantic_check=False, refinement_code=False, repair=True)
+[17:10:59]   [ProntoQA_439] ✓ 正确! 预测=A, 答案=A
+[17:11:00]   [ProntoQA_197] ✓ 正确! 预测=B, 答案=B
+[17:11:28]   [ProntoQA_405] ✓ 正确! 预测=A, 答案=A
+[17:11:30]   [ProntoQA_289] ✗ 错误! 预测=A, 答案=B
+[17:11:30] ==================================================
+[17:11:30] 评测完成!
+[17:11:30] 已完成: 50, 正确: 44, 错误: 6, 异常: 0
+[17:11:30] 准确率: 88.00%
+[17:11:30] ==================================================

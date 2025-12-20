@@ -9,3 +9,4 @@ You must meet the following requirements:
 1. The output should be a python script of the format ```python <code generate> ```
 2. All boolean variables should be defined, and you should only define each variable once, not multiple times.
 3. Number of Relationships you generate should be the same as number of sentences in the [Problem] (A sentence is defined as ending with ".").
+4. When adding constraints with solver.add(), it's recommended to add each constraint separately rather than passing multiple arguments at once.
