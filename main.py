@@ -23,6 +23,7 @@ from dataset_and_prompt import (detect_dataset_type, build_initial_messages_for_
                                  build_next_messages_for_all_datasets, build_single_text_message_for_all_datasets,
                                  build_next_single_text_message_for_all_datasets)
 from z3_execute import execute_z3_code
+from translate import translate_dataset, save_translated_dataset
 
 
 class LogicEvalApp:
@@ -335,6 +336,9 @@ class LogicEvalApp:
         self.stop_btn = ttk.Button(control_frame, text="⏹ 停止", 
                                    command=self.stop_evaluation, state=tk.DISABLED)
         self.stop_btn.pack(side=tk.LEFT, padx=(0, 10))
+        
+        ttk.Button(control_frame, text="🌐 翻译数据集", 
+                  command=self.translate_dataset).pack(side=tk.LEFT, padx=(0, 10))
         
         ttk.Button(control_frame, text="📋 导出结果", 
                   command=self.export_results).pack(side=tk.LEFT, padx=(0, 10))
@@ -1099,6 +1103,151 @@ class LogicEvalApp:
                 
             self.log(f"结果已导出到: {filename}", 'success')
             messagebox.showinfo("成功", f"结果已导出到:\n{filename}")
+    
+    def translate_dataset(self):
+        """翻译数据集"""
+        # 验证输入
+        api_key = self.api_key_var.get().strip()
+        if not api_key:
+            messagebox.showwarning("警告", "请输入API Key")
+            return
+            
+        dataset_path = self.dataset_var.get().strip()
+        if not dataset_path:
+            messagebox.showwarning("警告", "请选择数据集文件")
+            return
+            
+        if not os.path.exists(dataset_path):
+            messagebox.showerror("错误", "数据集文件不存在")
+            return
+        
+        # 检测数据集类型
+        try:
+            with open(dataset_path, 'r', encoding='utf-8') as f:
+                problems = json.load(f)
+            
+            if not problems:
+                messagebox.showerror("错误", "数据集为空")
+                return
+            
+            dataset_type = detect_dataset_type(problems[0])
+            
+            # 目前只支持 FOLIO
+            if dataset_type.lower() != 'folio':
+                messagebox.showwarning("提示", f"翻译功能目前仅支持 FOLIO 数据集\n当前数据集类型: {dataset_type}")
+                return
+            
+            self.log(f"检测到数据集类型: {dataset_type}", 'info')
+            
+        except Exception as e:
+            messagebox.showerror("错误", f"读取数据集失败:\n{str(e)}")
+            return
+        
+        # 选择输出文件
+        output_path = filedialog.asksaveasfilename(
+            title="保存翻译后的数据集",
+            defaultextension=".json",
+            filetypes=[("JSON files", "*.json"), ("All files", "*.*")],
+            initialdir=os.path.dirname(dataset_path),
+            initialfile=f"Standardized_{os.path.basename(dataset_path)}"
+        )
+        
+        if not output_path:
+            return
+        
+        # 确认开始翻译
+        if not messagebox.askyesno("确认", 
+                                   f"即将翻译 {len(problems)} 个题目\n"
+                                   f"数据集类型: {dataset_type}\n"
+                                   f"模型: {self.model_var.get()}\n"
+                                   f"这可能需要一些时间，是否继续？"):
+            return
+        
+        # 禁用按钮
+        self.start_btn.config(state=tk.DISABLED)
+        
+        # 在后台线程运行翻译
+        def run_translation():
+            self.root.after(0, lambda: self.log("=" * 50, 'highlight'))
+            self.root.after(0, lambda: self.log("开始翻译数据集...", 'info'))
+            self.root.after(0, lambda: self.log(f"数据集类型: {dataset_type}", 'info'))
+            self.root.after(0, lambda: self.log(f"题目数量: {len(problems)}", 'info'))
+            self.root.after(0, lambda: self.log("=" * 50, 'highlight'))
+            
+            model = self.model_var.get()
+            api_base = self.api_base_var.get().strip() or None
+            
+            # 定义进度回调
+            def progress_callback(current, total, result):
+                problem_id = result.get('original_problem', {}).get('id', f'Problem_{current}')
+                
+                if result['success']:
+                    self.root.after(0, lambda pid=problem_id, c=current, t=total: 
+                                   self.log(f"[{c}/{t}] ✓ {pid} 翻译成功", 'success'))
+                else:
+                    error = result.get('error', '未知错误')
+                    self.root.after(0, lambda pid=problem_id, c=current, t=total, e=error: 
+                                   self.log(f"[{c}/{t}] ✗ {pid} 翻译失败: {e}", 'error'))
+                
+                # 更新进度条
+                percentage = current / total * 100
+                self.root.after(0, lambda p=percentage, c=current, t=total: 
+                               (self.progress_var.set(p),
+                                self.progress_label.config(text=f"{c}/{t} ({p:.1f}%)")))
+            
+            # 执行翻译
+            try:
+                result = translate_dataset(
+                    api_key,
+                    dataset_type,
+                    problems,
+                    model,
+                    api_base,
+                    progress_callback
+                )
+                
+                # 保存翻译结果
+                if result['translated_problems']:
+                    save_translated_dataset(result['translated_problems'], output_path)
+                    
+                    self.root.after(0, lambda: self.log("=" * 50, 'highlight'))
+                    self.root.after(0, lambda: self.log(f"翻译完成！", 'highlight'))
+                    self.root.after(0, lambda r=result: 
+                                   self.log(f"成功: {r['success_count']}, 失败: {r['failed_count']}", 'highlight'))
+                    self.root.after(0, lambda: self.log(f"翻译结果已保存到: {output_path}", 'success'))
+                    self.root.after(0, lambda: self.log("=" * 50, 'highlight'))
+                    
+                    # 显示失败的题目
+                    if result['failed_problems']:
+                        self.root.after(0, lambda: self.log("失败的题目:", 'warning'))
+                        for failed in result['failed_problems']:
+                            self.root.after(0, lambda f=failed: 
+                                           self.log(f"  - {f['id']}: {f['error']}", 'error'))
+                    
+                    self.root.after(0, lambda: 
+                                   messagebox.showinfo("完成", 
+                                                     f"翻译完成！\n"
+                                                     f"成功: {result['success_count']}\n"
+                                                     f"失败: {result['failed_count']}\n"
+                                                     f"保存到: {output_path}"))
+                else:
+                    self.root.after(0, lambda: self.log("翻译失败：没有成功翻译的题目", 'error'))
+                    self.root.after(0, lambda: 
+                                   messagebox.showerror("失败", "翻译失败：没有成功翻译的题目"))
+                
+            except Exception as e:
+                self.root.after(0, lambda e=str(e): self.log(f"翻译出错: {e}", 'error'))
+                self.root.after(0, lambda e=str(e): 
+                               messagebox.showerror("错误", f"翻译出错:\n{e}"))
+            
+            finally:
+                # 重置进度条
+                self.root.after(0, lambda: self.progress_var.set(0))
+                self.root.after(0, lambda: self.progress_label.config(text="0/0 (0%)"))
+                # 重新启用按钮
+                self.root.after(0, lambda: self.start_btn.config(state=tk.NORMAL))
+        
+        threading.Thread(target=run_translation, daemon=True).start()
 
 
 def main():
