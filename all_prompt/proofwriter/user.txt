@@ -1,0 +1,148 @@
+## Code Template (follow EXACTLY)
+```python
+from z3 import *
+
+# 1. Domain - ALL entity names
+Entity, (E1, E2, ...) = EnumSort('Entity', [...])
+
+# 2. Predicates - define ALL (including those in question!)
+Cold = Function('Cold', Entity, BoolSort())
+Likes = Function('Likes', Entity, Entity, BoolSort())
+
+solver = Solver()
+
+# 3. Facts - simple statements, NO ForAll!
+solver.add(Cold(E1))
+solver.add(Not(Cold(E2)))
+
+# 4. Rules - define x FIRST, then ForAll
+x = Const('x', Entity)
+# ⚠️ CRITICAL: ALL arguments MUST be separated by COMMAS!
+solver.add(ForAll([x], Implies(Cold(x), Big(x))))  # ← COMMA in Implies!
+solver.add(ForAll([x], Implies(And(A(x), B(x)), C(x))))  # ← COMMA in And AND Implies!
+
+# 5. Statement from question
+S = Big(E1)  # or Not(Big(E1))
+
+# 6. Three-valued check (COPY EXACTLY!)
+def is_true(stmt):
+    s = Solver()
+    s.add(*solver.assertions())
+    s.add(Not(stmt))
+    return s.check() == unsat
+
+def is_false(stmt):
+    s = Solver()
+    s.add(*solver.assertions())
+    s.add(stmt)
+    return s.check() == unsat
+
+if is_true(S):
+    print("A")
+elif is_false(S):
+    print("B")
+else:
+    print("C")
+```
+
+⚠️⚠️⚠️ THE #1 ERROR IS MISSING COMMAS! ⚠️⚠️⚠️
+
+WRONG (syntax error):              CORRECT (with commas):
+And(A(x) B(x))                     And(A(x), B(x))
+Or(A(x) B(x))                      Or(A(x), B(x))  
+Implies(A(x) B(x))                 Implies(A(x), B(x))
+Implies(And(A(x) B(x)) C(x))       Implies(And(A(x), B(x)), C(x))
+
+## Example 1 (Universal rules with ForAll)
+Context: Bob is cold. Bob is red. If someone is cold and red then they are quiet. If someone is quiet then they are smart.
+Question: Based on the above information, is the following statement true, false, or unknown? Bob is smart.
+Options: A) True B) False C) Unknown
+
+```python
+from z3 import *
+
+# 1. Domain - list ALL entities
+Entity, (Bob,) = EnumSort('Entity', ['Bob'])
+
+# 2. Predicates - define ALL predicates BEFORE using them
+Cold = Function('Cold', Entity, BoolSort())
+Red = Function('Red', Entity, BoolSort())
+Quiet = Function('Quiet', Entity, BoolSort())
+Smart = Function('Smart', Entity, BoolSort())
+
+solver = Solver()
+
+# 3. Facts - NO ForAll here, just direct facts about entities
+solver.add(Cold(Bob))
+solver.add(Red(Bob))
+
+# 4. Rules - MUST define x BEFORE ForAll
+# ⚠️ CRITICAL: And() MUST have COMMA between arguments!
+x = Const('x', Entity)
+solver.add(ForAll([x], Implies(And(Cold(x), Red(x)), Quiet(x))))  # ← COMMA!
+solver.add(ForAll([x], Implies(Quiet(x), Smart(x))))  # ← COMMA!
+
+# 5. Statement from question
+S = Smart(Bob)
+
+# 6. Three-valued check (COPY EXACTLY!)
+def is_true(stmt):
+    s = Solver()
+    s.add(*solver.assertions())
+    s.add(Not(stmt))
+    return s.check() == unsat
+
+def is_false(stmt):
+    s = Solver()
+    s.add(*solver.assertions())
+    s.add(stmt)
+    return s.check() == unsat
+
+if is_true(S):
+    print("A")
+elif is_false(S):
+    print("B")
+else:
+    print("C")
+```
+
+## Example 2 (Entity-specific rules)
+Context: Anne is furry. Dave is furry. If Anne is big and Anne is green then Anne is round. Furry people are green.
+Question: Is Dave green true, false, or unknown?
+
+```python
+from z3 import *
+
+Entity, (Anne, Dave) = EnumSort('Entity', ['Anne', 'Dave'])
+Furry = Function('Furry', Entity, BoolSort())
+Big = Function('Big', Entity, BoolSort())
+Green = Function('Green', Entity, BoolSort())
+Round = Function('Round', Entity, BoolSort())
+
+solver = Solver()
+solver.add(Furry(Anne))
+solver.add(Furry(Dave))
+
+x = Const('x', Entity)
+# Entity-specific rule (only for Anne, no ForAll):
+solver.add(Implies(And(Big(Anne), Green(Anne)), Round(Anne)))  # ← COMMAS in And AND Implies!
+# Universal rule:
+solver.add(ForAll([x], Implies(Furry(x), Green(x))))  # ← COMMA in Implies!
+
+S = Green(Dave)
+# ... (same three-valued check as above)
+```
+
+========================================
+Now solve:
+========================================
+
+Context:
+{context}
+
+Question:
+{question}
+
+Options:
+{options_text}
+

@@ -1,0 +1,43 @@
+The script you provided has encountered an error:
+{info_text}
+
+⚠️⚠️⚠️ THIS ERROR IS ALMOST ALWAYS CAUSED BY MISSING COMMAS ⚠️⚠️⚠️
+
+Check your code line by line for these EXACT patterns:
+
+WRONG (will cause "invalid syntax" error):
+```python
+And(Cold(x) Red(x))           # Missing comma!
+Or(Big(x) Green(x))           # Missing comma!
+Implies(A(x) B(x))            # Missing comma!
+Implies(And(A(x) B(x)) C(x))  # Missing comma in And!
+```
+
+CORRECT (with commas):
+```python
+And(Cold(x), Red(x))          # Comma between arguments!
+Or(Big(x), Green(x))          # Comma between arguments!
+Implies(A(x), B(x))           # Comma between arguments!
+Implies(And(A(x), B(x)), C(x))  # Commas everywhere!
+```
+
+⚠️ SCAN YOUR ENTIRE CODE for:
+1. Every And(...) - does it have commas between ALL arguments?
+2. Every Or(...) - does it have commas between ALL arguments?
+3. Every Implies(...) - does it have EXACTLY 2 arguments with comma?
+4. Nested functions like Implies(And(...), ...) - check BOTH the inner And AND the outer Implies!
+
+Please fix ALL missing commas and regenerate the complete code:
+========================================
+Now solve:
+========================================
+
+Context:
+{context}
+
+Question:
+{question}
+
+Options:
+{options_text}
+

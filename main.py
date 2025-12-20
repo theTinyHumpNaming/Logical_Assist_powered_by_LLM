@@ -695,7 +695,6 @@ class LogicEvalApp:
             # 初次生成对话 - 根据模式选择不同的消息构建方式
             if mode == "single_text":
                 messages = build_single_text_message_for_all_datasets(dataset_type, *self._get_question_context(problem))
-                # 保存初始上下文用于后续修复
                 accumulated_context = messages[0]['content']
                 extra_type_is_semantic = None
                 extra_info = ''
@@ -721,8 +720,6 @@ class LogicEvalApp:
                                    self.log(f"  [{pid}] 第{a}次尝试重新生成...", 'warning'))
                     # 生成后续对话 - 根据模式选择不同的消息构建方式
                     if mode == "single_text":
-                        # Single Text Mode：使用 build_next_single_text_message_for_all_datasets
-                        # 传递错误信息和上一轮输出，实现真正的多轮修复
                         messages = build_next_single_text_message_for_all_datasets(
                             dataset_type,
                             *self._get_question_context(problem),
@@ -809,47 +806,27 @@ class LogicEvalApp:
                 if self.stop_flag:
                     raise Exception('用户停止')
                 
-                # 直接执行代码（不使用repair）
-                from z3_execute import execute_z3_code_without_repair
-                result, exec_error = execute_z3_code_without_repair(code)
+                # 每次执行代码之前都使用repair修复
+                result, exec_error, repair_log = execute_z3_code(code, auto_repair=True)
+                
+                # 记录repair修复日志
+                if repair_log:
+                    self.root.after(0, lambda pid=problem_id, logs=repair_log: 
+                                   self.log(f"  [{pid}] 代码自动修复: {'; '.join(logs)}", 'debug'))
                 
                 # self refine
                 if exec_error:
                     self.root.after(0, lambda pid=problem_id, e=exec_error: 
                                    self.log(f"  [{pid}] code执行错误: {e}", 'warning'))
                     
-                    # 如果代码修复功能关闭，尝试使用repair作为兜底
+                    # 如果代码修复功能关闭，直接抛出错误
                     if not refinement_code_enabled:
-                        self.root.after(0, lambda pid=problem_id:
-                            self.log(f"  [{pid}] LLM修复功能已关闭，尝试使用repair自动修复...", 'info'))
-                        
-                        # 使用repair修复并重新执行
-                        result, exec_error, repair_log = execute_z3_code(code)
-                        
-                        if repair_log:
-                            self.root.after(0, lambda pid=problem_id, logs=repair_log: 
-                                           self.log(f"  [{pid}] 代码自动修复: {'; '.join(logs)}", 'info'))
-                        
-                        if exec_error:
-                            raise Exception(f"代码执行错误（repair修复后仍失败）: {exec_error}")
-                        # 如果repair成功修复，继续执行后面的逻辑（不continue）
+                        raise Exception(f"代码执行错误（repair修复后仍失败）: {exec_error}")
                     else:
                         # 代码修复功能开启，继续LLM refine循环
-                        # 如果即将达到最大尝试次数，使用repair作为最后手段
                         if attempt >= max_attempts - 1:
-                            self.root.after(0, lambda pid=problem_id:
-                                self.log(f"  [{pid}] LLM修复次数即将用完，尝试使用repair自动修复...", 'info'))
-                            
-                            # 使用repair修复并重新执行
-                            result, exec_error, repair_log = execute_z3_code(code)
-                            
-                            if repair_log:
-                                self.root.after(0, lambda pid=problem_id, logs=repair_log: 
-                                               self.log(f"  [{pid}] 代码自动修复: {'; '.join(logs)}", 'info'))
-                            
-                            if exec_error:
-                                raise Exception(f"代码执行错误（LLM修复{max_attempts}次 + repair后仍失败）: {exec_error}")
-                            # 如果repair成功修复，继续执行后面的逻辑（不continue）
+                            # 已达到最大尝试次数，抛出错误
+                            raise Exception(f"代码执行错误（LLM修复{max_attempts}次 + repair后仍失败）: {exec_error}")
                         else:
                             # 继续LLM refine
                             extra_info=exec_error

@@ -1,0 +1,17 @@
+The script you provided does not match the semantics of the original problem. This is the detailed information for checking semantic inconsistencies:
+{info_text}
+
+Please resolve the issue again and ensure that the semantics remain unchanged:
+========================================
+Now solve:
+========================================
+
+Context:
+{context}
+
+Question:
+{question}
+
+Options:
+{options_text}
+

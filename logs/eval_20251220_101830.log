@@ -1,0 +1,374 @@
+=== 评测日志开始于 2025-12-20 10:18:30 ===
+[10:18:58] 代码修复功能已关闭
+[10:18:58] 正在加载数据集: D:/学习资料/课程/程序设计大作业/EnhancingLLM/EnhancingLLM/data/ProofWriter_test.json
+[10:18:58] 共 50 道题目，使用 4 个 workers 并行处理
+[10:18:58] [Worker] 开始处理: ProofWriter_AttNeg-OWA-D5-489_Q2 (mode=direct, semantic_check=False, refinement_code=False)
+[10:18:58] [Worker] 开始处理: ProofWriter_AttNoneg-OWA-D5-20_Q10 (mode=direct, semantic_check=False, refinement_code=False)
+[10:18:58] [Worker] 开始处理: ProofWriter_AttNoneg-OWA-D5-178_Q18 (mode=direct, semantic_check=False, refinement_code=False)
+[10:18:58] [Worker] 开始处理: ProofWriter_AttNeg-OWA-D5-1015_Q3 (mode=direct, semantic_check=False, refinement_code=False)
+[10:18:58]   [ProofWriter_AttNeg-OWA-D5-489_Q2] ⚠ 异常: [Errno 2] No such file or directory: 'd:\\学习资料\\课程\\程序设计大作业\\EnhancingLLM\\EnhancingLLM\\all_prompt\\proofwriter\\instruction.txt'
+[10:18:58] [Worker] 开始处理: ProofWriter_AttNoneg-OWA-D5-613_Q12 (mode=direct, semantic_check=False, refinement_code=False)
+[10:18:58]   [ProofWriter_AttNoneg-OWA-D5-20_Q10] ⚠ 异常: [Errno 2] No such file or directory: 'd:\\学习资料\\课程\\程序设计大作业\\EnhancingLLM\\EnhancingLLM\\all_prompt\\proofwriter\\instruction.txt'
+[10:18:58] [Worker] 开始处理: ProofWriter_AttNeg-OWA-D5-1170_Q10 (mode=direct, semantic_check=False, refinement_code=False)
+[10:18:58] [Worker] 开始处理: ProofWriter_AttNoneg-OWA-D5-308_Q8 (mode=direct, semantic_check=False, refinement_code=False)
+[10:18:58] [Worker] 开始处理: ProofWriter_RelNeg-OWA-D5-249_Q9 (mode=direct, semantic_check=False, refinement_code=False)
+[10:18:58] [Worker] 开始处理: ProofWriter_RelNoneg-OWA-D5-789_Q21 (mode=direct, semantic_check=False, refinement_code=False)
+[10:18:58]   [ProofWriter_AttNeg-OWA-D5-1015_Q3] ⚠ 异常: [Errno 2] No such file or directory: 'd:\\学习资料\\课程\\程序设计大作业\\EnhancingLLM\\EnhancingLLM\\all_prompt\\proofwriter\\instruction.txt'
+[10:18:58] [Worker] 开始处理: ProofWriter_RelNoneg-OWA-D5-502_Q3 (mode=direct, semantic_check=False, refinement_code=False)
+[10:18:58] [Worker] 开始处理: ProofWriter_AttNoneg-OWA-D5-785_Q10 (mode=direct, semantic_check=False, refinement_code=False)
+[10:18:58] [Worker] 开始处理: ProofWriter_AttNeg-OWA-D5-891_Q1 (mode=direct, semantic_check=False, refinement_code=False)
+[10:18:58]   [ProofWriter_AttNoneg-OWA-D5-178_Q18] ⚠ 异常: [Errno 2] No such file or directory: 'd:\\学习资料\\课程\\程序设计大作业\\EnhancingLLM\\EnhancingLLM\\all_prompt\\proofwriter\\instruction.txt'
+[10:18:58] [Worker] 开始处理: ProofWriter_RelNeg-OWA-D5-173_Q10 (mode=direct, semantic_check=False, refinement_code=False)
+[10:18:58] [Worker] 开始处理: ProofWriter_AttNoneg-OWA-D5-308_Q1 (mode=direct, semantic_check=False, refinement_code=False)
+[10:18:58] [Worker] 开始处理: ProofWriter_AttNeg-OWA-D5-891_Q18 (mode=direct, semantic_check=False, refinement_code=False)
+[10:18:58]   [ProofWriter_AttNoneg-OWA-D5-613_Q12] ⚠ 异常: [Errno 2] No such file or directory: 'd:\\学习资料\\课程\\程序设计大作业\\EnhancingLLM\\EnhancingLLM\\all_prompt\\proofwriter\\instruction.txt'
+[10:18:58] [Worker] 开始处理: ProofWriter_AttNeg-OWA-D5-959_Q2 (mode=direct, semantic_check=False, refinement_code=False)
+[10:18:58] [Worker] 开始处理: ProofWriter_RelNoneg-OWA-D5-116_Q12 (mode=direct, semantic_check=False, refinement_code=False)
+[10:18:58] [Worker] 开始处理: ProofWriter_AttNoneg-OWA-D5-844_Q7 (mode=direct, semantic_check=False, refinement_code=False)
+[10:18:58]   [ProofWriter_AttNeg-OWA-D5-1170_Q10] ⚠ 异常: [Errno 2] No such file or directory: 'd:\\学习资料\\课程\\程序设计大作业\\EnhancingLLM\\EnhancingLLM\\all_prompt\\proofwriter\\instruction.txt'
+[10:18:58] [Worker] 开始处理: ProofWriter_RelNoneg-OWA-D5-280_Q3 (mode=direct, semantic_check=False, refinement_code=False)
+[10:18:58] [Worker] 开始处理: ProofWriter_RelNoneg-OWA-D5-272_Q14 (mode=direct, semantic_check=False, refinement_code=False)
+[10:18:58]   [ProofWriter_AttNoneg-OWA-D5-308_Q8] ⚠ 异常: [Errno 2] No such file or directory: 'd:\\学习资料\\课程\\程序设计大作业\\EnhancingLLM\\EnhancingLLM\\all_prompt\\proofwriter\\instruction.txt'
+[10:18:58] [Worker] 开始处理: ProofWriter_AttNeg-OWA-D5-694_Q2 (mode=direct, semantic_check=False, refinement_code=False)
+[10:18:58] [Worker] 开始处理: ProofWriter_AttNoneg-OWA-D5-83_Q10 (mode=direct, semantic_check=False, refinement_code=False)
+[10:18:58] [Worker] 开始处理: ProofWriter_RelNeg-OWA-D5-668_Q14 (mode=direct, semantic_check=False, refinement_code=False)
+[10:18:58]   [ProofWriter_RelNeg-OWA-D5-249_Q9] ⚠ 异常: [Errno 2] No such file or directory: 'd:\\学习资料\\课程\\程序设计大作业\\EnhancingLLM\\EnhancingLLM\\all_prompt\\proofwriter\\instruction.txt'
+[10:18:58] [Worker] 开始处理: ProofWriter_RelNoneg-OWA-D5-213_Q8 (mode=direct, semantic_check=False, refinement_code=False)
+[10:18:59] [Worker] 开始处理: ProofWriter_RelNeg-OWA-D5-345_Q13 (mode=direct, semantic_check=False, refinement_code=False)
+[10:18:59] [Worker] 开始处理: ProofWriter_RelNeg-OWA-D5-294_Q2 (mode=direct, semantic_check=False, refinement_code=False)
+[10:18:59]   [ProofWriter_RelNoneg-OWA-D5-789_Q21] ⚠ 异常: [Errno 2] No such file or directory: 'd:\\学习资料\\课程\\程序设计大作业\\EnhancingLLM\\EnhancingLLM\\all_prompt\\proofwriter\\instruction.txt'
+[10:18:59] [Worker] 开始处理: ProofWriter_RelNeg-OWA-D5-174_Q18 (mode=direct, semantic_check=False, refinement_code=False)
+[10:18:59] [Worker] 开始处理: ProofWriter_AttNoneg-OWA-D5-1331_Q16 (mode=direct, semantic_check=False, refinement_code=False)
+[10:18:59] [Worker] 开始处理: ProofWriter_AttNeg-OWA-D5-960_Q6 (mode=direct, semantic_check=False, refinement_code=False)
+[10:18:59] [Worker] 开始处理: ProofWriter_AttNeg-OWA-D5-908_Q16 (mode=direct, semantic_check=False, refinement_code=False)
+[10:18:59]   [ProofWriter_RelNoneg-OWA-D5-502_Q3] ⚠ 异常: [Errno 2] No such file or directory: 'd:\\学习资料\\课程\\程序设计大作业\\EnhancingLLM\\EnhancingLLM\\all_prompt\\proofwriter\\instruction.txt'
+[10:18:59] [Worker] 开始处理: ProofWriter_AttNoneg-OWA-D5-1251_Q3 (mode=direct, semantic_check=False, refinement_code=False)
+[10:18:59] [Worker] 开始处理: ProofWriter_RelNeg-OWA-D5-355_Q4 (mode=direct, semantic_check=False, refinement_code=False)
+[10:18:59]   [ProofWriter_AttNoneg-OWA-D5-785_Q10] ⚠ 异常: [Errno 2] No such file or directory: 'd:\\学习资料\\课程\\程序设计大作业\\EnhancingLLM\\EnhancingLLM\\all_prompt\\proofwriter\\instruction.txt'
+[10:18:59] [Worker] 开始处理: ProofWriter_RelNeg-OWA-D5-940_Q9 (mode=direct, semantic_check=False, refinement_code=False)
+[10:18:59] [Worker] 开始处理: ProofWriter_AttNeg-OWA-D5-401_Q4 (mode=direct, semantic_check=False, refinement_code=False)
+[10:18:59] [Worker] 开始处理: ProofWriter_RelNeg-OWA-D5-890_Q2 (mode=direct, semantic_check=False, refinement_code=False)
+[10:18:59] [Worker] 开始处理: ProofWriter_AttNoneg-OWA-D5-583_Q11 (mode=direct, semantic_check=False, refinement_code=False)
+[10:18:59]   [ProofWriter_AttNeg-OWA-D5-891_Q1] ⚠ 异常: [Errno 2] No such file or directory: 'd:\\学习资料\\课程\\程序设计大作业\\EnhancingLLM\\EnhancingLLM\\all_prompt\\proofwriter\\instruction.txt'
+[10:18:59] [Worker] 开始处理: ProofWriter_AttNeg-OWA-D5-804_Q1 (mode=direct, semantic_check=False, refinement_code=False)
+[10:18:59] [Worker] 开始处理: ProofWriter_RelNoneg-OWA-D5-977_Q5 (mode=direct, semantic_check=False, refinement_code=False)
+[10:18:59] [Worker] 开始处理: ProofWriter_AttNoneg-OWA-D5-515_Q4 (mode=direct, semantic_check=False, refinement_code=False)
+[10:18:59]   [ProofWriter_RelNeg-OWA-D5-173_Q10] ⚠ 异常: [Errno 2] No such file or directory: 'd:\\学习资料\\课程\\程序设计大作业\\EnhancingLLM\\EnhancingLLM\\all_prompt\\proofwriter\\instruction.txt'
+[10:18:59] [Worker] 开始处理: ProofWriter_AttNoneg-OWA-D5-754_Q4 (mode=direct, semantic_check=False, refinement_code=False)
+[10:18:59] [Worker] 开始处理: ProofWriter_RelNeg-OWA-D5-317_Q2 (mode=direct, semantic_check=False, refinement_code=False)
+[10:18:59] [Worker] 开始处理: ProofWriter_AttNoneg-OWA-D5-412_Q9 (mode=direct, semantic_check=False, refinement_code=False)
+[10:18:59]   [ProofWriter_AttNoneg-OWA-D5-308_Q1] ⚠ 异常: [Errno 2] No such file or directory: 'd:\\学习资料\\课程\\程序设计大作业\\EnhancingLLM\\EnhancingLLM\\all_prompt\\proofwriter\\instruction.txt'
+[10:18:59] [Worker] 开始处理: ProofWriter_AttNoneg-OWA-D5-572_Q4 (mode=direct, semantic_check=False, refinement_code=False)
+[10:18:59] [Worker] 开始处理: ProofWriter_RelNoneg-OWA-D5-992_Q10 (mode=direct, semantic_check=False, refinement_code=False)
+[10:18:59] [Worker] 开始处理: ProofWriter_AttNeg-OWA-D5-107_Q1 (mode=direct, semantic_check=False, refinement_code=False)
+[10:18:59] [Worker] 开始处理: ProofWriter_RelNeg-OWA-D5-68_Q2 (mode=direct, semantic_check=False, refinement_code=False)
+[10:18:59]   [ProofWriter_AttNeg-OWA-D5-891_Q18] ⚠ 异常: [Errno 2] No such file or directory: 'd:\\学习资料\\课程\\程序设计大作业\\EnhancingLLM\\EnhancingLLM\\all_prompt\\proofwriter\\instruction.txt'
+[10:18:59] [Worker] 开始处理: ProofWriter_RelNeg-OWA-D5-224_Q4 (mode=direct, semantic_check=False, refinement_code=False)
+[10:18:59] [Worker] 开始处理: ProofWriter_RelNoneg-OWA-D5-781_Q8 (mode=direct, semantic_check=False, refinement_code=False)
+[10:18:59]   [ProofWriter_AttNeg-OWA-D5-959_Q2] ⚠ 异常: [Errno 2] No such file or directory: 'd:\\学习资料\\课程\\程序设计大作业\\EnhancingLLM\\EnhancingLLM\\all_prompt\\proofwriter\\instruction.txt'
+[10:18:59] [Worker] 开始处理: ProofWriter_RelNoneg-OWA-D5-428_Q17 (mode=direct, semantic_check=False, refinement_code=False)
+[10:18:59] [Worker] 开始处理: ProofWriter_RelNeg-OWA-D5-13_Q11 (mode=direct, semantic_check=False, refinement_code=False)
+[10:18:59]   [ProofWriter_RelNoneg-OWA-D5-116_Q12] ⚠ 异常: [Errno 2] No such file or directory: 'd:\\学习资料\\课程\\程序设计大作业\\EnhancingLLM\\EnhancingLLM\\all_prompt\\proofwriter\\instruction.txt'
+[10:18:59]   [ProofWriter_AttNoneg-OWA-D5-844_Q7] ⚠ 异常: [Errno 2] No such file or directory: 'd:\\学习资料\\课程\\程序设计大作业\\EnhancingLLM\\EnhancingLLM\\all_prompt\\proofwriter\\instruction.txt'
+[10:18:59]   [ProofWriter_RelNoneg-OWA-D5-280_Q3] ⚠ 异常: [Errno 2] No such file or directory: 'd:\\学习资料\\课程\\程序设计大作业\\EnhancingLLM\\EnhancingLLM\\all_prompt\\proofwriter\\instruction.txt'
+[10:18:59]   [ProofWriter_RelNoneg-OWA-D5-272_Q14] ⚠ 异常: [Errno 2] No such file or directory: 'd:\\学习资料\\课程\\程序设计大作业\\EnhancingLLM\\EnhancingLLM\\all_prompt\\proofwriter\\instruction.txt'
+[10:18:59]   [ProofWriter_AttNeg-OWA-D5-694_Q2] ⚠ 异常: [Errno 2] No such file or directory: 'd:\\学习资料\\课程\\程序设计大作业\\EnhancingLLM\\EnhancingLLM\\all_prompt\\proofwriter\\instruction.txt'
+[10:18:59]   [ProofWriter_AttNoneg-OWA-D5-83_Q10] ⚠ 异常: [Errno 2] No such file or directory: 'd:\\学习资料\\课程\\程序设计大作业\\EnhancingLLM\\EnhancingLLM\\all_prompt\\proofwriter\\instruction.txt'
+[10:18:59]   [ProofWriter_RelNeg-OWA-D5-668_Q14] ⚠ 异常: [Errno 2] No such file or directory: 'd:\\学习资料\\课程\\程序设计大作业\\EnhancingLLM\\EnhancingLLM\\all_prompt\\proofwriter\\instruction.txt'
+[10:18:59]   [ProofWriter_RelNoneg-OWA-D5-213_Q8] ⚠ 异常: [Errno 2] No such file or directory: 'd:\\学习资料\\课程\\程序设计大作业\\EnhancingLLM\\EnhancingLLM\\all_prompt\\proofwriter\\instruction.txt'
+[10:18:59]   [ProofWriter_RelNeg-OWA-D5-345_Q13] ⚠ 异常: [Errno 2] No such file or directory: 'd:\\学习资料\\课程\\程序设计大作业\\EnhancingLLM\\EnhancingLLM\\all_prompt\\proofwriter\\instruction.txt'
+[10:18:59]   [ProofWriter_RelNeg-OWA-D5-294_Q2] ⚠ 异常: [Errno 2] No such file or directory: 'd:\\学习资料\\课程\\程序设计大作业\\EnhancingLLM\\EnhancingLLM\\all_prompt\\proofwriter\\instruction.txt'
+[10:18:59]   [ProofWriter_RelNeg-OWA-D5-174_Q18] ⚠ 异常: [Errno 2] No such file or directory: 'd:\\学习资料\\课程\\程序设计大作业\\EnhancingLLM\\EnhancingLLM\\all_prompt\\proofwriter\\instruction.txt'
+[10:18:59]   [ProofWriter_AttNoneg-OWA-D5-1331_Q16] ⚠ 异常: [Errno 2] No such file or directory: 'd:\\学习资料\\课程\\程序设计大作业\\EnhancingLLM\\EnhancingLLM\\all_prompt\\proofwriter\\instruction.txt'
+[10:18:59]   [ProofWriter_AttNeg-OWA-D5-908_Q16] ⚠ 异常: [Errno 2] No such file or directory: 'd:\\学习资料\\课程\\程序设计大作业\\EnhancingLLM\\EnhancingLLM\\all_prompt\\proofwriter\\instruction.txt'
+[10:18:59]   [ProofWriter_AttNeg-OWA-D5-960_Q6] ⚠ 异常: [Errno 2] No such file or directory: 'd:\\学习资料\\课程\\程序设计大作业\\EnhancingLLM\\EnhancingLLM\\all_prompt\\proofwriter\\instruction.txt'
+[10:18:59]   [ProofWriter_AttNoneg-OWA-D5-1251_Q3] ⚠ 异常: [Errno 2] No such file or directory: 'd:\\学习资料\\课程\\程序设计大作业\\EnhancingLLM\\EnhancingLLM\\all_prompt\\proofwriter\\instruction.txt'
+[10:18:59]   [ProofWriter_RelNeg-OWA-D5-355_Q4] ⚠ 异常: [Errno 2] No such file or directory: 'd:\\学习资料\\课程\\程序设计大作业\\EnhancingLLM\\EnhancingLLM\\all_prompt\\proofwriter\\instruction.txt'
+[10:18:59]   [ProofWriter_RelNeg-OWA-D5-940_Q9] ⚠ 异常: [Errno 2] No such file or directory: 'd:\\学习资料\\课程\\程序设计大作业\\EnhancingLLM\\EnhancingLLM\\all_prompt\\proofwriter\\instruction.txt'
+[10:18:59]   [ProofWriter_AttNeg-OWA-D5-401_Q4] ⚠ 异常: [Errno 2] No such file or directory: 'd:\\学习资料\\课程\\程序设计大作业\\EnhancingLLM\\EnhancingLLM\\all_prompt\\proofwriter\\instruction.txt'
+[10:18:59]   [ProofWriter_RelNeg-OWA-D5-890_Q2] ⚠ 异常: [Errno 2] No such file or directory: 'd:\\学习资料\\课程\\程序设计大作业\\EnhancingLLM\\EnhancingLLM\\all_prompt\\proofwriter\\instruction.txt'
+[10:18:59]   [ProofWriter_AttNoneg-OWA-D5-583_Q11] ⚠ 异常: [Errno 2] No such file or directory: 'd:\\学习资料\\课程\\程序设计大作业\\EnhancingLLM\\EnhancingLLM\\all_prompt\\proofwriter\\instruction.txt'
+[10:18:59]   [ProofWriter_AttNeg-OWA-D5-804_Q1] ⚠ 异常: [Errno 2] No such file or directory: 'd:\\学习资料\\课程\\程序设计大作业\\EnhancingLLM\\EnhancingLLM\\all_prompt\\proofwriter\\instruction.txt'
+[10:18:59]   [ProofWriter_RelNoneg-OWA-D5-977_Q5] ⚠ 异常: [Errno 2] No such file or directory: 'd:\\学习资料\\课程\\程序设计大作业\\EnhancingLLM\\EnhancingLLM\\all_prompt\\proofwriter\\instruction.txt'
+[10:18:59]   [ProofWriter_AttNoneg-OWA-D5-515_Q4] ⚠ 异常: [Errno 2] No such file or directory: 'd:\\学习资料\\课程\\程序设计大作业\\EnhancingLLM\\EnhancingLLM\\all_prompt\\proofwriter\\instruction.txt'
+[10:18:59]   [ProofWriter_AttNoneg-OWA-D5-754_Q4] ⚠ 异常: [Errno 2] No such file or directory: 'd:\\学习资料\\课程\\程序设计大作业\\EnhancingLLM\\EnhancingLLM\\all_prompt\\proofwriter\\instruction.txt'
+[10:18:59]   [ProofWriter_RelNeg-OWA-D5-317_Q2] ⚠ 异常: [Errno 2] No such file or directory: 'd:\\学习资料\\课程\\程序设计大作业\\EnhancingLLM\\EnhancingLLM\\all_prompt\\proofwriter\\instruction.txt'
+[10:18:59]   [ProofWriter_AttNoneg-OWA-D5-412_Q9] ⚠ 异常: [Errno 2] No such file or directory: 'd:\\学习资料\\课程\\程序设计大作业\\EnhancingLLM\\EnhancingLLM\\all_prompt\\proofwriter\\instruction.txt'
+[10:18:59]   [ProofWriter_AttNoneg-OWA-D5-572_Q4] ⚠ 异常: [Errno 2] No such file or directory: 'd:\\学习资料\\课程\\程序设计大作业\\EnhancingLLM\\EnhancingLLM\\all_prompt\\proofwriter\\instruction.txt'
+[10:18:59]   [ProofWriter_AttNeg-OWA-D5-107_Q1] ⚠ 异常: [Errno 2] No such file or directory: 'd:\\学习资料\\课程\\程序设计大作业\\EnhancingLLM\\EnhancingLLM\\all_prompt\\proofwriter\\instruction.txt'
+[10:18:59]   [ProofWriter_RelNeg-OWA-D5-68_Q2] ⚠ 异常: [Errno 2] No such file or directory: 'd:\\学习资料\\课程\\程序设计大作业\\EnhancingLLM\\EnhancingLLM\\all_prompt\\proofwriter\\instruction.txt'
+[10:18:59]   [ProofWriter_RelNoneg-OWA-D5-992_Q10] ⚠ 异常: [Errno 2] No such file or directory: 'd:\\学习资料\\课程\\程序设计大作业\\EnhancingLLM\\EnhancingLLM\\all_prompt\\proofwriter\\instruction.txt'
+[10:18:59]   [ProofWriter_RelNeg-OWA-D5-224_Q4] ⚠ 异常: [Errno 2] No such file or directory: 'd:\\学习资料\\课程\\程序设计大作业\\EnhancingLLM\\EnhancingLLM\\all_prompt\\proofwriter\\instruction.txt'
+[10:18:59]   [ProofWriter_RelNoneg-OWA-D5-428_Q17] ⚠ 异常: [Errno 2] No such file or directory: 'd:\\学习资料\\课程\\程序设计大作业\\EnhancingLLM\\EnhancingLLM\\all_prompt\\proofwriter\\instruction.txt'
+[10:18:59]   [ProofWriter_RelNeg-OWA-D5-13_Q11] ⚠ 异常: [Errno 2] No such file or directory: 'd:\\学习资料\\课程\\程序设计大作业\\EnhancingLLM\\EnhancingLLM\\all_prompt\\proofwriter\\instruction.txt'
+[10:18:59]   [ProofWriter_RelNoneg-OWA-D5-781_Q8] ⚠ 异常: [Errno 2] No such file or directory: 'd:\\学习资料\\课程\\程序设计大作业\\EnhancingLLM\\EnhancingLLM\\all_prompt\\proofwriter\\instruction.txt'
+[10:18:59] ==================================================
+[10:18:59] 评测完成!
+[10:18:59] 已完成: 50, 正确: 0, 错误: 0, 异常: 50
+[10:18:59] 准确率: 0.00%
+[10:18:59] ==================================================
+[10:19:29] 正在加载数据集: D:/学习资料/课程/程序设计大作业/EnhancingLLM/EnhancingLLM/data/ProofWriter_test.json
+[10:19:29] 共 50 道题目，使用 4 个 workers 并行处理
+[10:19:29] [Worker] 开始处理: ProofWriter_AttNeg-OWA-D5-1015_Q3 (mode=direct, semantic_check=False, refinement_code=False)
+[10:19:29] [Worker] 开始处理: ProofWriter_AttNeg-OWA-D5-489_Q2 (mode=direct, semantic_check=False, refinement_code=False)
+[10:19:29]   [ProofWriter_AttNeg-OWA-D5-1015_Q3] ⚠ 异常: [Errno 2] No such file or directory: 'd:\\学习资料\\课程\\程序设计大作业\\EnhancingLLM\\EnhancingLLM\\all_prompt\\proofwriter\\instruction.txt'
+[10:19:29] [Worker] 开始处理: ProofWriter_AttNoneg-OWA-D5-20_Q10 (mode=direct, semantic_check=False, refinement_code=False)
+[10:19:29] [Worker] 开始处理: ProofWriter_AttNoneg-OWA-D5-178_Q18 (mode=direct, semantic_check=False, refinement_code=False)
+[10:19:29] [Worker] 开始处理: ProofWriter_AttNoneg-OWA-D5-613_Q12 (mode=direct, semantic_check=False, refinement_code=False)
+[10:19:29]   [ProofWriter_AttNeg-OWA-D5-489_Q2] ⚠ 异常: [Errno 2] No such file or directory: 'd:\\学习资料\\课程\\程序设计大作业\\EnhancingLLM\\EnhancingLLM\\all_prompt\\proofwriter\\instruction.txt'
+[10:19:29] [Worker] 开始处理: ProofWriter_AttNeg-OWA-D5-1170_Q10 (mode=direct, semantic_check=False, refinement_code=False)
+[10:19:29] [Worker] 开始处理: ProofWriter_AttNoneg-OWA-D5-308_Q8 (mode=direct, semantic_check=False, refinement_code=False)
+[10:19:29] [Worker] 开始处理: ProofWriter_RelNeg-OWA-D5-249_Q9 (mode=direct, semantic_check=False, refinement_code=False)
+[10:19:29] [Worker] 开始处理: ProofWriter_RelNoneg-OWA-D5-789_Q21 (mode=direct, semantic_check=False, refinement_code=False)
+[10:19:29]   [ProofWriter_AttNoneg-OWA-D5-20_Q10] ⚠ 异常: [Errno 2] No such file or directory: 'd:\\学习资料\\课程\\程序设计大作业\\EnhancingLLM\\EnhancingLLM\\all_prompt\\proofwriter\\instruction.txt'
+[10:19:29] [Worker] 开始处理: ProofWriter_AttNeg-OWA-D5-891_Q1 (mode=direct, semantic_check=False, refinement_code=False)
+[10:19:29] [Worker] 开始处理: ProofWriter_RelNeg-OWA-D5-173_Q10 (mode=direct, semantic_check=False, refinement_code=False)
+[10:19:29] [Worker] 开始处理: ProofWriter_RelNoneg-OWA-D5-502_Q3 (mode=direct, semantic_check=False, refinement_code=False)
+[10:19:29] [Worker] 开始处理: ProofWriter_AttNoneg-OWA-D5-785_Q10 (mode=direct, semantic_check=False, refinement_code=False)
+[10:19:29]   [ProofWriter_AttNoneg-OWA-D5-178_Q18] ⚠ 异常: [Errno 2] No such file or directory: 'd:\\学习资料\\课程\\程序设计大作业\\EnhancingLLM\\EnhancingLLM\\all_prompt\\proofwriter\\instruction.txt'
+[10:19:29] [Worker] 开始处理: ProofWriter_AttNoneg-OWA-D5-308_Q1 (mode=direct, semantic_check=False, refinement_code=False)
+[10:19:29] [Worker] 开始处理: ProofWriter_AttNeg-OWA-D5-959_Q2 (mode=direct, semantic_check=False, refinement_code=False)
+[10:19:29] [Worker] 开始处理: ProofWriter_RelNoneg-OWA-D5-116_Q12 (mode=direct, semantic_check=False, refinement_code=False)
+[10:19:29] [Worker] 开始处理: ProofWriter_AttNeg-OWA-D5-891_Q18 (mode=direct, semantic_check=False, refinement_code=False)
+[10:19:29]   [ProofWriter_AttNoneg-OWA-D5-613_Q12] ⚠ 异常: [Errno 2] No such file or directory: 'd:\\学习资料\\课程\\程序设计大作业\\EnhancingLLM\\EnhancingLLM\\all_prompt\\proofwriter\\instruction.txt'
+[10:19:29] [Worker] 开始处理: ProofWriter_AttNoneg-OWA-D5-844_Q7 (mode=direct, semantic_check=False, refinement_code=False)
+[10:19:29] [Worker] 开始处理: ProofWriter_RelNoneg-OWA-D5-280_Q3 (mode=direct, semantic_check=False, refinement_code=False)
+[10:19:29] [Worker] 开始处理: ProofWriter_RelNoneg-OWA-D5-272_Q14 (mode=direct, semantic_check=False, refinement_code=False)
+[10:19:29]   [ProofWriter_RelNeg-OWA-D5-249_Q9] ⚠ 异常: [Errno 2] No such file or directory: 'd:\\学习资料\\课程\\程序设计大作业\\EnhancingLLM\\EnhancingLLM\\all_prompt\\proofwriter\\instruction.txt'
+[10:19:29] [Worker] 开始处理: ProofWriter_AttNoneg-OWA-D5-83_Q10 (mode=direct, semantic_check=False, refinement_code=False)
+[10:19:29] [Worker] 开始处理: ProofWriter_RelNeg-OWA-D5-668_Q14 (mode=direct, semantic_check=False, refinement_code=False)
+[10:19:29]   [ProofWriter_AttNoneg-OWA-D5-308_Q8] ⚠ 异常: [Errno 2] No such file or directory: 'd:\\学习资料\\课程\\程序设计大作业\\EnhancingLLM\\EnhancingLLM\\all_prompt\\proofwriter\\instruction.txt'
+[10:19:29] [Worker] 开始处理: ProofWriter_AttNeg-OWA-D5-694_Q2 (mode=direct, semantic_check=False, refinement_code=False)
+[10:19:29] [Worker] 开始处理: ProofWriter_RelNoneg-OWA-D5-213_Q8 (mode=direct, semantic_check=False, refinement_code=False)
+[10:19:29] [Worker] 开始处理: ProofWriter_RelNeg-OWA-D5-345_Q13 (mode=direct, semantic_check=False, refinement_code=False)
+[10:19:29]   [ProofWriter_AttNeg-OWA-D5-1170_Q10] ⚠ 异常: [Errno 2] No such file or directory: 'd:\\学习资料\\课程\\程序设计大作业\\EnhancingLLM\\EnhancingLLM\\all_prompt\\proofwriter\\instruction.txt'
+[10:19:29] [Worker] 开始处理: ProofWriter_RelNeg-OWA-D5-294_Q2 (mode=direct, semantic_check=False, refinement_code=False)
+[10:19:29] [Worker] 开始处理: ProofWriter_RelNeg-OWA-D5-174_Q18 (mode=direct, semantic_check=False, refinement_code=False)
+[10:19:29] [Worker] 开始处理: ProofWriter_AttNoneg-OWA-D5-1331_Q16 (mode=direct, semantic_check=False, refinement_code=False)
+[10:19:29] [Worker] 开始处理: ProofWriter_AttNeg-OWA-D5-960_Q6 (mode=direct, semantic_check=False, refinement_code=False)
+[10:19:29]   [ProofWriter_RelNoneg-OWA-D5-789_Q21] ⚠ 异常: [Errno 2] No such file or directory: 'd:\\学习资料\\课程\\程序设计大作业\\EnhancingLLM\\EnhancingLLM\\all_prompt\\proofwriter\\instruction.txt'
+[10:19:29] [Worker] 开始处理: ProofWriter_AttNeg-OWA-D5-908_Q16 (mode=direct, semantic_check=False, refinement_code=False)
+[10:19:29] [Worker] 开始处理: ProofWriter_AttNoneg-OWA-D5-1251_Q3 (mode=direct, semantic_check=False, refinement_code=False)
+[10:19:29] [Worker] 开始处理: ProofWriter_RelNeg-OWA-D5-355_Q4 (mode=direct, semantic_check=False, refinement_code=False)
+[10:19:29] [Worker] 开始处理: ProofWriter_AttNeg-OWA-D5-401_Q4 (mode=direct, semantic_check=False, refinement_code=False)
+[10:19:29]   [ProofWriter_AttNeg-OWA-D5-891_Q1] ⚠ 异常: [Errno 2] No such file or directory: 'd:\\学习资料\\课程\\程序设计大作业\\EnhancingLLM\\EnhancingLLM\\all_prompt\\proofwriter\\instruction.txt'
+[10:19:29] [Worker] 开始处理: ProofWriter_RelNeg-OWA-D5-940_Q9 (mode=direct, semantic_check=False, refinement_code=False)
+[10:19:29] [Worker] 开始处理: ProofWriter_AttNoneg-OWA-D5-583_Q11 (mode=direct, semantic_check=False, refinement_code=False)
+[10:19:29]   [ProofWriter_RelNoneg-OWA-D5-502_Q3] ⚠ 异常: [Errno 2] No such file or directory: 'd:\\学习资料\\课程\\程序设计大作业\\EnhancingLLM\\EnhancingLLM\\all_prompt\\proofwriter\\instruction.txt'
+[10:19:30] [Worker] 开始处理: ProofWriter_RelNeg-OWA-D5-890_Q2 (mode=direct, semantic_check=False, refinement_code=False)
+[10:19:30] [Worker] 开始处理: ProofWriter_AttNeg-OWA-D5-804_Q1 (mode=direct, semantic_check=False, refinement_code=False)
+[10:19:30]   [ProofWriter_RelNeg-OWA-D5-173_Q10] ⚠ 异常: [Errno 2] No such file or directory: 'd:\\学习资料\\课程\\程序设计大作业\\EnhancingLLM\\EnhancingLLM\\all_prompt\\proofwriter\\instruction.txt'
+[10:19:30] [Worker] 开始处理: ProofWriter_AttNoneg-OWA-D5-515_Q4 (mode=direct, semantic_check=False, refinement_code=False)
+[10:19:30] [Worker] 开始处理: ProofWriter_RelNoneg-OWA-D5-977_Q5 (mode=direct, semantic_check=False, refinement_code=False)
+[10:19:30] [Worker] 开始处理: ProofWriter_AttNoneg-OWA-D5-754_Q4 (mode=direct, semantic_check=False, refinement_code=False)
+[10:19:30] [Worker] 开始处理: ProofWriter_RelNeg-OWA-D5-317_Q2 (mode=direct, semantic_check=False, refinement_code=False)
+[10:19:30]   [ProofWriter_AttNoneg-OWA-D5-785_Q10] ⚠ 异常: [Errno 2] No such file or directory: 'd:\\学习资料\\课程\\程序设计大作业\\EnhancingLLM\\EnhancingLLM\\all_prompt\\proofwriter\\instruction.txt'
+[10:19:30] [Worker] 开始处理: ProofWriter_AttNoneg-OWA-D5-572_Q4 (mode=direct, semantic_check=False, refinement_code=False)
+[10:19:30] [Worker] 开始处理: ProofWriter_RelNoneg-OWA-D5-992_Q10 (mode=direct, semantic_check=False, refinement_code=False)
+[10:19:30]   [ProofWriter_AttNoneg-OWA-D5-308_Q1] ⚠ 异常: [Errno 2] No such file or directory: 'd:\\学习资料\\课程\\程序设计大作业\\EnhancingLLM\\EnhancingLLM\\all_prompt\\proofwriter\\instruction.txt'
+[10:19:30] [Worker] 开始处理: ProofWriter_AttNoneg-OWA-D5-412_Q9 (mode=direct, semantic_check=False, refinement_code=False)
+[10:19:30] [Worker] 开始处理: ProofWriter_RelNeg-OWA-D5-68_Q2 (mode=direct, semantic_check=False, refinement_code=False)
+[10:19:30]   [ProofWriter_RelNoneg-OWA-D5-116_Q12] ⚠ 异常: [Errno 2] No such file or directory: 'd:\\学习资料\\课程\\程序设计大作业\\EnhancingLLM\\EnhancingLLM\\all_prompt\\proofwriter\\instruction.txt'
+[10:19:30] [Worker] 开始处理: ProofWriter_AttNeg-OWA-D5-107_Q1 (mode=direct, semantic_check=False, refinement_code=False)
+[10:19:30] [Worker] 开始处理: ProofWriter_RelNeg-OWA-D5-13_Q11 (mode=direct, semantic_check=False, refinement_code=False)
+[10:19:30] [Worker] 开始处理: ProofWriter_RelNeg-OWA-D5-224_Q4 (mode=direct, semantic_check=False, refinement_code=False)
+[10:19:30]   [ProofWriter_AttNeg-OWA-D5-959_Q2] ⚠ 异常: [Errno 2] No such file or directory: 'd:\\学习资料\\课程\\程序设计大作业\\EnhancingLLM\\EnhancingLLM\\all_prompt\\proofwriter\\instruction.txt'
+[10:19:30] [Worker] 开始处理: ProofWriter_RelNoneg-OWA-D5-781_Q8 (mode=direct, semantic_check=False, refinement_code=False)
+[10:19:30] [Worker] 开始处理: ProofWriter_RelNoneg-OWA-D5-428_Q17 (mode=direct, semantic_check=False, refinement_code=False)
+[10:19:30]   [ProofWriter_AttNeg-OWA-D5-891_Q18] ⚠ 异常: [Errno 2] No such file or directory: 'd:\\学习资料\\课程\\程序设计大作业\\EnhancingLLM\\EnhancingLLM\\all_prompt\\proofwriter\\instruction.txt'
+[10:19:30]   [ProofWriter_AttNoneg-OWA-D5-844_Q7] ⚠ 异常: [Errno 2] No such file or directory: 'd:\\学习资料\\课程\\程序设计大作业\\EnhancingLLM\\EnhancingLLM\\all_prompt\\proofwriter\\instruction.txt'
+[10:19:30]   [ProofWriter_RelNoneg-OWA-D5-280_Q3] ⚠ 异常: [Errno 2] No such file or directory: 'd:\\学习资料\\课程\\程序设计大作业\\EnhancingLLM\\EnhancingLLM\\all_prompt\\proofwriter\\instruction.txt'
+[10:19:30]   [ProofWriter_RelNoneg-OWA-D5-272_Q14] ⚠ 异常: [Errno 2] No such file or directory: 'd:\\学习资料\\课程\\程序设计大作业\\EnhancingLLM\\EnhancingLLM\\all_prompt\\proofwriter\\instruction.txt'
+[10:19:30]   [ProofWriter_AttNoneg-OWA-D5-83_Q10] ⚠ 异常: [Errno 2] No such file or directory: 'd:\\学习资料\\课程\\程序设计大作业\\EnhancingLLM\\EnhancingLLM\\all_prompt\\proofwriter\\instruction.txt'
+[10:19:30]   [ProofWriter_RelNeg-OWA-D5-668_Q14] ⚠ 异常: [Errno 2] No such file or directory: 'd:\\学习资料\\课程\\程序设计大作业\\EnhancingLLM\\EnhancingLLM\\all_prompt\\proofwriter\\instruction.txt'
+[10:19:30]   [ProofWriter_AttNeg-OWA-D5-694_Q2] ⚠ 异常: [Errno 2] No such file or directory: 'd:\\学习资料\\课程\\程序设计大作业\\EnhancingLLM\\EnhancingLLM\\all_prompt\\proofwriter\\instruction.txt'
+[10:19:30]   [ProofWriter_RelNoneg-OWA-D5-213_Q8] ⚠ 异常: [Errno 2] No such file or directory: 'd:\\学习资料\\课程\\程序设计大作业\\EnhancingLLM\\EnhancingLLM\\all_prompt\\proofwriter\\instruction.txt'
+[10:19:30]   [ProofWriter_RelNeg-OWA-D5-345_Q13] ⚠ 异常: [Errno 2] No such file or directory: 'd:\\学习资料\\课程\\程序设计大作业\\EnhancingLLM\\EnhancingLLM\\all_prompt\\proofwriter\\instruction.txt'
+[10:19:30]   [ProofWriter_RelNeg-OWA-D5-294_Q2] ⚠ 异常: [Errno 2] No such file or directory: 'd:\\学习资料\\课程\\程序设计大作业\\EnhancingLLM\\EnhancingLLM\\all_prompt\\proofwriter\\instruction.txt'
+[10:19:30]   [ProofWriter_RelNeg-OWA-D5-174_Q18] ⚠ 异常: [Errno 2] No such file or directory: 'd:\\学习资料\\课程\\程序设计大作业\\EnhancingLLM\\EnhancingLLM\\all_prompt\\proofwriter\\instruction.txt'
+[10:19:30]   [ProofWriter_AttNoneg-OWA-D5-1331_Q16] ⚠ 异常: [Errno 2] No such file or directory: 'd:\\学习资料\\课程\\程序设计大作业\\EnhancingLLM\\EnhancingLLM\\all_prompt\\proofwriter\\instruction.txt'
+[10:19:30]   [ProofWriter_AttNeg-OWA-D5-960_Q6] ⚠ 异常: [Errno 2] No such file or directory: 'd:\\学习资料\\课程\\程序设计大作业\\EnhancingLLM\\EnhancingLLM\\all_prompt\\proofwriter\\instruction.txt'
+[10:19:30]   [ProofWriter_AttNeg-OWA-D5-908_Q16] ⚠ 异常: [Errno 2] No such file or directory: 'd:\\学习资料\\课程\\程序设计大作业\\EnhancingLLM\\EnhancingLLM\\all_prompt\\proofwriter\\instruction.txt'
+[10:19:30]   [ProofWriter_AttNoneg-OWA-D5-1251_Q3] ⚠ 异常: [Errno 2] No such file or directory: 'd:\\学习资料\\课程\\程序设计大作业\\EnhancingLLM\\EnhancingLLM\\all_prompt\\proofwriter\\instruction.txt'
+[10:19:30]   [ProofWriter_RelNeg-OWA-D5-355_Q4] ⚠ 异常: [Errno 2] No such file or directory: 'd:\\学习资料\\课程\\程序设计大作业\\EnhancingLLM\\EnhancingLLM\\all_prompt\\proofwriter\\instruction.txt'
+[10:19:30]   [ProofWriter_AttNeg-OWA-D5-401_Q4] ⚠ 异常: [Errno 2] No such file or directory: 'd:\\学习资料\\课程\\程序设计大作业\\EnhancingLLM\\EnhancingLLM\\all_prompt\\proofwriter\\instruction.txt'
+[10:19:30]   [ProofWriter_RelNeg-OWA-D5-940_Q9] ⚠ 异常: [Errno 2] No such file or directory: 'd:\\学习资料\\课程\\程序设计大作业\\EnhancingLLM\\EnhancingLLM\\all_prompt\\proofwriter\\instruction.txt'
+[10:19:30]   [ProofWriter_RelNeg-OWA-D5-890_Q2] ⚠ 异常: [Errno 2] No such file or directory: 'd:\\学习资料\\课程\\程序设计大作业\\EnhancingLLM\\EnhancingLLM\\all_prompt\\proofwriter\\instruction.txt'
+[10:19:30]   [ProofWriter_AttNoneg-OWA-D5-583_Q11] ⚠ 异常: [Errno 2] No such file or directory: 'd:\\学习资料\\课程\\程序设计大作业\\EnhancingLLM\\EnhancingLLM\\all_prompt\\proofwriter\\instruction.txt'
+[10:19:30]   [ProofWriter_AttNeg-OWA-D5-804_Q1] ⚠ 异常: [Errno 2] No such file or directory: 'd:\\学习资料\\课程\\程序设计大作业\\EnhancingLLM\\EnhancingLLM\\all_prompt\\proofwriter\\instruction.txt'
+[10:19:30]   [ProofWriter_AttNoneg-OWA-D5-515_Q4] ⚠ 异常: [Errno 2] No such file or directory: 'd:\\学习资料\\课程\\程序设计大作业\\EnhancingLLM\\EnhancingLLM\\all_prompt\\proofwriter\\instruction.txt'
+[10:19:30]   [ProofWriter_RelNoneg-OWA-D5-977_Q5] ⚠ 异常: [Errno 2] No such file or directory: 'd:\\学习资料\\课程\\程序设计大作业\\EnhancingLLM\\EnhancingLLM\\all_prompt\\proofwriter\\instruction.txt'
+[10:19:30]   [ProofWriter_AttNoneg-OWA-D5-754_Q4] ⚠ 异常: [Errno 2] No such file or directory: 'd:\\学习资料\\课程\\程序设计大作业\\EnhancingLLM\\EnhancingLLM\\all_prompt\\proofwriter\\instruction.txt'
+[10:19:30]   [ProofWriter_RelNeg-OWA-D5-317_Q2] ⚠ 异常: [Errno 2] No such file or directory: 'd:\\学习资料\\课程\\程序设计大作业\\EnhancingLLM\\EnhancingLLM\\all_prompt\\proofwriter\\instruction.txt'
+[10:19:30]   [ProofWriter_AttNoneg-OWA-D5-572_Q4] ⚠ 异常: [Errno 2] No such file or directory: 'd:\\学习资料\\课程\\程序设计大作业\\EnhancingLLM\\EnhancingLLM\\all_prompt\\proofwriter\\instruction.txt'
+[10:19:30]   [ProofWriter_RelNoneg-OWA-D5-992_Q10] ⚠ 异常: [Errno 2] No such file or directory: 'd:\\学习资料\\课程\\程序设计大作业\\EnhancingLLM\\EnhancingLLM\\all_prompt\\proofwriter\\instruction.txt'
+[10:19:30]   [ProofWriter_AttNoneg-OWA-D5-412_Q9] ⚠ 异常: [Errno 2] No such file or directory: 'd:\\学习资料\\课程\\程序设计大作业\\EnhancingLLM\\EnhancingLLM\\all_prompt\\proofwriter\\instruction.txt'
+[10:19:30]   [ProofWriter_AttNeg-OWA-D5-107_Q1] ⚠ 异常: [Errno 2] No such file or directory: 'd:\\学习资料\\课程\\程序设计大作业\\EnhancingLLM\\EnhancingLLM\\all_prompt\\proofwriter\\instruction.txt'
+[10:19:30]   [ProofWriter_RelNeg-OWA-D5-68_Q2] ⚠ 异常: [Errno 2] No such file or directory: 'd:\\学习资料\\课程\\程序设计大作业\\EnhancingLLM\\EnhancingLLM\\all_prompt\\proofwriter\\instruction.txt'
+[10:19:30]   [ProofWriter_RelNeg-OWA-D5-13_Q11] ⚠ 异常: [Errno 2] No such file or directory: 'd:\\学习资料\\课程\\程序设计大作业\\EnhancingLLM\\EnhancingLLM\\all_prompt\\proofwriter\\instruction.txt'
+[10:19:30]   [ProofWriter_RelNeg-OWA-D5-224_Q4] ⚠ 异常: [Errno 2] No such file or directory: 'd:\\学习资料\\课程\\程序设计大作业\\EnhancingLLM\\EnhancingLLM\\all_prompt\\proofwriter\\instruction.txt'
+[10:19:30]   [ProofWriter_RelNoneg-OWA-D5-781_Q8] ⚠ 异常: [Errno 2] No such file or directory: 'd:\\学习资料\\课程\\程序设计大作业\\EnhancingLLM\\EnhancingLLM\\all_prompt\\proofwriter\\instruction.txt'
+[10:19:30]   [ProofWriter_RelNoneg-OWA-D5-428_Q17] ⚠ 异常: [Errno 2] No such file or directory: 'd:\\学习资料\\课程\\程序设计大作业\\EnhancingLLM\\EnhancingLLM\\all_prompt\\proofwriter\\instruction.txt'
+[10:19:30] ==================================================
+[10:19:30] 评测完成!
+[10:19:30] 已完成: 50, 正确: 0, 错误: 0, 异常: 50
+[10:19:30] 准确率: 0.00%
+[10:19:30] ==================================================
+[10:26:41] 正在加载数据集: D:/学习资料/课程/程序设计大作业/EnhancingLLM/EnhancingLLM/data/ProofWriter_test.json
+[10:26:41] 共 50 道题目，使用 4 个 workers 并行处理
+[10:26:41] [Worker] 开始处理: ProofWriter_AttNeg-OWA-D5-489_Q2 (mode=direct, semantic_check=False, refinement_code=False)
+[10:26:42] [Worker] 开始处理: ProofWriter_AttNoneg-OWA-D5-178_Q18 (mode=direct, semantic_check=False, refinement_code=False)
+[10:26:42] [Worker] 开始处理: ProofWriter_AttNeg-OWA-D5-1015_Q3 (mode=direct, semantic_check=False, refinement_code=False)
+[10:26:42] [Worker] 开始处理: ProofWriter_AttNoneg-OWA-D5-20_Q10 (mode=direct, semantic_check=False, refinement_code=False)
+[10:26:48]   [ProofWriter_AttNeg-OWA-D5-489_Q2] 代码自动修复: 检测到缺少 6 个右括号; 第29行: 添加 1 个右括号; 第30行: 添加 1 个右括号; 第31行: 添加 1 个右括号; 第32行: 添加 1 个右括号; 第33行: 添加 1 个右括号; 第34行: 添加 1 个右括号; 自动添加未定义的Bool变量: s; 自动添加未定义的Bool变量: stmt
+[10:26:48]   [ProofWriter_AttNeg-OWA-D5-489_Q2] ✓ 正确! 预测=B, 答案=B
+[10:26:48] [Worker] 开始处理: ProofWriter_AttNoneg-OWA-D5-613_Q12 (mode=direct, semantic_check=False, refinement_code=False)
+[10:26:49]   [ProofWriter_AttNoneg-OWA-D5-20_Q10] 代码自动修复: 检测到缺少 4 个右括号; 第36行: 添加 1 个右括号; 第37行: 添加 1 个右括号; 第38行: 添加 1 个右括号; 第39行: 添加 1 个右括号; 自动添加未定义的Bool变量: s; 自动添加未定义的Bool变量: stmt
+[10:26:49]   [ProofWriter_AttNoneg-OWA-D5-20_Q10] ✓ 正确! 预测=B, 答案=B
+[10:26:49] [Worker] 开始处理: ProofWriter_RelNeg-OWA-D5-249_Q9 (mode=direct, semantic_check=False, refinement_code=False)
+[10:26:49]   [ProofWriter_AttNoneg-OWA-D5-178_Q18] 代码自动修复: 检测到缺少 6 个右括号; 第29行: 添加 1 个右括号; 第30行: 添加 1 个右括号; 第31行: 添加 1 个右括号; 第32行: 添加 1 个右括号; 第33行: 添加 1 个右括号; 第35行: 添加 1 个右括号; 自动添加未定义的Bool变量: s; 自动添加未定义的Bool变量: stmt
+[10:26:49]   [ProofWriter_AttNoneg-OWA-D5-178_Q18] ✓ 正确! 预测=C, 答案=C
+[10:26:49] [Worker] 开始处理: ProofWriter_AttNeg-OWA-D5-1170_Q10 (mode=direct, semantic_check=False, refinement_code=False)
+[10:26:49]   [ProofWriter_AttNeg-OWA-D5-1015_Q3] 代码自动修复: 检测到缺少 8 个右括号; 第29行: 添加 1 个右括号; 第33行: 添加 1 个右括号; 第34行: 添加 1 个右括号; 第35行: 添加 1 个右括号; 第36行: 添加 1 个右括号; 第37行: 添加 1 个右括号; 第38行: 添加 2 个右括号; 自动添加未定义的Bool变量: s; 自动添加未定义的Bool变量: stmt
+[10:26:49]   [ProofWriter_AttNeg-OWA-D5-1015_Q3] ✗ 错误! 预测=C, 答案=A
+[10:26:49] [Worker] 开始处理: ProofWriter_AttNoneg-OWA-D5-308_Q8 (mode=direct, semantic_check=False, refinement_code=False)
+[10:26:54]   [ProofWriter_RelNeg-OWA-D5-249_Q9] 代码自动修复: 检测到缺少 1 个右括号; 第36行: 添加 1 个右括号; 自动添加未定义的Bool变量: s; 自动添加未定义的Bool变量: stmt
+[10:26:54]   [ProofWriter_RelNeg-OWA-D5-249_Q9] ✓ 正确! 预测=A, 答案=A
+[10:26:54] [Worker] 开始处理: ProofWriter_RelNoneg-OWA-D5-789_Q21 (mode=direct, semantic_check=False, refinement_code=False)
+[10:26:56]   [ProofWriter_AttNeg-OWA-D5-1170_Q10] 代码自动修复: 检测到缺少 11 个右括号; 第29行: 添加 1 个右括号; 第30行: 添加 1 个右括号; 第31行: 添加 1 个右括号; 第32行: 添加 1 个右括号; 第33行: 添加 1 个右括号; 第34行: 添加 1 个右括号; 第35行: 添加 2 个右括号; 第36行: 添加 1 个右括号; 第37行: 添加 2 个右括号; 自动添加未定义的Bool变量: s; 自动添加未定义的Bool变量: stmt; 第37行: 修复 Implies 缺少第二个参数（从And中提取）; 第39行: 修复 Implies 缺少第二个参数（从And中提取）
+[10:26:56]   [ProofWriter_AttNeg-OWA-D5-1170_Q10] ✗ 错误! 预测=A, 答案=B
+[10:26:56] [Worker] 开始处理: ProofWriter_RelNoneg-OWA-D5-502_Q3 (mode=direct, semantic_check=False, refinement_code=False)
+[10:26:56]   [ProofWriter_AttNoneg-OWA-D5-308_Q8] 代码自动修复: 检测到缺少 7 个右括号; 第28行: 添加 1 个右括号; 第29行: 添加 1 个右括号; 第30行: 添加 1 个右括号; 第31行: 添加 1 个右括号; 第33行: 添加 1 个右括号; 第34行: 添加 1 个右括号; 第35行: 添加 1 个右括号; 自动添加未定义的Bool变量: s; 自动添加未定义的Bool变量: stmt
+[10:26:56]   [ProofWriter_AttNoneg-OWA-D5-308_Q8] ✓ 正确! 预测=B, 答案=B
+[10:26:56] [Worker] 开始处理: ProofWriter_AttNeg-OWA-D5-891_Q1 (mode=direct, semantic_check=False, refinement_code=False)
+[10:26:56]   [ProofWriter_AttNoneg-OWA-D5-613_Q12] 代码自动修复: 检测到缺少 7 个右括号; 第33行: 添加 1 个右括号; 第34行: 添加 1 个右括号; 第35行: 添加 1 个右括号; 第36行: 添加 1 个右括号; 第37行: 添加 1 个右括号; 第38行: 添加 1 个右括号; 第39行: 添加 1 个右括号; 自动添加未定义的Bool变量: s; 自动添加未定义的Bool变量: stmt
+[10:26:56]   [ProofWriter_AttNoneg-OWA-D5-613_Q12] ✓ 正确! 预测=B, 答案=B
+[10:26:56] [Worker] 开始处理: ProofWriter_AttNoneg-OWA-D5-785_Q10 (mode=direct, semantic_check=False, refinement_code=False)
+[10:26:59]   [ProofWriter_RelNoneg-OWA-D5-789_Q21] 代码自动修复: 检测到缺少 8 个右括号; 第33行: 添加 1 个右括号; 第34行: 添加 1 个右括号; 第35行: 添加 1 个右括号; 第36行: 添加 1 个右括号; 第37行: 添加 1 个右括号; 第38行: 添加 1 个右括号; 第39行: 添加 1 个右括号; 第40行: 添加 1 个右括号; 自动添加未定义的Bool变量: s; 自动添加未定义的Bool变量: stmt; 检测到未定义的谓词: Red; 添加谓词定义: Red (参数数量: 1); 自动添加未定义的量化变量: x = Const('x', Entity)
+[10:26:59]   [ProofWriter_RelNoneg-OWA-D5-789_Q21] ✓ 正确! 预测=C, 答案=C
+[10:26:59] [Worker] 开始处理: ProofWriter_RelNeg-OWA-D5-173_Q10 (mode=direct, semantic_check=False, refinement_code=False)
+[10:27:02]   [ProofWriter_AttNoneg-OWA-D5-785_Q10] 代码自动修复: 检测到缺少 5 个右括号; 第33行: 添加 1 个右括号; 第34行: 添加 1 个右括号; 第35行: 添加 1 个右括号; 第36行: 添加 1 个右括号; 第37行: 添加 1 个右括号; 自动添加未定义的Bool变量: s; 自动添加未定义的Bool变量: stmt
+[10:27:02]   [ProofWriter_AttNoneg-OWA-D5-785_Q10] ✗ 错误! 预测=C, 答案=B
+[10:27:02] [Worker] 开始处理: ProofWriter_AttNoneg-OWA-D5-308_Q1 (mode=direct, semantic_check=False, refinement_code=False)
+[10:27:03]   [ProofWriter_RelNoneg-OWA-D5-502_Q3] 代码自动修复: 检测到缺少 7 个右括号; 第28行: 添加 1 个右括号; 第29行: 添加 1 个右括号; 第30行: 添加 1 个右括号; 第31行: 添加 1 个右括号; 第32行: 添加 1 个右括号; 第33行: 添加 1 个右括号; 第34行: 添加 1 个右括号; 自动添加未定义的Bool变量: s; 自动添加未定义的Bool变量: stmt; 检测到未定义的谓词: Nice; 添加谓词定义: Nice (参数数量: 1)
+[10:27:03]   [ProofWriter_RelNoneg-OWA-D5-502_Q3] ✓ 正确! 预测=A, 答案=A
+[10:27:03] [Worker] 开始处理: ProofWriter_AttNeg-OWA-D5-891_Q18 (mode=direct, semantic_check=False, refinement_code=False)
+[10:27:04]   [ProofWriter_AttNeg-OWA-D5-891_Q1] 代码自动修复: 检测到缺少 8 个右括号; 第29行: 添加 1 个右括号; 第30行: 添加 1 个右括号; 第31行: 添加 1 个右括号; 第32行: 添加 1 个右括号; 第33行: 添加 1 个右括号; 第34行: 添加 1 个右括号; 第35行: 添加 1 个右括号; 第36行: 添加 1 个右括号; 自动添加未定义的Bool变量: s; 自动添加未定义的Bool变量: stmt
+[10:27:04]   [ProofWriter_AttNeg-OWA-D5-891_Q1] ✓ 正确! 预测=A, 答案=A
+[10:27:04] [Worker] 开始处理: ProofWriter_AttNeg-OWA-D5-959_Q2 (mode=direct, semantic_check=False, refinement_code=False)
+[10:27:05]   [ProofWriter_RelNeg-OWA-D5-173_Q10] 代码自动修复: 检测到缺少 8 个右括号; 第33行: 添加 1 个右括号; 第34行: 添加 1 个右括号; 第35行: 添加 1 个右括号; 第36行: 添加 1 个右括号; 第37行: 添加 1 个右括号; 第38行: 添加 2 个右括号; 第39行: 添加 1 个右括号; 自动添加未定义的Bool变量: s; 自动添加未定义的Bool变量: stmt
+[10:27:05]   [ProofWriter_RelNeg-OWA-D5-173_Q10] ✓ 正确! 预测=B, 答案=B
+[10:27:05] [Worker] 开始处理: ProofWriter_RelNoneg-OWA-D5-116_Q12 (mode=direct, semantic_check=False, refinement_code=False)
+[10:27:08]   [ProofWriter_AttNoneg-OWA-D5-308_Q1] 代码自动修复: 检测到缺少 8 个右括号; 第29行: 添加 1 个右括号; 第30行: 添加 1 个右括号; 第31行: 添加 1 个右括号; 第32行: 添加 1 个右括号; 第33行: 添加 1 个右括号; 第34行: 添加 1 个右括号; 第35行: 添加 1 个右括号; 第36行: 添加 1 个右括号; 自动添加未定义的Bool变量: s; 自动添加未定义的Bool变量: stmt
+[10:27:08]   [ProofWriter_AttNoneg-OWA-D5-308_Q1] ✓ 正确! 预测=A, 答案=A
+[10:27:08] [Worker] 开始处理: ProofWriter_AttNoneg-OWA-D5-844_Q7 (mode=direct, semantic_check=False, refinement_code=False)
+[10:27:09]   [ProofWriter_AttNeg-OWA-D5-959_Q2] 代码自动修复: 检测到缺少 5 个右括号; 第28行: 添加 1 个右括号; 第29行: 添加 1 个右括号; 第30行: 添加 1 个右括号; 第31行: 添加 1 个右括号; 第32行: 添加 1 个右括号; 自动添加未定义的Bool变量: s; 自动添加未定义的Bool变量: stmt
+[10:27:09]   [ProofWriter_AttNeg-OWA-D5-959_Q2] ✓ 正确! 预测=B, 答案=B
+[10:27:09] [Worker] 开始处理: ProofWriter_RelNoneg-OWA-D5-280_Q3 (mode=direct, semantic_check=False, refinement_code=False)
+[10:27:09]   [ProofWriter_AttNeg-OWA-D5-891_Q18] 代码自动修复: 检测到缺少 1 个右括号; 第36行: 添加 1 个右括号; 自动添加未定义的Bool变量: s; 自动添加未定义的Bool变量: stmt
+[10:27:09]   [ProofWriter_AttNeg-OWA-D5-891_Q18] ✓ 正确! 预测=C, 答案=C
+[10:27:09] [Worker] 开始处理: ProofWriter_RelNoneg-OWA-D5-272_Q14 (mode=direct, semantic_check=False, refinement_code=False)
+[10:27:11]   [ProofWriter_RelNoneg-OWA-D5-116_Q12] 代码自动修复: 检测到缺少 8 个右括号; 第31行: 添加 1 个右括号; 第32行: 添加 1 个右括号; 第33行: 添加 1 个右括号; 第34行: 添加 1 个右括号; 第35行: 添加 1 个右括号; 第36行: 添加 1 个右括号; 第37行: 添加 1 个右括号; 第38行: 添加 1 个右括号; 自动添加未定义的Bool变量: s; 自动添加未定义的Bool变量: stmt
+[10:27:11]   [ProofWriter_RelNoneg-OWA-D5-116_Q12] ✓ 正确! 预测=B, 答案=B
+[10:27:11] [Worker] 开始处理: ProofWriter_AttNoneg-OWA-D5-83_Q10 (mode=direct, semantic_check=False, refinement_code=False)
+[10:27:13]   [ProofWriter_AttNoneg-OWA-D5-844_Q7] 代码自动修复: 检测到缺少 2 个右括号; 第30行: 添加 1 个右括号; 第32行: 添加 1 个右括号; 自动添加未定义的Bool变量: s; 自动添加未定义的Bool变量: stmt
+[10:27:13]   [ProofWriter_AttNoneg-OWA-D5-844_Q7] ✓ 正确! 预测=A, 答案=A
+[10:27:13] [Worker] 开始处理: ProofWriter_AttNeg-OWA-D5-694_Q2 (mode=direct, semantic_check=False, refinement_code=False)
+[10:27:15]   [ProofWriter_RelNoneg-OWA-D5-280_Q3] 代码自动修复: 检测到缺少 3 个右括号; 第42行: 添加 1 个右括号; 第43行: 添加 1 个右括号; 第44行: 添加 1 个右括号; 自动添加未定义的Bool变量: s; 自动添加未定义的Bool变量: stmt
+[10:27:15]   [ProofWriter_RelNoneg-OWA-D5-280_Q3] ✓ 正确! 预测=A, 答案=A
+[10:27:15] [Worker] 开始处理: ProofWriter_RelNeg-OWA-D5-668_Q14 (mode=direct, semantic_check=False, refinement_code=False)
+[10:27:15]   [ProofWriter_AttNoneg-OWA-D5-83_Q10] 代码自动修复: 自动添加未定义的Bool变量: s; 自动添加未定义的Bool变量: stmt
+[10:27:15]   [ProofWriter_AttNoneg-OWA-D5-83_Q10] ✓ 正确! 预测=B, 答案=B
+[10:27:15] [Worker] 开始处理: ProofWriter_RelNoneg-OWA-D5-213_Q8 (mode=direct, semantic_check=False, refinement_code=False)
+[10:27:16]   [ProofWriter_RelNoneg-OWA-D5-272_Q14] 代码自动修复: 检测到缺少 8 个右括号; 第29行: 添加 1 个右括号; 第30行: 添加 1 个右括号; 第31行: 添加 1 个右括号; 第32行: 添加 1 个右括号; 第33行: 添加 1 个右括号; 第34行: 添加 1 个右括号; 第35行: 添加 1 个右括号; 第36行: 添加 1 个右括号; 自动添加未定义的Bool变量: s; 自动添加未定义的Bool变量: stmt
+[10:27:16]   [ProofWriter_RelNoneg-OWA-D5-272_Q14] ✓ 正确! 预测=C, 答案=C
+[10:27:16] [Worker] 开始处理: ProofWriter_RelNeg-OWA-D5-345_Q13 (mode=direct, semantic_check=False, refinement_code=False)
+[10:27:18]   [ProofWriter_AttNeg-OWA-D5-694_Q2] 代码自动修复: 自动添加未定义的Bool变量: s; 自动添加未定义的Bool变量: stmt
+[10:27:18]   [ProofWriter_AttNeg-OWA-D5-694_Q2] ✓ 正确! 预测=B, 答案=B
+[10:27:18] [Worker] 开始处理: ProofWriter_RelNeg-OWA-D5-294_Q2 (mode=direct, semantic_check=False, refinement_code=False)
+[10:27:21]   [ProofWriter_RelNeg-OWA-D5-345_Q13] 代码自动修复: 检测到缺少 6 个右括号; 第35行: 添加 1 个右括号; 第36行: 添加 1 个右括号; 第37行: 添加 1 个右括号; 第38行: 添加 1 个右括号; 第39行: 添加 1 个右括号; 第40行: 添加 1 个右括号; 自动添加未定义的Bool变量: s; 自动添加未定义的Bool变量: stmt
+[10:27:21]   [ProofWriter_RelNeg-OWA-D5-345_Q13] ✓ 正确! 预测=C, 答案=C
+[10:27:21] [Worker] 开始处理: ProofWriter_RelNeg-OWA-D5-174_Q18 (mode=direct, semantic_check=False, refinement_code=False)
+[10:27:22]   [ProofWriter_RelNeg-OWA-D5-668_Q14] 代码自动修复: 检测到缺少 6 个右括号; 第36行: 添加 1 个右括号; 第37行: 添加 1 个右括号; 第38行: 添加 1 个右括号; 第39行: 添加 1 个右括号; 第40行: 添加 1 个右括号; 第41行: 添加 1 个右括号; 自动添加未定义的Bool变量: s; 自动添加未定义的Bool变量: stmt
+[10:27:22]   [ProofWriter_RelNeg-OWA-D5-668_Q14] ✓ 正确! 预测=C, 答案=C
+[10:27:22] [Worker] 开始处理: ProofWriter_AttNoneg-OWA-D5-1331_Q16 (mode=direct, semantic_check=False, refinement_code=False)
+[10:27:22]   [ProofWriter_RelNoneg-OWA-D5-213_Q8] 代码自动修复: 检测到缺少 7 个右括号; 第38行: 添加 1 个右括号; 第39行: 添加 1 个右括号; 第40行: 添加 1 个右括号; 第41行: 添加 1 个右括号; 第42行: 添加 1 个右括号; 第43行: 添加 1 个右括号; 第44行: 添加 1 个右括号; 自动添加未定义的Bool变量: s; 自动添加未定义的Bool变量: stmt
+[10:27:22]   [ProofWriter_RelNoneg-OWA-D5-213_Q8] ✓ 正确! 预测=B, 答案=B
+[10:27:22] [Worker] 开始处理: ProofWriter_AttNeg-OWA-D5-960_Q6 (mode=direct, semantic_check=False, refinement_code=False)
+[10:27:25]   [ProofWriter_RelNeg-OWA-D5-294_Q2] 代码自动修复: 检测到缺少 9 个右括号; 第33行: 添加 1 个右括号; 第34行: 添加 1 个右括号; 第35行: 添加 1 个右括号; 第36行: 添加 1 个右括号; 第37行: 添加 1 个右括号; 第38行: 添加 1 个右括号; 第39行: 添加 1 个右括号; 第40行: 添加 1 个右括号; 第41行: 添加 1 个右括号; 自动添加未定义的Bool变量: s; 自动添加未定义的Bool变量: stmt
+[10:27:25]   [ProofWriter_RelNeg-OWA-D5-294_Q2] ✓ 正确! 预测=B, 答案=B
+[10:27:25] [Worker] 开始处理: ProofWriter_AttNeg-OWA-D5-908_Q16 (mode=direct, semantic_check=False, refinement_code=False)
+[10:27:26]   [ProofWriter_AttNoneg-OWA-D5-1331_Q16] 代码自动修复: 检测到缺少 7 个右括号; 第30行: 添加 1 个右括号; 第31行: 添加 1 个右括号; 第32行: 添加 1 个右括号; 第33行: 添加 1 个右括号; 第34行: 添加 1 个右括号; 第35行: 添加 1 个右括号; 第36行: 添加 1 个右括号; 自动添加未定义的Bool变量: s; 自动添加未定义的Bool变量: stmt
+[10:27:26]   [ProofWriter_AttNoneg-OWA-D5-1331_Q16] ✓ 正确! 预测=C, 答案=C
+[10:27:26] [Worker] 开始处理: ProofWriter_AttNoneg-OWA-D5-1251_Q3 (mode=direct, semantic_check=False, refinement_code=False)
+[10:27:28]   [ProofWriter_RelNeg-OWA-D5-174_Q18] 代码自动修复: 检测到缺少 10 个右括号; 第30行: 添加 1 个右括号; 第31行: 添加 1 个右括号; 第32行: 添加 1 个右括号; 第33行: 添加 1 个右括号; 第34行: 添加 1 个右括号; 第35行: 添加 1 个右括号; 第36行: 添加 2 个右括号; 第37行: 添加 1 个右括号; 第38行: 添加 1 个右括号; 自动添加未定义的Bool变量: s; 自动添加未定义的Bool变量: stmt; 自动添加未定义的量化变量: x = Const('x', Entity)
+[10:27:28]   [ProofWriter_RelNeg-OWA-D5-174_Q18] ✓ 正确! 预测=C, 答案=C
+[10:27:28] [Worker] 开始处理: ProofWriter_RelNeg-OWA-D5-355_Q4 (mode=direct, semantic_check=False, refinement_code=False)
+[10:27:29]   [ProofWriter_AttNeg-OWA-D5-960_Q6] 代码自动修复: 检测到缺少 8 个右括号; 第31行: 添加 1 个右括号; 第32行: 添加 1 个右括号; 第33行: 添加 1 个右括号; 第34行: 添加 1 个右括号; 第35行: 添加 1 个右括号; 第36行: 添加 1 个右括号; 第37行: 添加 1 个右括号; 第38行: 添加 1 个右括号; 自动添加未定义的Bool变量: s; 自动添加未定义的Bool变量: stmt
+[10:27:29]   [ProofWriter_AttNeg-OWA-D5-960_Q6] ✗ 错误! 预测=C, 答案=B
+[10:27:29] [Worker] 开始处理: ProofWriter_AttNeg-OWA-D5-401_Q4 (mode=direct, semantic_check=False, refinement_code=False)
+[10:27:30]   [ProofWriter_AttNeg-OWA-D5-908_Q16] 代码自动修复: 检测到缺少 2 个右括号; 第34行: 添加 1 个右括号; 第35行: 添加 1 个右括号; 自动添加未定义的Bool变量: s; 自动添加未定义的Bool变量: stmt
+[10:27:30]   [ProofWriter_AttNeg-OWA-D5-908_Q16] ✓ 正确! 预测=C, 答案=C
+[10:27:30] [Worker] 开始处理: ProofWriter_RelNeg-OWA-D5-940_Q9 (mode=direct, semantic_check=False, refinement_code=False)
+[10:27:32]   [ProofWriter_AttNoneg-OWA-D5-1251_Q3] 代码自动修复: 检测到缺少 2 个右括号; 第33行: 添加 1 个右括号; 第36行: 添加 1 个右括号; 自动添加未定义的Bool变量: s; 自动添加未定义的Bool变量: stmt
+[10:27:32]   [ProofWriter_AttNoneg-OWA-D5-1251_Q3] ✓ 正确! 预测=A, 答案=A
+[10:27:32] [Worker] 开始处理: ProofWriter_AttNoneg-OWA-D5-583_Q11 (mode=direct, semantic_check=False, refinement_code=False)
+[10:27:33]   [ProofWriter_RelNeg-OWA-D5-355_Q4] 代码自动修复: 检测到缺少 6 个右括号; 第33行: 添加 1 个右括号; 第34行: 添加 1 个右括号; 第35行: 添加 2 个右括号; 第36行: 添加 1 个右括号; 第39行: 添加 1 个右括号; 自动添加未定义的Bool变量: s; 自动添加未定义的Bool变量: stmt; 第38行: 修复 Implies 缺少第二个参数（从And中提取）
+[10:27:33]   [ProofWriter_RelNeg-OWA-D5-355_Q4] ✓ 正确! 预测=B, 答案=B
+[10:27:33] [Worker] 开始处理: ProofWriter_RelNeg-OWA-D5-890_Q2 (mode=direct, semantic_check=False, refinement_code=False)
+[10:27:34]   [ProofWriter_AttNeg-OWA-D5-401_Q4] 代码自动修复: 检测到缺少 1 个右括号; 第32行: 添加 1 个右括号; 自动添加未定义的Bool变量: are; 自动添加未定义的Bool变量: big; 自动添加未定义的Bool变量: blue; 自动添加未定义的Bool变量: cold; 自动添加未定义的Bool变量: green; 自动添加未定义的Bool变量: people; 自动添加未定义的Bool变量: quiet; 自动添加未定义的Bool变量: round; 自动添加未定义的Bool变量: s; 自动添加未定义的Bool变量: stmt
+[10:27:34]   [ProofWriter_AttNeg-OWA-D5-401_Q4] ✓ 正确! 预测=B, 答案=B
+[10:27:34] [Worker] 开始处理: ProofWriter_AttNeg-OWA-D5-804_Q1 (mode=direct, semantic_check=False, refinement_code=False)
+[10:27:35]   [ProofWriter_RelNeg-OWA-D5-940_Q9] 代码自动修复: 检测到缺少 9 个右括号; 第27行: 添加 1 个右括号; 第28行: 添加 1 个右括号; 第29行: 添加 1 个右括号; 第30行: 添加 1 个右括号; 第31行: 添加 2 个右括号; 第32行: 添加 1 个右括号; 第33行: 添加 1 个右括号; 第34行: 添加 1 个右括号; 自动添加未定义的Bool变量: s; 自动添加未定义的Bool变量: stmt
+[10:27:35]   [ProofWriter_RelNeg-OWA-D5-940_Q9] ✓ 正确! 预测=A, 答案=A
+[10:27:35] [Worker] 开始处理: ProofWriter_RelNoneg-OWA-D5-977_Q5 (mode=direct, semantic_check=False, refinement_code=False)
+[10:27:38]   [ProofWriter_AttNoneg-OWA-D5-583_Q11] 代码自动修复: 检测到缺少 8 个右括号; 第34行: 添加 1 个右括号; 第35行: 添加 1 个右括号; 第36行: 添加 1 个右括号; 第37行: 添加 1 个右括号; 第38行: 添加 1 个右括号; 第39行: 添加 1 个右括号; 第40行: 添加 1 个右括号; 第41行: 添加 1 个右括号; 自动添加未定义的Bool变量: s; 自动添加未定义的Bool变量: stmt
+[10:27:38]   [ProofWriter_AttNoneg-OWA-D5-583_Q11] ✓ 正确! 预测=A, 答案=A
+[10:27:38] [Worker] 开始处理: ProofWriter_AttNoneg-OWA-D5-515_Q4 (mode=direct, semantic_check=False, refinement_code=False)
+[10:27:38]   [ProofWriter_AttNeg-OWA-D5-804_Q1] 代码自动修复: 检测到缺少 7 个右括号; 第32行: 添加 1 个右括号; 第33行: 添加 1 个右括号; 第34行: 添加 1 个右括号; 第35行: 添加 1 个右括号; 第37行: 添加 1 个右括号; 第38行: 添加 2 个右括号; 自动添加未定义的Bool变量: s; 自动添加未定义的Bool变量: stmt; 自动添加未定义的量化变量: x = Const('x', Entity)
+[10:27:39]   [ProofWriter_AttNeg-OWA-D5-804_Q1] ✓ 正确! 预测=A, 答案=A
+[10:27:39] [Worker] 开始处理: ProofWriter_AttNoneg-OWA-D5-754_Q4 (mode=direct, semantic_check=False, refinement_code=False)
+[10:27:39]   [ProofWriter_RelNeg-OWA-D5-890_Q2] 代码自动修复: 检测到缺少 9 个右括号; 第29行: 添加 1 个右括号; 第30行: 添加 1 个右括号; 第31行: 添加 1 个右括号; 第32行: 添加 1 个右括号; 第33行: 添加 1 个右括号; 第34行: 添加 2 个右括号; 第35行: 添加 1 个右括号; 第36行: 添加 1 个右括号; 自动添加未定义的Bool变量: s; 自动添加未定义的Bool变量: stmt; 检测到未定义的谓词: Red; 添加谓词定义: Red (参数数量: 1)
+[10:27:39]   [ProofWriter_RelNeg-OWA-D5-890_Q2] ✓ 正确! 预测=B, 答案=B
+[10:27:39] [Worker] 开始处理: ProofWriter_RelNeg-OWA-D5-317_Q2 (mode=direct, semantic_check=False, refinement_code=False)
+[10:27:40]   [ProofWriter_RelNoneg-OWA-D5-977_Q5] 代码自动修复: 检测到缺少 9 个右括号; 第36行: 添加 1 个右括号; 第37行: 添加 1 个右括号; 第38行: 添加 1 个右括号; 第39行: 添加 1 个右括号; 第40行: 添加 1 个右括号; 第41行: 添加 1 个右括号; 第42行: 添加 1 个右括号; 第43行: 添加 1 个右括号; 第44行: 添加 1 个右括号; 自动添加未定义的Bool变量: s; 自动添加未定义的Bool变量: stmt
+[10:27:40]   [ProofWriter_RelNoneg-OWA-D5-977_Q5] ✓ 正确! 预测=A, 答案=A
+[10:27:40] [Worker] 开始处理: ProofWriter_AttNoneg-OWA-D5-412_Q9 (mode=direct, semantic_check=False, refinement_code=False)
+[10:27:43]   [ProofWriter_AttNoneg-OWA-D5-515_Q4] 代码自动修复: 自动添加未定义的Bool变量: are; 自动添加未定义的Bool变量: big; 自动添加未定义的Bool变量: cold; 自动添加未定义的Bool变量: green; 自动添加未定义的Bool变量: nice; 自动添加未定义的Bool变量: people; 自动添加未定义的Bool变量: red; 自动添加未定义的Bool变量: rough; 自动添加未定义的Bool变量: s; 自动添加未定义的Bool变量: smart; 自动添加未定义的Bool变量: someone; 自动添加未定义的Bool变量: stmt; 自动添加未定义的Bool变量: then; 自动添加未定义的Bool变量: they
+[10:27:43]   [ProofWriter_AttNoneg-OWA-D5-515_Q4] ✓ 正确! 预测=B, 答案=B
+[10:27:43] [Worker] 开始处理: ProofWriter_AttNoneg-OWA-D5-572_Q4 (mode=direct, semantic_check=False, refinement_code=False)
+[10:27:44]   [ProofWriter_AttNoneg-OWA-D5-754_Q4] 代码自动修复: 检测到缺少 5 个右括号; 第33行: 添加 1 个右括号; 第34行: 添加 1 个右括号; 第35行: 添加 1 个右括号; 第36行: 添加 1 个右括号; 第37行: 添加 1 个右括号; 自动添加未定义的Bool变量: s; 自动添加未定义的Bool变量: stmt
+[10:27:44]   [ProofWriter_AttNoneg-OWA-D5-754_Q4] ✓ 正确! 预测=B, 答案=B
+[10:27:44] [Worker] 开始处理: ProofWriter_RelNoneg-OWA-D5-992_Q10 (mode=direct, semantic_check=False, refinement_code=False)
+[10:27:46]   [ProofWriter_RelNeg-OWA-D5-317_Q2] 代码自动修复: 检测到缺少 7 个右括号; 第34行: 添加 1 个右括号; 第35行: 添加 1 个右括号; 第36行: 添加 1 个右括号; 第37行: 添加 1 个右括号; 第38行: 添加 1 个右括号; 第39行: 添加 1 个右括号; 第40行: 添加 1 个右括号; 自动添加未定义的Bool变量: s; 自动添加未定义的Bool变量: stmt
+[10:27:46]   [ProofWriter_RelNeg-OWA-D5-317_Q2] ✓ 正确! 预测=B, 答案=B
+[10:27:46] [Worker] 开始处理: ProofWriter_RelNeg-OWA-D5-68_Q2 (mode=direct, semantic_check=False, refinement_code=False)
+[10:27:47]   [ProofWriter_AttNoneg-OWA-D5-412_Q9] 代码自动修复: 检测到缺少 3 个右括号; 第43行: 添加 1 个右括号; 第44行: 添加 1 个右括号; 第45行: 添加 1 个右括号; 自动添加未定义的Bool变量: furry; 自动添加未定义的Bool变量: implies; 自动添加未定义的Bool变量: nice; 自动添加未定义的Bool变量: quiet; 自动添加未定义的Bool变量: s; 自动添加未定义的Bool变量: stmt
+[10:27:47]   [ProofWriter_AttNoneg-OWA-D5-412_Q9] ✗ 错误! 预测=C, 答案=A
+[10:27:47] [Worker] 开始处理: ProofWriter_AttNeg-OWA-D5-107_Q1 (mode=direct, semantic_check=False, refinement_code=False)
+[10:27:48]   [ProofWriter_AttNoneg-OWA-D5-572_Q4] 代码自动修复: 检测到缺少 7 个右括号; 第32行: 添加 1 个右括号; 第33行: 添加 1 个右括号; 第34行: 添加 1 个右括号; 第35行: 添加 1 个右括号; 第36行: 添加 1 个右括号; 第37行: 添加 1 个右括号; 第38行: 添加 1 个右括号; 自动添加未定义的Bool变量: s; 自动添加未定义的Bool变量: stmt
+[10:27:48]   [ProofWriter_AttNoneg-OWA-D5-572_Q4] ✓ 正确! 预测=B, 答案=B
+[10:27:48] [Worker] 开始处理: ProofWriter_RelNeg-OWA-D5-224_Q4 (mode=direct, semantic_check=False, refinement_code=False)
+[10:27:52]   [ProofWriter_RelNoneg-OWA-D5-992_Q10] 代码自动修复: 检测到缺少 4 个右括号; 第37行: 添加 1 个右括号; 第39行: 添加 1 个右括号; 第40行: 添加 1 个右括号; 第41行: 添加 1 个右括号; 自动添加未定义的Bool变量: s; 自动添加未定义的Bool变量: stmt
+[10:27:52]   [ProofWriter_RelNoneg-OWA-D5-992_Q10] ✓ 正确! 预测=B, 答案=B
+[10:27:52] [Worker] 开始处理: ProofWriter_RelNeg-OWA-D5-13_Q11 (mode=direct, semantic_check=False, refinement_code=False)
+[10:27:52]   [ProofWriter_RelNeg-OWA-D5-68_Q2] 代码自动修复: 检测到缺少 8 个右括号; 第33行: 添加 1 个右括号; 第34行: 添加 1 个右括号; 第35行: 添加 1 个右括号; 第36行: 添加 1 个右括号; 第37行: 添加 1 个右括号; 第38行: 添加 1 个右括号; 第39行: 添加 1 个右括号; 第40行: 添加 1 个右括号; 自动添加未定义的Bool变量: s; 自动添加未定义的Bool变量: stmt
+[10:27:52]   [ProofWriter_RelNeg-OWA-D5-68_Q2] ✓ 正确! 预测=B, 答案=B
+[10:27:52] [Worker] 开始处理: ProofWriter_RelNoneg-OWA-D5-781_Q8 (mode=direct, semantic_check=False, refinement_code=False)
+[10:27:53]   [ProofWriter_AttNeg-OWA-D5-107_Q1] 代码自动修复: 检测到缺少 6 个右括号; 第31行: 添加 1 个右括号; 第32行: 添加 1 个右括号; 第33行: 添加 1 个右括号; 第34行: 添加 1 个右括号; 第35行: 添加 1 个右括号; 第36行: 添加 1 个右括号; 自动添加未定义的Bool变量: are; 自动添加未定义的Bool变量: cold; 自动添加未定义的Bool变量: furry; 自动添加未定义的Bool变量: kind; 自动添加未定义的Bool变量: red; 自动添加未定义的Bool变量: rough; 自动添加未定义的Bool变量: s; 自动添加未定义的Bool变量: smart; 自动添加未定义的Bool变量: stmt; 自动添加未定义的Bool变量: then; 自动添加未定义的Bool变量: things; 自动添加未定义的Bool变量: young
+[10:27:53]   [ProofWriter_AttNeg-OWA-D5-107_Q1] ✓ 正确! 预测=A, 答案=A
+[10:27:53] [Worker] 开始处理: ProofWriter_RelNoneg-OWA-D5-428_Q17 (mode=direct, semantic_check=False, refinement_code=False)
+[10:27:53]   [ProofWriter_RelNeg-OWA-D5-224_Q4] 代码自动修复: 检测到缺少 11 个右括号; 第32行: 添加 1 个右括号; 第33行: 添加 1 个右括号; 第34行: 添加 1 个右括号; 第35行: 添加 1 个右括号; 第36行: 添加 2 个右括号; 第37行: 添加 1 个右括号; 第38行: 添加 1 个右括号; 第39行: 添加 1 个右括号; 第40行: 添加 2 个右括号; 自动添加未定义的Bool变量: s; 自动添加未定义的Bool变量: stmt
+[10:27:53]   [ProofWriter_RelNeg-OWA-D5-224_Q4] ✓ 正确! 预测=B, 答案=B
+[10:27:57]   [ProofWriter_RelNeg-OWA-D5-13_Q11] 代码自动修复: 检测到缺少 6 个右括号; 第32行: 添加 1 个右括号; 第33行: 添加 1 个右括号; 第34行: 添加 1 个右括号; 第35行: 添加 1 个右括号; 第36行: 添加 1 个右括号; 第37行: 添加 1 个右括号; 自动添加未定义的Bool变量: s; 自动添加未定义的Bool变量: stmt; 第39行: 修复 Implies 缺少第二个参数（从And中提取）
+[10:27:57]   [ProofWriter_RelNeg-OWA-D5-13_Q11] ✓ 正确! 预测=A, 答案=A
+[10:27:59]   [ProofWriter_RelNoneg-OWA-D5-428_Q17] 代码自动修复: 检测到缺少 8 个右括号; 第30行: 添加 1 个右括号; 第31行: 添加 1 个右括号; 第32行: 添加 1 个右括号; 第33行: 添加 1 个右括号; 第34行: 添加 1 个右括号; 第35行: 添加 1 个右括号; 第36行: 添加 1 个右括号; 第37行: 添加 1 个右括号; 自动添加未定义的Bool变量: s; 自动添加未定义的Bool变量: stmt
+[10:27:59]   [ProofWriter_RelNoneg-OWA-D5-428_Q17] ✓ 正确! 预测=C, 答案=C
+[10:28:00]   [ProofWriter_RelNoneg-OWA-D5-781_Q8] 代码自动修复: 检测到缺少 9 个右括号; 第34行: 添加 1 个右括号; 第35行: 添加 1 个右括号; 第36行: 添加 1 个右括号; 第37行: 添加 1 个右括号; 第38行: 添加 1 个右括号; 第39行: 添加 1 个右括号; 第40行: 添加 1 个右括号; 第41行: 添加 1 个右括号; 第42行: 添加 1 个右括号; 自动添加未定义的Bool变量: s; 自动添加未定义的Bool变量: stmt
+[10:28:00]   [ProofWriter_RelNoneg-OWA-D5-781_Q8] ✓ 正确! 预测=B, 答案=B
+[10:28:00] ==================================================
+[10:28:00] 评测完成!
+[10:28:00] 已完成: 50, 正确: 45, 错误: 5, 异常: 0
+[10:28:00] 准确率: 90.00%
+[10:28:00] ==================================================
+=== 评测日志结束于 2025-12-20 10:28:33 ===
