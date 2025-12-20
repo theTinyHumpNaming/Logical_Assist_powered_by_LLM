@@ -1,0 +1,186 @@
+=== 评测日志开始于 2025-12-20 20:15:52 ===
+[20:15:57] 代码修复功能已关闭
+[20:16:32] 检测到数据集类型: folio
+[20:16:36] ==================================================
+[20:16:36] 开始翻译数据集...
+[20:16:36] 数据集类型: folio
+[20:16:36] 题目数量: 50
+[20:16:36] ==================================================
+[20:16:40] [1/50] ✓ FOLIO_dev_0 翻译成功
+[20:16:43] [2/50] ✓ FOLIO_dev_125 翻译成功
+[20:16:47] [3/50] ✓ FOLIO_dev_43 翻译成功
+[20:16:51] [4/50] ✓ FOLIO_dev_59 翻译成功
+[20:16:55] [5/50] ✓ FOLIO_dev_144 翻译成功
+[20:16:59] [6/50] ✓ FOLIO_dev_17 翻译成功
+[20:17:02] [7/50] ✓ FOLIO_dev_83 翻译成功
+[20:17:05] [8/50] ✓ FOLIO_dev_13 翻译成功
+[20:17:08] [9/50] ✓ FOLIO_dev_111 翻译成功
+[20:17:11] [10/50] ✓ FOLIO_dev_107 翻译成功
+[20:17:15] [11/50] ✓ FOLIO_dev_130 翻译成功
+[20:17:18] [12/50] ✓ FOLIO_dev_89 翻译成功
+[20:17:21] [13/50] ✓ FOLIO_dev_126 翻译成功
+[20:17:24] [14/50] ✓ FOLIO_dev_134 翻译成功
+[20:17:28] [15/50] ✓ FOLIO_dev_51 翻译成功
+[20:17:32] [16/50] ✓ FOLIO_dev_60 翻译成功
+[20:17:35] [17/50] ✓ FOLIO_dev_25 翻译成功
+[20:17:38] [18/50] ✓ FOLIO_dev_101 翻译成功
+[20:17:41] [19/50] ✓ FOLIO_dev_49 翻译成功
+[20:17:44] [20/50] ✓ FOLIO_dev_48 翻译成功
+[20:17:48] [21/50] ✓ FOLIO_dev_66 翻译成功
+[20:17:51] [22/50] ✓ FOLIO_dev_169 翻译成功
+[20:17:54] [23/50] ✓ FOLIO_dev_172 翻译成功
+[20:17:59] [24/50] ✓ FOLIO_dev_44 翻译成功
+[20:18:02] [25/50] ✓ FOLIO_dev_8 翻译成功
+[20:18:05] [26/50] ✓ FOLIO_dev_22 翻译成功
+[20:18:09] [27/50] ✓ FOLIO_dev_200 翻译成功
+[20:18:14] [28/50] ✓ FOLIO_dev_85 翻译成功
+[20:18:18] [29/50] ✓ FOLIO_dev_178 翻译成功
+[20:18:22] [30/50] ✓ FOLIO_dev_73 翻译成功
+[20:18:25] [31/50] ✓ FOLIO_dev_26 翻译成功
+[20:18:28] [32/50] ✓ FOLIO_dev_196 翻译成功
+[20:18:31] [33/50] ✓ FOLIO_dev_33 翻译成功
+[20:18:34] [34/50] ✓ FOLIO_dev_152 翻译成功
+[20:18:37] [35/50] ✓ FOLIO_dev_76 翻译成功
+[20:18:40] [36/50] ✓ FOLIO_dev_23 翻译成功
+[20:18:44] [37/50] ✓ FOLIO_dev_11 翻译成功
+[20:18:48] [38/50] ✓ FOLIO_dev_170 翻译成功
+[20:18:51] [39/50] ✓ FOLIO_dev_150 翻译成功
+[20:18:55] [40/50] ✓ FOLIO_dev_77 翻译成功
+[20:18:58] [41/50] ✓ FOLIO_dev_31 翻译成功
+[20:19:03] [42/50] ✓ FOLIO_dev_21 翻译成功
+[20:19:08] [43/50] ✓ FOLIO_dev_14 翻译成功
+[20:19:11] [44/50] ✓ FOLIO_dev_129 翻译成功
+[20:19:15] [45/50] ✓ FOLIO_dev_40 翻译成功
+[20:19:20] [46/50] ✓ FOLIO_dev_4 翻译成功
+[20:19:24] [47/50] ✓ FOLIO_dev_132 翻译成功
+[20:19:27] [48/50] ✓ FOLIO_dev_176 翻译成功
+[20:19:31] [49/50] ✓ FOLIO_dev_53 翻译成功
+[20:19:36] [50/50] ✓ FOLIO_dev_171 翻译成功
+[20:19:36] ==================================================
+[20:19:36] 翻译完成！
+[20:19:36] 成功: 50, 失败: 0
+[20:19:36] 翻译结果已保存到: D:/学习资料/课程/程序设计大作业/EnhancingLLM/EnhancingLLM/data/Standardized_FOLIO_test.json
+[20:19:36] ==================================================
+[20:21:06] 正在加载数据集: D:/学习资料/课程/程序设计大作业/EnhancingLLM/EnhancingLLM/data/Standardized_FOLIO_test.json
+[20:21:06] 共 50 道题目，使用 4 个 workers 并行处理
+[20:21:06] [Worker] 开始处理: FOLIO_dev_0 (mode=direct, semantic_check=False, refinement_code=False, repair=True)
+[20:21:06] [Worker] 开始处理: FOLIO_dev_59 (mode=direct, semantic_check=False, refinement_code=False, repair=True)
+[20:21:06] [Worker] 开始处理: FOLIO_dev_125 (mode=direct, semantic_check=False, refinement_code=False, repair=True)
+[20:21:06] [Worker] 开始处理: FOLIO_dev_43 (mode=direct, semantic_check=False, refinement_code=False, repair=True)
+[20:21:13]   [FOLIO_dev_59] code执行错误（repair修复后）: name 'is_Montana' is not defined
+[20:21:13]   [FOLIO_dev_59] ⚠ 异常: 代码执行错误（repair修复后仍失败）: name 'is_Montana' is not defined
+[20:21:13] [Worker] 开始处理: FOLIO_dev_144 (mode=direct, semantic_check=False, refinement_code=False, repair=True)
+[20:21:13]   [FOLIO_dev_0] 代码自动修复: 检测到缺少 3 个右括号; 第24行: 添加 1 个右括号; 第27行: 添加 1 个右括号; 第36行: 添加 1 个右括号
+[20:21:13]   [FOLIO_dev_0] ✓ 正确! 预测=C, 答案=C
+[20:21:13] [Worker] 开始处理: FOLIO_dev_17 (mode=direct, semantic_check=False, refinement_code=False, repair=True)
+[20:21:15]   [FOLIO_dev_125] 代码自动修复: 检测到缺少 1 个右括号; 第35行: 添加 1 个右括号; 自动添加未定义的Bool变量: rock_has_wings; 自动添加未定义的Bool变量: rock_is_animal
+[20:21:15]   [FOLIO_dev_125] ✓ 正确! 预测=C, 答案=C
+[20:21:15] [Worker] 开始处理: FOLIO_dev_83 (mode=direct, semantic_check=False, refinement_code=False, repair=True)
+[20:21:15]   [FOLIO_dev_43] ✓ 正确! 预测=C, 答案=C
+[20:21:15] [Worker] 开始处理: FOLIO_dev_13 (mode=direct, semantic_check=False, refinement_code=False, repair=True)
+[20:21:19]   [FOLIO_dev_17] ✓ 正确! 预测=C, 答案=C
+[20:21:19] [Worker] 开始处理: FOLIO_dev_111 (mode=direct, semantic_check=False, refinement_code=False, repair=True)
+[20:21:19]   [FOLIO_dev_144] ✓ 正确! 预测=C, 答案=C
+[20:21:19] [Worker] 开始处理: FOLIO_dev_107 (mode=direct, semantic_check=False, refinement_code=False, repair=True)
+[20:21:20]   [FOLIO_dev_13] ✓ 正确! 预测=C, 答案=C
+[20:21:20] [Worker] 开始处理: FOLIO_dev_130 (mode=direct, semantic_check=False, refinement_code=False, repair=True)
+[20:21:21]   [FOLIO_dev_83] ✗ 错误! 预测=C, 答案=B
+[20:21:21] [Worker] 开始处理: FOLIO_dev_89 (mode=direct, semantic_check=False, refinement_code=False, repair=True)
+[20:21:24]   [FOLIO_dev_111] ✓ 正确! 预测=C, 答案=C
+[20:21:24] [Worker] 开始处理: FOLIO_dev_126 (mode=direct, semantic_check=False, refinement_code=False, repair=True)
+[20:21:25]   [FOLIO_dev_107] ✗ 错误! 预测=C, 答案=B
+[20:21:25] [Worker] 开始处理: FOLIO_dev_134 (mode=direct, semantic_check=False, refinement_code=False, repair=True)
+[20:21:26]   [FOLIO_dev_89] ✗ 错误! 预测=C, 答案=A
+[20:21:26] [Worker] 开始处理: FOLIO_dev_51 (mode=direct, semantic_check=False, refinement_code=False, repair=True)
+[20:21:26]   [FOLIO_dev_130] ✗ 错误! 预测=None, 答案=C
+[20:21:26] [Worker] 开始处理: FOLIO_dev_60 (mode=direct, semantic_check=False, refinement_code=False, repair=True)
+[20:21:32]   [FOLIO_dev_134] ✓ 正确! 预测=C, 答案=C
+[20:21:32] [Worker] 开始处理: FOLIO_dev_25 (mode=direct, semantic_check=False, refinement_code=False, repair=True)
+[20:21:32]   [FOLIO_dev_51] ✗ 错误! 预测=B, 答案=A
+[20:21:32] [Worker] 开始处理: FOLIO_dev_101 (mode=direct, semantic_check=False, refinement_code=False, repair=True)
+[20:21:33]   [FOLIO_dev_126] ✗ 错误! 预测=C, 答案=A
+[20:21:33] [Worker] 开始处理: FOLIO_dev_49 (mode=direct, semantic_check=False, refinement_code=False, repair=True)
+[20:21:36]   [FOLIO_dev_60] ✓ 正确! 预测=A, 答案=A
+[20:21:36] [Worker] 开始处理: FOLIO_dev_48 (mode=direct, semantic_check=False, refinement_code=False, repair=True)
+[20:21:37]   [FOLIO_dev_25] ✓ 正确! 预测=C, 答案=C
+[20:21:37] [Worker] 开始处理: FOLIO_dev_66 (mode=direct, semantic_check=False, refinement_code=False, repair=True)
+[20:21:40]   [FOLIO_dev_101] ✗ 错误! 预测=A, 答案=B
+[20:21:40]   [FOLIO_dev_49] ✓ 正确! 预测=C, 答案=C
+[20:21:40] [Worker] 开始处理: FOLIO_dev_169 (mode=direct, semantic_check=False, refinement_code=False, repair=True)
+[20:21:40] [Worker] 开始处理: FOLIO_dev_172 (mode=direct, semantic_check=False, refinement_code=False, repair=True)
+[20:21:42]   [FOLIO_dev_48] ✗ 错误! 预测=B, 答案=C
+[20:21:42] [Worker] 开始处理: FOLIO_dev_44 (mode=direct, semantic_check=False, refinement_code=False, repair=True)
+[20:21:42]   [FOLIO_dev_66] ✗ 错误! 预测=C, 答案=A
+[20:21:42] [Worker] 开始处理: FOLIO_dev_8 (mode=direct, semantic_check=False, refinement_code=False, repair=True)
+[20:21:48]   [FOLIO_dev_169] ✗ 错误! 预测=C, 答案=B
+[20:21:48] [Worker] 开始处理: FOLIO_dev_22 (mode=direct, semantic_check=False, refinement_code=False, repair=True)
+[20:21:48]   [FOLIO_dev_172] ✗ 错误! 预测=A, 答案=B
+[20:21:48] [Worker] 开始处理: FOLIO_dev_200 (mode=direct, semantic_check=False, refinement_code=False, repair=True)
+[20:21:49]   [FOLIO_dev_8] ✓ 正确! 预测=C, 答案=C
+[20:21:49] [Worker] 开始处理: FOLIO_dev_85 (mode=direct, semantic_check=False, refinement_code=False, repair=True)
+[20:21:51]   [FOLIO_dev_44] 代码自动修复: 检测到未定义的函数调用: Xor; 警告：代码缺少Entity定义，无法定义函数，将注释掉相关调用; 第28行: 注释掉对未定义函数的调用; 检测到未定义的谓词: Xor
+[20:21:51]   [FOLIO_dev_44] ✗ 错误! 预测=C, 答案=B
+[20:21:51] [Worker] 开始处理: FOLIO_dev_178 (mode=direct, semantic_check=False, refinement_code=False, repair=True)
+[20:21:54]   [FOLIO_dev_200] ✗ 错误! 预测=C, 答案=B
+[20:21:54] [Worker] 开始处理: FOLIO_dev_73 (mode=direct, semantic_check=False, refinement_code=False, repair=True)
+[20:21:55]   [FOLIO_dev_22] 代码自动修复: 检测到未定义的函数调用: Xor; 警告：代码缺少Entity定义，无法定义函数，将注释掉相关调用; 第26行: 注释掉对未定义函数的调用; 检测到未定义的谓词: Xor
+[20:21:55]   [FOLIO_dev_22] ✓ 正确! 预测=B, 答案=B
+[20:21:55] [Worker] 开始处理: FOLIO_dev_26 (mode=direct, semantic_check=False, refinement_code=False, repair=True)
+[20:21:56]   [FOLIO_dev_178] 代码自动修复: 检测到未定义的谓词: Tokyo
+[20:21:56]   [FOLIO_dev_178] ✓ 正确! 预测=A, 答案=A
+[20:21:56] [Worker] 开始处理: FOLIO_dev_196 (mode=direct, semantic_check=False, refinement_code=False, repair=True)
+[20:21:57]   [FOLIO_dev_85] 代码自动修复: 检测到未定义的函数调用: Xor; 警告：代码缺少Entity定义，无法定义函数，将注释掉相关调用; 第31行: 注释掉对未定义函数的调用; 检测到未定义的谓词: Xor
+[20:21:57]   [FOLIO_dev_85] ✗ 错误! 预测=C, 答案=A
+[20:21:57] [Worker] 开始处理: FOLIO_dev_33 (mode=direct, semantic_check=False, refinement_code=False, repair=True)
+[20:22:00]   [FOLIO_dev_73] ✗ 错误! 预测=C, 答案=A
+[20:22:00] [Worker] 开始处理: FOLIO_dev_152 (mode=direct, semantic_check=False, refinement_code=False, repair=True)
+[20:22:01]   [FOLIO_dev_26] ✓ 正确! 预测=C, 答案=C
+[20:22:01] [Worker] 开始处理: FOLIO_dev_76 (mode=direct, semantic_check=False, refinement_code=False, repair=True)
+[20:22:04]   [FOLIO_dev_33] 代码自动修复: 自动添加未定义的Bool变量: is_feud_with_diamond_mine; 自动添加未定义的Bool变量: is_wrestling_stable
+[20:22:04]   [FOLIO_dev_33] ✗ 错误! 预测=C, 答案=A
+[20:22:04] [Worker] 开始处理: FOLIO_dev_23 (mode=direct, semantic_check=False, refinement_code=False, repair=True)
+[20:22:04]   [FOLIO_dev_196] ✓ 正确! 预测=C, 答案=C
+[20:22:04] [Worker] 开始处理: FOLIO_dev_11 (mode=direct, semantic_check=False, refinement_code=False, repair=True)
+[20:22:07]   [FOLIO_dev_152] ✗ 错误! 预测=B, 答案=C
+[20:22:07] [Worker] 开始处理: FOLIO_dev_170 (mode=direct, semantic_check=False, refinement_code=False, repair=True)
+[20:22:10]   [FOLIO_dev_76] 代码自动修复: 检测到未定义的函数调用: Xor; 警告：代码缺少Entity定义，无法定义函数，将注释掉相关调用; 第21行: 注释掉对未定义函数的调用; 检测到未定义的谓词: Xor
+[20:22:10]   [FOLIO_dev_76] ✓ 正确! 预测=C, 答案=C
+[20:22:10] [Worker] 开始处理: FOLIO_dev_150 (mode=direct, semantic_check=False, refinement_code=False, repair=True)
+[20:22:10]   [FOLIO_dev_23] 代码自动修复: 检测到未定义的函数调用: Xor; 警告：代码缺少Entity定义，无法定义函数，将注释掉相关调用; 第29行: 注释掉对未定义函数的调用; 检测到未定义的谓词: Xor
+[20:22:10]   [FOLIO_dev_23] ✓ 正确! 预测=C, 答案=C
+[20:22:10]   [FOLIO_dev_11] ✗ 错误! 预测=None, 答案=C
+[20:22:10] [Worker] 开始处理: FOLIO_dev_31 (mode=direct, semantic_check=False, refinement_code=False, repair=True)
+[20:22:10] [Worker] 开始处理: FOLIO_dev_77 (mode=direct, semantic_check=False, refinement_code=False, repair=True)
+[20:22:16]   [FOLIO_dev_170] ✓ 正确! 预测=C, 答案=C
+[20:22:16] [Worker] 开始处理: FOLIO_dev_21 (mode=direct, semantic_check=False, refinement_code=False, repair=True)
+[20:22:17]   [FOLIO_dev_150] 代码自动修复: 检测到未定义的谓词: Italian
+[20:22:17]   [FOLIO_dev_150] ✓ 正确! 预测=A, 答案=A
+[20:22:17] [Worker] 开始处理: FOLIO_dev_14 (mode=direct, semantic_check=False, refinement_code=False, repair=True)
+[20:22:18]   [FOLIO_dev_77] 代码自动修复: 检测到缺少 1 个右括号; 第33行: 添加 1 个右括号
+[20:22:18]   [FOLIO_dev_77] ✓ 正确! 预测=A, 答案=A
+[20:22:18] [Worker] 开始处理: FOLIO_dev_129 (mode=direct, semantic_check=False, refinement_code=False, repair=True)
+[20:22:18]   [FOLIO_dev_31] ✓ 正确! 预测=A, 答案=A
+[20:22:18] [Worker] 开始处理: FOLIO_dev_40 (mode=direct, semantic_check=False, refinement_code=False, repair=True)
+[20:22:24]   [FOLIO_dev_21] ✗ 错误! 预测=C, 答案=A
+[20:22:24] [Worker] 开始处理: FOLIO_dev_4 (mode=direct, semantic_check=False, refinement_code=False, repair=True)
+[20:22:25]   [FOLIO_dev_14] ✗ 错误! 预测=A, 答案=B
+[20:22:25] [Worker] 开始处理: FOLIO_dev_132 (mode=direct, semantic_check=False, refinement_code=False, repair=True)
+[20:22:26]   [FOLIO_dev_40] 代码自动修复: 自动添加未定义的Bool变量: a; 自动添加未定义的Bool变量: constraint; 自动添加未定义的Bool变量: it; 自动添加未定义的Bool变量: possible; 自动添加未定义的Bool变量: s; 自动添加未定义的Bool变量: to
+[20:22:26]   [FOLIO_dev_40] ✗ 错误! 预测=C, 答案=A
+[20:22:26] [Worker] 开始处理: FOLIO_dev_176 (mode=direct, semantic_check=False, refinement_code=False, repair=True)
+[20:22:27]   [FOLIO_dev_129] ✗ 错误! 预测=B, 答案=A
+[20:22:27] [Worker] 开始处理: FOLIO_dev_53 (mode=direct, semantic_check=False, refinement_code=False, repair=True)
+[20:22:31]   [FOLIO_dev_4] 代码自动修复: 检测到缺少 1 个右括号; 第37行: 添加 1 个右括号
+[20:22:31]   [FOLIO_dev_4] ✓ 正确! 预测=C, 答案=C
+[20:22:31] [Worker] 开始处理: FOLIO_dev_171 (mode=direct, semantic_check=False, refinement_code=False, repair=True)
+[20:22:31]   [FOLIO_dev_132] 代码自动修复: 检测到缺少 1 个右括号; 第41行: 添加 1 个右括号
+[20:22:31]   [FOLIO_dev_132] ✗ 错误! 预测=C, 答案=A
+[20:22:33]   [FOLIO_dev_176] ✓ 正确! 预测=C, 答案=C
+[20:22:33]   [FOLIO_dev_53] 代码自动修复: 自动添加未定义的Bool变量: that
+[20:22:33]   [FOLIO_dev_53] ✓ 正确! 预测=C, 答案=C
+[20:22:37]   [FOLIO_dev_171] ✗ 错误! 预测=C, 答案=A
+[20:22:37] ==================================================
+[20:22:37] 评测完成!
+[20:22:37] 已完成: 50, 正确: 25, 错误: 24, 异常: 1
+[20:22:37] 准确率: 50.00%
+[20:22:37] ==================================================

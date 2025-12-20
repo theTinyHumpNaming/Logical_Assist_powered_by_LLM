@@ -1,7 +1,7 @@
 [
   {
     "id": "FOLIO_dev_0",
-    "context": "If a person performs in talent shows, then that person attends school events. If a person performs in talent shows, then that person is engaged. Exactly one of these is true: a person performs in talent shows or a person is inactive. If a person chaperones dances, then that person is not a student. All inactive and disinterested community members chaperone dances. All young individuals seeking academic growth are students who attend the school. Exactly one of these is true: (Bonnie attends school events and Bonnie is engaged and Bonnie is a student) or (Bonnie does not attend school events and Bonnie is not a student).",
+    "context": "If a person performs in talent shows, then that person attends school events. If a person performs in talent shows, then that person is engaged. Exactly one of these is true: a person performs in talent shows or a person is inactive. If a person chaperones dances, then that person is not a student. All inactive and disinterested community members chaperone dances. All young individuals seeking educational opportunities are students who attend the school. Exactly one of these is true: (Bonnie attends school events and Bonnie is engaged and Bonnie is a student) or (Bonnie does not attend school events and Bonnie is not a student).",
     "question": "Bonnie performs in talent shows.",
     "options": [
       "A) True",
@@ -12,7 +12,7 @@
   },
   {
     "id": "FOLIO_dev_125",
-    "context": "All mammals are animals. All monkeys are mammals. Exactly one of these is true: an animal is a monkey or an animal is a bird. All birds fly. All animals breathe. If an animal can fly, then that animal has wings. If Rock is not a bird and Rock is not a fly, then Rock does not fly.",
+    "context": "All mammals are animals. All monkeys are mammals. Exactly one of these is true: an animal is a monkey or an animal is a bird. All birds fly. All animals breathe. If an animal has wings, then it can fly. If Rock is neither a bird nor a fly, then Rock neither breathes nor flies.",
     "question": "Rock is a monkey.",
     "options": [
       "A) True",
@@ -23,7 +23,7 @@
   },
   {
     "id": "FOLIO_dev_43",
-    "context": "If a player is highly ranked by the Women's Tennis Association, then that player is active in major tennis. Everyone who was defeated by Iga Świątek is highly ranked by the Women's Tennis Association. All female tennis players at Roland Garros 2022 were defeated by Iga Świątek. Exactly one of these is true: female tennis players at Roland Garros 2022 were defeated by Iga Świątek or male tennis players at Roland Garros 2022 were defeated by Rafael Nadal. All male tennis players at Roland Garros 2022 were defeated by Rafael Nadal. If Coco Gauff is a player who is highly ranked by the Women's Tennis Association or a player who was defeated by Rafael Nadal, then Coco Gauff is not a male tennis player at Roland Garros 2022.",
+    "context": "If a player is highly ranked by the Women's Tennis Association, then that player is active in major tennis. Everyone who lost to Iga Świątek is highly ranked by the Women's Tennis Association. All female tennis players at Roland Garros 2022 lost to Iga Świątek. Exactly one of these is true: female tennis players at Roland Garros 2022 lost to Iga Świątek or male tennis players at Roland Garros 2022 lost to Rafael Nadal. All male tennis players at Roland Garros 2022 lost to Rafael Nadal. If Coco Gauff is a player who is highly ranked by the Women's Tennis Association or a player who lost to Rafael Nadal, then Coco Gauff is not a male tennis player at Roland Garros 2022.",
     "question": "Coco Gauff lost to Rafael Nadal.",
     "options": [
       "A) True",
@@ -34,7 +34,7 @@
   },
   {
     "id": "FOLIO_dev_59",
-    "context": "Billings is_located_in Montana. Butte, Helena, and Missoula are cities in Montana. White Sulphur Springs and Butte are cities in the same state. Pierre is not located in Montana. All cities in Butte are not in Pierre.",
+    "context": "Billings is_located_in Montana. Butte, Helena, and Missoula are cities in Montana. White Sulphur Springs and Butte are cities in the same state. Pierre is not in Montana. All cities in Butte are not in Pierre.",
     "question": "Pierre and Bismarck are in the same state.",
     "options": [
       "A) True",
@@ -45,7 +45,7 @@
   },
   {
     "id": "FOLIO_dev_144",
-    "context": "All breeding back involves the deliberate selective breeding of domestic animals. Heck cattle were bred back in the 1920s to resemble aurochs. All Heck cattle are animals. All aurochs are animals. Some animals bred back resemble extinct animals.",
+    "context": "Breeding back is a form of artificial selection by selectively breeding domestic animals. All Heck cattle are animals. All aurochs are animals. Some animals to be bred-back resemble extinct animals.",
     "question": "Aurochs are extinct.",
     "options": [
       "A) True",
@@ -79,7 +79,7 @@
   {
     "id": "FOLIO_dev_13",
     "context": "All games in the Top 10 list are created by Japanese game companies. If a game sells more than one million copies, then it is selected into the Top 10 list. The Legend of Zelda sold more than one million copies.",
-    "question": "FIFA 22 is created by a Japanese game company.",
+    "question": "FIFA 22 is created by a Japanese video game company.",
     "options": [
       "A) True",
       "B) False",
@@ -100,8 +100,8 @@
   },
   {
     "id": "FOLIO_dev_107",
-    "context": "All GRE applicants who demonstrate economic hardship receive financial aid from ETS. Economic hardship arises from insufficient money or resources. Tom lives in a single-parent family. Tom's dad has been unemployed for over a year.",
-    "question": "There is financial aid available for the GRE test.",
+    "context": "All GRE applicants who demonstrate economic hardship receive financial aid from ETS. Economic hardship arises from insufficient money or resources. Tom lives in a single-parent family. Tom's father has been unemployed for over a year.",
+    "question": "There is no financial aid available for the GRE test.",
     "options": [
       "A) True",
       "B) False",
@@ -111,7 +111,7 @@
   },
   {
     "id": "FOLIO_dev_130",
-    "context": "All people who have weddings have at least one child. All people who honeymoon in Paris have weddings. All July weddings belong to people who honeymoon in Paris. Some July weddings are well-attended. If John has children, then John does not honeymoon in Paris and does not have a wedding. If John has a well-attended wedding, then John has a July wedding; otherwise, John honeymoon in Paris.",
+    "context": "All people who have weddings have at least one child. All people who honeymoon in Paris have weddings. All July weddings belong to people who honeymoon in Paris. Some July weddings are well-attended. If John has children, then John does not honeymoon in Paris and does not have a wedding. If John has a well-attended wedding, then John has a July wedding; if not, then John honeymoon in Paris.",
     "question": "John has children.",
     "options": [
       "A) True",
@@ -177,7 +177,7 @@
   },
   {
     "id": "FOLIO_dev_25",
-    "context": "Beijing is located in Northern China. Beijing is the capital of the People's Republic of China. Beijing is the most populous national capital city globally. Beijing hosted the 2008 Summer Olympics and 2008 Summer Paralympics. Beijing has hosted both the Summer and Winter Olympics, as well as the Summer and Winter Paralympics. Many of Beijing's 91 universities consistently rank among the top in the Asia-Pacific and the world.",
+    "context": "Beijing is located in Northern China. Beijing is the capital of the People's Republic of China. Beijing is the most populous national capital city globally. Beijing hosted the 2008 Summer Olympics and 2008 Summer Paralympics. Beijing has hosted both the Summer and Winter Olympics, as well as the Summer and Winter Paralympics. Many of Beijing's 91 universities consistently rank among the top in the Asia-Pacific region and globally.",
     "question": "Beijing is located in southern China.",
     "options": [
       "A) True",
@@ -199,7 +199,7 @@
   },
   {
     "id": "FOLIO_dev_49",
-    "context": "No digital media are analog. All printed texts are analog. All streaming services are digital. If an object is a hardcover book, then it is printed text. If 1984 is a streaming service, then 1984 is a hardcover book.",
+    "context": "No digital media are analog. All printed text is analog. All streaming services are digital. If an object is a hardcover book, then it is printed text. If 1984 is a streaming service, then 1984 is a hardcover book.",
     "question": "1984 is printed text.",
     "options": [
       "A) True",
@@ -210,7 +210,7 @@
   },
   {
     "id": "FOLIO_dev_48",
-    "context": "All students who desire a lengthy break prefer summer. Emma loves summer. Mia's favorite season differs from Emma's. James desires a long vacation.",
+    "context": "All students who desire a lengthy break prefer summer. Emma's preferred season is summer. Mia's favorite season differs from Emma's. James desires a long vacation.",
     "question": "Mia's favorite season is spring.",
     "options": [
       "A) True",
@@ -287,7 +287,7 @@
   },
   {
     "id": "FOLIO_dev_200",
-    "context": "Ailton Silva, who was born in 1995, is commonly known as Ailton. Ailton is a football player who was loaned to Braga. Ailton Silva is a Brazilian footballer who plays for Nautico. Nautico and Braga are football clubs. Fluminense is a football club.",
+    "context": "Ailton Silva, who was born in 1995, is a football player known as Ailton. All football players are loaned out to Braga. All Brazilians who play for Nautico are footballers. Nautico and Braga are football clubs. Fluminense is a football club.",
     "question": "Ailton Silva plays for a football club.",
     "options": [
       "A) True",
@@ -298,7 +298,7 @@
   },
   {
     "id": "FOLIO_dev_85",
-    "context": "If a restaurant is recommended by Yelp, then that restaurant does not receive many negative reviews. All restaurants with a rating above 9 are recommended by Yelp. Some restaurants without take-out service receive many negative reviews. All restaurants popular among local residents have ratings above 9. Exactly one of these is true: Subway has a rating above 9 or Subway is popular among local residents.",
+    "context": "If a restaurant is recommended by Yelp, then that restaurant does not receive many negative reviews. All restaurants with a rating above 9 are recommended by Yelp. Some restaurants without take-out service receive many negative reviews. All restaurants popular among locals have ratings above 9. Exactly one of these is true: Subway has a rating above 9 or Subway is popular among locals.",
     "question": "Subway provides take-out service and does not receive many negative reviews.",
     "options": [
       "A) True",
@@ -321,7 +321,7 @@
   {
     "id": "FOLIO_dev_73",
     "context": "All stocks of growth companies are volatile. If a stock's price is volatile, then that stock is not suitable for a retirement fund. Some stocks are stocks of growth companies. All stocks of mature companies are suitable for a retirement fund. KO is a stock of a mature company.",
-    "question": "KO is neither a company's stock nor is its price volatile.",
+    "question": "KO is neither a company's stock nor is its price volatile if KO is a stock of a growth company or if its price is volatile.",
     "options": [
       "A) True",
       "B) False",
@@ -331,8 +331,8 @@
   },
   {
     "id": "FOLIO_dev_26",
-    "context": "Beijing is the capital of China. Beijing is the most populous national capital. Beijing is located in Northern China. Beijing hosted the 2008 Summer Olympics and Paralympics. Beijing has hosted both the Summer and Winter Olympics, along with the Summer and Winter Paralympics. Many of Beijing's 91 universities rank among the best in the Asia-Pacific and the world.",
-    "question": "Beijing is the second largest Chinese city by urban population.",
+    "context": "Beijing is the capital of China. Beijing is the most populous national capital. Beijing is located in Northern China. Beijing hosted the 2008 Summer Olympics and Paralympics. Beijing has hosted both the Summer and Winter Olympics, as well as the Summer and Winter Paralympics. Many of Beijing's 91 universities rank among the best in the Asia-Pacific and the world.",
+    "question": "Beijing is the second largest city in China by urban population.",
     "options": [
       "A) True",
       "B) False",
@@ -342,7 +342,7 @@
   },
   {
     "id": "FOLIO_dev_196",
-    "context": "If an animal barks, then Jane dislikes it. All dogs are animals that bark. If an animal jumps, then Jane likes it. If an animal has legs, then it jumps. If an animal is terricolous, then it has legs. If KiKi does not jump and KiKi does not have legs, then KiKi is terricolous or KiKi has legs.",
+    "context": "If an animal barks, then Jane dislikes it. All animals that bark are dogs. If an animal jumps, then Jane likes it. If an animal has legs, then it jumps. If an animal is terricolous, then it has legs. If KiKi does not jump and KiKi does not have legs, then KiKi is terricolous or KiKi has legs.",
     "question": "KiKi is terricolous.",
     "options": [
       "A) True",
@@ -397,7 +397,7 @@
   },
   {
     "id": "FOLIO_dev_11",
-    "context": "All wild turkeys are of six types: Eastern, Osceola, Gould's, Merriam's, Rio Grande, and Ocellated. Tom is not an Eastern wild turkey. Tom is not an Osceola wild turkey. Tom is not a Gould's wild turkey. Tom is not a Merriam's wild turkey. Tom is not a Rio Grande wild turkey. Tom is an Ocellated wild turkey.",
+    "context": "All wild turkeys are of six types: Eastern, Osceola, Gould's, Merriam's, Rio Grande, and Ocellated. Tom is not an Eastern wild turkey. Tom is not an Osceola wild turkey. Tom is not a Gould's wild turkey. Tom is not a Merriam's wild turkey. Tom is not a Rio Grande wild turkey. Tom is not an Ocellated wild turkey. Tom is a wild turkey.",
     "question": "Joey is a wild turkey.",
     "options": [
       "A) True",
@@ -452,8 +452,8 @@
   },
   {
     "id": "FOLIO_dev_21",
-    "context": "If a Netflix show is popular, then Karen binge-watches it. If Karen binge-watches a Netflix show, then Karen downloads it. Karen does not download \"Black Mirror\". All Netflix shows are popular. If Karen binge-watches a Netflix show, then Karen shares it with Lisa.",
-    "question": "Karen shares \"Stranger Things\" to Lisa.",
+    "context": "If a Netflix show is popular, then Karen binge-watches it. If Karen binge-watches a Netflix show, then Karen downloads it. Karen does not download \"Black Mirror\". All Netflix shows are \"Stranger Things\". If Karen binge-watches a Netflix show, then Karen shares it with Lisa.",
+    "question": "Karen shares \"Stranger Things\" with Lisa.",
     "options": [
       "A) True",
       "B) False",
@@ -463,7 +463,7 @@
   },
   {
     "id": "FOLIO_dev_14",
-    "context": "A Japanese game company created the Legend of Zelda. All games in the Top 10 list are made by Japanese game companies. If a game sells over one million copies, then it is selected for the Top 10 list. The Legend of Zelda sold over one million copies.",
+    "context": "A Japanese game company created the Legend of Zelda. All games in the Top 10 list are created by Japanese game companies. If a game sells more than one million copies, then it is selected into the Top 10 list. The Legend of Zelda sold more than one million copies.",
     "question": "The Legend of Zelda is in the Top 10 list.",
     "options": [
       "A) True",
@@ -474,7 +474,7 @@
   },
   {
     "id": "FOLIO_dev_129",
-    "context": "All people who have weddings have children. All people who honeymoon in Paris have weddings. All July weddings are Paris honeymoons. Some July weddings are well-attended. If John has children, then John does not honeymoon in Paris or have a wedding. If John has a well-attended wedding, then John has a July wedding; otherwise, John honeymooned in Paris.",
+    "context": "All people who have weddings have at least one child. All people who honeymoon in Paris have weddings. All July weddings belong to people who honeymoon in Paris. Some July weddings are well-attended. If John has children, then John does not honeymoon in Paris and does not have a wedding. If John has a well-attended wedding, then John has a July wedding; otherwise, John honeymoon in Paris.",
     "question": "John has a wedding that is not well-attended.",
     "options": [
       "A) True",
@@ -496,7 +496,7 @@
   },
   {
     "id": "FOLIO_dev_4",
-    "context": "If an employee schedules a meeting with customers, then that employee will be in the company today. Everyone who has lunch in the company schedules meetings with customers. Employees will either have lunch in the company or have lunch at home. If an employee has lunch at home, then that employee is working remotely. All employees in other countries work remotely. No manager works remotely. Exactly one of these is true: (James is a manager and James appears in the company today) or (James is not a manager and James does not appear in the company today).",
+    "context": "If an employee schedules a meeting with customers, then that employee will be in the company today. Everyone who has lunch in the company schedules meetings with customers. Employees will either have lunch in the company or have lunch at home. If an employee has lunch at home, then that employee is working remotely. All employees in other countries work remotely. No manager works remotely. Exactly one of these is true: (James is a manager and James appears in the company) or (James is not a manager and James does not appear in the company).",
     "question": "James has lunch in the company.",
     "options": [
       "A) True",
@@ -507,7 +507,7 @@
   },
   {
     "id": "FOLIO_dev_132",
-    "context": "Some animals have teeth. No platypus have teeth. All platypus are animals. Humans have teeth.",
+    "context": "Some animals have teeth. No platypus have teeth. All platypus are animals. All humans have teeth.",
     "question": "Platypus are animals with no teeth.",
     "options": [
       "A) True",
@@ -529,7 +529,7 @@
   },
   {
     "id": "FOLIO_dev_53",
-    "context": "All Romance languages are Indo-European languages. Romance languages form a language family. All languages within a language family are related. French and Spanish are Romance languages. German is related to Spanish. Basque is not related to any other language.",
+    "context": "All Romance languages are Indo-European languages. All Romance languages are related to each other. French and Spanish are Romance languages. German is related to Spanish. Basque is not related to any other language.",
     "question": "German is a Romance language.",
     "options": [
       "A) True",
