@@ -132,27 +132,6 @@ python main.py
    - 正确题目数量和准确率
    - 详细信息可导出
 
-### 命令行使用
-
-如果需要自定义使用，可以直接调用核心模块：
-
-```python
-from request import LLMClient
-from z3_execute import execute_z3_code
-from dataset_and_prompt import build_initial_messages_for_all_datasets
-
-# 创建 LLM 客户端
-client = LLMClient(api_key="your-api-key", model="gpt-4")
-
-# 构建提示词
-messages = build_initial_messages_for_all_datasets(problem, dataset_type="prontoqa")
-
-# 请求 LLM 生成代码
-response = client.query(messages)
-
-# 执行 Z3 代码
-result, error, repair_log = execute_z3_code(response)
-```
 
 ## 工作流程
 
@@ -284,12 +263,6 @@ class CustomLLMClient(LLMClient):
         # 实现自定义客户端
         pass
 ```
-
-## 项目链接
-
-- **GitHub**: [https://github.com/theTinyHumpNaming/Logical_Assist_powered_by_LLM](https://github.com/theTinyHumpNaming/Logical_Assist_powered_by_LLM)
-- **文档**: 查看本 README 文件
-- **问题反馈**: [提交 Issue](https://github.com/theTinyHumpNaming/Logical_Assist_powered_by_LLM/issues)
 
 ---
 
