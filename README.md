@@ -12,33 +12,25 @@
 
 ### 主要特性
 
-- 🎯 **多数据集支持**：支持 5 种主流逻辑推理数据集
+- **数据集支持**：支持 5 种主流逻辑推理数据集
   - ProntoQA
   - FOLIO
   - Logical Deduction
   - AR-LSAT
   - ProofWriter
 
-- 🤖 **多模型兼容**：支持 OpenAI 和 DeepSeek API
+- **模型兼容**：支持 OpenAI 和 DeepSeek API
   - GPT-4、GPT-3.5
   - DeepSeek Chat/Reasoner
 
-- 🔧 **智能修复机制**：
+- **智能修复机制**：
   - 自动修复 Z3 代码语法错误
-  - 语义检查和代码精炼
-  - 多轮迭代优化
 
-- 🗳️ **多数投票模式**：
-  - 每题运行3次取多数结果
-  - 提高答案准确性和稳定性
-  - 失败自动降级处理
+-  **多数投票模式**：
+-  在该模式下
+-  每题运行3次取多数结果
 
-- 📊 **可视化界面**：基于 tkinter 的图形用户界面
-  - 实时显示评测进度
-  - 详细的日志输出
-  - 评测结果统计
-
-- ⚡ **并发处理**：支持多线程并发评测，提升效率
+-  **并发处理**：支持多线程并发评测，提升效率
 
 ## 系统架构
 
@@ -103,8 +95,8 @@ pip install -r requirements.txt
 在项目根目录创建 `keys.txt` 文件：
 
 ```
-openai:sk-your-openai-api-key
-deepseek:sk-your-deepseek-api-key
+GPT:sk-your-openai-api-key
+DS:sk-your-deepseek-api-key
 ```
 
 ## 使用说明
@@ -267,8 +259,8 @@ result, error, repair_log = execute_z3_code(response)
 ### API 密钥配置 (`keys.txt`)
 
 ```
-openai:sk-xxxxxxxxxxxxx
-deepseek:sk-xxxxxxxxxxxxx
+GPT:sk-xxxxxxxxxxxxx
+DS:sk-xxxxxxxxxxxxx
 ```
 
 ### 提示词自定义
@@ -314,44 +306,6 @@ deepseek:sk-xxxxxxxxxxxxx
 - API 请求超时控制
 - 避免长时间阻塞
 
-## 常见问题
-
-### Q: 多数投票模式什么时候使用？
-
-A: 当需要提高答案准确性时可以启用多数投票模式。注意：
-- 会增加3倍的API调用次数
-- 处理时间约增加到3倍
-- 适合对准确性要求高的场景
-- 失败情况下默认选择选项A
-
-### Q: Z3 代码执行失败怎么办？
-
-A: 系统会自动尝试修复常见错误。如果多次修复失败，可以：
-- 增加"最大修正次数"参数
-- 启用语义检查
-- 检查日志文件中的详细错误信息
-
-### Q: API 请求失败？
-
-A: 请检查：
-- API Key 是否正确
-- 网络连接是否正常
-- API 服务是否可用
-- 是否达到了 API 调用限制
-
-### Q: 评测速度太慢？
-
-A: 可以尝试：
-- 增加并发数（注意 API 限制）
-- 减少最大修正次数
-- 使用更快的模型
-
-### Q: 准确率偏低？
-
-A: 可以尝试：
-- 增加语义检查次数
-- 使用更强大的模型（如 GPT-4）
-- 调整提示词模板
 
 ## 技术细节
 
@@ -412,9 +366,7 @@ class CustomLLMClient(LLMClient):
 - 添加必要的注释
 - 更新相关文档
 
-## 许可证
-
-本项目仅用于学术研究和教育目的。
+、、
 
 ## 项目链接
 
