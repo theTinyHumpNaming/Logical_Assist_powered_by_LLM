@@ -272,21 +272,6 @@ DS:sk-xxxxxxxxxxxxx
 - `refine_code.txt` - 代码精炼提示
 - `refine_semantic.txt` - 语义检查提示
 
-## 日志系统
-
-### 日志级别
-
-- **DEBUG**：详细的调试信息
-- **INFO**：一般信息（默认）
-- **WARNING**：警告信息
-- **ERROR**：错误信息
-
-### 日志文件
-
-- 位置：`logs/eval_<timestamp>.log`
-- 包含完整的评测过程记录
-- 自动生成时间戳文件名
-
 ## 性能优化
 
 ### 并发处理
