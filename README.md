@@ -342,28 +342,11 @@ class CustomLLMClient(LLMClient):
         pass
 ```
 
-## 贡献指南
-
-欢迎提交 Issue 和 Pull Request！
-
-在提交代码前，请确保：
-- 代码符合 PEP 8 规范
-- 添加必要的注释
-- 更新相关文档
-
-、、
-
 ## 项目链接
 
 - **GitHub**: [https://github.com/theTinyHumpNaming/Logical_Assist_powered_by_LLM](https://github.com/theTinyHumpNaming/Logical_Assist_powered_by_LLM)
 - **文档**: 查看本 README 文件
 - **问题反馈**: [提交 Issue](https://github.com/theTinyHumpNaming/Logical_Assist_powered_by_LLM/issues)
-
-## 联系方式
-
-如有问题或建议，欢迎通过以下方式联系：
-- 在 GitHub 上提交 Issue
-- 发送邮件
 
 ---
 
