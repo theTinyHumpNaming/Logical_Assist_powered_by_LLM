@@ -60,7 +60,7 @@ Logical_Assist_powered_by_LLM/
 │
 ├── logs/                  # 评测日志目录
 ├── error_codes/           # 错误代码样例
-└── keys.txt               # API密钥配置
+└── keys            # API密钥配置
 ```
 
 ## 安装指南
@@ -91,7 +91,7 @@ pip install -r requirements.txt
 
 3. **配置 API 密钥**
 
-在项目根目录创建 `keys.txt` 文件：
+在项目根目录创建 `keys` 文件：
 
 ```
 GPT:sk-your-openai-api-key
@@ -221,7 +221,7 @@ python main.py
 
 ## 配置说明
 
-### API 密钥配置 (`keys.txt`)
+### API 密钥配置 (`keys`)
 
 ```
 GPT:sk-xxxxxxxxxxxxx
