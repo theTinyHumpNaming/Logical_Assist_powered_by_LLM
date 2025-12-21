@@ -1,7 +1,7 @@
 GPT 3.5 turbo without refinement
 ProntoQA 98%
 LogicalDeduction 88%
-FOLIO 58%(translate:60%)
+FOLIO 58%(新跑:62)(translate:60%)
 proofwriter 90%
 
 GPT 4  without refinement

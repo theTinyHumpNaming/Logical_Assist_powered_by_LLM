@@ -1,7 +1,7 @@
 [
   {
     "id": "FOLIO_dev_0",
-    "context": "If a person performs in talent shows, then that person attends school events. If a person performs in talent shows, then that person is engaged. Exactly one of these is true: a person performs in talent shows or a person is inactive. If a person chaperones dances, then that person is not a student. All inactive and disinterested community members chaperone dances. All young individuals seeking educational opportunities are students who attend the school. Exactly one of these is true: (Bonnie attends school events and Bonnie is engaged and Bonnie is a student) or (Bonnie does not attend school events and Bonnie is not a student).",
+    "context": "If a person performs in talent shows, then that person attends school events. If a person performs in talent shows, then that person is engaged. Exactly one of these is true: a person performs in talent shows or a person is inactive. All inactive people chaperone dances. If a person chaperones dances, then that person is not a student. All young children are students. All teenagers are students. Exactly one of these is true: (Bonnie attends school events and Bonnie is engaged and Bonnie is a student) or (Bonnie does not attend school events and Bonnie is not engaged and Bonnie is not a student).",
     "question": "Bonnie performs in talent shows.",
     "options": [
       "A) True",
@@ -12,7 +12,7 @@
   },
   {
     "id": "FOLIO_dev_125",
-    "context": "All mammals are animals. All monkeys are mammals. Exactly one of these is true: an animal is a monkey or an animal is a bird. All birds fly. All animals breathe. If an animal has wings, then it can fly. If Rock is neither a bird nor a fly, then Rock neither breathes nor flies.",
+    "context": "All mammals are animals. All monkeys are mammals. Exactly one of these is true: an animal is a monkey or an animal is a bird. All birds fly. All animals breathe. If an animal flies, then that animal has wings. If Rock is not a bird, then Rock does not fly. If Rock is not a bird, then Rock does not breathe.",
     "question": "Rock is a monkey.",
     "options": [
       "A) True",
@@ -23,7 +23,7 @@
   },
   {
     "id": "FOLIO_dev_43",
-    "context": "If a player is highly ranked by the Women's Tennis Association, then that player is active in major tennis. Everyone who lost to Iga Świątek is highly ranked by the Women's Tennis Association. All female tennis players at Roland Garros 2022 lost to Iga Świątek. Exactly one of these is true: female tennis players at Roland Garros 2022 lost to Iga Świątek or male tennis players at Roland Garros 2022 lost to Rafael Nadal. All male tennis players at Roland Garros 2022 lost to Rafael Nadal. If Coco Gauff is a player who is highly ranked by the Women's Tennis Association or a player who lost to Rafael Nadal, then Coco Gauff is not a male tennis player at Roland Garros 2022.",
+    "context": "If a player is ranked highly by the Women's Tennis Association, then that player is among the most active players. All players who lost to Iga Świątek are ranked highly by the Women's Tennis Association. All female tennis players at Roland Garros 2022 lost to Iga Świątek. Exactly one of these is true: a player is a female tennis player at Roland Garros 2022 or a player is a male tennis player at Roland Garros 2022. All male tennis players at Roland Garros 2022 lost to Rafael Nadal. If Coco Gauff is ranked highly by the Women's Tennis Association or Coco Gauff lost to Rafael Nadal, then Coco Gauff is not a male tennis player at Roland Garros 2022.",
     "question": "Coco Gauff lost to Rafael Nadal.",
     "options": [
       "A) True",
@@ -34,8 +34,8 @@
   },
   {
     "id": "FOLIO_dev_59",
-    "context": "Billings is_located_in Montana. Butte, Helena, and Missoula are cities in Montana. White Sulphur Springs and Butte are cities in the same state. Pierre is not in Montana. All cities in Butte are not in Pierre.",
-    "question": "Pierre and Bismarck are in the same state.",
+    "context": "Billings is_located_in Montana. Butte is_located_in Montana. Helena is_located_in Montana. Missoula is_located_in Montana. White Sulphur Springs is_located_in the same state as Butte. Pierre is not_located_in Montana. No city in Butte is_located_in Pierre.",
+    "question": "Pierre is_located_in the same state as Bismarck.",
     "options": [
       "A) True",
       "B) False",
@@ -45,7 +45,7 @@
   },
   {
     "id": "FOLIO_dev_144",
-    "context": "Breeding back is a form of artificial selection by selectively breeding domestic animals. All Heck cattle are animals. All aurochs are animals. Some animals to be bred-back resemble extinct animals.",
+    "context": "Breeding back is a form of artificial selection. Heck cattle are bred-back. Heck cattle resemble aurochs. Heck cattle are animals. Aurochs are animals. Some animals are bred-back. Some animals resemble extinct animals.",
     "question": "Aurochs are extinct.",
     "options": [
       "A) True",
@@ -56,8 +56,8 @@
   },
   {
     "id": "FOLIO_dev_17",
-    "context": "All rabbits are cute. Some animals are turtles. Exactly one of these is true: an animal is a rabbit or an animal is a squirrel. If something is skittish, then it is not still. All squirrels are skittish. Rock is still.",
-    "question": "Rock is a turtle.",
+    "context": "All rabbits are cute. Some animals are turtles. Exactly one of these is true: an animal is a rabbit or an animal is a squirrel. If an animal is skittish, then that animal is not still. All squirrels are skittish. Rock is still.",
+    "question": "Rock is not a turtle.",
     "options": [
       "A) True",
       "B) False",
@@ -67,8 +67,8 @@
   },
   {
     "id": "FOLIO_dev_83",
-    "context": "No baker is spicy. All cupcakes are bakeries. All hotpots are spicy. All products of Baked by Melissa are cupcakes. If dried Thai chilies are spicy or a bakery, then dried Thai chilies are a hotpot or are spicy.",
-    "question": "Dried Thai chilies are cupcakes and products of Baked by Melissa.",
+    "context": "No bakery is spicy. All cupcakes are bakeries. All hotpots are spicy. All products of Baked by Melissa are cupcakes. If dried Thai chilies are spicy or dried Thai chilies are a bakery, then dried Thai chilies are a hotpot or dried Thai chilies are spicy.",
+    "question": "Dried Thai chilies are cupcakes and dried Thai chilies are a product of Baked by Melissa.",
     "options": [
       "A) True",
       "B) False",
@@ -78,8 +78,8 @@
   },
   {
     "id": "FOLIO_dev_13",
-    "context": "All games in the Top 10 list are created by Japanese game companies. If a game sells more than one million copies, then it is selected into the Top 10 list. The Legend of Zelda sold more than one million copies.",
-    "question": "FIFA 22 is created by a Japanese video game company.",
+    "context": "A Japanese company created The Legend of Zelda. All games in the Top 10 list are made by Japanese companies. If a game sells more than one million copies, then that game is in the Top 10 list. The Legend of Zelda sold more than one million copies.",
+    "question": "FIFA 22 is made by a Japanese company.",
     "options": [
       "A) True",
       "B) False",
@@ -100,8 +100,8 @@
   },
   {
     "id": "FOLIO_dev_107",
-    "context": "All GRE applicants who demonstrate economic hardship receive financial aid from ETS. Economic hardship arises from insufficient money or resources. Tom lives in a single-parent family. Tom's father has been unemployed for over a year.",
-    "question": "There is no financial aid available for the GRE test.",
+    "context": "The GRE test costs 205 dollars. If a GRE applicant proves economic hardship, then ETS provides financial aid to that GRE applicant. Economic hardship is difficulty. If a person has too little money, then that person has economic hardship. If a person has too few resources, then that person has economic hardship. Tom is a person. Tom lives in a single-parent family. Tom's dad is a person. Tom's dad is out of work for more than a year.",
+    "question": "No financial aid is available for the GRE test.",
     "options": [
       "A) True",
       "B) False",
@@ -111,8 +111,8 @@
   },
   {
     "id": "FOLIO_dev_130",
-    "context": "All people who have weddings have at least one child. All people who honeymoon in Paris have weddings. All July weddings belong to people who honeymoon in Paris. Some July weddings are well-attended. If John has children, then John does not honeymoon in Paris and does not have a wedding. If John has a well-attended wedding, then John has a July wedding; if not, then John honeymoon in Paris.",
-    "question": "John has children.",
+    "context": "All people who have a wedding are people who have at least one child. All people who travel to Paris for their honeymoon are people who have a wedding. All weddings that occur in July are weddings of people who travel to Paris for their honeymoon. Some weddings in July are well-attended. If John has at least one child, then John does not travel to Paris for his honeymoon. If John has at least one child, then John does not have a wedding. If John has a wedding that is well-attended, then John has a wedding in July. If John has a wedding that is well-attended, then John travels to Paris for his honeymoon.",
+    "question": "John has at least one child.",
     "options": [
       "A) True",
       "B) False",
@@ -122,8 +122,8 @@
   },
   {
     "id": "FOLIO_dev_89",
-    "context": "All books contain knowledge. If a person reads a book, then that person gains knowledge. If a person gains knowledge, then that person becomes smarter. Harry read the book “Walden” by Henry Thoreau.",
-    "question": "Harry is smarter than before.",
+    "context": "All books are knowledge sources. If a person reads a book, then that person gains knowledge. If a person gains knowledge, then that person becomes smarter. Harry read Walden.",
+    "question": "Harry is smarter.",
     "options": [
       "A) True",
       "B) False",
@@ -133,7 +133,7 @@
   },
   {
     "id": "FOLIO_dev_126",
-    "context": "All mammals are animals. All monkeys are mammals. Exactly one of these is true: an animal is a monkey or an animal is a bird. All birds fly. All animals breathe. If an animal has wings, then that animal can fly. If Rock is not a bird and Rock is not a fly, then Rock does not have wings.",
+    "context": "All mammals are animals. All monkeys are mammals. Exactly one of these is true: an animal is a monkey or an animal is a bird. All birds fly. All animals breathe. If an animal flies, then that animal has wings. If Rock is not a bird, then Rock does not fly. If Rock is not a bird, then Rock does not breathe.",
     "question": "Rock has wings.",
     "options": [
       "A) True",
@@ -144,8 +144,8 @@
   },
   {
     "id": "FOLIO_dev_134",
-    "context": "Some animals have teeth. No platypus have teeth. All platypus are animals. All humans have teeth.",
-    "question": "Humans are animals.",
+    "context": "Some mammals are animals with teeth. Platypus is a mammal. Platypus is not an animal with teeth. Human is an animal with teeth.",
+    "question": "Human is a mammal.",
     "options": [
       "A) True",
       "B) False",
@@ -155,8 +155,8 @@
   },
   {
     "id": "FOLIO_dev_51",
-    "context": "No digital media are analog. All printed text is analog. All streaming services are digital. If an object is a hardcover book, then it is printed text. If 1984 is a streaming service, then 1984 is a hardcover book.",
-    "question": "1984 is a streaming service.",
+    "context": "No digital media is analog. All printed texts are analog. All streaming services are digital media. If an object is a hardcover book, then that object is a printed text. If 1984 is a streaming service, then 1984 is a hardcover book.",
+    "question": "1984 is not a streaming service.",
     "options": [
       "A) True",
       "B) False",
@@ -166,8 +166,8 @@
   },
   {
     "id": "FOLIO_dev_60",
-    "context": "Billings is_located_in Montana. Butte, Helena, and Missoula are cities in Montana. White Sulphur Springs and Butte are cities in the same state. Pierre is not in Montana. All cities in Butte are not in Pierre.",
-    "question": "Missoula is in Montana.",
+    "context": "Billings is_located_in Montana. Butte is_located_in Montana. Helena is_located_in Montana. Missoula is_located_in Montana. White Sulphur Springs is_located_in Montana. Pierre is not_located_in Montana. No city is_located_in Butte and Pierre.",
+    "question": "Missoula is_located_in Montana.",
     "options": [
       "A) True",
       "B) False",
@@ -177,7 +177,7 @@
   },
   {
     "id": "FOLIO_dev_25",
-    "context": "Beijing is located in Northern China. Beijing is the capital of the People's Republic of China. Beijing is the most populous national capital city globally. Beijing hosted the 2008 Summer Olympics and 2008 Summer Paralympics. Beijing has hosted both the Summer and Winter Olympics, as well as the Summer and Winter Paralympics. Many of Beijing's 91 universities consistently rank among the top in the Asia-Pacific region and globally.",
+    "context": "Beijing is the capital of China. Beijing is the most populous capital. Beijing is located in Northern China. Beijing hosted the 2008 Summer Olympics. Beijing hosted the 2008 Summer Paralympics. Beijing hosted the Summer Olympics. Beijing hosted the Winter Olympics. Beijing hosted the Summer Paralympics. Beijing hosted the Winter Paralympics. Some universities are in Beijing. Some universities rank among the best in the Asia-Pacific. Some universities rank among the best in the world.",
     "question": "Beijing is located in southern China.",
     "options": [
       "A) True",
@@ -188,8 +188,8 @@
   },
   {
     "id": "FOLIO_dev_101",
-    "context": "Exactly one of these is true: a man is kind or a man is evil. No ugly person is handsome. All evil people are ugly. All gentlemen are handsome. All CEOs are gentlemen. Harry is a gentleman.",
-    "question": "If Harry is either both evil and ugly, or neither evil nor ugly, then Harry is neither kind nor a CEO.",
+    "context": "Exactly one of these is true: a person is kind or a person is evil. No ugly person is handsome. All evil people are ugly. All gentlemen are handsome. All CEOs are gentlemen. Harry is a gentleman.",
+    "question": "If exactly one of these is true: (Harry is evil and Harry is ugly) or (Harry is not evil and Harry is not ugly), then Harry is not kind and Harry is not a CEO.",
     "options": [
       "A) True",
       "B) False",
@@ -199,8 +199,8 @@
   },
   {
     "id": "FOLIO_dev_49",
-    "context": "No digital media are analog. All printed text is analog. All streaming services are digital. If an object is a hardcover book, then it is printed text. If 1984 is a streaming service, then 1984 is a hardcover book.",
-    "question": "1984 is printed text.",
+    "context": "No digital media is analog. All printed texts are analog. All streaming services are digital media. If an object is a hardcover book, then that object is a printed text. If 1984 is a streaming service, then 1984 is a hardcover book.",
+    "question": "1984 is a printed text.",
     "options": [
       "A) True",
       "B) False",
@@ -210,7 +210,7 @@
   },
   {
     "id": "FOLIO_dev_48",
-    "context": "All students who desire a lengthy break prefer summer. Emma's preferred season is summer. Mia's favorite season differs from Emma's. James desires a long vacation.",
+    "context": "All seasons are spring, summer, fall, or winter. All students who want a long vacation love summer. Emma's favorite season is summer. Mia's favorite season is not summer. James is a student. James wants a long vacation.",
     "question": "Mia's favorite season is spring.",
     "options": [
       "A) True",
@@ -221,8 +221,8 @@
   },
   {
     "id": "FOLIO_dev_66",
-    "context": "Yale University is a private Ivy League research university. Yale University moved to New Haven in 1716. Yale University has an endowment valued at $42.3 billion. Yale University has 27 constituent colleges and schools, including residential colleges, the Yale Graduate School of Arts and Sciences, and twelve professional schools. The residential colleges at Yale include Benjamin Franklin College, Berkeley College, Branford College, Davenport College, Ezra Stiles College, Grace Hopper College, Jonathan Edwards College, Morse College, Pauli Murray College, Pierson College, Saybrook College, Silliman College, Timothy Dwight College, and Trumbull College.",
-    "question": "A private Ivy League research university moved to New Haven.",
+    "context": "Yale University is a private Ivy League research university. Yale University moved_to New Haven in 1716. Yale University's endowment is valued at $42.3 billion. Yale University is organized into 27 constituent colleges and schools. The residential colleges are Benjamin Franklin College, Berkeley College, Branford College, Davenport College, Ezra Stiles College, Grace Hopper College, Jonathan Edwards College, Morse College, Pauli Murray College, Pierson College, Saybrook College, Silliman College, Timothy Dwight College, and Trumbull College.",
+    "question": "A private Ivy League research university moved_to New Haven.",
     "options": [
       "A) True",
       "B) False",
@@ -232,8 +232,8 @@
   },
   {
     "id": "FOLIO_dev_169",
-    "context": "Heinrich Scmidt was a Nazi German politician. Heinrich Scmidt was a member of the Prussian State Parliament. Heinrich Scmidt was a member of the Nazi Reichstag.",
-    "question": "No politicians are members of the Nazi Reichstag.",
+    "context": "Heinrich Scmidt is a politician. Heinrich Scmidt is a member of the Prussian State Parliament. Heinrich Scmidt is a member of the Nazi Reichstag.",
+    "question": "No politician is a member of the Nazi Reichstag.",
     "options": [
       "A) True",
       "B) False",
@@ -243,8 +243,8 @@
   },
   {
     "id": "FOLIO_dev_172",
-    "context": "If a disease is deadly, then its survival rate is low. All severe cancers are deadly diseases. Bile duct cancer is a severe cancer. All Cholangiocarcinoma is bile duct cancer. No person with mild flu has a low survival rate. If colorectal cancer is a bile duct cancer with a low survival rate, then colorectal cancer is not a bile duct cancer.",
-    "question": "Colorectal cancer is not a mild flu and a Cholangiocarcinoma. Is colorectal cancer a bile duct cancer or a Cholangiocarcinoma?",
+    "context": "If a disease is deadly, then the survival rate of that disease is low. All severe cancers are deadly diseases. Bile duct cancer is a severe cancer. All Cholangiocarcinoma is bile duct cancer. No person with mild flu has a low survival rate. If colorectal cancer is a bile duct cancer and the survival rate of colorectal cancer is low, then colorectal cancer is not a bile duct cancer.",
+    "question": "If colorectal cancer is not a mild flu and colorectal cancer is a Cholangiocarcinoma, then colorectal cancer is a bile duct cancer or colorectal cancer is a Cholangiocarcinoma.",
     "options": [
       "A) True",
       "B) False",
@@ -254,8 +254,8 @@
   },
   {
     "id": "FOLIO_dev_44",
-    "context": "If a player is highly ranked by the Women's Tennis Association, then that player is among the most active players in major tennis. Everyone who lost to Iga Świątek is highly ranked by the Women's Tennis Association. All female tennis players at Roland Garros 2022 lost to Iga Świątek. Exactly one of these is true: female tennis players at Roland Garros 2022 lost to Iga Świątek or male tennis players at Roland Garros 2022 lost to Rafael Nadal. All male tennis players at Roland Garros 2022 lost to Rafael Nadal. If Coco Gauff is a player who is highly ranked by the Women's Tennis Association or a player who lost to Rafael Nadal, then Coco Gauff is not a male tennis player at Roland Garros 2022.",
-    "question": "Coco Gauff is not a player who lost to Iga Świątek or one of the most active players in major tennis.",
+    "context": "If a player is ranked highly by the WTA, then that player is among the most active players. All players who lost to Iga Świątek are ranked highly by the WTA. All female players at Roland Garros 2022 lost to Iga Świątek. Exactly one of these is true: a player is a female player at Roland Garros 2022 or a player is a male player at Roland Garros 2022. All male players at Roland Garros 2022 lost to Rafael Nadal. If Coco Gauff is ranked highly by the WTA or Coco Gauff lost to Rafael Nadal, then Coco Gauff is not a male player at Roland Garros 2022.",
+    "question": "Exactly one of these is true: Coco Gauff lost to Iga Świątek or Coco Gauff is among the most active players.",
     "options": [
       "A) True",
       "B) False",
@@ -265,7 +265,7 @@
   },
   {
     "id": "FOLIO_dev_8",
-    "context": "All cases of Monkeypox are caused by the monkeypox virus. The monkeypox virus can infect certain animals, including humans. All humans are mammals. All mammals are animals. Symptoms of Monkeypox include fever, headache, muscle pains, and feeling tired. People feel tired when they have a glu.",
+    "context": "Monkeypox is an infectious disease. Monkeypox is caused by the monkeypox virus. The monkeypox virus can occur in some animals. Some animals are humans. All humans are mammals. All mammals are animals. Symptoms of Monkeypox include fever. Symptoms of Monkeypox include headache. Symptoms of Monkeypox include muscle pains. Symptoms of Monkeypox include feeling tired. If a person gets a glu, then that person feels tired.",
     "question": "Symptoms of Monkeypox include coughing.",
     "options": [
       "A) True",
@@ -276,8 +276,8 @@
   },
   {
     "id": "FOLIO_dev_22",
-    "context": "If a show is popular, then Karen binge-watches it. If Karen binge-watches a show, then Karen downloads it. Karen does not download \"Black Mirror\". Exactly one of these is true: Karen shares a show to Lisa or Karen does not binge-watch the show. \"Black Mirror\" is a show. If Karen binge-watches a show, then Karen shares it to Lisa.",
-    "question": "\"Black Mirror\" is popular.",
+    "context": "Stranger Things is a Netflix show. Stranger Things is popular. If a Netflix show is popular, then Karen binge-watches that Netflix show. If and only if Karen binge-watches a Netflix show, then Karen downloads that Netflix show. Karen does not download Black Mirror. Black Mirror is a Netflix show. If Karen binge-watches a Netflix show, then Karen shares that Netflix show to Lisa.",
+    "question": "Black Mirror is popular.",
     "options": [
       "A) True",
       "B) False",
@@ -287,8 +287,8 @@
   },
   {
     "id": "FOLIO_dev_200",
-    "context": "Ailton Silva, who was born in 1995, is a football player known as Ailton. All football players are loaned out to Braga. All Brazilians who play for Nautico are footballers. Nautico and Braga are football clubs. Fluminense is a football club.",
-    "question": "Ailton Silva plays for a football club.",
+    "context": "Ailton Silva is born in 1995. Ailton Silva is commonly known as Ailton. Ailton Silva is a football player. Ailton Silva is loaned to Braga. Ailton Silva is a Brazilian footballer. Ailton Silva plays for Nautico. Nautico is a football club. Braga is a football club. Fluminense is a football club.",
+    "question": "Ailton Silva does not play for a football club.",
     "options": [
       "A) True",
       "B) False",
@@ -298,8 +298,8 @@
   },
   {
     "id": "FOLIO_dev_85",
-    "context": "If a restaurant is recommended by Yelp, then that restaurant does not receive many negative reviews. All restaurants with a rating above 9 are recommended by Yelp. Some restaurants without take-out service receive many negative reviews. All restaurants popular among locals have ratings above 9. Exactly one of these is true: Subway has a rating above 9 or Subway is popular among locals.",
-    "question": "Subway provides take-out service and does not receive many negative reviews.",
+    "context": "If a restaurant is listed in Yelp's recommendations, then that restaurant does not receive many negative reviews. All restaurants with a rating greater than 9 are listed in Yelp's recommendations. Some restaurants that do not provide take-out service receive many negative reviews. All restaurants that are popular among local residents have ratings greater than 9. Exactly one of these is true: Subway has a rating greater than 9 or Subway is popular among local residents.",
+    "question": "Subway provides take-out service and Subway does not receive many negative reviews.",
     "options": [
       "A) True",
       "B) False",
@@ -309,7 +309,7 @@
   },
   {
     "id": "FOLIO_dev_178",
-    "context": "All Olympic games are sporting events. The last Olympic games was in Tokyo. The United States won the most medals in Tokyo.",
+    "context": "The Olympic games is a sporting event. The last Olympic games was in Tokyo. The United States won the most medals in Tokyo.",
     "question": "The United States won the most medals in the last Olympic games.",
     "options": [
       "A) True",
@@ -320,8 +320,8 @@
   },
   {
     "id": "FOLIO_dev_73",
-    "context": "All stocks of growth companies are volatile. If a stock's price is volatile, then that stock is not suitable for a retirement fund. Some stocks are stocks of growth companies. All stocks of mature companies are suitable for a retirement fund. KO is a stock of a mature company.",
-    "question": "KO is neither a company's stock nor is its price volatile if KO is a stock of a growth company or if its price is volatile.",
+    "context": "All growth stocks are volatile. If a stock is volatile, then that stock is not suitable. Some stocks are growth stocks. All mature stocks are suitable. KO is a mature stock.",
+    "question": "If KO is a growth stock or KO is volatile, then KO is not a stock and KO is not volatile.",
     "options": [
       "A) True",
       "B) False",
@@ -331,8 +331,8 @@
   },
   {
     "id": "FOLIO_dev_26",
-    "context": "Beijing is the capital of China. Beijing is the most populous national capital. Beijing is located in Northern China. Beijing hosted the 2008 Summer Olympics and Paralympics. Beijing has hosted both the Summer and Winter Olympics, as well as the Summer and Winter Paralympics. Many of Beijing's 91 universities rank among the best in the Asia-Pacific and the world.",
-    "question": "Beijing is the second largest city in China by urban population.",
+    "context": "Beijing is the capital of China. Beijing is the most populous capital. Beijing is_located_in Northern China. Beijing hosted the 2008 Summer Olympics. Beijing hosted the 2008 Summer Paralympics. Beijing has hosted the Summer Olympics. Beijing has hosted the Winter Olympics. Beijing has hosted the Summer Paralympics. Beijing has hosted the Winter Paralympics. Some universities in Beijing are among the best in the Asia-Pacific. Some universities in Beijing are among the best in the world.",
+    "question": "Beijing is the second largest Chinese city by urban population.",
     "options": [
       "A) True",
       "B) False",
@@ -342,7 +342,7 @@
   },
   {
     "id": "FOLIO_dev_196",
-    "context": "If an animal barks, then Jane dislikes it. All animals that bark are dogs. If an animal jumps, then Jane likes it. If an animal has legs, then it jumps. If an animal is terricolous, then it has legs. If KiKi does not jump and KiKi does not have legs, then KiKi is terricolous or KiKi has legs.",
+    "context": "If an animal barks, then Jane does not like that animal. All dogs are animals that bark. If an animal jumps, then Jane likes that animal. If an animal has legs, then that animal jumps. If an animal is terricolous, then that animal has legs. Exactly one of these is true: (KiKi jumps or KiKi has legs) or (KiKi is terricolous or KiKi has legs).",
     "question": "KiKi is terricolous.",
     "options": [
       "A) True",
@@ -353,8 +353,8 @@
   },
   {
     "id": "FOLIO_dev_33",
-    "context": "Diamond Mine is a wrestling stable in WWE. Roderick Strong leads Diamond Mine. The members of Diamond Mine are the Creed Brothers and Ivy Nile. Imperium is in a feud with Diamond Mine.",
-    "question": "Roderick Strong leads a wrestling stable.",
+    "context": "Diamond Mine is a professional wrestling stable. Roderick Strong leads Diamond Mine. Diamond Mine includes the Creed Brothers. Diamond Mine includes Ivy Nile. Imperium has a feud with Diamond Mine.",
+    "question": "Roderick Strong leads a professional wrestling stable.",
     "options": [
       "A) True",
       "B) False",
@@ -364,7 +364,7 @@
   },
   {
     "id": "FOLIO_dev_152",
-    "context": "All books published by New Vessel Press are in English. Neapolitan Chronicles is a book published by New Vessel Press. Palace of Flies is a book published by New Vessel Press. Neapolitan Chronicles was translated from Italian.",
+    "context": "All books published by New Vessel Press are in English. Neapolitan Chronicles is a book published by New Vessel Press. Neapolitan Chronicles was translated from Italian. Palace of Flies is a book published by New Vessel Press.",
     "question": "Palace of Flies was translated from Italian.",
     "options": [
       "A) True",
@@ -375,8 +375,8 @@
   },
   {
     "id": "FOLIO_dev_76",
-    "context": "If a person works in student jobs on campus, then that person needs to earn money for college tuition. Exactly one of these is true: a person works in student jobs on campus or a person enjoys dining hall meals. If a person enjoys dining hall meals, then that person is not picky. If a person enjoys dining hall meals, then that person spends a lot of time eating and socializing in campus dining halls. If Mary works in student jobs on campus and needs to earn money for college tuition, then Mary is neither picky nor needs to earn money for college tuition.",
-    "question": "Mary needs to earn money for her college tuition.",
+    "context": "If a person works in a student job, then that person needs to earn money. If a person orders takeout frequently, then that person works in a student job. Exactly one of these is true: a person orders takeout frequently or a person enjoys dining hall meals. If a person enjoys dining hall meals, then that person is not a picky eater. If a person enjoys dining hall meals, then that person spends time in dining halls. If Mary works in a student job and Mary needs to earn money, then Mary is not a picky eater and Mary does not need to earn money.",
+    "question": "Mary needs to earn money.",
     "options": [
       "A) True",
       "B) False",
@@ -386,8 +386,8 @@
   },
   {
     "id": "FOLIO_dev_23",
-    "context": "If a Netflix show is popular, then Karen binge-watches it. If Karen binge-watches a Netflix show, then Karen downloads it. Karen does not download \"Black Mirror\". Exactly one of these is true: Karen shares a Netflix show to Lisa or Karen does not binge-watch a Netflix show. \"Black Mirror\" is a Netflix show.",
-    "question": "Karen shares \"Black Mirror\" to Lisa.",
+    "context": "Stranger Things is a Netflix show. Stranger Things is popular. If a Netflix show is popular, then Karen binge-watches that Netflix show. If and only if Karen binge-watches a Netflix show, then Karen downloads that Netflix show. Karen does not download Black Mirror. Black Mirror is a Netflix show. If Karen binge-watches a Netflix show, then Karen shares that Netflix show to Lisa.",
+    "question": "Karen shares Black Mirror to Lisa.",
     "options": [
       "A) True",
       "B) False",
@@ -397,7 +397,7 @@
   },
   {
     "id": "FOLIO_dev_11",
-    "context": "All wild turkeys are of six types: Eastern, Osceola, Gould's, Merriam's, Rio Grande, and Ocellated. Tom is not an Eastern wild turkey. Tom is not an Osceola wild turkey. Tom is not a Gould's wild turkey. Tom is not a Merriam's wild turkey. Tom is not a Rio Grande wild turkey. Tom is not an Ocellated wild turkey. Tom is a wild turkey.",
+    "context": "All Eastern wild turkeys are wild turkeys. All Osceola wild turkeys are wild turkeys. All Gould's wild turkeys are wild turkeys. All Merriam's wild turkeys are wild turkeys. All Rio Grande wild turkeys are wild turkeys. All Ocellated wild turkeys are wild turkeys. Tom is not an Eastern wild turkey. Tom is not an Osceola wild turkey. Tom is not a Gould's wild turkey. Tom is not a Merriam's wild turkey. Tom is not a Rio Grande wild turkey. Tom is a wild turkey.",
     "question": "Joey is a wild turkey.",
     "options": [
       "A) True",
@@ -408,7 +408,7 @@
   },
   {
     "id": "FOLIO_dev_170",
-    "context": "If a disease is deadly, then its survival rate is low. All severe cancers are deadly diseases. Bile duct cancer is a severe cancer. All Cholangiocarcinoma is bile duct cancer. No person with mild flu has a low survival rate. If colorectal cancer is a bile duct cancer with a low survival rate, then colorectal cancer is not a bile duct cancer.",
+    "context": "If a disease is deadly, then that disease has a low survival rate. All severe cancers are deadly diseases. Bile duct cancer is a severe cancer. All Cholangiocarcinoma is bile duct cancer. No person with mild flu has a low survival rate. If colorectal cancer is a bile duct cancer and colorectal cancer has a low survival rate, then colorectal cancer is not a bile duct cancer.",
     "question": "Colorectal cancer is a severe cancer.",
     "options": [
       "A) True",
@@ -419,7 +419,7 @@
   },
   {
     "id": "FOLIO_dev_150",
-    "context": "All books published by New Vessel Press are in English. Neapolitan Chronicles is a book published by New Vessel Press. Palace of Flies is a book published by New Vessel Press. Neapolitan Chronicles was translated from Italian.",
+    "context": "All books published by New Vessel Press are English books. Neapolitan Chronicles is a book published by New Vessel Press. Neapolitan Chronicles is translated from Italian. Palace of Flies is a book published by New Vessel Press.",
     "question": "Neapolitan Chronicles is an English book.",
     "options": [
       "A) True",
@@ -430,8 +430,8 @@
   },
   {
     "id": "FOLIO_dev_77",
-    "context": "If a person works in student jobs on campus, then that person needs to earn money for college tuition. If a person orders takeout frequently in college, then that person works in student jobs on campus. Exactly one of these is true: a person orders takeout frequently in college or a person enjoys dining hall meals. If a person enjoys dining hall meals, then that person is not a picky eater. If a person enjoys dining hall meals, then that person spends a lot of time eating and catching up with friends in campus dining halls. If Mary works in student jobs on campus and needs to earn money for college tuition, then Mary is neither picky nor in need of earning money for college tuition.",
-    "question": "Mary is not a picky eater and spends a lot of her time eating and catching up with friends in the campus dining halls.",
+    "context": "If a person works in a student job, then that person needs to earn money. If a person orders takeout frequently, then that person works in a student job. Exactly one of these is true: a person orders takeout frequently or a person enjoys dining hall meals. If a person enjoys dining hall meals, then that person is not a picky eater. If a person enjoys dining hall meals, then that person spends time in dining halls. If Mary works in a student job and Mary needs to earn money, then Mary is not a picky eater and Mary does not need to earn money.",
+    "question": "Mary is not a picky eater and Mary spends time in dining halls.",
     "options": [
       "A) True",
       "B) False",
@@ -441,7 +441,7 @@
   },
   {
     "id": "FOLIO_dev_31",
-    "context": "Exactly one of these is true: a person is a Grand Slam champion or a person is an Oscar-nominated actor. All Grand Slam champions are tennis players. All Oscar-nominated actors are celebrities. All tennis players are athletes. If a person is a celebrity, then that person is well paid. If a person is an athlete, then that person is famous. All well-paid individuals live in tax havens. If Djokovic is famous and Djokovic is an athlete, then Djokovic lives in a tax haven.",
+    "context": "Exactly one of these is true: a person is a Grand Slam champion or a person is an Oscar-nominated actor. All Grand Slam champions are professional tennis players. All Oscar-nominated actors are celebrities. All professional tennis players are athletes. If a person is a celebrity, then that person is well paid. If a person is an athlete, then that person is famous. All well-paid people live in tax havens. If Djokovic is famous and Djokovic is an athlete, then Djokovic is well paid.",
     "question": "Djokovic lives in a tax haven.",
     "options": [
       "A) True",
@@ -452,8 +452,8 @@
   },
   {
     "id": "FOLIO_dev_21",
-    "context": "If a Netflix show is popular, then Karen binge-watches it. If Karen binge-watches a Netflix show, then Karen downloads it. Karen does not download \"Black Mirror\". All Netflix shows are \"Stranger Things\". If Karen binge-watches a Netflix show, then Karen shares it with Lisa.",
-    "question": "Karen shares \"Stranger Things\" with Lisa.",
+    "context": "Stranger Things is a Netflix show. Stranger Things is popular. If a Netflix show is popular, then Karen binge-watches that Netflix show. If and only if Karen binge-watches a Netflix show, then Karen downloads that Netflix show. Karen does not download Black Mirror. Black Mirror is a Netflix show. If Karen binge-watches a Netflix show, then Karen shares that Netflix show to Lisa.",
+    "question": "Karen shares Stranger Things to Lisa.",
     "options": [
       "A) True",
       "B) False",
@@ -463,8 +463,8 @@
   },
   {
     "id": "FOLIO_dev_14",
-    "context": "A Japanese game company created the Legend of Zelda. All games in the Top 10 list are created by Japanese game companies. If a game sells more than one million copies, then it is selected into the Top 10 list. The Legend of Zelda sold more than one million copies.",
-    "question": "The Legend of Zelda is in the Top 10 list.",
+    "context": "A Japanese game company created the Legend of Zelda. All games in the Top 10 list are made by Japanese game companies. If a game sells more than one million copies, then that game is in the Top 10 list. The Legend of Zelda sold more than one million copies.",
+    "question": "The Legend of Zelda is not in the Top 10 list.",
     "options": [
       "A) True",
       "B) False",
@@ -474,8 +474,8 @@
   },
   {
     "id": "FOLIO_dev_129",
-    "context": "All people who have weddings have at least one child. All people who honeymoon in Paris have weddings. All July weddings belong to people who honeymoon in Paris. Some July weddings are well-attended. If John has children, then John does not honeymoon in Paris and does not have a wedding. If John has a well-attended wedding, then John has a July wedding; otherwise, John honeymoon in Paris.",
-    "question": "John has a wedding that is not well-attended.",
+    "context": "All people who have a wedding are people who have at least one child. All people who travel to Paris for their honeymoon are people who have a wedding. All weddings that occur in July are weddings of people who travel to Paris for their honeymoon. Some weddings in July are well-attended. If John has at least one child, then John does not travel to Paris for his honeymoon. If John has at least one child, then John does not have a wedding. If John has a wedding that is well-attended, then John has a wedding in July. If John does not have a wedding in July, then John travels to Paris for his honeymoon.",
+    "question": "John does not have a wedding that is well-attended.",
     "options": [
       "A) True",
       "B) False",
@@ -485,8 +485,8 @@
   },
   {
     "id": "FOLIO_dev_40",
-    "context": "All design styles by Zaha Hadid are timeless. No mass product design is timeless. Exactly one of these is true: Zaha Hadid's design style is timeless or Kelly Wearstler's design style is timeless. All design styles by Kelly Wearstler are evocative. All design styles by Kelly Wearstler are dreamy. If a design by Max is timeless, then that design is a mass product design and evocative.",
-    "question": "A design by Max is evocative and dreamy.",
+    "context": "All Zaha Hadid designs are timeless. No mass product design is timeless. Exactly one of these is true: the design is a Zaha Hadid design or the design is a Kelly Wearstler design. All Kelly Wearstler designs are evocative. All Kelly Wearstler designs are dreamy. If a design by Max is timeless, then a design by Max is a mass product design. If a design by Max is timeless, then a design by Max is evocative.",
+    "question": "A design by Max is evocative. A design by Max is dreamy.",
     "options": [
       "A) True",
       "B) False",
@@ -496,8 +496,8 @@
   },
   {
     "id": "FOLIO_dev_4",
-    "context": "If an employee schedules a meeting with customers, then that employee will be in the company today. Everyone who has lunch in the company schedules meetings with customers. Employees will either have lunch in the company or have lunch at home. If an employee has lunch at home, then that employee is working remotely. All employees in other countries work remotely. No manager works remotely. Exactly one of these is true: (James is a manager and James appears in the company) or (James is not a manager and James does not appear in the company).",
-    "question": "James has lunch in the company.",
+    "context": "All employees who schedule meetings appear in the company. All employees who have lunch in the company schedule meetings. Exactly one of these is true: an employee has lunch in the company or an employee has lunch at home. If an employee has lunch at home, then that employee works remotely. All employees in other countries work remotely. No manager works remotely. Exactly one of these is true: James is a manager and James appears in the company or James is not a manager and James does not appear in the company.",
+    "question": "James does not have lunch in the company.",
     "options": [
       "A) True",
       "B) False",
@@ -507,8 +507,8 @@
   },
   {
     "id": "FOLIO_dev_132",
-    "context": "Some animals have teeth. No platypus have teeth. All platypus are animals. All humans have teeth.",
-    "question": "Platypus are animals with no teeth.",
+    "context": "Some mammals are animals with teeth. Platypus is a mammal. Platypus is an animal with no teeth. Human is an animal with teeth.",
+    "question": "Platypus is a mammal with no teeth.",
     "options": [
       "A) True",
       "B) False",
@@ -518,7 +518,7 @@
   },
   {
     "id": "FOLIO_dev_176",
-    "context": "All Olympic games are sporting events. The last Olympic games was in Tokyo. The United States won the most medals in Tokyo.",
+    "context": "The Olympic games is a sporting event. The last Olympic games was in Tokyo. The United States won the most medals in Tokyo.",
     "question": "The world championships is a sporting event.",
     "options": [
       "A) True",
@@ -529,7 +529,7 @@
   },
   {
     "id": "FOLIO_dev_53",
-    "context": "All Romance languages are Indo-European languages. All Romance languages are related to each other. French and Spanish are Romance languages. German is related to Spanish. Basque is not related to any other language.",
+    "context": "All Romance languages are Indo-European languages. All Romance languages are languages in a family. All languages in a family are related. French is a Romance language. Spanish is a Romance language. German is related to Spanish. Basque is not related to any other language.",
     "question": "German is a Romance language.",
     "options": [
       "A) True",
@@ -540,8 +540,8 @@
   },
   {
     "id": "FOLIO_dev_171",
-    "context": "If a disease is deadly, then its survival rate is low. All severe cancers are deadly diseases. Bile duct cancer is a severe cancer. All Cholangiocarcinoma is bile duct cancer. No person with mild flu has a low survival rate. If colorectal cancer is a bile duct cancer with a low survival rate, then colorectal cancer is not a bile duct cancer.",
-    "question": "Colorectal cancer is a bile duct cancer or a Cholangiocarcinoma.",
+    "context": "If a disease is deadly, then that disease has a low survival rate. All severe cancers are deadly diseases. Bile duct cancer is a severe cancer. All Cholangiocarcinoma is bile duct cancer. No person with mild flu has a low survival rate. If colorectal cancer is a bile duct cancer and the survival rate is low, then colorectal cancer is not a bile duct cancer.",
+    "question": "If colorectal cancer is a bile duct cancer or colorectal cancer is a Cholangiocarcinoma, then colorectal cancer is a bile duct cancer and colorectal cancer is a mild flu.",
     "options": [
       "A) True",
       "B) False",

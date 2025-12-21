@@ -1,0 +1,262 @@
+{
+  "summary": {
+    "total": 13,
+    "correct": 10,
+    "wrong": 3,
+    "error": 0,
+    "accuracy": 76.92307692307693
+  },
+  "correct_problems": [
+    "FOLIO_dev_43",
+    "FOLIO_dev_59",
+    "FOLIO_dev_125",
+    "FOLIO_dev_0",
+    "FOLIO_dev_144",
+    "FOLIO_dev_17",
+    "FOLIO_dev_83",
+    "FOLIO_dev_111",
+    "FOLIO_dev_130",
+    "FOLIO_dev_126"
+  ],
+  "wrong_problems": [
+    "FOLIO_dev_13",
+    "FOLIO_dev_89",
+    "FOLIO_dev_107"
+  ],
+  "details": [
+    {
+      "id": "FOLIO_dev_43",
+      "predicted": "C",
+      "correct": "C",
+      "is_correct": true,
+      "pseudocode": null,
+      "mode": "direct",
+      "error": null,
+      "attempts": 1,
+      "code": "from z3 import *\n\n# Step 1: Scan context and question, list ALL predicates needed\n# Predicates: player_ranked_highly, active_player, lost_to, female_player, male_player\n# Predicates: at_Roland_Garros, lost_to_Iga_Swiatek, lost_to_Rafael_Nadal, coco_gauff_lost_to_rafael_nadal\n# Now define ALL boolean variables BEFORE using them\nplayer_ranked_highly = Bool(\"player_ranked_highly\")\nactive_player = Bool(\"active_player\")\nlost_to = Bool(\"lost_to\")\nfemale_player = Bool(\"female_player\")\nmale_player = Bool(\"male_player\")\nat_Roland_Garros = Bool(\"at_Roland_Garros\")\nlost_to_Iga_Swiatek = Bool(\"lost_to_Iga_Swiatek\")\nlost_to_Rafael_Nadal = Bool(\"lost_to_Rafael_Nadal\")\ncoco_gauff_lost_to_rafael_nadal = Bool(\"coco_gauff_lost_to_rafael_nadal\")\n\n# Step 2: Create solver\nsolver = Solver()\n\n# Step 3: Encode ONLY context constraints (NOT the query!)\n# Rule 1: If a player is ranked highly by WTA, then they are among the most active players\nsolver.add(Implies(player_ranked_highly, active_player))\n\n# Rule 2: Everyone who lost to Iga Świątek is ranked highly by WTA\nsolver.add(Implies(lost_to_Iga_Swiatek, player_ranked_highly))\n\n# Rule 3: All female tennis players at Roland Garros 2022 lost to Iga Świątek\nsolver.add(Implies(And(female_player, at_Roland_Garros), lost_to_Iga_Swiatek))\n\n# Rule 4: Either female players at Roland Garros 2022 or male players at Roland Garros 2022\nsolver.add(Or(female_player, male_player))\n\n# Rule 5: All male tennis players at Roland Garros 2022 lost to Rafael Nadal\nsolver.add(Implies(And(male_player, at_Roland_Garros), lost_to_Rafael_Nadal))\n\n# Rule 6: If Coco Gauff is ranked highly or lost to Rafael Nadal, then Coco Gauff is not a male player at Roland Garros\nsolver.add(Implies(Or(player_ranked_highly, lost_to_Rafael_Nadal), Not(male_player)))\n\n# Step 4: Check for contradictions in base constraints\nif solver.check() == unsat:\n    print(\"Error: Base constraints are contradictory\")\n    exit()\n\n# Step 5: Test the query \"Coco Gauff has lost to Rafael Nadal\" - Do NOT add it to base solver!\n# Test 1: Can Coco Gauff have lost to Rafael Nadal? (query is true)\nsolver.push()\nsolver.add(coco_gauff_lost_to_rafael_nadal)\ncan_be_true = (solver.check() == sat)\nsolver.pop()\n\n# Test 2: Can Coco Gauff NOT have lost to Rafael Nadal? (query is false)\nsolver.push()\nsolver.add(Not(coco_gauff_lost_to_rafael_nadal))\ncan_be_false = (solver.check() == sat)\nsolver.pop()\n\n# Step 6: Determine answer based on both tests\nif can_be_true and can_be_false:\n    print(\"C\")  # Uncertain - both are possible\nelif can_be_true and not can_be_false:\n    print(\"A\")  # True - Coco Gauff has lost to Rafael Nadal\nelse:\n    print(\"B\")  # False - Coco Gauff has not lost to Rafael Nadal",
+      "context": "If a player is ranked highly by the Women's Tennis Association, then they are among the most active players in major tennis. Everyone who lost to Iga Świątek is ranked highly by the Women's Tennis Association. All female tennis players at Roland Garros 2022 lost to Iga Świątek. Either female tennis players at Roland Garros 2022 or male tennis players at Roland Garros 2022. All male tennis players at Roland Garros 2022 lost to Rafael Nadal. If Coco Gauff is a player who is ranked highly by the Women's Tennis Association or a player who lost to Rafael Nadal, then Coco Gauff is not a male tennis player at Roland Garros 2022.",
+      "question": "Based on the above information, is the following statement true, false, or uncertain? Coco Gauff has lost to Rafael Nadal.",
+      "options": [
+        "A) True",
+        "B) False",
+        "C) Uncertain"
+      ]
+    },
+    {
+      "id": "FOLIO_dev_59",
+      "predicted": "C",
+      "correct": "C",
+      "is_correct": true,
+      "pseudocode": null,
+      "mode": "direct",
+      "error": null,
+      "attempts": 1,
+      "code": "from z3 import *\n\n# Step 1: Scan context and question, list ALL predicates needed\n# Predicates: is_city, in_state, same_state\n# Now define ALL boolean variables BEFORE using them\nbillings = Bool(\"billings\")\nbutte = Bool(\"butte\")\nhelena = Bool(\"helena\")\nmissoula = Bool(\"missoula\")\nwhite_sulphur_springs = Bool(\"white_sulphur_springs\")\npierre = Bool(\"pierre\")\nbismarck = Bool(\"bismarck\")\n\n# Step 2: Create solver\nsolver = Solver()\n\n# Step 3: Encode ONLY context constraints (NOT the query!)\n# Rule 1: Billings is a city in Montana\nsolver.add(Implies(billings, in_state(\"montana\")))\n\n# Rule 2: Montana includes the cities of Butte, Helena, and Missoula\nsolver.add(And(Implies(butte, in_state(\"montana\")), Implies(helena, in_state(\"montana\")), Implies(missoula, in_state(\"montana\")))\n\n# Rule 3: White Sulphur Springs and Butte are cities in the same state\nsolver.add(same_state(white_sulphur_springs, butte))\n\n# Rule 4: The city of Pierre is not in Montana\nsolver.add(Not(in_state(pierre, \"montana\")))\n\n# Rule 5: Any city in Butte is not in Pierre\nsolver.add(Implies(butte, Not(in_state(pierre))))\n\n# Step 4: Check for contradictions in base constraints\nif solver.check() == unsat:\n    print(\"Error: Base constraints are contradictory\")\n    exit()\n\n# Step 5: Test the query \"Pierre and Bismarck are in the same state\" - Do NOT add it to base solver!\n# Test 1: Can Pierre and Bismarck be in the same state? (query is true)\nsolver.push()\nsolver.add(same_state(pierre, bismarck))\ncan_be_true = (solver.check() == sat)\nsolver.pop()\n\n# Test 2: Can Pierre and Bismarck NOT be in the same state? (query is false)\nsolver.push()\nsolver.add(Not(same_state(pierre, bismarck)))\ncan_be_false = (solver.check() == sat)\nsolver.pop()\n\n# Step 6: Determine answer based on both tests\nif can_be_true and can_be_false:\n    print(\"C\")  # Uncertain - both are possible\nelif can_be_true and not can_be_false:\n    print(\"A\")  # True - must be in the same state\nelse:\n    print(\"B\")  # False - cannot be in the same state",
+      "context": "Billings is a city in Montana. Montana includes the cities of Butte, Helena, and Missoula. White Sulphur Springs and Butte are cities in the same state. The city of Pierre is not in Montana. Any city in Butte is not in Pierre.",
+      "question": "Based on the above information, is the following statement true, false, or uncertain? Pierre and Bismarck are in the same state.",
+      "options": [
+        "A) True",
+        "B) False",
+        "C) Uncertain"
+      ]
+    },
+    {
+      "id": "FOLIO_dev_125",
+      "predicted": "C",
+      "correct": "C",
+      "is_correct": true,
+      "pseudocode": null,
+      "mode": "direct",
+      "error": null,
+      "attempts": 1,
+      "code": "from z3 import *\n\n# Step 1: Scan context and question, list ALL predicates needed\n# Predicates: rock_is_mammal, rock_is_monkey, rock_is_bird, rock_can_fly, rock_has_wings, rock_breathes\n# Now define ALL boolean variables BEFORE using them\nrock_is_mammal = Bool(\"rock_is_mammal\")\nrock_is_monkey = Bool(\"rock_is_monkey\")\nrock_is_bird = Bool(\"rock_is_bird\")\nrock_can_fly = Bool(\"rock_can_fly\")\nrock_has_wings = Bool(\"rock_has_wings\")\nrock_breathes = Bool(\"rock_breathes\")\n\n# Step 2: Create solver\nsolver = Solver()\n\n# Step 3: Encode ONLY context constraints (NOT the query!)\n# Rule 1: All mammals are animals\nsolver.add(Implies(rock_is_mammal, rock_is_animal))\n\n# Rule 2: All monkeys are mammals\nsolver.add(Implies(rock_is_monkey, rock_is_mammal))\n\n# Rule 3: An animal is either a monkey or a bird\nsolver.add(Or(rock_is_monkey, rock_is_bird))\n\n# Rule 4: All birds fly\nsolver.add(Implies(rock_is_bird, rock_can_fly))\n\n# Rule 5: All animals breathe\nsolver.add(Implies(rock_is_animal, rock_breathes))\n\n# Rule 6: If something can fly, then it has wings\nsolver.add(Implies(rock_can_fly, rock_has_wings))\n\n# Rule 7: If Rock is neither a fly nor a bird, then Rock neither flies nor breathes\nsolver.add(Implies(And(Not(rock_can_fly), Not(rock_is_bird)), And(Not(rock_can_fly), Not(rock_breathes)))\n\n# Step 4: Check for contradictions in base constraints\nif solver.check() == unsat:\n    print(\"Error: Base constraints are contradictory\")\n    exit()\n\n# Step 5: Test the query \"Rock is a monkey\" - Do NOT add it to base solver!\n# Test 1: Can Rock be a monkey? (query is true)\nsolver.push()\nsolver.add(rock_is_monkey)\ncan_be_true = (solver.check() == sat)\nsolver.pop()\n\n# Test 2: Can Rock NOT be a monkey? (query is false)\nsolver.push()\nsolver.add(Not(rock_is_monkey))\ncan_be_false = (solver.check() == sat)\nsolver.pop()\n\n# Step 6: Determine answer based on both tests\nif can_be_true and can_be_false:\n    print(\"C\")  # Uncertain - both are possible\nelif can_be_true and not can_be_false:\n    print(\"A\")  # True - Rock is a monkey\nelse:\n    print(\"B\")  # False - Rock is not a monkey",
+      "context": "All mammals are animals. All monkeys are mammals. An animal is either a monkey or a bird. All birds fly. All animals breathe. If something can fly, then it has wings. If Rock is neither a fly nor a bird, then Rock neither flies nor breathes.",
+      "question": "Based on the above information, is the following statement true, false, or uncertain? Rock is a monkey.",
+      "options": [
+        "A) True",
+        "B) False",
+        "C) Uncertain"
+      ]
+    },
+    {
+      "id": "FOLIO_dev_0",
+      "predicted": "C",
+      "correct": "C",
+      "is_correct": true,
+      "pseudocode": null,
+      "mode": "direct",
+      "error": null,
+      "attempts": 1,
+      "code": "from z3 import *\n\n# Step 1: Scan context and question, list ALL predicates needed\n# Predicates: perform_talent_shows_often, attend_school_events, engaged_with_school_events, chaperone_dances, student_attend_school, young_children, teenagers, further_academic_careers, inactive_disinterested, bonnie\n# Now define ALL boolean variables BEFORE using them\nperform_talent_shows_often = Bool(\"perform_talent_shows_often\")\nattend_school_events = Bool(\"attend_school_events\")\nengaged_with_school_events = Bool(\"engaged_with_school_events\")\nchaperone_dances = Bool(\"chaperone_dances\")\nstudent_attend_school = Bool(\"student_attend_school\")\nyoung_children = Bool(\"young_children\")\nteenagers = Bool(\"teenagers\")\nfurther_academic_careers = Bool(\"further_academic_careers\")\ninactive_disinterested = Bool(\"inactive_disinterested\")\nbonnie = Bool(\"bonnie\")\n\n# Step 2: Create solver\nsolver = Solver()\n\n# Step 3: Encode ONLY context constraints (NOT the query!)\n# Rule 1: If people perform in school talent shows often, then they attend and are very engaged with school events\nsolver.add(Implies(perform_talent_shows_often, And(attend_school_events, engaged_with_school_events)))\n\n# Rule 2: People either perform in school talent shows often or are inactive and disinterested members of their community\n# This means it's possible to be either, so no constraint needed\n\n# Rule 3: If people chaperone high school dances, then they are not students who attend the school\nsolver.add(Implies(chaperone_dances, Not(student_attend_school)))\n\n# Rule 4: All people who are inactive and disinterested members of their community chaperone high school dances\nsolver.add(Implies(inactive_disinterested, chaperone_dances))\n\n# Rule 5: All young children and teenagers who wish to further their academic careers and educational opportunities are students who attend the school\nsolver.add(Implies(And(Or(young_children, teenagers), further_academic_careers), student_attend_school))\n\n# Rule 6: Bonnie either both attends and is very engaged with school events and is a student who attends the school, or she neither attends and is very engaged with school events nor is a student who attends the school\nsolver.add(Or(And(attend_school_events, engaged_with_school_events, student_attend_school, bonnie), And(Not(attend_school_events), Not(engaged_with_school_events), Not(student_attend_school), bonnie)))\n\n# Step 4: Check for contradictions in base constraints\nif solver.check() == unsat:\n    print(\"Error: Base constraints are contradictory\")\n    exit()\n\n# Step 5: Test the query \"Bonnie performs in school talent shows often\" - Do NOT add it to base solver!\n# Test 1: Can Bonnie perform in school talent shows often? (query is true)\nsolver.push()\nsolver.add(perform_talent_shows_often)\ncan_be_true = (solver.check() == sat)\nsolver.pop()\n\n# Test 2: Can Bonnie NOT perform in school talent shows often? (query is false)\nsolver.push()\nsolver.add(Not(perform_talent_shows_often))\ncan_be_false = (solver.check() == sat)\nsolver.pop()\n\n# Step 6: Determine answer based on both tests\nif can_be_true and can_be_false:\n    print(\"C\")  # Uncertain - both are possible\nelif can_be_true and not can_be_false:\n    print(\"A\")  # True - Bonnie performs in school talent shows often\nelse:\n    print(\"B\")  # False - Bonnie does not perform in school talent shows often",
+      "context": "If people perform in school talent shows often, then they attend and are very engaged with school events. People either perform in school talent shows often or are inactive and disinterested members of their community. If people chaperone high school dances, then they are not students who attend the school. All people who are inactive and disinterested members of their community chaperone high school dances. All young children and teenagers who wish to further their academic careers and educational opportunities are students who attend the school. Bonnie either both attends and is very engaged with school events and is a student who attends the school, or she neither attends and is very engaged with school events nor is a student who attends the school.",
+      "question": "Based on the above information, is the following statement true, false, or uncertain? Bonnie performs in school talent shows often.",
+      "options": [
+        "A) True",
+        "B) False",
+        "C) Uncertain"
+      ]
+    },
+    {
+      "id": "FOLIO_dev_144",
+      "predicted": "C",
+      "correct": "C",
+      "is_correct": true,
+      "pseudocode": null,
+      "mode": "direct",
+      "error": null,
+      "attempts": 1,
+      "code": "from z3 import *\n\n# Step 1: Scan context and question, list ALL predicates needed\n# Predicates: heck_cattle_are_animals, aurochs_are_animals, animals_resemble_extinct\n# Now define ALL boolean variables BEFORE using them\nheck_cattle_are_animals = Bool(\"heck_cattle_are_animals\")\naurochs_are_animals = Bool(\"aurochs_are_animals\")\nanimals_resemble_extinct = Bool(\"animals_resemble_extinct\")\n\n# Step 2: Create solver\nsolver = Solver()\n\n# Step 3: Encode ONLY context constraints (NOT the query!)\n# Rule 1: Heck cattle are animals\nsolver.add(heck_cattle_are_animals)\n\n# Rule 2: Aurochs are animals\nsolver.add(aurochs_are_animals)\n\n# Rule 3: Some animals to be bred-back resemble animals that are extinct\n# We don't add a constraint for \"some\" - it just means both resembling and not resembling extinct animals are possible\n\n# Step 4: Check for contradictions in base constraints\nif solver.check() == unsat:\n    print(\"Error: Base constraints are contradictory\")\n    exit()\n\n# Step 5: Test the query \"Aurochs are extinct\" - Do NOT add it to base solver!\n# Test 1: Can Aurochs be extinct? (query is true)\nsolver.push()\nsolver.add(animals_resemble_extinct)\ncan_be_true = (solver.check() == sat)\nsolver.pop()\n\n# Test 2: Can Aurochs NOT be extinct? (query is false)\nsolver.push()\nsolver.add(Not(animals_resemble_extinct))\ncan_be_false = (solver.check() == sat)\nsolver.pop()\n\n# Step 6: Determine answer based on both tests\nif can_be_true and can_be_false:\n    print(\"C\")  # Uncertain - both are possible\nelif can_be_true and not can_be_false:\n    print(\"A\")  # True - Aurochs are extinct\nelse:\n    print(\"B\")  # False - Aurochs are not extinct",
+      "context": "Breeding back is a form of artificial selection by the deliberate selective breeding of domestic animals. Heck cattle were bred-back in the 1920s to resemble the aurochs. [BG] Heck cattle are animals. [BG] Aurochs are animals. Some animals to be bred-back resemble animals that are extinct.",
+      "question": "Based on the above information, is the following statement true, false, or uncertain? Aurochs are extinct.",
+      "options": [
+        "A) True",
+        "B) False",
+        "C) Uncertain"
+      ]
+    },
+    {
+      "id": "FOLIO_dev_17",
+      "predicted": "C",
+      "correct": "C",
+      "is_correct": true,
+      "pseudocode": null,
+      "mode": "direct",
+      "error": null,
+      "attempts": 1,
+      "code": "from z3 import *\n\n# Step 1: Scan context and question, list ALL predicates needed\n# Predicates: rock_is_turtle, rock_is_still, rock_is_rabbit, rock_is_squirrel, rock_is_skittish\n# Now define ALL boolean variables BEFORE using them\nrock_is_turtle = Bool(\"rock_is_turtle\")\nrock_is_still = Bool(\"rock_is_still\")\nrock_is_rabbit = Bool(\"rock_is_rabbit\")\nrock_is_squirrel = Bool(\"rock_is_squirrel\")\nrock_is_skittish = Bool(\"rock_is_skittish\")\n\n# Step 2: Create solver\nsolver = Solver()\n\n# Step 3: Encode ONLY context constraints (NOT the query!)\n# Rule 1: All rabbits are cute\n# We don't have a constraint for rock_is_cute since it's not relevant to the question\n\n# Rule 2: Some turtles exist (this means it's POSSIBLE, not required)\n# We don't add a constraint for \"some\" - it just means both turtle and not-turtle are possible\n\n# Rule 3: An animal is either a rabbit or a squirrel\nsolver.add(Or(rock_is_rabbit, rock_is_squirrel))\n\n# Rule 4: If something is skittish, then it is not still\nsolver.add(Implies(rock_is_skittish, Not(rock_is_still)))\n\n# Rule 5: All squirrels are skittish\nsolver.add(Implies(rock_is_squirrel, rock_is_skittish))\n\n# Rule 6: Rock is still (fact)\nsolver.add(rock_is_still)\n\n# Step 4: Check for contradictions in base constraints\nif solver.check() == unsat:\n    print(\"Error: Base constraints are contradictory\")\n    exit()\n\n# Step 5: Test the query \"Rock is not a turtle\" - Do NOT add it to base solver!\n# Test 1: Can Rock be a turtle? (query is false)\nsolver.push()\nsolver.add(rock_is_turtle)\ncan_be_false = (solver.check() == sat)\nsolver.pop()\n\n# Test 2: Can Rock NOT be a turtle? (query is true)\nsolver.push()\nsolver.add(Not(rock_is_turtle))\ncan_be_true = (solver.check() == sat)\nsolver.pop()\n\n# Step 6: Determine answer based on both tests\nif can_be_true and can_be_false:\n    print(\"C\")  # Uncertain - both are possible\nelif can_be_true and not can_be_false:\n    print(\"A\")  # True - Rock is not a turtle\nelse:\n    print(\"B\")  # False - Rock is a turtle",
+      "context": "All rabbits are cute. Some turtles exist. An animal is either a rabbit or a squirrel. If something is skittish, then it is not still. All squirrels are skittish. Rock is still.",
+      "question": "Based on the above information, is the following statement true, false, or uncertain? Rock is not a turtle.",
+      "options": [
+        "A) True",
+        "B) False",
+        "C) Uncertain"
+      ]
+    },
+    {
+      "id": "FOLIO_dev_13",
+      "predicted": "A",
+      "correct": "C",
+      "is_correct": false,
+      "pseudocode": null,
+      "mode": "direct",
+      "error": null,
+      "attempts": 1,
+      "code": "from z3 import *\n\n# Step 1: Scan context and question, list ALL predicates needed\n# Predicates: zelda_created_by_japanese, top_10_japanese, game_sells_million, fifa_22_japanese\n# Now define ALL boolean variables BEFORE using them\nzelda_created_by_japanese = Bool(\"zelda_created_by_japanese\")\ntop_10_japanese = Bool(\"top_10_japanese\")\ngame_sells_million = Bool(\"game_sells_million\")\nfifa_22_japanese = Bool(\"fifa_22_japanese\")\n\n# Step 2: Create solver\nsolver = Solver()\n\n# Step 3: Encode ONLY context constraints (NOT the query!)\n# Rule 1: A Japanese game company created the game the Legend of Zelda\nsolver.add(Implies(zelda_created_by_japanese, top_10_japanese))\n\n# Rule 2: All games in the Top 10 list are made by Japanese game companies\nsolver.add(Implies(top_10_japanese, fifa_22_japanese))\n\n# Rule 3: If a game sells more than one million copies, it will be selected into the Top 10 list\nsolver.add(Implies(game_sells_million, top_10_japanese))\n\n# Rule 4: The Legend of Zelda sold more than one million copies (fact)\nsolver.add(game_sells_million)\n\n# Step 4: Check for contradictions in base constraints\nif solver.check() == unsat:\n    print(\"Error: Base constraints are contradictory\")\n    exit()\n\n# Step 5: Test the query \"FIFA 22 is made by a Japanese video game company\" - Do NOT add it to base solver!\n# Test 1: Can FIFA 22 be made by a Japanese company? (query is true)\nsolver.push()\nsolver.add(fifa_22_japanese)\ncan_be_true = (solver.check() == sat)\nsolver.pop()\n\n# Test 2: Can FIFA 22 NOT be made by a Japanese company? (query is false)\nsolver.push()\nsolver.add(Not(fifa_22_japanese))\ncan_be_false = (solver.check() == sat)\nsolver.pop()\n\n# Step 6: Determine answer based on both tests\nif can_be_true and can_be_false:\n    print(\"C\")  # Uncertain - both are possible\nelif can_be_true and not can_be_false:\n    print(\"A\")  # True - FIFA 22 is made by a Japanese company\nelse:\n    print(\"B\")  # False - FIFA 22 is not made by a Japanese company",
+      "context": "A Japanese game company created the game the Legend of Zelda. All games in the Top 10 list are made by Japanese game companies. [BG] If a game sells more than one million copies, then it will be selected into the Top 10 list. The Legend of Zelda sold more than one million copies.",
+      "question": "Based on the above information, is the following statement true, false, or uncertain? FIFA 22 is made by a Japanese video game company.",
+      "options": [
+        "A) True",
+        "B) False",
+        "C) Uncertain"
+      ]
+    },
+    {
+      "id": "FOLIO_dev_83",
+      "predicted": "B",
+      "correct": "B",
+      "is_correct": true,
+      "pseudocode": null,
+      "mode": "direct",
+      "error": null,
+      "attempts": 1,
+      "code": "from z3 import *\n\n# Step 1: Scan context and question, list ALL predicates needed\n# Predicates: is_bakery, is_spicy, is_cupcake, is_hotpot, is_product_of_baked_by_melissa\n# Predicates: is_dried_thai_chilies\n# Now define ALL boolean variables BEFORE using them\nis_bakery = Bool(\"is_bakery\")\nis_spicy = Bool(\"is_spicy\")\nis_cupcake = Bool(\"is_cupcake\")\nis_hotpot = Bool(\"is_hotpot\")\nis_product_of_baked_by_melissa = Bool(\"is_product_of_baked_by_melissa\")\nis_dried_thai_chilies = Bool(\"is_dried_thai_chilies\")\n\n# Step 2: Create solver\nsolver = Solver()\n\n# Step 3: Encode ONLY context constraints (NOT the query!)\n# Rule 1: No bakery is spicy\nsolver.add(Implies(is_bakery, Not(is_spicy)))\n\n# Rule 2: All cupcakes are bakeries\nsolver.add(Implies(is_cupcake, is_bakery))\n\n# Rule 3: All hotpots are spicy\nsolver.add(Implies(is_hotpot, is_spicy))\n\n# Rule 4: All products of Baked by Melissa are cupcakes\nsolver.add(Implies(is_product_of_baked_by_melissa, is_cupcake))\n\n# Rule 5: If dried Thai chilies are spicy or a bakery, then they are a hotpot or spicy\nsolver.add(Implies(Or(is_spicy, is_bakery), Or(is_hotpot, is_spicy)))\n\n# Step 4: Check for contradictions in base constraints\nif solver.check() == unsat:\n    print(\"Error: Base constraints are contradictory\")\n    exit()\n\n# Step 5: Test the query \"Dried Thai chilies are cupcakes and a product of Baked by Melissa\"\n# Test 1: Can dried Thai chilies be cupcakes and a product of Baked by Melissa? (query is true)\nsolver.push()\nsolver.add(is_dried_thai_chilies, is_cupcake, is_product_of_baked_by_melissa)\ncan_be_true = (solver.check() == sat)\nsolver.pop()\n\n# Test 2: Can dried Thai chilies NOT be cupcakes and a product of Baked by Melissa? (query is false)\nsolver.push()\nsolver.add(Not(is_dried_thai_chilies), Not(is_cupcake), Not(is_product_of_baked_by_melissa))\ncan_be_false = (solver.check() == sat)\nsolver.pop()\n\n# Step 6: Determine answer based on both tests\nif can_be_true and can_be_false:\n    print(\"C\")  # Uncertain - both are possible\nelif can_be_true and not can_be_false:\n    print(\"A\")  # True - can be cupcakes and a product of Baked by Melissa\nelse:\n    print(\"B\")  # False - cannot be cupcakes and a product of Baked by Melissa",
+      "context": "No bakery is spicy. All cupcakes are bakeries. All hotpots are spicy. All products of Baked by Melissa are cupcakes. If dried Thai chilies are spicy or a bakery, then dried Thai chilies are a hotpot or are spicy.",
+      "question": "Based on the above information, is the following statement true, false, or uncertain? Dried Thai chilies are cupcakes and a product of Baked by Melissa.",
+      "options": [
+        "A) True",
+        "B) False",
+        "C) Uncertain"
+      ]
+    },
+    {
+      "id": "FOLIO_dev_111",
+      "predicted": "C",
+      "correct": "C",
+      "is_correct": true,
+      "pseudocode": null,
+      "mode": "direct",
+      "error": null,
+      "attempts": 1,
+      "code": "from z3 import *\n\n# Step 1: Scan context and question, list ALL predicates needed\n# Predicates: fir_tree, evergreen, object_of_worship\n# Now define ALL boolean variables BEFORE using them\nfir_tree = Bool(\"fir_tree\")\nevergreen = Bool(\"evergreen\")\nobject_of_worship = Bool(\"object_of_worship\")\n\n# Step 2: Create solver\nsolver = Solver()\n\n# Step 3: Encode ONLY context constraints (NOT the query!)\n# Rule 1: All fir trees are evergreens\nsolver.add(Implies(fir_tree, evergreen))\n\n# Rule 2: Some objects of worship are fir trees (this means it's POSSIBLE, not required)\n# We don't add a constraint for \"some\" - it just means both object of worship and not object of worship are possible\n\n# Step 4: Check for contradictions in base constraints\nif solver.check() == unsat:\n    print(\"Error: Base constraints are contradictory\")\n    exit()\n\n# Step 5: Test the query \"Some evergreens are not objects of worship\" - Do NOT add it to base solver!\n# Test 1: Can Some evergreens NOT be objects of worship? (query is true)\nsolver.push()\nsolver.add(Not(Implies(evergreen, object_of_worship)))\ncan_be_true = (solver.check() == sat)\nsolver.pop()\n\n# Test 2: Can Some evergreens be objects of worship? (query is false)\nsolver.push()\nsolver.add(Implies(evergreen, object_of_worship))\ncan_be_false = (solver.check() == sat)\nsolver.pop()\n\n# Step 6: Determine answer based on both tests\nif can_be_true and can_be_false:\n    print(\"C\")  # Uncertain - both are possible\nelif can_be_true and not can_be_false:\n    print(\"A\")  # True - Some evergreens are not objects of worship\nelse:\n    print(\"B\")  # False - Some evergreens are objects of worship",
+      "context": "All fir trees are evergreens. Some objects of worship are fir trees.",
+      "question": "Based on the above information, is the following statement true, false, or uncertain? Some evergreens are not objects of worship.",
+      "options": [
+        "A) True",
+        "B) False",
+        "C) Uncertain"
+      ]
+    },
+    {
+      "id": "FOLIO_dev_89",
+      "predicted": "C",
+      "correct": "A",
+      "is_correct": false,
+      "pseudocode": null,
+      "mode": "direct",
+      "error": null,
+      "attempts": 1,
+      "code": "from z3 import *\n\n# Step 1: Scan context and question, list ALL predicates needed\n# Predicates: harry_read_book, person_gains_knowledge, person_smarter\n# Now define ALL boolean variables BEFORE using them\nharry_read_book = Bool(\"harry_read_book\")\nperson_gains_knowledge = Bool(\"person_gains_knowledge\")\nperson_smarter = Bool(\"person_smarter\")\n\n# Step 2: Create solver\nsolver = Solver()\n\n# Step 3: Encode ONLY context constraints (NOT the query!)\n# Rule 1: Books contain tons of knowledge\n# Rule 2: When a person reads a book, that person gains knowledge\nsolver.add(Implies(harry_read_book, person_gains_knowledge))\n# Rule 3: If a person gains knowledge, they become smarter\nsolver.add(Implies(person_gains_knowledge, person_smarter))\n\n# Step 4: Check for contradictions in base constraints\nif solver.check() == unsat:\n    print(\"Error: Base constraints are contradictory\")\n    exit()\n\n# Step 5: Test the query \"Harry is smarter than before\" - Do NOT add it to base solver!\n# Test 1: Can Harry be smarter?\nsolver.push()\nsolver.add(person_smarter)\ncan_be_true = (solver.check() == sat)\nsolver.pop()\n\n# Test 2: Can Harry NOT be smarter?\nsolver.push()\nsolver.add(Not(person_smarter))\ncan_be_false = (solver.check() == sat)\nsolver.pop()\n\n# Step 6: Determine answer based on both tests\nif can_be_true and can_be_false:\n    print(\"C\")  # Uncertain - both are possible\nelif can_be_true and not can_be_false:\n    print(\"A\")  # True - Harry is smarter\nelse:\n    print(\"B\")  # False - Harry is not smarter",
+      "context": "[BG] Books contain tons of knowledge. [BG] When a person reads a book, that person gains knowledge. [BG] If a person gains knowledge, they become smarter. Harry read the book “Walden” by Henry Thoreau.",
+      "question": "Based on the above information, is the following statement true, false, or uncertain? Harry is smarter than before.",
+      "options": [
+        "A) True",
+        "B) False",
+        "C) Uncertain"
+      ]
+    },
+    {
+      "id": "FOLIO_dev_107",
+      "predicted": "C",
+      "correct": "B",
+      "is_correct": false,
+      "pseudocode": null,
+      "mode": "direct",
+      "error": null,
+      "attempts": 1,
+      "code": "from z3 import *\n\n# Step 1: Scan context and question, list ALL predicates needed\n# Predicates: cost_GRE, provide_financial_aid, economic_hardship, tom_single_parent, dad_unemployed\n# Now define ALL boolean variables BEFORE using them\ncost_GRE = Bool(\"cost_GRE\")\nprovide_financial_aid = Bool(\"provide_financial_aid\")\neconomic_hardship = Bool(\"economic_hardship\")\ntom_single_parent = Bool(\"tom_single_parent\")\ndad_unemployed = Bool(\"dad_unemployed\")\n\n# Step 2: Create solver\nsolver = Solver()\n\n# Step 3: Encode ONLY context constraints (NOT the query!)\n# Rule 1: It costs US $205 to take the GRE test\n# We don't need to add this as a constraint for this question\n\n# Rule 2: ETS provides financial aid to those GRE applicants who prove economic hardship\nsolver.add(Implies(economic_hardship, provide_financial_aid))\n\n# Rule 3: Economic hardship refers to difficulty caused by having too little money or too few resources\n# We don't need to add this as a constraint for this question\n\n# Rule 4: Tom lives in a single-parent family\nsolver.add(tom_single_parent)\n\n# Rule 5: His dad has been out of work for more than a year\nsolver.add(dad_unemployed)\n\n# Step 4: Check for contradictions in base constraints\nif solver.check() == unsat:\n    print(\"Error: Base constraints are contradictory\")\n    exit()\n\n# Step 5: Test the query \"There is no financial aid available for the GRE test\"\n# Test 1: Can there be financial aid available?\nsolver.push()\nsolver.add(provide_financial_aid)\ncan_be_true = (solver.check() == sat)\nsolver.pop()\n\n# Test 2: Can there be no financial aid available?\nsolver.push()\nsolver.add(Not(provide_financial_aid))\ncan_be_false = (solver.check() == sat)\nsolver.pop()\n\n# Step 6: Determine answer based on both tests\nif can_be_true and can_be_false:\n    print(\"C\")  # Uncertain - both possibilities exist\nelif can_be_true and not can_be_false:\n    print(\"A\")  # True - there is financial aid available\nelse:\n    print(\"B\")  # False - there is no financial aid available",
+      "context": "It costs US $205 to take the GRE test. ETS provides financial aid to those GRE applicants who prove economic hardship. Economic hardship refers to difficulty caused by having too little money or too few resources. Tom lives in a single-parent family. His dad has been out of work for more than a year.",
+      "question": "Based on the above information, is the following statement true, false, or uncertain? There is no financial aid available for the GRE test.",
+      "options": [
+        "A) True",
+        "B) False",
+        "C) Uncertain"
+      ]
+    },
+    {
+      "id": "FOLIO_dev_130",
+      "predicted": "C",
+      "correct": "C",
+      "is_correct": true,
+      "pseudocode": null,
+      "mode": "direct",
+      "error": null,
+      "attempts": 1,
+      "code": "from z3 import *\n\n# Step 1: Scan context and question, list ALL predicates needed\n# Predicates: john_has_wedding, john_has_child, john_travels_paris, john_has_wedding_july, john_wedding_well_attended\n# Now define ALL boolean variables BEFORE using them\njohn_has_wedding = Bool(\"john_has_wedding\")\njohn_has_child = Bool(\"john_has_child\")\njohn_travels_paris = Bool(\"john_travels_paris\")\njohn_has_wedding_july = Bool(\"john_has_wedding_july\")\njohn_wedding_well_attended = Bool(\"john_wedding_well_attended\")\n\n# Step 2: Create solver\nsolver = Solver()\n\n# Step 3: Encode ONLY context constraints (NOT the query!)\n# Rule 1: All people who have a wedding have at least one child\nsolver.add(Implies(john_has_wedding, john_has_child))\n\n# Rule 2: All people who travel to Paris for their honeymoon have a wedding\nsolver.add(Implies(john_travels_paris, john_has_wedding))\n\n# Rule 3: All weddings that occur in July belong to people who travel to Paris for their honeymoon\nsolver.add(Implies(john_has_wedding_july, john_travels_paris))\n\n# Rule 4: Some weddings in July are well-attended (this means it's POSSIBLE, not required)\n# We don't add a constraint for \"some\" - it just means both well-attended and not well-attended are possible\n\n# Rule 5: If John has at least one child, then John does not travel to Paris for his honeymoon and does not have a wedding\nsolver.add(Implies(john_has_child, And(Not(john_travels_paris), Not(john_has_wedding))))\n\n# Rule 6: If John has a wedding that is well-attended, then John has a wedding in July or travels to Paris for their honeymoon\nsolver.add(Implies(john_wedding_well_attended, Or(john_has_wedding_july, john_travels_paris)))\n\n# Step 4: Check for contradictions in base constraints\nif solver.check() == unsat:\n    print(\"Error: Base constraints are contradictory\")\n    exit()\n\n# Step 5: Test the query \"John has at least one child\" - Do NOT add it to base solver!\n# Test 1: Can John have at least one child? (query is true)\nsolver.push()\nsolver.add(john_has_child)\ncan_be_true = (solver.check() == sat)\nsolver.pop()\n\n# Test 2: Can John NOT have at least one child? (query is false)\nsolver.push()\nsolver.add(Not(john_has_child))\ncan_be_false = (solver.check() == sat)\nsolver.pop()\n\n# Step 6: Determine answer based on both tests\nif can_be_true and can_be_false:\n    print(\"C\")  # Uncertain - both are possible\nelif can_be_true and not can_be_false:\n    print(\"A\")  # True - John has at least one child\nelse:\n    print(\"B\")  # False - John does not have at least one child",
+      "context": "All people who have a wedding are people who have at least one child. All people who travel to Paris for their honeymoon are people who have a wedding. All weddings that occur in July belong to people who travel to Paris for their honeymoon. Some weddings in July are well-attended. If John has at least one child, then John does not travel to Paris for his honeymoon and does not have a wedding. If John has a wedding that is well-attended, then John has a wedding in July or, if not, then John travels to Paris for their honeymoon.",
+      "question": "Based on the above information, is the following statement true, false, or uncertain? John has at least one child.",
+      "options": [
+        "A) True",
+        "B) False",
+        "C) Uncertain"
+      ]
+    },
+    {
+      "id": "FOLIO_dev_126",
+      "predicted": "A",
+      "correct": "A",
+      "is_correct": true,
+      "pseudocode": null,
+      "mode": "direct",
+      "error": null,
+      "attempts": 1,
+      "code": "from z3 import *\n\n# Step 1: Scan context and question, list ALL predicates needed\n# Predicates: rock_is_mammal, rock_is_monkey, rock_is_bird, rock_flies, rock_breathes, rock_has_wings\n# Now define ALL boolean variables BEFORE using them\nrock_is_mammal = Bool(\"rock_is_mammal\")\nrock_is_monkey = Bool(\"rock_is_monkey\")\nrock_is_bird = Bool(\"rock_is_bird\")\nrock_flies = Bool(\"rock_flies\")\nrock_breathes = Bool(\"rock_breathes\")\nrock_has_wings = Bool(\"rock_has_wings\")\n\n# Step 2: Create solver\nsolver = Solver()\n\n# Step 3: Encode ONLY context constraints (NOT the query!)\n# Rule 1: All mammals are animals\nsolver.add(Implies(rock_is_mammal, rock_is_animal))\n\n# Rule 2: All monkeys are mammals\nsolver.add(Implies(rock_is_monkey, rock_is_mammal))\n\n# Rule 3: An animal is either a monkey or a bird\nsolver.add(Or(rock_is_monkey, rock_is_bird))\n\n# Rule 4: All birds fly\nsolver.add(Implies(rock_is_bird, rock_flies))\n\n# Rule 5: All animals breathe\nsolver.add(Implies(rock_is_animal, rock_breathes))\n\n# Rule 6: If something can fly, then it has wings\nsolver.add(Implies(rock_flies, rock_has_wings))\n\n# Rule 7: If Rock is neither a fly nor a bird, then Rock neither flies nor breathes\nsolver.add(Implies(And(Not(rock_flies), Not(rock_is_bird)), And(Not(rock_flies), Not(rock_breathes)))\n\n# Step 4: Check for contradictions in base constraints\nif solver.check() == unsat:\n    print(\"Error: Base constraints are contradictory\")\n    exit()\n\n# Step 5: Test the query \"Rock has wings\" - Do NOT add it to base solver!\n# Test 1: Can Rock have wings? (query is true)\nsolver.push()\nsolver.add(rock_has_wings)\ncan_have_wings = (solver.check() == sat)\nsolver.pop()\n\n# Test 2: Can Rock NOT have wings? (query is false)\nsolver.push()\nsolver.add(Not(rock_has_wings))\ncannot_have_wings = (solver.check() == sat)\nsolver.pop()\n\n# Step 6: Determine answer based on both tests\nif can_have_wings and cannot_have_wings:\n    print(\"C\")  # Uncertain - both are possible\nelif can_have_wings and not cannot_have_wings:\n    print(\"A\")  # True - Rock has wings\nelse:\n    print(\"B\")  # False - Rock does not have wings",
+      "context": "All mammals are animals. All monkeys are mammals. An animal is either a monkey or a bird. All birds fly. All animals breathe. If something can fly, then it has wings. If Rock is neither a fly nor a bird, then Rock neither flies nor breathes.",
+      "question": "Based on the above information, is the following statement true, false, or uncertain? Rock has wings.",
+      "options": [
+        "A) True",
+        "B) False",
+        "C) Uncertain"
+      ]
+    }
+  ]
+}

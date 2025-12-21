@@ -303,6 +303,18 @@ class LogicEvalApp:
         ttk.Label(repair_frame, text="(执行前自动修复代码语法错误)",
                  foreground=self.colors['subtext']).pack(side=tk.LEFT)
         
+        # 多数投票功能选项
+        voting_frame = ttk.Frame(config_frame)
+        voting_frame.pack(fill=tk.X, pady=(0, 10))
+
+        ttk.Label(voting_frame, text="多数投票:", width=12).pack(side=tk.LEFT)
+        self.majority_voting_var = tk.BooleanVar(value=False)  # 默认关闭
+        ttk.Checkbutton(voting_frame, text="启用多数投票模式",
+                       variable=self.majority_voting_var,
+                       command=self.on_majority_voting_toggle).pack(side=tk.LEFT, padx=(0, 10))
+        ttk.Label(voting_frame, text="(运行3次取多数结果，失败默认A)",
+                 foreground=self.colors['subtext']).pack(side=tk.LEFT)
+        
         
         # 题目数量限制
         limit_frame = ttk.Frame(config_frame)
@@ -456,6 +468,14 @@ class LogicEvalApp:
             self.log("Repair功能已启用", 'info')
         else:
             self.log("Repair功能已关闭", 'info')
+
+    def on_majority_voting_toggle(self):
+        """多数投票功能切换时的处理"""
+        enabled = self.majority_voting_var.get()
+        if enabled:
+            self.log("多数投票模式已启用 (将运行3次并取多数结果)", 'info')
+        else:
+            self.log("多数投票模式已关闭", 'info')
         
     def browse_dataset(self):
         """浏览选择数据集文件"""
@@ -684,6 +704,111 @@ class LogicEvalApp:
 
     def _process_single_problem(self, problem, index, api_key, model, api_base):
         """处理单个题目（供并行调用）"""
+        # 检查是否启用多数投票模式
+        majority_voting_enabled = self.majority_voting_var.get()
+        
+        if majority_voting_enabled:
+            return self._process_with_majority_voting(problem, index, api_key, model, api_base)
+        else:
+            return self._process_single_attempt(problem, index, api_key, model, api_base)
+    
+    def _process_with_majority_voting(self, problem, index, api_key, model, api_base):
+        """使用多数投票模式处理单个题目（运行3次，取多数结果）"""
+        problem_id = problem.get('id', f'Problem_{index+1}')
+        correct_answer = problem.get('answer', '').strip().upper()
+        
+        self.root.after(0, lambda pid=problem_id:
+                       self.log(f"[Worker-Voting] 开始处理: {pid} (多数投票模式: 3次运行)", 'info'))
+        
+        # 运行3次
+        results = []
+        for attempt_num in range(1, 4):
+            # 检查停止标志
+            if self.stop_flag:
+                return {
+                    'id': problem_id,
+                    'predicted': None,
+                    'correct': correct_answer,
+                    'is_correct': False,
+                    'error': '用户停止',
+                    'cancelled': True,
+                    'attempts': 0
+                }
+            
+            self.root.after(0, lambda pid=problem_id, num=attempt_num:
+                           self.log(f"  [{pid}] 多数投票 - 第{num}/3次尝试...", 'info'))
+            
+            # 调用单次处理
+            result = self._process_single_attempt(problem, index, api_key, model, api_base, 
+                                                  silent_mode=True)
+            results.append(result)
+            
+            # 记录每次结果
+            predicted = result.get('predicted')
+            has_error = result.get('error') and not predicted
+            
+            if has_error:
+                self.root.after(0, lambda pid=problem_id, num=attempt_num, e=result.get('error'):
+                               self.log(f"  [{pid}] 第{num}次: ⚠ 异常 - {e}", 'warning'))
+            else:
+                self.root.after(0, lambda pid=problem_id, num=attempt_num, p=predicted:
+                               self.log(f"  [{pid}] 第{num}次: 预测={p}", 'info'))
+        
+        # 投票决策
+        predictions = []
+        for r in results:
+            pred = r.get('predicted')
+            has_error = r.get('error') and not pred
+            
+            if has_error:
+                # 如果有错误且没有预测结果，默认选A
+                predictions.append('A')
+            elif pred:
+                predictions.append(pred)
+            else:
+                # 没有预测结果也默认选A
+                predictions.append('A')
+        
+        # 统计投票结果
+        from collections import Counter
+        vote_counts = Counter(predictions)
+        final_prediction = vote_counts.most_common(1)[0][0]
+        
+        # 记录投票详情
+        vote_details = ', '.join([f"{k}:{v}" for k, v in vote_counts.items()])
+        self.root.after(0, lambda pid=problem_id, vd=vote_details, fp=final_prediction:
+                       self.log(f"  [{pid}] 投票结果: {vd} -> 最终选择: {fp}", 'highlight'))
+        
+        # 判断是否正确
+        is_correct = final_prediction == correct_answer
+        
+        # 合并结果信息
+        merged_result = {
+            'id': problem_id,
+            'predicted': final_prediction,
+            'correct': correct_answer,
+            'is_correct': is_correct,
+            'voting_mode': True,
+            'voting_results': predictions,
+            'voting_counts': dict(vote_counts),
+            'individual_results': results,
+            'attempts': sum(r.get('attempts', 1) for r in results),  # 总尝试次数
+        }
+        
+        # 从第一个结果中获取原题信息
+        if results:
+            for key in ['context', 'question', 'options', 'mode']:
+                if key in results[0]:
+                    merged_result[key] = results[0][key]
+        
+        return merged_result
+    
+    def _process_single_attempt(self, problem, index, api_key, model, api_base, silent_mode=False, temperature=0):
+        """处理单个题目的单次尝试
+        
+        Args:
+            temperature: LLM生成的温度参数，0表示确定性，更高值增加随机性（默认0）
+        """
         # 检查停止标志
         if self.stop_flag:
             return {
@@ -707,8 +832,10 @@ class LogicEvalApp:
         # 直接生成模式只支持direct模式
         dataset_type = detect_dataset_type(problem)
         
-        self.root.after(0, lambda pid=problem_id:
-                       self.log(f"[Worker] 开始处理: {pid} (mode={mode}, semantic_check={semantic_check_enabled}, refinement_code={refinement_code_enabled}, repair={repair_enabled})", 'info'))
+        # 如果不是静默模式，输出日志
+        if not silent_mode:
+            self.root.after(0, lambda pid=problem_id:
+                           self.log(f"[Worker] 开始处理: {pid} (mode={mode}, semantic_check={semantic_check_enabled}, refinement_code={refinement_code_enabled}, repair={repair_enabled})", 'info'))
         
         # 在try块外初始化code变量，以便在异常时也能保存
         code = None
@@ -737,12 +864,14 @@ class LogicEvalApp:
                 
                 attempt += 1
                 if attempt >= max_attempts:
-                    self.root.after(0, lambda pid=problem_id:
-                        self.log(f"  [{pid}] great Refinement module修复次数达到上限{max_attempts}次", 'error'))
+                    if not silent_mode:
+                        self.root.after(0, lambda pid=problem_id:
+                            self.log(f"  [{pid}] great Refinement module修复次数达到上限{max_attempts}次", 'error'))
                     raise Exception('great Refinement module修复次数达到上限{max_attempts}次')
                 elif attempt > 1:
-                    self.root.after(0, lambda pid=problem_id, a=attempt: 
-                                   self.log(f"  [{pid}] 第{a}次尝试重新生成...", 'warning'))
+                    if not silent_mode:
+                        self.root.after(0, lambda pid=problem_id, a=attempt: 
+                                       self.log(f"  [{pid}] 第{a}次尝试重新生成...", 'warning'))
                     # 生成后续对话 - 根据模式选择不同的消息构建方式
                     if mode == "single_text":
                         messages = build_next_single_text_message_for_all_datasets(
@@ -762,9 +891,9 @@ class LogicEvalApp:
                 if self.stop_flag:
                     raise Exception('用户停止')
                 
-                # 获取Z3代码
+                # 获取Z3代码 - 使用传入的temperature参数
                 response = query_llm_loop_messages(api_key, messages, model, api_base,
-                                    max_tokens=2000, temperature=0)
+                                    max_tokens=2000, temperature=temperature)
                 
                 # 调用后检查停止标志
                 if self.stop_flag:
@@ -782,8 +911,9 @@ class LogicEvalApp:
                     "```python\n"
                     "#todo\n"
                     "```\n")
-                    self.root.after(0, lambda pid=problem_id:
-                            self.log(f"  [{pid}] 提取python代码失败", 'warning'))
+                    if not silent_mode:
+                        self.root.after(0, lambda pid=problem_id:
+                                self.log(f"  [{pid}] 提取python代码失败", 'warning'))
                     
                     # 如果代码修复功能关闭，直接返回错误
                     if not refinement_code_enabled:
@@ -800,7 +930,7 @@ class LogicEvalApp:
                     
                     semantic_messages=generate_semantic_check_full_prompt(*self._get_question_context(problem),code)
                     semantic_response=query_llm_loop_messages(api_key, semantic_messages, model, api_base,
-                                                              max_tokens=2000, temperature=0)
+                                                              max_tokens=2000, temperature=temperature)
                     
                     # 调用后检查停止标志
                     if self.stop_flag:
@@ -813,11 +943,13 @@ class LogicEvalApp:
                     semantic_check_result=semantic_check_response_analyze(semantic_output)
                     if semantic_check_result is None: # todo
                         print(semantic_output)
-                        self.root.after(0, lambda pid=problem_id:
-                            self.log(f"  [{pid}] semantic check module给出错误回答", 'error'))
+                        if not silent_mode:
+                            self.root.after(0, lambda pid=problem_id:
+                                self.log(f"  [{pid}] semantic check module给出错误回答", 'error'))
                     elif semantic_check_result is False:
-                        self.root.after(0, lambda pid=problem_id:
-                            self.log(f"  [{pid}] semantic check module检查得到语义错误", 'warning'))
+                        if not silent_mode:
+                            self.root.after(0, lambda pid=problem_id:
+                                self.log(f"  [{pid}] semantic check module检查得到语义错误", 'warning'))
                         
                         # 如果代码修复功能关闭，直接返回错误
                         if not refinement_code_enabled:
@@ -835,14 +967,15 @@ class LogicEvalApp:
                 result, exec_error, repair_log = execute_z3_code(code, auto_repair=repair_enabled)
                 
                 # 记录修复日志
-                if repair_log:
+                if repair_log and not silent_mode:
                     self.root.after(0, lambda pid=problem_id, logs=repair_log: 
                                    self.log(f"  [{pid}] 代码自动修复: {'; '.join(logs)}", 'debug'))
                 
                 # self refine
                 if exec_error:
-                    self.root.after(0, lambda pid=problem_id, e=exec_error: 
-                                   self.log(f"  [{pid}] code执行错误（repair修复后）: {e}", 'warning'))
+                    if not silent_mode:
+                        self.root.after(0, lambda pid=problem_id, e=exec_error: 
+                                       self.log(f"  [{pid}] code执行错误（repair修复后）: {e}", 'warning'))
                     
                     # 如果代码修复功能关闭，直接抛出错误
                     if not refinement_code_enabled:
