@@ -1,7 +1,7 @@
 GPT 3.5 turbo without refinement
 ProntoQA 98%
 LogicalDeduction 88%
-FOLIO 56%(translate:60%)（多数投票机制：62）（多数投票机制+temperature0.7：54）
+FOLIO 56%(translate:62%)（多数投票机制：56）（多数投票机制+temperature0.7：54）
 proofwriter 90%
 
 GPT 4  without refinement

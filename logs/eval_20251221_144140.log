@@ -1,0 +1,535 @@
+=== 评测日志开始于 2025-12-21 14:41:40 ===
+[14:41:54] 代码修复功能已关闭
+[14:41:57] 正在加载数据集: D:/学习资料/课程/程序设计大作业/EnhancingLLM/EnhancingLLM/data/FOLIO_test.json
+[14:41:57] 共 50 道题目，使用 4 个 workers 并行处理
+[14:41:57] [Worker] 开始处理: FOLIO_dev_0 (mode=direct, semantic_check=False, refinement_code=False, repair=True)
+[14:41:57] [Worker] 开始处理: FOLIO_dev_59 (mode=direct, semantic_check=False, refinement_code=False, repair=True)
+[14:41:57] [Worker] 开始处理: FOLIO_dev_125 (mode=direct, semantic_check=False, refinement_code=False, repair=True)
+[14:41:57] [Worker] 开始处理: FOLIO_dev_43 (mode=direct, semantic_check=False, refinement_code=False, repair=True)
+[14:42:05]   [FOLIO_dev_59] 代码自动修复: 第41行: 发现未定义的变量 'same_state' 在函数调用中，注释掉该行; 第47行: 发现未定义的变量 'same_state' 在函数调用中，注释掉该行
+[14:42:05]   [FOLIO_dev_59] ✓ 正确! 预测=C, 答案=C
+[14:42:05] [Worker] 开始处理: FOLIO_dev_144 (mode=direct, semantic_check=False, refinement_code=False, repair=True)
+[14:42:05]   [FOLIO_dev_125] 代码自动修复: 检测到缺少 1 个右括号; 第36行: 添加 1 个右括号
+[14:42:05]   [FOLIO_dev_125] ✓ 正确! 预测=C, 答案=C
+[14:42:05] [Worker] 开始处理: FOLIO_dev_17 (mode=direct, semantic_check=False, refinement_code=False, repair=True)
+[14:42:05]   [FOLIO_dev_0] 代码自动修复: 检测到缺少 1 个右括号; 第36行: 添加 1 个右括号
+[14:42:05]   [FOLIO_dev_0] ✓ 正确! 预测=C, 答案=C
+[14:42:05] [Worker] 开始处理: FOLIO_dev_83 (mode=direct, semantic_check=False, refinement_code=False, repair=True)
+[14:42:05]   [FOLIO_dev_43] 代码自动修复: 第10行: 注释掉错误的函数定义 lost_to（BoolSort不应作为参数）; 第50行: 注释掉对错误函数 lost_to 的调用; 第56行: 注释掉对错误函数 lost_to 的调用
+[14:42:05]   [FOLIO_dev_43] ✓ 正确! 预测=C, 答案=C
+[14:42:05] [Worker] 开始处理: FOLIO_dev_13 (mode=direct, semantic_check=False, refinement_code=False, repair=True)
+[14:42:10]   [FOLIO_dev_144] ✓ 正确! 预测=C, 答案=C
+[14:42:10] [Worker] 开始处理: FOLIO_dev_111 (mode=direct, semantic_check=False, refinement_code=False, repair=True)
+[14:42:11]   [FOLIO_dev_17] ✓ 正确! 预测=C, 答案=C
+[14:42:11] [Worker] 开始处理: FOLIO_dev_107 (mode=direct, semantic_check=False, refinement_code=False, repair=True)
+[14:42:12]   [FOLIO_dev_13] ✓ 正确! 预测=C, 答案=C
+[14:42:12] [Worker] 开始处理: FOLIO_dev_130 (mode=direct, semantic_check=False, refinement_code=False, repair=True)
+[14:42:13]   [FOLIO_dev_83] ✓ 正确! 预测=B, 答案=B
+[14:42:13] [Worker] 开始处理: FOLIO_dev_89 (mode=direct, semantic_check=False, refinement_code=False, repair=True)
+[14:42:14]   [FOLIO_dev_111] ✓ 正确! 预测=C, 答案=C
+[14:42:14] [Worker] 开始处理: FOLIO_dev_126 (mode=direct, semantic_check=False, refinement_code=False, repair=True)
+[14:42:16]   [FOLIO_dev_107] ✗ 错误! 预测=C, 答案=B
+[14:42:16] [Worker] 开始处理: FOLIO_dev_134 (mode=direct, semantic_check=False, refinement_code=False, repair=True)
+[14:42:17]   [FOLIO_dev_89] ✗ 错误! 预测=C, 答案=A
+[14:42:17] [Worker] 开始处理: FOLIO_dev_51 (mode=direct, semantic_check=False, refinement_code=False, repair=True)
+[14:42:19]   [FOLIO_dev_130] ✓ 正确! 预测=C, 答案=C
+[14:42:19] [Worker] 开始处理: FOLIO_dev_60 (mode=direct, semantic_check=False, refinement_code=False, repair=True)
+[14:42:20]   [FOLIO_dev_134] ✓ 正确! 预测=C, 答案=C
+[14:42:20] [Worker] 开始处理: FOLIO_dev_25 (mode=direct, semantic_check=False, refinement_code=False, repair=True)
+[14:42:21]   [FOLIO_dev_126] 代码自动修复: 检测到缺少 1 个右括号; 第36行: 添加 1 个右括号; 第18行: 发现未定义的变量 'rock_is_animal' 在函数调用中，注释掉该行; 第30行: 发现未定义的变量 'rock_is_animal' 在函数调用中，注释掉该行
+[14:42:21]   [FOLIO_dev_126] ✗ 错误! 预测=C, 答案=A
+[14:42:21] [Worker] 开始处理: FOLIO_dev_101 (mode=direct, semantic_check=False, refinement_code=False, repair=True)
+[14:42:21]   [FOLIO_dev_51] 代码自动修复: 自动添加未定义的Bool变量: analog; 自动添加未定义的Bool变量: are; 自动添加未定义的Bool变量: book; 自动添加未定义的Bool变量: digital; 自动添加未定义的Bool变量: hardcover; 自动添加未定义的Bool变量: it; 自动添加未定义的Bool变量: media; 自动添加未定义的Bool变量: printed; 自动添加未定义的Bool变量: s; 自动添加未定义的Bool变量: service; 自动添加未定义的Bool变量: services; 自动添加未定义的Bool变量: streaming; 自动添加未定义的Bool变量: text; 自动添加未定义的Bool变量: then
+[14:42:21]   [FOLIO_dev_51] ✓ 正确! 预测=A, 答案=A
+[14:42:21] [Worker] 开始处理: FOLIO_dev_49 (mode=direct, semantic_check=False, refinement_code=False, repair=True)
+[14:42:25]   [FOLIO_dev_60] 代码自动修复: 检测到未定义的函数调用: same_state; 警告：代码缺少Entity定义，无法定义函数，将注释掉相关调用; 第24行: 注释掉对未定义函数的调用
+[14:42:25]   [FOLIO_dev_60] ✓ 正确! 预测=A, 答案=A
+[14:42:25] [Worker] 开始处理: FOLIO_dev_48 (mode=direct, semantic_check=False, refinement_code=False, repair=True)
+[14:42:25]   [FOLIO_dev_25] ✓ 正确! 预测=C, 答案=C
+[14:42:25] [Worker] 开始处理: FOLIO_dev_66 (mode=direct, semantic_check=False, refinement_code=False, repair=True)
+[14:42:26]   [FOLIO_dev_101] ✗ 错误! 预测=None, 答案=B
+[14:42:26] [Worker] 开始处理: FOLIO_dev_169 (mode=direct, semantic_check=False, refinement_code=False, repair=True)
+[14:42:26]   [FOLIO_dev_49] ✗ 错误! 预测=A, 答案=C
+[14:42:26] [Worker] 开始处理: FOLIO_dev_172 (mode=direct, semantic_check=False, refinement_code=False, repair=True)
+[14:42:29]   [FOLIO_dev_48] ✗ 错误! 预测=B, 答案=C
+[14:42:29] [Worker] 开始处理: FOLIO_dev_44 (mode=direct, semantic_check=False, refinement_code=False, repair=True)
+[14:42:30]   [FOLIO_dev_66] ✓ 正确! 预测=A, 答案=A
+[14:42:30] [Worker] 开始处理: FOLIO_dev_8 (mode=direct, semantic_check=False, refinement_code=False, repair=True)
+[14:42:31] [Worker] 开始处理: FOLIO_dev_22 (mode=direct, semantic_check=False, refinement_code=False, repair=True)
+[14:42:31]   [FOLIO_dev_169] ✗ 错误! 预测=C, 答案=B
+[14:42:32]   [FOLIO_dev_172] ✗ 错误! 预测=A, 答案=B
+[14:42:32] [Worker] 开始处理: FOLIO_dev_200 (mode=direct, semantic_check=False, refinement_code=False, repair=True)
+[14:42:35]   [FOLIO_dev_8] ✓ 正确! 预测=C, 答案=C
+[14:42:35] [Worker] 开始处理: FOLIO_dev_85 (mode=direct, semantic_check=False, refinement_code=False, repair=True)
+[14:42:36]   [FOLIO_dev_22] ✓ 正确! 预测=B, 答案=B
+[14:42:36] [Worker] 开始处理: FOLIO_dev_178 (mode=direct, semantic_check=False, refinement_code=False, repair=True)
+[14:42:37]   [FOLIO_dev_44] 代码自动修复: 检测到缺少 4 个右括号; 第29行: 添加 1 个右括号; 第32行: 添加 1 个右括号; 第35行: 添加 1 个右括号; 第38行: 添加 1 个右括号; 第26行: 发现未定义的变量 'x' 在函数调用中，注释掉该行; 第29行: 发现未定义的变量 'x' 在函数调用中，注释掉该行; 第32行: 发现未定义的变量 'x' 在函数调用中，注释掉该行; 第35行: 发现未定义的变量 'x' 在函数调用中，注释掉该行; 警告：代码使用了ForAll/Exists但缺少Entity定义，将注释掉相关行; 第10行: 注释掉错误的函数定义 lost_to（BoolSort不应作为参数）; 第13行: 注释掉错误的函数定义 at_Roland_Garros（BoolSort不应作为参数）; 第38行: 注释掉对错误函数 lost_to 的调用; 第48行: 注释掉对错误函数 lost_to 的调用; 第54行: 注释掉对错误函数 lost_to 的调用
+[14:42:37]   [FOLIO_dev_44] ✗ 错误! 预测=C, 答案=B
+[14:42:37] [Worker] 开始处理: FOLIO_dev_73 (mode=direct, semantic_check=False, refinement_code=False, repair=True)
+[14:42:38] 多数投票模式已启用 (将运行3次并取多数结果)
+[14:42:39] 正在停止评测，终止所有任务...
+[14:42:39] 正在终止所有任务...
+[14:42:39] [Worker-Voting] 开始处理: FOLIO_dev_26 (多数投票模式: 3次运行)
+[14:42:39] ==================================================
+[14:42:39] 评测已停止!
+[14:42:39] 已完成: 26, 正确: 17, 错误: 9, 异常: 0
+[14:42:39] 准确率: 65.38%
+[14:42:39] ==================================================
+[14:42:40] 正在加载数据集: D:/学习资料/课程/程序设计大作业/EnhancingLLM/EnhancingLLM/data/FOLIO_test.json
+[14:42:40] 共 50 道题目，使用 4 个 workers 并行处理
+[14:42:40] [Worker-Voting] 开始处理: FOLIO_dev_0 (多数投票模式: 3次运行)
+[14:42:40]   [FOLIO_dev_0] 多数投票 - 第1/3次尝试...
+[14:42:40] [Worker-Voting] 开始处理: FOLIO_dev_43 (多数投票模式: 3次运行)
+[14:42:40] [Worker-Voting] 开始处理: FOLIO_dev_59 (多数投票模式: 3次运行)
+[14:42:40]   [FOLIO_dev_43] 多数投票 - 第1/3次尝试...
+[14:42:40] [Worker-Voting] 开始处理: FOLIO_dev_125 (多数投票模式: 3次运行)
+[14:42:40]   [FOLIO_dev_59] 多数投票 - 第1/3次尝试...
+[14:42:40]   [FOLIO_dev_125] 多数投票 - 第1/3次尝试...
+[14:42:46]   [FOLIO_dev_59] 第1次: 预测=C
+[14:42:46]   [FOLIO_dev_59] 多数投票 - 第2/3次尝试...
+[14:42:47]   [FOLIO_dev_125] 第1次: 预测=C
+[14:42:47]   [FOLIO_dev_125] 多数投票 - 第2/3次尝试...
+[14:42:47]   [FOLIO_dev_0] 第1次: ⚠ 异常 - 代码执行错误（repair修复后仍失败）: Z3 internal error (known bug): unexpected indent (<string>, line 35)
+[14:42:47]   [FOLIO_dev_0] 多数投票 - 第2/3次尝试...
+[14:42:49]   [FOLIO_dev_43] 第1次: 预测=C
+[14:42:49]   [FOLIO_dev_43] 多数投票 - 第2/3次尝试...
+[14:42:51]   [FOLIO_dev_59] 第2次: 预测=C
+[14:42:51]   [FOLIO_dev_59] 多数投票 - 第3/3次尝试...
+[14:42:53]   [FOLIO_dev_125] 第2次: 预测=C
+[14:42:53]   [FOLIO_dev_125] 多数投票 - 第3/3次尝试...
+[14:42:53]   [FOLIO_dev_0] 第2次: 预测=C
+[14:42:53]   [FOLIO_dev_0] 多数投票 - 第3/3次尝试...
+[14:42:55]   [FOLIO_dev_43] 第2次: 预测=C
+[14:42:55]   [FOLIO_dev_43] 多数投票 - 第3/3次尝试...
+[14:42:56]   [FOLIO_dev_59] 第3次: 预测=C
+[14:42:56]   [FOLIO_dev_59] 投票结果: C:3 -> 最终选择: C
+[14:42:56]   [FOLIO_dev_59] ✓ 正确! 预测=C, 答案=C
+[14:42:56] [Worker-Voting] 开始处理: FOLIO_dev_144 (多数投票模式: 3次运行)
+[14:42:56]   [FOLIO_dev_144] 多数投票 - 第1/3次尝试...
+[14:42:59]   [FOLIO_dev_125] 第3次: 预测=C
+[14:42:59]   [FOLIO_dev_125] 投票结果: C:3 -> 最终选择: C
+[14:42:59] [Worker-Voting] 开始处理: FOLIO_dev_17 (多数投票模式: 3次运行)
+[14:42:59]   [FOLIO_dev_125] ✓ 正确! 预测=C, 答案=C
+[14:42:59]   [FOLIO_dev_17] 多数投票 - 第1/3次尝试...
+[14:42:59]   [FOLIO_dev_0] 第3次: 预测=C
+[14:42:59]   [FOLIO_dev_0] 投票结果: A:1, C:2 -> 最终选择: C
+[14:42:59]   [FOLIO_dev_0] ✓ 正确! 预测=C, 答案=C
+[14:42:59] [Worker-Voting] 开始处理: FOLIO_dev_83 (多数投票模式: 3次运行)
+[14:42:59]   [FOLIO_dev_83] 多数投票 - 第1/3次尝试...
+[14:43:00]   [FOLIO_dev_144] 第1次: 预测=C
+[14:43:00]   [FOLIO_dev_144] 多数投票 - 第2/3次尝试...
+[14:43:01]   [FOLIO_dev_43] 第3次: 预测=C
+[14:43:01]   [FOLIO_dev_43] 投票结果: C:3 -> 最终选择: C
+[14:43:01]   [FOLIO_dev_43] ✓ 正确! 预测=C, 答案=C
+[14:43:01] [Worker-Voting] 开始处理: FOLIO_dev_13 (多数投票模式: 3次运行)
+[14:43:01]   [FOLIO_dev_13] 多数投票 - 第1/3次尝试...
+[14:43:04]   [FOLIO_dev_144] 第2次: 预测=C
+[14:43:04]   [FOLIO_dev_144] 多数投票 - 第3/3次尝试...
+[14:43:04]   [FOLIO_dev_17] 第1次: 预测=C
+[14:43:04]   [FOLIO_dev_17] 多数投票 - 第2/3次尝试...
+[14:43:06]   [FOLIO_dev_83] 第1次: 预测=B
+[14:43:06]   [FOLIO_dev_83] 多数投票 - 第2/3次尝试...
+[14:43:07]   [FOLIO_dev_13] 第1次: 预测=A
+[14:43:07]   [FOLIO_dev_13] 多数投票 - 第2/3次尝试...
+[14:43:09]   [FOLIO_dev_144] 第3次: 预测=C
+[14:43:09]   [FOLIO_dev_144] 投票结果: C:3 -> 最终选择: C
+[14:43:09]   [FOLIO_dev_144] ✓ 正确! 预测=C, 答案=C
+[14:43:09] [Worker-Voting] 开始处理: FOLIO_dev_111 (多数投票模式: 3次运行)
+[14:43:09]   [FOLIO_dev_111] 多数投票 - 第1/3次尝试...
+[14:43:11]   [FOLIO_dev_17] 第2次: 预测=C
+[14:43:11]   [FOLIO_dev_17] 多数投票 - 第3/3次尝试...
+[14:43:13]   [FOLIO_dev_13] 第2次: 预测=A
+[14:43:13]   [FOLIO_dev_13] 多数投票 - 第3/3次尝试...
+[14:43:13]   [FOLIO_dev_83] 第2次: 预测=B
+[14:43:13]   [FOLIO_dev_83] 多数投票 - 第3/3次尝试...
+[14:43:14]   [FOLIO_dev_111] 第1次: 预测=C
+[14:43:14]   [FOLIO_dev_111] 多数投票 - 第2/3次尝试...
+[14:43:16]   [FOLIO_dev_17] 第3次: 预测=C
+[14:43:16]   [FOLIO_dev_17] 投票结果: C:3 -> 最终选择: C
+[14:43:16]   [FOLIO_dev_17] ✓ 正确! 预测=C, 答案=C
+[14:43:16] [Worker-Voting] 开始处理: FOLIO_dev_107 (多数投票模式: 3次运行)
+[14:43:16]   [FOLIO_dev_107] 多数投票 - 第1/3次尝试...
+[14:43:18]   [FOLIO_dev_111] 第2次: 预测=C
+[14:43:18]   [FOLIO_dev_111] 多数投票 - 第3/3次尝试...
+[14:43:18]   [FOLIO_dev_83] 第3次: 预测=B
+[14:43:18]   [FOLIO_dev_83] 投票结果: B:3 -> 最终选择: B
+[14:43:18] [Worker-Voting] 开始处理: FOLIO_dev_130 (多数投票模式: 3次运行)
+[14:43:18]   [FOLIO_dev_83] ✓ 正确! 预测=B, 答案=B
+[14:43:18]   [FOLIO_dev_130] 多数投票 - 第1/3次尝试...
+[14:43:19]   [FOLIO_dev_13] 第3次: 预测=A
+[14:43:19]   [FOLIO_dev_13] 投票结果: A:3 -> 最终选择: A
+[14:43:19] [Worker-Voting] 开始处理: FOLIO_dev_89 (多数投票模式: 3次运行)
+[14:43:19]   [FOLIO_dev_13] ✗ 错误! 预测=A, 答案=C
+[14:43:19]   [FOLIO_dev_89] 多数投票 - 第1/3次尝试...
+[14:43:22]   [FOLIO_dev_107] 第1次: 预测=C
+[14:43:22]   [FOLIO_dev_107] 多数投票 - 第2/3次尝试...
+[14:43:23]   [FOLIO_dev_111] 第3次: 预测=C
+[14:43:23]   [FOLIO_dev_111] 投票结果: C:3 -> 最终选择: C
+[14:43:23]   [FOLIO_dev_111] ✓ 正确! 预测=C, 答案=C
+[14:43:23] [Worker-Voting] 开始处理: FOLIO_dev_126 (多数投票模式: 3次运行)
+[14:43:23]   [FOLIO_dev_126] 多数投票 - 第1/3次尝试...
+[14:43:24]   [FOLIO_dev_89] 第1次: 预测=C
+[14:43:24]   [FOLIO_dev_89] 多数投票 - 第2/3次尝试...
+[14:43:24]   [FOLIO_dev_130] 第1次: 预测=C
+[14:43:24]   [FOLIO_dev_130] 多数投票 - 第2/3次尝试...
+[14:43:27]   [FOLIO_dev_107] 第2次: 预测=C
+[14:43:27]   [FOLIO_dev_107] 多数投票 - 第3/3次尝试...
+[14:43:28]   [FOLIO_dev_89] 第2次: 预测=C
+[14:43:28]   [FOLIO_dev_89] 多数投票 - 第3/3次尝试...
+[14:43:28]   [FOLIO_dev_126] 第1次: 预测=C
+[14:43:28]   [FOLIO_dev_126] 多数投票 - 第2/3次尝试...
+[14:43:30]   [FOLIO_dev_130] 第2次: 预测=C
+[14:43:30]   [FOLIO_dev_130] 多数投票 - 第3/3次尝试...
+[14:43:31]   [FOLIO_dev_107] 第3次: 预测=C
+[14:43:31]   [FOLIO_dev_107] 投票结果: C:3 -> 最终选择: C
+[14:43:31] [Worker-Voting] 开始处理: FOLIO_dev_134 (多数投票模式: 3次运行)
+[14:43:31]   [FOLIO_dev_107] ✗ 错误! 预测=C, 答案=B
+[14:43:31]   [FOLIO_dev_134] 多数投票 - 第1/3次尝试...
+[14:43:31]   [FOLIO_dev_89] 第3次: 预测=C
+[14:43:31]   [FOLIO_dev_89] 投票结果: C:3 -> 最终选择: C
+[14:43:31]   [FOLIO_dev_89] ✗ 错误! 预测=C, 答案=A
+[14:43:31] [Worker-Voting] 开始处理: FOLIO_dev_51 (多数投票模式: 3次运行)
+[14:43:31]   [FOLIO_dev_51] 多数投票 - 第1/3次尝试...
+[14:43:33]   [FOLIO_dev_126] 第2次: 预测=C
+[14:43:33]   [FOLIO_dev_126] 多数投票 - 第3/3次尝试...
+[14:43:35]   [FOLIO_dev_130] 第3次: 预测=C
+[14:43:35]   [FOLIO_dev_130] 投票结果: C:3 -> 最终选择: C
+[14:43:35]   [FOLIO_dev_130] ✓ 正确! 预测=C, 答案=C
+[14:43:35] [Worker-Voting] 开始处理: FOLIO_dev_60 (多数投票模式: 3次运行)
+[14:43:35]   [FOLIO_dev_60] 多数投票 - 第1/3次尝试...
+[14:43:36]   [FOLIO_dev_51] 第1次: 预测=A
+[14:43:36]   [FOLIO_dev_51] 多数投票 - 第2/3次尝试...
+[14:43:36]   [FOLIO_dev_134] 第1次: 预测=C
+[14:43:36]   [FOLIO_dev_134] 多数投票 - 第2/3次尝试...
+[14:43:38]   [FOLIO_dev_126] 第3次: 预测=C
+[14:43:38]   [FOLIO_dev_126] 投票结果: C:3 -> 最终选择: C
+[14:43:38]   [FOLIO_dev_126] ✗ 错误! 预测=C, 答案=A
+[14:43:38] [Worker-Voting] 开始处理: FOLIO_dev_25 (多数投票模式: 3次运行)
+[14:43:38]   [FOLIO_dev_25] 多数投票 - 第1/3次尝试...
+[14:43:40]   [FOLIO_dev_51] 第2次: 预测=A
+[14:43:40]   [FOLIO_dev_51] 多数投票 - 第3/3次尝试...
+[14:43:40]   [FOLIO_dev_60] 第1次: 预测=A
+[14:43:40]   [FOLIO_dev_60] 多数投票 - 第2/3次尝试...
+[14:43:40]   [FOLIO_dev_134] 第2次: 预测=C
+[14:43:40]   [FOLIO_dev_134] 多数投票 - 第3/3次尝试...
+[14:43:44]   [FOLIO_dev_25] 第1次: 预测=C
+[14:43:44]   [FOLIO_dev_25] 多数投票 - 第2/3次尝试...
+[14:43:45]   [FOLIO_dev_51] 第3次: 预测=A
+[14:43:45]   [FOLIO_dev_51] 投票结果: A:3 -> 最终选择: A
+[14:43:45] [Worker-Voting] 开始处理: FOLIO_dev_101 (多数投票模式: 3次运行)
+[14:43:45]   [FOLIO_dev_51] ✓ 正确! 预测=A, 答案=A
+[14:43:45]   [FOLIO_dev_101] 多数投票 - 第1/3次尝试...
+[14:43:46]   [FOLIO_dev_60] 第2次: 预测=A
+[14:43:46]   [FOLIO_dev_60] 多数投票 - 第3/3次尝试...
+[14:43:47]   [FOLIO_dev_134] 第3次: 预测=A
+[14:43:47]   [FOLIO_dev_134] 投票结果: C:2, A:1 -> 最终选择: C
+[14:43:47]   [FOLIO_dev_134] ✓ 正确! 预测=C, 答案=C
+[14:43:47] [Worker-Voting] 开始处理: FOLIO_dev_49 (多数投票模式: 3次运行)
+[14:43:47]   [FOLIO_dev_49] 多数投票 - 第1/3次尝试...
+[14:43:52]   [FOLIO_dev_25] 第2次: 预测=C
+[14:43:52]   [FOLIO_dev_25] 多数投票 - 第3/3次尝试...
+[14:43:54]   [FOLIO_dev_101] 第1次: 预测=C
+[14:43:54]   [FOLIO_dev_101] 多数投票 - 第2/3次尝试...
+[14:43:54]   [FOLIO_dev_49] 第1次: 预测=C
+[14:43:54]   [FOLIO_dev_49] 多数投票 - 第2/3次尝试...
+[14:43:55]   [FOLIO_dev_60] 第3次: 预测=A
+[14:43:55]   [FOLIO_dev_60] 投票结果: A:3 -> 最终选择: A
+[14:43:55]   [FOLIO_dev_60] ✓ 正确! 预测=A, 答案=A
+[14:43:55] [Worker-Voting] 开始处理: FOLIO_dev_48 (多数投票模式: 3次运行)
+[14:43:55]   [FOLIO_dev_48] 多数投票 - 第1/3次尝试...
+[14:44:01]   [FOLIO_dev_25] 第3次: 预测=C
+[14:44:01]   [FOLIO_dev_25] 投票结果: C:3 -> 最终选择: C
+[14:44:01]   [FOLIO_dev_25] ✓ 正确! 预测=C, 答案=C
+[14:44:01] [Worker-Voting] 开始处理: FOLIO_dev_66 (多数投票模式: 3次运行)
+[14:44:01]   [FOLIO_dev_66] 多数投票 - 第1/3次尝试...
+[14:44:01]   [FOLIO_dev_48] 第1次: 预测=B
+[14:44:01]   [FOLIO_dev_48] 多数投票 - 第2/3次尝试...
+[14:44:02]   [FOLIO_dev_101] 第2次: 预测=None
+[14:44:02]   [FOLIO_dev_101] 多数投票 - 第3/3次尝试...
+[14:44:02]   [FOLIO_dev_49] 第2次: 预测=C
+[14:44:02]   [FOLIO_dev_49] 多数投票 - 第3/3次尝试...
+[14:44:09]   [FOLIO_dev_66] 第1次: 预测=A
+[14:44:09]   [FOLIO_dev_66] 多数投票 - 第2/3次尝试...
+[14:44:09]   [FOLIO_dev_101] 第3次: 预测=C
+[14:44:09]   [FOLIO_dev_101] 投票结果: C:2, A:1 -> 最终选择: C
+[14:44:09]   [FOLIO_dev_101] ✗ 错误! 预测=C, 答案=B
+[14:44:09] [Worker-Voting] 开始处理: FOLIO_dev_169 (多数投票模式: 3次运行)
+[14:44:09]   [FOLIO_dev_169] 多数投票 - 第1/3次尝试...
+[14:44:09]   [FOLIO_dev_48] 第2次: 预测=B
+[14:44:09]   [FOLIO_dev_48] 多数投票 - 第3/3次尝试...
+[14:44:10]   [FOLIO_dev_49] 第3次: 预测=A
+[14:44:10]   [FOLIO_dev_49] 投票结果: C:2, A:1 -> 最终选择: C
+[14:44:10]   [FOLIO_dev_49] ✓ 正确! 预测=C, 答案=C
+[14:44:10] [Worker-Voting] 开始处理: FOLIO_dev_172 (多数投票模式: 3次运行)
+[14:44:10]   [FOLIO_dev_172] 多数投票 - 第1/3次尝试...
+[14:44:18]   [FOLIO_dev_48] 第3次: 预测=B
+[14:44:18]   [FOLIO_dev_48] 投票结果: B:3 -> 最终选择: B
+[14:44:18]   [FOLIO_dev_172] 第1次: 预测=A
+[14:44:18]   [FOLIO_dev_172] 多数投票 - 第2/3次尝试...
+[14:44:18]   [FOLIO_dev_48] ✗ 错误! 预测=B, 答案=C
+[14:44:18]   [FOLIO_dev_169] 第1次: 预测=C
+[14:44:18]   [FOLIO_dev_66] 第2次: 预测=A
+[14:44:18] [Worker-Voting] 开始处理: FOLIO_dev_44 (多数投票模式: 3次运行)
+[14:44:18]   [FOLIO_dev_66] 多数投票 - 第3/3次尝试...
+[14:44:18]   [FOLIO_dev_169] 多数投票 - 第2/3次尝试...
+[14:44:18]   [FOLIO_dev_44] 多数投票 - 第1/3次尝试...
+[14:44:25]   [FOLIO_dev_66] 第3次: 预测=A
+[14:44:25]   [FOLIO_dev_66] 投票结果: A:3 -> 最终选择: A
+[14:44:25]   [FOLIO_dev_66] ✓ 正确! 预测=A, 答案=A
+[14:44:25] [Worker-Voting] 开始处理: FOLIO_dev_8 (多数投票模式: 3次运行)
+[14:44:25]   [FOLIO_dev_8] 多数投票 - 第1/3次尝试...
+[14:44:25]   [FOLIO_dev_169] 第2次: 预测=C
+[14:44:25]   [FOLIO_dev_169] 多数投票 - 第3/3次尝试...
+[14:44:26]   [FOLIO_dev_172] 第2次: 预测=A
+[14:44:26]   [FOLIO_dev_172] 多数投票 - 第3/3次尝试...
+[14:44:28]   [FOLIO_dev_44] 第1次: 预测=C
+[14:44:28]   [FOLIO_dev_44] 多数投票 - 第2/3次尝试...
+[14:44:32]   [FOLIO_dev_8] 第1次: 预测=C
+[14:44:32]   [FOLIO_dev_8] 多数投票 - 第2/3次尝试...
+[14:44:34]   [FOLIO_dev_169] 第3次: 预测=C
+[14:44:34]   [FOLIO_dev_169] 投票结果: C:3 -> 最终选择: C
+[14:44:34]   [FOLIO_dev_169] ✗ 错误! 预测=C, 答案=B
+[14:44:34] [Worker-Voting] 开始处理: FOLIO_dev_22 (多数投票模式: 3次运行)
+[14:44:34]   [FOLIO_dev_22] 多数投票 - 第1/3次尝试...
+[14:44:35]   [FOLIO_dev_172] 第3次: 预测=C
+[14:44:35]   [FOLIO_dev_172] 投票结果: A:2, C:1 -> 最终选择: A
+[14:44:35]   [FOLIO_dev_172] ✗ 错误! 预测=A, 答案=B
+[14:44:35] [Worker-Voting] 开始处理: FOLIO_dev_200 (多数投票模式: 3次运行)
+[14:44:35]   [FOLIO_dev_200] 多数投票 - 第1/3次尝试...
+[14:44:38]   [FOLIO_dev_44] 第2次: 预测=C
+[14:44:38]   [FOLIO_dev_44] 多数投票 - 第3/3次尝试...
+[14:44:40]   [FOLIO_dev_8] 第2次: 预测=C
+[14:44:40]   [FOLIO_dev_8] 多数投票 - 第3/3次尝试...
+[14:44:42]   [FOLIO_dev_22] 第1次: 预测=C
+[14:44:42]   [FOLIO_dev_22] 多数投票 - 第2/3次尝试...
+[14:44:43]   [FOLIO_dev_200] 第1次: 预测=C
+[14:44:43]   [FOLIO_dev_200] 多数投票 - 第2/3次尝试...
+[14:44:46]   [FOLIO_dev_44] 第3次: 预测=C
+[14:44:46]   [FOLIO_dev_44] 投票结果: C:3 -> 最终选择: C
+[14:44:46] [Worker-Voting] 开始处理: FOLIO_dev_85 (多数投票模式: 3次运行)
+[14:44:46]   [FOLIO_dev_44] ✗ 错误! 预测=C, 答案=B
+[14:44:46]   [FOLIO_dev_85] 多数投票 - 第1/3次尝试...
+[14:44:46]   [FOLIO_dev_8] 第3次: 预测=C
+[14:44:46]   [FOLIO_dev_8] 投票结果: C:3 -> 最终选择: C
+[14:44:46]   [FOLIO_dev_8] ✓ 正确! 预测=C, 答案=C
+[14:44:46] [Worker-Voting] 开始处理: FOLIO_dev_178 (多数投票模式: 3次运行)
+[14:44:46]   [FOLIO_dev_178] 多数投票 - 第1/3次尝试...
+[14:44:50]   [FOLIO_dev_22] 第2次: 预测=B
+[14:44:50]   [FOLIO_dev_22] 多数投票 - 第3/3次尝试...
+[14:44:53]   [FOLIO_dev_178] 第1次: 预测=A
+[14:44:53]   [FOLIO_dev_178] 多数投票 - 第2/3次尝试...
+[14:44:54]   [FOLIO_dev_200] 第2次: 预测=C
+[14:44:54]   [FOLIO_dev_200] 多数投票 - 第3/3次尝试...
+[14:44:56]   [FOLIO_dev_85] 第1次: 预测=C
+[14:44:56]   [FOLIO_dev_85] 多数投票 - 第2/3次尝试...
+[14:44:58]   [FOLIO_dev_22] 第3次: 预测=C
+[14:44:58]   [FOLIO_dev_22] 投票结果: C:2, B:1 -> 最终选择: C
+[14:44:58]   [FOLIO_dev_22] ✗ 错误! 预测=C, 答案=B
+[14:44:58] [Worker-Voting] 开始处理: FOLIO_dev_73 (多数投票模式: 3次运行)
+[14:44:58]   [FOLIO_dev_73] 多数投票 - 第1/3次尝试...
+[14:45:01]   [FOLIO_dev_178] 第2次: 预测=A
+[14:45:01]   [FOLIO_dev_178] 多数投票 - 第3/3次尝试...
+[14:45:02]   [FOLIO_dev_200] 第3次: 预测=B
+[14:45:02]   [FOLIO_dev_200] 投票结果: C:2, B:1 -> 最终选择: C
+[14:45:02]   [FOLIO_dev_200] ✗ 错误! 预测=C, 答案=B
+[14:45:02] [Worker-Voting] 开始处理: FOLIO_dev_26 (多数投票模式: 3次运行)
+[14:45:02]   [FOLIO_dev_26] 多数投票 - 第1/3次尝试...
+[14:45:03]   [FOLIO_dev_73] 第1次: 预测=A
+[14:45:03]   [FOLIO_dev_73] 多数投票 - 第2/3次尝试...
+[14:45:04]   [FOLIO_dev_85] 第2次: 预测=C
+[14:45:04]   [FOLIO_dev_85] 多数投票 - 第3/3次尝试...
+[14:45:08]   [FOLIO_dev_178] 第3次: 预测=A
+[14:45:08]   [FOLIO_dev_178] 投票结果: A:3 -> 最终选择: A
+[14:45:08]   [FOLIO_dev_178] ✓ 正确! 预测=A, 答案=A
+[14:45:08] [Worker-Voting] 开始处理: FOLIO_dev_196 (多数投票模式: 3次运行)
+[14:45:08]   [FOLIO_dev_196] 多数投票 - 第1/3次尝试...
+[14:45:09]   [FOLIO_dev_26] 第1次: 预测=C
+[14:45:09]   [FOLIO_dev_26] 多数投票 - 第2/3次尝试...
+[14:45:10]   [FOLIO_dev_73] 第2次: 预测=C
+[14:45:10]   [FOLIO_dev_73] 多数投票 - 第3/3次尝试...
+[14:45:12]   [FOLIO_dev_85] 第3次: 预测=C
+[14:45:12]   [FOLIO_dev_85] 投票结果: C:3 -> 最终选择: C
+[14:45:12]   [FOLIO_dev_85] ✗ 错误! 预测=C, 答案=A
+[14:45:12] [Worker-Voting] 开始处理: FOLIO_dev_33 (多数投票模式: 3次运行)
+[14:45:12]   [FOLIO_dev_33] 多数投票 - 第1/3次尝试...
+[14:45:15]   [FOLIO_dev_26] 第2次: 预测=C
+[14:45:15]   [FOLIO_dev_26] 多数投票 - 第3/3次尝试...
+[14:45:16]   [FOLIO_dev_196] 第1次: 预测=C
+[14:45:16]   [FOLIO_dev_196] 多数投票 - 第2/3次尝试...
+[14:45:18]   [FOLIO_dev_73] 第3次: 预测=B
+[14:45:18]   [FOLIO_dev_73] 投票结果: A:1, C:1, B:1 -> 最终选择: A
+[14:45:18]   [FOLIO_dev_73] ✓ 正确! 预测=A, 答案=A
+[14:45:18] [Worker-Voting] 开始处理: FOLIO_dev_152 (多数投票模式: 3次运行)
+[14:45:18]   [FOLIO_dev_152] 多数投票 - 第1/3次尝试...
+[14:45:20]   [FOLIO_dev_33] 第1次: 预测=C
+[14:45:20]   [FOLIO_dev_33] 多数投票 - 第2/3次尝试...
+[14:45:23]   [FOLIO_dev_26] 第3次: 预测=C
+[14:45:23]   [FOLIO_dev_26] 投票结果: C:3 -> 最终选择: C
+[14:45:23]   [FOLIO_dev_26] ✓ 正确! 预测=C, 答案=C
+[14:45:23] [Worker-Voting] 开始处理: FOLIO_dev_76 (多数投票模式: 3次运行)
+[14:45:23]   [FOLIO_dev_76] 多数投票 - 第1/3次尝试...
+[14:45:24]   [FOLIO_dev_196] 第2次: 预测=C
+[14:45:24]   [FOLIO_dev_196] 多数投票 - 第3/3次尝试...
+[14:45:26]   [FOLIO_dev_152] 第1次: 预测=C
+[14:45:26]   [FOLIO_dev_152] 多数投票 - 第2/3次尝试...
+[14:45:27]   [FOLIO_dev_33] 第2次: 预测=C
+[14:45:27]   [FOLIO_dev_33] 多数投票 - 第3/3次尝试...
+[14:45:31]   [FOLIO_dev_76] 第1次: 预测=C
+[14:45:31]   [FOLIO_dev_76] 多数投票 - 第2/3次尝试...
+[14:45:31]   [FOLIO_dev_152] 第2次: 预测=C
+[14:45:31]   [FOLIO_dev_152] 多数投票 - 第3/3次尝试...
+[14:45:31]   [FOLIO_dev_196] 第3次: 预测=C
+[14:45:31]   [FOLIO_dev_196] 投票结果: C:3 -> 最终选择: C
+[14:45:31]   [FOLIO_dev_196] ✓ 正确! 预测=C, 答案=C
+[14:45:31] [Worker-Voting] 开始处理: FOLIO_dev_23 (多数投票模式: 3次运行)
+[14:45:31]   [FOLIO_dev_23] 多数投票 - 第1/3次尝试...
+[14:45:32]   [FOLIO_dev_33] 第3次: 预测=C
+[14:45:32]   [FOLIO_dev_33] 投票结果: C:3 -> 最终选择: C
+[14:45:32]   [FOLIO_dev_33] ✗ 错误! 预测=C, 答案=A
+[14:45:32] [Worker-Voting] 开始处理: FOLIO_dev_11 (多数投票模式: 3次运行)
+[14:45:32]   [FOLIO_dev_11] 多数投票 - 第1/3次尝试...
+[14:45:39]   [FOLIO_dev_152] 第3次: 预测=C
+[14:45:39]   [FOLIO_dev_152] 投票结果: C:3 -> 最终选择: C
+[14:45:39] [Worker-Voting] 开始处理: FOLIO_dev_170 (多数投票模式: 3次运行)
+[14:45:39]   [FOLIO_dev_152] ✓ 正确! 预测=C, 答案=C
+[14:45:39]   [FOLIO_dev_170] 多数投票 - 第1/3次尝试...
+[14:45:39]   [FOLIO_dev_23] 第1次: 预测=C
+[14:45:39]   [FOLIO_dev_23] 多数投票 - 第2/3次尝试...
+[14:45:39]   [FOLIO_dev_76] 第2次: 预测=C
+[14:45:39]   [FOLIO_dev_76] 多数投票 - 第3/3次尝试...
+[14:45:41]   [FOLIO_dev_11] 第1次: 预测=C
+[14:45:41]   [FOLIO_dev_11] 多数投票 - 第2/3次尝试...
+[14:45:46]   [FOLIO_dev_23] 第2次: 预测=C
+[14:45:46]   [FOLIO_dev_23] 多数投票 - 第3/3次尝试...
+[14:45:48]   [FOLIO_dev_76] 第3次: 预测=C
+[14:45:48]   [FOLIO_dev_76] 投票结果: C:3 -> 最终选择: C
+[14:45:48] [Worker-Voting] 开始处理: FOLIO_dev_150 (多数投票模式: 3次运行)
+[14:45:48]   [FOLIO_dev_76] ✓ 正确! 预测=C, 答案=C
+[14:45:48]   [FOLIO_dev_150] 多数投票 - 第1/3次尝试...
+[14:45:48]   [FOLIO_dev_170] 第1次: 预测=A
+[14:45:48]   [FOLIO_dev_170] 多数投票 - 第2/3次尝试...
+[14:45:50]   [FOLIO_dev_11] 第2次: 预测=C
+[14:45:50]   [FOLIO_dev_11] 多数投票 - 第3/3次尝试...
+[14:45:54]   [FOLIO_dev_150] 第1次: 预测=C
+[14:45:54]   [FOLIO_dev_150] 多数投票 - 第2/3次尝试...
+[14:45:54]   [FOLIO_dev_170] 第2次: 预测=A
+[14:45:54]   [FOLIO_dev_170] 多数投票 - 第3/3次尝试...
+[14:45:55]   [FOLIO_dev_23] 第3次: 预测=C
+[14:45:55]   [FOLIO_dev_23] 投票结果: C:3 -> 最终选择: C
+[14:45:55]   [FOLIO_dev_23] ✓ 正确! 预测=C, 答案=C
+[14:45:55] [Worker-Voting] 开始处理: FOLIO_dev_77 (多数投票模式: 3次运行)
+[14:45:55]   [FOLIO_dev_77] 多数投票 - 第1/3次尝试...
+[14:45:59]   [FOLIO_dev_11] 第3次: 预测=C
+[14:45:59]   [FOLIO_dev_11] 投票结果: C:3 -> 最终选择: C
+[14:45:59]   [FOLIO_dev_11] ✓ 正确! 预测=C, 答案=C
+[14:45:59] [Worker-Voting] 开始处理: FOLIO_dev_31 (多数投票模式: 3次运行)
+[14:45:59]   [FOLIO_dev_31] 多数投票 - 第1/3次尝试...
+[14:46:02]   [FOLIO_dev_150] 第2次: 预测=A
+[14:46:02]   [FOLIO_dev_150] 多数投票 - 第3/3次尝试...
+[14:46:03]   [FOLIO_dev_77] 第1次: 预测=C
+[14:46:03]   [FOLIO_dev_77] 多数投票 - 第2/3次尝试...
+[14:46:03]   [FOLIO_dev_170] 第3次: 预测=C
+[14:46:03]   [FOLIO_dev_170] 投票结果: A:2, C:1 -> 最终选择: A
+[14:46:03]   [FOLIO_dev_170] ✗ 错误! 预测=A, 答案=C
+[14:46:03] [Worker-Voting] 开始处理: FOLIO_dev_21 (多数投票模式: 3次运行)
+[14:46:03]   [FOLIO_dev_21] 多数投票 - 第1/3次尝试...
+[14:46:09]   [FOLIO_dev_31] 第1次: 预测=C
+[14:46:09]   [FOLIO_dev_31] 多数投票 - 第2/3次尝试...
+[14:46:09]   [FOLIO_dev_150] 第3次: 预测=C
+[14:46:09]   [FOLIO_dev_150] 投票结果: C:2, A:1 -> 最终选择: C
+[14:46:09]   [FOLIO_dev_150] ✗ 错误! 预测=C, 答案=A
+[14:46:09] [Worker-Voting] 开始处理: FOLIO_dev_14 (多数投票模式: 3次运行)
+[14:46:09]   [FOLIO_dev_14] 多数投票 - 第1/3次尝试...
+[14:46:10]   [FOLIO_dev_21] 第1次: 预测=C
+[14:46:10]   [FOLIO_dev_21] 多数投票 - 第2/3次尝试...
+[14:46:11]   [FOLIO_dev_77] 第2次: 预测=C
+[14:46:11]   [FOLIO_dev_77] 多数投票 - 第3/3次尝试...
+[14:46:17]   [FOLIO_dev_31] 第2次: 预测=C
+[14:46:17]   [FOLIO_dev_31] 多数投票 - 第3/3次尝试...
+[14:46:17]   [FOLIO_dev_14] 第1次: 预测=B
+[14:46:17]   [FOLIO_dev_14] 多数投票 - 第2/3次尝试...
+[14:46:19]   [FOLIO_dev_21] 第2次: 预测=C
+[14:46:19]   [FOLIO_dev_21] 多数投票 - 第3/3次尝试...
+[14:46:20]   [FOLIO_dev_77] 第3次: 预测=C
+[14:46:20]   [FOLIO_dev_77] 投票结果: C:3 -> 最终选择: C
+[14:46:20]   [FOLIO_dev_77] ✗ 错误! 预测=C, 答案=A
+[14:46:20] [Worker-Voting] 开始处理: FOLIO_dev_129 (多数投票模式: 3次运行)
+[14:46:20]   [FOLIO_dev_129] 多数投票 - 第1/3次尝试...
+[14:46:25]   [FOLIO_dev_14] 第2次: 预测=B
+[14:46:25]   [FOLIO_dev_14] 多数投票 - 第3/3次尝试...
+[14:46:25]   [FOLIO_dev_31] 第3次: 预测=C
+[14:46:26]   [FOLIO_dev_31] 投票结果: C:3 -> 最终选择: C
+[14:46:26]   [FOLIO_dev_31] ✗ 错误! 预测=C, 答案=A
+[14:46:26] [Worker-Voting] 开始处理: FOLIO_dev_40 (多数投票模式: 3次运行)
+[14:46:26]   [FOLIO_dev_40] 多数投票 - 第1/3次尝试...
+[14:46:27]   [FOLIO_dev_21] 第3次: 预测=C
+[14:46:27]   [FOLIO_dev_21] 投票结果: C:3 -> 最终选择: C
+[14:46:27] [Worker-Voting] 开始处理: FOLIO_dev_4 (多数投票模式: 3次运行)
+[14:46:27]   [FOLIO_dev_21] ✗ 错误! 预测=C, 答案=A
+[14:46:27]   [FOLIO_dev_4] 多数投票 - 第1/3次尝试...
+[14:46:29]   [FOLIO_dev_129] 第1次: 预测=A
+[14:46:29]   [FOLIO_dev_129] 多数投票 - 第2/3次尝试...
+[14:46:31]   [FOLIO_dev_14] 第3次: 预测=B
+[14:46:31]   [FOLIO_dev_14] 投票结果: B:3 -> 最终选择: B
+[14:46:31]   [FOLIO_dev_14] ✓ 正确! 预测=B, 答案=B
+[14:46:31] [Worker-Voting] 开始处理: FOLIO_dev_132 (多数投票模式: 3次运行)
+[14:46:31]   [FOLIO_dev_132] 多数投票 - 第1/3次尝试...
+[14:46:35]   [FOLIO_dev_40] 第1次: 预测=C
+[14:46:35]   [FOLIO_dev_40] 多数投票 - 第2/3次尝试...
+[14:46:37]   [FOLIO_dev_4] 第1次: 预测=C
+[14:46:37]   [FOLIO_dev_4] 多数投票 - 第2/3次尝试...
+[14:46:38]   [FOLIO_dev_129] 第2次: 预测=A
+[14:46:38]   [FOLIO_dev_129] 多数投票 - 第3/3次尝试...
+[14:46:38]   [FOLIO_dev_132] 第1次: 预测=C
+[14:46:38]   [FOLIO_dev_132] 多数投票 - 第2/3次尝试...
+[14:46:43]   [FOLIO_dev_40] 第2次: 预测=C
+[14:46:43]   [FOLIO_dev_40] 多数投票 - 第3/3次尝试...
+[14:46:46]   [FOLIO_dev_132] 第2次: 预测=C
+[14:46:46]   [FOLIO_dev_132] 多数投票 - 第3/3次尝试...
+[14:46:47]   [FOLIO_dev_129] 第3次: 预测=A
+[14:46:47]   [FOLIO_dev_129] 投票结果: A:3 -> 最终选择: A
+[14:46:47]   [FOLIO_dev_129] ✓ 正确! 预测=A, 答案=A
+[14:46:47] [Worker-Voting] 开始处理: FOLIO_dev_176 (多数投票模式: 3次运行)
+[14:46:47]   [FOLIO_dev_176] 多数投票 - 第1/3次尝试...
+[14:46:48]   [FOLIO_dev_4] 第2次: 预测=A
+[14:46:48]   [FOLIO_dev_4] 多数投票 - 第3/3次尝试...
+[14:46:52]   [FOLIO_dev_40] 第3次: 预测=C
+[14:46:52]   [FOLIO_dev_40] 投票结果: C:3 -> 最终选择: C
+[14:46:52]   [FOLIO_dev_40] ✗ 错误! 预测=C, 答案=A
+[14:46:52] [Worker-Voting] 开始处理: FOLIO_dev_53 (多数投票模式: 3次运行)
+[14:46:52]   [FOLIO_dev_53] 多数投票 - 第1/3次尝试...
+[14:46:53]   [FOLIO_dev_132] 第3次: 预测=B
+[14:46:53]   [FOLIO_dev_132] 投票结果: C:2, B:1 -> 最终选择: C
+[14:46:53]   [FOLIO_dev_132] ✗ 错误! 预测=C, 答案=A
+[14:46:53] [Worker-Voting] 开始处理: FOLIO_dev_171 (多数投票模式: 3次运行)
+[14:46:53]   [FOLIO_dev_171] 多数投票 - 第1/3次尝试...
+[14:46:55]   [FOLIO_dev_176] 第1次: 预测=C
+[14:46:55]   [FOLIO_dev_176] 多数投票 - 第2/3次尝试...
+[14:46:57]   [FOLIO_dev_4] 第3次: 预测=C
+[14:46:57]   [FOLIO_dev_4] 投票结果: C:2, A:1 -> 最终选择: C
+[14:46:57]   [FOLIO_dev_4] ✓ 正确! 预测=C, 答案=C
+[14:47:00]   [FOLIO_dev_53] 第1次: 预测=C
+[14:47:00]   [FOLIO_dev_53] 多数投票 - 第2/3次尝试...
+[14:47:02]   [FOLIO_dev_171] 第1次: 预测=A
+[14:47:02]   [FOLIO_dev_171] 多数投票 - 第2/3次尝试...
+[14:47:03]   [FOLIO_dev_176] 第2次: 预测=C
+[14:47:03]   [FOLIO_dev_176] 多数投票 - 第3/3次尝试...
+[14:47:09]   [FOLIO_dev_53] 第2次: 预测=C
+[14:47:09]   [FOLIO_dev_53] 多数投票 - 第3/3次尝试...
+[14:47:10]   [FOLIO_dev_176] 第3次: 预测=C
+[14:47:10]   [FOLIO_dev_176] 投票结果: C:3 -> 最终选择: C
+[14:47:10]   [FOLIO_dev_176] ✓ 正确! 预测=C, 答案=C
+[14:47:10]   [FOLIO_dev_171] 第2次: 预测=A
+[14:47:10]   [FOLIO_dev_171] 多数投票 - 第3/3次尝试...
+[14:47:17]   [FOLIO_dev_171] 第3次: 预测=A
+[14:47:17]   [FOLIO_dev_171] 投票结果: A:3 -> 最终选择: A
+[14:47:17]   [FOLIO_dev_171] ✓ 正确! 预测=A, 答案=A
+[14:47:17]   [FOLIO_dev_53] 第3次: 预测=C
+[14:47:17]   [FOLIO_dev_53] 投票结果: C:3 -> 最终选择: C
+[14:47:17]   [FOLIO_dev_53] ✓ 正确! 预测=C, 答案=C
+[14:47:17] ==================================================
+[14:47:17] 评测完成!
+[14:47:17] 已完成: 50, 正确: 30, 错误: 20, 异常: 0
+[14:47:17] 准确率: 60.00%
+[14:47:17] ==================================================
+=== 评测日志结束于 2025-12-21 14:47:35 ===
