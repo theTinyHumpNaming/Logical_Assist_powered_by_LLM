@@ -36,45 +36,53 @@ def repair_code(code: str) -> Tuple[str, List[str]]:
     repaired_code, undefined_func_repairs = fix_undefined_function_calls(repaired_code)
     repairs.extend(undefined_func_repairs)
     
-    # 4. 修复未定义的Bool变量
+    # 4. 修复使用了未定义变量的函数调用（如 is_in_state(x, s) 其中 s 未定义） - 在Bool修复之前
+    repaired_code, undefined_var_repairs = fix_undefined_variables_in_calls(repaired_code)
+    repairs.extend(undefined_var_repairs)
+    
+    # 5. 修复未定义的Bool变量
     repaired_code, bool_repairs = fix_undefined_bool_variables(repaired_code)
     repairs.extend(bool_repairs)
     
-    # 5. 修复未定义的谓词
+    # 6. 修复未定义的谓词
     repaired_code, predicate_repairs = fix_undefined_predicates(repaired_code)
     repairs.extend(predicate_repairs)
     
-    # 6. 修复常见的Z3语法问题
+    # 7. 修复常见的Z3语法问题
     repaired_code, syntax_repairs = fix_common_syntax_issues(repaired_code)
     repairs.extend(syntax_repairs)
     
-    # 7. 修复Python逻辑运算符（or/and）为Z3函数（Or/And）
+    # 8. 修复Python逻辑运算符（or/and）为Z3函数（Or/And）
     repaired_code, logic_repairs = fix_python_logical_operators(repaired_code)
     repairs.extend(logic_repairs)
     
-    # 8. 修复未定义的量化变量（x, y等）
+    # 9. 修复未定义的量化变量（x, y等）
     repaired_code, quantifier_repairs = fix_undefined_quantifier_variables(repaired_code)
     repairs.extend(quantifier_repairs)
     
-    # 9. 修复ForAll在Facts部分的问题（需要移动到Rules部分）
+    # 10. 修复ForAll在Facts部分的问题（需要移动到Rules部分）
     repaired_code, forall_move_repairs = fix_forall_in_facts(repaired_code)
     repairs.extend(forall_move_repairs)
     
-    # 10. 修复Z3表达式类型错误
+    # 11. 修复Z3表达式类型错误
     repaired_code, type_repairs = fix_z3_type_errors(repaired_code)
     repairs.extend(type_repairs)
     
-    # 11. 修复Function定义错误（BoolSort应该是Entity）
+    # 12. 修复Function定义错误（BoolSort应该是Entity）
     repaired_code, func_sig_repairs = fix_function_signature_errors(repaired_code)
     repairs.extend(func_sig_repairs)
     
-    # 12. 修复孤立的缩进行（在注释掉某行后留下的缩进行）
+    # 13. 修复孤立的缩进行（在注释掉某行后留下的缩进行）
     repaired_code, orphan_repairs = fix_orphaned_indented_lines(repaired_code)
     repairs.extend(orphan_repairs)
     
-    # 13. 最终清理：移除孤立的括号行
+    # 14. 最终清理：移除孤立的括号行
     repaired_code, final_repairs = final_cleanup_orphaned_brackets(repaired_code)
     repairs.extend(final_repairs)
+    
+    # 15. 修复StringSort函数调用中的字符串字面量
+    repaired_code, string_literal_repairs = fix_string_literals_in_stringSort_calls(repaired_code)
+    repairs.extend(string_literal_repairs)
     
     return repaired_code, repairs
 
@@ -110,6 +118,8 @@ def fix_line_brackets(code: str) -> Tuple[str, List[str]]:
     逐行修复括号不匹配问题
     这是主要的修复函数，针对每行solver.add()语句
     
+    注意：不修复明显的多行语句（行尾是逗号或开括号）
+    
     Args:
         code: 原始代码
         
@@ -130,20 +140,30 @@ def fix_line_brackets(code: str) -> Tuple[str, List[str]]:
             close_count = line.count(')')
             
             if open_count > close_count:
-                # 缺少右括号，在行尾（注释之前）添加
-                missing = open_count - close_count
+                # 检查是否是多行语句的开始（行尾是开括号、逗号或没有结束）
+                stripped = line.rstrip()
                 
-                # 检查行尾是否有注释
-                comment_match = re.search(r'\s*#.*$', line)
-                if comment_match:
-                    # 在注释前插入括号
-                    comment_start = comment_match.start()
-                    line = line[:comment_start].rstrip() + ')' * missing + '  ' + line[comment_start:].lstrip()
+                # 如果行以开括号结尾，或者行中有注释前的内容以开括号结尾，这很可能是多行语句
+                code_part = stripped.split('#')[0].rstrip()  # 去除注释
+                
+                if code_part.endswith('(') or code_part.endswith(','):
+                    # 这是多行语句的开始或中间，不要修复
+                    pass
                 else:
-                    # 直接在行尾添加
-                    line = line.rstrip() + ')' * missing
-                
-                repairs.append(f"第{i+1}行: 添加 {missing} 个右括号")
+                    # 缺少右括号，在行尾（注释之前）添加
+                    missing = open_count - close_count
+                    
+                    # 检查行尾是否有注释
+                    comment_match = re.search(r'\s*#.*$', line)
+                    if comment_match:
+                        # 在注释前插入括号
+                        comment_start = comment_match.start()
+                        line = line[:comment_start].rstrip() + ')' * missing + '  ' + line[comment_start:].lstrip()
+                    else:
+                        # 直接在行尾添加
+                        line = line.rstrip() + ')' * missing
+                    
+                    repairs.append(f"第{i+1}行: 添加 {missing} 个右括号")
         
         fixed_lines.append(line)
     
@@ -164,11 +184,27 @@ def fix_undefined_bool_variables(code: str) -> Tuple[str, List[str]]:
     """
     repairs = []
     
-    # 提取已定义的Bool变量
+    # 提取已定义的变量（Bool, Const, Function, Int等）
     defined_vars = set()
-    # 匹配形如: variable_name = Bool("variable_name")
+    
+    # Bool变量
     bool_pattern = r'(\w+)\s*=\s*Bool\s*\(\s*["\'](\w+)["\']\s*\)'
     for match in re.finditer(bool_pattern, code):
+        defined_vars.add(match.group(1))
+    
+    # Const变量
+    const_pattern = r'(\w+)\s*=\s*Const\s*\('
+    for match in re.finditer(const_pattern, code):
+        defined_vars.add(match.group(1))
+    
+    # Function定义
+    func_pattern = r'(\w+)\s*=\s*Function\s*\('
+    for match in re.finditer(func_pattern, code):
+        defined_vars.add(match.group(1))
+    
+    # Int变量
+    int_pattern = r'(\w+)\s*=\s*Int\s*\('
+    for match in re.finditer(int_pattern, code):
         defined_vars.add(match.group(1))
     
     # 查找所有使用的变量
@@ -186,8 +222,8 @@ def fix_undefined_bool_variables(code: str) -> Tuple[str, List[str]]:
     
     # Z3关键字和内置函数，不应被视为变量
     z3_keywords = {
-        'Solver', 'Bool', 'Bools', 'Int', 'Ints', 'BoolSort', 'IntSort', 'EnumSort', 'Function',
-        'Const', 'Consts', 'And', 'Or', 'Not', 'Implies', 'ForAll', 'Exists', 'Distinct',
+        'Solver', 'Bool', 'Bools', 'Int', 'Ints', 'BoolSort', 'IntSort', 'StringSort', 'String', 'StringVal',
+        'EnumSort', 'Function', 'Const', 'Consts', 'And', 'Or', 'Not', 'Implies', 'ForAll', 'Exists', 'Distinct',
         'If', 'sat', 'unsat', 'unknown', 'is_true', 'is_false', 'check', 'add',
         'push', 'pop', 'model', 'assertions', 'print', 'eval', 'as_long',
         'solver', 'x', 'y', 'z',  # 常见的量化变量名
@@ -209,14 +245,22 @@ def fix_undefined_bool_variables(code: str) -> Tuple[str, List[str]]:
         if line.strip().startswith('#'):
             continue
         
+        # 跳过定义行（包含=的行）
+        if '=' in line.split('#')[0]:
+            continue
+        
         # 跳过for循环行（避免将循环变量误认为Bool变量）
         if 'for ' in line and ' in ' in line:
             continue
         
         # 只检查包含Z3约束的行
         if any(keyword in line for keyword in ['solver.add', 'Implies', 'And', 'Or', 'Not', 'ForAll']):
+            # 先移除字符串字面量（避免将字符串内容识别为变量）
+            line_without_strings = re.sub(r'"[^"]*"', '', line)
+            line_without_strings = re.sub(r"'[^']*'", '', line_without_strings)
+            
             # 提取该行中的变量
-            for match in re.finditer(var_usage_pattern, line):
+            for match in re.finditer(var_usage_pattern, line_without_strings):
                 var_name = match.group(1)
                 # 排除Python关键字和Z3关键字
                 if var_name not in all_keywords and not var_name.startswith('_'):
@@ -282,8 +326,8 @@ def fix_undefined_predicates(code: str) -> Tuple[str, List[str]]:
     # 但要排除Python内置函数和z3函数
     builtin_functions = {
         'print', 'len', 'str', 'int', 'bool', 'list', 'dict', 'set', 'tuple',
-        'Solver', 'Bool', 'Bools', 'Int', 'Ints', 'BoolSort', 'IntSort', 'EnumSort', 'Function',
-        'Const', 'Consts', 'And', 'Or', 'Not', 'Implies', 'ForAll', 'Exists', 'Distinct',
+        'Solver', 'Bool', 'Bools', 'Int', 'Ints', 'BoolSort', 'IntSort', 'StringSort', 'String', 'StringVal',
+        'EnumSort', 'Function', 'Const', 'Consts', 'And', 'Or', 'Not', 'Implies', 'ForAll', 'Exists', 'Distinct',
         'If', 'is_true', 'is_false', 'check', 'add', 'assertions', 'model', 'eval', 'as_long', 'range', 'sum'
     }
     
@@ -497,11 +541,12 @@ def fix_common_syntax_issues(code: str) -> Tuple[str, List[str]]:
                 line = line[:match.start()] + inner + line[match.end():]
                 repairs.append(f"第{line_num+1}行: 简化 And({inner}) 为 {inner}")
         
-        # 2. 修复空的 And() 或 Or()
-        if 'And()' in line:
+        # 2. 修复空的 And() 或 Or() - 但只在单行上完整的情况
+        # 检查括号是否在同一行上闭合
+        if 'And()' in line and line.count('(') == line.count(')'):
             line = line.replace('And()', 'True')
             repairs.append(f"第{line_num+1}行: 替换 And() 为 True")
-        if 'Or()' in line:
+        if 'Or()' in line and line.count('(') == line.count(')'):
             line = line.replace('Or()', 'False')
             repairs.append(f"第{line_num+1}行: 替换 Or() 为 False")
         
@@ -928,7 +973,7 @@ def fix_undefined_function_calls(code: str) -> Tuple[str, List[str]]:
     z3_builtins = {
         'Solver', 'Bool', 'Bools', 'Int', 'Ints', 'Function', 'Const', 'Consts', 'And', 'Or', 'Not', 
         'Implies', 'ForAll', 'Exists', 'Distinct', 'If', 'EnumSort', 'BoolSort',
-        'IntSort', 'print', 'exit', 'unsat', 'sat', 'unknown', 'check', 'push', 'pop', 'add',
+        'IntSort', 'StringSort', 'String', 'StringVal', 'print', 'exit', 'unsat', 'sat', 'unknown', 'check', 'push', 'pop', 'add',
         'is_true', 'is_false', 'model', 'eval', 'as_long', 'range', 'len', 'sum'
     }
     
@@ -1273,6 +1318,242 @@ def quick_bracket_fix(code: str) -> str:
         result = result.rstrip() + ')' * cumulative_imbalance
     
     return result
+
+
+def fix_undefined_variables_in_calls(code: str) -> Tuple[str, List[str]]:
+    """
+    修复在函数调用中使用了未定义变量的问题
+    
+    例如: is_in_state(butte, s) 其中 s 未定义
+    
+    策略：
+    1. 找出所有定义的变量（Bool, Const, Function等）
+    2. 找出函数调用中使用的参数
+    3. 如果参数是变量名但未定义，注释掉该行
+    
+    Args:
+        code: 原始代码
+        
+    Returns:
+        (修复后的代码, 修复记录)
+    """
+    repairs = []
+    lines = code.split('\n')
+    
+    # 收集所有已定义的变量
+    defined_vars = set()
+    
+    # Bool变量
+    for match in re.finditer(r'(\w+)\s*=\s*Bool\s*\(', code):
+        defined_vars.add(match.group(1))
+    
+    # Const变量
+    for match in re.finditer(r'(\w+)\s*=\s*Const\s*\(', code):
+        defined_vars.add(match.group(1))
+    
+    # Function定义
+    for match in re.finditer(r'(\w+)\s*=\s*Function\s*\(', code):
+        defined_vars.add(match.group(1))
+    
+    # Int变量
+    for match in re.finditer(r'(\w+)\s*=\s*Int\s*\(', code):
+        defined_vars.add(match.group(1))
+    
+    # EnumSort元素
+    enum_pattern = r'(\w+)\s*,\s*\(([^)]+)\)\s*=\s*EnumSort'
+    for match in re.finditer(enum_pattern, code):
+        # 添加类型名
+        defined_vars.add(match.group(1))
+        # 添加所有元素
+        elements_str = match.group(2)
+        for elem in re.findall(r'\b(\w+)\b', elements_str):
+            defined_vars.add(elem)
+    
+    # Z3内置函数和Python关键字
+    z3_and_python = {
+        'Solver', 'Bool', 'Bools', 'Int', 'Ints', 'Function', 'Const', 'Consts',
+        'And', 'Or', 'Not', 'Implies', 'ForAll', 'Exists', 'Distinct', 'If',
+        'EnumSort', 'BoolSort', 'IntSort', 'StringSort', 'String', 'StringVal',
+        'sat', 'unsat', 'unknown', 'solver', 'print', 'exit', 'True', 'False', 'None',
+        'if', 'elif', 'else', 'for', 'while', 'def', 'class', 'return', 'in', 'is', 'not',
+        'range', 'len', 'sum', 'max', 'min'
+    }
+    
+    fixed_lines = []
+    for line_num, line in enumerate(lines):
+        original_line = line
+        
+        # 跳过已注释的行、空行、定义行
+        if line.strip().startswith('#') or not line.strip() or '=' in line.split('#')[0]:
+            fixed_lines.append(line)
+            continue
+        
+        # 在函数调用中查找参数
+        # 匹配 function_name(arg1, arg2, ...)
+        function_calls = re.finditer(r'(\w+)\s*\(([^)]*)\)', line)
+        
+        has_undefined_var = False
+        for call_match in function_calls:
+            func_name = call_match.group(1)
+            args_str = call_match.group(2)
+            
+            # 跳过Python和Z3内置函数
+            if func_name in z3_and_python:
+                continue
+            
+            # 分析参数
+            # 去除字符串字面量
+            args_cleaned = re.sub(r'"[^"]*"', '', args_str)
+            args_cleaned = re.sub(r"'[^']*'", '', args_cleaned)
+            
+            # 提取可能的变量名（不在引号内的标识符）
+            var_candidates = re.findall(r'\b([a-z_]\w*)\b', args_cleaned)
+            
+            for var in var_candidates:
+                # 如果这个变量没有定义，并且不是关键字
+                if var not in defined_vars and var not in z3_and_python:
+                    has_undefined_var = True
+                    repairs.append(f"第{line_num+1}行: 发现未定义的变量 '{var}' 在函数调用中，注释掉该行")
+                    break
+            
+            if has_undefined_var:
+                break
+        
+        if has_undefined_var:
+            # 注释掉这行
+            fixed_lines.append('# ERROR_UNDEFINED_VAR: ' + line.lstrip() + '  # 使用了未定义的变量')
+        else:
+            fixed_lines.append(line)
+    
+    return '\n'.join(fixed_lines), repairs
+
+
+def fix_string_literals_in_stringSort_calls(code: str) -> Tuple[str, List[str]]:
+    """
+    修复在StringSort函数调用中使用Python字符串字面量的问题
+    
+    当函数定义为 Function("name", StringSort(), ..., BoolSort()) 时，
+    调用该函数时传递的字符串参数应该是Z3的String表达式，而不是Python字符串
+    
+    例如：
+    is_in_state(billings, "montana")  # 错误
+    应该修改为：
+    is_in_state(billings, StringVal("montana"))  # 正确
+    
+    Args:
+        code: 原始代码
+        
+    Returns:
+        (修复后的代码, 修复记录)
+    """
+    repairs = []
+    lines = code.split('\n')
+    
+    # 找出所有使用StringSort的函数定义
+    stringSort_functions = {}  # {func_name: [param_positions_that_are_StringSort]}
+    
+    for line in lines:
+        # 匹配 func_name = Function("func_name", arg1, arg2, ..., BoolSort())
+        match = re.search(r'(\w+)\s*=\s*Function\s*\(\s*["\'](\w+)["\']\s*,\s*(.+)\)', line)
+        if match:
+            func_name = match.group(1)
+            type_args = match.group(3)
+            
+            # 分析参数类型
+            # 分割参数（考虑括号嵌套）
+            type_parts = []
+            depth = 0
+            current = []
+            for char in type_args:
+                if char == '(':
+                    depth += 1
+                    current.append(char)
+                elif char == ')':
+                    depth -= 1
+                    current.append(char)
+                elif char == ',' and depth == 0:
+                    type_parts.append(''.join(current).strip())
+                    current = []
+                else:
+                    current.append(char)
+            
+            if current:
+                type_parts.append(''.join(current).strip())
+            
+            # 找出哪些参数位置是StringSort
+            stringSort_positions = []
+            for i, part in enumerate(type_parts[:-1]):  # 最后一个是返回类型，不算
+                if 'StringSort' in part:
+                    stringSort_positions.append(i)
+            
+            if stringSort_positions:
+                stringSort_functions[func_name] = stringSort_positions
+    
+    if not stringSort_functions:
+        return code, repairs
+    
+    # 现在修复调用这些函数时使用字符串字面量的情况
+    fixed_lines = []
+    for line_num, line in enumerate(lines):
+        original_line = line
+        
+        # 跳过注释和定义行
+        if line.strip().startswith('#') or '=' in line.split('#')[0]:
+            fixed_lines.append(line)
+            continue
+        
+        # 检查是否调用了StringSort函数
+        modified = False
+        for func_name, string_positions in stringSort_functions.items():
+            # 查找该函数的调用
+            pattern = rf'\b{func_name}\s*\(([^)]+)\)'
+            matches = list(re.finditer(pattern, line))
+            
+            for match in matches:
+                args_str = match.group(1)
+                
+                # 分割参数
+                args = []
+                depth = 0
+                current = []
+                for char in args_str:
+                    if char == '(':
+                        depth += 1
+                        current.append(char)
+                    elif char == ')':
+                        depth -= 1
+                        current.append(char)
+                    elif char == ',' and depth == 0:
+                        args.append(''.join(current).strip())
+                        current = []
+                    else:
+                        current.append(char)
+                
+                if current:
+                    args.append(''.join(current).strip())
+                
+                # 检查StringSort位置的参数是否是字符串字面量
+                needs_fix = False
+                for pos in string_positions:
+                    if pos < len(args):
+                        arg = args[pos]
+                        # 检查是否是字符串字面量（被引号包围）
+                        if (arg.startswith('"') and arg.endswith('"')) or \
+                           (arg.startswith("'") and arg.endswith("'")):
+                            needs_fix = True
+                            # 将字符串字面量包装在StringVal()中
+                            args[pos] = f'StringVal({arg})'
+                
+                if needs_fix:
+                    # 重构函数调用
+                    new_call = f"{func_name}({', '.join(args)})"
+                    line = line[:match.start()] + new_call + line[match.end():]
+                    repairs.append(f"第{line_num+1}行: 将字符串字面量包装为StringVal()在{func_name}调用中")
+                    modified = True
+        
+        fixed_lines.append(line)
+    
+    return '\n'.join(fixed_lines), repairs
 
 
 # 测试函数

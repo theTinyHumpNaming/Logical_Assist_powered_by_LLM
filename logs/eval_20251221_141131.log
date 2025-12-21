@@ -1,0 +1,14 @@
+=== 评测日志开始于 2025-12-21 14:11:31 ===
+[14:11:49] 代码修复功能已关闭
+[14:11:52] 多数投票模式已启用 (将运行3次并取多数结果)
+[14:11:54] 多数投票模式已关闭
+[14:11:55] 正在加载数据集: D:/学习资料/课程/程序设计大作业/EnhancingLLM/EnhancingLLM/data/Standardized_FOLIO_test.json
+[14:11:55] 共 50 道题目，使用 4 个 workers 并行处理
+[14:11:55] [Worker] 开始处理: FOLIO_dev_125 (mode=direct, semantic_check=False, refinement_code=False, repair=True)
+[14:11:55] [Worker] 开始处理: FOLIO_dev_43 (mode=direct, semantic_check=False, refinement_code=False, repair=True)
+[14:11:55] [Worker] 开始处理: FOLIO_dev_0 (mode=direct, semantic_check=False, refinement_code=False, repair=True)
+[14:11:55] [Worker] 开始处理: FOLIO_dev_59 (mode=direct, semantic_check=False, refinement_code=False, repair=True)
+[14:11:59] 正在测试API连接...
+[14:12:08] ✗ 连接失败: 请求失败 (重试1次后): 速率限制，等待 5s 后重试
+[14:12:42] 正在停止评测，终止所有任务...
+=== 评测日志结束于 2025-12-21 14:12:48 ===
